@@ -1,0 +1,15 @@
+2-D	Two Dimensional
+3-D 	Three Dimensional
+CC  	Cell Cluster
+ECDF 	Empirical Cumulative Distribution Function
+KDE  	Kernel Density Estimation
+LL 	Lateral Line
+LOESS  	Locally Weighted Scatterplot Smoothing
+LUT	Lookup Table
+MaxIP  	Maximum Intensity Projection
+NM  	Neuromast
+PFA  	Paraformaldehyd
+PLLp  	Posterior Lateral Line Primordium
+ROI  	Region of Interest
+SEM 	Scanning Electron Microscopy
+WT	Wild Type
