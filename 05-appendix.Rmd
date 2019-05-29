@@ -1,0 +1,95 @@
+`r if(knitr:::is_latex_output()) '\\appendix'`
+
+`r if(!knitr:::is_latex_output()) '# (APPENDIX) Appendix {-}'` 
+
+<!--
+If you feel it necessary to include an appendix, it goes here.
+-->
+
+# Algorithms
+
+## PLLpANALYZER2D
+
+The IJ macro code can be found at [github.com/KleinhansDa/PLLpANALYZER2D](https://github.com/KleinhansDa/PLLpANALYZER2D)
+
+## PLLpANALYZER3D
+
+-------------------------------------------------------------------------------------
+**Module**       **1. submodule**   **2. submodule**        **3. submodule**  **line**                                         
+---------------- ------------------ ----------------------- ----------------- --------
+ Dialog           dimensions                                                  0020
+ 
+                  thresholds                                                  0075  
+                  
+                  measurements      ACI Dialog              fixed deltaD      0111
+                  
+                                                            relative deltaD   
+                                                    
+                                    RCI Dialog              fixed deltaD      0133
+                                   
+ Batch Mode       open Image                                                  0170
+ 
+                  arrage Channels                                             0176
+                  
+                  create dirs                                                 0188
+                  
+                  print metadata                                              0215        
+                  
+                  get bioformats                                              0263
+                  
+                  pre-processing    registration                              0579
+                  
+                                    blurring
+                                   
+                  3-D segmentation                                            0659
+                  
+                  post-processing   remove border objects                     0705
+                        
+                                    remove volumes                            0709
+                                      
+                                    remove blank slices                       0743
+                                    
+                                    reconstruct f0 points                     0783
+                                   
+                  measurements      cell constriction                         0859
+                  
+                                    rosette constriction                      1098
+                  
+                                    get single cells                          1326
+                  
+                                    get merged cells                          1340
+                  
+                  reconstr. ferets                                            1442
+                  
+                  C2 clearing                                                 1469
+                  
+                  End                                                         1534
+                   
+                  Functions                                                   1537
+                  
+                                    Sliceclear()                              1586
+                                    
+                                    Primseg()                                 1616
+                                    
+                                    GuideI()                                  1644
+---------------- ------------------ ----------------------- ----------------- --------
+Table: (\#tab:PA3D) PLLpANALYZER3D Algorithm modules
+
+The IJ macro code can be found at [github.com/KleinhansDa/PLLpANALYZER3D](https://github.com/KleinhansDa/PLLpANALYZER3D)
+
+# Supplementary {.unnumbered}
+
+# **Statutory Declaration** {.unnumbered}
+
+I herewith declare that I have composed the present thesis myself and without use of any other than the
+cited sources and aids. Sentences or parts of sentences quoted literally are marked as such; other references
+with regard to the statement and scope are indicated by full details of the publications concerned. The thesis
+in the same or similar form has not been submitted to any examination body and has not been published.
+This thesis was not yet, even in part, used in another examination or as a course performance.
+\newline
+\newline
+    Place, Date: __________________           
+\newline
+\newline
+\newline
+      Signature: __________________

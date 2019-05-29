@@ -1,0 +1,122 @@
+---
+author: '**David Kleinhans**'
+date: 'May 2018'
+
+institution: 'Goethe University Frankfurt am Main'
+division: 'Developmental Biology of Vertebrates'
+advisor: 'Prof.Dr. Virginie Lecaudey'
+altadvisor: 'Prof.Dr. Manfred Schliwa'
+department: 'Institute for Cell Biology and Neuroscience'
+degree: '**PhD in Biology**'
+title: '**Morphogenesis in the _D.rerio_ Posterior Lateral Line Primordium**'
+knit: "bookdown::render_book"
+site: bookdown::bookdown_site
+output: 
+  thesisdown::thesis_pdf: default
+#  thesisdown::thesis_gitbook: default
+#  thesisdown::thesis_word: default
+#  thesisdown::thesis_epub: default
+# If you are creating a PDF you'll need to write your preliminary content here or
+# use code similar to line 20 for the files.  If you are producing in a different
+# format than PDF, you can delete or ignore lines 20-31 in this YAML header.
+#abstract: |
+#  `r if(knitr:::is_latex_output()) paste(readLines("00-abstract.Rmd"), collapse = '\n  ')`
+# If you'd rather include the preliminary content in files instead of inline
+# like below, use a command like that for the abstract above.  Note that a tab is 
+# needed on the line after the |.,
+
+acknowledgements: |
+  I thank my colleagues
+  Since most of my analysis is based on 10 fish of Stocknumber 161-1, I also thank those.
+  
+dedication: |
+  I dedicate this Thesis to...
+  
+  1. my sister,
+  
+  2. my grandma, 
+  
+  3. my mom,
+  
+  4. my dad, 
+    
+  5. my friends,
+  
+preface: |
+  "You realize when you know _how_ to think, it empowers you far beyond those who know only _what_ to think" - Neil Degrasse Tyson
+bibliography: bib/library.bib
+# Download your specific bibliography database file and refer to it in the line above.
+csl: csl/nature.csl
+# Download your specific csl file and refer to it in the line above.
+lot: true
+lof: true
+#space_between_paragraphs: true
+#- \usepackage{tikz}
+---
+
+```{r include_packages, include = FALSE}
+# This chunk ensures that the thesisdown package is
+# installed and loaded. This thesisdown package includes
+# the template files for the thesis.
+if(!require(devtools))
+  install.packages("devtools", repos = "http://cran.rstudio.com")
+if(!require(thesisdown))
+  devtools::install_github("ismayc/thesisdown")
+library(thesisdown)
+```
+
+```{r chunkopts, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, cache=FALSE, autodep=TRUE, cache.comments=FALSE, warning=FALSE, out.width='75%\\textwidth', fig.align='center', include=TRUE, message=FALSE, dev.args=list(bg="transparent"), dev='pdf') #, dev='pdf' #, cache=TRUE #, cache.comments=FALSE
+library(pROC)
+library(plyr)
+library(dplyr)
+library(data.table)
+library(ggplot2)
+library(ggpubr)
+library(pander)
+#library(ggpaired)
+```
+<!-- You'll need to include the order that you'd like Rmd files to appear in the _bookdown.yml file for
+PDF files and also delete the # before rmd_files: there.  You'll want to not include 00(two-hyphens)prelim.Rmd
+and 00-abstract.Rmd since they are handled in the YAML above differently for the PDF version.
+-->
+
+# Zusammenfassung {.unnumbered}
+
+# Summary {.unnumbered}
+
+# List of Abbreviations {.unnumbered}
+
+--------------------------------------------------------------------------------------------
+ **index**   **Abbrev.**  **Elaboration**
+----------- ------------- ------------------------------------------------------------------- 
+ **0-9**      2-D	            Two Dimensional
+
+              3-D 	          Three Dimensional
+
+ **C**        CC  	          Cell Cluster
+
+ **E**        ECDF 	          Empirical Cumulative Distribution Function
+
+ **K**        KDE  	          Kernel Density Estimation
+
+ **L**        LL 	            Lateral Line
+
+              LOESS  	        Locally Weighted Scatterplot Smoothing
+
+              LUT	            Lookup Table
+
+ **M**        MaxIP  	        Maximum Intensity Projection
+
+ **N**        NM  	          Neuromast
+
+ **P**        PFA  	          Paraformaldehyd
+
+              PLLp  	        Posterior Lateral Line Primordium
+
+ **R**        ROI  	          Region of Interest
+
+ **S**        SEM 	          Scanning Electron Microscopy
+
+ **W**        WT	            Wild Type
+--------------------------------------------------------------------------------------------
