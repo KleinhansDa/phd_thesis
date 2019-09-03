@@ -6,7 +6,7 @@
 If you feel it necessary to include an appendix, it goes here.
 -->
 
-# Supplementary {.unnumbered}
+# Supplement
 
 ## Neuromasts
 
@@ -16,7 +16,7 @@ To check whether the reduction in size and cell count of NMs in shroom3$--$ embr
 
 (ref:suppsem) CC Kinocilia
 
-```{r sumcells, out.width = "0.50\\textwidth", fig.cap="(ref:suppsem)", fig.scap="CC Kinocilia"}
+```{r suppsem, out.width = "0.50\\textwidth", fig.cap="(ref:suppsem)", fig.scap="CC Kinocilia"}
 knitr::include_graphics("figures/supp/sem.png")
 ```
 
@@ -121,9 +121,9 @@ knitr::include_graphics("figures/supp/cc_model.png")
 
 ### Morphogenetic gradients
 
-(ref:supgrad) CC pattern model
+(ref:supgrad) Morphogenic gradients
 
-```{r supgrad, out.width = "0.8\\textwidth", fig.cap="(ref:supgrad)", fig.scap="CC pattern model"}
+```{r supgrad, out.width = "0.8\\textwidth", fig.cap="(ref:supgrad)", fig.scap="Morphogenic gradients"}
 knitr::include_graphics("figures/supp/gradients.png")
 ```
 

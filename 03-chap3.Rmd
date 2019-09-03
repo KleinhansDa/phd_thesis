@@ -167,7 +167,7 @@ The dataset generated consists of three pLLP stages (\@(fig:acstages)), four gro
 knitr::include_graphics("figures/results/04_constriction/Yolk_ext.png")
 ```
 
-```{r}
+```{r acdatatab}
 acdata <- read.delim("data/tables/acdata.txt")
 knitr::kable(acdata, "latex", booktabs=T) %>%
   kable_styling(full_width = T) %>%
@@ -227,7 +227,7 @@ knitr::kable(hcdata, "latex", booktabs=T) %>%
 While in both _shroom3_++ and _shroom3_$--$ Tom signal intensities are rising as soon as CCs are deposited (\@ref(fig:hctl)A), in _shroom3_$--$ embryos intensities are on the rise in the pLLP already in the first four hours of migration. When comparing signal intensities in deposited CCs for both, _shroom3_++ and _shroom3_$--$ show a similar pattern of decreasing Tom signal intensity with progressive depositions. Similarly, when looking ungrouped overall development in CC signal intensity (\@ref(fig:hctl)B), no difference can be detected.
 While there is no difference in relative numbers of _atoh1a_ expressing cells within the migrating pLLP throughout time (\@ref(fig:hctl)C), when comparing mean cell counts at specific intervals the numbers reveal a significant difference from 0 – 3 and 12 – 15 hours (\@ref(fig:hctl)C’). The extrusions to the left in the kymographs in figure \@ref(fig:hctl)D are representative to the elongating pLLP during the process of CC deposition. Magenta curves represent expression of _atoh1a_. For the _shroom3_$--$ pLLP, premature expression of _atoh1a_ can be detected. The diagonal lines in the kymographs in figure \@ref(fig:hctl)D’ represent the moving pLLP along the LL. Vertical curves represent deposited CCs. As for the registered pLLP, Magenta curves represent expression of _atoh1a_.
 
-(ref:hctl) Haircell specification in the LL. **A and B** maximum Tom intensities in the pLLP and CCs. All CC lifetimes were normalized to the timepoint of deposition (timepoint zero, highlighted by striped vertical line). pLLP intensities are shows to the right, CC intensities are shows on a negative scale to the left. **C** Relative numbers of _atoh1a_s expressing cells and **C’** mean counts of atoh1a expressing cells. **D-D’** Kymographs along the horizontal midline showing nascent signal of Tom (in magenta) **D** two individual pLLPs that were registered in time and to the leading edge. And **D’** Tom signal during LL development. 
+(ref:hctl) Haircell specification in the LL. **A and B** maximum Tom intensities in the pLLP and CCs. All CC lifetimes were normalized to the timepoint of deposition (timepoint zero, highlighted by striped vertical line). pLLP intensities are shows to the right, CC intensities are shows on a negative scale to the left. **C** Relative numbers of _atoh1a_ expressing cells and **C’** mean counts of _atoh1a_ expressing cells. **D-D’** Kymographs along the horizontal midline showing nascent signal of Tom (in magenta) **D** two individual pLLPs that were registered in time and to the leading edge. And **D’** Tom signal during LL development. 
 
 ```{r hctl, out.width = "0.95\\textwidth", fig.cap="(ref:hctl)", fig.scap="Haircell specification in the LL"}
 knitr::include_graphics("figures/results/05_atoh/Figure_7-white-01.png")
@@ -300,7 +300,7 @@ knitr::kable(data, "latex", booktabs=T) %>%
   #add_header_above(c("id labels" = 2, "metrics" = 3))
 ```
 
-### Thermodynamic Rescue
+### Thermodynamic Rescue {#res-tempresc}
 
 Increasing temperature usually leads to an acceleration in thermodynamics and embryonic development, while lower temperatures decelerate [@Dettlaff1991]. Decelerated development also leads to a reduction in speed of migration and therefore to a reduction in forces that act on cells, cell-cell junctions and organ structures. In this experiment the hypothesis was that it should be possible to at least partially restore the _shroom3_++ number of CCs since reduced forces would stabilize rosettes and therefore rosettes would have longer time to develop properly. Since embryos develop at different speeds, it is more challenging to exactly stage match them at end of migration. To account for this the CC count was normalized to LL length.
 Even though the CC count in _shroom3_$--$ embryos incubated at 25$^\circ$C cannot be completely restored, they are hardly more different than levels of _shroom3_++ embryos incubated at 30$^\circ$C.

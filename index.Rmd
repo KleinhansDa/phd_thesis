@@ -48,7 +48,7 @@ csl: files/science.csl
 lot: true
 lof: true
 disclosure: |
-  Disclosure: Unless otherwise noted, all figures in this manuscript are an expression of my own creative achievement. Similarities between molecule, protein and signalling models exist and are based on well-known textbooks such as Lodish et al., Molecular Cell Biology, 5th Edt. and Scott F. Gilbert et al., Developmental Biology 11th Edt. 
+  Unless otherwise noted, all figures in this manuscript are an expression of my own creative achievement. Similarities between molecule, protein and signalling models exist and are based on well-known textbooks such as Lodish et al., Molecular Cell Biology, 5th Edt. and Scott F. Gilbert et al., Developmental Biology 11th Edt. 
 #space_between_paragraphs: true
 #- \usepackage{tikz}
 ---

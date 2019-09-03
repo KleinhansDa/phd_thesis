@@ -182,8 +182,11 @@ Since most of my analysis is based on 10 fish of Stocknumber 161-1, I also thank
   \listoftables
 
   \listoffigures
-  {Disclosure: Unless otherwise noted, all figures in this manuscript are an expression of my own creative achievement. Similarities between molecule, protein and signalling models exist and are based on well-known textbooks such as Lodish et al., Molecular Cell Biology, 5th Edt. and Scott F. Gilbert et al., Developmental Biology 11th Edt.}
-
+  \vfill
+  \begin{center}
+    \textbf{Disclosure}\\
+    {Unless otherwise noted, all figures in this manuscript are an expression of my own creative achievement. Similarities between molecule, protein and signalling models exist and are based on well-known textbooks such as Lodish et al., Molecular Cell Biology, 5th Edt. and Scott F. Gilbert et al., Developmental Biology 11th Edt.}
+  \end{center}
   \begin{dedication}
     I dedicate this Thesis to\ldots{}
     \begin{enumerate}
@@ -395,8 +398,8 @@ Upon ligand binding Fgfr dimerizes and undergoes a conformational shift activati
 
 Furthermore, it was shown that rosette formation is an important morphological feature for a vesicle to form on top of the rosette, which acts as a locally enriched source of Fgf signalling (\emph{12}).
 
-\hypertarget{lateral-inhibition}{%
-\subsubsection{Lateral Inhibition}\label{lateral-inhibition}}
+\hypertarget{intro-notch}{%
+\subsubsection{Lateral Inhibition}\label{intro-notch}}
 
 In neurobiology the term \emph{lateral inhibition} describes the process of an excited neuron reducing the activity of its neighbors. The same principle however can be found in other types of cells too where one cell signals its neighbor cell(s) \emph{not} to do something. term has therefore been adapted by developmental biologists to describe processes in which Notch signaling takes place (\emph{13}, \emph{14}).
 
@@ -430,24 +433,18 @@ In nature zebrafish can be found in the shallow waters of the Indian and Pakista
 \hypertarget{developmental-stages}{%
 \subsection{Developmental Stages}\label{developmental-stages}}
 
-A single female may lay up to 100 fertilized eggs (Zygotes). Each Zygote then undergoes the first zygotic cell cycle (\textbf{up to 0.75 h}). The following two to seven cell cycles (period: \emph{Cleavage}, \textbf{up to 2.25 h}) occur directed and synchronous every \textasciitilde{}15 min. Cells in this stage are called \emph{blastomeres} and are incompletely undercut the \emph{blastodisc} (the collective of blastomeres) and remain interconnected by cytoplasmic bridges. The \emph{Blastula} period (up to 5.25 h) is determined by an increasing a-synchronicity between the cells, flattening of the blastodisc and lengthening of the cell cycle. This period is also marked by the onset of \emph{epiboly}\footnote{cells in late blastula start to dome, while a monolayer of the domes circumfence begins to wrap around the Yolk} (\emph{18}).
+A single female may lay up to 100 fertilized eggs. Each Zygote\footnote{first diploid cell after fertilization between two germ cells} then undergoes the first zygotic cell cycle (\textbf{up to 0.75 h}). The following two to seven cell cycles (period: \emph{Cleavage}, \textbf{up to 2.25 h}) occur directed and synchronous every \textasciitilde{}15 min. Cells in this stage are called \emph{blastomeres} and are incompletely undercut the \emph{blastodisc} (the collective of blastomeres) and remain interconnected by cytoplasmic bridges. The \emph{Blastula} period (up to 5.25 h) is determined by an increasing a-synchronicity between the cells, flattening of the blastodisc and lengthening of the cell cycle. This period is also marked by the onset of \emph{epiboly}\footnote{cells in late blastula start to dome, while a monolayer of the domes circumfence begins to wrap around the Yolk} (\emph{18}).
 
-After Blastula and \textbf{up to 10 h} the \emph{Gastrula} period takes place, followed by the \emph{Segmentation} period (\textbf{up to 24 h}). Both of which are depicted in more detail in \ref{fig:stages1}. At even later stages the embryo starts to elongate posteriorly, grow in size and develop organs until it first active muscle are present and it starts to swim \ref{fig:stages2}.
+After Blastula and \textbf{up to 10 h} the \emph{Gastrula} period takes place, followed by the \emph{Segmentation} period (\textbf{up to 24 h}). Both of which are depicted in more detail in figure \ref{fig:stages}. At even later stages the embryo starts to elongate posteriorly, grow in size and develop organs until it first active muscle are present and it starts to swim \ref{fig:stages}.
+
+
 \begin{figure}
 
 {\centering \includegraphics[width=.95\textwidth]{figures/intro/stages} 
 
 }
 
-\caption{Zebrafish embryonic development (schemes adapted from Kimmel et al., 1995}\label{fig:stages1}
-\end{figure}
-\begin{figure}
-
-{\centering \includegraphics[width=.95\textwidth]{figures/intro/cldnblyngfpt_1} 
-
-}
-
-\caption{Zebrafish schemes (A) at 32 hpf. Showing (B) at 48 hpf}\label{fig:stages2}
+\caption[Zebrafish embryonic development]{Zebrafish embryonic development (schemes adapted from Kimmel et al., 1995)}\label{fig:stages}
 \end{figure}
 \hypertarget{the-lateral-line-system}{%
 \subsection{The Lateral Line System}\label{the-lateral-line-system}}
@@ -3512,9 +3509,9 @@ In summary our results suggest that there is no significant difference either in
 \section{Datasets}\label{mat-datasets}}
 
 \hypertarget{cc-data}{%
-\subsection{Cell-Cluster data}\label{cc-data}}
+\subsection{Cell-Cluster}\label{cc-data}}
 \begin{longtable}[]{@{}ll@{}}
-\caption{\label{tab:ccdata} Cell Cluster data}\tabularnewline
+\caption{\label{tab:ccdata} Cell Cluster dataset}\tabularnewline
 \toprule
 \endhead
 \begin{minipage}[t]{0.21\columnwidth}\raggedright
@@ -3555,7 +3552,7 @@ Fixation\strut
 \begin{minipage}[t]{0.21\columnwidth}\raggedright
 agarose\strut
 \end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-1\% low melt\strut
+1\% LMPA\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.21\columnwidth}\raggedright
 \textbf{Imaging}\strut
@@ -3595,9 +3592,9 @@ Rotation and cropping in XY\strut
 \bottomrule
 \end{longtable}
 \hypertarget{aci-data}{%
-\subsection{Apical Constriction Index data}\label{aci-data}}
+\subsection{Apical Constriction Index}\label{aci-data}}
 \begin{longtable}[]{@{}ll@{}}
-\caption{\label{tab:acidata} ACI data}\tabularnewline
+\caption{\label{tab:acidata} ACI dataset}\tabularnewline
 \toprule
 \endhead
 \begin{minipage}[t]{0.21\columnwidth}\raggedright
@@ -3638,7 +3635,7 @@ Protocol\strut
 \begin{minipage}[t]{0.21\columnwidth}\raggedright
 agarose\strut
 \end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-0.5\% low melt + 20\% Tricaine (V/V\%)\strut
+0.5\% LMPA + 20\% Tricaine (V/V\%)\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.21\columnwidth}\raggedright
 stamp\strut
@@ -3653,7 +3650,7 @@ stamp v4A\strut
 \begin{minipage}[t]{0.21\columnwidth}\raggedright
 Magnification\strut
 \end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-40X objective\strut
+40X\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.21\columnwidth}\raggedright
 Camera\strut
@@ -3678,9 +3675,9 @@ Z-Stack\strut
 \bottomrule
 \end{longtable}
 \hypertarget{tl-data}{%
-\subsection{Timelapse data}\label{tl-data}}
+\subsection{Proliferation}\label{tl-data}}
 \begin{longtable}[]{@{}ll@{}}
-\caption{\label{tab:prolifdata} Proliferation data}\tabularnewline
+\caption{\label{tab:prolifdata} Proliferation dataset}\tabularnewline
 \toprule
 \endhead
 \begin{minipage}[t]{0.21\columnwidth}\raggedright
@@ -3721,7 +3718,7 @@ Protocol\strut
 \begin{minipage}[t]{0.21\columnwidth}\raggedright
 Agarose\strut
 \end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-0.3\% low melt + 20\% Tricaine (V/V\%)\strut
+0.3\% LMPA + 20\% Tricaine (V/V\%)\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.21\columnwidth}\raggedright
 Stamp\strut
@@ -3736,7 +3733,7 @@ stamp v4A\strut
 \begin{minipage}[t]{0.21\columnwidth}\raggedright
 Magnification\strut
 \end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-20X objective + 1.5x zoom\strut
+20X + 1.5x zoom\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.21\columnwidth}\raggedright
 Camera\strut
@@ -3781,9 +3778,9 @@ Rotation and cropping in XY and T\strut
 \bottomrule
 \end{longtable}
 \hypertarget{detect-data}{%
-\subsection{Detection data}\label{detect-data}}
+\subsection{Detection}\label{detect-data}}
 \begin{longtable}[]{@{}ll@{}}
-\caption{\label{tab:detectdata} Detection data}\tabularnewline
+\caption{\label{tab:detectdata} Detection dataset}\tabularnewline
 \toprule
 \endhead
 \begin{minipage}[t]{0.21\columnwidth}\raggedright
@@ -3824,7 +3821,7 @@ Protocol\strut
 \begin{minipage}[t]{0.21\columnwidth}\raggedright
 Agarose\strut
 \end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-0.3\% low melt + 20\% Tricaine (V/V\%)\strut
+0.3\% LMPA + 20\% Tricaine (V/V\%)\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.21\columnwidth}\raggedright
 Stamp\strut
@@ -3839,7 +3836,7 @@ stamp v5A\strut
 \begin{minipage}[t]{0.21\columnwidth}\raggedright
 Magnification\strut
 \end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-20X objective + 1.5x zoom\strut
+20X + 1.5x zoom\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.21\columnwidth}\raggedright
 Camera\strut
@@ -3883,8 +3880,116 @@ Rotation and cropping in XY and T\strut
 \end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}
-\hypertarget{results-1}{%
-\chapter{Results}\label{results-1}}
+\hypertarget{mat-ato-set}{%
+\subsection{Atoh1a}\label{mat-ato-set}}
+\begin{longtable}[]{@{}ll@{}}
+\caption{\label{tab:atoset} atoh1a dataset}\tabularnewline
+\toprule
+\endhead
+\begin{minipage}[t]{0.21\columnwidth}\raggedright
+\textbf{Crossings}\strut
+\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.21\columnwidth}\raggedright
+Pairs\strut
+\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
+4\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.21\columnwidth}\raggedright
+Transgenes\strut
+\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
+cldnb:lyn-gfp +/?; atoh1a:Tom +/0\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.21\columnwidth}\raggedright
+Mutation\strut
+\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
+\emph{shroom3}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.21\columnwidth}\raggedright
+Staging\strut
+\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
+30 min.\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.21\columnwidth}\raggedright
+\textbf{Mounting}\strut
+\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.21\columnwidth}\raggedright
+Protocol\strut
+\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
+190930 D.S. Kleinhans\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.21\columnwidth}\raggedright
+Agarose\strut
+\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
+0.3\% LMPA + 20\% Tricaine (V/V\%)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.21\columnwidth}\raggedright
+Stamp\strut
+\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
+stamp v5A\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.21\columnwidth}\raggedright
+\textbf{Imaging}\strut
+\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.21\columnwidth}\raggedright
+Magnification\strut
+\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
+20X\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.21\columnwidth}\raggedright
+Camera\strut
+\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
+Binning 2x2; Gain 4; full FOV*100 \(\mu\)m\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.21\columnwidth}\raggedright
+Channels\strut
+\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
+488 nm (Int: 20\%; Exp: 25ms)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.21\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
+561 nm (Int: 30\%; Exp: 50ms)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.21\columnwidth}\raggedright
+Positions\strut
+\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
+36 positions\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.21\columnwidth}\raggedright
+Z-Stack\strut
+\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
+2.5 \(\mu\)m Z-spacing; 100 \(\mu\)m stack size; 2*X large image\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.21\columnwidth}\raggedright
+Time\strut
+\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
+20 h / 20 min. interval / start \textasciitilde{} 2 p.m. (32 hpf)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.21\columnwidth}\raggedright
+\textbf{Processing}\strut
+\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.21\columnwidth}\raggedright
+Projection\strut
+\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
+Maximum intensity\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.21\columnwidth}\raggedright
+Transformations\strut
+\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
+Rotation and cropping in XY and T\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+\hypertarget{res}{%
+\chapter{Results}\label{res}}
 
 \hypertarget{lateral-line-morphometrics}{%
 \section{Lateral Line Morphometrics}\label{lateral-line-morphometrics}}
@@ -3930,8 +4035,8 @@ Even though CC position in individual \emph{shroom3}\(--\) embryos seems more ra
 
 \caption[Cell Cluster Positions]{Cell Cluster positions \textbf{A} Exemplary \emph{shroom3}++ and \(--\) embryos with CCs hightlighted. CC0 marks the reference location to compare individual embryos. Scale bar = 1 mm \textbf{A'} Kernel Density Estimate without (KDE) grouping (n++=162, n--=206) \textbf{A''} Dots = mean positions, bars = standard deviation (nmax for both ++ and -- =26).}\label{fig:llpos}
 \end{figure}
-\hypertarget{cell-count-and-area-of-ccs}{%
-\subsection{Cell Count and Area of CCs}\label{cell-count-and-area-of-ccs}}
+\hypertarget{res-llmorph}{%
+\subsection{Cell Count and Area of CCs}\label{res-llmorph}}
 
 To get an idea about whether facilitated proliferation contributes to the phenotype we observe in \emph{shroom3}\(--\) embryos, the cell count per CC was determined by counting DAPI stained cells within CC segments derived from the \emph{cldnb:lyn-gfp} membrane signal (section \ref{mat-GrTrDat}). Both cells per CC and area per CC are shrunk by about 6\% in \emph{shroom3}\(--\) embryos, while the density of cells per area remains unchanged (\ref{fig:llclus}A). Interestingly, when comparing net cell counts per embryo an increase of 9\% is observed (\ref{fig:llclus}B). Both the sum of CC cells and total LL cells (CC+pLLP) are significantly increased in \emph{shroom3}\(--\) embryos, while the count of only pLLP cells remains unchanged.
 
@@ -3969,8 +4074,8 @@ To index the proliferative activity (minutes per mitosis) per embryo, the produc
 \makebox[\linewidth]{$Proliferation Index = \frac{Mitotses [\Bbb{n}]}{Timepoints[\Bbb{n}] * \Delta T [\Bbb{min.}]}$}
 \newline
 
-\hypertarget{mitoses-in-the-pllp}{%
-\subsection{Mitoses in the pLLP}\label{mitoses-in-the-pllp}}
+\hypertarget{res-prolpllp}{%
+\subsection{Mitoses in the pLLP}\label{res-prolpllp}}
 
 Tracking mitoses in the pLLP does not reveal any difference in proliferation from start (\textasciitilde{}28 hpf) till about mid of migration 12 hours later (\ref{fig:prolpllp}A). For confirmation, this finding was also validated via two more traditional methods. During mitosis genetic material is replicated in S-phase\footnote{`S` like ‚Synthesis`}, while in meta-phase chromosomes are found to be heavily phosphorylated (\emph{57}). With an EdU\footnote{5-Ethynyl-2'-deoxyuridine} assay (\emph{58}) cells in S-phase can be detected (\ref{fig:prolpllp}B'). Using a specific phospho-histone (p-Hist.) antibody cells in meta-phase can be detected. When comparing the relative numbers of EdU resp. p-Hist cells over total pLLP cells, again, no difference in proliferation can be detected. Still, at end of migration the LL system in \emph{shroom3}\(--\) embryos does incorporate 9\(\%\) more cells.
 
@@ -3983,8 +4088,8 @@ Tracking mitoses in the pLLP does not reveal any difference in proliferation fro
 
 \caption[pLLP proliferation]{pLLP proliferation \textbf{A} \textbf{B-B'}}\label{fig:prolpllp}
 \end{figure}
-\hypertarget{mitoses-in-cell-clusters}{%
-\subsection{Mitoses in Cell Clusters}\label{mitoses-in-cell-clusters}}
+\hypertarget{res-prolcc}{%
+\subsection{Mitoses in Cell Clusters}\label{res-prolcc}}
 
 Due to their high regenerative ability, zebrafish are a popular model in regenerative research (\emph{19}, \emph{22}, \emph{59}). It is well known that zebrafish NMs have a very high regenerative capacity (\emph{60}--\emph{62}). Since individual \emph{shroom3}\(--\) CCs are smaller, we wondered if there could be compensation mechanisms activated that increase proliferation to restore wildtype CC size once they are deposited. To verify this, CC mitoses were tracked on the same data as before. Other than the pLLP, which can be observed throughout the time-lapse, CCs only begin to \emph{exist} when they are deposited. To normalize for individual CC lifetimes, the number of mitoses per CC is divided by the duration of the total time-lapse minus the time span to when it first appeared. This way it becomes evident that the additional cells in \emph{shroom3}\(--\) embryos are derived from CC proliferation, rather than pLLP proliferation.
 
@@ -4214,15 +4319,15 @@ While there is no difference in relative numbers of \emph{atoh1a} expressing cel
 
 }
 
-\caption[Haircell specification in the LL]{Haircell specification in the LL. \textbf{A and B} maximum Tom intensities in the pLLP and CCs. All CC lifetimes were normalized to the timepoint of deposition (timepoint zero, highlighted by striped vertical line). pLLP intensities are shows to the right, CC intensities are shows on a negative scale to the left. \textbf{C} Relative numbers of \_atoh1a\_s expressing cells and \textbf{C'} mean counts of atoh1a expressing cells. \textbf{D-D'} Kymographs along the horizontal midline showing nascent signal of Tom (in magenta) \textbf{D} two individual pLLPs that were registered in time and to the leading edge. And \textbf{D'} Tom signal during LL development.}\label{fig:hctl}
+\caption[Haircell specification in the LL]{Haircell specification in the LL. \textbf{A and B} maximum Tom intensities in the pLLP and CCs. All CC lifetimes were normalized to the timepoint of deposition (timepoint zero, highlighted by striped vertical line). pLLP intensities are shows to the right, CC intensities are shows on a negative scale to the left. \textbf{C} Relative numbers of \emph{atoh1a} expressing cells and \textbf{C'} mean counts of \emph{atoh1a} expressing cells. \textbf{D-D'} Kymographs along the horizontal midline showing nascent signal of Tom (in magenta) \textbf{D} two individual pLLPs that were registered in time and to the leading edge. And \textbf{D'} Tom signal during LL development.}\label{fig:hctl}
 \end{figure}
 \hypertarget{rescue-experiments}{%
 \section{Rescue Experiments}\label{rescue-experiments}}
 
 Rescue experiments are focused on LL CC count and pLLP rosettiness. Since Shroom3 affects development not linearly as e.g.~a simple signaling molecule, but by providing a scaffold where different dimensions can act together, we tried rescuing by manipulating those single dimensions to find out which one had the most impact.
 
-\hypertarget{shroom3-ectopic-expression}{%
-\subsection{Shroom3 Ectopic Expression}\label{shroom3-ectopic-expression}}
+\hypertarget{res-shrmresc}{%
+\subsection{Shroom3 Ectopic Expression}\label{res-shrmresc}}
 
 To find out if the LL phenotype can be rescued by ectopic expression of Shroom3, a transgene was used where \emph{shroom3v1} is fused to RFP and expressed under control of a heatshock protein\footnote{In this case ‚hsp70`}. While this construct was used for rescue before (\emph{29}) (see section \ref{intro-shroom}), here it was used to test for CC count and rosettiness too. Rescuing the \emph{shroom3}\(--\) phenotype with Shroom3 itself is interesting to control for LL unspecific effects that might have happened earlier in development and to find out about Shroom3s morphogenic potential.
 For this experiment, embryos were imaged two times. First at around 36 hpf, and a second time at end of migration after about 24 hours of incubation at 28.5\(^\circ\). This way it is possible to test for correlations between rosettiness earlier in development and CC count at end of migration.
@@ -4280,8 +4385,8 @@ genotype & concentrations & LLs & genotype.1 & concentrations.1 & LLs.1\\
  & 0.100 uM & 10 &  & 0.100 uM & 10\\
 \bottomrule
 \end{tabu}
-\hypertarget{mechanic-rescue}{%
-\subsection{Mechanic Rescue}\label{mechanic-rescue}}
+\hypertarget{res-rockresc}{%
+\subsection{Mechanic Rescue}\label{res-rockresc}}
 
 It is very well known that Rho kinases are necessary for mechanic force transmission in various developmental processes (\emph{9}, \emph{33}, \emph{38}, \emph{66}, \emph{67}). Since Rock is also thought to be a key player of the Shroom force mediation pathway in the pLLP, the idea for a mechanic rescue was to titrate different concentrations of a Rock inhibitor\footnote{Rockout (section @ref(\#mat-chem))} and an inductor\footnote{Calyculin (section \ref{mat-chem})} to see if this way the \emph{shroom3}\(--\) phenotype can be mimicked in \emph{shroom}++ embryos resp. restored in \emph{shroom3}\(--\).
 
@@ -4331,8 +4436,8 @@ genotype & concentrations & LLs & genotype.1 & concentrations.1 & LLs.1\\
  & 100 nm & 12 &  & 100 nM & 12\\
 \bottomrule
 \end{tabu}
-\hypertarget{thermodynamic-rescue}{%
-\subsection{Thermodynamic Rescue}\label{thermodynamic-rescue}}
+\hypertarget{res-tempresc}{%
+\subsection{Thermodynamic Rescue}\label{res-tempresc}}
 
 Increasing temperature usually leads to an acceleration in thermodynamics and embryonic development, while lower temperatures decelerate (\emph{68}). Decelerated development also leads to a reduction in speed of migration and therefore to a reduction in forces that act on cells, cell-cell junctions and organ structures. In this experiment the hypothesis was that it should be possible to at least partially restore the \emph{shroom3}++ number of CCs since reduced forces would stabilize rosettes and therefore rosettes would have longer time to develop properly. Since embryos develop at different speeds, it is more challenging to exactly stage match them at end of migration. To account for this the CC count was normalized to LL length.
 Even though the CC count in \emph{shroom3}\(--\) embryos incubated at 25\(^\circ\)C cannot be completely restored, they are hardly more different than levels of \emph{shroom3}++ embryos incubated at 30\(^\circ\)C.
@@ -4382,33 +4487,33 @@ genotype & concentrations & LLs & genotype.1 & concentrations.1 & LLs.1\\
 \hypertarget{adult-phenotype}{%
 \section{Adult Phenotype}\label{adult-phenotype}}
 
-\emph{Shroom3} heterozygous zebrafish show no phenotypic abnormality. When incrossed, genotyping of two to five days post fertilization (dpf) embryos results in a Mendelian distribution. However, for stock-fish that are regenerated and genotyped by finclip at about 3 months of age show only a rate of 5-10\% of \emph{shroom3}\(--\). After another 3 -- 6 months those would usually decease too. Therefore, defect Shroom3 in \emph{D.rerio} leads to increased mortality.
+\emph{Shroom3} heterozygous zebrafish show no phenotypic abnormality. When incrossed, genotyping of two to five days post fertilization (dpf) embryos results in a Mendelian distribution. However, for stock-fish that are regenerated and genotyped by finclip at about 3 months of age show only a rate of 5-10\(\%\) of \emph{shroom3}\(--\). After another 3 -- 6 months those would usually decease too. Therefore, defect Shroom3 in \emph{D.rerio} leads to increased mortality.
 
 \hypertarget{lateral-line}{%
 \section{Lateral Line}\label{lateral-line}}
 
-Two additional CCs are deposited in shroom3\(--\) embryos (results, figure 1.1) leading to a net increase in cell count of \textasciitilde{}9\% (31 cells) (results, figure 1.3). However, proliferation is not increased in the pLLP (results, figure 2.2) but in CCs once they are deposited (results, figure 2.3). Therefore, the increase in CC count is unrelated to the amount of proliferation in the pLLP. The cell count and area per CC show an average reduction of 6\% respectively and no difference for the density (results, figure 1.3).
-The shroom3\(--\) LL phenotype can be mimicked by inhibition of Rock but not rescued by induction of Rock (results, chapter 6.3), leading to the conclusion that Rock is necessary for proper rosette assembly and CC deposition, but not sufficient. CC count can also be rescued by ectopic expression of a Shroom3-RFP fusion protein (results, figure 6.1 A).
-The reduction is supported scanning electron microscopy (SEM) pictures of 3 dpf (supplement, figure 1) NMs, which indicate a disruption bundled kinocilia. However, as hair cells still develop (supplement, figure 2), there is no reason to presume that shroom3\(--\) NMs suffered from a loss of function.\\
-End of migration analysis shows that the average length of the LL does not differ, suggesting that speed is also not affected. This is confirmed by time-lapse analysis, which neither shows a difference in speed of migration, nor in acceleration (results, figure 3.3).
+Two additional CCs are deposited in shroom3\(--\) embryos (section \ref{res-ccounts}) leading to a net increase in cell count of \textasciitilde{}9\(\%\) (31 cells) (section \ref{res-llmorph}). However, proliferation is not increased in the pLLP (section \ref{res-prolpllp}) but in CCs once they are deposited (section \ref{res-prolcc}). Therefore, the increase in CC count is unrelated to the amount of proliferation in the pLLP. The cell count and area per CC show an average reduction of 6\(\%\) respectively and no difference for the density (section \ref{res-llmorph}).
+The shroom3\(--\) LL phenotype can be mimicked by inhibition of Rock but not rescued by induction of Rock (section \ref{res-rockresc}), leading to the conclusion that Rock is necessary for proper rosette assembly and CC deposition, but not sufficient. CC count can also be rescued by ectopic expression of a Shroom3-RFP fusion protein (section \ref{res-shrmresc}), leading to the conclusion that Shroom3 has a spatiotemporal function necessary and sufficient for proper LL development.
+The reduction is supported scanning electron microscopy (SEM) pictures of 3 dpf (supplement, \ref{fig:suppsem}) NMs, which indicate a disruption bundled kinocilia. However, as hair cells do still develop (supplement, \ref{fig:suppllhc}), there is no reason to presume that shroom3\(--\) NMs suffered from a loss of function. End of migration analysis also shows that the average length of the LL does not differ, suggesting that speed is not affected. This is confirmed by time-lapse analysis, which neither shows a difference in speed of migration, nor in acceleration (results, \ref{fig:rdtreg}).
 
 \hypertarget{rosettes}{%
 \section{Rosettes}\label{rosettes}}
 
-Rosette analysis showed that the median count of rosettes is hardly (2 rosettes in \emph{shroom3}\(--\) as compared to 3 in \emph{shroom3}++ embryos) and mostly affected within the first 6-8 hours of migration (results, figure 3.4 B and B'). Also, variance is much more affected, such that the error bars extend those of \emph{shroom3}++ in both maximum and minimum. Rosettiness however, the normalized rosette weight, is much more drastically affected (results, figure 3.4 C and C'). While the median rosettiness of \emph{shroom3}++ is at a constant level of about 0.9, \emph{shroom3}\(--\) rosettiness starts out at about 0.5 but then linearly grows until it also reaches levels of about 0.9 at 16-20 hours of migration. As for rosette detection, variance is much higher.
+Rosette analysis showed that the median count of rosettes is hardly (2 rosettes in \emph{shroom3}\(--\) as compared to 3 in \emph{shroom3}++ embryos) and mostly affected within the first 6-8 hours of migration ((\ref{fig:rdtdet})B and B'). Also, variance is much more affected, such that the error bars extend those of \emph{shroom3}++ in both maximum and minimum. Rosettiness however, the normalized rosette weight, is much more drastically affected ((\ref{fig:rdtdet})C and C'). While the median rosettiness of \emph{shroom3}++ is at a constant level of about 0.9, \emph{shroom3}\(--\) rosettiness starts out at about 0.5 but then linearly grows until it also reaches levels of about 0.9 at 16-20 hours of migration. As for rosette detection, variance is much higher.
 
-Rosettiness is strongly correlated to the final number of CCs deposited (results, figure 3.5 B) which is also evidenced by rescue of correlation between rosettiness at the beginning of migration and CC count at the end of migration (results, figure 6.1 C), concluding that rosettiness is the key parameter for the future outcome of CC pattern. Still, the question is what determines rosette weight. Although speed and rosettiness are correlated only weakly, they are significantly stronger correlated in \emph{shroom3}\(--\) than they are in \emph{shroom3}++ embryos throughout time (results, figure 3.5 A). This finding is also confirmed by an experiment where the CC count of \emph{shroom3}\(--\) can be rescued when incubated at lower temperature (results, chapter 6.4). In conclusion these results lead to the conclusion that \emph{shroom3}\(--\) rosettes are destabilized with increasing thermodynamics.
+Rosettiness is strongly correlated to the final number of CCs deposited (\ref{fig:rdtcorr}B) which is also evidenced by rescue of correlation between rosettiness at the beginning of migration and CC count at the end of migration (\ref{fig:rescshrm}C), concluding that rosettiness is the key parameter for the future outcome of CC pattern. Still, the question is what determines rosette weight. Although speed and rosettiness are correlated only weakly, they are significantly stronger correlated in \emph{shroom3}\(--\) than they are in \emph{shroom3}++ embryos throughout time (\ref{fig:rdtcorr}A). This finding is also confirmed by an experiment where the CC count of \emph{shroom3}\(--\) can be rescued when incubated at lower temperature (section \ref{res-tempresc}). In conclusion these results lead to the conclusion that \emph{shroom3}\(--\) rosettes are destabilized with increasing thermodynamics.
 
 \hypertarget{hair-cells}{%
 \section{Hair Cells}\label{hair-cells}}
 
-Deposition of the first CC is more independent of Shroom3 (results, figure 1.3) than the remaining CCs and the mean positions indicate that deposition does not happen more randomly, but at a higher frequency. Interestingly during the first four hours, when the first CC is deposited, analysis of hair-cell specification shows that not only the promotor for atoh1a is more active (results, figure 5.2 A and B) in \emph{shroom3}\(--\) embryos, but also that more cells are differentiating to become hair-cells (results, figure 5.2 C and C'). This leads to the conclusion that the morphological changes introduced by the \emph{shroom3} mutation lead to a pre-mature activation of the \emph{shroom3} promotor, subsequently leading to deposition of the CC the hair-cell is associated with. In the pLLP, Notch signaling is important for selection and specification of hair-cells (introduction, chapter 1.3). Interestingly, these findings are supported by another study where they have shown that upon over-activated Notch signaling, CC deposition happened independent of Shroom3 (Kozlovskaja-Gumbrienė et al., 2017). For our observation this could mean that (1) either expression of atoh1a is up-regulated due to a compensation mechanism to ensure CC deposition or (2) that the cellular rearrangements lead to biased Notch signaling. A phenomenon that in fact has been well studied (Shaya et al., 2017). For the latter, the proposed model would be that in each micro-rosette the hair-cell is in contact with less cells, but the amount of Notch ligand stays the same. Therefore, lateral inhibition and feedback is stronger, leading to an increase in expression of atoh1a and ultimately to CC deposition.
+Deposition of the first CC is more independent of Shroom3 (\ref{fig:llpos}) than the remaining CCs and the mean positions indicate that deposition does not happen more randomly, but at a higher frequency. Interestingly during the first four hours, when the first CC is deposited, analysis of hair-cell specification shows that not only the promotor for \emph{atoh1a} is more active (results, figure 5.2 A and B) in \emph{shroom3}\(--\) embryos, but also that more cells are differentiating to become hair-cells (\ref{fig:hctl}C and C'). This leads to the conclusion that the morphological changes introduced by the \emph{shroom3} mutation lead to a pre-mature activation of the \emph{shroom3} promotor, subsequently leading to deposition of the CC the hair-cell is associated with.
+In the pLLP, Notch signaling is important for selection and specification of hair-cells (\ref{intro-notch}). Interestingly, these findings are supported by another study where they have shown that upon over-activated Notch signaling, CC deposition happened independent of Shroom3 (Kozlovskaja-Gumbrienė et al., 2017). For our observation this could mean that (1) either expression of atoh1a is up-regulated due to a compensation mechanism to ensure CC deposition or (2) that the cellular rearrangements lead to biased Notch signaling. A phenomenon that in fact has been well studied (Shaya et al., 2017). For the latter, the proposed model would be that in each micro-rosette the hair-cell is in contact with less cells, but the amount of Notch ligand stays the same. Therefore, lateral inhibition and feedback is stronger, leading to an increase in expression of atoh1a and ultimately to CC deposition.
 
 \hypertarget{apical-constriction-2}{%
 \section{Apical Constriction}\label{apical-constriction-2}}
 
-The method developed to quantify AC allows measurement along two orthogonal axes, the major (the longer axis) and a minor (the shorter axis), of an ellipse fitted to a cellular cross-section at a distinct distance from the apical site. In addition, the cells orientation in degrees from the horizontal midline is obtained (results, figure 4.2 A-A').
-In summary, AC is significantly reduced in \emph{shroom3}\(--\) embryos for the severe phenotypes. In more detail the results show an increased axial an-isotropy, meaning that AC is more reduced along the major than along the minor axis. In conclusion this means that AC and probably tension is more relaxed along the anterior-posterior axis. In terms of cell shape this means that rosette cells go from a pyramidal geometry , more to a prism geometry (figure 1). This is also confirmed by angular measurement which shows that for 0-15° more \emph{shroom3}\(--\) pLLPs cells are aggregated while at 30-45°, more \emph{shroom3}++ cells are aggregated.
+The method developed to quantify AC allows measurement along two orthogonal axes, the major (the longer axis) and a minor (the shorter axis), of an ellipse fitted to a cellular cross-section at a distinct distance from the apical site. In addition, the cells orientation in degrees from the horizontal midline is obtained (\ref{fig:acaci}A-A').
+In summary, AC is significantly reduced in \emph{shroom3}\(--\) embryos for the severe phenotype. In more detail the results show an increased axial an-isotropy, meaning that AC is more reduced along the major than along the minor axis. In conclusion this means that AC and probably tension is more relaxed along the anterior-posterior axis. In terms of cell shape this means that rosette cells go from a pyramidal geometry, more to a prism geometry (\ref{fig:sumcells}). This is also confirmed by angular measurement which shows that for 0-15\(^\circ\) more \emph{shroom3}\(--\) pLLPs cells are aggregated while at 30-45\(^\circ\), more \emph{shroom3}++ cells are aggregated.
 
 
 \begin{figure}
@@ -4419,7 +4524,7 @@ In summary, AC is significantly reduced in \emph{shroom3}\(--\) embryos for the 
 
 \caption[Rosette and Cell Shape Model]{Rosette and Cell Shape Model}\label{fig:sumcells}
 \end{figure}
-Zona occludens-1 (ZO-1) is a peripheral membrane, tight-junction associated protein. Within the apical region of pLLP rosettes Fgf filled luminal structures are developing that that are hubs for locally confined morphogen signaling. All cells of a rosette make up and are connected to a single lumen. When visualizing the lumen via an antibody for ZO-1, the lumen appears like a buckyball where each side is the connection to a single cell (Durdu et al., 2014). While in \emph{shroom3}++ rosettes those structures appear circular in the trailing rosette, in \emph{shroom3}\(--\) rosettes they appear more oval (supplementary, figure4), which supports the theory of an-isotropy. Furthermore, in more leading regions the signal is more fragmented, which supports the theory of micro-rosette structures.
+Zona occludens-1 (ZO-1) is a peripheral membrane, tight-junction associated protein. Within the apical region of pLLP rosettes Fgf filled luminal structures are developing that that are hubs for locally confined morphogen signaling. All cells of a rosette make up and are connected to a single lumen. When visualizing the lumen via an antibody for ZO-1, the lumen appears like a buckyball where each side is the connection to a single cell (Durdu et al., 2014). While in \emph{shroom3}++ rosettes those structures appear circular in the trailing rosette, in \emph{shroom3}\(--\) rosettes they appear more oval (supplement, (\ref{fig:suppzo1}), which supports the theory of an-isotropy. Furthermore, in more leading regions the signal is more fragmented, which supports the theory of micro-rosette structures.
 
 \hypertarget{model-2}{%
 \section{Model}\label{model-2}}
@@ -4496,10 +4601,183 @@ Yet another application example would be to use the ground truth image data to t
 
 \appendix
 
-\hypertarget{supplementary}{%
-\chapter*{Supplementary}\label{supplementary}}
-\addcontentsline{toc}{chapter}{Supplementary}
+\hypertarget{supplement}{%
+\chapter{Supplement}\label{supplement}}
 
+\hypertarget{neuromasts}{%
+\section{Neuromasts}\label{neuromasts}}
+
+\hypertarget{sem}{%
+\subsection{SEM}\label{sem}}
+
+To check whether the reduction in size and cell count of NMs in shroom3\(--\) embryos had an effect on their morphology too, scanning electron microscopy (SEM) samples for each group were imaged.
+
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.50\textwidth]{figures/supp/sem} 
+
+}
+
+\caption[CC Kinocilia]{CC Kinocilia}\label{fig:suppsem}
+\end{figure}
+\hypertarget{hair-cells-1}{%
+\subsection{Hair-cells}\label{hair-cells-1}}
+
+To check whether the reduction in size and cell count of NMs in shroom3\(--\) embryos had an effect on hair cell development, immunostainings on 4 dpf embryos with a hair cell specific marker were performed.
+
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.95\textwidth]{figures/supp/ll_hc} 
+
+}
+
+\caption[Lateral Line Haircells]{Lateral Line Haircells}\label{fig:suppllhc}
+\end{figure}
+\hypertarget{rosette-formation-1}{%
+\section{Rosette Formation}\label{rosette-formation-1}}
+
+\hypertarget{shroom3-localization}{%
+\subsection{Shroom3 localization}\label{shroom3-localization}}
+
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\textwidth]{figures/supp/loc} 
+
+}
+
+\caption[Shroom3 localization]{Shroom3 localization}\label{fig:supploc}
+\end{figure}
+\hypertarget{luminal-signaling}{%
+\subsection{Luminal Signaling}\label{luminal-signaling}}
+
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\textwidth]{figures/supp/zo1} 
+
+}
+
+\caption[Luminal signaling]{Luminal signaling}\label{fig:suppzo1}
+\end{figure}
+\hypertarget{proliferation-2}{%
+\section{Proliferation}\label{proliferation-2}}
+
+An important regulator for proliferation and organ size is the mechanosensitive hippo signaling pathway where the transcription factors Yap and Taz are the most downstream targets. When dephosphorylated, Yap and Taz translocate from the cytoplasm to the nucleus to induce target gene expression.
+To check for differences in hippo signaling, immunostainings for Taz were performed. On average the immunostainings suggest that Taz localization is more concentrated in the leading region and in the nuclei of peripherical PLLp cells.
+
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\textwidth]{figures/supp/immunos} 
+
+}
+
+\caption[Hippo Signaling in the pLLP]{Hippo Signaling in the pLLP. PLLps with nuclei labeled in magenta and Taz in green. Vertical sections show a more basal, a medial and a more apical Z section.}\label{fig:suppyap}
+\end{figure}
+\hypertarget{apical-constriction-3}{%
+\section{Apical Constriction}\label{apical-constriction-3}}
+
+\hypertarget{shroom3-interaction-partners}{%
+\section{Shroom3 interaction partners}\label{shroom3-interaction-partners}}
+
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\textwidth]{figures/supp/lim} 
+
+}
+
+\caption[LIM domain proteins]{LIM domain proteins}\label{fig:supplim}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\textwidth]{figures/supp/lim} 
+
+}
+
+\caption[Lpp-RFP]{Lpp-RFP}\label{fig:supplpp}
+\end{figure}
+\hypertarget{rescue-experiments-1}{%
+\section{Rescue experiments}\label{rescue-experiments-1}}
+
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\textwidth]{figures/results/06_rescues/su54/cc_positions} 
+
+}
+
+\caption[SU5402 CC positions]{SU5402 CC positions}\label{fig:suppsucc}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\textwidth]{figures/results/06_rescues/rockout/cc_positions} 
+
+}
+
+\caption[Rockout CC positions]{Rockout CC positions}\label{fig:supprkoutcc}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\textwidth]{figures/results/06_rescues/caliculyn/cc_positions} 
+
+}
+
+\caption[Calyculin CC positions]{Calyculin CC positions}\label{fig:suppcalcc}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\textwidth]{figures/results/06_rescues/temp/cc_positions} 
+
+}
+
+\caption[Temperature CC positions]{Temperature CC positions}\label{fig:supptempcc}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\textwidth]{figures/results/06_rescues/shrm3/cc_positions} 
+
+}
+
+\caption[Heatshock CC positions]{Heatshock CC positions}\label{fig:supphscc}
+\end{figure}
+\hypertarget{models}{%
+\section{Models}\label{models}}
+
+\hypertarget{ll-patterning}{%
+\subsection{LL patterning}\label{ll-patterning}}
+
+The CC pattern for both \emph{shrm3}++ and \emph{shroom3}\(--\) can be modeled by a phase modulated cosine (figure 1), where the power to x represents the phase and is increased by only 0.1 in \emph{shroom3}\(--\) to go from a CC count of 5 to 7 over a span of 20 hours.
+
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\textwidth]{figures/supp/cc_model} 
+
+}
+
+\caption[CC pattern model]{CC pattern model}\label{fig:supccpmodel}
+\end{figure}
+\hypertarget{morphogenetic-gradients}{%
+\subsection{Morphogenetic gradients}\label{morphogenetic-gradients}}
+
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\textwidth]{figures/supp/gradients} 
+
+}
+
+\caption[Morphogenic gradients]{Morphogenic gradients}\label{fig:supgrad}
+\end{figure}
 \hypertarget{statutory-declaration}{%
 \chapter*{\texorpdfstring{\textbf{Statutory Declaration}}{Statutory Declaration}}\label{statutory-declaration}}
 \addcontentsline{toc}{chapter}{\textbf{Statutory Declaration}}

@@ -1136,7 +1136,7 @@ In summary our results suggest that there is no significant difference either in
 
 ## Datasets {#mat-datasets}
 
-### Cell-Cluster data {#cc-data}
+### Cell-Cluster {#cc-data}
 
 ----------------- ---------------------------------------------------------------
 **Crossings** 
@@ -1153,7 +1153,7 @@ In summary our results suggest that there is no significant difference either in
 
  Fixation         4% PFA o.N.
  
- agarose          1% low melt
+ agarose          1% LMPA
  
 **Imaging**
  
@@ -1169,9 +1169,9 @@ In summary our results suggest that there is no significant difference either in
  
  Transformations  Rotation and cropping in XY
 ----------------- ---------------------------------------------------------------
-Table: (\#tab:ccdata) Cell Cluster data
+Table: (\#tab:ccdata) Cell Cluster dataset
 
-### Apical Constriction Index data {#aci-data}
+### Apical Constriction Index {#aci-data}
 
 ----------------- ---------------------------------------------------------------
 **Crossings** 
@@ -1188,13 +1188,13 @@ Table: (\#tab:ccdata) Cell Cluster data
 
  Protocol         190930 D.S. Kleinhans
  
- agarose          0.5% low melt + 20% Tricaine (V/V%)
+ agarose          0.5% LMPA + 20% Tricaine (V/V%)
  
  stamp            stamp v4A
  
 **Imaging**
  
- Magnification    40X objective
+ Magnification    40X
  
  Camera           Binning 1x1; Gain 1; Exposure 100 ms
  
@@ -1204,9 +1204,9 @@ Table: (\#tab:ccdata) Cell Cluster data
  
  Z-Stack          0.4 $\mu$m Z-spacing
 ----------------- ---------------------------------------------------------------
-Table: (\#tab:acidata) ACI data
+Table: (\#tab:acidata) ACI dataset
 
-### Timelapse data {#tl-data}
+### Proliferation {#tl-data}
 
 ----------------- ---------------------------------------------------------------
 **Crossings** 
@@ -1223,13 +1223,13 @@ Table: (\#tab:acidata) ACI data
 
  Protocol         190930 D.S. Kleinhans
  
- Agarose          0.3% low melt + 20% Tricaine (V/V%)
+ Agarose          0.3% LMPA + 20% Tricaine (V/V%)
  
  Stamp            stamp v4A
  
 **Imaging**
  
- Magnification    20X objective + 1.5x zoom
+ Magnification    20X + 1.5x zoom
  
  Camera           Binning 2x2; Gain 4; Exposure 35 ms; full FOV*150 $\mu$m
  
@@ -1247,9 +1247,9 @@ Table: (\#tab:acidata) ACI data
  
  Transformations  Rotation and cropping in XY and T
 ----------------- ---------------------------------------------------------------
-Table: (\#tab:prolifdata) Proliferation data
+Table: (\#tab:prolifdata) Proliferation dataset
 
-### Detection data {#detect-data}
+### Detection {#detect-data}
 
 ----------------- ---------------------------------------------------------------
 **Crossings** 
@@ -1266,13 +1266,13 @@ Table: (\#tab:prolifdata) Proliferation data
 
  Protocol         190930 D.S. Kleinhans
  
- Agarose          0.3% low melt + 20% Tricaine (V/V%)
+ Agarose          0.3% LMPA + 20% Tricaine (V/V%)
  
  Stamp            stamp v5A
  
 **Imaging**
  
- Magnification    20X objective + 1.5x zoom
+ Magnification    20X + 1.5x zoom
  
  Camera           Binning 2x2; Gain 4; Exposure 20 ms; full FOV*100 $\mu$m
  
@@ -1290,4 +1290,49 @@ Table: (\#tab:prolifdata) Proliferation data
  
  Transformations  Rotation and cropping in XY and T
 ----------------- ---------------------------------------------------------------
-Table: (\#tab:detectdata) Detection data
+Table: (\#tab:detectdata) Detection dataset
+
+### Atoh1a {#mat-ato-set}
+
+----------------- ---------------------------------------------------------------
+**Crossings** 
+ 
+ Pairs            4         
+ 
+ Transgenes       cldnb:lyn-gfp +/?; atoh1a:Tom +/0
+ 
+ Mutation         _shroom3_
+ 
+ Staging          30 min.
+ 
+**Mounting**
+
+ Protocol         190930 D.S. Kleinhans
+ 
+ Agarose          0.3% LMPA + 20% Tricaine (V/V%)
+ 
+ Stamp            stamp v5A
+ 
+**Imaging**
+ 
+ Magnification    20X
+ 
+ Camera           Binning 2x2; Gain 4; full FOV*100 $\mu$m
+ 
+ Channels         488 nm (Int: 20%; Exp: 25ms)
+ 
+                  561 nm (Int: 30%; Exp: 50ms)
+ 
+ Positions        36 positions 
+ 
+ Z-Stack          2.5 $\mu$m Z-spacing; 100 $\mu$m stack size; 2*X large image
+ 
+ Time             20 h / 20 min. interval / start ~ 2 p.m. (32 hpf)
+ 
+**Processing**
+ 
+ Projection       Maximum intensity
+ 
+ Transformations  Rotation and cropping in XY and T
+----------------- ---------------------------------------------------------------
+Table: (\#tab:atoset) atoh1a dataset

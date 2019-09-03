@@ -101,7 +101,7 @@ Upon ligand binding Fgfr dimerizes and undergoes a conformational shift activati
 
 Furthermore, it was shown that rosette formation is an important morphological feature for a vesicle to form on top of the rosette, which acts as a locally enriched source of Fgf signalling [@Durdu2014a].
 
-#### Lateral Inhibition
+#### Lateral Inhibition {#intro-notch}
 
 In neurobiology the term _lateral inhibition_ describes the process of an excited neuron reducing the activity of its neighbors. The same principle however can be found in other types of cells too where one cell signals its neighbor cell(s) _not_ to do something. term has therefore been adapted by developmental biologists to describe processes in which Notch signaling takes place [@Bray2016; @Guisoni2017].
 
@@ -126,16 +126,14 @@ knitr::include_graphics("figures/intro/CM_fish.png")
 
 ### Developmental Stages
 
-A single female may lay up to 100 fertilized eggs (Zygotes). Each Zygote then undergoes the first zygotic cell cycle (**up to 0.75 h**). The following two to seven cell cycles (period: _Cleavage_, **up to 2.25 h**) occur directed and synchronous every ~15 min. Cells in this stage are called _blastomeres_ and are incompletely undercut the _blastodisc_ (the collective of blastomeres) and remain interconnected by cytoplasmic bridges. The _Blastula_ period (up to 5.25 h) is determined by an increasing a-synchronicity between the cells, flattening of the blastodisc and lengthening of the cell cycle. This period is also marked by the onset of _epiboly_^[cells in late blastula start to dome, while a monolayer of the domes circumfence begins to wrap around the Yolk] [@Kimmel1995a].
+A single female may lay up to 100 fertilized eggs. Each Zygote^[first diploid cell after fertilization between two germ cells] then undergoes the first zygotic cell cycle (**up to 0.75 h**). The following two to seven cell cycles (period: _Cleavage_, **up to 2.25 h**) occur directed and synchronous every ~15 min. Cells in this stage are called _blastomeres_ and are incompletely undercut the _blastodisc_ (the collective of blastomeres) and remain interconnected by cytoplasmic bridges. The _Blastula_ period (up to 5.25 h) is determined by an increasing a-synchronicity between the cells, flattening of the blastodisc and lengthening of the cell cycle. This period is also marked by the onset of _epiboly_^[cells in late blastula start to dome, while a monolayer of the domes circumfence begins to wrap around the Yolk] [@Kimmel1995a].
 
-After Blastula and **up to 10 h** the _Gastrula_ period takes place, followed by the _Segmentation_ period (**up to 24 h**). Both of which are depicted in more detail in \@ref(fig:stages1). At even later stages the embryo starts to elongate posteriorly, grow in size and develop organs until it first active muscle are present and it starts to swim \@ref(fig:stages2). 
+After Blastula and **up to 10 h** the _Gastrula_ period takes place, followed by the _Segmentation_ period (**up to 24 h**). Both of which are depicted in more detail in figure \@ref(fig:stages). At even later stages the embryo starts to elongate posteriorly, grow in size and develop organs until it first active muscle are present and it starts to swim \@ref(fig:stages). 
 
-```{r stages1, out.width = ".95\\textwidth", fig.cap = "Zebrafish embryonic development (schemes adapted from Kimmel et al., 1995"}
-knitr::include_graphics("figures/intro/stages.jpg")
-```
+(ref:stages) Zebrafish embryonic development (schemes adapted from Kimmel et al., 1995)
 
-```{r stages2, out.width = ".95\\textwidth", fig.cap = "Zebrafish schemes (A) at 32 hpf. Showing (B) at 48 hpf"}
-knitr::include_graphics("figures/intro/cldnblyngfpt_1.png")
+```{r stages, out.width = ".95\\textwidth", fig.cap = "(ref:stages)", fig.scap="Zebrafish embryonic development"}
+knitr::include_graphics("figures/intro/stages.png")
 ```
 
 ### The Lateral Line System

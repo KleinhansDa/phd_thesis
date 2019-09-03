@@ -327,6 +327,7 @@
     \end{tabular}\par}
     \vskip 1.5em
     {\fontsize{12}{14}\selectfont \@date \par}
+    {D30}
   \end{center}\par
   \end{titlepage}
 
@@ -336,22 +337,26 @@
   \setbox0=\hbox{vom \@department}
   \thispagestyle{empty}
   \null\vfil		% just below center of page
-  \par\vskip 6cm	% below center, not center
+  %\par\vskip 6cm	% below center, not center
   \centerline{\copy0}	% approved
   \vspace{3mm}
   \centerline{der \@institution} %major
   \vspace{3mm}
   \centerline{als Dissertation angenommen} %major
-  \vskip 1cm		%space to sign
-  \centerline{\makebox[\wd0][c]{\hrulefill}
-	\if@altadvisor \makebox[.5in]{} \makebox[\wd0][c]{\hrulefill} \fi}
-  \centerline{\makebox[\wd0][c]{\@advisor}
-	\if@altadvisor \makebox[.5in]{} \makebox[\wd0][c]{\@altadvisor} \fi}
-  \centerline{\makebox[\wd0][c]{(Dekan)}
-	\if@altadvisor \makebox[.5in]{} \makebox[\wd0][c]{(Gutachterin)} \fi}
+  \vskip 5cm		%space to sign
+  \centerline{\makebox[5cm][c]{\@advisor}}
+  \centerline{\makebox[5cm][c]{(Dekan)}}
+  \vspace{12mm}
+  \centerline{\makebox[5cm][c]{\@altadvisor}}
+  \centerline{\makebox[5cm][c]{(Erstgutachter)}}
   \vspace{8mm}
-  \centerline{Datum der Disputation:}
-  \par\vfil\null}
+  \centerline{\makebox[5cm][c]{Prof.Dr. Manfred Schliwa}}
+  \centerline{\makebox[5cm][c]{(Zweitgutachter)}}
+  \vskip 4cm
+  \centerline{\makebox[5cm][c]{\hrulefill}}
+  \centerline{\makebox[5cm][c]{(Datum der Disputation)}}
+  \par\vfil\null
+  }
   \cleardoublepage
   }
 }
