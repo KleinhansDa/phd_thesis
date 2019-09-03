@@ -1,15 +1,41 @@
-2-D	Two Dimensional
-3-D 	Three Dimensional
-CC  	Cell Cluster
-ECDF 	Empirical Cumulative Distribution Function
-KDE  	Kernel Density Estimation
-LL 	Lateral Line
-LOESS  	Locally Weighted Scatterplot Smoothing
-LUT	Lookup Table
-MaxIP  	Maximum Intensity Projection
-NM  	Neuromast
-PFA  	Paraformaldehyd
-PLLp  	Posterior Lateral Line Primordium
-ROI  	Region of Interest
-SEM 	Scanning Electron Microscopy
-WT	Wild Type
+**Index**	**Abbrev.**	**Elaboration**
+	2-/3-D	Two or Three Dimensional
+	A.I.	apical index
+	CC  	Cell Cluster
+	CNN	Convolutional Neural Network
+	dpf	days post fertilization
+	DSH	Dishevelled
+	ECDF 	Empirical Cumulative Distribution Function
+	Fgf	Fibroblast Growth Factor
+	Fgfr1	Fgf receptor 1
+	FOV	Field of View
+	FRZ	Frizzled
+	IJ	ImageJ
+	ISH	In Situ Hybridization
+	KDE	Kernel Density Estimation
+	l.e.	leading edge
+	LL 	Lateral Line
+	LOESS  	Locally Weighted Scatterplot Smoothing
+	LSFM	Light sheet fluorescence microscope
+	LUT	Lookup Table
+	MaxIP  	Maximum Intensity Projection
+	MO	Morpholino
+	N.A.	Numerical Aperture
+	NICD	Notch intracellular domain
+	NM  	Neuromast
+	NMII	Non muscle myosin II
+	p.Hist	phospho-Histone
+	PCR	Polymerase chain reaction
+	PFA  	Paraformaldehyd
+	pLLP	Posterior Lateral Line Primordium
+	Rock	Rho-Kinase
+	ROI  	Region of Interest
+	SBD	Shroom binding domain
+	SEM 	Scanning Electron Microscopy
+	SNR	Signal to Noise Ratio
+	TALEN	Transcription activator-like effector nuclease 
+	TF	Transcription Factor
+	wt	Wild Type
+	hpf	hours post fertilization
+	LMPA	low melting point agarose
+	CI	confidence interval

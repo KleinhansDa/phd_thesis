@@ -303,16 +303,18 @@
     \vfil
     \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
     \vfil
-    A Thesis \\
-    Presented to \\
-    \@thedivisionof \ \@division \\
-    \@institution
+   Dissertation \\
+   zur Erlangung des Doktorgrades \\
+   der Naturwissenschaften
+    %\@thedivisionof \ \@division \\
+    %\@institution
     \vfil
     \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
     \vfil
-    In Partial Fulfillment \\
-    of the Requirements for the Degree \\
-    \@degree
+    Vorgelegt am Fachbereich Biowissenschaften \\
+    der Johann Wolfgang Goethe-Universität \\
+    in Frankfurt am Main \\
+    %\@degree
     \vfil
     \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
     \bigskip
@@ -320,7 +322,8 @@
     \bigskip
     {\fontsize{12}{14}\selectfont \lineskip .75em
     \begin{tabular}[t]{c}%
-      \@author
+      von \\ \@author
+     \\ aus Mannheim
     \end{tabular}\par}
     \vskip 1.5em
     {\fontsize{12}{14}\selectfont \@date \par}
@@ -330,17 +333,24 @@
 %% Approved for the division page
   \cleardoublepage
   {\fontsize{12}{14}
-  \setbox0=\hbox{Approved for the \@approvedforthe}
+  \setbox0=\hbox{vom \@department}
   \thispagestyle{empty}
   \null\vfil		% just below center of page
   \par\vskip 6cm	% below center, not center
   \centerline{\copy0}	% approved
-  \centerline{(\@department)} %major
+  \vspace{3mm}
+  \centerline{der \@institution} %major
+  \vspace{3mm}
+  \centerline{als Dissertation angenommen} %major
   \vskip 1cm		%space to sign
   \centerline{\makebox[\wd0][c]{\hrulefill}
 	\if@altadvisor \makebox[.5in]{} \makebox[\wd0][c]{\hrulefill} \fi}
   \centerline{\makebox[\wd0][c]{\@advisor}
 	\if@altadvisor \makebox[.5in]{} \makebox[\wd0][c]{\@altadvisor} \fi}
+  \centerline{\makebox[\wd0][c]{(Dekan)}
+	\if@altadvisor \makebox[.5in]{} \makebox[\wd0][c]{(Gutachterin)} \fi}
+  \vspace{8mm}
+  \centerline{Datum der Disputation:}
   \par\vfil\null}
   \cleardoublepage
   }

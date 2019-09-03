@@ -24,7 +24,7 @@
 %% Preamble
 %%
 % \documentclass{<something>} must begin each LaTeX document
-\documentclass[11pt,singlespacing,headsepline,twoside]{reedthesis}
+\documentclass[11pt,singlespacinge,twoside]{reedthesis} %,headseplin
 % Packages are extensions to the basic LaTeX functions. Whatever you
 % want to typeset, there is probably a package out there for it.
 % Chemistry (chemtex), screenplays, you name it.
@@ -40,7 +40,7 @@
 \usepackage{hyperref}
 \usepackage{lmodern}
 \usepackage{float}
-\floatplacement{figure}{H}
+%\floatplacement{figure}{H}
 % End of CII addition
 \usepackage{rotating}
 
@@ -127,21 +127,13 @@ $endif$
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
-\Acknowledgements{
-$acknowledgements$
-}
+\Acknowledgements{$acknowledgements$}
 
-\Dedication{
-$dedication$
-}
+\Dedication{$dedication$}
 
-\Preface{
-$preface$
-}
+\Preface{$preface$}
 
-\Abstract{
-$abstract$
-}
+\Abstract{$abstract$}
 
 $for(header-includes)$
 	$header-includes$
@@ -189,6 +181,7 @@ $endif$
 
 $if(lof)$
   \listoffigures
+  {$disclosure$}
 $endif$
 
 $if(abstract)$

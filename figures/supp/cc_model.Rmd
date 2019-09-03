@@ -1,0 +1,50 @@
+---
+title: "cc_model"
+author: "D.K."
+date: "28 8 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE, 
+                      out.width='90%\\textwidth', 
+                      fig.align='center',
+                      dev.args=list(bg="transparent"), dev='png', dpi=200)
+library(plyr)
+library(dplyr)
+library(ggplot2)
+library(ggpubr)
+library(kableExtra)
+```
+
+Title
+========================================================
+
+```{r, fig.height=3, fig.width=6}
+x = seq(0,20, by=.01)
+harm = cos(x * 2)*pi
+wt = cos(x^1.2)*pi
+hom = cos(x^1.3)*pi
+
+data = data.frame(x, harm, wt, hom)
+data = melt(data, id.vars=c("x"))
+
+osc_names <- list(
+  'harm'=expression("Harmonic"),
+  'wt'=expression(italic("shrm3++")),
+  'hom'=expression(italic("shrm3--")))
+osc_labeller <- function(variable,value){
+  return(osc_names[value])
+}
+
+# Create two subplots sharing y axis
+ggplot(data, aes(x, value)) +
+  geom_line(size=1) +
+  scale_x_continuous(breaks = c(0:20, 1)) +
+  facet_grid(variable~., labeller = osc_labeller) +
+  coord_cartesian(xlim = c(0.9,19.1)) +
+  labs(x="time [h]", y= "Amplitude") +
+  scale_color_manual(values = c("black", "green", "magenta"), labels = c("harmonic", "wt", "hom"), name = "cols") +
+  theme
+```
+

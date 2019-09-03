@@ -1,0 +1,7 @@
+genotype	concentrations	LLs	genotype	concentrations	LLs
+++	0.1% DMSO	14	??	0.1% DMSO	8
+	0.10 um	16		0.10 uM	15
+	0.25 uM	24		0.25 uM	21
+	0.40 uM	22		0.40 uM	23
+	0.50 uM	13		0.50 uM	4
+	0.100 uM	10		0.100 uM	10

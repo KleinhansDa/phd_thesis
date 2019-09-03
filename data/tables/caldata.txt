@@ -1,0 +1,3 @@
+genotype	concentrations	LLs	genotype	concentrations	LLs
+++	0.1% DMSO	8	??	0.1% DMSO	8
+	100 nm	12		100 nM	12

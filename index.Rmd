@@ -1,12 +1,11 @@
 ---
 author: '**David Kleinhans**'
-date: 'May 2018'
-
-institution: 'Goethe University Frankfurt am Main'
-division: 'Developmental Biology of Vertebrates'
-advisor: 'Prof.Dr. Virginie Lecaudey'
-altadvisor: 'Prof.Dr. Manfred Schliwa'
-department: 'Institute for Cell Biology and Neuroscience'
+date: 'Frankfurt am Main, 2019'
+institution: 'Johann Wolfgang Goethe-Universität'
+division: 'Entwicklungsbiologie der Vertebraten'
+advisor: 'Prof. Dr. Sven Klimpel'
+altadvisor: 'Prof.Dr. Virginie Lecaudey'
+department: 'Fachbereich Biowissenschaften'
 degree: '**PhD in Biology**'
 title: '**Morphogenesis in the _D.rerio_ Posterior Lateral Line Primordium**'
 knit: "bookdown::render_book"
@@ -44,20 +43,17 @@ dedication: |
   
 preface: |
   "You realize when you know _how_ to think, it empowers you far beyond those who know only _what_ to think" - Neil Degrasse Tyson
-bibliography: bib/library.bib
-# Download your specific bibliography database file and refer to it in the line above.
-csl: csl/nature.csl
-# Download your specific csl file and refer to it in the line above.
+bibliography: files/library.bib
+csl: files/science.csl
 lot: true
 lof: true
+disclosure: |
+  Disclosure: Unless otherwise noted, all figures in this manuscript are an expression of my own creative achievement. Similarities between molecule, protein and signalling models exist and are based on well-known textbooks such as Lodish et al., Molecular Cell Biology, 5th Edt. and Scott F. Gilbert et al., Developmental Biology 11th Edt. 
 #space_between_paragraphs: true
 #- \usepackage{tikz}
 ---
 
 ```{r include_packages, include = FALSE}
-# This chunk ensures that the thesisdown package is
-# installed and loaded. This thesisdown package includes
-# the template files for the thesis.
 if(!require(devtools))
   install.packages("devtools", repos = "http://cran.rstudio.com")
 if(!require(thesisdown))
@@ -66,14 +62,17 @@ library(thesisdown)
 ```
 
 ```{r chunkopts, include=FALSE}
-knitr::opts_chunk$set(echo=FALSE, cache=FALSE, autodep=TRUE, cache.comments=FALSE, warning=FALSE, out.width='75%\\textwidth', fig.align='center', include=TRUE, message=FALSE, dev.args=list(bg="transparent"), dev='pdf') #, dev='pdf' #, cache=TRUE #, cache.comments=FALSE
+knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE, fig.align='center', 
+                      dev.args=list(bg="transparent"), dev='png') #, dev='pdf'
 library(pROC)
-library(plyr)
-library(dplyr)
-library(data.table)
+#library(plyr)
+#library(dplyr)
+#library(data.table)
 library(ggplot2)
 library(ggpubr)
 library(pander)
+library(kableExtra)
+library(magrittr)
 #library(ggpaired)
 ```
 <!-- You'll need to include the order that you'd like Rmd files to appear in the _bookdown.yml file for
@@ -87,36 +86,43 @@ and 00-abstract.Rmd since they are handled in the YAML above differently for the
 
 # List of Abbreviations {.unnumbered}
 
---------------------------------------------------------------------------------------------
- **index**   **Abbrev.**  **Elaboration**
------------ ------------- ------------------------------------------------------------------- 
- **0-9**      2-D	            Two Dimensional
-
-              3-D 	          Three Dimensional
-
- **C**        CC  	          Cell Cluster
-
- **E**        ECDF 	          Empirical Cumulative Distribution Function
-
- **K**        KDE  	          Kernel Density Estimation
-
- **L**        LL 	            Lateral Line
-
-              LOESS  	        Locally Weighted Scatterplot Smoothing
-
-              LUT	            Lookup Table
-
- **M**        MaxIP  	        Maximum Intensity Projection
-
- **N**        NM  	          Neuromast
-
- **P**        PFA  	          Paraformaldehyd
-
-              PLLp  	        Posterior Lateral Line Primordium
-
- **R**        ROI  	          Region of Interest
-
- **S**        SEM 	          Scanning Electron Microscopy
-
- **W**        WT	            Wild Type
---------------------------------------------------------------------------------------------
+| **Index** 	| **Abbrev.** 	| **Elaboration**                                 	|
+|-----------	|-------------	|-------------------------------------------------	|
+|           	| 2-/3-D       	| Two or Three Dimensional                         	|
+|           	| A.I.        	| apical index                                    	|
+|           	| CC          	| Cell Cluster                                    	|
+|           	| CNN         	| Convolutional Neural Network                    	|
+|           	| dpf         	| days post fertilization                         	|
+|           	| DSH         	| Dishevelled                                     	|
+|           	| ECDF        	| Empirical Cumulative Distribution Function      	|
+|           	| Fgf         	| Fibroblast Growth Factor                        	|
+|           	| Fgfr1       	| Fgf receptor 1                                  	|
+|           	| FOV         	| Field of View                                   	|
+|           	| FRZ         	| Frizzled                                        	|
+|           	| IJ          	| ImageJ                                          	|
+|           	| ISH         	| In Situ Hybridization                           	|
+|           	| KDE         	| Kernel Density Estimation                       	|
+|           	| l.e.        	| leading edge                                    	|
+|           	| LL          	| Lateral Line                                    	|
+|           	| LOESS       	| locally weighted scatterplot smoothing          	|
+|           	| LOESS       	| Locally Weighted Scatterplot Smoothing          	|
+|           	| LSFM        	| Light sheet fluorescence microscope             	|
+|           	| LUT         	| Lookup Table                                    	|
+|           	| MaxIP       	| Maximum Intensity Projection                    	|
+|           	| MO          	| Morpholino                                      	|
+|           	| N.A.        	| Numerical Aperture                              	|
+|           	| NICD        	| Notch intracellular domain                      	|
+|           	| NM          	| Neuromast                                       	|
+|           	| NMII        	| Non muscle myosin II                            	|
+|           	| p.Hist      	| phospho-Histone                                 	|
+|           	| PCR         	| Polymerase chain reaction                       	|
+|           	| PFA         	| Paraformaldehyd                                 	|
+|           	| PLLp        	| Posterior Lateral Line Primordium               	|
+|           	| Rock        	| Rho-Kinase                                      	|
+|           	| ROI         	| Region of Interest                              	|
+|           	| SBD         	| Shroom binding domain                           	|
+|           	| SEM         	| Scanning Electron Microscopy                    	|
+|           	| SNR         	| Signal to Noise Ratio                           	|
+|           	| TALEN       	| Transcription activator-like effector nuclease  	|
+|           	| TF          	| Transcription Factor                            	|
+|           	| wt          	| Wild Type                                       	|

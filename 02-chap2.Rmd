@@ -1,5 +1,4 @@
 # Materials and Methods {#mat-met}
-
 ## Materials {#mat}
 
 ### Chemicals {#mat-chem}
@@ -20,6 +19,8 @@ Blocking Reagent        Roche                                                   
 BCIP                    Fermentas                                               R0822
 
 CaCl\textsubscript{2}   Roth                                                    886.1
+
+Calyculin
 
 DIG RNA Mix             Roche                                                   11277073910
 
@@ -64,6 +65,8 @@ Propan-2-ol             VWR                                                     
 Proteinase K            Roth                                                    7528.4
 
 PTU                     Sigma                                                   P7629
+
+Rockout
 
 SSC
 
@@ -419,7 +422,7 @@ knitr::include_graphics("figure/02-MaMo/GrTr/ClusterAnal/count_P05.png")
 Comparing the segmented objects count of the Gaussian parameters with the ground truth gives an indication for over- resp. under-segmentation. In figure \@ref(fig:GrTratioCC) the relative numbers for each parameter can be seen in percentage above or below the mean cell count of the ground truth (blue horizon). The red area represents over-segmentation, the green under-segmentation. Additionally, table \@ref(tab:meanabsnuc) shows the absolute numbers.
 
 (ref:GrTratioCC) Relative difference of segment counts (N=3, Errorbars = Std./2)
-```{r GrTratioCC, out.width='65%', fig.height=2.5, dpi=400, fig.cap="(ref:GrTratioCC)"}
+```{r GrTratioCC, out.width='65%', fig.height=2.5, dpi=400, fig.cap="(ref:GrTratioCC)", fig.scap = "Relative difference of segment counts"}
 load("figure/02-MaMo/GrTr/ClusterAnal/GroundTruth2D.RData")
 library(ggplot2)
 ggplot(NB_all_diff_mean, aes(Group, mean_diff)) +
@@ -588,7 +591,7 @@ knitr::include_graphics("figure/02-MaMo/GrTr/Morphology/volumes.jpg")
 In figure \@ref(fig:gtratio) the relative numbers for each threshold level can be seen in percentage above or below the mean cell count of the ground truth (blue horizon). Analogous to the graphical inspection, the magenta area represents over segmentation, the green under segmentation. Additionally, table \@ref(tab:gtrcellcount) shows the absolute numbers.
 
 (ref:gtratio) Relative difference of segment counts (N=3, Errorbars = Std./2)
-```{r gtratio, out.width='65%', fig.height=2.5, dpi=400, fig.cap="(ref:gtratio)"}
+```{r gtratio, out.width='65%', fig.height=2.5, dpi=400, fig.cap="(ref:gtratio)", fig.scap = "Relative difference of segment counts"}
 load("figure/02-MaMo/GrTr/Morphology/GroundTruth.RData")
 library(ggplot2)
 ggplot(all_count_diff_mean, aes(Group, mean_diff)) +
@@ -813,7 +816,7 @@ For mounting, an improved 3D specimen preparation and well-plate like sample nav
 3. **To have the embryos aligned with the 3D movements of the microscopic table.** Instead of transforming and aligning the image data in a post-processing approach, the specimen can be imaged in the right spacial configuration in the first place. This is not only important for 3D analysis, but also for Z projected data. If the specimen body axes are not aligned with the axes of the microscopic table, the image stacks need to be bigger to record the volume of interest. In the Z projections, this will end up in X Y coordinates not aligned in Z, as noise or false signal (figure 1B). The method therefore provides significant improvement over existing mounting techniques. 
 
 (ref:mountmicro) Stamp and $\mu$-well properties **A** single micro well in XY and **A'** in XZ **B** mounting without $\mu$-well and **B'** mounting with $\mu$-well **C** elements and dimensions of the stamp.
-```{r Mountmicro, dpi=200, out.width='60%', fig.align='center', echo=FALSE, fig.cap="(ref:mountmicro)"}
+```{r Mountmicro, dpi=200, out.width='60%', fig.align='center', echo=FALSE, fig.cap="(ref:mountmicro)", fig.scap = "Stamp and micro-well properties"}
 knitr::include_graphics("figure/02-MaMo/Mount/mountmicro.png")
 ```
 
@@ -869,17 +872,17 @@ ently rotate the dish so that excess agarose solution will cover the whole dish.
 Wait for ~45 min., then use a clean preparation needle and slip it through stamp - polymerized agarose interface. Remove the stamp carefully by lifting it and holding the $\mu$-Dish in place.
 
 (ref:stampprod) Stamping procedure **A** clean stamp surface **B** preparation of the stamp before lifting **C** ) ready-for-use agarose imprint.
-```{r stampprod, dpi=200, out.width='60%', fig.align='center', echo=FALSE, fig.cap="(ref:stampprod)"}
+```{r stampprod, dpi=200, out.width='60%', fig.cap="(ref:stampprod)", fig.scap = "Stamping procedure"}
 knitr::include_graphics("figure/02-MaMo/Mount/stampprod.png")
 ```
 
 (ref:mounting) 44x mounting stamp **A** without LM-Agarose **B and C** with LM-Agarose, while the latter shows the imprint with light coming from a different angle, making the chambers visible again.
-```{r mounting, dpi=200, out.width='60%', fig.align='center', echo=FALSE, fig.cap="(ref:mounting)"}
+```{r mounting, dpi=200, out.width='60%', fig.cap="(ref:mounting)", fig.scap = "44x mounting stamp"}
 knitr::include_graphics("figure/02-MaMo/Mount/mounting.png")
 ```
 
-(ref:setup) Experiment setup **A** Positioning of the $\mu$-well **B** Alignment in Brightfield and **C** Definition of a custom well plate.
-```{r setup, dpi=200, out.width='60%', fig.align='center', echo=FALSE, fig.cap="(ref:setup)"}
+(ref:setup) Imaging setup **A** Positioning of the $\mu$-well **B** Alignment in Brightfield and **C** Definition of a custom well plate.
+```{r setup, dpi=200, out.width='60%', fig.cap="(ref:setup)", fig.scap = "Imaging setup"}
 knitr::include_graphics("figure/02-MaMo/Mount/setup.png")
 ```
 
@@ -896,7 +899,7 @@ The method used for rosette detection is based on a convolutional neuronal netwo
 The CNN was trained on 17 wildtype DMSO control and SU5402 treated (Fgf signaling depleted embryos which do not form rosettes[@Lecaudey2008a]) embryos each. In order togive the network something to learn, the data had to be labeled manually, which was done in imagej by placing multipoint rois at the center of the rosettes. The data was then further permutated to artificially increase the amount of training data and make the detection more robust against different kinds of input. Further parameters about the training data is listed in Table \@ref(tab:CNNtraining). One example for each is shown in figure \@ref(fig:CNNtrain).
 
 (ref:CNNtrain) Example for rosette detection on the training data. **left** Maximum Z-projected input data. **middle** heatmap of scores. blue indicates a low score, red a high one. **right** score map projected onto the input data.
-```{r CNNtrain, dpi=200, out.width='75%', fig.align='center', echo=FALSE, fig.cap="(ref:CNNtrain)"}
+```{r CNNtrain, dpi=200, out.width='75%', fig.cap="(ref:CNNtrain)", fig.scap = "Example for rosette detection on the training data"}
 knitr::include_graphics(path = "figure/02-MaMo/CNN/CNNtrain.png")
 ```
 
@@ -927,7 +930,7 @@ The basic principle is based on work done by Laguerre _et al._, 2009[@Laguerre20
 \noindent Figure \@ref(fig:mitodatapoints) shows an exemplary track for the data analyzed.
 
 (ref:mitodatapoints) Tracking of mitotic events
-```{r mitodatapoints, out.width='50%', fig.align='center', echo=FALSE, fig.cap="(ref:mitodatapoints)"}
+```{r mitodatapoints, out.width='50%', fig.cap="(ref:mitodatapoints)"}
 knitr::include_graphics(path = "figure/02-MaMo/Prol/Prolif.png")
 ```
 
@@ -936,14 +939,14 @@ knitr::include_graphics(path = "figure/02-MaMo/Prol/Prolif.png")
 The earliest attempt found for indexing AC can be found in a study published by Lee _et al_[@Lee2009] where they were interested in the 'apical index' (A.I.) of bottle cells during _X.laevis_ gastrulation(figure \@ref(fig:ACLee)).
 
 (ref:ACLee) A.I. of _X.leavis_ bottle cells.
-```{r ACLee, out.width='75%', fig.align='center', echo=FALSE, fig.cap="(ref:ACLee)"}
+```{r ACLee, out.width='75%', fig.cap="(ref:ACLee)"}
 knitr::include_graphics(path = "figure/02-MaMo/ACI/Jen_yi_Lee.png")
 ```
 
 \noindent Another example for measuring AC is the apical _constriction_ index (ACI, figure \@ref(ref:ACHard)) for the cells of the _D.rerio_ lateral line primordium (PLLp), which can be found in a study from 2012 where it was shown that Fgfr-Ras-MAPK signaling is required for AC and Rock2a localization6 [@Harding2012; @Harding2013].
 
 (ref:ACHard) Apical constriction index. **A** 3D reconstructed cells of a CLCLNA control primordium and **B** of a primordium deficient of Fgf signaling.
-```{r ACHard, dpi=200, out.width='75%', fig.align='center', echo=FALSE, fig.cap="(ref:ACHard)"}
+```{r ACHard, dpi=200, out.width='75%', fig.cap="(ref:ACHard)", fig.scap = "Apical constriction index"}
 knitr::include_graphics(path = "figure/02-MaMo/ACI/Harding.jpg")
 ```
 
@@ -974,14 +977,14 @@ To obtain a precise and biologically meaningful quantity for AC, first a couple 
 To test different ACI conditions, an apically constricted cell can be approximated by modeling a tetrahedron. For example, shrinking or enlarging a cell symmetrically should not affect the ACI. As described by Harding(2014)[@Harding2013], the _apical width_ of a cell is measured first by manual 3-D object reconstruction, second manual re-orientation, and third by going 1 $\mu$m from the apical tip into the cell (from now on referred  to as $\Delta$ap, \@ref(fig:deltaap)). Finally, _apical width_ is the total width of the 2-D object.
 
 (ref:deltaap) Illustrating $\Delta$ap. **left panel:** An apically constricted cell volume rendered in XY (top) and as a lateral cross-section in X-Z (bottom). **right panel:** the 2-D area as seen when going for 1 or 2.5 $\mu$m $\Delta$ap into the cell
-```{r deltaap, out.width='30%', fig.align='center', echo=FALSE, fig.cap="(ref:deltaap)"}
+```{r deltaap, out.width='30%', fig.cap="(ref:deltaap)", fig.scap = "Illustrating delta ap"}
 knitr::include_graphics(path = "figure/02-MaMo/ACI/deltaap.png")
 ```
 
 If $\Delta$ap is a constant, the ACI in a symmetrically enlarged cell increases from e.g. 15 to 23, since _apical width_ stays the same but lateral height increases. On the contrary, if $\Delta$ap is adjusted relative to a cells lateral height, e.g. by percentage, the ACI in a symmetrically enlarged cell stays the same \@ref(fig:ACICells)
 
 (ref:ACICells) ACI Cell Models. **B** and **C** show cells that are symmetrically increased versions of **A**. While in **B**, a constant $\Delta$ was used, in **C** $\Delta$ was adjusted relative to the lateral height.
-```{r ACICells, dpi=200, out.width='75%', fig.align='center', echo=FALSE,fig.cap="(ref:ACICells)"}
+```{r ACICells, dpi=200, out.width='75%',fig.cap="(ref:ACICells)", fig.scap = "ACI Cell Models"}
 knitr::include_graphics(path = "figure/02-MaMo/ACI/ACI_Cells.jpg")
 ```
 
@@ -994,7 +997,7 @@ Therefore the measurement for apical width has to be relative to lateral height.
 Organs develop in a 3-D space and are polarized along each axis. AC usually describes a 2-D morphogenetic movement towards a center along the X-Y axes. However, the contraction movements along X and Y might be independent of one another. This could mean that they happen at different speeds, or that one is absent. As a result, the tissue would look less radially \@ref(fig:cellpol) constricted, but more constricted against a line. In order to separate those two AC dimensions, the ACI can be calculated for the _anterio-posterior_ and for the _dorso-ventral_ axis \@ref(fig:cellpol).
 
 (ref:cellpol) Schematic AC along the A-P and D-V axis. **A** shows a A-P and D-V constricted cluster of cells. **B** shows a D-V constricted cluster of cells.
-```{r cellpol, echo=FALSE, dpi=200, out.width='75%', fig.align='center', fig.cap="(ref:cellpol)"}
+```{r cellpol, dpi=200, out.width='75%', fig.cap="(ref:cellpol)", fig.scap = "Schematic anisotropic AC"}
 knitr::include_graphics("figure/02-MaMo/ACI/ACI_Cells_pol.png")
 ```
 
@@ -1008,7 +1011,7 @@ knitr::include_graphics("figure/02-MaMo/ACI/ACI_Cells_pol.png")
     + indicative for orientation of _lateral height_
 
 (ref:ellipse) Scheme of ellipsoid measures. **A** shows the major axis as apical width and the minor axis as apical height. **B** shows the angular displacement from the horizon in steps of 30$^\circ$.
-```{r ellipse, echo=FALSE, dpi=200, out.width='75%', fig.align='center', fig.cap="(ref:ellipse)"}
+```{r ellipse, dpi=200, out.width='75%', fig.cap="(ref:ellipse)", fig.scap = "Scheme of ellipsoid measures"}
 knitr::include_graphics("figure/02-MaMo/ACI/ellipse.png")
 ```
 
@@ -1066,7 +1069,7 @@ By measuring apical width at a relative $\mathrm{\Delta}$ap the mean values for 
 However overall our results indicate that the AC difference is not as strong, at least if all the cells of the PLLp are taken into account.
 
 (ref:HardingACI) **E-G** 3-D reconstructions of the highlighted cell. **H** ACIs for embryos treated with DMSO, SU5402, PD0325901 or following induction of hsp70:dn-Ras. (n=180 cells / N = 6 embryos).
-```{r HardingACI, echo=FALSE, out.width='60%', dpi=200, fig.align='center', fig.cap="(ref:HardingACI)"}
+```{r HardingACI, out.width='60%', dpi=200, fig.cap="(ref:HardingACI)", fig.scap = "Published ACI"}
 knitr::include_graphics("figure/02-MaMo/GrTr/HardingACI.png")
 ```
 
@@ -1245,3 +1248,46 @@ Table: (\#tab:acidata) ACI data
  Transformations  Rotation and cropping in XY and T
 ----------------- ---------------------------------------------------------------
 Table: (\#tab:prolifdata) Proliferation data
+
+### Detection data {#detect-data}
+
+----------------- ---------------------------------------------------------------
+**Crossings** 
+ 
+ Pairs            6         
+ 
+ Transgenes       cldnb:lyn-gfp +/?
+ 
+ Mutation         _shroom3_
+ 
+ Staging          30 min.
+ 
+**Mounting**
+
+ Protocol         190930 D.S. Kleinhans
+ 
+ Agarose          0.3% low melt + 20% Tricaine (V/V%)
+ 
+ Stamp            stamp v5A
+ 
+**Imaging**
+ 
+ Magnification    20X objective + 1.5x zoom
+ 
+ Camera           Binning 2x2; Gain 4; Exposure 20 ms; full FOV*100 $\mu$m
+ 
+ Channels         488 nm (25%)
+ 
+ Positions        36 positions 
+ 
+ Z-Stack          3 $\mu$m Z-spacing; 100 $\mu$m stack size; 3*X large image
+ 
+ Time             20 h / 10 min. interval / start ~ 2 p.m. (32 hpf)
+ 
+**Processing**
+ 
+ Projection       Maximum intensity
+ 
+ Transformations  Rotation and cropping in XY and T
+----------------- ---------------------------------------------------------------
+Table: (\#tab:detectdata) Detection data
