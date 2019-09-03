@@ -1,4 +1,4 @@
-# Results
+# Results {#res}
 
 ## Lateral Line Morphometrics
 
@@ -32,7 +32,7 @@ Even though CC position in individual _shroom3_$--$ embryos seems more random, t
 knitr::include_graphics("figures/results/01_morphometrics/ll_positions.png")
 ```
 
-### Cell Count and Area of CCs
+### Cell Count and Area of CCs {#res-llmorph}
 
 To get an idea about whether facilitated proliferation contributes to the phenotype we observe in _shroom3_$--$ embryos, the cell count per CC was determined by counting DAPI stained cells within CC segments derived from the _cldnb:lyn-gfp_ membrane signal (section \@ref(mat-GrTrDat)). Both cells per CC and area per CC are shrunk by about 6% in _shroom3_$--$ embryos, while the density of cells per area remains unchanged (\@ref(fig:llclus)A). Interestingly, when comparing net cell counts per embryo an increase of 9% is observed (\@ref(fig:llclus)B). Both the sum of CC cells and total LL cells (CC+pLLP) are significantly increased in _shroom3_$--$ embryos, while the count of only pLLP cells remains unchanged.
 
@@ -63,7 +63,7 @@ To index the proliferative activity (minutes per mitosis) per embryo, the produc
 \makebox[\linewidth]{$Proliferation Index = \frac{Mitotses [\Bbb{n}]}{Timepoints[\Bbb{n}] * \Delta T [\Bbb{min.}]}$}
 \newline
 
-### Mitoses in the pLLP
+### Mitoses in the pLLP {#res-prolpllp}
 
 Tracking mitoses in the pLLP does not reveal any difference in proliferation from start (~28 hpf) till about mid of migration 12 hours later (\@ref(fig:prolpllp)A). For confirmation, this finding was also validated via two more traditional methods. During mitosis genetic material is replicated in S-phase^[‘S‘ like ‚Synthesis‘], while in meta-phase chromosomes are found to be heavily phosphorylated [@Hans2001]. With an EdU^[5-Ethynyl-2'-deoxyuridine] assay [@Fischer] cells in S-phase can be detected (\@ref(fig:prolpllp)B'). Using a specific phospho-histone (p-Hist.) antibody cells in meta-phase can be detected. When comparing the relative numbers of EdU resp. p-Hist cells over total pLLP cells, again, no difference in proliferation can be detected. Still, at end of migration the LL system in _shroom3_$--$ embryos does incorporate 9$\%$ more cells.
 
@@ -73,7 +73,7 @@ Tracking mitoses in the pLLP does not reveal any difference in proliferation fro
 knitr::include_graphics("figures/results/02_proliferation/prol_pllp.png")
 ```
 
-### Mitoses in Cell Clusters
+### Mitoses in Cell Clusters {#res-prolcc}
 
 Due to their high regenerative ability, zebrafish are a popular model in regenerative research [@Chitnis2012a; @Mokalled2016; @Harding2014a]. It is well known that zebrafish NMs have a very high regenerative capacity [@Cruz2015; @Pinto-Teixeira2015; @Wada2013]. Since individual _shroom3_$--$ CCs are smaller, we wondered if there could be compensation mechanisms activated that increase proliferation to restore wildtype CC size once they are deposited. To verify this, CC mitoses were tracked on the same data as before. Other than the pLLP, which can be observed throughout the time-lapse, CCs only begin to _exist_ when they are deposited. To normalize for individual CC lifetimes, the number of mitoses per CC is divided by the duration of the total time-lapse minus the time span to when it first appeared. This way it becomes evident that the additional cells in _shroom3_$--$ embryos are derived from CC proliferation, rather than pLLP proliferation.
 
@@ -237,7 +237,7 @@ knitr::include_graphics("figures/results/05_atoh/Figure_7-white-01.png")
 
 Rescue experiments are focused on LL CC count and pLLP rosettiness. Since Shroom3 affects development not linearly as e.g. a simple signaling molecule, but by providing a scaffold where different dimensions can act together, we tried rescuing by manipulating those single dimensions to find out which one had the most impact.
 
-### Shroom3 Ectopic Expression
+### Shroom3 Ectopic Expression {#res-shrmresc}
 
 To find out if the LL phenotype can be rescued by ectopic expression of Shroom3, a transgene was used where _shroom3v1_ is fused to RFP and expressed under control of a heatshock protein^[In this case ‚hsp70‘]. While this construct was used for rescue before [@Ernst2012a] (see section \@ref(intro-shroom)), here it was used to test for CC count and rosettiness too. Rescuing the _shroom3_$--$ phenotype with Shroom3 itself is interesting to control for LL unspecific effects that might have happened earlier in development and to find out about Shroom3s morphogenic potential. 
 For this experiment, embryos were imaged two times. First at around 36 hpf, and a second time at end of migration after about 24 hours of incubation at 28.5$^\circ$. This way it is possible to test for correlations between rosettiness earlier in development and CC count at end of migration.
@@ -268,7 +268,7 @@ knitr::kable(data, "latex", booktabs=T) %>%
   #add_header_above(c("id labels" = 2, "metrics" = 3))
 ```
 
-### Mechanic Rescue
+### Mechanic Rescue {#res-rockresc}
 
 It is very well known that Rho kinases are necessary for mechanic force transmission in various developmental processes [@Ridley2015; @Das2014a; @Harding2014b; @Plageman2011; @Wang2011]. Since Rock is also thought to be a key player of the Shroom force mediation pathway in the pLLP, the idea for a mechanic rescue was to titrate different concentrations of a Rock inhibitor^[Rockout (section \@ref(#mat-chem))] and an inductor^[Calyculin (section \@ref(mat-chem))] to see if this way the _shroom3_$--$ phenotype can be mimicked in _shroom_++ embryos resp. restored in _shroom3_$--$. 
 
