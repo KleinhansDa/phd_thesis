@@ -129,6 +129,8 @@ knitr::include_graphics("figures/supp/gradients.png")
 \newpage
 # Curriculum Vitae
 
+
+
 # **Statutory Declaration** {.unnumbered}
 
 I herewith declare that I have composed the present thesis myself and without use of any other than the

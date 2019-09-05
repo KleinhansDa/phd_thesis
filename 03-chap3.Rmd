@@ -6,12 +6,14 @@ Based on the working model and due to the morphological similarity to _fgf3/10_$
 
 ### Dataset
 
-To confirm these findings quantitatively a dataset was put together consisting of ~100 zebrafish embryos fixed at the end of PLLp migration, derived from four different parent pairs. After genotyping, this gave us ~33 wildtypes, ~66 heterozygous and ~33 homozygous mutants for statistical tests. Furthermore, since an increased number of deposited CCs could potentially indicate
+To confirm these findings quantitatively a dataset was put together consisting of ~100 zebrafish embryos fixed at the end of PLLp migration, derived from four different parent pairs. After genotyping, this gave us ~33 wildtypes, ~66 heterozygous and ~33 homozygous mutants for statistical tests. Furthermore, since an increased number of deposited CCs could potentially indicate...
 
 - that CCs are deposited prematurely and that CC area^[in Maximum intensity Z projections (MaxIP)] would therefore be reduced 
 - an increase in proliferation which would lead to an increase in cell number in the total system,
 
 we also measured the area each CC took up and counted the number of cells each CC was made up of.
+
+A full data analysis report can be found on [github](https://github.com/KleinhansDa/reports/blob/master/b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3/clusters_eom.html)
 
 ### Number and Position of Cell Clusters {#res-ccounts}
 
@@ -96,6 +98,8 @@ The image data set analyzed consists of 20 time-lapse movies (11 _shroom3_$--$, 
 knitr::include_graphics("figures/results/03_rosettes/RDT-01.png")
 ```
 
+A full data analysis report can be found on [github](https://github.com/KleinhansDa/reports/blob/master/b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3/report_RDT.html)
+
 ### Cluster Deposition
 
 Figure \@ref(fig:rdtdepo)A shows a montage of a _shroom3_++ and a _shroom3_$--$ scenario in cluster deposition (3.5 h / ~20 min. interval). For _shroom3_++ the rosette structure seems tight and two depositions occur in a regular manner. In the _shroom3_$--$ on the other hand, rosette structure seems more fragile with less pronounced rosette centers and four observed depositions. Interestingly, based on the _cldnb:lyn-gfp_ signal the area of constriction seems to be less radially organized but more oriented towards the horizontal midline. Furthermore, the trailing rosettes are significantly smaller and do not seem to delaminate as clean from the migrating primordium. In addition, for L3 it first seems like two CCs could be deposited, until they merge again to a single CC about 1.5 h later.
@@ -174,6 +178,8 @@ knitr::kable(acdata, "latex", booktabs=T) %>%
   footnote(general = "ratio = cells/pLLPs")
 ```
 
+Use the sample data in the [LLMapR](https://dskleinhans.shinyapps.io/LLmapR/) web-app to explore the dataset.
+
 ### Cell Shape and Arrangement
 
 Figure \@ref(fig:acshape)B’ illustrates the three developmental stages used here. For _shrm3_++ pLLPs two (\@ref(fig:acshape)A, 32 hpf) to four (\@ref(fig:acshape)A, 40 hpf) areas of constricting regions can be observed (XZ pane), in _shroom3_$--$ its three (\@ref(fig:acshape)A, 36 hpf) to seven (\@ref(fig:acshape)A, 40 hpf), confirming the results of rosette detection (\@ref(res-rdtdet)). While at 32 and 36 hpf the spread of those regions is wider in _shroom3_$--$, at 40 hpf they are smaller but also increased in number. When looking at the central rosette along the width (YZ pane), it seems like there is no considerable difference between _shroom3_++ and _shroom3_$--$ rosettes. In SU5402 treated embryos, neither in XZ nor in YZ constriction can be observed and the cells seem to be mostly retained in their mesenchymal character and columnar shape. In addition, while constriction seems isotropic in the shroom3++ rosette center, constriction in the _shroom3_$--$ rosette center cells appears anisotropic.
@@ -221,6 +227,8 @@ knitr::kable(hcdata, "latex", booktabs=T) %>%
   add_header_above(c("id labels" = 2, "metrics" = 3))
 ```
 
+A full data analysis report can be found on [github](https://github.com/KleinhansDa/reports/blob/master/b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3/clusters_tl_tom.html)
+
 ### Atoh1a in the LL
 
 While in both _shroom3_++ and _shroom3_$--$ Tom signal intensities are rising as soon as CCs are deposited (\@ref(fig:hctl)A), in _shroom3_$--$ embryos intensities are on the rise in the pLLP already in the first four hours of migration. When comparing signal intensities in deposited CCs for both, _shroom3_++ and _shroom3_$--$ show a similar pattern of decreasing Tom signal intensity with progressive depositions. Similarly, when looking ungrouped overall development in CC signal intensity (\@ref(fig:hctl)B), no difference can be detected.
@@ -256,6 +264,8 @@ knitr::kable(data, "latex", booktabs=T) %>%
   add_header_above(c("id labels" = 3, "metrics" = 2))
 ```
 
+A full data analysis report can be found on [github](https://github.com/KleinhansDa/reports/blob/master/b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3/clusters_hsshrm3.html)
+
 ### Morphogen Rescue
 
 It is known that increasing concentrations of SU5402 inhibit pLLP migration and rosette formation, leading to a reduced length of the LL system and the number of CCs deposited [@Durdu2014a; @Lecaudey2008a]. 
@@ -274,6 +284,8 @@ knitr::kable(data, "latex", booktabs=T) %>%
   kable_styling(font_size = 11) #%>%
   #add_header_above(c("id labels" = 2, "metrics" = 3))
 ```
+
+A full data analysis report can be found on [github](https://github.com/KleinhansDa/reports/blob/master/b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3/clusters_su.html)
 
 ### Mechanic Rescue {#res-rockresc}
 
@@ -297,6 +309,8 @@ knitr::kable(data, "latex", booktabs=T) %>%
   #add_header_above(c("id labels" = 2, "metrics" = 3))
 ```
 
+A full data analysis report can be found on [github](https://github.com/KleinhansDa/reports/blob/master/b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3/clusters_rkout.html)
+
 #### Rock induction
 
 The idea for this experiment was to rescue _shroom3_$--$ embryos by enhancing the effects of Rock. Incubation at 100 nM, the maximum solubility, does not lead any significant differences.\newline
@@ -314,6 +328,8 @@ knitr::kable(data, "latex", booktabs=T) %>%
   kable_styling(font_size = 11) #%>%
   #add_header_above(c("id labels" = 2, "metrics" = 3))
 ```
+
+A full data analysis report can be found on [github](https://github.com/KleinhansDa/reports/blob/master/b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3/clusters_clcln.html)
 
 ### Thermodynamic Rescue {#res-tempresc}
 
@@ -334,6 +350,8 @@ knitr::kable(data, "latex", booktabs=T) %>%
   #add_header_above(c("id labels" = 2, "metrics" = 3))
 ```
 
+A full data analysis report can be found on [github](https://github.com/KleinhansDa/reports/blob/master/b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3/clusters_temp.html)
+
 ### atoh1a knockdown
 
 Referring back to the results we got from the hair cell analysis in section \@ref(res-hc), the hypothesis to test was if premature CC deposition in _shroom3_$--$ embryos is determined by a premature rise in Atoh1a signaling. To inhibit Atoh1a, a morpholino (MO) for _atoh1a_ mRNA was injected at 0.4 ng/mL, a concentration that had already been shown to be sufficient to deplete Atoh1a signaling [@Lecaudey2008a]. Furthermore, since many MOs have been shown to induce cell death [@Eisen2008b], in a second group we co-injected embryos with an MO for p53^[p53 is a gene upregulated in cancer cells, which would then self-destruct]. Interestingly injection of _atoh1a_ MO leads to a loss of the first CC deposited usually deposited at around 400 $\mu$m distance (\@ref(fig:rescato)A). Furthermore, while median CC counts in _atoh1a_ MO injected _shroom3_$--$ embryos are actually restored to _shroom3_++ levels, CC counts in _shroom3_++ embryos are reduced as well.\newline
@@ -351,3 +369,5 @@ knitr::kable(data, "latex", booktabs=T) %>%
   kable_styling(font_size = 11)#%>%
   #add_header_above(c("id labels" = 2, "metrics" = 3))
 ```
+
+A full data analysis report can be found on [github](https://github.com/KleinhansDa/reports/blob/master/b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3/clusters_ato-mo.html)

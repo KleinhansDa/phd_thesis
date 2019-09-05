@@ -35,9 +35,9 @@ acknowledgements: |
   
   \noindent my students, 
   
-  - Dmitri
-  - Felix
-  - Andreas
+  - Dmitri Baulin
+  - Felix 
+  - Andreas Ebert
   - Gelwa
   - Bianca
   
