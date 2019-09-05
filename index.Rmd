@@ -4,10 +4,10 @@ date: 'Frankfurt am Main, 2019'
 institution: 'Johann Wolfgang Goethe-Universität'
 division: 'Entwicklungsbiologie der Vertebraten'
 advisor: 'Prof. Dr. Sven Klimpel'
-altadvisor: 'Prof.Dr. Virginie Lecaudey'
+altadvisor: 'Prof. Dr. Virginie Lecaudey'
 department: 'Fachbereich Biowissenschaften'
 degree: '**PhD in Biology**'
-title: '**Morphogenesis in the _D.rerio_ Posterior Lateral Line Primordium**'
+title: '**Mechano – Chemical Feedback Loops During Vertebrate Organ Development**'
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 output: 
@@ -25,24 +25,42 @@ output:
 # needed on the line after the |.,
 
 acknowledgements: |
-  I thank my colleagues
-  Since most of my analysis is based on 10 fish of Stocknumber 161-1, I also thank those.
+  I thank...\newline
   
-dedication: |
-  I dedicate this Thesis to...
+  \noindent my supervisors,
   
-  1. my sister,
+  - Virginie Lecaudey
+  - Frederic Strobl
+  - and Manfred Schliwa
   
-  2. my grandma, 
+  \noindent my students, 
   
-  3. my mom,
+  - Dmitri
+  - Felix
+  - Andreas
+  - Gelwa
+  - Bianca
   
-  4. my dad, 
-    
-  5. my friends,
+  For trust shown in the process. For support and demand. for their patience, engangement and hard work.\newline
   
+  \noindent And my animals, without whom this work would not have been possible.\newline
+  \vspace{1cm}
+
 preface: |
-  "You realize when you know _how_ to think, it empowers you far beyond those who know only _what_ to think" - Neil Degrasse Tyson
+  > "The most exciting time in the history of developmental biology is right now. Fueled both by new technologies and by new thought from other fields, we are exploding old notions and opening fantastic new horizons in embryology. [...]
+  
+  > Next, let’s discuss why developmental biology — both normal and pathological — holds such enduring fascination. I see two intertwined explanations. Obviously, it’s the ultimate personal creation story, telling each of us both where we came from and how we were constructed. Less obvious, but perhaps more tantalizing for us scientists, is the sheer complexity of the process. A single cell with a single genome can somehow create trillions of cells in hundreds of radically different types, and those cells can organize themselves into a specific form. The scale of this self-organization process is mind boggling, surely the most amazing of emergent properties."
+  
+  > \- John B. Wallingford, 2019^["We Are All Developmental Biologists", Developmental Cell, Vol.50, Issue 2, Jul 22, 2019]
+
+
+dedication: |
+  These \pageref{LastPage} pages are dedicated to you, the reader.\newline
+  
+    The decision to get a PhD for me was not a career option. I chose to be a scientist because I believed it was a reasonable way, the only way, in a better future. Today, even though we are on the verge of becoming a technocracy, society doesn't trust scientific results anymore. This has many reasons.\newline
+  
+  "Tell the truth. Don't blame people. Be strong. Do your best. Try hard. Forgive. Stay the course." - Bush Senior
+
 bibliography: files/library.bib
 csl: files/science.csl
 lot: true
@@ -64,6 +82,7 @@ library(thesisdown)
 ```{r chunkopts, include=FALSE}
 knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE, fig.align='center', 
                       dev.args=list(bg="transparent"), dev='png') #, dev='pdf'
+options(knitr.kable.NA = '')
 library(pROC)
 #library(plyr)
 #library(dplyr)
@@ -86,43 +105,17 @@ and 00-abstract.Rmd since they are handled in the YAML above differently for the
 
 # List of Abbreviations {.unnumbered}
 
-| **Index** 	| **Abbrev.** 	| **Elaboration**                                 	|
-|-----------	|-------------	|-------------------------------------------------	|
-|           	| 2-/3-D       	| Two or Three Dimensional                         	|
-|           	| A.I.        	| apical index                                    	|
-|           	| CC          	| Cell Cluster                                    	|
-|           	| CNN         	| Convolutional Neural Network                    	|
-|           	| dpf         	| days post fertilization                         	|
-|           	| DSH         	| Dishevelled                                     	|
-|           	| ECDF        	| Empirical Cumulative Distribution Function      	|
-|           	| Fgf         	| Fibroblast Growth Factor                        	|
-|           	| Fgfr1       	| Fgf receptor 1                                  	|
-|           	| FOV         	| Field of View                                   	|
-|           	| FRZ         	| Frizzled                                        	|
-|           	| IJ          	| ImageJ                                          	|
-|           	| ISH         	| In Situ Hybridization                           	|
-|           	| KDE         	| Kernel Density Estimation                       	|
-|           	| l.e.        	| leading edge                                    	|
-|           	| LL          	| Lateral Line                                    	|
-|           	| LOESS       	| locally weighted scatterplot smoothing          	|
-|           	| LOESS       	| Locally Weighted Scatterplot Smoothing          	|
-|           	| LSFM        	| Light sheet fluorescence microscope             	|
-|           	| LUT         	| Lookup Table                                    	|
-|           	| MaxIP       	| Maximum Intensity Projection                    	|
-|           	| MO          	| Morpholino                                      	|
-|           	| N.A.        	| Numerical Aperture                              	|
-|           	| NICD        	| Notch intracellular domain                      	|
-|           	| NM          	| Neuromast                                       	|
-|           	| NMII        	| Non muscle myosin II                            	|
-|           	| p.Hist      	| phospho-Histone                                 	|
-|           	| PCR         	| Polymerase chain reaction                       	|
-|           	| PFA         	| Paraformaldehyd                                 	|
-|           	| PLLp        	| Posterior Lateral Line Primordium               	|
-|           	| Rock        	| Rho-Kinase                                      	|
-|           	| ROI         	| Region of Interest                              	|
-|           	| SBD         	| Shroom binding domain                           	|
-|           	| SEM         	| Scanning Electron Microscopy                    	|
-|           	| SNR         	| Signal to Noise Ratio                           	|
-|           	| TALEN       	| Transcription activator-like effector nuclease  	|
-|           	| TF          	| Transcription Factor                            	|
-|           	| wt          	| Wild Type                                       	|
+```{r abbrev, out.width = "0.95\\textwidth"}
+options(knitr.kable.NA = '')
+data <- read.delim("Abbreviations.txt")
+knitr::kable(data, "latex", booktabs=T, col.names = c("Index", "Abbreviation", "Elaboration"), align=c('c', 'c', 'l')) %>%
+  kable_styling(full_width = T, latex_options = "striped") %>%
+  row_spec(0, bold = T) %>%
+  column_spec(1, bold = T) %>%
+  column_spec(3, width = "10cm") %>%
+  collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
+  kable_styling(font_size = 10)
+  #add_header_above(c("id labels" = 2, "metrics" = 3))
+#pack_rows("Group 1", 4, 7) %>%
+#pack_rows("Group 2", 8, 10)
+```
