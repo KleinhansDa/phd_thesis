@@ -343,15 +343,19 @@
   \centerline{der \@institution} %major
   \vspace{3mm}
   \centerline{als Dissertation angenommen} %major
-  \vskip 5cm		%space to sign
+  \vskip 2cm		%space to sign
+  \centerline{\makebox[5cm][c]{\textbf{Dekan}}}
+  \vspace{3mm}
   \centerline{\makebox[5cm][c]{\@advisor}}
-  \centerline{\makebox[5cm][c]{(Dekan)}}
+  \centerline{\makebox[5cm][c]{(Goethe-Universität)}}
   \vspace{12mm}
+  \centerline{\makebox[5cm][c]{\textbf{Gutachter}}}
+  \vspace{3mm}
   \centerline{\makebox[5cm][c]{\@altadvisor}}
-  \centerline{\makebox[5cm][c]{(Erstgutachter)}}
-  \vspace{8mm}
-  \centerline{\makebox[5cm][c]{Prof.Dr. Manfred Schliwa}}
-  \centerline{\makebox[5cm][c]{(Zweitgutachter)}}
+  \centerline{\makebox[5cm][c]{(Goethe-Universität)}}
+  \vspace{3mm}
+  \centerline{\makebox[5cm][c]{Prof. Dr. Manfred Schliwa}}
+  \centerline{\makebox[5cm][c]{(Goethe-Universität)}}
   \vskip 4cm
   \centerline{\makebox[5cm][c]{\hrulefill}}
   \centerline{\makebox[5cm][c]{(Datum der Disputation)}}

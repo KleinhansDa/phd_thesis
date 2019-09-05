@@ -1,3 +1,3 @@
 genotype	concentrations	LLs	genotype	concentrations	LLs
-++	p53	24	??	p53	22
+++	p53	24	--	p53	22
 	p53 + atoh1a	22		p53 + atoh1a	27

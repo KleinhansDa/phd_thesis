@@ -210,13 +210,13 @@ Table: (\#tab:mat-buff) Buffers
 ------------ ----------------------------- ----------------------------------------------------
 zf106Tg       _cldnb:lyn-gfp_              [_Tg(-8.0cldnb:LY-EGFP)_](//zfin.org/ZDB-ALT-060919-2)
 
-fu13Tg        _cxcr4b_(BAC):_H2BRFP_
+fu13Tg        _cxcr4b_(BAC):_H2BRFP_       -
 
 nns8Tg        _atoh1a:Tom_                 [_atoh1a_](//zfin.org/ZDB-FISH-150901-21622)
 
-fu50          _shroom3_
+fu50          _shroom3_                    -
 
-m1274Tg       _hsp70:shr3v1FL-taqRFP_
+m1274Tg       _hsp70:shr3v1FL-taqRFP_      -
 ------------ ----------------------------- ----------------------------------------------------
 Table: (\#tab:mat-lines) Zebrafish lines
 
@@ -816,7 +816,7 @@ For mounting, an improved 3D specimen preparation and well-plate like sample nav
 3. **To have the embryos aligned with the 3D movements of the microscopic table.** Instead of transforming and aligning the image data in a post-processing approach, the specimen can be imaged in the right spacial configuration in the first place. This is not only important for 3D analysis, but also for Z projected data. If the specimen body axes are not aligned with the axes of the microscopic table, the image stacks need to be bigger to record the volume of interest. In the Z projections, this will end up in X Y coordinates not aligned in Z, as noise or false signal (figure 1B). The method therefore provides significant improvement over existing mounting techniques. 
 
 (ref:mountmicro) Stamp and $\mu$-well properties **A** single micro well in XY and **A'** in XZ **B** mounting without $\mu$-well and **B'** mounting with $\mu$-well **C** elements and dimensions of the stamp.
-```{r Mountmicro, dpi=200, out.width='60%', fig.align='center', echo=FALSE, fig.cap="(ref:mountmicro)", fig.scap = "Stamp and micro-well properties"}
+```{r Mountmicro, dpi=200, out.width='80%', fig.align='center', echo=FALSE, fig.cap="(ref:mountmicro)", fig.scap = "Stamp and micro-well properties"}
 knitr::include_graphics("figure/02-MaMo/Mount/mountmicro.png")
 ```
 
@@ -849,13 +849,13 @@ Table: (\#tab:mounthard) Mounting hardware
 
 --------------------------------------------------------------------------------
 **solution**                           Info    
--------------------------------------- ----------------------------------------- 
-1.0% (m/V) Agarose / E3                                  
+--------------------------------- ---------------------------------------------- 
+1.0% (m/V) Agarose / E3           -               
 
-0.3% (m/V) LM Agarose / E3              incl. 20% (v/v) 25X TMS for live imaging 
+0.3% (m/V) LMPA / E3              incl. 20% (v/v) 25X TMS for live imaging 
 
-0.5% (m/V) LM Agarose / E3              incl. 20% (v/v) 25X TMS for live imaging
--------------------------------------- -----------------------------------------          
+0.5% (m/V) LMPA / E3              incl. 20% (v/v) 25X TMS for live imaging
+--------------------------------- ----------------------------------------------    
 Table: (\#tab:mountsol) Mounting solutions
 
 ##### Preparation
@@ -867,7 +867,7 @@ First, make sure your stamp is clean of dust or other particles. If necessary cl
 
 to the glass or polymer surface and place the stamp on it so that it touches the cover. Place it as central as possible. Excessive agarose not needed for the imprint will fill the surrounding area in the dish and stabilize the structure when removing the stamp again. 
 
-ently rotate the dish so that excess agarose solution will cover the whole dish.
+gently rotate the dish so that excess agarose solution will cover the whole dish.
 
 Wait for ~45 min., then use a clean preparation needle and slip it through stamp - polymerized agarose interface. Remove the stamp carefully by lifting it and holding the $\mu$-Dish in place.
 
@@ -876,7 +876,7 @@ Wait for ~45 min., then use a clean preparation needle and slip it through stamp
 knitr::include_graphics("figure/02-MaMo/Mount/stampprod.png")
 ```
 
-(ref:mounting) 44x mounting stamp **A** without LM-Agarose **B and C** with LM-Agarose, while the latter shows the imprint with light coming from a different angle, making the chambers visible again.
+(ref:mounting) 44x mounting stamp **A** without LMPA **B and C** with LMPA, while the latter shows the imprint with light coming from a different angle, making the chambers visible again.
 ```{r mounting, dpi=200, out.width='60%', fig.cap="(ref:mounting)", fig.scap = "44x mounting stamp"}
 knitr::include_graphics("figure/02-MaMo/Mount/mounting.png")
 ```
@@ -1031,7 +1031,7 @@ load("figure/02-MaMo/ACI/SN180_ACI.RData")
 
 Each geometric object has a centroid coordinate in X and Y (and Z) which is represented as the mean of all X or Y coordinates within the object. Here, the centroid coordinates in X and Y are used to plot the cells as points in the X-Y plane. Additionally, each point is colored for the ACI value (high values are blue-violet, middle values are green, low values are yellow-red). Table \@ref(tab:cellcountaci) summarizes the number of count objects (n) per condition (Obj).
 
-(ref:ACIMajor) ACI~Major~ and ACI~Minor~ single cell measurements
+(ref:ACIMajor) ACI~Major~ single cell measurements
 ```{r ACIMajor, out.width='90%', fig.height = 1.75, dpi=400, fig.cap="(ref:ACIMajor)"}
 load("figure/02-MaMo/ACI/SN180_ACI.RData")
 ggplot(SN180, aes(CXN, CY..unit.)) +
@@ -1039,10 +1039,10 @@ ggplot(SN180, aes(CXN, CY..unit.)) +
   scale_colour_gradientn(colours = rainbow(5)) +
   labs(title = "", x = "X centroid normalized to leading edge [µm]", y = "Y centroid [µm]") +
   facet_grid(.~GT, labeller = label_parsed) +
-  mythemeLIGHT_bottom() + theme(axis.title.x = element_blank()) + theme(axis.ticks.x = element_blank()) + theme(axis.text.x = element_blank())
+  mythemeLIGHT_bottom()
 ```
 
-(ref:ACIMinor) ACI~Minor~ (apical height)
+(ref:ACIMinor) ACI~Minor~ single cell measurements
 ```{r ACIMinor, out.width='90%', fig.height = 1.75, dpi=400, fig.cap="(ref:ACIMinor)"}
 load("figure/02-MaMo/ACI/SN180_ACI.RData")
 library(ggplot2)
@@ -1143,7 +1143,7 @@ In summary our results suggest that there is no significant difference either in
  
  Pairs            4         
  
- Transgenes       cldnb:lyn-gfp +/?
+ Transgenes       _cldnb:lyn-gfp_ +/?
  
  Mutation         _shroom3_
  
@@ -1178,7 +1178,7 @@ Table: (\#tab:ccdata) Cell Cluster dataset
  
  Pairs            4     
  
- Transgenes       cldnb:lyn-gfp +/+
+ Transgenes       _cldnb:lyn-gfp_ +/+
  
  Mutation         _shroom3_
  
@@ -1213,7 +1213,7 @@ Table: (\#tab:acidata) ACI dataset
  
  Pairs            6         
  
- Transgenes       cldnb:lyn-gfp +/?; cxcr4b(BAC):H2BRFP +/0
+ Transgenes       _cldnb:lyn-gfp_ +/?; _cxcr4b_(BAC) _:H2BRFP_ +/0
  
  Mutation         _shroom3_
  
@@ -1256,7 +1256,7 @@ Table: (\#tab:prolifdata) Proliferation dataset
  
  Pairs            6         
  
- Transgenes       cldnb:lyn-gfp +/?
+ Transgenes       _cldnb:lyn-gfp_ +/?
  
  Mutation         _shroom3_
  
@@ -1299,7 +1299,7 @@ Table: (\#tab:detectdata) Detection dataset
  
  Pairs            4         
  
- Transgenes       cldnb:lyn-gfp +/?; atoh1a:Tom +/0
+ Transgenes       _cldnb:lyn-gfp_ +/?; _atoh1a:Tom_ +/0
  
  Mutation         _shroom3_
  

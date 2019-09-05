@@ -126,6 +126,8 @@ knitr::include_graphics("figures/supp/cc_model.png")
 ```{r supgrad, out.width = "0.8\\textwidth", fig.cap="(ref:supgrad)", fig.scap="Morphogenic gradients"}
 knitr::include_graphics("figures/supp/gradients.png")
 ```
+\newpage
+# Curriculum Vitae
 
 # **Statutory Declaration** {.unnumbered}
 
@@ -135,6 +137,6 @@ with regard to the statement and scope are indicated by full details of the publ
 in the same or similar form has not been submitted to any examination body and has not been published.
 This thesis was not yet, even in part, used in another examination or as a course performance.
 
-    Place, Date: __________________           
+    Place, Date: __________________
 
       Signature: __________________

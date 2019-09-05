@@ -1,41 +1,40 @@
-**Index**	**Abbrev.**	**Elaboration**
-	2-/3-D	Two or Three Dimensional
-	A.I.	apical index
-	CC  	Cell Cluster
-	CNN	Convolutional Neural Network
-	dpf	days post fertilization
-	DSH	Dishevelled
-	ECDF 	Empirical Cumulative Distribution Function
-	Fgf	Fibroblast Growth Factor
-	Fgfr1	Fgf receptor 1
-	FOV	Field of View
-	FRZ	Frizzled
-	IJ	ImageJ
-	ISH	In Situ Hybridization
-	KDE	Kernel Density Estimation
-	l.e.	leading edge
-	LL 	Lateral Line
-	LOESS  	Locally Weighted Scatterplot Smoothing
-	LSFM	Light sheet fluorescence microscope
-	LUT	Lookup Table
-	MaxIP  	Maximum Intensity Projection
-	MO	Morpholino
-	N.A.	Numerical Aperture
-	NICD	Notch intracellular domain
-	NM  	Neuromast
-	NMII	Non muscle myosin II
-	p.Hist	phospho-Histone
-	PCR	Polymerase chain reaction
-	PFA  	Paraformaldehyd
-	pLLP	Posterior Lateral Line Primordium
-	Rock	Rho-Kinase
-	ROI  	Region of Interest
-	SBD	Shroom binding domain
-	SEM 	Scanning Electron Microscopy
-	SNR	Signal to Noise Ratio
-	TALEN	Transcription activator-like effector nuclease 
-	TF	Transcription Factor
-	wt	Wild Type
-	hpf	hours post fertilization
-	LMPA	low melting point agarose
-	CI	confidence interval
+Index	Abbreviation	Elaboration
+0-9	2-/3-D	Two or Three Dimensional
+A	A.I.	apical index
+C	CC  	Cell Cluster
+C	CNN	Convolutional Neural Network
+C	CI	confidence interval
+D	dpf	days post fertilization
+D	DSH	Dishevelled
+E	ECDF 	Empirical Cumulative Distribution Function
+F	Fgf	Fibroblast Growth Factor
+F	Fgfr1	Fgf receptor 1
+F	FOV	Field of View
+F	FRZ	Frizzled
+H	hpf	hours post fertilization
+I	IJ	ImageJ
+I	ISH	In Situ Hybridization
+K	KDE	Kernel Density Estimation
+L	l.e.	leading edge
+L	LL 	Lateral Line
+L	LOESS  	Locally Weighted Scatterplot Smoothing
+L	LSFM	Light sheet fluorescence microscope
+L	LUT	Lookup Table
+L	LMPA	low melting point agarose
+M	MaxIP  	Maximum Intensity Projection
+M	MO	Morpholino
+N	N.A.	Numerical Aperture
+N	NICD	Notch intracellular domain
+N	NM  	Neuromast
+N	NMII	Non muscle myosin II
+P	p.Hist	phospho-Histone
+P	PCR	Polymerase chain reaction
+P	PFA  	Paraformaldehyd
+P	pLLP	Posterior Lateral Line Primordium
+R	Rock	Rho-Kinase
+R	ROI  	Region of Interest
+S	SBD	Shroom binding domain
+S	SEM 	Scanning Electron Microscopy
+S	SNR	Signal to Noise Ratio
+T	TALEN	Transcription activator-like effector nuclease 
+T	TF	Transcription Factor
