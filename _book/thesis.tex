@@ -31,6 +31,7 @@
 % Check out CTAN to see: http://www.ctan.org/
 %%
 \usepackage{graphicx,latexsym}
+\usepackage{lastpage}
 \usepackage{amsmath}
 \usepackage{amssymb,amsthm}
 \usepackage{longtable,booktabs,setspace}
@@ -71,7 +72,7 @@
 % Syntax highlighting #22
 
 % To pass between YAML and LaTeX the dollar signs are added by CII
-\title{\textbf{Morphogenesis in the \emph{D.rerio} Posterior Lateral Line Primordium}}
+\title{\textbf{Mechano -- Chemical Feedback Loops \linebreak During Vertebrate Organ Development}}
 \author{\textbf{David Kleinhans}}
 % The month and year that you submit your FINAL draft TO THE LIBRARY (May or December)
 \date{Frankfurt am Main, 2019}
@@ -81,7 +82,7 @@
 \degree{\textbf{PhD in Biology}}
 %If you have two advisors for some reason, you can use the following
 % Uncommented out by CII
-\altadvisor{Prof.Dr. Virginie Lecaudey}
+\altadvisor{Prof.~Dr.~Virginie Lecaudey}
 % End of CII addition
 
 %%% Remember to use the correct department!
@@ -118,25 +119,52 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
-\Acknowledgements{I thank my colleagues
-Since most of my analysis is based on 10 fish of Stocknumber 161-1, I also thank those.}
+\Acknowledgements{I thank\ldots{}\newline
 
-\Dedication{I dedicate this Thesis to\ldots{}
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
+\noindent my supervisors,
+\begin{itemize}
+\tightlist
 \item
-  my sister,
+  Prof.~Dr.~Virginie Lecaudey
 \item
-  my grandma,
+  Prof.~Dr.~Manfred Schliwa
+\end{itemize}
+\noindent my students,
+\begin{itemize}
+\tightlist
 \item
-  my mom,
+  Dmitri Baulin (M.Sc. Thesis)
 \item
-  my dad,
+  Felix Godron (B.Sc. Thesis)
 \item
-  my friends,
-\end{enumerate}}
-\Preface{``You realize when you know \emph{how} to think, it empowers you far beyond those who know only \emph{what} to think'' - Neil Degrasse Tyson}
+  Andreas Ebert (B.Sc. Thesis)
+\item
+  Gelwa Helmand (B.Sc. Thesis)
+\item
+  Bianca Rodrigues Lima (Master student)
+\item
+  Ivan Alcantara (Master student)
+\end{itemize}
+For trust shown in the process. For support and demand. for their patience, engangement and hard work.\newline
 
+\noindent And my animals, without whom this work would not have been possible.
+\vspace{0.5cm}}
+
+\Dedication{These \pageref{LastPage} pages are dedicated to YOU, the \emph{reader}.\newline
+
+The decision to get a PhD for me was not a career option. I chose to be a scientist because \emph{science} because I was motivated by its ideals - autonomy, purity and freedom of presupposition (Aristotle) - to offer a solution to many wronggoings in the world. to to me meant I believed it was a reasonable way, the only way, a better future. Today, even though we are on the verge of becoming a technocracy, society doesn't trust scientific results anymore. This has many reasons.\newline
+
+``Tell the truth. Don't blame people. Be strong. Do your best. Try hard. Forgive. Stay the course.'' - Bush Senior}
+
+\Preface{\begin{quote}
+"The most exciting time in the history of developmental biology is right now. Fueled both by new technologies and by new thought from other fields, we are exploding old notions and opening fantastic new horizons in embryology. {[}\ldots{}{]}
+\end{quote}
+\begin{quote}
+Next, let's discuss why developmental biology --- both normal and pathological --- holds such enduring fascination. I see two intertwined explanations. Obviously, it's the ultimate personal creation story, telling each of us both where we came from and how we were constructed. Less obvious, but perhaps more tantalizing for us scientists, is the sheer complexity of the process. A single cell with a single genome can somehow create trillions of cells in hundreds of radically different types, and those cells can organize themselves into a specific form. The scale of this self-organization process is mind boggling, surely the most amazing of emergent properties."
+\end{quote}
+\begin{quote}
+- John B. Wallingford, 2019\footnote{``We Are All Developmental Biologists'', Developmental Cell, Vol.50, Issue 2, Jul 22, 2019}
+\end{quote}}
 \Abstract{}
 
 	\usepackage{booktabs}
@@ -166,14 +194,50 @@ Since most of my analysis is based on 10 fish of Stocknumber 161-1, I also thank
 \frontmatter % this stuff will be roman-numbered
 \pagestyle{empty} % this removes page numbers from the frontmatter
   \begin{acknowledgements}
-    I thank my colleagues
-    Since most of my analysis is based on 10 fish of Stocknumber 161-1, I also thank those.
+    I thank\ldots{}\newline
+    
+    \noindent my supervisors,
+    \begin{itemize}
+    \tightlist
+    \item
+      Prof.~Dr.~Virginie Lecaudey
+    \item
+      Prof.~Dr.~Manfred Schliwa
+    \end{itemize}
+    \noindent my students,
+    \begin{itemize}
+    \tightlist
+    \item
+      Dmitri Baulin (M.Sc. Thesis)
+    \item
+      Felix Godron (B.Sc. Thesis)
+    \item
+      Andreas Ebert (B.Sc. Thesis)
+    \item
+      Gelwa Helmand (B.Sc. Thesis)
+    \item
+      Bianca Rodrigues Lima (Master student)
+    \item
+      Ivan Alcantara (Master student)
+    \end{itemize}
+    For trust shown in the process. For support and demand. for their patience, engangement and hard work.\newline
+    
+    \noindent And my animals, without whom this work would not have been possible.
+    \vspace{0.5cm}
 \begin{center}
-\includegraphics[width=0.6\textwidth]{figure/05-Appendix/DSC07341.png}
+\includegraphics[width=0.5\textwidth]{figure/05-Appendix/DSC07341.png}
 \end{center}
   \end{acknowledgements}
   \begin{preface}
-    ``You realize when you know \emph{how} to think, it empowers you far beyond those who know only \emph{what} to think'' - Neil Degrasse Tyson
+    \begin{quote}
+    "The most exciting time in the history of developmental biology is right now. Fueled both by new technologies and by new thought from other fields, we are exploding old notions and opening fantastic new horizons in embryology. {[}\ldots{}{]}
+    \end{quote}
+    \begin{quote}
+    Next, let's discuss why developmental biology --- both normal and pathological --- holds such enduring fascination. I see two intertwined explanations. Obviously, it's the ultimate personal creation story, telling each of us both where we came from and how we were constructed. Less obvious, but perhaps more tantalizing for us scientists, is the sheer complexity of the process. A single cell with a single genome can somehow create trillions of cells in hundreds of radically different types, and those cells can organize themselves into a specific form. The scale of this self-organization process is mind boggling, surely the most amazing of emergent properties."
+    \end{quote}
+    \begin{quote}
+    - John B. Wallingford, 2019\footnote{``We Are All Developmental Biologists'', Developmental Cell, Vol.50, Issue 2, Jul 22, 2019}
+    \end{quote}
   \end{preface}
   \hypersetup{linkcolor=black}
   \setcounter{tocdepth}{2}
@@ -188,20 +252,11 @@ Since most of my analysis is based on 10 fish of Stocknumber 161-1, I also thank
     {Unless otherwise noted, all figures in this manuscript are an expression of my own creative achievement. Similarities between molecule, protein and signalling models exist and are based on well-known textbooks such as Lodish et al., Molecular Cell Biology, 5th Edt. and Scott F. Gilbert et al., Developmental Biology 11th Edt.}
   \end{center}
   \begin{dedication}
-    I dedicate this Thesis to\ldots{}
-    \begin{enumerate}
-    \def\labelenumi{\arabic{enumi}.}
-    \item
-      my sister,
-    \item
-      my grandma,
-    \item
-      my mom,
-    \item
-      my dad,
-    \item
-      my friends,
-    \end{enumerate}
+    These \pageref{LastPage} pages are dedicated to YOU, the \emph{reader}.\newline
+    
+    The decision to get a PhD for me was not a career option. I chose to be a scientist because \emph{science} because I was motivated by its ideals - autonomy, purity and freedom of presupposition (Aristotle) - to offer a solution to many wronggoings in the world. to to me meant I believed it was a reasonable way, the only way, a better future. Today, even though we are on the verge of becoming a technocracy, society doesn't trust scientific results anymore. This has many reasons.\newline
+    
+    ``Tell the truth. Don't blame people. Be strong. Do your best. Try hard. Forgive. Stay the course.'' - Bush Senior
   \end{dedication}
 \mainmatter % here the regular arabic numbering starts
 \pagestyle{fancyplain} % turns page numbering back on
@@ -217,51 +272,99 @@ Since most of my analysis is based on 10 fish of Stocknumber 161-1, I also thank
 \hypertarget{list-of-abbreviations}{%
 \chapter*{List of Abbreviations}\label{list-of-abbreviations}}
 \addcontentsline{toc}{chapter}{List of Abbreviations}
-\begin{longtable}[]{@{}lll@{}}
+
+\begingroup\fontsize{9}{11}\selectfont
+\begin{tabu} to \linewidth {>{\bfseries}c>{\centering}X>{\raggedright\arraybackslash}p{10cm}}
 \toprule
-\textbf{Index} & \textbf{Abbrev.} & \textbf{Elaboration}\tabularnewline
+\textbf{Index} & \textbf{Abbreviation} & \textbf{Elaboration}\\
 \midrule
-\endhead
-& 2-/3-D & Two or Three Dimensional\tabularnewline
-& A.I. & apical index\tabularnewline
-& CC & Cell Cluster\tabularnewline
-& CNN & Convolutional Neural Network\tabularnewline
-& dpf & days post fertilization\tabularnewline
-& DSH & Dishevelled\tabularnewline
-& ECDF & Empirical Cumulative Distribution Function\tabularnewline
-& Fgf & Fibroblast Growth Factor\tabularnewline
-& Fgfr1 & Fgf receptor 1\tabularnewline
-& FOV & Field of View\tabularnewline
-& FRZ & Frizzled\tabularnewline
-& IJ & ImageJ\tabularnewline
-& ISH & In Situ Hybridization\tabularnewline
-& KDE & Kernel Density Estimation\tabularnewline
-& l.e. & leading edge\tabularnewline
-& LL & Lateral Line\tabularnewline
-& LOESS & locally weighted scatterplot smoothing\tabularnewline
-& LOESS & Locally Weighted Scatterplot Smoothing\tabularnewline
-& LSFM & Light sheet fluorescence microscope\tabularnewline
-& LUT & Lookup Table\tabularnewline
-& MaxIP & Maximum Intensity Projection\tabularnewline
-& MO & Morpholino\tabularnewline
-& N.A. & Numerical Aperture\tabularnewline
-& NICD & Notch intracellular domain\tabularnewline
-& NM & Neuromast\tabularnewline
-& NMII & Non muscle myosin II\tabularnewline
-& p.Hist & phospho-Histone\tabularnewline
-& PCR & Polymerase chain reaction\tabularnewline
-& PFA & Paraformaldehyd\tabularnewline
-& PLLp & Posterior Lateral Line Primordium\tabularnewline
-& Rock & Rho-Kinase\tabularnewline
-& ROI & Region of Interest\tabularnewline
-& SBD & Shroom binding domain\tabularnewline
-& SEM & Scanning Electron Microscopy\tabularnewline
-& SNR & Signal to Noise Ratio\tabularnewline
-& TALEN & Transcription activator-like effector nuclease\tabularnewline
-& TF & Transcription Factor\tabularnewline
-& wt & Wild Type\tabularnewline
+\rowcolor{gray!6}  0-9 & 2-/3-D & Two or Three Dimensional\\
+
+ & A.I. & apical index\\
+
+\rowcolor{gray!6}  \multirow[t]{-2}{*}{\centering\arraybackslash A} & AB & Antibody\\
+
+ & CC & Cell Cluster\\
+
+\rowcolor{gray!6}   & CNN & Convolutional Neural Network\\
+
+\multirow[t]{-3}{*}{\centering\arraybackslash C} & CI & confidence interval\\
+
+\rowcolor{gray!6}   & dpf & days post fertilization\\
+
+\multirow[t]{-2}{*}{\centering\arraybackslash D} & DSH & Dishevelled\\
+
+\rowcolor{gray!6}  E & ECDF & Empirical Cumulative Distribution Function\\
+
+ & Fgf & Fibroblast Growth Factor\\
+
+\rowcolor{gray!6}   & Fgfr1 & Fgf receptor 1\\
+
+ & FOV & Field of View\\
+
+\rowcolor{gray!6}  \multirow[t]{-4}{*}{\centering\arraybackslash F} & FRZ & Frizzled\\
+
+H & hpf & hours post fertilization\\
+
+\rowcolor{gray!6}   & IJ & ImageJ\\
+
+\multirow[t]{-2}{*}{\centering\arraybackslash I} & ISH & In Situ Hybridization\\
+
+\rowcolor{gray!6}  K & KDE & Kernel Density Estimation\\
+
+ & l.e. & leading edge\\
+
+\rowcolor{gray!6}   & LL & Lateral Line\\
+
+ & LOESS & Locally Weighted Scatterplot Smoothing\\
+
+\rowcolor{gray!6}   & LSFM & Light sheet fluorescence microscope\\
+
+ & LUT & Lookup Table\\
+
+\rowcolor{gray!6}  \multirow[t]{-6}{*}{\centering\arraybackslash L} & LMPA & low melting point agarose\\
+
+ & MaxIP & Maximum Intensity Projection\\
+
+\rowcolor{gray!6}  \multirow[t]{-2}{*}{\centering\arraybackslash M} & MO & Morpholino\\
+
+ & N.A. & Numerical Aperture3\\
+
+\rowcolor{gray!6}   & NGS & Normal Goat Serum\\
+
+ & NICD & Notch intracellular domain\\
+
+\rowcolor{gray!6}   & NM & Neuromast\\
+
+\multirow[t]{-5}{*}{\centering\arraybackslash N} & NMII & Non muscle myosin II\\
+
+\rowcolor{gray!6}  O & o.n. & over night\\
+
+ & p.Hist & phospho-Histone\\
+
+\rowcolor{gray!6}   & PCR & Polymerase chain reaction\\
+
+ & PFA & Paraformaldehyd\\
+
+\rowcolor{gray!6}  \multirow[t]{-4}{*}{\centering\arraybackslash P} & pLLP & Posterior Lateral Line Primordium\\
+
+ & Rock & Rho-Kinase\\
+
+\rowcolor{gray!6}  \multirow[t]{-2}{*}{\centering\arraybackslash R} & ROI & Region of Interest\\
+
+ & SBD & Shroom binding domain\\
+
+\rowcolor{gray!6}   & SEM & Scanning Electron Microscopy\\
+
+\multirow[t]{-3}{*}{\centering\arraybackslash S} & SNR & Signal to Noise Ratio\\
+
+\rowcolor{gray!6}   & TALEN & Transcription activator-like effector nuclease\\
+
+\multirow[t]{-2}{*}{\centering\arraybackslash T} & TF & Transcription Factor\\
 \bottomrule
-\end{longtable}
+\end{tabu}
+\endgroup{}
+
 \hypertarget{Intro}{%
 \chapter{Introduction}\label{Intro}}
 
@@ -333,7 +436,7 @@ Morphogenesis, from the Greek morphê (shape) and genesis (creation)
 \end{quote}
 For objects that fulfill a purpose, many times (if not always) their forms (or shapes) are an expression of their function\footnote{Even though the expression Form follows function (\emph{3}) is usually found in design and architecture, it formulates the general idea that any objects form is (or in design should) be shaped by the requirements to it.}. Analyzing the shape of an object can give one information about its function. It is therefore an important feature many different sciences, e.g.~when correlating an organism's size to the climate it lives or when correlating intelligence to the size of an animal's brain. During an organism's development diversification of shape on a cellular level is an important step in breaking symmetry of daughter cells. In order to form a tissue or an organ with a variety of specialized cells, it is important for the single cell to have information about where it is located, what its neighbors are doing, how densely it is packed and what the chemical composition of its surrounding is. This is accomplished by being in constant feedback with its neighbor cells and sensation of its environment. After the information got processed, the cell will react by adjusting the levels of proteins expressed to undergo proliferation or develop specialized structures like cilia or axons.
 
-For a cell, its present shape impacts its further specification by impacting how well it perceives specific signals and the magnitude of signals received and transmitted. E.g. it has been shown that during lateral inhibition (\emph{4}). Shape therefore sets the general framework for cell-cell interaction and follows a
+For a cell, its present shape impacts its further specification by impacting how well it perceives specific signals and the magnitude of signals received and transmitted. E.g. it has been shown that during lateral inhibition (\emph{4}). Shape therefore sets the general framework for cell-cell interaction and follows a\newline
 
 \makebox[\linewidth]{$molecular \longrightarrow cellular \longrightarrow tissue$}
 \newline
@@ -585,23 +688,35 @@ Due to the pLLP's relative simplicity (\textasciitilde{}100 cells), excellent ac
 In this scenario, the advantages of working with a knockout- as compared to a knockdown\footnote{permanent versus transient mutation} mutant are (1) an equal amount of gene expression across all samples (2) no side effects due to injection procedure or solvents in drug treatments (3) the ability to observe the effects of the mutation for very long periods of time.
 
 One aspect about LL development that still remains unclear are the exact factors that lead to cell cluster (CC) deposition. What determines the timing of deposition? When is a rosette mature enough to be deposited? What happens to the cells before and after deposition? How do the cells specify before deposition? What are the morphological features of depositing cells? What influence does morphology have on Neuromast deposition?
+
 Using the Shroom3 mutants as a model system offers great potential to shed new light on organogenesis, the interplay between morphogenesis and cellular specification, epithelial rosette formation and neuromast deposition.
 
 \hypertarget{data-strategy-and-analysis}{%
 \section{Data Strategy and Analysis}\label{data-strategy-and-analysis}}
 
-Due to the history of Developmental Biology and the complexity of biological processes \emph{per se}, the field heavily relies on image data. Since the advent of electronic imaging techniques\footnote{e.g.~photomultipliers or charge-coupled devices} scientific image data can be processed and analyzed \emph{in silico}. To make use of the possibility of (1) live imaging, which (as compared to fixation techniques) conserves the cellular integrity and morphology while also offers the possibility of recording time-lapses (2) the optically clear specimen and (3) high throughput image analysis and state-of-the-art data science using algorithmic implementations, the three following points were paid special attention to.
+Due to the history of Developmental Biology and the complexity of biological processes \emph{per se}, the field heavily relies on image data. Since the advent of electronic imaging techniques\footnote{e.g.~photomultipliers or charge-coupled devices} scientific image data can be processed and analyzed \emph{in silico}. To make use of the possibility of
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  live imaging, which (as compared to fixation techniques) conserves the cellular integrity and morphology while also offers the possibility of recording time-lapses
+\item
+  the optically clear specimen and
+\item
+  high throughput image analysis and state-of-the-art data science using algorithmic implementations,
+\end{enumerate}
+the three following points were paid special attention to.
 
 \hypertarget{sample-preparation}{%
 \subsection{Sample Preparation}\label{sample-preparation}}
 
-For fluorescence microscopy zebrafish embryos are usually immersed in a 1\% solution of \emph{low melting-point agarose} (LMPA) solution and then oriented on an optical cover slip manually until the LMPA has solidified. This process allows to mount\footnote{the process of embedding the samples in agarose} eight to ten embryos \emph{per} dish. To make use of the high number of offspring a single zebrafish female may lay, which rapidly leads to a sample number of more than 300, a new sample preparation technique was devised that allows for (1) a four to five times increase in samples per dish (2) a facilitated navigation \emph{via} a grid-like orientation through the samples and (3) an improved spatial orientation where the embryos body axes are aligned parallel to the optical Z-sections of the confocal microscope. For details, see Materials and Methods section\ldots{} and in Kleinhans et al., 2019.
+For fluorescence microscopy zebrafish embryos are usually immersed in a 1\% solution of \emph{low melting-point agarose} (LMPA) solution and then oriented on an optical cover slip manually until the LMPA has solidified. This process allows to mount\footnote{the process of embedding the samples in agarose} eight to ten embryos \emph{per} dish. To make use of the high number of offspring a single zebrafish female may lay, which rapidly leads to a sample number of more than 300, a new sample preparation technique was devised that allows for (1) a four to five times increase in samples per dish (2) a facilitated navigation \emph{via} a grid-like orientation through the samples and (3) an improved spatial orientation where the embryos body axes are aligned parallel to the optical Z-sections of the confocal microscope. For details, see Materials and Methods section \ref{mount-met} and Kleinhans \emph{et al.}, 2019.
 
 \hypertarget{imaging}{%
 \subsection{Imaging}\label{imaging}}
 
 Technically, speed and sensitivity are most important for live imaging. Considering these two parameters a light-sheet (\emph{43}) fluorescence microscope (LSFM) would be the best fit. However, LSFMs also have several limitations. First, due to the sample preparation methods available the number of samples that can be imaged at a time is highly restricted. Second, for subcellular resolution a high magnification is required, which is limited by working distances and third - for optimal image analysis a high Signal-to-Noise ratio (SNR) and numerical aperture (N.A.) is preferable. Therefore a spinning disc (\emph{44}) system was chosen for most of the imaging.
-The system makes use of (1) an extra-large field of view (FOV) ideal for large specimen (2) the possibility of a high degree of automation with state-of-the-art software and (3) a water dispension system for long-term water immersion imaging. For details about the system see Materials and Methods section\ldots{}
+The system makes use of (1) an extra-large field of view (FOV) ideal for large specimen (2) the possibility of a high degree of automation with state-of-the-art software and (3) a water dispension system for long-term water immersion imaging. For details about the system see Materials and Methods section \ref{mat-SD}.
 
 \hypertarget{data-handling}{%
 \subsection{Data handling}\label{data-handling}}
@@ -616,7 +731,7 @@ Where \emph{stage} would e.g.~be 32hpf, \emph{group} would be a genotype or drug
 \hypertarget{image-and-data-analysis}{%
 \subsection{Image and Data Analysis}\label{image-and-data-analysis}}
 
-In order to be as objective an as high throughput as possible, almost all of the analyses performed for this study was solved using either algorithmically or state-of-the-art convolutional neural networks (CNNs). Furthermore, to meet the terms and conditions of \emph{open science}\footnote{``movement to make scientific research {[}\ldots{}{]} and its dissemination accessible to all levels of an inquiring society'' -- Wikipedia/en/Open\_science} standards, all pipelines were implemented in open source software frameworks such as \emph{Fiji is just image J} (FIJI) and R. For further information about training datasets, algorithms and versions used see Materials and Methods section .
+In order to be as objective an as high throughput as possible, almost all of the analyses performed for this study was solved using either algorithmically or state-of-the-art convolutional neural networks (CNNs). Furthermore, to meet the terms and conditions of \emph{open science}\footnote{``movement to make scientific research {[}\ldots{}{]} and its dissemination accessible to all levels of an inquiring society'' -- Wikipedia/en/Open\_science} standards, all pipelines were implemented in open source software frameworks such as \emph{Fiji is just image J} (FIJI) and R. For further information about training datasets, algorithms and versions used see Materials and Methods section \ref{mat-sftwr}.
 
 \hypertarget{mat-met}{%
 \chapter{Materials and Methods}\label{mat-met}}
@@ -626,545 +741,299 @@ In order to be as objective an as high throughput as possible, almost all of the
 
 \hypertarget{mat-chem}{%
 \subsection{Chemicals}\label{mat-chem}}
-\begin{longtable}[]{@{}rccccl@{}}
+\begin{longtable}[]{@{}rcc@{}}
 \caption{\label{tab:mat-chem} Chemicals}\tabularnewline
 \toprule
-\begin{minipage}[b]{0.19\columnwidth}\raggedleft
+\begin{minipage}[b]{0.26\columnwidth}\raggedleft
 \textbf{Chemical}\strut
-\end{minipage} & \begin{minipage}[b]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[b]{0.50\columnwidth}\centering
 Company\strut
-\end{minipage} & \begin{minipage}[b]{0.12\columnwidth}\centering
-Lot.\strut
-\end{minipage} & \begin{minipage}[b]{0.12\columnwidth}\centering
-Charge\strut
-\end{minipage} & \begin{minipage}[b]{0.12\columnwidth}\centering
-EGNr:\strut
-\end{minipage} & \begin{minipage}[b]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\centering
 cat.-no.\strut
 \end{minipage}\tabularnewline
 \midrule
 \endfirsthead
 \toprule
-\begin{minipage}[b]{0.19\columnwidth}\raggedleft
+\begin{minipage}[b]{0.26\columnwidth}\raggedleft
 \textbf{Chemical}\strut
-\end{minipage} & \begin{minipage}[b]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[b]{0.50\columnwidth}\centering
 Company\strut
-\end{minipage} & \begin{minipage}[b]{0.12\columnwidth}\centering
-Lot.\strut
-\end{minipage} & \begin{minipage}[b]{0.12\columnwidth}\centering
-Charge\strut
-\end{minipage} & \begin{minipage}[b]{0.12\columnwidth}\centering
-EGNr:\strut
-\end{minipage} & \begin{minipage}[b]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{0.16\columnwidth}\centering
 cat.-no.\strut
 \end{minipage}\tabularnewline
 \midrule
 \endhead
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 Agarose\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Roth\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-495237802\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-2327318\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 6351.2\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
-\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 Agar-Agar\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Roth\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 5210.3\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 Ampicillin\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Roth\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 K029.2\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 ATP\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Epicentre\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 E311K\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 Blocking Reagent\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Roche\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 11096176001\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 BCIP\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Fermentas\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 R0822\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 CaCl\textsubscript{2}\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Roth\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 886.1\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 Calyculin\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 \strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 \strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 DIG RNA Mix\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Roche\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 11277073910\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 DMSO\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Roth\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 4720.2\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 EtBr\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Roth\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 2218.3\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 EtOH\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Roth\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 9065.3\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 Formaldehyde\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Roth\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 7398.1\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 Formamide\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Roth\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 P040.1\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 Glycerol\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Roth\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 3783.2\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 IPTG\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Thermo\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 R1171\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 KCl\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Roth\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 P017.1\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
-Low-melt agarose\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
+Low melting point Agarose\strut
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Roth\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-SLBM5407V\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 A9539\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 Maleic Acid\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 \strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 \strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 MeOH\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Roth\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 CP43.3\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 MgCl\textsubscript{2}\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Roth\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 2189.1\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 NaCl\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Roth\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 9265.2\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 NaHCO\textsubscript{3}\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Roth\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 855.1\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 NaOH\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Roth\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 \strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 NGS\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Sigma\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 C6767\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 \emph{p}-Formaldehyd\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Sigma\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 P6148\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 Phenol Red\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Sigma\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 P0290\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 Propan-2-ol\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 VWR\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 20842330\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 Proteinase K\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Roth\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 7528.4\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 PTU\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Sigma\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 P7629\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 Rockout\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 \strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 \strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 SSC\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 \strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 \strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 SU5402\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 CALBIOCHEM\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-D00072578\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 572630\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 Torula RNA\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Sigma\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 R6625\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 Tricaine\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Fluka\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 A5040\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 Tris Base\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Roth\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 4855.2\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 Triton-X100\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Roth\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 3051.2\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 Trizol\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Ambion\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 15596018\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.19\columnwidth}\raggedleft
+\begin{minipage}[t]{0.26\columnwidth}\raggedleft
 Tween20\strut
-\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering
 Sigma\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\centering
 P1379\strut
 \end{minipage}\tabularnewline
 \bottomrule
@@ -1724,7 +1593,7 @@ fu13Tg\strut
 \end{minipage} & \begin{minipage}[t]{0.29\columnwidth}\centering
 \emph{cxcr4b}(BAC):\emph{H2BRFP}\strut
 \end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\raggedright
-\strut
+-\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.12\columnwidth}\raggedleft
 nns8Tg\strut
@@ -1738,14 +1607,14 @@ fu50\strut
 \end{minipage} & \begin{minipage}[t]{0.29\columnwidth}\centering
 \emph{shroom3}\strut
 \end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\raggedright
-\strut
+-\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.12\columnwidth}\raggedleft
 m1274Tg\strut
 \end{minipage} & \begin{minipage}[t]{0.29\columnwidth}\centering
 \emph{hsp70:shr3v1FL-taqRFP}\strut
 \end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\raggedright
-\strut
+-\strut
 \end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}
@@ -1785,7 +1654,7 @@ CTGTCGGAGAGGCACGGGCGTGGGTTACCCGTACCAGTACGAGGACGGAACATTCAAC}\strut
 \begin{minipage}[t]{0.11\columnwidth}\raggedright
 deltaD\strut
 \end{minipage} & \begin{minipage}[t]{0.83\columnwidth}\raggedright
-\strut
+see (\emph{45})\strut
 \end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}
@@ -2205,7 +2074,7 @@ Total Commander\strut
 \hypertarget{mat-GrTrDat}{%
 \subsection{Ground Truth Data}\label{mat-GrTrDat}}
 
-Analyzing images and extracting quantitative measurements can be a tedious task, especially when the analysis becomes more complex. Fortunately, there are ways to automate image analysis by using either machine learning approaches or by tailoring hand-crafted algorithms in an image analysis software tool like e.g.~ImageJ(\emph{45}).
+Analyzing images and extracting quantitative measurements can be a tedious task, especially when the analysis becomes more complex. Fortunately, there are ways to automate image analysis by using either machine learning approaches or by tailoring hand-crafted algorithms in an image analysis software tool like e.g.~ImageJ(\emph{46}).
 
 The main advantages of doing so are.
 \begin{itemize}
@@ -2215,11 +2084,11 @@ The main advantages of doing so are.
 \item
   to make the analysis more robust against oversight
 \item
-  to increase the statistical power by increasing the number of data points(\emph{46})
+  to increase the statistical power by increasing the number of data points(\emph{47})
 \item
-  to increase effect size by increasing the measurement accuracy(\emph{46})
+  to increase effect size by increasing the measurement accuracy(\emph{47})
 \end{itemize}
-However, to reassure the measurements taken by a tailored or trained algorithm are meaningful, they must be compared to a \emph{ground truth} dataset which again describes a general measure of algorithmic quality performance(\emph{47}).
+However, to reassure the measurements taken by a tailored or trained algorithm are meaningful, they must be compared to a \emph{ground truth} dataset which again describes a general measure of algorithmic quality performance(\emph{48}).
 
 \hypertarget{d-ground-truth}{%
 \subsubsection{2-D Ground Truth}\label{d-ground-truth}}
@@ -2242,24 +2111,24 @@ To assess the quality of the \emph{ClusterAnalysis} algorithm for nuclei detecti
 \item
   embryos are mounted within a 3D mold to reduce noise
 \end{itemize}
-\begin{longtable}[]{@{}rc@{}}
+\begin{longtable}[]{@{}rl@{}}
 \caption{\label{tab:imgcond3DGrT} Cluster Analysis Model}\tabularnewline
 \toprule
 \endhead
-\begin{minipage}[t]{0.46\columnwidth}\raggedleft
-XY scale\strut
-\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\centering
-0.32 px/\(\mu\)m\strut
+\begin{minipage}[t]{0.43\columnwidth}\raggedleft
+XY scal\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright
+e 0.32 px/\(\mu\)m\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.46\columnwidth}\raggedleft
-Z-spacing\strut
-\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\centering
-4 \(\mu\)m\strut
+\begin{minipage}[t]{0.43\columnwidth}\raggedleft
+Z-spacin\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright
+g 4 \(\mu\)m\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.46\columnwidth}\raggedleft
-Camera\strut
-\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\centering
-Rolera\strut
+\begin{minipage}[t]{0.43\columnwidth}\raggedleft
+Camer\strut
+\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright
+a Rolera\strut
 \end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}
@@ -2279,7 +2148,7 @@ To test the algorithm, it is run at different nuclei detection thresholds on the
 \hypertarget{image-analysis}{%
 \subparagraph{Image Analysis}\label{image-analysis}}
 
-For image analysis a custom IJ macro script was developed that segments individual cell clusters based on morphological filtering(\emph{48}), Gaussian blurring and subsequent thresholding. The user is then presented the segmentation ROIs to manually edit them, if necessary. Using those ROIs as masks, the nuclei within them are count based on Gaussian blurring and a 2-D maxima finder. To detect the right amount of nuclei however, it is necessary to evaluate the distance over which the blurring should be applied.
+For image analysis a custom IJ macro script was developed that segments individual cell clusters based on morphological filtering(\emph{49}), Gaussian blurring and subsequent thresholding. The user is then presented the segmentation ROIs to manually edit them, if necessary. Using those ROIs as masks, the nuclei within them are count based on Gaussian blurring and a 2-D maxima finder. To detect the right amount of nuclei however, it is necessary to evaluate the distance over which the blurring should be applied.
 
 A typical nucleus in the PLLp is about 5 \(\mu\)m in diameter. To determine the right blurring value, a range of 4-6 \(\mu\)m in steps of 0.5 is tested.
 
@@ -2346,35 +2215,33 @@ Comparing the segmented objects count of the Gaussian parameters with the ground
 
 \caption[Relative difference of segment counts]{Relative difference of segment counts (N=3, Errorbars = Std./2)}\label{fig:GrTratioCC}
 \end{figure}
-\begin{longtable}[]{@{}cccccccc@{}}
-\caption{\label{tab:meanabsnuc} Mean absolute nuclei counts}\tabularnewline
+\begin{table}[t]
+
+\caption{\label{tab:meanabsnuc}Nuclei count}
+\centering
+\begin{tabular}{llllllll}
 \toprule
-~ & GrT & NB45 & NB50 & NB55 & NB60 & NB70 & NB80\tabularnewline
+  & GrT & NB45 & NB50 & NB55 & NB60 & NB70 & NB80\\
 \midrule
-\endfirsthead
-\toprule
-~ & GrT & NB45 & NB50 & NB55 & NB60 & NB70 & NB80\tabularnewline
-\midrule
-\endhead
-\textbf{Mean\_Nuclei} & 40.95 & 52.81 & 45.76 & 41.90 & 38.57 & 34.62 & 31.33\tabularnewline
-\textbf{STD.} & 21.53 & 27.90 & 22.03 & 20.51 & 18.75 & 16.34 & 14.78\tabularnewline
+Mean\_Nuclei & 40.95 & 52.81 & 45.76 & 41.90 & 38.57 & 34.62 & 31.33\\
+STD. & 21.53 & 27.90 & 22.03 & 20.51 & 18.75 & 16.34 & 14.78\\
 \bottomrule
-\end{longtable}
+\end{tabular}
+\end{table}
 \noindent To estimate the quality of nuclei detection for each parameter, the ratio of automatically detected and ground truth objects count can be calculated and compared (table \ref{tab:nrcount}). The closer it is to 1, the better.
-\begin{longtable}[]{@{}cccccc@{}}
-\caption{\label{tab:nrcount} Mean nuclei count ratios}\tabularnewline
+\begin{table}[t]
+
+\caption{\label{tab:nrcount}Nuclei count ratio}
+\centering
+\begin{tabular}{llllll}
 \toprule
-~ & NB45 & NB50 & NB55 & NB60 & NB70\tabularnewline
+  & NB45 & NB50 & NB55 & NB60 & NB70\\
 \midrule
-\endfirsthead
-\toprule
-~ & NB45 & NB50 & NB55 & NB60 & NB70\tabularnewline
-\midrule
-\endhead
-\textbf{Mean\_ratio} & 1.30 & 1.14 & 1.04 & 0.95 & 0.86\tabularnewline
-\textbf{STD.} & 0.23 & 0.17 & 0.15 & 0.14 & 0.14\tabularnewline
+Mean\_ratio & 1.30 & 1.14 & 1.04 & 0.95 & 0.86\\
+STD. & 0.23 & 0.17 & 0.15 & 0.14 & 0.14\\
 \bottomrule
-\end{longtable}
+\end{tabular}
+\end{table}
 \hypertarget{summary-1}{%
 \paragraph{Summary}\label{summary-1}}
 
@@ -2454,10 +2321,12 @@ The training set consists of three randomly picked wildtype PLLps. For each the 
 
 To test the algorithm it is run at different segmentation thresholds on the same image data.
 
+\newpage
+
 \hypertarget{image-analysis-1}{%
 \paragraph{Image Analysis}\label{image-analysis-1}}
 
-For image analysis a custom IJ macro script was developed that recognizes the cell boundaries via the fluorescence signal emitted by a Lyn Kinase tethered eGFP which expression is controlled by the \emph{cxcr4b} lateral line specific promotor. The central IJ tool used to do this is the MorphoLibJ's(\emph{48}) \emph{Morpholigical Segmentation} plugin. The plugin however requires to choose for a `segmentation threshold' that determines the quality and the quantity of segmented objects. This parameter therefore plays an essential role in the truthfulness of the analysis results.
+For image analysis a custom IJ macro script was developed that recognizes the cell boundaries via the fluorescence signal emitted by a Lyn Kinase tethered eGFP which expression is controlled by the \emph{cxcr4b} lateral line specific promotor. The central IJ tool used to do this is the MorphoLibJ's(\emph{49}) \emph{Morpholigical Segmentation} plugin. The plugin however requires to choose for a `segmentation threshold' that determines the quality and the quantity of segmented objects. This parameter therefore plays an essential role in the truthfulness of the analysis results.
 
 \hypertarget{macro-modules-1}{%
 \subparagraph{Macro modules}\label{macro-modules-1}}
@@ -2469,9 +2338,9 @@ The macro developed consists of the following main modules:
 \item
   PLLp registration and cropping in X, Y and Z
 \item
-  Image segmentation using the MorphoLibJ's(\emph{48}) \emph{Morpholigical Segmentation} plugin
+  Image segmentation using the MorphoLibJ's(\emph{49}) \emph{Morpholigical Segmentation} plugin
 \item
-  Extration of 3-D measurements using the 3D ImageJ Suite's(\emph{49}) \emph{3D Manager} plugin
+  Extration of 3-D measurements using the 3D ImageJ Suite's(\emph{50}) \emph{3D Manager} plugin
 \item
   Cropping, clearing and measurement of single cell volumes using a custom IJ script
 \end{enumerate}
@@ -2492,21 +2361,21 @@ The first module of the macro is PLLp registration in X, Y and cropping in Z. Th
 
 \caption{Unregistered, Maximum Z projected data}\label{fig:maxraw}
 \end{figure}
-\begin{longtable}[]{@{}cc@{}}
+\begin{longtable}[]{@{}rc@{}}
 \caption{\label{tab:imgprop} Physical image properties (scaling)}\tabularnewline
 \toprule
 \endhead
-\begin{minipage}[t]{0.28\columnwidth}\centering
+\begin{minipage}[t]{0.28\columnwidth}\raggedleft
 X / Y resolution\strut
 \end{minipage} & \begin{minipage}[t]{0.66\columnwidth}\centering
 0.1625 / 0.1625 \(\mu\)m\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.28\columnwidth}\centering
+\begin{minipage}[t]{0.28\columnwidth}\raggedleft
 Z resolution\strut
 \end{minipage} & \begin{minipage}[t]{0.66\columnwidth}\centering
 0.4 \(\mu\)m\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.28\columnwidth}\centering
+\begin{minipage}[t]{0.28\columnwidth}\raggedleft
 \(\Delta\)T - Z\strut
 \end{minipage} & \begin{minipage}[t]{0.66\columnwidth}\centering
 0.5428 s\strut
@@ -2517,6 +2386,8 @@ Z resolution\strut
 \subparagraph{Registered data}\label{registered-data-1}}
 
 During the registration process, the image is rotated against the horizon and cropped in X and Y. Additionally, the centers of the most constricting areas are detected via an intensity based dynamic threshold and highlighted as magenta circles in \ref{fig:maxreg}. Table \ref{tab:imgregpar} sums up the registration parameters.
+
+\newpage
 
 
 \begin{figure}
@@ -2659,7 +2530,7 @@ In figure \ref{fig:volsecdffull} and \ref{fig:volsecdfzoom} the distribution and
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{thesis_files/figure-latex/volsecdffull-1} 
+{\centering \includegraphics[width=0.9\linewidth]{thesis_files/figure-latex/volsecdffull-1} 
 
 }
 
@@ -2668,7 +2539,7 @@ In figure \ref{fig:volsecdffull} and \ref{fig:volsecdfzoom} the distribution and
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{thesis_files/figure-latex/volsecdfzoom-1} 
+{\centering \includegraphics[width=0.9\linewidth]{thesis_files/figure-latex/volsecdfzoom-1} 
 
 }
 
@@ -2690,7 +2561,7 @@ To statistically check how closely related each threshold value sample distribut
 
 \caption{Volumetric conservation confidence level}\label{fig:kstestvol}
 \end{figure}
-\noindent In comparison to the Mann-Whitney test, the ks.test is more sensitive to detect changes in the shape of the distribution than to detect a shift of the median(\emph{50})
+\noindent In comparison to the Mann-Whitney test, the ks.test is more sensitive to detect changes in the shape of the distribution than to detect a shift of the median(\emph{51})
 
 \hypertarget{summary-2}{%
 \paragraph{Summary}\label{summary-2}}
@@ -2984,7 +2855,7 @@ For mounting, an improved 3D specimen preparation and well-plate like sample nav
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.6\linewidth]{figure/02-MaMo/Mount/mountmicro} 
+{\centering \includegraphics[width=0.8\linewidth]{figure/02-MaMo/Mount/mountmicro} 
 
 }
 
@@ -3104,37 +2975,37 @@ Petri dishes\strut
 \end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}
-\begin{longtable}[]{@{}ll@{}}
+\begin{longtable}[]{@{}lc@{}}
 \caption{\label{tab:mountsol} Mounting solutions}\tabularnewline
 \toprule
-\begin{minipage}[b]{0.45\columnwidth}\raggedright
+\begin{minipage}[b]{0.39\columnwidth}\raggedright
 \textbf{solution}\strut
-\end{minipage} & \begin{minipage}[b]{0.49\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{0.55\columnwidth}\centering
 Info\strut
 \end{minipage}\tabularnewline
 \midrule
 \endfirsthead
 \toprule
-\begin{minipage}[b]{0.45\columnwidth}\raggedright
+\begin{minipage}[b]{0.39\columnwidth}\raggedright
 \textbf{solution}\strut
-\end{minipage} & \begin{minipage}[b]{0.49\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{0.55\columnwidth}\centering
 Info\strut
 \end{minipage}\tabularnewline
 \midrule
 \endhead
-\begin{minipage}[t]{0.45\columnwidth}\raggedright
+\begin{minipage}[t]{0.39\columnwidth}\raggedright
 1.0\% (m/V) Agarose / E3\strut
-\end{minipage} & \begin{minipage}[t]{0.49\columnwidth}\raggedright
-\strut
+\end{minipage} & \begin{minipage}[t]{0.55\columnwidth}\centering
+-\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.45\columnwidth}\raggedright
-0.3\% (m/V) LM Agarose / E3\strut
-\end{minipage} & \begin{minipage}[t]{0.49\columnwidth}\raggedright
+\begin{minipage}[t]{0.39\columnwidth}\raggedright
+0.3\% (m/V) LMPA / E3\strut
+\end{minipage} & \begin{minipage}[t]{0.55\columnwidth}\centering
 incl.~20\% (v/v) 25X TMS for live imaging\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.45\columnwidth}\raggedright
-0.5\% (m/V) LM Agarose / E3\strut
-\end{minipage} & \begin{minipage}[t]{0.49\columnwidth}\raggedright
+\begin{minipage}[t]{0.39\columnwidth}\raggedright
+0.5\% (m/V) LMPA / E3\strut
+\end{minipage} & \begin{minipage}[t]{0.55\columnwidth}\centering
 incl.~20\% (v/v) 25X TMS for live imaging\strut
 \end{minipage}\tabularnewline
 \bottomrule
@@ -3152,7 +3023,7 @@ First, make sure your stamp is clean of dust or other particles. If necessary cl
 \end{itemize}
 to the glass or polymer surface and place the stamp on it so that it touches the cover. Place it as central as possible. Excessive agarose not needed for the imprint will fill the surrounding area in the dish and stabilize the structure when removing the stamp again.
 
-ently rotate the dish so that excess agarose solution will cover the whole dish.
+gently rotate the dish so that excess agarose solution will cover the whole dish.
 
 Wait for \textasciitilde{}45 min., then use a clean preparation needle and slip it through stamp - polymerized agarose interface. Remove the stamp carefully by lifting it and holding the \(\mu\)-Dish in place.
 
@@ -3172,7 +3043,7 @@ Wait for \textasciitilde{}45 min., then use a clean preparation needle and slip 
 
 }
 
-\caption[44x mounting stamp]{44x mounting stamp \textbf{A} without LM-Agarose \textbf{B and C} with LM-Agarose, while the latter shows the imprint with light coming from a different angle, making the chambers visible again.}\label{fig:mounting}
+\caption[44x mounting stamp]{44x mounting stamp \textbf{A} without LMPA \textbf{B and C} with LMPA, while the latter shows the imprint with light coming from a different angle, making the chambers visible again.}\label{fig:mounting}
 \end{figure}
 
 \begin{figure}
@@ -3183,19 +3054,13 @@ Wait for \textasciitilde{}45 min., then use a clean preparation needle and slip 
 
 \caption[Imaging setup]{Imaging setup \textbf{A} Positioning of the \(\mu\)-well \textbf{B} Alignment in Brightfield and \textbf{C} Definition of a custom well plate.}\label{fig:setup}
 \end{figure}
-\hypertarget{Fsnprot-met}{%
-\subsubsection{Fusion-Proteins}\label{Fsnprot-met}}
-
-\hypertarget{Immn-met}{%
-\subsubsection{Immunohistochemistry}\label{Immn-met}}
-
 \hypertarget{comp-met}{%
 \subsection{Computational Methods}\label{comp-met}}
 
 \hypertarget{CNN}{%
 \subsubsection{Rosette Detection}\label{CNN}}
 
-The method used for rosette detection is based on a convolutional neuronal network (CNN) and is similar method to what was used before by Ernst \emph{et al.}(2012)(\emph{29}, \emph{41}) for the description of the \emph{shroom3} morpholino injected phenotype. Since the former method was technically deprecated and since we had new data to detect rosettes, we updated the former method to a state of the art CNN using Caffe(\emph{51}) as a backend. The training was done by our partners at the institute for informatics, Albert-Ludwigs-University Freiburg.
+The method used for rosette detection is based on a convolutional neuronal network (CNN) and is similar method to what was used before by Ernst \emph{et al.}(2012)(\emph{29}, \emph{41}) for the description of the \emph{shroom3} morpholino injected phenotype. Since the former method was technically deprecated and since we had new data to detect rosettes, we updated the former method to a state of the art CNN using Caffe(\emph{52}) as a backend. The training was done by our partners at the institute for informatics, Albert-Ludwigs-University Freiburg.
 
 The CNN was trained on 17 wildtype DMSO control and SU5402 treated (Fgf signaling depleted embryos which do not form rosettes(\emph{27})) embryos each. In order togive the network something to learn, the data had to be labeled manually, which was done in imagej by placing multipoint rois at the center of the rosettes. The data was then further permutated to artificially increase the amount of training data and make the detection more robust against different kinds of input. Further parameters about the training data is listed in Table \ref{tab:CNNtraining}. One example for each is shown in figure \ref{fig:CNNtrain}.
 
@@ -3248,7 +3113,7 @@ SU5402 treated & SU5402 & 10 \(\mu\)M & 488 & 100\% & 100 ms & \textasciitilde{}
 
 The basic principle is based on work done by Laguerre \emph{et al.}, 2009(\emph{23}).
 
-\noindent For manual tracking of mitotic events `MTrackJ'(\emph{52}) was used
+\noindent For manual tracking of mitotic events `MTrackJ'(\emph{53}) was used
 \begin{itemize}
 \tightlist
 \item
@@ -3272,7 +3137,7 @@ The basic principle is based on work done by Laguerre \emph{et al.}, 2009(\emph{
 \hypertarget{ACI}{%
 \subsubsection{Apical Constriction Index}\label{ACI}}
 
-The earliest attempt found for indexing AC can be found in a study published by Lee \emph{et al}(\emph{53}) where they were interested in the `apical index' (A.I.) of bottle cells during \emph{X.laevis} gastrulation(figure \ref{fig:ACLee}).
+The earliest attempt found for indexing AC can be found in a study published by Lee \emph{et al}(\emph{54}) where they were interested in the `apical index' (A.I.) of bottle cells during \emph{X.laevis} gastrulation(figure \ref{fig:ACLee}).
 
 
 \begin{figure}
@@ -3283,7 +3148,7 @@ The earliest attempt found for indexing AC can be found in a study published by 
 
 \caption{A.I. of \emph{X.leavis} bottle cells.}\label{fig:ACLee}
 \end{figure}
-\noindent Another example for measuring AC is the apical \emph{constriction} index (ACI, figure \ref{ref:ACHard}) for the cells of the \emph{D.rerio} lateral line primordium (PLLp), which can be found in a study from 2012 where it was shown that Fgfr-Ras-MAPK signaling is required for AC and Rock2a localization6 (\emph{54}, \emph{55}).
+\noindent Another example for measuring AC is the apical \emph{constriction} index (ACI, figure \ref{ref:ACHard}) for the cells of the \emph{D.rerio} lateral line primordium (PLLp), which can be found in a study from 2012 where it was shown that Fgfr-Ras-MAPK signaling is required for AC and Rock2a localization6 (\emph{55}, \emph{56}).
 
 
 \begin{figure}
@@ -3294,7 +3159,7 @@ The earliest attempt found for indexing AC can be found in a study published by 
 
 \caption[Apical constriction index]{Apical constriction index. \textbf{A} 3D reconstructed cells of a CLCLNA control primordium and \textbf{B} of a primordium deficient of Fgf signaling.}\label{fig:ACHard}
 \end{figure}
-\noindent In both cases, the measurements for the A.I.(\emph{53}) or ACI(\emph{55}) does not differ and describes the ratio for lateral height over apical width \ref{fig:ACICells}.
+\noindent In both cases, the measurements for the A.I.(\emph{54}) or ACI(\emph{56}) does not differ and describes the ratio for lateral height over apical width \ref{fig:ACICells}.
 
 \[\mathbf{ACI} = \frac{lateral\;height\;[\mu m]}{apical\;width\;[\mu m]}\]
 
@@ -3341,7 +3206,7 @@ To obtain a precise and biologically meaningful quantity for AC, first a couple 
 \hypertarget{ACI-lat}{%
 \subparagraph{Adaption for variation in lateral height}\label{ACI-lat}}
 
-To test different ACI conditions, an apically constricted cell can be approximated by modeling a tetrahedron. For example, shrinking or enlarging a cell symmetrically should not affect the ACI. As described by Harding(2014)(\emph{55}), the \emph{apical width} of a cell is measured first by manual 3-D object reconstruction, second manual re-orientation, and third by going 1 \(\mu\)m from the apical tip into the cell (from now on referred to as \(\Delta\)ap, \ref{fig:deltaap}). Finally, \emph{apical width} is the total width of the 2-D object.
+To test different ACI conditions, an apically constricted cell can be approximated by modeling a tetrahedron. For example, shrinking or enlarging a cell symmetrically should not affect the ACI. As described by Harding(2014)(\emph{56}), the \emph{apical width} of a cell is measured first by manual 3-D object reconstruction, second manual re-orientation, and third by going 1 \(\mu\)m from the apical tip into the cell (from now on referred to as \(\Delta\)ap, \ref{fig:deltaap}). Finally, \emph{apical width} is the total width of the 2-D object.
 
 
 \begin{figure}
@@ -3437,7 +3302,7 @@ Each geometric object has a centroid coordinate in X and Y (and Z) which is repr
 
 }
 
-\caption{ACI\textsubscript{Major} and ACI\textsubscript{Minor} single cell measurements}\label{fig:ACIMajor}
+\caption{ACI\textsubscript{Major} single cell measurements}\label{fig:ACIMajor}
 \end{figure}
 
 \begin{figure}
@@ -3446,9 +3311,9 @@ Each geometric object has a centroid coordinate in X and Y (and Z) which is repr
 
 }
 
-\caption{ACI\textsubscript{Minor} (apical height)}\label{fig:ACIMinor}
+\caption{ACI\textsubscript{Minor} single cell measurements}\label{fig:ACIMinor}
 \end{figure}
-Harding(2013)(\emph{55}) were using a constant \(\mathrm{\Delta}\)ap to measure the apical width, which we have shown to be incorrect in certain cases. In their study they found that certain mean ACI values in the DMSO go as high as 15, which might be related to this \ref{fig:ACICells}.
+Harding(2013)(\emph{56}) were using a constant \(\mathrm{\Delta}\)ap to measure the apical width, which we have shown to be incorrect in certain cases. In their study they found that certain mean ACI values in the DMSO go as high as 15, which might be related to this \ref{fig:ACICells}.
 By measuring apical width at a relative \(\mathrm{\Delta}\)ap the mean values for ACI\textsubscript{Major} are at 4.7 for the DMSO control and 3.6 for the SU5402 treated condition, which seems to somewhat correlate with their findings\ref{fig:HardingACI}. .
 
 However overall our results indicate that the AC difference is not as strong, at least if all the cells of the PLLp are taken into account.
@@ -3506,7 +3371,7 @@ Now, to get an idea of the magnitude ACI\textsubscript{Major} and ACI\textsubscr
 In summary our results suggest that there is no significant difference either in the exact \emph{anterior-posterior} axis (at 0°), nor in the exact \emph{dorso-ventral} axis (at 90\(^\circ\)) between a DMSO control and a SU5402 treated embryo, but mostly in an angle in between.
 
 \hypertarget{mat-datasets}{%
-\section{Datasets}\label{mat-datasets}}
+\section{Image Data Sets}\label{mat-datasets}}
 
 \hypertarget{cc-data}{%
 \subsection{Cell-Cluster}\label{cc-data}}
@@ -3527,7 +3392,7 @@ Pairs\strut
 \begin{minipage}[t]{0.21\columnwidth}\raggedright
 Transgenes\strut
 \end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-cldnb:lyn-gfp +/?\strut
+\emph{cldnb:lyn-gfp} +/?\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.21\columnwidth}\raggedright
 Mutation\strut
@@ -3610,7 +3475,7 @@ Pairs\strut
 \begin{minipage}[t]{0.21\columnwidth}\raggedright
 Transgenes\strut
 \end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-cldnb:lyn-gfp +/+\strut
+\emph{cldnb:lyn-gfp} +/+\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.21\columnwidth}\raggedright
 Mutation\strut
@@ -3693,7 +3558,7 @@ Pairs\strut
 \begin{minipage}[t]{0.21\columnwidth}\raggedright
 Transgenes\strut
 \end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-cldnb:lyn-gfp +/?; cxcr4b(BAC):H2BRFP +/0\strut
+\emph{cldnb:lyn-gfp} +/?; \emph{cxcr4b}(BAC) \emph{:H2BRFP} +/0\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.21\columnwidth}\raggedright
 Mutation\strut
@@ -3796,7 +3661,7 @@ Pairs\strut
 \begin{minipage}[t]{0.21\columnwidth}\raggedright
 Transgenes\strut
 \end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-cldnb:lyn-gfp +/?\strut
+\emph{cldnb:lyn-gfp} +/?\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.21\columnwidth}\raggedright
 Mutation\strut
@@ -3899,7 +3764,7 @@ Pairs\strut
 \begin{minipage}[t]{0.21\columnwidth}\raggedright
 Transgenes\strut
 \end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-cldnb:lyn-gfp +/?; atoh1a:Tom +/0\strut
+\emph{cldnb:lyn-gfp} +/?; \emph{atoh1a:Tom} +/0\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.21\columnwidth}\raggedright
 Mutation\strut
@@ -3994,12 +3859,12 @@ Rotation and cropping in XY and T\strut
 \hypertarget{lateral-line-morphometrics}{%
 \section{Lateral Line Morphometrics}\label{lateral-line-morphometrics}}
 
-Based on the working model and due to the morphological similarity to \emph{fgf3/10}\(--\) and drug treated Fgfr1 inhibited pLLPs (\emph{12}, \emph{24}, \emph{27}, \emph{54}), a reduced number of CCs was expected to be deposited at the end of pLLP migration. Instead we found more CCs deposited \ref{fig:shrmmut}E.
+Based on the working model and due to the morphological similarity to \emph{fgf3/10}\(--\) and drug treated Fgfr1 inhibited pLLPs (\emph{12}, \emph{24}, \emph{27}, \emph{55}), a reduced number of CCs was expected to be deposited at the end of pLLP migration. Instead we found more CCs deposited \ref{fig:shrmmut}E.
 
 \hypertarget{dataset}{%
 \subsection{Dataset}\label{dataset}}
 
-To confirm these findings quantitatively a dataset was put together consisting of \textasciitilde{}100 zebrafish embryos fixed at the end of PLLp migration, derived from four different parent pairs. After genotyping, this gave us \textasciitilde{}33 wildtypes, \textasciitilde{}66 heterozygous and \textasciitilde{}33 homozygous mutants for statistical tests. Furthermore, since an increased number of deposited CCs could potentially indicate
+To confirm these findings quantitatively a dataset was put together consisting of \textasciitilde{}100 zebrafish embryos fixed at the end of PLLp migration, derived from four different parent pairs. After genotyping, this gave us \textasciitilde{}33 wildtypes, \textasciitilde{}66 heterozygous and \textasciitilde{}33 homozygous mutants for statistical tests. Furthermore, since an increased number of deposited CCs could potentially indicate\ldots{}
 \begin{itemize}
 \tightlist
 \item
@@ -4008,6 +3873,8 @@ To confirm these findings quantitatively a dataset was put together consisting o
   an increase in proliferation which would lead to an increase in cell number in the total system,
 \end{itemize}
 we also measured the area each CC took up and counted the number of cells each CC was made up of.
+
+A full data analysis report can be found on \href{https://github.com/KleinhansDa/reports/blob/master/b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3/clusters_eom.html}{github}
 
 \hypertarget{res-ccounts}{%
 \subsection{Number and Position of Cell Clusters}\label{res-ccounts}}
@@ -4033,7 +3900,7 @@ Even though CC position in individual \emph{shroom3}\(--\) embryos seems more ra
 
 }
 
-\caption[Cell Cluster Positions]{Cell Cluster positions \textbf{A} Exemplary \emph{shroom3}++ and \(--\) embryos with CCs hightlighted. CC0 marks the reference location to compare individual embryos. Scale bar = 1 mm \textbf{A'} Kernel Density Estimate without (KDE) grouping (n++=162, n--=206) \textbf{A''} Dots = mean positions, bars = standard deviation (nmax for both ++ and -- =26).}\label{fig:llpos}
+\caption[Cell Cluster Positions]{Cell Cluster positions \textbf{A} Exemplary \emph{shroom3}++ and \(--\) embryos with CCs hightlighted. CC0 marks the reference location to compare individual embryos. Scale bar = 1 mm \textbf{A'} Kernel Density Estimate without (KDE) grouping (n++=162, n--=206) \textbf{A''} Dots = mean positions, bars = standard deviation (nmax for both ++ and -\/- =26).}\label{fig:llpos}
 \end{figure}
 \hypertarget{res-llmorph}{%
 \subsection{Cell Count and Area of CCs}\label{res-llmorph}}
@@ -4053,60 +3920,38 @@ To get an idea about whether facilitated proliferation contributes to the phenot
 \section{Proliferation}\label{proliferation}}
 
 LL morphometric analysis revealed that deposited CCs in \emph{shroom3}\(--\) embryos were on average slightly smaller and had fewer cells incorporated. However, due to the additional two cell clusters deposited, the net count is \textasciitilde{}9\(\%\) increased at the end of migration.
-To test whether this is due to higher proliferative activity a dataset of time-lapse movies (12 h / \(\Delta\)T = 6 min.) was generated to count the number of mitoses in a \emph{cxcr4b(BAC):H2BRFP} transgenic background similar to previous proliferation studies in the pLLP (\emph{23}, \emph{56}).
+To test whether this is due to higher proliferative activity a dataset of time-lapse movies (12 h / \(\Delta\)T = 6 min.) was generated to count the number of mitoses in a \emph{cxcr4b(BAC):H2BRFP} transgenic background similar to previous proliferation studies in the pLLP (\emph{23}, \emph{57}).
 
 \hypertarget{dataset-1}{%
 \subsection{Dataset}\label{dataset-1}}
 
-The dataset consists of so and so many embryos and different groups. For counting, tracks were created for each proliferative cell on MaxIPs (section \ref{prolif}). Figure \ref{fig:prollabs} shows a \emph{shroom3}++ and a \emph{shroom3}\(--\) LL after 12 h of imaging where each mitotic track is individually colored and overlaid to the image data.
+The dataset consists of 12 \emph{shrm3}++ and 18 \emph{shrm3}\(--\) embryos with about 75 timepoints for the pLLP and 150 for cell clusters. For counting, tracks were created for each proliferative cell on MaxIPs (section \ref{prolif}). Figure \ref{fig:prolpllp}A shows a \emph{shroom3}++ and a \emph{shroom3}\(--\) LL after 12 h of imaging where each mitotic track is individually colored and overlaid to the image data.
 
+To index the proliferative activity (minutes per mitosis) per embryo, the product of total number of timepoints and \(\Delta\)T in minutes was divided by the total number of mitotic events. From this we get to know the average time {[}min.{]} during which one mitosis occurs.\newline
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.95\textwidth]{figures/results/02_proliferation/prol_labs} 
-
-}
-
-\caption[Tracks of Mitosis]{Tracks of Mitosis. Each connection between two dots represents 6 min.}\label{fig:prollabs}
-\end{figure}
-To index the proliferative activity (minutes per mitosis) per embryo, the product of total number of timepoints and \(\Delta\)T in minutes was divided by the total number of mitotic events. From this we get to know the average time {[}min.{]} during which one mitosis occurs.
-
-\makebox[\linewidth]{$Proliferation Index = \frac{Mitotses [\Bbb{n}]}{Timepoints[\Bbb{n}] * \Delta T [\Bbb{min.}]}$}
-\newline
+\makebox[\linewidth]{$Proliferation\ Index = \frac{Mitotses[\mathbb{n}]}{Timepoints[ \mathbb{n}] * \Delta T [ \mathbb{min.}]}$}
 
 \hypertarget{res-prolpllp}{%
-\subsection{Mitoses in the pLLP}\label{res-prolpllp}}
+\subsection{Lateral Line Mitoses}\label{res-prolpllp}}
 
-Tracking mitoses in the pLLP does not reveal any difference in proliferation from start (\textasciitilde{}28 hpf) till about mid of migration 12 hours later (\ref{fig:prolpllp}A). For confirmation, this finding was also validated via two more traditional methods. During mitosis genetic material is replicated in S-phase\footnote{`S` like ‚Synthesis`}, while in meta-phase chromosomes are found to be heavily phosphorylated (\emph{57}). With an EdU\footnote{5-Ethynyl-2'-deoxyuridine} assay (\emph{58}) cells in S-phase can be detected (\ref{fig:prolpllp}B'). Using a specific phospho-histone (p-Hist.) antibody cells in meta-phase can be detected. When comparing the relative numbers of EdU resp. p-Hist cells over total pLLP cells, again, no difference in proliferation can be detected. Still, at end of migration the LL system in \emph{shroom3}\(--\) embryos does incorporate 9\(\%\) more cells.
-
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.6\textwidth]{figures/results/02_proliferation/prol_pllp} 
-
-}
-
-\caption[pLLP proliferation]{pLLP proliferation \textbf{A} \textbf{B-B'}}\label{fig:prolpllp}
-\end{figure}
-\hypertarget{res-prolcc}{%
-\subsection{Mitoses in Cell Clusters}\label{res-prolcc}}
-
-Due to their high regenerative ability, zebrafish are a popular model in regenerative research (\emph{19}, \emph{22}, \emph{59}). It is well known that zebrafish NMs have a very high regenerative capacity (\emph{60}--\emph{62}). Since individual \emph{shroom3}\(--\) CCs are smaller, we wondered if there could be compensation mechanisms activated that increase proliferation to restore wildtype CC size once they are deposited. To verify this, CC mitoses were tracked on the same data as before. Other than the pLLP, which can be observed throughout the time-lapse, CCs only begin to \emph{exist} when they are deposited. To normalize for individual CC lifetimes, the number of mitoses per CC is divided by the duration of the total time-lapse minus the time span to when it first appeared. This way it becomes evident that the additional cells in \emph{shroom3}\(--\) embryos are derived from CC proliferation, rather than pLLP proliferation.
+Tracking mitoses in the pLLP does not reveal any difference in proliferation from start (\textasciitilde{}28 hpf) till about mid of migration 12 hours later (\ref{fig:prolpllp}B). For confirmation, this finding was also validated via two more traditional methods. During mitosis genetic material is replicated in S-phase\footnote{`S` like ‚Synthesis`}, while in meta-phase chromosomes are found to be heavily phosphorylated (\emph{58}). With an EdU\footnote{5-Ethynyl-2'-deoxyuridine} assay (\emph{59}) cells in S-phase can be detected (\ref{fig:prolpllp}B'). Using a specific phospho-histone (p-Hist.) antibody cells in meta-phase can be detected. When comparing the relative numbers of EdU resp. p-Hist cells over total pLLP cells, again, no difference in proliferation can be detected. Still, at end of migration the LL system in \emph{shroom3}\(--\) embryos does incorporate 9\(\%\) more cells.
 
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.2\textwidth]{figures/results/02_proliferation/prol_cc} 
+{\centering \includegraphics[width=0.85\textwidth]{figures/results/02_proliferation/prol-01} 
 
 }
 
-\caption[CC proliferation]{CC proliferation}\label{fig:prolcc}
+\caption[pLLP proliferation]{pLLP proliferation \textbf{A} Tracks of Mitosis. (Image data) Last timepoint of Z-projected time-lapse movie. (Labels) each dots marks a mitotic events. Each color represents one mitosis. Each connection between two dots represents 6 min. **B-B'`** Mitoses in the pLLP. (B) Count of Mitoses through time (mean\(\pm\)sd) (B') Proliferation Index at 36 hpf for EdU and phospho Histone labeled pLLPs (B'`) Examples of EdU staining (scale bar = 100 \(\mu\)m) \textbf{C} Mitoses in Cell Clusters. B' and C, the colored bar indicated the median, bars indicate the 95\% CI.}\label{fig:prolpllp}
 \end{figure}
+Due to their high regenerative ability, zebrafish are a popular model in regenerative research (\emph{19}, \emph{22}, \emph{60}). It is well known that zebrafish NMs have a very high regenerative capacity (\emph{61}--\emph{63}). Since individual \emph{shroom3}\(--\) CCs are smaller, we wondered if there could be compensation mechanisms activated that increase proliferation to restore wildtype CC size once they are deposited. To verify this, CC mitoses were tracked on the same data as before. Other than the pLLP, which can be observed throughout the time-lapse, CCs only begin to \emph{exist} when they are deposited. To normalize for individual CC lifetimes, the number of mitoses per CC is divided by the duration of the total time-lapse minus the time span to when it first appeared. This way it becomes evident that the additional cells in \emph{shroom3}\(--\) embryos are derived from CC proliferation, rather than pLLP proliferation (\ref{fig:prolpllp}C).
+
 \hypertarget{rosette-formation-and-cluster-deposition}{%
 \section{Rosette Formation and Cluster Deposition}\label{rosette-formation-and-cluster-deposition}}
 
 Having shown that the additional CC deposition in \emph{shroom3}\(--\) embryos is not caused by an over-proliferation in the migrating pLLP, the next step was to have a closer look at the dynamics of rosette formation, in relation to pLLP morphometrics and CC deposition. To test dependencies between different observations and developmental dynamics, variables can be correlated. To do this and to have a coherent dataset to work with, the data of three different analyses on a single set of image data were merged.
-First, to get to know the exact timing of CC deposition, a manual tracking tool (\emph{52}) was used (\ref{fig:rdt}, Tracking). Second, to deduce pLLP morphometrics a self-made IJ macro (\emph{63}) was developed\footnote{anaLLzr2DT - \url{https://github.com/KleinhansDa/anaLLzr2DT}} for spatiotemporal registration of the pLLP and to yield information about its speed, area, roundness, etc. (\ref{fig:rdt}, Registration). Third, to detect rosettes and quantify their weights\footnote{as a decimal from 0-1 (1 being a wild-type rosette). For further info see section \ref{CNN}}, a CNN (\emph{64}) was used on the registered pLLP output from the anaLLzr2DT (\ref{fig:rdt}, Detection). Finally, all three datasets were merged by a unique identifier for each datapoint by a unique identifier for each embryo and timepoint.
+First, to get to know the exact timing of CC deposition, a manual tracking tool (\emph{53}) was used (\ref{fig:rdt}, Tracking). Second, to deduce pLLP morphometrics a self-made IJ macro (\emph{64}) was developed\footnote{anaLLzr2DT - \url{https://github.com/KleinhansDa/anaLLzr2DT}} for spatiotemporal registration of the pLLP and to yield information about its speed, area, roundness, etc. (\ref{fig:rdt}, Registration). Third, to detect rosettes and quantify their weights\footnote{as a decimal from 0-1 (1 being a wild-type rosette). For further info see section \ref{CNN}}, a CNN (\emph{65}) was used on the registered pLLP output from the anaLLzr2DT (\ref{fig:rdt}, Detection). Finally, all three datasets were merged by a unique identifier for each datapoint by a unique identifier for each embryo and timepoint.
 
 \hypertarget{dataset-2}{%
 \subsection{Dataset}\label{dataset-2}}
@@ -4122,11 +3967,13 @@ The image data set analyzed consists of 20 time-lapse movies (11 \emph{shroom3}\
 
 \caption[RDT Merged Datasets]{Merged Datasets. (Tracking) pLLP is marked as no.1. The rest of the CCs is numbered sequentially as they appear. (Registration) The black outline marks the region of interest (ROI) that is the pLLP as it is detected by the anaLLzr2DT. The red line highlights the pLLPs leading edge. (Detection) Each square highlights a detected rosette by the CNN, colors represent rosette weights.}\label{fig:rdt}
 \end{figure}
+A full data analysis report can be found on \href{https://github.com/KleinhansDa/reports/blob/master/b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3/report_RDT.html}{github}
+
 \hypertarget{cluster-deposition}{%
 \subsection{Cluster Deposition}\label{cluster-deposition}}
 
-Figure @(fig:rdtdepo)A shows a montage of a \emph{shroom3}++ and a \emph{shroom3}\(--\) scenario in cluster deposition (3.5 h / \textasciitilde{}20 min. interval). For \emph{shroom3}++ the rosette structure seems tight and two depositions occur in a regular manner. In the \emph{shroom3}\(--\) on the other hand, rosette structure seems more fragile with less pronounced rosette centers and four observed depositions. Interestingly, based on the \emph{cldnb:lyn-gfp} signal the area of constriction seems to be less radially organized but more oriented towards the horizontal midline. Furthermore, the trailing rosettes are significantly smaller and do not seem to delaminate as clean from the migrating primordium. In addition, for L3 it first seems like two CCs could be deposited, until they merge again to a single CC about 1.5 h later.
-On average, as it was shown before (section @(res-ccounts)), there's a significant increase in clusters deposited (@(fig:rdtdepo)B). Also, neither \emph{shroom3}++ nor \emph{shroom3}\(--\) CCs drastically change their position once they are deposited.
+Figure \ref{fig:rdtdepo}A shows a montage of a \emph{shroom3}++ and a \emph{shroom3}\(--\) scenario in cluster deposition (3.5 h / \textasciitilde{}20 min. interval). For \emph{shroom3}++ the rosette structure seems tight and two depositions occur in a regular manner. In the \emph{shroom3}\(--\) on the other hand, rosette structure seems more fragile with less pronounced rosette centers and four observed depositions. Interestingly, based on the \emph{cldnb:lyn-gfp} signal the area of constriction seems to be less radially organized but more oriented towards the horizontal midline. Furthermore, the trailing rosettes are significantly smaller and do not seem to delaminate as clean from the migrating primordium. In addition, for L3 it first seems like two CCs could be deposited, until they merge again to a single CC about 1.5 h later.
+On average, as it was shown before (section \ref{res-ccounts}), there's a significant increase in clusters deposited (\ref{fig:rdtdepo}B). Also, neither \emph{shroom3}++ nor \emph{shroom3}\(--\) CCs drastically change their position once they are deposited.
 
 
 \begin{figure}
@@ -4140,8 +3987,8 @@ On average, as it was shown before (section @(res-ccounts)), there's a significa
 \hypertarget{registration-1}{%
 \subsection{Registration}\label{registration-1}}
 
-As shown in figure@(fig:rdtreg)A-A' neither speed not acceleration drastically differ throughout the complete course of migration. Speed drops from an initial \textasciitilde{}75 \(\mu\)m/h to about \textasciitilde{}30 \(\mu\)m/h for both \emph{shroom3}++ and \emph{shroom3}\(--\) 17 h later (figure 3.3 A). Similarly, while there is a positive acceleration of almost \textasciitilde{}2 \(\mu\)m/h peaking after \textasciitilde{}2-3 hours, the remaining two peaks progressively get smaller (@(fig:rdtreg)A').
-While for the area no difference can be detected (@(fig:rdtreg)B), interestingly the roundness is on average significantly reduced in \emph{shroom3}\(--\) pLLPs (@(fig:rdtreg)C). This is also evident from the montage in @(fig:rdtdepo)A.
+As shown in figure\ref{fig:rdtreg}A-A' neither speed not acceleration drastically differ throughout the complete course of migration. Speed drops from an initial \textasciitilde{}75 \(\mu\)m/h to about \textasciitilde{}30 \(\mu\)m/h for both \emph{shroom3}++ and \emph{shroom3}\(--\) 17 h later (figure 3.3 A). Similarly, while there is a positive acceleration of almost \textasciitilde{}2 \(\mu\)m/h peaking after \textasciitilde{}2-3 hours, the remaining two peaks progressively get smaller (\ref{fig:rdtreg}A').
+While for the area no difference can be detected (\ref{fig:rdtreg}B), interestingly the roundness is on average significantly reduced in \emph{shroom3}\(--\) pLLPs (\ref{fig:rdtreg}C). This is also evident from the montage in \ref{fig:rdtdepo}A.
 
 
 \begin{figure}
@@ -4152,12 +3999,12 @@ While for the area no difference can be detected (@(fig:rdtreg)B), interestingly
 
 \caption[pLLP time-resolved morphometrics]{pLLP time-resolved morphometrics \textbf{A-A'} Leading edge (l.e.) speed and acceleration in \(\mu\)m/h, displayed as LOESS curves with at a span of 0.5 \textbf{B} Area in square \(\mu\)m and \textbf{C} Roundness displayed as mean±se (standard error).}\label{fig:rdtreg}
 \end{figure}
-\hypertarget{rosette-detection-res-rdtdet}{%
-\subsection{Rosette Detection \{res-rdtdet\}}\label{rosette-detection-res-rdtdet}}
+\hypertarget{res-rdtdet}{%
+\subsection{Rosette Detection}\label{res-rdtdet}}
 
-The kymographs\footnote{a kymograph is a tool to record position over time. Here, its position of fluorescence signal intensities.} in figure@(fig:rdtdet)A-A' were generated on pLLPs that were registered in space and time. After registration, a line was drawn along the horizontal midline (@(fig:rdtreg)A). Finally, recorded kymographs were turned to false color\footnote{blue = low intensity, red = high intensity} for better visual display. In \emph{shroom3}++ the higher intensities are highly concentrated to two to three distinct regions within the migrating pLLP, while in the \emph{shroom3}\(--\) pLLP the higher intensities are more fragmented and overall reduced. To analyze this statistically all pLLPs were quantified in terms of rosette count and average rosette weight or `rosettiness' (see section @(CNN)).
-The numbers reveal two very interesting things. First, the medians show that rosette count (@(fig:rdtreg)B') is only reduced for the first six hours, while rosettiness is reduced almost throughout the entire 20 hours. Second, while for rosette counts two to six indeed half or more of the pLLPs are \emph{shroom3}++, for counts below two and above six there are more \emph{shroom3}\(--\) pLLPs (@(fig:rdtreg)B). Furthermore figure @(fig:rdtreg)C shows that at a rosettiness of \textasciitilde{}0.7 there are about as many \emph{shroom3}++ as there are \emph{shroom3}\(--\) pLLPs, marking this point as a threshold were pLLPs above are more like likely to be \emph{shroom3}++ and below more likely to be \emph{shroom3}\(--\). At \textasciitilde{}0.1 rosettiness there are almost only \emph{shroom3}\(--\) pLLPs, while at \textasciitilde{}0.9 rosettiness there are almost only \emph{shroom3}++ pLLPs.
-In addition, the data distributions attached to the sides (@(fig:rdtreg)B'' and C'') reveal that for the rosettiness the KDE did not actually shifted to a lower number, but rather flattened and variance is increased.
+The kymographs\footnote{a kymograph is a tool to record position over time. Here, its position of fluorescence signal intensities.} in figure \ref{fig:rdtdet}A-A' were generated on pLLPs that were registered in space and time. After registration, a line was drawn along the horizontal midline (\ref{fig:rdtreg}A). Finally, recorded kymographs were turned to false color\footnote{blue = low intensity, red = high intensity} for better visual display. In \emph{shroom3}++ the higher intensities are highly concentrated to two to three distinct regions within the migrating pLLP, while in the \emph{shroom3}\(--\) pLLP the higher intensities are more fragmented and overall reduced. To analyze this statistically all pLLPs were quantified in terms of rosette count and average rosette weight or `rosettiness' (see section \ref{CNN}).
+The numbers reveal two very interesting things. First, the medians show that rosette count (\ref{fig:rdtreg}B') is only reduced for the first six hours, while rosettiness is reduced almost throughout the entire 20 hours. Second, while for rosette counts two to six indeed half or more of the pLLPs are \emph{shroom3}++, for counts below two and above six there are more \emph{shroom3}\(--\) pLLPs (\ref{fig:rdtreg}B). Furthermore figure @(fig:rdtreg)C shows that at a rosettiness of \textasciitilde{}0.7 there are about as many \emph{shroom3}++ as there are \emph{shroom3}\(--\) pLLPs, marking this point as a threshold were pLLPs above are more like likely to be \emph{shroom3}++ and below more likely to be \emph{shroom3}\(--\). At \textasciitilde{}0.1 rosettiness there are almost only \emph{shroom3}\(--\) pLLPs, while at \textasciitilde{}0.9 rosettiness there are almost only \emph{shroom3}++ pLLPs.
+In addition, the data distributions attached to the sides (\ref{fig:rdtreg}B'' and C'') reveal that for the rosettiness the KDE did not actually shifted to a lower number, but rather flattened and variance is increased.
 
 
 \begin{figure}
@@ -4172,8 +4019,8 @@ In addition, the data distributions attached to the sides (@(fig:rdtreg)B'' and 
 \subsection{Correlations}\label{correlations}}
 
 The intent behind generating this combined dataset was to be able to efficiently detect interdependencies between different variables in time and space. The single dots in the scatterplots below represent the variables scatter in \(x\) and \(y\), the red line shows a linear model through the point cloud, the red digits are the correlation coefficient. Black spots with grey circles indicate the centers for clusters calculated on these two sets of data. Clustering was performed hierarchical.
-For my questioning the most interesting variable to find dependencies with is rosettiness. In figure@(fig.rdtcorr)A and B, the \(x\) axis is occupied with the median rosettiness of all timepoints. As mentioned in section @(intro-phen) when we had a first closer look at the pLLP phenotype we found that a fraction of the clearly as \emph{shroom3}\(--\) identified ones still were reminiscent of the \emph{shroom3}++ phenotype. The hypothesis to test for figure @(fig:rdtcorr)A was that higher speeds lead to a lower degree of rosettiness and \emph{vice versa}. The correlation coefficient and model indicate a rather low interdependence. However, both also showed (@(fig:rdtdet)C' and @(fig:rdtreg)A) a high timely dependence, an effect that is lost when reducing the time dimension to the median. Interestingly, however, the line that goes through the centers determined by clustering shows is much steeper and potentially a much higher interdependence.
-The hypothesis to test for figure @(fig:rdtcorr)B was if lower rosettiness leads to a higher number of CCs deposited and \emph{vice versa}. Since here the end of migration cluster count is one-dimensional, there is no other way than correlating to a summary statistic rosettiness. Here the correlation coefficient is rather high, the interdependence seems to be true. Additionally, the clusters determined are nicely separated from each other and the \emph{shroom3}++ and \emph{shroom3}\(--\) pLLPs seem to form two independent groups in this space.
+For my questioning the most interesting variable to find dependencies with is rosettiness. In figure@ref(fig.rdtcorr)A and B, the \(x\) axis is occupied with the median rosettiness of all timepoints. As mentioned in section \ref{intro-phen} when we had a first closer look at the pLLP phenotype we found that a fraction of the clearly as \emph{shroom3}\(--\) identified ones still were reminiscent of the \emph{shroom3}++ phenotype. The hypothesis to test for figure \ref{fig:rdtcorr}A was that higher speeds lead to a lower degree of rosettiness and \emph{vice versa}. The correlation coefficient and model indicate a rather low interdependence. However, both also showed (\ref{fig:rdtdet}C' and \ref{fig:rdtreg}A) a high timely dependence, an effect that is lost when reducing the time dimension to the median. Interestingly, however, the line that goes through the centers determined by clustering shows is much steeper and potentially a much higher interdependence.
+The hypothesis to test for figure \ref{fig:rdtcorr}B was if lower rosettiness leads to a higher number of CCs deposited and \emph{vice versa}. Since here the end of migration cluster count is one-dimensional, there is no other way than correlating to a summary statistic rosettiness. Here the correlation coefficient is rather high, the interdependence seems to be true. Additionally, the clusters determined are nicely separated from each other and the \emph{shroom3}++ and \emph{shroom3}\(--\) pLLPs seem to form two independent groups in this space.
 
 
 \begin{figure}
@@ -4182,7 +4029,7 @@ The hypothesis to test for figure @(fig:rdtcorr)B was if lower rosettiness leads
 
 }
 
-\caption[Developmental interdependencies]{Developmental interdependencies. Digits = pearson coefficient \textbf{A} \textbf{B}}\label{fig:rdtcorr}
+\caption[Developmental interdependencies]{Developmental interdependencies. Digits = pearson coefficient \textbf{A} Pearson correlation coefficient between rosettiness and speed of migration through time \textbf{B} Correlation between shrm3++ and shrm3\(--\) at end of migration.}\label{fig:rdtcorr}
 \end{figure}
 \hypertarget{apical-constriction-1}{%
 \section{Apical Constriction}\label{apical-constriction-1}}
@@ -4192,9 +4039,9 @@ To gain further insight into rosette assembly and the contribution of apical con
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  A more rigorous inspection of morphological differences, and
+  a more rigorous inspection of morphological differences, and
 \item
-  automated and unbiased single cell 3D reconstruction1{[}section @(ref:ACI-singlecell){]} using a newly developed IJ macro\footnote{anaLLzr3D - \url{https://github.com/KleinhansDa/anaLLzr3D}}. Secondly, to investigate the contribution of various single cell morphometrics to rosette formation an app was developed\footnote{LLMapR - \url{https://dskleinhans.shinyapps.io/LLmapR/}} that allows for a convenient handling of large amounts of retrieved data.
+  automated and unbiased single cell 3D reconstruction (\ref{ACI-singlecell}) using a newly developed IJ macro\footnote{anaLLzr3D - \url{https://github.com/KleinhansDa/anaLLzr3D}}. Secondly, to investigate the contribution of various single cell morphometrics to rosette formation an app was developed\footnote{LLMapR - \url{https://dskleinhans.shinyapps.io/LLmapR/}} that allows for a convenient handling of large amounts of retrieved data.
 \end{enumerate}
 
 \begin{figure}
@@ -4205,48 +4052,67 @@ To gain further insight into rosette assembly and the contribution of apical con
 
 \caption[High resolution, volumetric image data]{High resolution, volumetric image data. Upper row shows the fluorescence signal at the membranes. Lower row shows the 3D reconstructed cells. Columns show the same pLLP from different angles.}\label{fig:acdata}
 \end{figure}
-Inhibition of Fgfr1 \emph{via} drug treatment\footnote{Drug name = SU-5402 (section @(mat-chem))} results in a concentration dependent loss of morphogenesis and rosette assembly in the pLLP (\emph{12}, \emph{27}, \emph{54}). As a proof of principle and to validate previous studies, data of drug treated embryos (20 \(\mu\)M) and appropriate DMSO (0.1\(\%\) DMSO / E3\footnote{`Embryo Medium 3', standard zebrafish embryo incubation medium}) controls were included.
+Inhibition of Fgfr1 \emph{via} drug treatment\footnote{Drug name = SU-5402 (section \ref{mat-chem})} results in a concentration dependent loss of morphogenesis and rosette assembly in the pLLP (\emph{12}, \emph{27}, \emph{55}). As a proof of principle and to validate previous studies, data of drug treated embryos (20 \(\mu\)M) and appropriate DMSO (0.1\(\%\) DMSO / E3\footnote{`Embryo Medium 3', standard zebrafish embryo incubation medium}) controls were included.
 
 \hypertarget{dataset-3}{%
 \subsection{Dataset}\label{dataset-3}}
 
-The dataset generated consists of three pLLP stages (@(fig:acstages)), four groups (DMSO, SU5402, \emph{shrm3}++ and \emph{shroom3}\(--\)), 267 pLLPs and 33.163 single cells.
+The dataset generated consists of three pLLP stages (\ref{fig:acstages}), four groups (DMSO, SU5402, \emph{shrm3}++ and \emph{shroom3}\(--\)), 267 pLLPs and 33.163 single cells.\newline
+
+
 \begin{figure}
 
 {\centering \includegraphics[width=0.60\textwidth]{figures/results/04_constriction/Yolk_ext} 
 
 }
 
-\caption[Recorded developmental stages for 3D reconstruction]{(ref:acstages)}\label{fig:acstages}
+\caption[Recorded developmental stages for 3D reconstruction]{Scheme showing a part of the posterior part of a zebrafish embryo and recorded developmental stages for 3D reconstruction}\label{fig:acstages}
 \end{figure}
-\begin{tabu} to \linewidth {>{\raggedright}X>{\raggedright}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X}
+\begin{table}[t]
+
+\caption{\label{tab:acdatatab}Apical Constriction dataset summary}
+\centering
+\fontsize{11}{13}\selectfont
+\begin{tabu} to \linewidth {>{\raggedright}X>{\raggedright}X>{\centering}X>{\centering}X>{\centering}X}
 \toprule
-\multicolumn{2}{c}{id labels} & \multicolumn{3}{c}{metrics} \\
+\multicolumn{2}{c}{\textbf{id labels}} & \multicolumn{3}{c}{\textbf{metrics}} \\
 \cmidrule(l{3pt}r{3pt}){1-2} \cmidrule(l{3pt}r{3pt}){3-5}
 stage & groups & pLLPs & cells & ratio\\
 \midrule
-32 hpf & DMSO & 20 & 2511 & 125.5\\
+ & DMSO & 20 & 2511 & 125.5\\
+
  & SU5402 & 19 & 2215 & 116.6\\
+
  & shrm3++ & 24 & 3259 & 135.8\\
- & shrm3-- & 34 & 4281 & 125.9\\
-36 hpf & DMSO & 17 & 1881 & 110.6\\
-\addlinespace
+
+\multirow[t]{-4}{*}{\raggedright\arraybackslash 32 hpf} & shrm3-- & 34 & 4281 & 125.9\\
+
+ & DMSO & 17 & 1881 & 110.6\\
+
  & SU5402 & 13 & 1286 & 98.9\\
+
  & shrm3++ & 24 & 3144 & 131.0\\
- & shrm3-- & 31 & 3924 & 126.6\\
-40 hpf & DMSO & 18 & 2237 & 124.3\\
+
+\multirow[t]{-4}{*}{\raggedright\arraybackslash 36 hpf} & shrm3-- & 31 & 3924 & 126.6\\
+
+ & DMSO & 18 & 2237 & 124.3\\
+
  & SU5402 & 13 & 1788 & 137.5\\
-\addlinespace
+
  & shrm3++ & 22 & 2660 & 120.9\\
- & shrm3-- & 32 & 3977 & 124.3\\
+
+\multirow[t]{-4}{*}{\raggedright\arraybackslash 40 hpf} & shrm3-- & 32 & 3977 & 124.3\\
 \bottomrule
 \multicolumn{5}{l}{\textit{Note: }}\\
 \multicolumn{5}{l}{ratio = cells/pLLPs}\\
 \end{tabu}
+\end{table}
+Use the sample data in the \href{https://dskleinhans.shinyapps.io/LLmapR/}{LLMapR} web-app to explore the dataset.
+
 \hypertarget{cell-shape-and-arrangement}{%
 \subsection{Cell Shape and Arrangement}\label{cell-shape-and-arrangement}}
 
-Figure @(fig.acshape)B' illustrates the three developmental stages used here. For \emph{shrm3}++ pLLPs two (@(fig.acshape)A, 32 hpf) to four (@(fig.acshape)A, 40 hpf) areas of constricting regions can be observed (XZ pane), in \emph{shroom3}\(--\) its three (@(fig.acshape)A, 36 hpf) to seven (@(fig.acshape)A, 40 hpf), confirming the results of rosette detection (@(res-rdtdet)). While at 32 and 36 hpf the spread of those regions is wider in \emph{shroom3}\(--\), at 40 hpf they are smaller but also increased in number. When looking at the central rosette along the width (YZ pane), it seems like there is no considerable difference between \emph{shroom3}++ and \emph{shroom3}\(--\) rosettes. In SU5402 treated embryos, neither in XZ nor in YZ constriction can be observed and the cells seem to be mostly retained in their mesenchymal character and columnar shape. In addition, while constriction seems isotropic in the shroom3++ rosette center, constriction in the shroom3---rosette center cells appears anisotropic.
+Figure \ref{fig:acshape}B' illustrates the three developmental stages used here. For \emph{shrm3}++ pLLPs two (\ref{fig:acshape}A, 32 hpf) to four (\ref{fig:acshape}A, 40 hpf) areas of constricting regions can be observed (XZ pane), in \emph{shroom3}\(--\) its three (\ref{fig:acshape}A, 36 hpf) to seven (\ref{fig:acshape}A, 40 hpf), confirming the results of rosette detection (\ref{res-rdtdet}). While at 32 and 36 hpf the spread of those regions is wider in \emph{shroom3}\(--\), at 40 hpf they are smaller but also increased in number. When looking at the central rosette along the width (YZ pane), it seems like there is no considerable difference between \emph{shroom3}++ and \emph{shroom3}\(--\) rosettes. In SU5402 treated embryos, neither in XZ nor in YZ constriction can be observed and the cells seem to be mostly retained in their mesenchymal character and columnar shape. In addition, while constriction seems isotropic in the shroom3++ rosette center, constriction in the \emph{shroom3}\(--\) rosette center cells appears anisotropic.
 
 
 \begin{figure}
@@ -4260,9 +4126,9 @@ Figure @(fig.acshape)B' illustrates the three developmental stages used here. Fo
 \hypertarget{single-cell-metrics}{%
 \subsection{Single Cell Metrics}\label{single-cell-metrics}}
 
-To put the above mentioned in numbers and to gain a more objective view on cell geometry, apical constriction and other metrics such as height were quantified . To get a hold on AC anisotropy we measured the length of the minor and major axis of a fit oval (@(fig.acaci)A). If AC was anisotropic and more cells are oriented towards the horizontal midline instead of being radially oriented, this could be shown by degrees of divergence (\(\measuredangle\)) from the horizontal midline (@(fig.acshape)A').
+To put the above mentioned in numbers and to gain a more objective view on cell geometry, apical constriction and other metrics such as height were quantified . To get a hold on AC anisotropy we measured the length of the minor and major axis of a fit oval (\ref{fig:acaci}A). If AC was anisotropic and more cells are oriented towards the horizontal midline instead of being radially oriented, this could be shown by degrees of divergence (\(\measuredangle\)) from the horizontal midline (\ref{fig:acshape}A').
 For angle measurements, all angles are normalized to a 90\(^\circ\) range, where 0\(^\circ\) is along the horizontal midline. When comparing the ratio of cells in intervals of 15\(^\circ\) along a range of 90\(^\circ\) it can be shown that there are more \emph{shroom3}\(--\) than \emph{shroom3}++ cells within the 0-15\(^\circ\) interval through all three stages (\ref{fig:acstages}). Even more, it shows that there are more \emph{shroom3}++ than \emph{shroom3}\(--\) cells within the remaining intervals -- confirming the model of constriction anisotropy.
-While reduction in ACI Major is stronger than the ACI Minor in shroom3\(--\) cells (@(fig:acaci)C-C'), both are significantly reduced throughout time -- again confirming the increase in constriction anisotropy. The ACI for SU5402 treated embryos depicts the base value for both Major and Minor. For all three timepoints, this value stays at the same level. Interestingly, the ACI measurements for all other measurements are progressively approximating this level.
+While reduction in ACI Major is stronger than the ACI Minor in shroom3\(--\) cells (\ref{fig:acaci}C-C'), both are significantly reduced throughout time -- again confirming the increase in constriction anisotropy. The ACI for SU5402 treated embryos depicts the base value for both Major and Minor. For all three timepoints, this value stays at the same level. Interestingly, the ACI measurements for all other measurements are progressively approximating this level.
 
 
 \begin{figure}
@@ -4276,7 +4142,7 @@ While reduction in ACI Major is stronger than the ACI Minor in shroom3\(--\) cel
 \hypertarget{res-hc}{%
 \section{Haircell Specification}\label{res-hc}}
 
-Due to the rather strong cellular phenotype and overall smaller CCs we were interested if hair-cell specification would still take place and therefore if the LLs function as a sensory system would still be intact. First, to check if \emph{atoh1a} was still expressed in \emph{shroom3}\(--\) cells and if there were further implications in feedback loops with Notch signaling, an \emph{In Situ Hybridization} (ISH) experiment was conducted. For 36 and 40 hpf the count of \emph{atoh1a} and \emph{deltaD} expressing cells (\ref{fig:hcish}) seemed to be increased. Furthermore, especially at 40 hpf, the signal seems to be a lot more fragmented and fuzzier.
+Due to the rather strong cellular phenotype and overall smaller CCs we were interested if hair-cell specification would still take place and therefore if the LLs function as a sensory system would still be intact. First, to check if \emph{atoh1a} was still expressed in \emph{shroom3}\(--\) cells and if there were further implications in feedback loops with Notch signaling, an \emph{In Situ Hybridization} (ISH) experiment was conducted (probes can be found at section \ref{mat-probes}). For 36 and 40 hpf the count of \emph{atoh1a} and \emph{deltaD} expressing cells (\ref{fig:hcish}) seemed to be increased. Furthermore, especially at 40 hpf, the signal seems to be a lot more fragmented and fuzzier.
 Traditional ISH allows for extremely sensitive detection of RNA transcripts on a whole embryo scale via a hybridizing anti-sense probe (section \ref{ISH-met}). However, since embryos are fixed, it only allows to analyze single time points. Furthermore, since images are taken in brightfield, there is a problem of background signal and quantification of intensity.
 
 
@@ -4286,26 +4152,34 @@ Traditional ISH allows for extremely sensitive detection of RNA transcripts on a
 
 }
 
-\caption[Expression of deltaD and atoh1a in the pLLP]{Expression of deltaD and atoh1a in the pLLP. Recorded in greyscale at brightfield at 20X Magnification. Images show background subtracted and de-noised EDFs of original Z-stack data.}\label{fig:hcish}
+\caption[Expression of deltaD and atoh1a in the pLLP]{Expression of \emph{deltaD} and \emph{atoh1a} in the pLLP. Recorded in greyscale at brightfield at 20X Magnification. Images show background subtracted and de-noised EDFs of original Z-stack data.}\label{fig:hcish}
 \end{figure}
-To get access to developmental dynamics we made use of an additional, besides \emph{cldnb:lyn-gfp}, transgenic construct where tdTomato\footnote{Short ‚Tom`} (\emph{65}) is expressed under direct control of the \emph{atoh1a} promotor. By simultaneous observation of both fluorophores in a time-lapse setup (\ref{fig:hctl}B), the strategy was to follow up the dynamics of tom expression to count quantities and to measure the strength of expression by measuring signal intensity.
+To get access to developmental dynamics we made use of an additional, besides \emph{cldnb:lyn-gfp}, transgenic construct where tdTomato\footnote{Short ‚Tom`} (\emph{66}) is expressed under direct control of the \emph{atoh1a} promotor. By simultaneous observation of both fluorophores in a time-lapse setup (\ref{fig:hctl}B), the strategy was to follow up the dynamics of tom expression to count quantities and to measure the strength of expression by measuring signal intensity.
 
 \hypertarget{dataset-4}{%
 \subsection{Dataset}\label{dataset-4}}
 
-The dataset generated consists of two groups, \emph{shroom3}++ and \emph{shroom3}\(--\), where the segmented lateral line images are split into pLLP and CC (Materials and Methods\ldots{}). Each time-lapse movie has a total duration of 18-20 hours, consists of about 54 timepoints and two channels (488 \& 561 nm).
-\begin{tabular}{llrrl}
+The dataset generated consists of two groups, \emph{shroom3}++ and \emph{shroom3}\(--\), where the segmented lateral line images are split into pLLP and CC (section \ref{mat-ato-set}). Each time-lapse movie has a total duration of 18-20 hours, consists of about 54 timepoints and two channels (488 \& 561 nm).\newline
+\begin{table}[t]
+
+\caption{\label{tab:hcdatatab}Haircell specification dataset summary}
+\centering
+\fontsize{11}{13}\selectfont
+\begin{tabu} to \linewidth {>{\raggedright}X>{\raggedright}X>{\centering}X>{\centering}X>{\centering}X}
 \toprule
-\multicolumn{2}{c}{id labels} & \multicolumn{3}{c}{metrics} \\
+\multicolumn{2}{c}{\textbf{id labels}} & \multicolumn{3}{c}{\textbf{metrics}} \\
 \cmidrule(l{3pt}r{3pt}){1-2} \cmidrule(l{3pt}r{3pt}){3-5}
-groups & structures & embryos & tps.pLLPs & Per.3h.interval\\
+genotype & sub-structure & embryos & timepoints & per 3h\\
 \midrule
 shroom3++ & pLLP & 28 & 1566 & 261\\
  & CC & 28 & 2499 & -\\
-shroom3-- & pLLP & 21 & 1134 & 189\\
+shroom3\texttt{-{}-} & pLLP & 21 & 1134 & 189\\
  & CC & 21 & 3566 & -\\
 \bottomrule
-\end{tabular}
+\end{tabu}
+\end{table}
+A full data analysis report can be found on \href{https://github.com/KleinhansDa/reports/blob/master/b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3/clusters_tl_tom.html}{github}
+
 \hypertarget{atoh1a-in-the-ll}{%
 \subsection{Atoh1a in the LL}\label{atoh1a-in-the-ll}}
 
@@ -4331,7 +4205,7 @@ Rescue experiments are focused on LL CC count and pLLP rosettiness. Since Shroom
 
 To find out if the LL phenotype can be rescued by ectopic expression of Shroom3, a transgene was used where \emph{shroom3v1} is fused to RFP and expressed under control of a heatshock protein\footnote{In this case ‚hsp70`}. While this construct was used for rescue before (\emph{29}) (see section \ref{intro-shroom}), here it was used to test for CC count and rosettiness too. Rescuing the \emph{shroom3}\(--\) phenotype with Shroom3 itself is interesting to control for LL unspecific effects that might have happened earlier in development and to find out about Shroom3s morphogenic potential.
 For this experiment, embryos were imaged two times. First at around 36 hpf, and a second time at end of migration after about 24 hours of incubation at 28.5\(^\circ\). This way it is possible to test for correlations between rosettiness earlier in development and CC count at end of migration.
-While CC count is restored in heat-shocked, \emph{shroom3}\(--\), transgene carrying embryos, it also seems to reduce the number of CCs deposited in \emph{shroom3}++ (\ref{fig:rescshrm}A). For the rosettiness however, we still get a significant difference (\ref{fig:rescshrm}B). Correlation between CC count and rosettiness for heat-shocked embryos without hs:shr3v1 transgene (\ref{fig:rescshrm}C, \emph{hs:shr3v1} 00) is about the same as for embryos not heat-shocked (\ref{fig:rescshrm}C, \emph{hs:shr3v1} ??), but inverse to heat-shocked embryos with transgene (\ref{fig:rescshrm}C, \emph{hs:shr3v1} +?). Importantly, correlation is lost between heat-shocked \emph{shroom3}\(--\) embryos with transgene and not heat-shocked \emph{shroom3}++ embryos (\ref{fig:rescshrm}C, right panel). Table 3 summarizes the number of datapoints.
+While CC count is restored in heat-shocked, \emph{shroom3}\(--\), transgene carrying embryos, it also seems to reduce the number of CCs deposited in \emph{shroom3}++ (\ref{fig:rescshrm}A). For the rosettiness however, we still get a significant difference (\ref{fig:rescshrm}B). Correlation between CC count and rosettiness for heat-shocked embryos without \emph{hs:shr3v1} transgene (\ref{fig:rescshrm}C, \emph{hs:shr3v1} 00) is about the same as for embryos not heat-shocked (\ref{fig:rescshrm}C, \emph{hs:shr3v1} ??), but inverse to heat-shocked embryos with transgene (\ref{fig:rescshrm}C, \emph{hs:shr3v1} +?). Importantly, correlation is lost between heat-shocked \emph{shroom3}\(--\) embryos with transgene and not heat-shocked \emph{shroom3}++ embryos (\ref{fig:rescshrm}C, right panel). Table 3 summarizes the number of datapoints.\newline
 
 
 \begin{figure}
@@ -4340,28 +4214,79 @@ While CC count is restored in heat-shocked, \emph{shroom3}\(--\), transgene carr
 
 }
 
-\caption[shroom3 ectopic expression]{shroom3 ectopic expression (A) (B) (C)}\label{fig:rescshrm}
+\caption[shroom3 ectopic expression]{\emph{shroom3} ectopic expression \textbf{A} Normalized cluster count and statistics \textbf{B} Rosettiness and statistics \textbf{C} Correlations between beginning of migration rosettiness and end of migration cluster count}\label{fig:rescshrm}
 \end{figure}
+\begin{table}[t]
+
+\caption{\label{tab:rescshrmtab}Heatshock rescue dataset summary}
+\centering
+\fontsize{11}{13}\selectfont
 \begin{tabu} to \linewidth {>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedleft}X>{\raggedleft}X}
 \toprule
-\multicolumn{2}{c}{id labels} & \multicolumn{3}{c}{metrics} \\
-\cmidrule(l{3pt}r{3pt}){1-2} \cmidrule(l{3pt}r{3pt}){3-5}
+\multicolumn{3}{c}{\textbf{id labels}} & \multicolumn{2}{c}{\textbf{metrics}} \\
+\cmidrule(l{3pt}r{3pt}){1-3} \cmidrule(l{3pt}r{3pt}){4-5}
 treatment & genotype & transgene & CCs & LLs\\
 \midrule
 hs & ++ / +- & Yes & 232 & 153\\
- & ++ / +- & No & 320 & NA\\
- & -- & Yes & 175 & NA\\
- & -- & No & 202 & NA\\
+ & ++ / +- & No & 320 & \\
+ & -- & Yes & 175 & \\
+ & -- & No & 202 & \\
 nhs & ++ / +- & Unknown & 543 & 127\\
 \addlinespace
- & -- & Unknown & 354 & NA\\
+ & -- & Unknown & 354 & \\
 \bottomrule
 \end{tabu}
+\end{table}
+\begin{table}[t]
+
+\caption{\label{tab:rescshrmsignif}Heatshock statistics}
+\centering
+\fontsize{8}{10}\selectfont
+\begin{tabu} to \linewidth {>{\raggedright\arraybackslash}p{2cm}>{\raggedright\arraybackslash}p{2cm}>{\centering}X>{\centering}X>{\centering}X>{\centering}X>{\centering}X>{\centering}X}
+\toprule
+\multicolumn{2}{c}{\textbf{id labels}} & \multicolumn{3}{c}{\textbf{cluster counts}} & \multicolumn{3}{c}{\textbf{rosettiness}} \\
+\cmidrule(l{3pt}r{3pt}){1-2} \cmidrule(l{3pt}r{3pt}){3-5} \cmidrule(l{3pt}r{3pt}){6-8}
+group1 & group2 & p & adj.p & level & p & adj.p & level\\
+\midrule
+ & hs; --; tg00 & 0.01870 & 0.09300 & * & 0.00001 & 0.00012 & ****\\
+
+ & hs; +?; tg+? & 0.00470 & 0.03300 & ** & 0.36735 & 0.73000 & ns\\
+
+ & hs; +?; tg00 & 0.51503 & 0.60000 & ns & 0.00441 & 0.04000 & **\\
+
+ & nhs; --; tg?? & 0.00000 & 0.00002 & **** & 0.00673 & 0.04700 & **\\
+
+\multirow[t]{-5}{*}{\raggedright\arraybackslash hs; --; tg+?} & nhs; +?; tg?? & 0.05087 & 0.15000 & ns & 0.02962 & 0.18000 & *\\
+
+ & hs; +?; tg+? & 0.00000 & 0.00001 & **** & 0.00000 & 0.00000 & ****\\
+
+ & hs; +?; tg00 & 0.00208 & 0.01900 & ** & 0.00584 & 0.04700 & **\\
+
+ & nhs; --; tg?? & 0.02068 & 0.09300 & * & 0.03663 & 0.18000 & *\\
+
+\multirow[t]{-4}{*}{\raggedright\arraybackslash hs; --; tg00} & nhs; +?; tg?? & 0.30244 & 0.60000 & ns & 0.00002 & 0.00023 & ****\\
+
+ & hs; +?; tg00 & 0.01018 & 0.06100 & * & 0.00008 & 0.00092 & ****\\
+
+ & nhs; --; tg?? & 0.00000 & 0.00000 & **** & 0.00014 & 0.00160 & ***\\
+
+\multirow[t]{-3}{*}{\raggedright\arraybackslash hs; +?; tg+?} & nhs; +?; tg?? & 0.00000 & 0.00000 & **** & 0.00086 & 0.00860 & ***\\
+
+ & nhs; --; tg?? & 0.00000 & 0.00000 & **** & 0.66817 & 0.73000 & ns\\
+
+\multirow[t]{-2}{*}{\raggedright\arraybackslash hs; +?; tg00} & nhs; +?; tg?? & 0.00206 & 0.01900 & ** & 0.08040 & 0.24000 & ns\\
+
+nhs; --; tg?? & nhs; +?; tg?? & 0.00002 & 0.00024 & **** & 0.05789 & 0.23000 & ns\\
+\bottomrule
+\end{tabu}
+\end{table}
+A full data analysis report can be found on \href{https://github.com/KleinhansDa/reports/blob/master/b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3/clusters_hsshrm3.html}{github}
+
 \hypertarget{morphogen-rescue}{%
 \subsection{Morphogen Rescue}\label{morphogen-rescue}}
 
 It is known that increasing concentrations of SU5402 inhibit pLLP migration and rosette formation, leading to a reduced length of the LL system and the number of CCs deposited (\emph{12}, \emph{27}).
-The idea for this experiment was to rescue the \emph{shroom3} phenotype by combining it with the phenotype of impaired Fgf signaling. Since inhibition of Fgf also reduces LL length, a titration experiment was planned to find a concentration that would not affect the length of the LL but still restore \emph{shroom3}++ levels of CC count. While concentrations 0.10 and 0.20 \(\mu\)M do not show a significant reduction in LL length, they also do not exhibit any difference in cell count.
+The idea for this experiment was to rescue the \emph{shroom3} phenotype by combining it with the phenotype of impaired Fgf signaling. Since inhibition of Fgf also reduces LL length, a titration experiment was planned to find a concentration that would not affect the length of the LL but still restore \emph{shroom3}++ levels of CC count. While concentrations 0.10 and 0.20 \(\mu\)M do not show a significant reduction in LL length, they also do not exhibit any difference in cell count.\newline
 
 
 \begin{figure}
@@ -4370,13 +4295,20 @@ The idea for this experiment was to rescue the \emph{shroom3} phenotype by combi
 
 }
 
-\caption[Titration of Fgf inhibitor]{Titration of Fgf inhibitor (A) (B)}\label{fig:rescsu}
+\caption[Titration of Fgf inhibitor]{Titration of Fgf inhibitor \textbf{A} LL lengths are reduced with increased concentrations of Fgf inhibitor \textbf{B} Groupwise comparison of the length normalized cluster count per concentration of Fgf inhibitor.}\label{fig:rescsu}
 \end{figure}
+\begin{table}[t]
+
+\caption{\label{tab:rescsutab}Morphogen rescue dataset summary}
+\centering
+\fontsize{11}{13}\selectfont
 \begin{tabu} to \linewidth {>{\raggedright}X>{\raggedright}X>{\raggedleft}X>{\raggedright}X>{\raggedright}X>{\raggedleft}X}
 \toprule
+\multicolumn{3}{c}{\textbf{shroom3++}} & \multicolumn{3}{c}{\textbf{shroom3--}} \\
+\cmidrule(l{3pt}r{3pt}){1-3} \cmidrule(l{3pt}r{3pt}){4-6}
 genotype & concentrations & LLs & genotype.1 & concentrations.1 & LLs.1\\
 \midrule
-++ & 0.1\% DMSO & 14 & ?? & 0.1\% DMSO & 8\\
+++ & 0.1\% DMSO & 14 & -- & 0.1\% DMSO & 8\\
  & 0.10 um & 16 &  & 0.10 uM & 15\\
  & 0.25 uM & 24 &  & 0.25 uM & 21\\
  & 0.40 uM & 22 &  & 0.40 uM & 23\\
@@ -4385,15 +4317,18 @@ genotype & concentrations & LLs & genotype.1 & concentrations.1 & LLs.1\\
  & 0.100 uM & 10 &  & 0.100 uM & 10\\
 \bottomrule
 \end{tabu}
+\end{table}
+A full data analysis report can be found on \href{https://github.com/KleinhansDa/reports/blob/master/b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3/clusters_su.html}{github}
+
 \hypertarget{res-rockresc}{%
 \subsection{Mechanic Rescue}\label{res-rockresc}}
 
-It is very well known that Rho kinases are necessary for mechanic force transmission in various developmental processes (\emph{9}, \emph{33}, \emph{38}, \emph{66}, \emph{67}). Since Rock is also thought to be a key player of the Shroom force mediation pathway in the pLLP, the idea for a mechanic rescue was to titrate different concentrations of a Rock inhibitor\footnote{Rockout (section @ref(\#mat-chem))} and an inductor\footnote{Calyculin (section \ref{mat-chem})} to see if this way the \emph{shroom3}\(--\) phenotype can be mimicked in \emph{shroom}++ embryos resp. restored in \emph{shroom3}\(--\).
+It is very well known that Rho kinases are necessary for mechanic force transmission in various developmental processes (\emph{9}, \emph{33}, \emph{38}, \emph{67}, \emph{68}). Since Rock is also thought to be a key player of the Shroom force mediation pathway in the pLLP, the idea for a mechanic rescue was to titrate different concentrations of a Rock inhibitor\footnote{Rockout (section \ref{mat-chem})} and an inductor\footnote{Calyculin (section \ref{mat-chem})} to see if this way the \emph{shroom3}\(--\) phenotype can be mimicked in \emph{shroom}++ embryos resp. restored in \emph{shroom3}\(--\).
 
 \hypertarget{rock-inhibition}{%
 \subsubsection{Rock inhibition}\label{rock-inhibition}}
 
-Embryos were incubated at distinct (figure \ref{fig:rescrock} legend) concentrations from 24 hpf till end of migration (about 60 hpf). At this stage embryos incubated at higher concentrations displayed a significant reduction in overall body length (\ref{fig:rescrock}A'). Therefore, to see if there is a lateral line specific effect on LL length, LL length was normalized to body length. Rockout treatment at 10 \(\mu\)M does not lead to a significant reduction in LL length but does significantly increase the number of cell clusters deposited.
+Embryos were incubated at distinct (figure \ref{fig:rescrock} legend) concentrations from 24 hpf till end of migration (about 60 hpf). At this stage embryos incubated at higher concentrations displayed a significant reduction in overall body length (\ref{fig:rescrock}A'). Therefore, to see if there is a lateral line specific effect on LL length, LL length was normalized to body length. Rockout treatment at 10 \(\mu\)M does not lead to a significant reduction in LL length but does significantly increase the number of cell clusters deposited.\newline
 
 
 \begin{figure}
@@ -4402,8 +4337,13 @@ Embryos were incubated at distinct (figure \ref{fig:rescrock} legend) concentrat
 
 }
 
-\caption[Titration of Rock inhibitor]{Titration of Rock inhibitor (A) (B)}\label{fig:rescrock}
+\caption[Titration of Rock inhibitor]{Titration of Rock inhibitor \textbf{A} LL lengths are reduced with increased concentrations of Rock inhibitor \textbf{B} Groupwise comparison of the length normalized cluster count per concentration of Fgf inhibitor.}\label{fig:rescrock}
 \end{figure}
+\begin{table}[t]
+
+\caption{\label{tab:rescrocktab}Rockout rescue dataset summary}
+\centering
+\fontsize{11}{13}\selectfont
 \begin{tabu} to \linewidth {>{\raggedright}X>{\raggedright}X>{\raggedleft}X}
 \toprule
 genotype & concentrations & LLs\\
@@ -4414,55 +4354,99 @@ genotype & concentrations & LLs\\
  & 100 uM & 20\\
 \bottomrule
 \end{tabu}
+\end{table}
+A full data analysis report can be found on \href{https://github.com/KleinhansDa/reports/blob/master/b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3/clusters_rkout.html}{github}
+
 \hypertarget{rock-induction}{%
 \subsubsection{Rock induction}\label{rock-induction}}
 
-The idea for this experiment was to rescue \emph{shroom3}\(--\) embryos by enhancing the effects of Rock. Incubation at 100 nM, the maximum solubility, does not lead any significant differences.
+The idea for this experiment was to rescue \emph{shroom3}\(--\) embryos by enhancing the effects of Rock. Incubation at 100 nM, the maximum solubility, does not lead any significant differences.\newline
 
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.95\textwidth]{figures/results/06_rescues/temp/rescue_temp} 
+{\centering \includegraphics[width=0.95\textwidth]{figures/results/06_rescues/caliculyn/rescue_cali} 
 
 }
 
 \caption[Calyculin treatment]{Calyculin treatment (A) (B)}\label{fig:resccal}
 \end{figure}
+\begin{table}[t]
+
+\caption{\label{tab:resccaltab}Calyculin rescue dataset summary}
+\centering
+\fontsize{11}{13}\selectfont
 \begin{tabu} to \linewidth {>{\raggedright}X>{\raggedright}X>{\raggedleft}X>{\raggedright}X>{\raggedright}X>{\raggedleft}X}
 \toprule
 genotype & concentrations & LLs & genotype.1 & concentrations.1 & LLs.1\\
 \midrule
-++ & 0.1\% DMSO & 8 & ?? & 0.1\% DMSO & 8\\
+++ & 0.1\% DMSO & 8 & -- & 0.1\% DMSO & 8\\
  & 100 nm & 12 &  & 100 nM & 12\\
 \bottomrule
 \end{tabu}
+\end{table}
+A full data analysis report can be found on \href{https://github.com/KleinhansDa/reports/blob/master/b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3/clusters_clcln.html}{github}
+
 \hypertarget{res-tempresc}{%
 \subsection{Thermodynamic Rescue}\label{res-tempresc}}
 
-Increasing temperature usually leads to an acceleration in thermodynamics and embryonic development, while lower temperatures decelerate (\emph{68}). Decelerated development also leads to a reduction in speed of migration and therefore to a reduction in forces that act on cells, cell-cell junctions and organ structures. In this experiment the hypothesis was that it should be possible to at least partially restore the \emph{shroom3}++ number of CCs since reduced forces would stabilize rosettes and therefore rosettes would have longer time to develop properly. Since embryos develop at different speeds, it is more challenging to exactly stage match them at end of migration. To account for this the CC count was normalized to LL length.
-Even though the CC count in \emph{shroom3}\(--\) embryos incubated at 25\(^\circ\)C cannot be completely restored, they are hardly more different than levels of \emph{shroom3}++ embryos incubated at 30\(^\circ\)C.
+Increasing temperature usually leads to an acceleration in thermodynamics and embryonic development, while lower temperatures decelerate (\emph{69}). Decelerated development also leads to a reduction in speed of migration and therefore to a reduction in forces that act on cells, cell-cell junctions and organ structures. In this experiment the hypothesis was that it should be possible to at least partially restore the \emph{shroom3}++ number of CCs since reduced forces would stabilize rosettes and therefore rosettes would have longer time to develop properly. Since embryos develop at different speeds, it is more challenging to exactly stage match them at end of migration. To account for this the CC count was normalized to LL length.
+Even though the CC count in \emph{shroom3}\(--\) embryos incubated at 25\(^\circ\)C cannot be completely restored, they are hardly more different than levels of \emph{shroom3}++ embryos incubated at 30\(^\circ\)C.\newline
 
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.95\textwidth]{figures/results/06_rescues/temp/rescue_temp} 
+{\centering \includegraphics[width=0.75\textwidth]{figures/results/06_rescues/temp/rescue_temp} 
 
 }
 
 \caption[Thermodynamic rescue]{Thermodynamic rescue (A) (B)}\label{fig:resctemp}
 \end{figure}
+\begin{table}[t]
+
+\caption{\label{tab:resctemptab}Thermodynamic rescue dataset summary}
+\centering
+\fontsize{11}{13}\selectfont
 \begin{tabu} to \linewidth {>{\raggedright}X>{\raggedright}X>{\raggedleft}X>{\raggedright}X>{\raggedright}X>{\raggedleft}X}
 \toprule
+\multicolumn{3}{c}{\textbf{shroom3++}} & \multicolumn{3}{c}{\textbf{shroom3--}} \\
+\cmidrule(l{3pt}r{3pt}){1-3} \cmidrule(l{3pt}r{3pt}){4-6}
 genotype & treatment & LLs & genotype.1 & treatment.1 & LLs.1\\
 \midrule
-++ & 25°C & 18 & ?? & 25°C & 19\\
+++ & 25°C & 18 & -- & 25°C & 19\\
  & 30°C & 15 &  & 30°C & 20\\
 \bottomrule
 \end{tabu}
+\end{table}
+\begin{table}[t]
+
+\caption{\label{tab:resctempsignif}Thermodynamic rescue statistics}
+\centering
+\fontsize{8}{10}\selectfont
+\begin{tabu} to \linewidth {>{\raggedright}X>{\raggedright}X>{\centering}X>{\centering}X>{\centering}X}
+\toprule
+group1 & group2 & p & p.adj & p.signif\\
+\midrule
+ & T25\_hom & 0.00000 & 0.00000 & ****\\
+
+ & T30\_wt & 0.00747 & 0.00750 & **\\
+
+\multirow[t]{-3}{*}{\raggedright\arraybackslash T25\_wt} & T30\_hom & 0.00000 & 0.00000 & ****\\
+
+ & T30\_wt & 0.00104 & 0.00210 & **\\
+
+\multirow[t]{-2}{*}{\raggedright\arraybackslash T25\_hom} & T30\_hom & 0.00015 & 0.00046 & ***\\
+
+T30\_wt & T30\_hom & 0.00000 & 0.00000 & ****\\
+\bottomrule
+\end{tabu}
+\end{table}
+A full data analysis report can be found on \href{https://github.com/KleinhansDa/reports/blob/master/b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3/clusters_temp.html}{github}
+
 \hypertarget{atoh1a-knockdown}{%
 \subsection{atoh1a knockdown}\label{atoh1a-knockdown}}
 
-Referring back to the results we got from the hair cell analysis in section \ref{res-hc}, the hypothesis to test was if premature CC deposition in \emph{shroom3}\(--\) embryos is determined by a premature rise in Atoh1a signaling. To inhibit Atoh1a, a morpholino (MO) for \emph{atoh1a} mRNA was injected at 0.4 ng/mL, a concentration that had already been shown to be sufficient to deplete Atoh1a signaling (\emph{27}). Furthermore, since many MOs have been shown to induce cell death (\emph{69}), in a second group we co-injected embryos with an MO for p53\footnote{p53 is a gene upregulated in cancer cells, which would then self-destruct}. Interestingly injection of \emph{atoh1a} MO leads to a loss of the first CC deposited usually deposited at around 400 \(\mu\)m distance (\ref{fig:rescato}A). Furthermore, while median CC counts in \emph{atoh1a} MO injected \emph{shroom3}\(--\) embryos are actually restored to \emph{shroom3}++ levels, CC counts in \emph{shroom3}++ embryos are reduced as well.
+Referring back to the results we got from the hair cell analysis in section \ref{res-hc}, the hypothesis to test was if premature CC deposition in \emph{shroom3}\(--\) embryos is determined by a premature rise in Atoh1a signaling. To inhibit Atoh1a, a morpholino (MO) for \emph{atoh1a} mRNA was injected at 0.4 ng/mL, a concentration that had already been shown to be sufficient to deplete Atoh1a signaling (\emph{27}). Furthermore, since many MOs have been shown to induce cell death (\emph{70}), in a second group we co-injected embryos with an MO for p53\footnote{p53 is a gene upregulated in cancer cells, which would then self-destruct}. Interestingly injection of \emph{atoh1a} MO leads to a loss of the first CC deposited usually deposited at around 400 \(\mu\)m distance (\ref{fig:rescato}A). Furthermore, while median CC counts in \emph{atoh1a} MO injected \emph{shroom3}\(--\) embryos are actually restored to \emph{shroom3}++ levels, CC counts in \emph{shroom3}++ embryos are reduced as well.\newline
 
 
 \begin{figure}
@@ -4473,14 +4457,47 @@ Referring back to the results we got from the hair cell analysis in section \ref
 
 \caption[atoh1a knockdown]{atoh1a knockdown (A) (B)}\label{fig:rescato}
 \end{figure}
+\begin{table}[t]
+
+\caption{\label{tab:rescatotab}Atoh rescue dataset summary}
+\centering
+\fontsize{11}{13}\selectfont
 \begin{tabu} to \linewidth {>{\raggedright}X>{\raggedright}X>{\raggedleft}X>{\raggedright}X>{\raggedright}X>{\raggedleft}X}
 \toprule
+\multicolumn{3}{c}{\textbf{shroom3++}} & \multicolumn{3}{c}{\textbf{shroom3--}} \\
+\cmidrule(l{3pt}r{3pt}){1-3} \cmidrule(l{3pt}r{3pt}){4-6}
 genotype & concentrations & LLs & genotype.1 & concentrations.1 & LLs.1\\
 \midrule
-++ & p53 & 24 & ?? & p53 & 22\\
- & p53 + atoh1a & 22 &  & p53 + atoh1a & 27\\
+++ & p53 & 24 & -- & p53 & 22\\
+ & p53+atoh1a & 22 &  & p53+atoh1a & 27\\
 \bottomrule
 \end{tabu}
+\end{table}
+\begin{table}[t]
+
+\caption{\label{tab:rescatosignif}Atoh1a MO rescue statistics}
+\centering
+\fontsize{8}{10}\selectfont
+\begin{tabu} to \linewidth {>{\raggedright}X>{\raggedright}X>{\centering}X>{\centering}X>{\centering}X>{\raggedright}X}
+\toprule
+group1 & group2 & p & p.adj & p.format & p.signif\\
+\midrule
+ & wt\_p53-ato & 0.00000 & 0.00001 & 0.00000 & ****\\
+
+ & hom\_p53 & 0.00000 & 0.00000 & 0.00000 & ****\\
+
+\multirow[t]{-3}{*}{\raggedright\arraybackslash wt\_p53} & hom\_p53-ato & 0.26803 & 0.27000 & 0.26800 & ns\\
+
+ & hom\_p53 & 0.00000 & 0.00000 & 0.00000 & ****\\
+
+\multirow[t]{-2}{*}{\raggedright\arraybackslash wt\_p53-ato} & hom\_p53-ato & 0.00001 & 0.00002 & 0.00001 & ****\\
+
+hom\_p53 & hom\_p53-ato & 0.00466 & 0.00930 & 0.00470 & **\\
+\bottomrule
+\end{tabu}
+\end{table}
+A full data analysis report can be found on \href{https://github.com/KleinhansDa/reports/blob/master/b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3/clusters_ato-mo.html}{github}
+
 \hypertarget{summary-conclusion}{%
 \chapter{Summary \& Conclusion}\label{summary-conclusion}}
 
@@ -4492,7 +4509,7 @@ genotype & concentrations & LLs & genotype.1 & concentrations.1 & LLs.1\\
 \hypertarget{lateral-line}{%
 \section{Lateral Line}\label{lateral-line}}
 
-Two additional CCs are deposited in shroom3\(--\) embryos (section \ref{res-ccounts}) leading to a net increase in cell count of \textasciitilde{}9\(\%\) (31 cells) (section \ref{res-llmorph}). However, proliferation is not increased in the pLLP (section \ref{res-prolpllp}) but in CCs once they are deposited (section \ref{res-prolcc}). Therefore, the increase in CC count is unrelated to the amount of proliferation in the pLLP. The cell count and area per CC show an average reduction of 6\(\%\) respectively and no difference for the density (section \ref{res-llmorph}).
+Two additional CCs are deposited in shroom3\(--\) embryos (section \ref{res-ccounts}) leading to a net increase in cell count of \textasciitilde{}9\(\%\) (31 cells) (section \ref{res-llmorph}). However, proliferation is not increased in the pLLP (section \ref{res-prolpllp}) but in CCs once they are deposited (section \ref{res-prolpllp}). Therefore, the increase in CC count is unrelated to the amount of proliferation in the pLLP. The cell count and area per CC show an average reduction of 6\(\%\) respectively and no difference for the density (section \ref{res-llmorph}).
 The shroom3\(--\) LL phenotype can be mimicked by inhibition of Rock but not rescued by induction of Rock (section \ref{res-rockresc}), leading to the conclusion that Rock is necessary for proper rosette assembly and CC deposition, but not sufficient. CC count can also be rescued by ectopic expression of a Shroom3-RFP fusion protein (section \ref{res-shrmresc}), leading to the conclusion that Shroom3 has a spatiotemporal function necessary and sufficient for proper LL development.
 The reduction is supported scanning electron microscopy (SEM) pictures of 3 dpf (supplement, \ref{fig:suppsem}) NMs, which indicate a disruption bundled kinocilia. However, as hair cells do still develop (supplement, \ref{fig:suppllhc}), there is no reason to presume that shroom3\(--\) NMs suffered from a loss of function. End of migration analysis also shows that the average length of the LL does not differ, suggesting that speed is not affected. This is confirmed by time-lapse analysis, which neither shows a difference in speed of migration, nor in acceleration (results, \ref{fig:rdtreg}).
 
@@ -4507,13 +4524,14 @@ Rosettiness is strongly correlated to the final number of CCs deposited (\ref{fi
 \section{Hair Cells}\label{hair-cells}}
 
 Deposition of the first CC is more independent of Shroom3 (\ref{fig:llpos}) than the remaining CCs and the mean positions indicate that deposition does not happen more randomly, but at a higher frequency. Interestingly during the first four hours, when the first CC is deposited, analysis of hair-cell specification shows that not only the promotor for \emph{atoh1a} is more active (results, figure 5.2 A and B) in \emph{shroom3}\(--\) embryos, but also that more cells are differentiating to become hair-cells (\ref{fig:hctl}C and C'). This leads to the conclusion that the morphological changes introduced by the \emph{shroom3} mutation lead to a pre-mature activation of the \emph{shroom3} promotor, subsequently leading to deposition of the CC the hair-cell is associated with.
-In the pLLP, Notch signaling is important for selection and specification of hair-cells (\ref{intro-notch}). Interestingly, these findings are supported by another study where they have shown that upon over-activated Notch signaling, CC deposition happened independent of Shroom3 (Kozlovskaja-Gumbrienė et al., 2017). For our observation this could mean that (1) either expression of atoh1a is up-regulated due to a compensation mechanism to ensure CC deposition or (2) that the cellular rearrangements lead to biased Notch signaling. A phenomenon that in fact has been well studied (Shaya et al., 2017). For the latter, the proposed model would be that in each micro-rosette the hair-cell is in contact with less cells, but the amount of Notch ligand stays the same. Therefore, lateral inhibition and feedback is stronger, leading to an increase in expression of atoh1a and ultimately to CC deposition.
+In the pLLP, Notch signaling is important for selection and specification of hair-cells (\ref{intro-notch}). Interestingly, these findings are supported by another study where they have shown that upon over-activated Notch signaling, CC deposition happened independent of Shroom3 (\emph{71}). For our observation this could mean that (1) either expression of \emph{atoh1a} is up-regulated due to a compensation mechanism to ensure CC deposition or (2) that the cellular rearrangements lead to biased Notch signaling. A phenomenon that in fact has been well studied (\emph{4}). For the latter, the proposed model would be that in each micro-rosette the hair-cell is in contact with less cells, but the amount of Notch ligand stays the same. Therefore, lateral inhibition and feedback is stronger, leading to an increase in expression of \emph{atoh1a} and ultimately to earlier CC deposition.
 
 \hypertarget{apical-constriction-2}{%
 \section{Apical Constriction}\label{apical-constriction-2}}
 
 The method developed to quantify AC allows measurement along two orthogonal axes, the major (the longer axis) and a minor (the shorter axis), of an ellipse fitted to a cellular cross-section at a distinct distance from the apical site. In addition, the cells orientation in degrees from the horizontal midline is obtained (\ref{fig:acaci}A-A').
-In summary, AC is significantly reduced in \emph{shroom3}\(--\) embryos for the severe phenotype. In more detail the results show an increased axial an-isotropy, meaning that AC is more reduced along the major than along the minor axis. In conclusion this means that AC and probably tension is more relaxed along the anterior-posterior axis. In terms of cell shape this means that rosette cells go from a pyramidal geometry, more to a prism geometry (\ref{fig:sumcells}). This is also confirmed by angular measurement which shows that for 0-15\(^\circ\) more \emph{shroom3}\(--\) pLLPs cells are aggregated while at 30-45\(^\circ\), more \emph{shroom3}++ cells are aggregated.
+
+In summary, AC is significantly reduced in \emph{shroom3}\(--\) embryos for the severe phenotype. In more detail the results show an increased axial an-isotropy, meaning that AC is more reduced along the major than along the minor axis. In conclusion this means that AC and probably tension is more relaxed along the anterior-posterior axis. In terms of cell shape this means that rosette cells go from a pyramidal geometry, more to a prism geometry (\ref{fig:sumcells}). This is also confirmed by angular measurement which show that for 0-15\(^\circ\) more \emph{shroom3}\(--\) pLLPs cells are aggregated while at 30-45\(^\circ\), more \emph{shroom3}++ cells are aggregated.
 
 
 \begin{figure}
@@ -4524,12 +4542,12 @@ In summary, AC is significantly reduced in \emph{shroom3}\(--\) embryos for the 
 
 \caption[Rosette and Cell Shape Model]{Rosette and Cell Shape Model}\label{fig:sumcells}
 \end{figure}
-Zona occludens-1 (ZO-1) is a peripheral membrane, tight-junction associated protein. Within the apical region of pLLP rosettes Fgf filled luminal structures are developing that that are hubs for locally confined morphogen signaling. All cells of a rosette make up and are connected to a single lumen. When visualizing the lumen via an antibody for ZO-1, the lumen appears like a buckyball where each side is the connection to a single cell (Durdu et al., 2014). While in \emph{shroom3}++ rosettes those structures appear circular in the trailing rosette, in \emph{shroom3}\(--\) rosettes they appear more oval (supplement, (\ref{fig:suppzo1}), which supports the theory of an-isotropy. Furthermore, in more leading regions the signal is more fragmented, which supports the theory of micro-rosette structures.
+Zona occludens-1 (ZO-1) is a peripheral membrane, tight-junction associated protein. Within the apical region of pLLP rosettes Fgf filled luminal structures are developing that that are hubs for locally confined morphogen signaling. All cells of a rosette make up and are connected to a single lumen. When visualizing the lumen via an antibody for ZO-1, the lumen appears like a buckyball where each side is the connection to a single cell (\emph{12}). While in \emph{shroom3}++ rosettes those structures appear circular in the trailing rosette, in \emph{shroom3}\(--\) rosettes they appear more oval (supplement, (\ref{fig:suppzo1}), which supports the theory of an-isotropy. Furthermore, in more leading regions the signal is more fragmented, which supports the theory of micro-rosette structures.
 
 \hypertarget{model-2}{%
 \section{Model}\label{model-2}}
 
-Based on these results - In contrast to the current model - the \emph{shroom3}\(--\) phenotype is not defined by an absence of rosettes but by a greater than or equal to count and smaller rosettes with less weight. Those `micro-rosettes' will eventually be deposited, leading to somewhat smaller CCs, which is also supported by analysis of emerging hair cells in the pLLP. The results are summarized and graphically modeled in figure 2.
+Based on these results - In contrast to the current model - the \emph{shroom3}\(--\) phenotype is not defined by an absence of rosettes but by a greater than or equal to amount that are smaller and have less weight. Those `micro-rosettes' will eventually be deposited, leading to somewhat smaller CCs, which is also supported by analysis of emerging hair cells in the pLLP. The results are summarized and graphically modeled in figure 2.
 
 
 \begin{figure}
@@ -4549,22 +4567,26 @@ To create a robust model, it is necessary to have robust methods that allow to g
 \hypertarget{proliferation-1}{%
 \section{Proliferation}\label{proliferation-1}}
 
-For proliferation no difference in the mitotic rate could be detected in the pLLP which lead to the conclusion that additional CC deposition was independent. However, previous reports have shown a bias in location and direction of mitoses in the pLLP (Laguerre et al., 2005; Laguerre et al., 2009). Since our model supposed that rosette cells are more oriented along the horizontal midline this could mean that even though there are not more mitoses overall, mitotic axis is also directed more along A-P. This in turn would result in more cells along this direction, decreasing tension, leading to pre-mature deposition.
+For proliferation no difference in the mitotic rate could be detected in the pLLP which lead to the conclusion that additional CC deposition was independent. However, previous reports have shown a bias in location and direction of mitoses in the pLLP (\emph{23}, \emph{57}). Since our model supposed that rosette cells are more oriented along the horizontal midline this could mean that even though there are not more mitoses overall, the mitotic axis is also directed more along A-P. This in turn would result in more cells along this direction, potentially decreasing tension, leading to pre-mature deposition.
 
 \hypertarget{rosette-detection}{%
 \section{Rosette Detection}\label{rosette-detection}}
 
-Deep learning methods are currently, driven by the hype of artificial intelligence, extremely \emph{en vogue}. While their use is not always justified, especially for biomedial image analysis they have proven extremely powerful (Ching et al., 2018; Falk et al., 2019; Webb, 2018). With the used fluorescent membrane label epithelial rosettes are relatively simple to detect, even with traditional image processing techniques. The arguably biggest point for criticism is that one usually does not know the features the network has learned to detect. An important metric, besides the plain detection, is the softmax-score\footnote{Also detection score, the final result of all weights of the NN}. It is a metric that tells about the security of the network how safe it is in its prediction. We interpreted this score in a way that lower prediction scores are representative for `weaker' rosettes.
+Deep learning methods are currently, driven by the hype of artificial intelligence, extremely \emph{en vogue}. While their use is not always justified, especially for biomedial image analysis they have proven extremely powerful (\emph{65}, \emph{72}, \emph{73}).
+
+With the used fluorescent membrane label epithelial rosettes are relatively simple to detect, even with traditional image processing techniques. The arguably biggest point for criticism is that one usually does not know the features the network has learned to detect. An important metric, besides the plain detection, is the softmax-score\footnote{Also: ``detection score'', the final result of all weights of the NN}. It is a metric that tells about the security of the network how safe it is in its prediction. We interpreted this score in a way that lower prediction scores are representative for `weaker' rosettes.
 
 \hypertarget{hair-cell-specification-1}{%
 \section{Hair Cell specification}\label{hair-cell-specification-1}}
 
-Even though the dataset for hair-cell specification provided a lot of datapoints for statistical testing, the difference for cell counts show only a relatively low significance. This could be attributed to the large variance in measurements. On the other side, not only is there a significant increase in cell count in \emph{shroom3}\(--\) pLLPs but also a higher activity of the \emph{atoh1a} promotor. When controlling these results by trying to rescue the \emph{shroom3}\(--\) with a \emph{atoh1a} knockdown, neither in \emph{shroom3}\(--\) nor in \emph{shroom3}++ embryos the first NM is deposited anymore. Both of these results would in theory argue for an Atoh1a dependent mechanism of CC deposition, however this result has not been reported before and would need further research. Furthermore, even though an MO for p53 was co-injected, MO injection has been shown to potentially have many more unspecific effects due to the high concentrations usually injected (Schulte-Merker and Stainier, 2014). For this reason double mutants (\emph{shroom3}\(--\); \emph{atoh1a}\(--\)) were generated which at this timepoints however are not analyzed yet.
+Even though the dataset for hair-cell specification provided a lot of datapoints for statistical testing, the difference for cell counts show only a relatively low significance. This could be attributed to the large variance in measurements. On the other side, not only is there a significant increase in cell count in \emph{shroom3}\(--\) pLLPs but also a higher activity of the \emph{atoh1a} promotor.
+
+When controlling these results by trying to rescue the \emph{shroom3}\(--\) with a \emph{atoh1a} knockdown, neither in \emph{shroom3}\(--\) nor in \emph{shroom3}++ embryos the first NM is deposited anymore. Both of these results would in theory argue for an Atoh1a dependent mechanism of CC deposition, however this result has not been reported before and would need further validation. Furthermore, even though an MO for p53 was co-injected, MO injection has been shown to potentially have many more unspecific effects due to the high concentrations usually injected (\emph{74}). For this reason double mutants ( \emph{shroom3}\(--\); \emph{atoh1a}\(--\)) were generated - which at this timepoints however are not analyzed yet.
 
 \hypertarget{single-cell-reconstruction-and-ac-measurement}{%
 \section{Single cell reconstruction and AC measurement}\label{single-cell-reconstruction-and-ac-measurement}}
 
-Earlier attempts for indexing AC include measuring the `apical index' (A.I.) of bottle cells during \emph{X.laevis} gastrulation (Lee and Harland, 2007) or the ACI for cells of the pLLP (Harding and Nechiporuk, 2012). For both, the metric describes the ratio of lateral height over apical width, which depending on the situation, is a very coarse and inaccurate description. In the pLLP cells of different forms, volumes and heights can be found. When measuring apical width at a fix distance from the apical site cells with different height but otherwise equal degree of AC turns out to have a very different ACI (figure 3 A and A'). If however apical width is measured at a distance relative to the cells height, cells turn out to have the same ACI (figure 3 A and A''). In addition, it remains questionable exactly how to define \emph{apical width} in a two-dimensional cellular cross-section. The improved model for AC and method for automated and unbiased cellular segmentation therefore represents a major advancement.
+Earlier attempts for indexing AC include measuring the `apical index' (A.I.) of bottle cells during \emph{X.laevis} gastrulation (\emph{75}) or the ACI for cells of the pLLP (\emph{55}). For both, the metric describes the ratio of lateral height over apical width which, depending on the situation, is a very coarse and inaccurate description. In the pLLP cells of different forms, volumes and heights can be found. When measuring apical width at a fix distance from the apical site cells with different height but otherwise equal degree of AC turn out to have a very different ACI (\ref{fig:disaci}A and A'). If however apical width is measured at a distance relative to the cells height, cells turn out to have the same ACI (\ref{fig:disaci}A and A''). In addition, it remains questionable exactly how to define \emph{apical width} in a two-dimensional cellular cross-section. By introducing apical width measurement along both, the major and the minor axis (section \ref{ACI-pol}), the improved model for AC and method for automated and unbiased cellular segmentation therefore represents a major advancement.
 
 
 \begin{figure}
@@ -4575,7 +4597,7 @@ Earlier attempts for indexing AC include measuring the `apical index' (A.I.) of 
 
 \caption[ACI model]{ACI model \textbf{A-A''} ACI Cell Models. A' and A'' show cells that are symmetrically increased versions of A. While in A', constant delta was used, in A'' delta was adjusted relative to the lateral height. \textbf{B} Illustrating delta ap. (left) apically constricted cells volume rendered in XY (top) and as a lateral cross-section in X-Z (bottom). (right) 2D area as seen at delta ap of 1 or 2.5 \(\mu\)m.}\label{fig:disaci}
 \end{figure}
-AC also is correlated with cell height. To get a more detailed impression about how variables are distributed within the cells of the pLLP, single cell measurements of pLLPs that are normalized in orientation can be superimposed in a two-dimensional map of organ length and width. Next, cell coordinates in this map can be grouped into bins of hexagons and the summary statistic represented as color on a continuous scale (figure 4. Doing so reveals that for stages 32 and 36 hpf height in \emph{shroom3}\(--\) cells is not as strongly reduced as in SU5402 treated ones and, as expected, that cells in the central region of the pLLP are higher than in the leading, trailing and lateral regions. In this this specific case this may not lead to new insights, but it improves the visual perception and therefore may assist more concise questioning and reasoning.
+AC is also correlated with cell height. To get a more detailed impression about how variables are distributed within the cells of the pLLP, single cell measurements of pLLPs that are normalized in orientation can be superimposed in a two-dimensional map of organ length and width. Next, cell coordinates in this map can be grouped into bins of hexagons and the summary statistic represented as color on a continuous scale (\ref{fig:dismap}). Doing so reveals that for stages 32 and 36 hpf, height in \emph{shroom3}\(--\) cells is not as strongly reduced as in SU5402 treated ones and that cells in the central region of the pLLP are higher than in the leading, trailing and lateral regions. In this specific case this may not lead to new insights, but it improves the visual perception and therefore may assist more concise questioning and reasoning.
 
 
 \begin{figure}
@@ -4586,7 +4608,7 @@ AC also is correlated with cell height. To get a more detailed impression about 
 
 \caption[pLLP Maps]{pLLP Maps}\label{fig:dismap}
 \end{figure}
-In addition to visualization, large multidimensional datasets offer the possibility for advanced computational methods such as Machine and Deep learning. For example, one could use clustering methods such as Principal Component Analysis (PCA) to find out which dimensions contribute the most to separate a number of clusters from each other (figure 5). Another scenario would be to manually label cells of a dataset as either leading, trailing, rosette, lateral, \ldots{} etc. to train an ML model on. The model could then be used on unlabeled data to assign the previous learned labels to cells that fit the right parameters.
+In addition to visualization, large multidimensional datasets offer the possibility for advanced computational methods such as Machine- and Deep learning. For example, one could use clustering methods such as Principal Component Analysis to find out which dimensions contribute the most to separate a number of clusters from each other (\ref{fig:dispca}). Another scenario would be to manually label cells of a dataset as either leading, trailing, rosette, lateral, \ldots{} etc. to train an Machine learning model on. The model could then be used on unlabeled data to assign the previous learned labels to cells that fit the right parameters.
 
 
 \begin{figure}
@@ -4595,20 +4617,17 @@ In addition to visualization, large multidimensional datasets offer the possibil
 
 }
 
-\caption[Principal Component Analysis]{Principal Component Analysis}\label{fig:dispca}
+\caption[Principal Component Analysis]{Principal Component Analysis (A) (B)}\label{fig:dispca}
 \end{figure}
-Yet another application example would be to use the ground truth image data to train a CNN with that potentially would be more robust and easier to use as it wouldn't require as much pre-processing.
+Yet another application example would be to use the ground truth image data generated for my studies to train a CNN that potentially would be more robust to data of different quality / resolution and easier to use as it wouldn't require as much pre-processing.
 
 \appendix
 
-\hypertarget{supplement}{%
-\chapter{Supplement}\label{supplement}}
-
 \hypertarget{neuromasts}{%
-\section{Neuromasts}\label{neuromasts}}
+\chapter{Neuromasts}\label{neuromasts}}
 
 \hypertarget{sem}{%
-\subsection{SEM}\label{sem}}
+\section{SEM}\label{sem}}
 
 To check whether the reduction in size and cell count of NMs in shroom3\(--\) embryos had an effect on their morphology too, scanning electron microscopy (SEM) samples for each group were imaged.
 
@@ -4622,7 +4641,7 @@ To check whether the reduction in size and cell count of NMs in shroom3\(--\) em
 \caption[CC Kinocilia]{CC Kinocilia}\label{fig:suppsem}
 \end{figure}
 \hypertarget{hair-cells-1}{%
-\subsection{Hair-cells}\label{hair-cells-1}}
+\section{Hair-cells}\label{hair-cells-1}}
 
 To check whether the reduction in size and cell count of NMs in shroom3\(--\) embryos had an effect on hair cell development, immunostainings on 4 dpf embryos with a hair cell specific marker were performed.
 
@@ -4636,10 +4655,10 @@ To check whether the reduction in size and cell count of NMs in shroom3\(--\) em
 \caption[Lateral Line Haircells]{Lateral Line Haircells}\label{fig:suppllhc}
 \end{figure}
 \hypertarget{rosette-formation-1}{%
-\section{Rosette Formation}\label{rosette-formation-1}}
+\chapter{Rosette Formation}\label{rosette-formation-1}}
 
 \hypertarget{shroom3-localization}{%
-\subsection{Shroom3 localization}\label{shroom3-localization}}
+\section{Shroom3 localization}\label{shroom3-localization}}
 
 
 \begin{figure}
@@ -4651,7 +4670,7 @@ To check whether the reduction in size and cell count of NMs in shroom3\(--\) em
 \caption[Shroom3 localization]{Shroom3 localization}\label{fig:supploc}
 \end{figure}
 \hypertarget{luminal-signaling}{%
-\subsection{Luminal Signaling}\label{luminal-signaling}}
+\section{Luminal Signaling}\label{luminal-signaling}}
 
 
 \begin{figure}
@@ -4663,7 +4682,7 @@ To check whether the reduction in size and cell count of NMs in shroom3\(--\) em
 \caption[Luminal signaling]{Luminal signaling}\label{fig:suppzo1}
 \end{figure}
 \hypertarget{proliferation-2}{%
-\section{Proliferation}\label{proliferation-2}}
+\chapter{Proliferation}\label{proliferation-2}}
 
 An important regulator for proliferation and organ size is the mechanosensitive hippo signaling pathway where the transcription factors Yap and Taz are the most downstream targets. When dephosphorylated, Yap and Taz translocate from the cytoplasm to the nucleus to induce target gene expression.
 To check for differences in hippo signaling, immunostainings for Taz were performed. On average the immunostainings suggest that Taz localization is more concentrated in the leading region and in the nuclei of peripherical PLLp cells.
@@ -4677,11 +4696,8 @@ To check for differences in hippo signaling, immunostainings for Taz were perfor
 
 \caption[Hippo Signaling in the pLLP]{Hippo Signaling in the pLLP. PLLps with nuclei labeled in magenta and Taz in green. Vertical sections show a more basal, a medial and a more apical Z section.}\label{fig:suppyap}
 \end{figure}
-\hypertarget{apical-constriction-3}{%
-\section{Apical Constriction}\label{apical-constriction-3}}
-
 \hypertarget{shroom3-interaction-partners}{%
-\section{Shroom3 interaction partners}\label{shroom3-interaction-partners}}
+\chapter{Shroom3 interaction partners}\label{shroom3-interaction-partners}}
 
 
 \begin{figure}
@@ -4695,14 +4711,14 @@ To check for differences in hippo signaling, immunostainings for Taz were perfor
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\textwidth]{figures/supp/lim} 
+{\centering \includegraphics[width=0.5\textwidth]{figures/supp/partners/lpprfp} 
 
 }
 
 \caption[Lpp-RFP]{Lpp-RFP}\label{fig:supplpp}
 \end{figure}
 \hypertarget{rescue-experiments-1}{%
-\section{Rescue experiments}\label{rescue-experiments-1}}
+\chapter{Rescue experiments}\label{rescue-experiments-1}}
 
 
 \begin{figure}
@@ -4750,10 +4766,10 @@ To check for differences in hippo signaling, immunostainings for Taz were perfor
 \caption[Heatshock CC positions]{Heatshock CC positions}\label{fig:supphscc}
 \end{figure}
 \hypertarget{models}{%
-\section{Models}\label{models}}
+\chapter{Models}\label{models}}
 
 \hypertarget{ll-patterning}{%
-\subsection{LL patterning}\label{ll-patterning}}
+\section{LL patterning}\label{ll-patterning}}
 
 The CC pattern for both \emph{shrm3}++ and \emph{shroom3}\(--\) can be modeled by a phase modulated cosine (figure 1), where the power to x represents the phase and is increased by only 0.1 in \emph{shroom3}\(--\) to go from a CC count of 5 to 7 over a span of 20 hours.
 
@@ -4767,7 +4783,7 @@ The CC pattern for both \emph{shrm3}++ and \emph{shroom3}\(--\) can be modeled b
 \caption[CC pattern model]{CC pattern model}\label{fig:supccpmodel}
 \end{figure}
 \hypertarget{morphogenetic-gradients}{%
-\subsection{Morphogenetic gradients}\label{morphogenetic-gradients}}
+\section{Morphogenetic gradients}\label{morphogenetic-gradients}}
 
 
 \begin{figure}
@@ -4778,6 +4794,76 @@ The CC pattern for both \emph{shrm3}++ and \emph{shroom3}\(--\) can be modeled b
 
 \caption[Morphogenic gradients]{Morphogenic gradients}\label{fig:supgrad}
 \end{figure}
+\hypertarget{curriculum-vitae}{%
+\chapter*{Curriculum Vitae}\label{curriculum-vitae}}
+\addcontentsline{toc}{chapter}{Curriculum Vitae}
+
+\noindent {\large \textbf{Personal information}} \hrulefill
+\vspace{0.2cm}
+
+\makebox[3cm][l]{Name:}\makebox[5cm][l]{David Kleinhans}
+
+\makebox[3cm][l]{Adress:}\makebox[5cm][l]{Schönstraße 15}
+
+\makebox[3cm][l]{}\makebox[5cm][l]{60327 Frankfurt am Main}
+
+\makebox[3cm][l]{Birth details:}\makebox[5cm][l]{07.05.1988, Mannheim}
+
+\vspace{0.3cm}
+
+\noindent {\large \textbf{Education}} \hrulefill
+\vspace{0.2cm}
+
+\noindent \textbf{PhD studies}, Developmental Biology of Vertebrates \hfill 02.2015 -- 08.2019\newline
+\emph{Goethe University, Frankfurt am Main, Germany}\newline
+visiting student at \emph{Altert-Ludwigs University, Freiburg, Germany}\newline
+Thesis project: \emph{Genetic and mechanic signaling during organ development}
+
+\vspace{0.3cm}
+
+\noindent \textbf{Master studies}, Cell Biology and Physiology \hfill 10.2012 -- 01.2015\newline
+\emph{Goethe University, BMLS, Frankfurt am Main, Germany}\newline
+erasmus studies at \emph{Kocaeli University, Izmit, Turkey}\newline
+Thesis project: \emph{Survival window determination of Tribolium castaneum \newline exposed to different concentrations of organic compounds}
+
+\vspace{0.3cm}
+
+\noindent \textbf{Bachelor studies}, Molecular Biosciences \hfill 10.2008 -- 06.2012\newline
+\emph{Paris Lodron University, Salzburg, Austria}\newline
+visiting student at \emph{Johannes Kepler University, Linz, Austria}\newline
+Thesis project: \emph{Effects of Vitamin D on the Immune System}
+
+\vspace{0.3cm}
+
+\noindent \textbf{Abitur} \hfill 08.1998 -- 06.2007\newline
+\emph{Albertus-Magnus-Schule, Viernheim, Germany}\newline
+Advanced courses: Biology, Mathematics
+
+\vspace{0.3cm}
+
+\noindent {\large \textbf{Additional Training}} \hrulefill
+\vspace{0.2cm}
+
+\noindent International Zebrafish and Medaka Course, KIT \hfill 05.2015
+
+\noindent Bioimage Data Analysis, EMBL \hfill 06.2016
+
+\noindent Analysis and Interpretation of Multivariate Data, GRADE \hfill 02.2017
+
+\noindent Open Science for Transparent Research Practice, GRADE \hfill 05.2018
+
+\noindent Einführung in das maschinelle lernen, GRADE \hfill 02.2019
+
+\vspace{0.3cm}
+
+\noindent {\large \textbf{Publications}} \hrulefill
+\vspace{0.2cm}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Nollmann, F. I., Heinrich, A. K., Brachmann, A. O., Morisseau, C., Mukherjee, K., Casanova-Torres, M., Strobl, F., Kleinhans, D., Kinski, S., Schultz, K., \emph{et al.} (2015). \href{https://onlinelibrary.wiley.com/doi/abs/10.1002/cbic.201402650}{\textbf{A Photorhabdus Natural Product Inhibits Insect Juvenile Hormone Epoxide Hydrolase.}} ChemBioChem 16, 766-771.
+\end{enumerate}
 \hypertarget{statutory-declaration}{%
 \chapter*{\texorpdfstring{\textbf{Statutory Declaration}}{Statutory Declaration}}\label{statutory-declaration}}
 \addcontentsline{toc}{chapter}{\textbf{Statutory Declaration}}
@@ -4787,11 +4873,11 @@ cited sources and aids. Sentences or parts of sentences quoted literally are mar
 with regard to the statement and scope are indicated by full details of the publications concerned. The thesis
 in the same or similar form has not been submitted to any examination body and has not been published.
 This thesis was not yet, even in part, used in another examination or as a course performance.
-\begin{verbatim}
-Place, Date: __________________           
 
-  Signature: __________________
-\end{verbatim}
+\vskip 2cm
+\centerline{\makebox[6cm][c]{\hrulefill} \makebox[0.5cm][c]{} \makebox[6cm][c]{\hrulefill}}
+\centerline{\makebox[6cm][c]{Date, Place}\makebox[0.5cm][c]{} \makebox[6cm][c]{David Kleinhans}}
+
 \backmatter
 
 \hypertarget{references}{%
@@ -4939,80 +5025,98 @@ Place, Date: __________________
 \leavevmode\hypertarget{ref-Graf2005}{}%
 44. R. Gräf, J. Rietdorf, T. Zimmermann, in \emph{Microsc. Tech.} (Springer, 2005; \url{http://link.springer.com/10.1007/b102210}), pp. 57--75.
 
+\leavevmode\hypertarget{ref-Haddon1998}{}%
+45. C. Haddon, L. Smithers, S. Schneider-Maunoury, T. Coche, D. Henrique, J. Lewis, Multiple delta genes and lateral inhibition in zebrafish primary neurogenesis. \emph{Development}. \textbf{125}, 359--370 (1998).
+
 \leavevmode\hypertarget{ref-Schindelin2012}{}%
-45. J. Schindelin, I. Arganda-Carreras, E. Frise, V. Kaynig, M. Longair, T. Pietzsch, S. Preibisch, C. Rueden, S. Saalfeld, B. Schmid, J.-Y. Tinevez, D. J. White, V. Hartenstein, K. Eliceiri, P. Tomancak, A. Cardona, Fiji: an open-source platform for biological-image analysis. \emph{Nat. Methods}. \textbf{9}, 676--82 (2012).
+46. J. Schindelin, I. Arganda-Carreras, E. Frise, V. Kaynig, M. Longair, T. Pietzsch, S. Preibisch, C. Rueden, S. Saalfeld, B. Schmid, J.-Y. Tinevez, D. J. White, V. Hartenstein, K. Eliceiri, P. Tomancak, A. Cardona, Fiji: an open-source platform for biological-image analysis. \emph{Nat. Methods}. \textbf{9}, 676--82 (2012).
 
 \leavevmode\hypertarget{ref-Button2013}{}%
-46. K. S. Button, J. P. Ioannidis, C. Mokrysz, B. A. Nosek, J. Flint, E. S. Robinson, M. R. Munafò, Power failure: Why small sample size undermines the reliability of neuroscience. \emph{Nat. Rev. Neurosci.} (2013), doi:\href{https://doi.org/10.1038/nrn3475}{10.1038/nrn3475}.
+47. K. S. Button, J. P. Ioannidis, C. Mokrysz, B. A. Nosek, J. Flint, E. S. Robinson, M. R. Munafò, Power failure: Why small sample size undermines the reliability of neuroscience. \emph{Nat. Rev. Neurosci.} (2013), doi:\href{https://doi.org/10.1038/nrn3475}{10.1038/nrn3475}.
 
 \leavevmode\hypertarget{ref-Krig2014}{}%
-47. S. Krig, in \emph{Comput. Vis. Metrics} (Apress, Berkeley, CA, 2014; \href{http://link.springer.com/10.1007/978-1-4302-5930-5\%7B/_\%7D7}{http://link.springer.com/10.1007/978-1-4302-5930-5\{\textbackslash{}\_\}7}), pp. 283--311.
+48. S. Krig, in \emph{Comput. Vis. Metrics} (Apress, Berkeley, CA, 2014; \href{http://link.springer.com/10.1007/978-1-4302-5930-5\%7B/_\%7D7}{http://link.springer.com/10.1007/978-1-4302-5930-5\{\textbackslash{}\_\}7}), pp. 283--311.
 
 \leavevmode\hypertarget{ref-Legland2016}{}%
-48. D. Legland, I. Arganda-Carreras, P. Andrey, MorphoLibJ: Integrated library and plugins for mathematical morphology with ImageJ. \emph{Bioinformatics} (2016), doi:\href{https://doi.org/10.1093/bioinformatics/btw413}{10.1093/bioinformatics/btw413}.
+49. D. Legland, I. Arganda-Carreras, P. Andrey, MorphoLibJ: Integrated library and plugins for mathematical morphology with ImageJ. \emph{Bioinformatics} (2016), doi:\href{https://doi.org/10.1093/bioinformatics/btw413}{10.1093/bioinformatics/btw413}.
 
 \leavevmode\hypertarget{ref-Ollion2013}{}%
-49. J. Ollion, J. Cochennec, F. Loll, C. Escudé, T. Boudier, TANGO: A generic tool for high-throughput 3D image analysis for studying nuclear organization. \emph{Bioinformatics} (2013), doi:\href{https://doi.org/10.1093/bioinformatics/btt276}{10.1093/bioinformatics/btt276}.
+50. J. Ollion, J. Cochennec, F. Loll, C. Escudé, T. Boudier, TANGO: A generic tool for high-throughput 3D image analysis for studying nuclear organization. \emph{Bioinformatics} (2013), doi:\href{https://doi.org/10.1093/bioinformatics/btt276}{10.1093/bioinformatics/btt276}.
 
 \leavevmode\hypertarget{ref-Lehman}{}%
-50. E. L. Lehman, \emph{Nonparametric Statistical Methods Based on Ranks} (1975).
+51. E. L. Lehman, \emph{Nonparametric Statistical Methods Based on Ranks} (1975).
 
 \leavevmode\hypertarget{ref-Jia2014}{}%
-51. Y. Jia, E. Shelhamer, J. Donahue, S. Karayev, J. Long, R. Girshick, S. Guadarrama, T. Darrell, Caffe: Convolutional Architecture for Fast Feature Embedding (2014), doi:\href{https://doi.org/10.1145/2647868.2654889}{10.1145/2647868.2654889}.
+52. Y. Jia, E. Shelhamer, J. Donahue, S. Karayev, J. Long, R. Girshick, S. Guadarrama, T. Darrell, Caffe: Convolutional Architecture for Fast Feature Embedding (2014), doi:\href{https://doi.org/10.1145/2647868.2654889}{10.1145/2647868.2654889}.
 
 \leavevmode\hypertarget{ref-Meijering2012}{}%
-52. E. Meijering, O. Dzyubachyk, I. Smal, Methods for cell and particle tracking., doi:\href{https://doi.org/10.1016/B978-0-12-391857-4.00009-4}{10.1016/B978-0-12-391857-4.00009-4}.
+53. E. Meijering, O. Dzyubachyk, I. Smal, Methods for cell and particle tracking., doi:\href{https://doi.org/10.1016/B978-0-12-391857-4.00009-4}{10.1016/B978-0-12-391857-4.00009-4}.
 
 \leavevmode\hypertarget{ref-Lee2009}{}%
-53. J.-y. Lee, R. M. Harland, Actomyosin contractility and microtubules drive apical constriction in Xenopus bottle cells. \emph{Dev. Biol.} \textbf{311}, 40--52 (2007).
+54. J.-y. Lee, R. M. Harland, Actomyosin contractility and microtubules drive apical constriction in Xenopus bottle cells. \emph{Dev. Biol.} \textbf{311}, 40--52 (2007).
 
 \leavevmode\hypertarget{ref-Harding2012}{}%
-54. M. J. Harding, A. V. Nechiporuk, Fgfr-Ras-MAPK signaling is required for apical constriction via apical positioning of Rho-associated kinase during mechanosensory organ formation. \emph{Development}. \textbf{139}, 3467--3467 (2012).
+55. M. J. Harding, A. V. Nechiporuk, Fgfr-Ras-MAPK signaling is required for apical constriction via apical positioning of Rho-associated kinase during mechanosensory organ formation. \emph{Development}. \textbf{139}, 3467--3467 (2012).
 
 \leavevmode\hypertarget{ref-Harding2013}{}%
-55. M. J. Harding, Regulation of Cell Shape During Development of the Nervous System, 1--97 (2013).
+56. M. J. Harding, Regulation of Cell Shape During Development of the Nervous System, 1--97 (2013).
 
 \leavevmode\hypertarget{ref-Laguerre2005a}{}%
-56. L. Laguerre, F. Soubiran, A. Ghysen, N. König, C. Dambly-Chaudière, Cell proliferation in the developing lateral line system of zebrafish embryos. \emph{Dev. Dyn.} \textbf{233}, 466--472 (2005).
+57. L. Laguerre, F. Soubiran, A. Ghysen, N. König, C. Dambly-Chaudière, Cell proliferation in the developing lateral line system of zebrafish embryos. \emph{Dev. Dyn.} \textbf{233}, 466--472 (2005).
 
 \leavevmode\hypertarget{ref-Hans2001}{}%
-57. F. Hans, S. Dimitrov, Histone H3 phosphorylation and cell division. \emph{Oncogene}. \textbf{20}, 3021--3027 (2001).
+58. F. Hans, S. Dimitrov, Histone H3 phosphorylation and cell division. \emph{Oncogene}. \textbf{20}, 3021--3027 (2001).
 
 \leavevmode\hypertarget{ref-Fischer}{}%
-58. T. Fischer, EdU Proliferation Kit (2019), (available at \url{https://www.thermofisher.com/de/de/home/references/newsletters-and-journals/bioprobes-journal-of-cell-biology-applications/bioprobes-70/click-it-plus-edu-proliferation-kits.html}).
+59. T. Fischer, EdU Proliferation Kit (2019), (available at \url{https://www.thermofisher.com/de/de/home/references/newsletters-and-journals/bioprobes-journal-of-cell-biology-applications/bioprobes-70/click-it-plus-edu-proliferation-kits.html}).
 
 \leavevmode\hypertarget{ref-Mokalled2016}{}%
-59. M. H. Mokalled, C. Patra, A. L. Dickson, T. Endo, D. Y. R. Stainier, K. D. Poss, Injury-induced ctgfa directs glial bridging and spinal cord regeneration in zebrafish. \textbf{354} (2016), doi:\href{https://doi.org/10.1126/science.aaf2679}{10.1126/science.aaf2679}.
+60. M. H. Mokalled, C. Patra, A. L. Dickson, T. Endo, D. Y. R. Stainier, K. D. Poss, Injury-induced ctgfa directs glial bridging and spinal cord regeneration in zebrafish. \textbf{354} (2016), doi:\href{https://doi.org/10.1126/science.aaf2679}{10.1126/science.aaf2679}.
 
 \leavevmode\hypertarget{ref-Cruz2015}{}%
-60. I. A. Cruz, R. Kappedal, S. M. Mackenzie, D. W. Hailey, T. L. Hoffman, T. F. Schilling, D. W. Raible, Robust regeneration of adult zebrafish lateral line hair cells reflects continued precursor pool maintenance. \emph{Dev. Biol.} \textbf{402}, 229--238 (2015).
+61. I. A. Cruz, R. Kappedal, S. M. Mackenzie, D. W. Hailey, T. L. Hoffman, T. F. Schilling, D. W. Raible, Robust regeneration of adult zebrafish lateral line hair cells reflects continued precursor pool maintenance. \emph{Dev. Biol.} \textbf{402}, 229--238 (2015).
 
 \leavevmode\hypertarget{ref-Pinto-Teixeira2015}{}%
-61. F. Pinto-Teixeira, O. Viader-Llargués, E. Torres-Mejía, M. Turan, E. González-Gualda, L. Pola-Morell, H. López-Schier, Inexhaustible hair-cell regeneration in young and aged zebrafish. \emph{Biol. Open}. \textbf{4}, 903--9 (2015).
+62. F. Pinto-Teixeira, O. Viader-Llargués, E. Torres-Mejía, M. Turan, E. González-Gualda, L. Pola-Morell, H. López-Schier, Inexhaustible hair-cell regeneration in young and aged zebrafish. \emph{Biol. Open}. \textbf{4}, 903--9 (2015).
 
 \leavevmode\hypertarget{ref-Wada2013}{}%
-62. H. Wada, A. Ghysen, K. Asakawa, G. Abe, T. Ishitani, K. Kawakami, Wnt/Dkk negative feedback regulates sensory organ size in zebrafish. \emph{Curr. Biol.} \textbf{23}, 1559--1565 (2013).
+63. H. Wada, A. Ghysen, K. Asakawa, G. Abe, T. Ishitani, K. Kawakami, Wnt/Dkk negative feedback regulates sensory organ size in zebrafish. \emph{Curr. Biol.} \textbf{23}, 1559--1565 (2013).
 
 \leavevmode\hypertarget{ref-Kleinhansa}{}%
-63. D. S. Kleinhans, anaLLzr2DT (2019), (available at \url{https://github.com/KleinhansDa/anaLLzr2DT}).
+64. D. S. Kleinhans, anaLLzr2DT (2019), (available at \url{https://github.com/KleinhansDa/anaLLzr2DT}).
 
 \leavevmode\hypertarget{ref-Falk2019}{}%
-64. T. Falk, D. Mai, R. Bensch, Ö. Çiçek, A. Abdulkadir, Y. Marrakchi, A. Böhm, J. Deubner, Z. Jäckel, K. Seiwald, A. Dovzhenko, O. Tietz, C. Dal Bosco, S. Walsh, D. Saltukoglu, T. L. Tay, M. Prinz, K. Palme, M. Simons, I. Diester, T. Brox, O. Ronneberger, U-Net: deep learning for cell counting, detection, and morphometry. \emph{Nat. Methods}. \textbf{16}, 67--70 (2019).
+65. T. Falk, D. Mai, R. Bensch, Ö. Çiçek, A. Abdulkadir, Y. Marrakchi, A. Böhm, J. Deubner, Z. Jäckel, K. Seiwald, A. Dovzhenko, O. Tietz, C. Dal Bosco, S. Walsh, D. Saltukoglu, T. L. Tay, M. Prinz, K. Palme, M. Simons, I. Diester, T. Brox, O. Ronneberger, U-Net: deep learning for cell counting, detection, and morphometry. \emph{Nat. Methods}. \textbf{16}, 67--70 (2019).
 
 \leavevmode\hypertarget{ref-Shaner2004}{}%
-65. N. C. Shaner, R. E. Campbell, P. A. Steinbach, B. N. Giepmans, A. E. Palmer, R. Y. Tsien, Improved monomeric red, orange and yellow fluorescent proteins derived from Discosoma sp. red fluorescent protein. \emph{Nat. Biotechnol.} \textbf{22}, 1567--1572 (2004).
+66. N. C. Shaner, R. E. Campbell, P. A. Steinbach, B. N. Giepmans, A. E. Palmer, R. Y. Tsien, Improved monomeric red, orange and yellow fluorescent proteins derived from Discosoma sp. red fluorescent protein. \emph{Nat. Biotechnol.} \textbf{22}, 1567--1572 (2004).
 
 \leavevmode\hypertarget{ref-Ridley2015}{}%
-66. A. J. Ridley, Rho GTPase signalling in cell migration. \emph{Curr. Opin. Cell Biol.} \textbf{36}, 103--112 (2015).
+67. A. J. Ridley, Rho GTPase signalling in cell migration. \emph{Curr. Opin. Cell Biol.} \textbf{36}, 103--112 (2015).
 
 \leavevmode\hypertarget{ref-Wang2011}{}%
-67. G. Wang, A. B. Cadwallader, D. S. Jang, M. Tsang, H. J. Yost, J. D. Amack, The Rho kinase Rock2b establishes anteroposterior asymmetry of the ciliated Kupffer's vesicle in zebrafish. \emph{Development}. \textbf{138}, 45--54 (2011).
+68. G. Wang, A. B. Cadwallader, D. S. Jang, M. Tsang, H. J. Yost, J. D. Amack, The Rho kinase Rock2b establishes anteroposterior asymmetry of the ciliated Kupffer's vesicle in zebrafish. \emph{Development}. \textbf{138}, 45--54 (2011).
 
 \leavevmode\hypertarget{ref-Dettlaff1991}{}%
-68. T. A. Dettlaff, in \emph{Anim. Species dev. Stud.} (Springer US, Boston, MA, 1991; \href{http://link.springer.com/10.1007/978-1-4615-3654-3\%7B/_\%7D1}{http://link.springer.com/10.1007/978-1-4615-3654-3\{\textbackslash{}\_\}1}), pp. 1--14.
+69. T. A. Dettlaff, in \emph{Anim. Species dev. Stud.} (Springer US, Boston, MA, 1991; \href{http://link.springer.com/10.1007/978-1-4615-3654-3\%7B/_\%7D1}{http://link.springer.com/10.1007/978-1-4615-3654-3\{\textbackslash{}\_\}1}), pp. 1--14.
 
 \leavevmode\hypertarget{ref-Eisen2008b}{}%
-69. J. S. Eisen, J. C. Smith, Controlling morpholino experiments: don't stop making antisense. \emph{Development}. \textbf{135}, 1735--43 (2008).
+70. J. S. Eisen, J. C. Smith, Controlling morpholino experiments: don't stop making antisense. \emph{Development}. \textbf{135}, 1735--43 (2008).
+
+\leavevmode\hypertarget{ref-Kozlovskaja-Gumbriene2017}{}%
+71. A. Kozlovskaja-Gumbrienė, R. Yi, R. Alexander, A. Aman, R. Jiskra, D. Nagelberg, H. Knaut, M. McClain, T. Piotrowski, Proliferation-independent regulation of organ size by Fgf/Notch signaling. \emph{Elife}. \textbf{6}, 1--31 (2017).
+
+\leavevmode\hypertarget{ref-Ching2018}{}%
+72. T. Ching, D. S. Himmelstein, B. K. Beaulieu-Jones, A. A. Kalinin, B. T. Do, G. P. Way, E. Ferrero, P. M. Agapow, M. Zietz, M. M. Hoffman, W. Xie, G. L. Rosen, B. J. Lengerich, J. Israeli, J. Lanchantin, S. Woloszynek, A. E. Carpenter, A. Shrikumar, J. Xu, E. M. Cofer, C. A. Lavender, S. C. Turaga, A. M. Alexandari, Z. Lu, D. J. Harris, D. Decaprio, Y. Qi, A. Kundaje, Y. Peng, L. K. Wiley, M. H. Segler, S. M. Boca, S. J. Swamidass, A. Huang, A. Gitter, C. S. Greene, Opportunities and obstacles for deep learning in biology and medicine. \emph{J. R. Soc. Interface}. \textbf{15} (2018), doi:\href{https://doi.org/10.1098/rsif.2017.0387}{10.1098/rsif.2017.0387}.
+
+\leavevmode\hypertarget{ref-Webb2018}{}%
+73. S. Webb, Deep learning for biology. \emph{Nature}. \textbf{554}, 555--557 (2018).
+
+\leavevmode\hypertarget{ref-Schulte-Merker2014c}{}%
+74. S. Schulte-Merker, D. Y. R. Stainier, Out with the old, in with the new: reassessing morpholino knockdowns in light of genome editing technology. \emph{Development}. \textbf{141}, 3103--3104 (2014).
+
+\leavevmode\hypertarget{ref-Lee2007a}{}%
+75. J. Y. Lee, R. M. Harland, Actomyosin contractility and microtubules drive apical constriction in Xenopus bottle cells. \emph{Dev. Biol.} (2007), doi:\href{https://doi.org/10.1016/j.ydbio.2007.08.010}{10.1016/j.ydbio.2007.08.010}.
 
 
 % Index?

@@ -4,86 +4,86 @@
 ### Chemicals {#mat-chem}
 
 ---------------------------------------------------------------------------------------------
-         **Chemical**     Company         Lot.          Charge        EGNr:   cat.-no.   
---------------------- ---------------- ------------ ------------ ------------ ---------------
-Agarose                 Roth            495237802     2327318       6351.2           
+              **Chemical**    Company                                             cat.-no.   
+-------------------------- -------------------------------------------------- ---------------
+Agarose                     Roth                                                    6351.2           
 
-Agar-Agar               Roth                                                    5210.3
+Agar-Agar                   Roth                                                    5210.3
 
-Ampicillin              Roth                                                    K029.2
+Ampicillin                  Roth                                                    K029.2
 
-ATP                     Epicentre                                               E311K
+ATP                         Epicentre                                               E311K
 
-Blocking Reagent        Roche                                                   11096176001
+Blocking Reagent            Roche                                                   11096176001
 
-BCIP                    Fermentas                                               R0822
+BCIP                        Fermentas                                               R0822
 
-CaCl\textsubscript{2}   Roth                                                    886.1
+CaCl\textsubscript{2}       Roth                                                    886.1
 
 Calyculin
 
-DIG RNA Mix             Roche                                                   11277073910
+DIG RNA Mix                 Roche                                                   11277073910
 
-DMSO                    Roth                                                    4720.2
+DMSO                        Roth                                                    4720.2
 
-EtBr                    Roth                                                    2218.3
+EtBr                        Roth                                                    2218.3
 
-EtOH                    Roth                                                    9065.3
+EtOH                        Roth                                                    9065.3
 
-Formaldehyde            Roth                                                    7398.1
+Formaldehyde                Roth                                                    7398.1
 
-Formamide               Roth                                                    P040.1
+Formamide                   Roth                                                    P040.1
 
-Glycerol                Roth                                                    3783.2
+Glycerol                    Roth                                                    3783.2
 
-IPTG                    Thermo                                                  R1171
+IPTG                        Thermo                                                  R1171
 
-KCl                     Roth                                                    P017.1
+KCl                         Roth                                                    P017.1
 
-Low-melt agarose        Roth            SLBM5407V                               A9539 
+Low melting point Agarose   Roth                                                    A9539 
 
 Maleic Acid
 
-MeOH                    Roth                                                    CP43.3
+MeOH                        Roth                                                    CP43.3
 
-MgCl\textsubscript{2}   Roth                                                    2189.1
+MgCl\textsubscript{2}       Roth                                                    2189.1
 
-NaCl                    Roth                                                    9265.2
+NaCl                        Roth                                                    9265.2
 
-NaHCO\textsubscript{3}  Roth                                                    855.1
+NaHCO\textsubscript{3}      Roth                                                    855.1
 
-NaOH                    Roth
+NaOH                        Roth
 
-NGS                     Sigma                                                   C6767
+NGS                         Sigma                                                   C6767
 
-_p_-Formaldehyd         Sigma                                                   P6148
+_p_-Formaldehyd             Sigma                                                   P6148
 
-Phenol Red              Sigma                                                   P0290
+Phenol Red                  Sigma                                                   P0290
 
-Propan-2-ol             VWR                                                     20842330
+Propan-2-ol                 VWR                                                     20842330
 
-Proteinase K            Roth                                                    7528.4
+Proteinase K                Roth                                                    7528.4
 
-PTU                     Sigma                                                   P7629
+PTU                         Sigma                                                   P7629
 
 Rockout
 
 SSC
 
-SU5402                  CALBIOCHEM      D00072578                               572630
+SU5402                      CALBIOCHEM                                              572630
 
-Torula RNA              Sigma                                                   R6625
+Torula RNA                  Sigma                                                   R6625
 
-Tricaine                Fluka                                                   A5040
+Tricaine                    Fluka                                                   A5040
 
-Tris Base               Roth                                                    4855.2
+Tris Base                   Roth                                                    4855.2
 
-Triton-X100             Roth                                                    3051.2
+Triton-X100                 Roth                                                    3051.2
 
-Trizol                  Ambion                                                  15596018
+Trizol                      Ambion                                                  15596018
 
-Tween20                 Sigma                                                   P1379
---------------------- ---------------- ------------ ------------ ------------ ---------------
+Tween20                     Sigma                                                   P1379
+-------------------------- -------------------------------------------------- ---------------
 Table: (\#tab:mat-chem) Chemicals
 
 ### Solutions {#mat-sol}
@@ -235,7 +235,7 @@ atoh1a      \scriptsize \texttt{TCCGTCCCTGTATCCATAGCCACAAACTTTCCTCCCAAAAGCACAAAC
             TGCTAAAGCCGACCCGCCAAACTGCGACCTGCTGCATGCCAACGTGTTAGAAACGGACCGATCTCCCAGAGGATCACCGGGCGT\newline 
             CTGTCGGAGAGGCACGGGCGTGGGTTACCCGTACCAGTACGAGGACGGAACATTCAAC}
 
-deltaD
+deltaD      see [@Haddon1998]
 ---------- ----------------------------------------------------------------------------------
 Table: (\#tab:mat-probes) ISH probes
 
@@ -362,13 +362,13 @@ To assess the quality of the _ClusterAnalysis_ algorithm for nuclei detection th
 -	each object is determined via a fluorescent nucleus label
 - embryos are mounted within a 3D mold to reduce noise
 
----------------------------------- ----------------------------------
+-------------------------------- ----------------------------------
                           XY scale  0.32 px/$\mu$m
  
                          Z-spacing  4 $\mu$m
  
                             Camera  Rolera
----------------------------------- ----------------------------------
+-------------------------------- ----------------------------------
 Table: (\#tab:imgcond3DGrT) Cluster Analysis Model
 
 ###### Training data
@@ -444,23 +444,19 @@ ggplot(NB_all_diff_mean, aes(Group, mean_diff)) +
     theme(legend.text = element_text(size=11))
 ```
 
-```{r meanabsnuc, echo=FALSE, eval=TRUE, results='asis', fig.cap="(ref:meanabsnuc)"}
+```{r meanabsnuc, results='asis'}
 load("figure/02-MaMo/GrTr/ClusterAnal/GroundTruth2D.RData")
-#library(kableExtra)
-#knitr::kable(NB_all_mean_mean, format ="rmarkdown", align = 'c', caption="Nuclei count")
-pander(NB_all_mean_mean, style ="rmarkdown")
+knitr::kable(NB_all_mean_mean, "latex", booktabs = T, caption="Nuclei count")
+#pander(NB_all_mean_mean, style ="rmarkdown")
 ```
-Table: (\#tab:meanabsnuc) Mean absolute nuclei counts
 
 \noindent To estimate the quality of nuclei detection for each parameter, the ratio of automatically detected and ground truth objects count can be calculated and compared (table \@ref(tab:nrcount)). The closer it is to 1, the better.
 
-```{r nrcount, echo=FALSE, eval=TRUE, results='asis', fig.cap="(ref:nrcount)"}
+```{r nrcount, results='asis', fig.cap="(ref:nrcount)"}
 load("figure/02-MaMo/GrTr/ClusterAnal/GroundTruth2D.RData")
-#library(kableExtra)
-#knitr::kable(NB_all_CC_NR_mean, format ="markdown", align = 'c', caption="Nuclei count ratio")
-pander(NB_all_CC_NR_mean, style ="rmarkdown")
+knitr::kable(NB_all_CC_NR_mean, "latex", booktabs = T, caption = "Nuclei count ratio")
+#pander(NB_all_CC_NR_mean, style ="rmarkdown")
 ```
-Table: (\#tab:nrcount) Mean nuclei count ratios
 
 ##### Summary
 
@@ -505,6 +501,8 @@ The training set consists of three randomly picked wildtype PLLps. For each the 
 
 To test the algorithm it is run at different segmentation thresholds on the same image data.
 
+\newpage
+
 ##### Image Analysis
 
 For image analysis a custom IJ macro script was developed that recognizes the cell boundaries via the fluorescence signal emitted by a Lyn Kinase tethered eGFP which expression is controlled by the _cxcr4b_ lateral line specific promotor. The central IJ tool used to do this is the MorphoLibJ's[@Legland2016] _Morpholigical Segmentation_ plugin. The plugin however requires to choose for a 'segmentation threshold' that determines the quality and the quantity of segmented objects. This parameter therefore plays an essential role in the truthfulness of the analysis results.
@@ -530,17 +528,19 @@ knitr::include_graphics(path = "figure/02-MaMo/GrTr/Morphology/zmax_comb_2.png")
 ```
 
 ---------------------- ------------------------------------------------------
- X / Y resolution       0.1625 / 0.1625 $\mu$m        
+      X / Y resolution       0.1625 / 0.1625 $\mu$m        
  
- Z resolution           0.4 $\mu$m 
+          Z resolution           0.4 $\mu$m 
  
- $\Delta$T - Z          0.5428 s
+         $\Delta$T - Z          0.5428 s
 ---------------------- ------------------------------------------------------
 Table: (\#tab:imgprop) Physical image properties (scaling)
 
 ###### Registered data
 
 During the registration process, the image is rotated against the horizon and cropped in X and Y. Additionally, the centers of the most constricting areas are detected via an intensity based dynamic threshold and highlighted as magenta circles in \@ref(fig:maxreg). Table \@ref(tab:imgregpar) sums up the registration parameters.
+
+\newpage
 
 (ref:maxreg) Registered, Maximum Z projected data
 ```{r maxreg, dpi=200, out.width='95%', fig.align='center', echo=FALSE, fig.cap="(ref:maxreg)"}
@@ -634,7 +634,7 @@ Inspecting the cell count unfortunately does not directly tell us how well the c
 In figure \@ref(fig:volsecdffull) and \@ref(fig:volsecdfzoom) the distribution and amount of the cell volumes across the different threshold levels can be inspected via the 'empirical cumulative distribution function' (ECDF). The closer the slopes are to the ground truth, the stronger they are conserved. Figure \@ref(fig:volsecdffull) shows the full distribution, where the major differences seem to appear within the 0.4 quantile (red line). Therefore, in figure \@ref(fig:volsecdfzoom) only the values within the 0.4 quantile are shown to get a more detailed impression.
 
 (ref:volsecdffull) ECDF - All cell volumes
-```{r volsecdffull, echo=FALSE, fig.height=2.3, out.width='80%', warning=FALSE, fig.cap="(ref:volsecdffull)"}
+```{r volsecdffull, echo=FALSE, fig.height=2.3, out.width='90%', warning=FALSE, fig.cap="(ref:volsecdffull)"}
 load("figure/02-MaMo/GrTr/Morphology/GroundTruth.RData")
 library(ggplot2)
 ggplot(all_vol, aes(Vol..unit., colour=Group)) +
@@ -651,7 +651,7 @@ ggplot(all_vol, aes(Vol..unit., colour=Group)) +
 ```
 
 (ref:volsecdfzoom) ECDF - Small cell volumes
-```{r volsecdfzoom, echo=FALSE, fig.height=2.3, out.width='80%', warning=FALSE, fig.cap="(ref:volsecdfzoom)"}
+```{r volsecdfzoom, echo=FALSE, fig.height=2.3, out.width='90%', warning=FALSE, fig.cap="(ref:volsecdfzoom)"}
 load("figure/02-MaMo/GrTr/Morphology/GroundTruth.RData")
 library(ggplot2)
 ggplot(all_vol, aes(Vol..unit., colour=Group)) +
@@ -885,10 +885,6 @@ knitr::include_graphics("figure/02-MaMo/Mount/mounting.png")
 ```{r setup, dpi=200, out.width='60%', fig.cap="(ref:setup)", fig.scap = "Imaging setup"}
 knitr::include_graphics("figure/02-MaMo/Mount/setup.png")
 ```
-
-#### Fusion-Proteins {#Fsnprot-met}
-
-#### Immunohistochemistry {#Immn-met}
 
 ### Computational Methods {#comp-met}
 
@@ -1134,7 +1130,7 @@ ggplot(SN180_ACIs, aes(Angle, value)) +
 
 In summary our results suggest that there is no significant difference either in the exact _anterior-posterior_ axis (at 0°), nor in the exact _dorso-ventral_ axis (at 90$^\circ$) between a DMSO control and a SU5402 treated embryo, but mostly in an angle in between.
 
-## Datasets {#mat-datasets}
+## Image Data Sets {#mat-datasets}
 
 ### Cell-Cluster {#cc-data}
 

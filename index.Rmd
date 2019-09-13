@@ -7,7 +7,7 @@ advisor: 'Prof. Dr. Sven Klimpel'
 altadvisor: 'Prof. Dr. Virginie Lecaudey'
 department: 'Fachbereich Biowissenschaften'
 degree: '**PhD in Biology**'
-title: '**Mechano – Chemical Feedback Loops During Vertebrate Organ Development**'
+title: '**Mechano – Chemical Feedback Loops \linebreak During Vertebrate Organ Development**'
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 output: 
@@ -29,22 +29,22 @@ acknowledgements: |
   
   \noindent my supervisors,
   
-  - Virginie Lecaudey
-  - Frederic Strobl
-  - and Manfred Schliwa
+  - Prof. Dr. Virginie Lecaudey
+  - Prof. Dr. Manfred Schliwa
   
   \noindent my students, 
   
-  - Dmitri Baulin
-  - Felix 
-  - Andreas Ebert
-  - Gelwa
-  - Bianca
+  - Dmitri Baulin (M.Sc. Thesis)
+  - Felix Godron (B.Sc. Thesis)
+  - Andreas Ebert (B.Sc. Thesis)
+  - Gelwa Helmand (B.Sc. Thesis)
+  - Bianca Rodrigues Lima (Master student)
+  - Ivan Alcantara (Master student)
   
   For trust shown in the process. For support and demand. for their patience, engangement and hard work.\newline
   
-  \noindent And my animals, without whom this work would not have been possible.\newline
-  \vspace{1cm}
+  \noindent And my animals, without whom this work would not have been possible.
+  \vspace{0.5cm}
 
 preface: |
   > "The most exciting time in the history of developmental biology is right now. Fueled both by new technologies and by new thought from other fields, we are exploding old notions and opening fantastic new horizons in embryology. [...]
@@ -55,9 +55,9 @@ preface: |
 
 
 dedication: |
-  These \pageref{LastPage} pages are dedicated to you, the reader.\newline
+  These \pageref{LastPage} pages are dedicated to YOU, the _reader_.\newline
   
-    The decision to get a PhD for me was not a career option. I chose to be a scientist because I believed it was a reasonable way, the only way, in a better future. Today, even though we are on the verge of becoming a technocracy, society doesn't trust scientific results anymore. This has many reasons.\newline
+  The decision to get a PhD for me was not a career option. I chose to be a scientist because _science_ because I was motivated by its ideals - autonomy, purity and freedom of presupposition (Aristotle) - to offer a solution to many wronggoings in the world. to to me meant I believed it was a reasonable way, the only way,  a better future. Today, even though we are on the verge of becoming a technocracy, society doesn't trust scientific results anymore. This has many reasons.\newline
   
   "Tell the truth. Don't blame people. Be strong. Do your best. Try hard. Forgive. Stay the course." - Bush Senior
 
@@ -114,7 +114,7 @@ knitr::kable(data, "latex", booktabs=T, col.names = c("Index", "Abbreviation", "
   column_spec(1, bold = T) %>%
   column_spec(3, width = "10cm") %>%
   collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
-  kable_styling(font_size = 10)
+  kable_styling(font_size = 9)
   #add_header_above(c("id labels" = 2, "metrics" = 3))
 #pack_rows("Group 1", 4, 7) %>%
 #pack_rows("Group 2", 8, 10)

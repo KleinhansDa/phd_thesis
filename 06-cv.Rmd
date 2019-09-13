@@ -1,0 +1,58 @@
+# Curriculum Vitae {-}
+
+\noindent {\large \textbf{Personal information}} \hrulefill
+\vspace{0.2cm}
+
+\makebox[3cm][l]{Name:}\makebox[5cm][l]{David Kleinhans}
+
+\makebox[3cm][l]{Adress:}\makebox[5cm][l]{Schönstraße 15}
+
+\makebox[3cm][l]{}\makebox[5cm][l]{60327 Frankfurt am Main}
+
+\makebox[3cm][l]{Birth details:}\makebox[5cm][l]{07.05.1988, Mannheim}
+
+\vspace{0.3cm}
+\noindent {\large \textbf{Education}} \hrulefill
+\vspace{0.2cm}
+
+\noindent \textbf{PhD studies}, Developmental Biology of Vertebrates \hfill 02.2015 -- 08.2019\newline
+_Goethe University, Frankfurt am Main, Germany_\newline
+visiting student at *Altert-Ludwigs University, Freiburg, Germany*\newline
+Thesis project: *Genetic and mechanic signaling during organ development*
+
+\vspace{0.3cm}
+\noindent \textbf{Master studies}, Cell Biology and Physiology \hfill 10.2012 -- 01.2015\newline
+_Goethe University, BMLS, Frankfurt am Main, Germany_\newline
+erasmus studies at *Kocaeli University, Izmit, Turkey*\newline
+Thesis project: _Survival window determination of Tribolium castaneum \newline exposed to different concentrations of organic compounds_
+
+\vspace{0.3cm}
+\noindent \textbf{Bachelor studies}, Molecular Biosciences \hfill 10.2008 -- 06.2012\newline
+_Paris Lodron University, Salzburg, Austria_\newline
+visiting student at  *Johannes Kepler University, Linz, Austria*\newline
+Thesis project: *Effects of Vitamin D on the Immune System*
+
+\vspace{0.3cm}
+\noindent \textbf{Abitur} \hfill 08.1998 -- 06.2007\newline
+*Albertus-Magnus-Schule, Viernheim, Germany*\newline
+Advanced courses: Biology, Mathematics
+
+\vspace{0.3cm}
+\noindent {\large \textbf{Additional Training}} \hrulefill
+\vspace{0.2cm}
+
+\noindent International Zebrafish and Medaka Course, KIT \hfill 05.2015
+
+\noindent Bioimage Data Analysis, EMBL \hfill 06.2016
+
+\noindent Analysis and Interpretation of Multivariate Data, GRADE \hfill 02.2017
+
+\noindent Open Science for Transparent Research Practice, GRADE \hfill 05.2018
+
+\noindent Einführung in das maschinelle lernen, GRADE \hfill 02.2019
+
+\vspace{0.3cm}
+\noindent {\large \textbf{Publications}} \hrulefill
+\vspace{0.2cm}
+
+1. Nollmann, F. I., Heinrich, A. K., Brachmann, A. O., Morisseau, C., Mukherjee, K., Casanova-Torres, M., Strobl, F., Kleinhans, D., Kinski, S., Schultz, K., *et al.* (2015). [**A Photorhabdus Natural Product Inhibits Insect Juvenile Hormone Epoxide Hydrolase.**](https://onlinelibrary.wiley.com/doi/abs/10.1002/cbic.201402650) ChemBioChem 16, 766-771.

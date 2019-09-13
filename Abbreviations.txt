@@ -1,6 +1,7 @@
 Index	Abbreviation	Elaboration
 0-9	2-/3-D	Two or Three Dimensional
 A	A.I.	apical index
+A	AB	Antibody
 C	CC  	Cell Cluster
 C	CNN	Convolutional Neural Network
 C	CI	confidence interval
@@ -23,10 +24,12 @@ L	LUT	Lookup Table
 L	LMPA	low melting point agarose
 M	MaxIP  	Maximum Intensity Projection
 M	MO	Morpholino
-N	N.A.	Numerical Aperture
+N	N.A.	Numerical Aperture3
+N	NGS	Normal Goat Serum
 N	NICD	Notch intracellular domain
 N	NM  	Neuromast
 N	NMII	Non muscle myosin II
+O	o.n.	over night
 P	p.Hist	phospho-Histone
 P	PCR	Polymerase chain reaction
 P	PFA  	Paraformaldehyd

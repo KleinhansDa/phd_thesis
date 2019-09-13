@@ -6,11 +6,9 @@
 If you feel it necessary to include an appendix, it goes here.
 -->
 
-# Supplement
+# Neuromasts
 
-## Neuromasts
-
-### SEM
+## SEM
 
 To check whether the reduction in size and cell count of NMs in shroom3$--$ embryos had an effect on their morphology too, scanning electron microscopy (SEM) samples for each group were imaged.
 
@@ -20,7 +18,7 @@ To check whether the reduction in size and cell count of NMs in shroom3$--$ embr
 knitr::include_graphics("figures/supp/sem.png")
 ```
 
-### Hair-cells
+## Hair-cells
 
 To check whether the reduction in size and cell count of NMs in shroom3$--$ embryos had an effect on hair cell development, immunostainings on 4 dpf embryos with a hair cell specific marker were performed.
 
@@ -30,9 +28,9 @@ To check whether the reduction in size and cell count of NMs in shroom3$--$ embr
 knitr::include_graphics("figures/supp/ll_hc.png")
 ```
 
-## Rosette Formation
+# Rosette Formation
 
-### Shroom3 localization
+## Shroom3 localization
 
 (ref:supploc) Shroom3 localization
 
@@ -40,7 +38,7 @@ knitr::include_graphics("figures/supp/ll_hc.png")
 knitr::include_graphics("figures/supp/loc.png")
 ```
 
-### Luminal Signaling
+## Luminal Signaling
 
 (ref:suppzo1) Luminal signaling
 
@@ -48,7 +46,7 @@ knitr::include_graphics("figures/supp/loc.png")
 knitr::include_graphics("figures/supp/zo1.png")
 ```
 
-## Proliferation
+# Proliferation
 
 An important regulator for proliferation and organ size is the mechanosensitive hippo signaling pathway where the transcription factors Yap and Taz are the most downstream targets. When dephosphorylated, Yap and Taz translocate from the cytoplasm to the nucleus to induce target gene expression. 
 To check for differences in hippo signaling, immunostainings for Taz were performed. On average the immunostainings suggest that Taz localization is more concentrated in the leading region and in the nuclei of peripherical PLLp cells.
@@ -59,9 +57,7 @@ To check for differences in hippo signaling, immunostainings for Taz were perfor
 knitr::include_graphics("figures/supp/immunos.png")
 ```
 
-## Apical Constriction
-
-## Shroom3 interaction partners
+# Shroom3 interaction partners
 
 (ref:supplim) LIM domain proteins
 
@@ -71,11 +67,11 @@ knitr::include_graphics("figures/supp/lim.png")
 
 (ref:supplpp) Lpp-RFP
 
-```{r supplpp, out.width = "0.8\\textwidth", fig.cap="(ref:supplpp)", fig.scap="Lpp-RFP"}
-knitr::include_graphics("figures/supp/lim.png")
+```{r supplpp, out.width = "0.5\\textwidth", fig.cap="(ref:supplpp)", fig.scap="Lpp-RFP"}
+knitr::include_graphics("figures/supp/partners/lpprfp.jpg")
 ```
 
-## Rescue experiments
+# Rescue experiments
 
 (ref:suppsucc) SU5402 CC positions
 
@@ -107,9 +103,9 @@ knitr::include_graphics("figures/results/06_rescues/temp/cc_positions.png")
 knitr::include_graphics("figures/results/06_rescues/shrm3/cc_positions.png")
 ```
 
-## Models
+# Models
 
-### LL patterning
+## LL patterning
 
 The CC pattern for both _shrm3_++ and _shroom3_$--$ can be modeled by a phase modulated cosine (figure 1), where the power to x represents the phase and is increased by only 0.1 in _shroom3_$--$ to go from a CC count of 5 to 7 over a span of 20 hours.
 
@@ -119,26 +115,10 @@ The CC pattern for both _shrm3_++ and _shroom3_$--$ can be modeled by a phase mo
 knitr::include_graphics("figures/supp/cc_model.png")
 ```
 
-### Morphogenetic gradients
+## Morphogenetic gradients
 
 (ref:supgrad) Morphogenic gradients
 
 ```{r supgrad, out.width = "0.8\\textwidth", fig.cap="(ref:supgrad)", fig.scap="Morphogenic gradients"}
 knitr::include_graphics("figures/supp/gradients.png")
 ```
-\newpage
-# Curriculum Vitae
-
-
-
-# **Statutory Declaration** {.unnumbered}
-
-I herewith declare that I have composed the present thesis myself and without use of any other than the
-cited sources and aids. Sentences or parts of sentences quoted literally are marked as such; other references
-with regard to the statement and scope are indicated by full details of the publications concerned. The thesis
-in the same or similar form has not been submitted to any examination body and has not been published.
-This thesis was not yet, even in part, used in another examination or as a course performance.
-
-    Place, Date: __________________
-
-      Signature: __________________
