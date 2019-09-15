@@ -12,7 +12,7 @@ knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 output: 
   thesisdown::thesis_pdf: default
-#  thesisdown::thesis_gitbook: default
+  #thesisdown::thesis_gitbook: default
 #  thesisdown::thesis_word: default
 #  thesisdown::thesis_epub: default
 # If you are creating a PDF you'll need to write your preliminary content here or
@@ -27,12 +27,12 @@ output:
 acknowledgements: |
   I thank...\newline
   
-  \noindent my supervisors,
+  \noindent my supervisors
   
   - Prof. Dr. Virginie Lecaudey
   - Prof. Dr. Manfred Schliwa
   
-  \noindent my students, 
+  \noindent my students
   
   - Dmitri Baulin (M.Sc. Thesis)
   - Felix Godron (B.Sc. Thesis)
@@ -41,10 +41,10 @@ acknowledgements: |
   - Bianca Rodrigues Lima (Master student)
   - Ivan Alcantara (Master student)
   
-  For trust shown in the process. For support and demand. for their patience, engangement and hard work.\newline
-  
-  \noindent And my animals, without whom this work would not have been possible.
-  \vspace{0.5cm}
+  For trust shown in the process, for support and demand. \newline For their patience, engangement and hard work!
+  \newline\newline
+  \noindent and my animals, without whom this work would not have been possible.
+  \vspace{0.2cm}
 
 preface: |
   > "The most exciting time in the history of developmental biology is right now. Fueled both by new technologies and by new thought from other fields, we are exploding old notions and opening fantastic new horizons in embryology. [...]
@@ -101,7 +101,11 @@ and 00-abstract.Rmd since they are handled in the YAML above differently for the
 
 # Zusammenfassung {.unnumbered}
 
+something
+
 # Summary {.unnumbered}
+
+something
 
 # List of Abbreviations {.unnumbered}
 

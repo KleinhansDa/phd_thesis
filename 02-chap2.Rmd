@@ -4,7 +4,7 @@
 ### Chemicals {#mat-chem}
 
 ---------------------------------------------------------------------------------------------
-              **Chemical**    Company                                             cat.-no.   
+              **Chemical**    Company                                         cat.-no.   
 -------------------------- -------------------------------------------------- ---------------
 Agarose                     Roth                                                    6351.2           
 
@@ -89,8 +89,8 @@ Table: (\#tab:mat-chem) Chemicals
 ### Solutions {#mat-sol}
 
 ---------------------------------------------------------------------------------------------
-         **Solution**     Company         Lot.          Charge        EGNr:   cat.-no.   
---------------------- ---------------- ------------ ------------ ------------ ---------------
+         **Solution**     Company                                             cat.-no.   
+--------------------- ------------------------------------------------------- ---------------
 Ambion Water
 
 Cut Smart Buffer        NEB                                                     B7204S
@@ -98,14 +98,14 @@ Cut Smart Buffer        NEB                                                     
 Generuler 100 bp        Thermo                                                  SM0241
 
 Generuler 1kb           Thermo                                                  SM0311
---------------------- ---------------- ------------ ------------ ------------ ---------------
+--------------------- ------------------------------------------------------- ---------------
 Table: (\#tab:mat-sol) Solutions
 
 ### Antibodies {#mat-anitb}
 
 ---------------------------------------------------------------------------------------------
-         **Antibody**     Company         Lot.          Charge        EGNr:   cat.-no.   
---------------------- ---------------- ------------ ------------ ------------ ---------------
+         **Antibody**     Company                                             cat.-no.   
+--------------------- ------------------------------------------------------- ---------------
 Anti-Digoxigenin        Roche                                                   11093274910
 
 JL8     
@@ -117,8 +117,8 @@ Table: (\#tab:mat-antib) Antibodies
 ### Enzymes {#mat-enz}
 
 ---------------------------------------------------------------------------------------------
-               **Enzyme**     Company         Lot.                                cat.-no.   
-------------------------- ---------------- ------------ ------------------------- -----------
+               **Enzyme**     Company                                         cat.-no.   
+------------------------- --------------------------------------------------- ---------------
 BtsCI                       NEB                                                     #R0647  
 
 DdeI                        NEB                                                     #R0175    
@@ -311,11 +311,7 @@ CPU                 Intel           Xeon E5-1660v4      3.2 GHz, 20MB, 8cores
 
 RAM                 Fujitsu         -                   4x16GB DDR4-2400 
 
-Graphics            NVIDIA          Quadro M4000        8GB RAM             
-
-HDD               Western Digital   SATA III            2x256 GB bay   
-
-SSD                 Fujitsu         SATA III            2x2000 GB 7.2k 
+Graphics            NVIDIA          Quadro M4000        8GB RAM 
 ---------------- ----------------- ------------------- ------------------------
 Table: (\#tab:PCcomp) Workstation hardware components
 
@@ -362,13 +358,13 @@ To assess the quality of the _ClusterAnalysis_ algorithm for nuclei detection th
 -	each object is determined via a fluorescent nucleus label
 - embryos are mounted within a 3D mold to reduce noise
 
--------------------------------- ----------------------------------
-                          XY scale  0.32 px/$\mu$m
+---------------------------------- ----------------------------------
+                          XY scale 0.32 px/$\mu$m
  
-                         Z-spacing  4 $\mu$m
+                         Z-spacing 4 $\mu$m
  
-                            Camera  Rolera
--------------------------------- ----------------------------------
+                            Camera Rolera
+---------------------------------- ----------------------------------
 Table: (\#tab:imgcond3DGrT) Cluster Analysis Model
 
 ###### Training data
@@ -419,12 +415,15 @@ knitr::include_graphics("figure/02-MaMo/GrTr/ClusterAnal/count_P05.png")
 
 ###### Nuclei Count
 
+```{r, echo=F}
+load("figure/02-MaMo/GrTr/ClusterAnal/GroundTruth2D.RData")
+```
+
+
 Comparing the segmented objects count of the Gaussian parameters with the ground truth gives an indication for over- resp. under-segmentation. In figure \@ref(fig:GrTratioCC) the relative numbers for each parameter can be seen in percentage above or below the mean cell count of the ground truth (blue horizon). The red area represents over-segmentation, the green under-segmentation. Additionally, table \@ref(tab:meanabsnuc) shows the absolute numbers.
 
 (ref:GrTratioCC) Relative difference of segment counts (N=3, Errorbars = Std./2)
 ```{r GrTratioCC, out.width='65%', fig.height=2.5, dpi=400, fig.cap="(ref:GrTratioCC)", fig.scap = "Relative difference of segment counts"}
-load("figure/02-MaMo/GrTr/ClusterAnal/GroundTruth2D.RData")
-library(ggplot2)
 ggplot(NB_all_diff_mean, aes(Group, mean_diff)) +
   #geom_polygon(aes(x=c(0,1,1,0),y=c(0.5,0.5,4.5,4.5)),fill="#FFFF0044",color=NA)+
   geom_bar(aes(fill=Group), colour = "black", stat="identity", show.legend = FALSE) +
@@ -445,16 +444,16 @@ ggplot(NB_all_diff_mean, aes(Group, mean_diff)) +
 ```
 
 ```{r meanabsnuc, results='asis'}
-load("figure/02-MaMo/GrTr/ClusterAnal/GroundTruth2D.RData")
-knitr::kable(NB_all_mean_mean, "latex", booktabs = T, caption="Nuclei count")
+knitr::kable(NB_all_mean_mean, "latex", booktabs = T, caption="Nuclei count") %>%
+  kable_styling(full_width = T, latex_options = "striped")
 #pander(NB_all_mean_mean, style ="rmarkdown")
 ```
 
 \noindent To estimate the quality of nuclei detection for each parameter, the ratio of automatically detected and ground truth objects count can be calculated and compared (table \@ref(tab:nrcount)). The closer it is to 1, the better.
 
-```{r nrcount, results='asis', fig.cap="(ref:nrcount)"}
-load("figure/02-MaMo/GrTr/ClusterAnal/GroundTruth2D.RData")
-knitr::kable(NB_all_CC_NR_mean, "latex", booktabs = T, caption = "Nuclei count ratio")
+```{r nrcount, results='asis'}
+knitr::kable(NB_all_CC_NR_mean, "latex", booktabs = T, caption = "Nuclei count ratio") %>%
+  kable_styling(full_width = T, latex_options = "striped")
 #pander(NB_all_CC_NR_mean, style ="rmarkdown")
 ```
 
@@ -491,7 +490,7 @@ To assess the quality of the PLLpANALYZER3D algorithm the ground truth was desig
  
  Piezo            Piezo Z-table; 300 $\mu$m scan range
 ----------------- ------------------------------------------------------
-Table: (\#tab:imgcond3DGrT) PLLpANALYZER3D Model
+Table: (\#tab:model3DGrT) PLLpANALYZER3D Model
 
 ###### Training data
 
@@ -500,8 +499,6 @@ The training set consists of three randomly picked wildtype PLLps. For each the 
 ###### Test data
 
 To test the algorithm it is run at different segmentation thresholds on the same image data.
-
-\newpage
 
 ##### Image Analysis
 
@@ -527,20 +524,18 @@ The first module of the macro is PLLp registration in X, Y and cropping in Z. Th
 knitr::include_graphics(path = "figure/02-MaMo/GrTr/Morphology/zmax_comb_2.png")
 ```
 
----------------------- ------------------------------------------------------
-      X / Y resolution       0.1625 / 0.1625 $\mu$m        
+---------------------------------- ----------------------------------
+                  X / Y resolution 0.1625 / 0.1625 $\mu$m        
  
-          Z resolution           0.4 $\mu$m 
+                      Z resolution 0.4 $\mu$m 
  
-         $\Delta$T - Z          0.5428 s
----------------------- ------------------------------------------------------
+                     $\Delta$T - Z 0.5428 s
+---------------------------------- ----------------------------------
 Table: (\#tab:imgprop) Physical image properties (scaling)
 
 ###### Registered data
 
 During the registration process, the image is rotated against the horizon and cropped in X and Y. Additionally, the centers of the most constricting areas are detected via an intensity based dynamic threshold and highlighted as magenta circles in \@ref(fig:maxreg). Table \@ref(tab:imgregpar) sums up the registration parameters.
-
-\newpage
 
 (ref:maxreg) Registered, Maximum Z projected data
 ```{r maxreg, dpi=200, out.width='95%', fig.align='center', echo=FALSE, fig.cap="(ref:maxreg)"}
@@ -578,7 +573,7 @@ load("figure/02-MaMo/GrTr/Morphology/GroundTruth.RData")
 To compare the results between the ground truth segments and the segments obtained from different threshold levels graphically, for a single PLLp the ground truth and threshold level[n] are shown as a composite color image in figure \@ref(fig:stackcomp). By using a green lookup table (LUT) for the ground truth and a magenta LUT for the threshold level[n], one can readily detect overlapping objects (white), over segmentation (magenta) and under segmentation (green).
 
 (ref:stackcomp) Graphical comparison of the thresholds tested
-```{r stackcomp, dpi=200, out.width='75%', fig.align='center', echo=FALSE, fig.cap="(ref:stackcomp)"}
+```{r stackcomp, dpi=200, out.width='85%', fig.align='center', echo=FALSE, fig.cap="(ref:stackcomp)"}
 knitr::include_graphics("figure/02-MaMo/GrTr/Morphology/volumes.jpg")
 ```
 
@@ -831,19 +826,21 @@ $\mu$-Dish                 ibidi     20-35 mm polymer, #1.5, high wall          
 
 3D Mould Stamp             IBG3D     20-35 mm                               
 
-Preparation needles                                                            
+Preparation needles        VWR                                                     USBE5470
 
-Glass pipettes                                                                  
+Glass pipettes             Roth                                                     4518
 
-Silicone bulbs                                                  
+Silicone bulbs             VWR                                                     612-2327
 
-2 mL tubes                                                                
+Microtubes 2 mL            Sarstedt                                                2691    
 
-Heating block                                                             
+Heating block              PeqLab                                                  HX2
 
-Microwave oven                                                            
+Microwave oven             Severin                                                 MW7849
 
-Petri dishes                                                              
+Stereo microscope          Leica                                                   M165FC 
+
+Transmitted Light Base     Leica                                                   MDG36 
 ------------------------- --------- ---------------------------------------------- ---------
 Table: (\#tab:mounthard) Mounting hardware
 
@@ -930,7 +927,7 @@ The basic principle is based on work done by Laguerre _et al._, 2009[@Laguerre20
 knitr::include_graphics(path = "figure/02-MaMo/Prol/Prolif.png")
 ```
 
-#### Apical Constriction Index {#ACI}
+#### Apical Index {#ACI}
 
 The earliest attempt found for indexing AC can be found in a study published by Lee _et al_[@Lee2009] where they were interested in the 'apical index' (A.I.) of bottle cells during _X.laevis_ gastrulation(figure \@ref(fig:ACLee)).
 
@@ -939,18 +936,19 @@ The earliest attempt found for indexing AC can be found in a study published by 
 knitr::include_graphics(path = "figure/02-MaMo/ACI/Jen_yi_Lee.png")
 ```
 
-\noindent Another example for measuring AC is the apical _constriction_ index (ACI, figure \@ref(ref:ACHard)) for the cells of the _D.rerio_ lateral line primordium (PLLp), which can be found in a study from 2012 where it was shown that Fgfr-Ras-MAPK signaling is required for AC and Rock2a localization6 [@Harding2012; @Harding2013].
+\noindent Another example for measuring AC is the apical _constriction_ index (ACI, figure \@ref(fig:ACHard)) for the cells of the _D.rerio_ lateral line primordium (PLLp), which can be found in a study from 2012 where it was shown that Fgfr-Ras-MAPK signaling is required for AC and Rock2a localization6 [@Harding2012; @Harding2013].
 
 (ref:ACHard) Apical constriction index. **A** 3D reconstructed cells of a CLCLNA control primordium and **B** of a primordium deficient of Fgf signaling.
+
 ```{r ACHard, dpi=200, out.width='75%', fig.cap="(ref:ACHard)", fig.scap = "Apical constriction index"}
 knitr::include_graphics(path = "figure/02-MaMo/ACI/Harding.jpg")
 ```
 
-\noindent In both cases, the measurements for the A.I.[@Lee2009] or ACI[@Harding2013] does not differ and describes the ratio for lateral height over apical width \@ref(fig:ACICells).
+\noindent In both cases, the measurements for the A.I.[@Lee2009] or ACI[@Harding2013] does not differ and describes the ratio for lateral height over apical width \@ref(fig:ACICells). 
 
 \[\mathbf{ACI} = \frac{lateral\;height\;[\mu m]}{apical\;width\;[\mu m]}\]
 
-\noindent While trying to reproduce these results we found two principal weaknesses of applying this ratio to the cells of the PLLp. First, it does not respect the independence of lateral height to AC. Second, it does not differentiate between _anterio-posterior_ (AP) and _dorso-ventral_ (DV) tissue polarization.
+\noindent While trying to reproduce these results we found two principal weaknesses of applying this ratio to the cells of the PLLp. First, it does not respect the independence of lateral height to AC. Second, it does not differentiate between _anterio-posterior_ (AP) and _dorso-ventral_ (DV) tissue polarization. Third, it is really more an A.I. than a constriction index.
 
 ##### Rationale
 
@@ -970,18 +968,13 @@ To obtain a precise and biologically meaningful quantity for AC, first a couple 
 
 ###### Adaption for variation in lateral height {#ACI-lat}
 
-To test different ACI conditions, an apically constricted cell can be approximated by modeling a tetrahedron. For example, shrinking or enlarging a cell symmetrically should not affect the ACI. As described by Harding(2014)[@Harding2013], the _apical width_ of a cell is measured first by manual 3-D object reconstruction, second manual re-orientation, and third by going 1 $\mu$m from the apical tip into the cell (from now on referred  to as $\Delta$ap, \@ref(fig:deltaap)). Finally, _apical width_ is the total width of the 2-D object.
-
-(ref:deltaap) Illustrating $\Delta$ap. **left panel:** An apically constricted cell volume rendered in XY (top) and as a lateral cross-section in X-Z (bottom). **right panel:** the 2-D area as seen when going for 1 or 2.5 $\mu$m $\Delta$ap into the cell
-```{r deltaap, out.width='30%', fig.cap="(ref:deltaap)", fig.scap = "Illustrating delta ap"}
-knitr::include_graphics(path = "figure/02-MaMo/ACI/deltaap.png")
-```
+To test different ACI conditions, an apically constricted cell can be approximated by modeling a tetrahedron. For example, shrinking or enlarging a cell symmetrically should not affect the ACI. As described by Harding(2014)[@Harding2013], the _apical width_ of a cell is measured first by manual 3-D object reconstruction, second manual re-orientation, and third by going 1 $\mu$m from the apical tip into the cell (from now on referred  to as $\Delta$ap, \@ref(fig:ACICells)B). Finally, _apical width_ is the total width of the 2-D object.
 
 If $\Delta$ap is a constant, the ACI in a symmetrically enlarged cell increases from e.g. 15 to 23, since _apical width_ stays the same but lateral height increases. On the contrary, if $\Delta$ap is adjusted relative to a cells lateral height, e.g. by percentage, the ACI in a symmetrically enlarged cell stays the same \@ref(fig:ACICells)
 
-(ref:ACICells) ACI Cell Models. **B** and **C** show cells that are symmetrically increased versions of **A**. While in **B**, a constant $\Delta$ was used, in **C** $\Delta$ was adjusted relative to the lateral height.
+(ref:ACICells) ACI model **A-A’’** ACI Cell Models. A’ and A’’ show cells that are symmetrically increased versions of A. While in A’, constant delta was used, in A’’ delta was adjusted relative to the lateral height. **B** Illustrating delta ap. (left) apically constricted cells volume rendered in XY (top) and as a lateral cross-section in X-Z (bottom). (right) 2D area as seen at delta ap of 1 or 2.5 $\mu$m.
 ```{r ACICells, dpi=200, out.width='75%',fig.cap="(ref:ACICells)", fig.scap = "ACI Cell Models"}
-knitr::include_graphics(path = "figure/02-MaMo/ACI/ACI_Cells.jpg")
+knitr::include_graphics(path = "figures/summary/aci_fig-01.png")
 ```
 
 Therefore the measurement for apical width has to be relative to lateral height.
@@ -1019,17 +1012,16 @@ The two dimensions of AC indices can therefore be described as the following rat
 
 ##### Measurements {#ACI-Dis}
 
-```{r loadaci, eval=TRUE, include=FALSE}
+```{r, echo = F}
 load("figure/02-MaMo/ACI/SN180_ACI.RData")
 ```
 
 ###### Single Cell measurements {#ACI-singlecell}
 
-Each geometric object has a centroid coordinate in X and Y (and Z) which is represented as the mean of all X or Y coordinates within the object. Here, the centroid coordinates in X and Y are used to plot the cells as points in the X-Y plane. Additionally, each point is colored for the ACI value (high values are blue-violet, middle values are green, low values are yellow-red). Table \@ref(tab:cellcountaci) summarizes the number of count objects (n) per condition (Obj).
+Each geometric object has a centroid coordinate in X and Y (and Z) which is represented as the mean of all X or Y coordinates within the object. Here, the centroid coordinates in X and Y are used to plot the cells as points in the X-Y plane. Additionally, each point is colored for the ACI value (high values are blue-violet, middle values are green, low values are yellow-red). 
 
 (ref:ACIMajor) ACI~Major~ single cell measurements
-```{r ACIMajor, out.width='90%', fig.height = 1.75, dpi=400, fig.cap="(ref:ACIMajor)"}
-load("figure/02-MaMo/ACI/SN180_ACI.RData")
+```{r ACIMajor, out.width='85%', fig.height = 1.75, dpi=400, fig.cap="(ref:ACIMajor)"}
 ggplot(SN180, aes(CXN, CY..unit.)) +
   geom_point(aes(colour=ACI_Major), size = 2, shape = 16, show.legend = TRUE) +
   scale_colour_gradientn(colours = rainbow(5)) +
@@ -1039,8 +1031,7 @@ ggplot(SN180, aes(CXN, CY..unit.)) +
 ```
 
 (ref:ACIMinor) ACI~Minor~ single cell measurements
-```{r ACIMinor, out.width='90%', fig.height = 1.75, dpi=400, fig.cap="(ref:ACIMinor)"}
-load("figure/02-MaMo/ACI/SN180_ACI.RData")
+```{r ACIMinor, out.width='85%', fig.height = 1.75, dpi=400, fig.cap="(ref:ACIMinor)"}
 library(ggplot2)
 ggplot(SN180, aes(CXN, CY..unit.)) +
   geom_point(aes(colour=ACI_Minor), size = 2, shape = 16, show.legend = TRUE) +
@@ -1070,7 +1061,6 @@ knitr::include_graphics("figure/02-MaMo/GrTr/HardingACI.png")
 ```
 
 ```{r, out.width='30%', fig.width=3.5, fig.height=3, echo=FALSE, eval=TRUE, include=FALSE}
-load("figure/02-MaMo/ACI/SN180_ACI.RData")
 ggplot(SN180_ACIs_melt, aes(value)) +
   geom_density(aes(fill=GT), alpha=.5, colour="black", show.legend = TRUE) +
   #stat_density(aes(y=..density.., colour=group), geom="line", bw=2.5, size=1.5) +
@@ -1088,7 +1078,6 @@ To check whether there is a bias in orientation of the apical width, the angle m
 
 (ref:angledens) Major~Angle~ density
 ```{r angledens, out.width='40%', fig.width=3.5, fig.height=2.5, dpi=400, fig.cap="(ref:angledens)"}
-load("figure/02-MaMo/ACI/SN180_ACI.RData")
 ggplot(SN180, aes(ACI_Angle)) +
   #geom_density(aes(y=..density.., colour=GT), size=1.5, alpha=.5, bw=2.5) +
   #geom_hline(yintercept=0, colour="white", size=1.5) +
@@ -1101,10 +1090,6 @@ ggplot(SN180, aes(ACI_Angle)) +
 
 ###### ACI magnitude at different Angles {#ACI-mag}
 
-```{r loadaci2, eval=TRUE, include=FALSE}
-load("figure/02-MaMo/ACI/SN180_ACI.RData")
-```
-
 Now, to get an idea of the magnitude ACI~Major~ and ACI~Minor~ have at each angle, each can be shown as a function of the Major~Angle~ over ACI (while Major~Angle~ is the same for both ACIs). Again, the grouping factor 'GT' was used to color the two conditions 'DMSO' and 'SU5402'.
 
 \noindent Since AC is a 3-D morphogenetic process and since cells in a wild type PLLp are mostly radially organized, it does make sense to try to look at AC from more than just one perspective. Here we propose to separate the ACI into an _antero-posterior_ and a _dorso-ventral_ dimension.
@@ -1115,7 +1100,6 @@ Now, to get an idea of the magnitude ACI~Major~ and ACI~Minor~ have at each angl
 
 (ref:angletoACI) ACI~Major~ / ACI~Minor~ over Major~Angle~
 ```{r angletoACI, out.width='60%', fig.width=5, fig.height=2.75, fig.cap="(ref:angletoACI)"}
-load("figure/02-MaMo/ACI/SN180_ACI.RData")
 ggplot(SN180_ACIs, aes(Angle, value)) +
   stat_smooth(aes(colour=GT), geom = "line", se=FALSE, method="loess", span=.3, size=1.5) +
   scale_x_continuous(breaks = seq(0, 90, 25)) +
@@ -1167,7 +1151,7 @@ In summary our results suggest that there is no significant difference either in
 ----------------- ---------------------------------------------------------------
 Table: (\#tab:ccdata) Cell Cluster dataset
 
-### Apical Constriction Index {#aci-data}
+### Apical Index {#aci-data}
 
 ----------------- ---------------------------------------------------------------
 **Crossings** 
@@ -1200,7 +1184,7 @@ Table: (\#tab:ccdata) Cell Cluster dataset
  
  Z-Stack          0.4 $\mu$m Z-spacing
 ----------------- ---------------------------------------------------------------
-Table: (\#tab:acidata) ACI dataset
+Table: (\#tab:acidata) AI dataset
 
 ### Proliferation {#tl-data}
 

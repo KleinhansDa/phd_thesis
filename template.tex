@@ -30,6 +30,8 @@
 % Chemistry (chemtex), screenplays, you name it.
 % Check out CTAN to see: http://www.ctan.org/
 %%
+\usepackage{flipbook}
+\usepackage{pgf}
 \usepackage{graphicx,latexsym}
 \usepackage{lastpage}
 \usepackage{amsmath}
@@ -147,28 +149,26 @@ $endfor$
 
 \begin{document}
 
-% Everything below added by CII
+\pagenumbering{arabic} % Make sure a page numbering scheme is explicitly set at the beginning.
+
 $if(title)$
   \maketitle
 $endif$
 
-\frontmatter % this stuff will be roman-numbered
+%\frontmatter % this stuff will be roman-numbered
 \pagestyle{empty} % this removes page numbers from the frontmatter
 
 $if(acknowledgements)$
   \begin{acknowledgements}
     $acknowledgements$
-\begin{center}
-\includegraphics[width=0.5\textwidth]{figure/05-Appendix/DSC07341.png}
-\end{center}
+    \begin{center}
+      \includegraphics[width=0.5\textwidth]{figure/05-Appendix/DSC07341.png}
+    \end{center}
   \end{acknowledgements}
 $endif$
 
-$if(preface)$
-  \begin{preface}
-    $preface$
-  \end{preface}
-$endif$
+%\mainmatter % here the regular arabic numbering starts
+%\pagestyle{fancyplain} % turns page numbering back on
 
 $if(toc)$
   \hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
@@ -205,9 +205,6 @@ $endif$
 \pagestyle{fancyplain} % turns page numbering back on
 
 $body$
-
-
-% Index?
 
 \end{document}
 

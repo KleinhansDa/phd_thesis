@@ -102,44 +102,18 @@
 % End of CII add
 
 % This gives us rules below the headers
-\AtBeginDocument{%
-  \fancyhf{}
-  \fancyhead[LE,RO]{\thepage}
-%  \fancyhead[RE]{\slshape \leftmark}
-%  \fancyhead[LO]{\slshape \rightmark}
-%	The above makes your headers in all caps. If you would like different headers, choose one of the following options (be sure to remove the % symbol from both the right and left headers):
-	 \fancyhead[RE]{\slshape \nouppercase \leftmark} % This makes the headers on the RIGHT side pages be italic and use lowercase With Capitals When Specified.
-	\fancyhead[LO]{\slshape \nouppercase \rightmark} % This does the same thing to the LEFT side pages
-%	or
-%	\fancyhead[RE]{\scshape \leftmark} % The RIGHT headers will be in small caps.
-%	\fancyhead[LO]{\scshape \rightmark} %  And so will the LEFT headers
-  \pagestyle{fancy}
 
-% Psych majors: You do not need the following six lines, as it conflicts with apacite, so comment them out.
-  \let\oldthebibliography=\thebibliography
-  \let\endoldthebibliography=\endthebibliography
-  \renewenvironment{thebibliography}[1]{
-    \oldthebibliography{#1}
-    \addcontentsline{toc}{chapter}{\bibname}
-  }{\endoldthebibliography}
- %%%%%% end of things for psych majors to comment out
-
-  \let\oldtheindex=\theindex
-  \let\endoldtheindex=\endtheindex
-  \renewenvironment{theindex}{
-    \oldtheindex
-    \addcontentsline{toc}{chapter}{\indexname}
-  }{\endoldtheindex}
-}
 
 % Stolen from book.cls and modified
 \let\RToldchapter\chapter
-\renewcommand{\chapter}{\if@openright\RTcleardoublepage
-		    \else\clearpage\fi
-		    \thispagestyle{empty}%
-		    \global\@topnum\z@
-		    \@afterindentfalse
-		    \secdef\@chapter\@schapter}
+\renewcommand{\chapter}{
+  \if@openright\RTcleardoublepage
+  \else\clearpage\fi
+  \thispagestyle{empty}%
+  %\renewcommand{\headrulewidth}{0pt} % no top rule
+  \global\@topnum\z@
+	\@afterindentfalse
+	\secdef\@chapter\@schapter}
 
 % Stolen from book.cls PBC 5/12/05
 % Using this to actually show "Chapter 1" in TOC instead of "1"
@@ -273,31 +247,26 @@
 }{\clearpage \if@restonecol\twocolumn\fi}%
 
 
-\ifx\@pdfoutput\@undefined
-  \newcommand{\RTpercent}{\@percentchar\space}
-  \AtBeginDvi{\special{!\RTpercent Reed College LaTeX Thesis Class 2001/12/04 SN}}
-  \AtBeginDvi{\special{rawpostscript \RTpercent Reed College LaTeX Thesis Class 2001/12/04 SN}}
-\else
-  \AtEndDocument{\pdfinfo{/Creator	(Reed College LaTeX Thesis Class 2001/12/04 SN)}}
-\fi
+
 
 % I hacked the title page to all be the same font size
 % as requested by the library, BTS 2005
 
 \renewcommand{\maketitle}{%
-  {\pagestyle{empty}
-  \fontsize{12}{14}\selectfont
-  \begin{titlepage}
-  \newpage
-  \let\footnotesize\small
-  \let\footnoterule\relax
-  \let \footnote \thanks
+  {
+    \pagestyle{empty}
+    \fontsize{12}{14}\selectfont
+    \begin{titlepage}
+      \newpage
+      \let\footnotesize\small
+      \let\footnoterule\relax
+      \let \footnote \thanks
 
   \baselineskip = 1.4\baselineskip
   \setbox0=\hbox{of the Requirements for the Degree}
 
   \begin{center}
-    \setcounter{page}{1}
+    %\setcounter{page}{1}
     \null\vfil
     {\fontsize{12}{14}\selectfont \@title}
     \vfil
@@ -377,3 +346,24 @@
 \newcommand{\Dedication}[1]{\def\@Dedication{#1}}
 \newcommand{\Preface}[1]{\def\@Preface{#1}}
 % End of CII add
+
+% Flipbook stuff
+\usepackage{fancyhdr}
+\usepackage{pgf}
+\pagestyle{fancy} % turns page numbering back on
+\makeatletter % To have access to \if@twoside
+\fancyfoot{} % Clear footer
+% Add flipbook frames to the footer, next to page numbers
+% See documentation in README.md for details
+	\fancyfoot[RO] {
+    %\renewcommand{\labeledflipbookframe}[3]{\includegraphics{#1#2.#3}}
+    \labeledflipbookframe[0][0.5]{figures/flipbook/tex/wt_}[tex][0.2]{r}{\thepage}{2em}%
+	}
+	\fancyfoot[LE] {
+    %\renewcommand{\labeledflipbookframe}[3]{\includegraphics{#1#2.#3}}
+    \labeledflipbookframe[0][0.5]{figures/flipbook/tex/hom_}[tex][0.2]{l}{\thepage}{2em}%
+	}
+
+\makeatother
+
+\usepackage{lipsum} % to generate sample text

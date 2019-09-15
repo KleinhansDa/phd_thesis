@@ -17,7 +17,7 @@ A full data analysis report can be found on [github](https://github.com/Kleinhan
 
 ### Number and Position of Cell Clusters {#res-ccounts}
 
-To normalize the number of deposited CCs to individual LL lengths, for comparison the ratio of LL length over CC count is used \@ref(fig:llcounts)B. To correct for uneven LL paths^[fixation with PFA may introduce a slight bending of the embryo] and irregularities in mounting^[When mounted, all embryos have a different tilt], CC distances are calculated in Euclidian space rather than solely in dimension X. While _shrm3++_ embryos deposit 6 $\pm$ 0.7 CCs, _shroom3_$--$ embryos deposit 8 $\pm$ 0.9 CCs \@ref(fig:llcounts)A. This difference stays true also when normalizing against length \@ref(fig:llcounts)B.
+To normalize the number of deposited CCs to individual LL lengths, for comparison the ratio of LL length over CC count is used (\@ref(fig:llcounts)B). To correct for uneven LL paths^[fixation with PFA may introduce a slight bending of the embryo] and irregularities in mounting^[When mounted, all embryos have a different tilt], CC distances are calculated in Euclidian space rather than solely in dimension X. While _shrm3++_ embryos deposit 6 $\pm$ 0.7 CCs, _shroom3_$--$ embryos deposit 8 $\pm$ 0.9 CCs (\@ref(fig:llcounts)A). This difference stays true also when normalizing against length (\@ref(fig:llcounts)B).
 
 (ref:llcounts) Cluster counts **A** cluster count **B** normalized to length (LL length [µm] / cluster count [n])
 
@@ -25,8 +25,8 @@ To normalize the number of deposited CCs to individual LL lengths, for compariso
 knitr::include_graphics("figures/results/01_morphometrics/ll_counts.png")
 ```
 
-Even though CC position in individual _shroom3_$--$ embryos seems more random, the position of the first deposited CC is mostly conserved (\@ref(fig:llpos)A, $p$ for difference in position = 0.2). Similarly, the position of the pLLP also isn’t significantly changed. While for the remaining CCs an average lag of -50.4 $\mu$m as compared to _shroom3_++ CC positions is observed, it also seems to increase with later CC positions. For _shroom3_++ embryos CC position is mostly conserved through development, however it remains elusive if this is true for _shroom3_$--$ embryos too. 
-\@ref(fig:llpos)A', shows the kernel density distribution for the CC position without grouping individual positions. At a binwidth of 50 $\mu$m, the distribution curves show a high and narrow density at around 350 $\mu$m, which is the average location of CC1 (\@ref(fig:llpos) 2A). For the remaining CCs the kernel distribution does, neither for _shroom3_++ nor for _shroom3_$--$ embryos, reveal a precise location. In contrast, if based on CC sequential identity the mean position and standard deviation is calculated, a more explicit pattern emerges which clearly shows the increased count and average frequency (\@ref(fig:llpos) 2A).
+Even though CC position in individual _shroom3_$--$ embryos seems more random, the position of the first deposited CC is mostly conserved (\@ref(fig:llpos)A), $p$ for difference in position = 0.2). Similarly, the position of the pLLP also isn’t significantly changed. While for the remaining CCs an average lag of -50.4 $\mu$m as compared to _shroom3_++ CC positions is observed, it also seems to increase with later CC positions. For _shroom3_++ embryos CC position is mostly conserved through development, however it remains elusive if this is true for _shroom3_$--$ embryos too. 
+Figure \@ref(fig:llpos)A', shows the kernel density distribution for the CC position without grouping individual positions. At a binwidth of 50 $\mu$m, the distribution curves show a high and narrow density at around 350 $\mu$m, which is the average location of CC1 (\@ref(fig:llpos) 2A). For the remaining CCs the kernel distribution does, neither for _shroom3_++ nor for _shroom3_$--$ embryos, reveal a precise location. In contrast, if based on CC sequential identity the mean position and standard deviation is calculated, a more explicit pattern emerges which clearly shows the increased count and average frequency (\@ref(fig:llpos) 2A).
 
 (ref:llpos) Cell Cluster positions **A** Exemplary _shroom3_++ and $--$ embryos with CCs hightlighted. CC0 marks the reference location to compare individual embryos. Scale bar = 1 mm **A'** Kernel Density Estimate without (KDE) grouping (n++=162, n--=206) **A'\'** Dots = mean positions, bars = standard deviation (nmax for both ++ and -\- =26).
 
@@ -61,7 +61,7 @@ To index the proliferative activity (minutes per mitosis) per embryo, the produc
 
 Tracking mitoses in the pLLP does not reveal any difference in proliferation from start (~28 hpf) till about mid of migration 12 hours later (\@ref(fig:prolpllp)B). For confirmation, this finding was also validated via two more traditional methods. During mitosis genetic material is replicated in S-phase^[‘S‘ like ‚Synthesis‘], while in meta-phase chromosomes are found to be heavily phosphorylated [@Hans2001]. With an EdU^[5-Ethynyl-2'-deoxyuridine] assay [@Fischer] cells in S-phase can be detected (\@ref(fig:prolpllp)B'). Using a specific phospho-histone (p-Hist.) antibody cells in meta-phase can be detected. When comparing the relative numbers of EdU resp. p-Hist cells over total pLLP cells, again, no difference in proliferation can be detected. Still, at end of migration the LL system in _shroom3_$--$ embryos does incorporate 9$\%$ more cells.
 
-(ref:prolpllp) pLLP proliferation **A** Tracks of Mitosis. (Image data) Last timepoint of Z-projected time-lapse movie. (Labels) each dots marks a mitotic events. Each color represents one mitosis. Each connection between two dots represents 6 min. **B-B''** Mitoses in the pLLP. (B) Count of Mitoses through time (mean$\pm$sd) (B') Proliferation Index at 36 hpf for EdU and phospho Histone labeled pLLPs (B'') Examples of EdU staining (scale bar = 100 $\mu$m) **C** Mitoses in Cell Clusters. B' and C, the colored bar indicated the median, bars indicate the 95% CI. 
+(ref:prolpllp) pLLP proliferation **A** Tracks of Mitosis. (Image data) Last timepoint of Z-projected time-lapse movie. (Labels) each dots marks a mitotic events. Each color represents one mitosis. Each connection between two dots represents 6 min. **B-B'\'** Mitoses in the pLLP. (B) Count of Mitoses through time (mean$\pm$sd) (B') Proliferation Index at 36 hpf for EdU and phospho Histone labeled pLLPs (B'') Examples of EdU staining (scale bar = 100 $\mu$m) **C** Mitoses in Cell Clusters. B' and C, the colored bar indicated the median, bars indicate the 95% CI. 
 
 ```{r prolpllp, out.width = "0.85\\textwidth", fig.cap="(ref:prolpllp)", fig.scap="pLLP proliferation"}
 knitr::include_graphics("figures/results/02_proliferation/prol-01.png")
@@ -188,7 +188,7 @@ While reduction in ACI Major is stronger than the ACI Minor in shroom3$--$ cells
 
 (ref:acaci) 3D metrics and pLLP maps. **A-A’** Measurements. (A) Oval (black outline) represents the fit ellipse. Red arrows represent major and minor axes which are representative for A-P and D-V respectively (A’) Angle measurements and intervals **B** Cellular orientation as bar chart. Statistics are indicated as stars. **C-C’** Apical Constriction measurements. Colored bars represent the median. Errorbars indicate 95% CI.
 
-```{r acaci, out.width = "0.95\\textwidth", fig.cap="(ref:acaci)", fig.scap="Apical Constriction in 3D"}
+```{r acaci, out.width = "0.95\\textwidth", fig.cap="(ref:acaci)", fig.scap="3D metrics and pLLP maps"}
 knitr::include_graphics("figures/results/04_constriction/Figure_5-2.png")
 ```
 
@@ -250,9 +250,10 @@ knitr::include_graphics("figures/results/06_rescues/shrm3/rescue_temp.png")
 
 ```{r rescshrmtab, out.width = "0.95\\textwidth"}
 data <- read.delim("data/tables/hsdata.txt")
-knitr::kable(data, "latex", booktabs=T, caption = 'Heatshock rescue dataset summary', escape = F) %>%
+knitr::kable(data, "latex", booktabs=T, caption = 'Heatshock rescue dataset summary', escape = F, align=c('r', 'c', 'c', 'c', 'c')) %>%
   kable_styling(full_width = T) %>%
   kable_styling(font_size = 11) %>%
+  collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
   add_header_above(c("id labels" = 3, "metrics" = 2), bold=T)
 ```
 
@@ -284,10 +285,14 @@ knitr::include_graphics("figures/results/06_rescues/su54/rescue_su.png")
 
 ```{r rescsutab, out.width = "0.95\\textwidth"}
 data <- read.delim("data/tables/sudata.txt")
-knitr::kable(data, "latex", booktabs=T, caption = 'Morphogen rescue dataset summary') %>%
+knitr::kable(data, "latex", booktabs=T, caption = 'Morphogen rescue dataset summary', escape = F, align=c('c', 'c', 'c', 'c', 'c', 'c'),
+             col.names = c("genotype", "conc. ($\\mu$M)", "LLs", "genotype", "conc. ($\\mu$M)", "LLs")) %>%
   kable_styling(full_width = T) %>%
   kable_styling(font_size = 11) %>%
-  add_header_above(c("shroom3++" = 3, "shroom3--" = 3), bold=T)
+  collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
+  add_header_above(c("shroom3++" = 3, "shroom3--" = 3), bold=T) %>%
+  collapse_rows(columns = 4, latex_hline = "none", valign = "top") %>%
+  footnote(general = "concentrations in 0.1% DMSO")
 ```
 
 A full data analysis report can be found on [github](https://github.com/KleinhansDa/reports/blob/master/b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3/clusters_su.html)
@@ -308,10 +313,11 @@ knitr::include_graphics("figures/results/06_rescues/rockout/rescue_rockout.png")
 
 ```{r rescrocktab, out.width = "0.95\\textwidth", fig.cap="(ref:rescrock)", fig.scap="Titration of Rock inhibitor"}
 data <- read.delim("data/tables/rkoutdata.txt")
-knitr::kable(data, "latex", booktabs=T, caption = 'Rockout rescue dataset summary') %>%
+knitr::kable(data, "latex", booktabs=T, caption = 'Rockout rescue dataset summary', align=c('r', 'c', 'l'), escape=F,
+             col.names = c("genotype", "conc. ($\\mu$M)", "LLs")) %>%
   kable_styling(full_width = T) %>%
-  kable_styling(font_size = 11) #%>%
-  #add_header_above(c("id labels" = 2, "metrics" = 3))
+  kable_styling(font_size = 11)  %>%
+  footnote(general = "concentrations in 0.1% DMSO")
 ```
 
 A full data analysis report can be found on [github](https://github.com/KleinhansDa/reports/blob/master/b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3/clusters_rkout.html)
@@ -322,16 +328,17 @@ The idea for this experiment was to rescue _shroom3_$--$ embryos by enhancing th
 
 (ref:resccal) Calyculin treatment (A) (B) 
 
-```{r resccal, out.width = "0.95\\textwidth", fig.cap="(ref:resccal)", fig.scap="Calyculin treatment"}
+```{r resccal, out.width = "0.85\\textwidth", fig.cap="(ref:resccal)", fig.scap="Calyculin treatment"}
 knitr::include_graphics("figures/results/06_rescues/caliculyn/rescue_cali.png")
 ```
 
 ```{r resccaltab, out.width = "0.95\\textwidth", fig.cap="(ref:resccal)", fig.scap="Calyculin treatment"}
 data <- read.delim("data/tables/caldata.txt")
-knitr::kable(data, "latex", booktabs=T, caption = 'Calyculin rescue dataset summary') %>%
+knitr::kable(data, "latex", booktabs=T, caption = 'Calyculin rescue dataset summary', align=c('c', 'c', 'c'), escape=F,
+             col.names = c("genotype", "conc. (nM)", "LLs", "genotype", "conc. (nM)", "LLs")) %>%
   kable_styling(full_width = T) %>%
-  kable_styling(font_size = 11) #%>%
-  #add_header_above(c("id labels" = 2, "metrics" = 3))
+  kable_styling(font_size = 11) %>%
+  footnote(general = "concentrations in 0.1% DMSO")
 ```
 
 A full data analysis report can be found on [github](https://github.com/KleinhansDa/reports/blob/master/b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3/clusters_clcln.html)
@@ -349,7 +356,8 @@ knitr::include_graphics("figures/results/06_rescues/temp/rescue_temp.png")
 
 ```{r resctemptab, out.width = "0.95\\textwidth"}
 data <- read.delim("data/tables/tempdata.txt")
-knitr::kable(data, "latex", booktabs=T, caption = 'Thermodynamic rescue dataset summary') %>%
+knitr::kable(data, "latex", booktabs=T, caption = 'Thermodynamic rescue dataset summary', align=c('c', 'c', 'c'), escape=F,
+             col.names = c("genotype", "treatment", "LLs", "genotype", "treatment", "LLs")) %>%
   kable_styling(full_width = T) %>%
   kable_styling(font_size = 11) %>%
   add_header_above(c("shroom3++" = 3, "shroom3--" = 3), bold=T)
@@ -377,9 +385,10 @@ Referring back to the results we got from the hair cell analysis in section \@re
 knitr::include_graphics("figures/results/06_rescues/atoh1a/rescue_atoh.png")
 ```
 
-```{r rescatotab, out.width = "0.95\\textwidth", fig.cap="(ref:rescato)", fig.scap="atoh1a knockdown"}
+```{r rescatotab, out.width = "0.95\\textwidth"}
 data <- read.delim("data/tables/atodata.txt")
-knitr::kable(data, "latex", booktabs=T, caption = 'Atoh rescue dataset summary') %>%
+knitr::kable(data, "latex", booktabs=T, caption = 'Atoh rescue dataset summary', align=c('c', 'c', 'c'), escape=F,
+             col.names = c("genotype", "group", "LLs", "genotype", "group", "LLs")) %>%
   kable_styling(full_width = T) %>%
   kable_styling(font_size = 11) %>%
   add_header_above(c("shroom3++" = 3, "shroom3--" = 3), bold=T)

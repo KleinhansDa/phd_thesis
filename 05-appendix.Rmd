@@ -6,9 +6,7 @@
 If you feel it necessary to include an appendix, it goes here.
 -->
 
-# Neuromasts
-
-## SEM
+# Supplement
 
 To check whether the reduction in size and cell count of NMs in shroom3$--$ embryos had an effect on their morphology too, scanning electron microscopy (SEM) samples for each group were imaged.
 
@@ -18,8 +16,6 @@ To check whether the reduction in size and cell count of NMs in shroom3$--$ embr
 knitr::include_graphics("figures/supp/sem.png")
 ```
 
-## Hair-cells
-
 To check whether the reduction in size and cell count of NMs in shroom3$--$ embryos had an effect on hair cell development, immunostainings on 4 dpf embryos with a hair cell specific marker were performed.
 
 (ref:suppllhc) Lateral Line Haircells
@@ -28,25 +24,17 @@ To check whether the reduction in size and cell count of NMs in shroom3$--$ embr
 knitr::include_graphics("figures/supp/ll_hc.png")
 ```
 
-# Rosette Formation
-
-## Shroom3 localization
-
 (ref:supploc) Shroom3 localization
 
 ```{r supploc, out.width = "0.75\\textwidth", fig.cap="(ref:supploc)", fig.scap="Shroom3 localization"}
 knitr::include_graphics("figures/supp/loc.png")
 ```
 
-## Luminal Signaling
-
 (ref:suppzo1) Luminal signaling
 
 ```{r suppzo1, out.width = "0.8\\textwidth", fig.cap="(ref:suppzo1)", fig.scap="Luminal signaling"}
 knitr::include_graphics("figures/supp/zo1.png")
 ```
-
-# Proliferation
 
 An important regulator for proliferation and organ size is the mechanosensitive hippo signaling pathway where the transcription factors Yap and Taz are the most downstream targets. When dephosphorylated, Yap and Taz translocate from the cytoplasm to the nucleus to induce target gene expression. 
 To check for differences in hippo signaling, immunostainings for Taz were performed. On average the immunostainings suggest that Taz localization is more concentrated in the leading region and in the nuclei of peripherical PLLp cells.
@@ -57,7 +45,11 @@ To check for differences in hippo signaling, immunostainings for Taz were perfor
 knitr::include_graphics("figures/supp/immunos.png")
 ```
 
-# Shroom3 interaction partners
+(ref:suppshrmort) Shroom Ortho- and Paralogs
+
+```{r suppshrmort, out.width = "0.8\\textwidth", fig.cap="(ref:suppshrmort)", fig.scap="Shroom Ortho- and Paralogs"}
+knitr::include_graphics("figures/supp/Shroom3_orthology-01.png")
+```
 
 (ref:supplim) LIM domain proteins
 
@@ -65,47 +57,17 @@ knitr::include_graphics("figures/supp/immunos.png")
 knitr::include_graphics("figures/supp/lim.png")
 ```
 
-(ref:supplpp) Lpp-RFP
+(ref:supplpp) Interaction partners fusion proteins **A** _tagRFP-trip6_ **B** _tagRFP-limD1_ **C** _lpp-RFP_
 
-```{r supplpp, out.width = "0.5\\textwidth", fig.cap="(ref:supplpp)", fig.scap="Lpp-RFP"}
-knitr::include_graphics("figures/supp/partners/lpprfp.jpg")
+```{r supplpp, out.width = "0.8\\textwidth", fig.cap="(ref:supplpp)", fig.scap="Interaction partners fusion proteins"}
+knitr::include_graphics("figures/supp/partners/partners.jpg")
 ```
 
-# Rescue experiments
+(ref:supppos) CC positions **A** Calyculin **B** Rockout **C** Heatshock **D** SU5402 **E** Temperature
 
-(ref:suppsucc) SU5402 CC positions
-
-```{r suppsucc, out.width = "0.8\\textwidth", fig.cap="(ref:suppsucc)", fig.scap="SU5402 CC positions"}
-knitr::include_graphics("figures/results/06_rescues/su54/cc_positions.png")
+```{r supppos, out.width = "0.8\\textwidth", fig.cap="(ref:supppos)", fig.scap="Heatshock CC positions"}
+knitr::include_graphics("figures/supp/cc_positions.png")
 ```
-
-(ref:supprkoutcc) Rockout CC positions
-
-```{r supprkoutcc, out.width = "0.8\\textwidth", fig.cap="(ref:supprkoutcc)", fig.scap="Rockout CC positions"}
-knitr::include_graphics("figures/results/06_rescues/rockout/cc_positions.png")
-```
-
-(ref:suppcalcc) Calyculin CC positions
-
-```{r suppcalcc, out.width = "0.8\\textwidth", fig.cap="(ref:suppcalcc)", fig.scap="Calyculin CC positions"}
-knitr::include_graphics("figures/results/06_rescues/caliculyn/cc_positions.png")
-```
-
-(ref:supptempcc) Temperature CC positions
-
-```{r supptempcc, out.width = "0.8\\textwidth", fig.cap="(ref:supptempcc)", fig.scap="Temperature CC positions"}
-knitr::include_graphics("figures/results/06_rescues/temp/cc_positions.png")
-```
-
-(ref:supphscc) Heatshock CC positions
-
-```{r supphscc, out.width = "0.8\\textwidth", fig.cap="(ref:supphscc)", fig.scap="Heatshock CC positions"}
-knitr::include_graphics("figures/results/06_rescues/shrm3/cc_positions.png")
-```
-
-# Models
-
-## LL patterning
 
 The CC pattern for both _shrm3_++ and _shroom3_$--$ can be modeled by a phase modulated cosine (figure 1), where the power to x represents the phase and is increased by only 0.1 in _shroom3_$--$ to go from a CC count of 5 to 7 over a span of 20 hours.
 
@@ -114,8 +76,6 @@ The CC pattern for both _shrm3_++ and _shroom3_$--$ can be modeled by a phase mo
 ```{r supccpmodel, out.width = "0.8\\textwidth", fig.cap="(ref:supccpmodel)", fig.scap="CC pattern model"}
 knitr::include_graphics("figures/supp/cc_model.png")
 ```
-
-## Morphogenetic gradients
 
 (ref:supgrad) Morphogenic gradients
 

@@ -53,6 +53,5 @@ Advanced courses: Biology, Mathematics
 
 \vspace{0.3cm}
 \noindent {\large \textbf{Publications}} \hrulefill
-\vspace{0.2cm}
 
 1. Nollmann, F. I., Heinrich, A. K., Brachmann, A. O., Morisseau, C., Mukherjee, K., Casanova-Torres, M., Strobl, F., Kleinhans, D., Kinski, S., Schultz, K., *et al.* (2015). [**A Photorhabdus Natural Product Inhibits Insect Juvenile Hormone Epoxide Hydrolase.**](https://onlinelibrary.wiley.com/doi/abs/10.1002/cbic.201402650) ChemBioChem 16, 766-771.

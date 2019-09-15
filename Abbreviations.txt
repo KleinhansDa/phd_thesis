@@ -8,6 +8,7 @@ C	CI	confidence interval
 D	dpf	days post fertilization
 D	DSH	Dishevelled
 E	ECDF 	Empirical Cumulative Distribution Function
+E	EDF	Extended Depth of Field
 F	Fgf	Fibroblast Growth Factor
 F	Fgfr1	Fgf receptor 1
 F	FOV	Field of View

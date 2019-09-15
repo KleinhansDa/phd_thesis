@@ -75,13 +75,7 @@ When controlling these results by trying to rescue the _shroom3_$--$ with a _ato
 
 ## Single cell reconstruction and AC measurement
 
-Earlier attempts for indexing AC include measuring the ‘apical index’ (A.I.) of bottle cells during _X.laevis_ gastrulation [@Lee2007a] or the ACI for cells of the pLLP [@Harding2012]. For both, the metric describes the ratio of lateral height over apical width which, depending on the situation, is a very coarse and inaccurate description. In the pLLP cells of different forms, volumes and heights can be found. When measuring apical width at a fix distance from the apical site cells with different height but otherwise equal degree of AC turn out to have a very different ACI (\@ref(fig:disaci)A and A’). If however apical width is measured at a distance relative to the cells height, cells turn out to have the same ACI (\@ref(fig:disaci)A and A’’). In addition, it remains questionable exactly how to define _apical width_ in a two-dimensional cellular cross-section. By introducing apical width measurement along both, the major and the minor axis (section \@ref(ACI-pol)), the improved model for AC and method for automated and unbiased cellular segmentation therefore represents a major advancement.
-
-(ref:disaci) ACI model **A-A’’** ACI Cell Models. A’ and A’’ show cells that are symmetrically increased versions of A. While in A’, constant delta was used, in A’’ delta was adjusted relative to the lateral height. **B** Illustrating delta ap. (left) apically constricted cells volume rendered in XY (top) and as a lateral cross-section in X-Z (bottom). (right) 2D area as seen at delta ap of 1 or 2.5 $\mu$m.
-
-```{r disaci, out.width = "0.95\\textwidth", fig.cap="(ref:disaci)", fig.scap="ACI model"}
-knitr::include_graphics("figures/summary/aci_fig-01.png")
-```
+Earlier attempts for indexing AC include measuring the ‘apical index’ (A.I.) of bottle cells during _X.laevis_ gastrulation [@Lee2007a] or the ACI for cells of the pLLP [@Harding2012]. For both, the metric describes the ratio of lateral height over apical width which, depending on the situation, is a very coarse and inaccurate description. In the pLLP cells of different forms, volumes and heights can be found. When measuring apical width at a fix distance from the apical site cells with different height but otherwise equal degree of AC turn out to have a very different ACI (\@ref(fig:ACICells)A and A’). If however apical width is measured at a distance relative to the cells height, cells turn out to have the same ACI (\@ref(fig:ACICells)A and A’’). In addition, it remains questionable exactly how to define _apical width_ in a two-dimensional cellular cross-section. By introducing apical width measurement along both, the major and the minor axis (section \@ref(ACI-pol)), the improved model for AC and method for automated and unbiased cellular segmentation therefore represents a major advancement.
 
 AC is also correlated with cell height. To get a more detailed impression about how variables are distributed within the cells of the pLLP, single cell measurements of pLLPs that are normalized in orientation can be superimposed in a two-dimensional map of organ length and width. Next, cell coordinates in this map can be grouped into bins of hexagons and the summary statistic represented as color on a continuous scale (\@ref(fig:dismap)). Doing so reveals that for stages 32 and 36 hpf, height in _shroom3_$--$ cells is not as strongly reduced as in SU5402 treated ones and that cells in the central region of the pLLP are higher than in the leading, trailing and lateral regions. In this specific case this may not lead to new insights, but it improves the visual perception and therefore may assist more concise questioning and reasoning.
 
@@ -95,8 +89,10 @@ In addition to visualization, large multidimensional datasets offer the possibil
 
 (ref:dispca) Principal Component Analysis (A) (B)
 
-```{r dispca, out.width = "0.95\\textwidth", fig.cap="(ref:dispca)", fig.scap="Principal Component Analysis"}
+```{r dispca, out.width = "0.85\\textwidth", fig.cap="(ref:dispca)", fig.scap="Principal Component Analysis"}
 knitr::include_graphics("figures/summary/pca_fig.png")
 ```
 
 Yet another application example would be to use the ground truth image data generated for my studies to train a CNN that potentially would be more robust to data of different quality / resolution and easier to use as it wouldn’t require as much pre-processing.
+
+## Future perspectives

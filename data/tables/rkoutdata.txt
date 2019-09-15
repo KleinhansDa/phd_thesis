@@ -1,5 +1,5 @@
 genotype	concentrations	LLs
-++	0.1% DMSO	17
-	10 uM	13
-	50 uM	17
-	100 uM	20
+++	0.0	17
+	10	13
+	50	17
+	100	20
