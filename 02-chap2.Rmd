@@ -839,12 +839,14 @@ knitr::include_graphics("figure/02-MaMo/CNN/CNNtrain.png")
 
 ```{r CNNtraining}
 tab <- read.delim("figures/materials/cnn_train_dat.txt")
-knitr::kable(tab, "latex", booktabs = T, caption = "CNN training data", escape = F) %>%
+knitr::kable(tab, "latex", booktabs = T, caption = "CNN training data", align = 'c', escape = F) %>%
   kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
   row_spec(0, bold = T) %>%
-  column_spec(2, width = "1.5cm") %>%
-  column_spec(3, width = "1cm" )%>%
-  column_spec(4, width = "1cm")
+  column_spec(2, width = "1cm") %>%
+  column_spec(3, width = "1cm" ) %>%
+  column_spec(4, width = "1.5cm") %>%
+  column_spec(5, width = "1.5cm") %>%
+  column_spec(6, width = "1.5cm")
 ```
 
 #### Proliferation Analysis{#prolif}
@@ -1061,7 +1063,8 @@ Summaries of Image datasets
 ```{r ccdata}
 tab <- read.delim("figures/materials/imgdat_cc.txt")
 knitr::kable(tab, "latex", booktabs = T, caption = "Cell Cluster dataset", escape = T) %>%
-  kable_styling(full_width = T, latex_options = c('striped', 'hold_position'))
+  kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
+  collapse_rows(columns = 1, latex_hline = "none", valign = "top") 
 ```
 
 ### Apical Index {#aci-data}
