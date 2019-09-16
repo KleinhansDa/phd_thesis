@@ -11,8 +11,8 @@ title: '**Mechano – Chemical Feedback Loops \linebreak During Vertebrate Organ
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 output: 
-  #thesisdown::thesis_pdf: default
-  thesisdown::thesis_gitbook: default
+  thesisdown::thesis_pdf: default
+  #thesisdown::thesis_gitbook: default
 #  thesisdown::thesis_word: default
 #  thesisdown::thesis_epub: default
 # If you are creating a PDF you'll need to write your preliminary content here or
@@ -100,3 +100,27 @@ PDF files and also delete the # before rmd_files: there.  You'll want to not inc
 and 00-abstract.Rmd since they are handled in the YAML above differently for the PDF version.
 -->
 
+# Zusammenfassung {.unnumbered}
+
+something
+
+# Summary {.unnumbered}
+
+something
+
+# List of Abbreviations {.unnumbered}
+
+```{r abbrev, out.width = "0.95\\textwidth"}
+options(knitr.kable.NA = '')
+data <- read.delim("Abbreviations.txt")
+knitr::kable(data, "latex", booktabs=T, col.names = c("Index", "Abbreviation", "Elaboration"), align=c('c', 'c', 'l')) %>%
+  kable_styling(full_width = T, latex_options = "striped") %>%
+  row_spec(0, bold = T) %>%
+  column_spec(1, bold = T) %>%
+  column_spec(3, width = "10cm") %>%
+  collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
+  kable_styling(font_size = 9)
+  #add_header_above(c("id labels" = 2, "metrics" = 3))
+#pack_rows("Group 1", 4, 7) %>%
+#pack_rows("Group 2", 8, 10)
+```
