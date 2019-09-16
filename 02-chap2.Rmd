@@ -91,8 +91,6 @@ Table: (\#tab:mat-chem) Chemicals
 ---------------------------------------------------------------------------------------------
          **Solution**     Company                                             cat.-no.   
 --------------------- ------------------------------------------------------- ---------------
-Ambion Water
-
 Cut Smart Buffer        NEB                                                     B7204S
 
 Generuler 100 bp        Thermo                                                  SM0241
@@ -335,8 +333,7 @@ Table: (\#tab:sftwr) Used software
 ### Ground Truth Data {#mat-GrTrDat}
 
 Analyzing images and extracting quantitative measurements can be a tedious task, especially when the analysis becomes more complex. Fortunately, there are ways to automate image analysis by using either machine learning approaches or by tailoring hand-crafted algorithms in an image analysis software tool like e.g. ImageJ[@Schindelin2012]. 
-
-The main advantages of doing so are.
+The main advantages of doing so are...
 
 -	to be independent of confirmation bias
 -	to make the analysis more robust against oversight
@@ -502,7 +499,7 @@ To test the algorithm it is run at different segmentation thresholds on the same
 
 ##### Image Analysis
 
-For image analysis a custom IJ macro script was developed that recognizes the cell boundaries via the fluorescence signal emitted by a Lyn Kinase tethered eGFP which expression is controlled by the _cxcr4b_ lateral line specific promotor. The central IJ tool used to do this is the MorphoLibJ's[@Legland2016] _Morpholigical Segmentation_ plugin. The plugin however requires to choose for a 'segmentation threshold' that determines the quality and the quantity of segmented objects. This parameter therefore plays an essential role in the truthfulness of the analysis results.
+For image analysis a custom IJ macro script was developed that recognizes the cell boundaries via the fluorescence signal emitted by a Lyn Kinase tethered eGFP which expression is controlled by the _cxcr4b_ lateral line specific promotor [@Haas2006c]. The central IJ tool used to do this is the MorphoLibJ's[@Legland2016] _Morpholigical Segmentation_ plugin. The plugin however requires to choose for a 'segmentation threshold' that determines the quality and the quantity of segmented objects. This parameter therefore plays an essential role in the truthfulness of the analysis results.
 
 ###### Macro modules
 
@@ -517,8 +514,6 @@ The macro developed consists of the following main modules:
 
 The first module of the macro is PLLp registration in X, Y and cropping in Z. This is accomplished by an initial maximum Z projection and blurring of the image, 2-D segmentation using a minimum threshold and lastly by measuring the angle the segment is rotated against the horizon (at 0$^{\circ}$). After rotation the PLLp is then registered in Y and the image is cropped by drawing a rectangle with fixed height. 
 
-###### Unprocessed data
-
 (ref:maxraw) Unregistered, Maximum Z projected data
 ```{r maxraw, dpi=200, out.width='90%', fig.align='center', echo=FALSE, fig.cap="(ref:maxraw)"}
 knitr::include_graphics(path = "figure/02-MaMo/GrTr/Morphology/zmax_comb_2.png")
@@ -532,8 +527,6 @@ knitr::include_graphics(path = "figure/02-MaMo/GrTr/Morphology/zmax_comb_2.png")
                      $\Delta$T - Z 0.5428 s
 ---------------------------------- ----------------------------------
 Table: (\#tab:imgprop) Physical image properties (scaling)
-
-###### Registered data
 
 During the registration process, the image is rotated against the horizon and cropped in X and Y. Additionally, the centers of the most constricting areas are detected via an intensity based dynamic threshold and highlighted as magenta circles in \@ref(fig:maxreg). Table \@ref(tab:imgregpar) sums up the registration parameters.
 
@@ -553,7 +546,7 @@ knitr::include_graphics("figure/02-MaMo/GrTr/Morphology/zmax_reg_comb_2.jpg")
 -------------- ------------------- ---------------------- -------------------
 Table: (\#tab:imgregpar) Registration parameters
 
-#### Segmentations
+#### Segmentation
 
 ##### Membrane signal
 
@@ -722,7 +715,7 @@ Adult zebrafish were anesthetized in tricaine (1X) till stage II-III of anaestez
 
 Embryos and dechorionated larvae were fixed in 2 ml of 4 PFA in 1X PBS overnight at 4 degrees Celsius.
 
-### Wetlab Methods {#Wet-met}
+### Wetlab {#Wet-met}
 
 #### In Situ Hybridization {#ISH-met}
 
@@ -815,7 +808,7 @@ For mounting, an improved 3D specimen preparation and well-plate like sample nav
 knitr::include_graphics("figure/02-MaMo/Mount/mountmicro.png")
 ```
 
-#### **PROTOCOL**
+#### Protocol
 
 ##### Preparations
 
@@ -869,21 +862,24 @@ gently rotate the dish so that excess agarose solution will cover the whole dish
 Wait for ~45 min., then use a clean preparation needle and slip it through stamp - polymerized agarose interface. Remove the stamp carefully by lifting it and holding the $\mu$-Dish in place.
 
 (ref:stampprod) Stamping procedure **A** clean stamp surface **B** preparation of the stamp before lifting **C** ) ready-for-use agarose imprint.
+
 ```{r stampprod, dpi=200, out.width='60%', fig.cap="(ref:stampprod)", fig.scap = "Stamping procedure"}
 knitr::include_graphics("figure/02-MaMo/Mount/stampprod.png")
 ```
 
 (ref:mounting) 44x mounting stamp **A** without LMPA **B and C** with LMPA, while the latter shows the imprint with light coming from a different angle, making the chambers visible again.
+
 ```{r mounting, dpi=200, out.width='60%', fig.cap="(ref:mounting)", fig.scap = "44x mounting stamp"}
 knitr::include_graphics("figure/02-MaMo/Mount/mounting.png")
 ```
 
 (ref:setup) Imaging setup **A** Positioning of the $\mu$-well **B** Alignment in Brightfield and **C** Definition of a custom well plate.
+
 ```{r setup, dpi=200, out.width='60%', fig.cap="(ref:setup)", fig.scap = "Imaging setup"}
 knitr::include_graphics("figure/02-MaMo/Mount/setup.png")
 ```
 
-### Computational Methods {#comp-met}
+### Computational {#comp-met}
 
 #### Rosette Detection {#CNN}
 
@@ -892,6 +888,7 @@ The method used for rosette detection is based on a convolutional neuronal netwo
 The CNN was trained on 17 wildtype DMSO control and SU5402 treated (Fgf signaling depleted embryos which do not form rosettes[@Lecaudey2008a]) embryos each. In order togive the network something to learn, the data had to be labeled manually, which was done in imagej by placing multipoint rois at the center of the rosettes. The data was then further permutated to artificially increase the amount of training data and make the detection more robust against different kinds of input. Further parameters about the training data is listed in Table \@ref(tab:CNNtraining). One example for each is shown in figure \@ref(fig:CNNtrain).
 
 (ref:CNNtrain) Example for rosette detection on the training data. **left** Maximum Z-projected input data. **middle** heatmap of scores. blue indicates a low score, red a high one. **right** score map projected onto the input data.
+
 ```{r CNNtrain, dpi=200, out.width='75%', fig.cap="(ref:CNNtrain)", fig.scap = "Example for rosette detection on the training data"}
 knitr::include_graphics(path = "figure/02-MaMo/CNN/CNNtrain.png")
 ```
@@ -910,7 +907,7 @@ knitr::include_graphics(path = "figure/02-MaMo/CNN/CNNtrain.png")
 | SU5402 treated  | SU5402    | 10 $\mu$M | 488 | 100%      | 100 ms    | ~70     | 40X           |
 Table: (\#tab:CNNtraining) CNN training data
 
-#### Proliferation Analysis {#prolif}
+#### Proliferation Analysis{#prolif}
 
 The basic principle is based on work done by Laguerre _et al._, 2009[@Laguerre2009a].
 
@@ -924,16 +921,18 @@ The basic principle is based on work done by Laguerre _et al._, 2009[@Laguerre20
 
 (ref:mitodatapoints) Tracking of mitotic events
 ```{r mitodatapoints, out.width='50%', fig.cap="(ref:mitodatapoints)"}
-knitr::include_graphics(path = "figure/02-MaMo/Prol/Prolif.png")
+knitr::include_graphics("figure/02-MaMo/Prol/Prolif.png")
 ```
 
-#### Apical Index {#ACI}
+#### Apical Index{#ACI}
+
+##### Rationale
 
 The earliest attempt found for indexing AC can be found in a study published by Lee _et al_[@Lee2009] where they were interested in the 'apical index' (A.I.) of bottle cells during _X.laevis_ gastrulation(figure \@ref(fig:ACLee)).
 
 (ref:ACLee) A.I. of _X.leavis_ bottle cells.
 ```{r ACLee, out.width='75%', fig.cap="(ref:ACLee)"}
-knitr::include_graphics(path = "figure/02-MaMo/ACI/Jen_yi_Lee.png")
+knitr::include_graphics("figure/02-MaMo/ACI/Jen_yi_Lee.png")
 ```
 
 \noindent Another example for measuring AC is the apical _constriction_ index (ACI, figure \@ref(fig:ACHard)) for the cells of the _D.rerio_ lateral line primordium (PLLp), which can be found in a study from 2012 where it was shown that Fgfr-Ras-MAPK signaling is required for AC and Rock2a localization6 [@Harding2012; @Harding2013].
@@ -941,7 +940,7 @@ knitr::include_graphics(path = "figure/02-MaMo/ACI/Jen_yi_Lee.png")
 (ref:ACHard) Apical constriction index. **A** 3D reconstructed cells of a CLCLNA control primordium and **B** of a primordium deficient of Fgf signaling.
 
 ```{r ACHard, dpi=200, out.width='75%', fig.cap="(ref:ACHard)", fig.scap = "Apical constriction index"}
-knitr::include_graphics(path = "figure/02-MaMo/ACI/Harding.jpg")
+knitr::include_graphics("figure/02-MaMo/ACI/Harding.jpg")
 ```
 
 \noindent In both cases, the measurements for the A.I.[@Lee2009] or ACI[@Harding2013] does not differ and describes the ratio for lateral height over apical width \@ref(fig:ACICells). 
@@ -949,8 +948,6 @@ knitr::include_graphics(path = "figure/02-MaMo/ACI/Harding.jpg")
 \[\mathbf{ACI} = \frac{lateral\;height\;[\mu m]}{apical\;width\;[\mu m]}\]
 
 \noindent While trying to reproduce these results we found two principal weaknesses of applying this ratio to the cells of the PLLp. First, it does not respect the independence of lateral height to AC. Second, it does not differentiate between _anterio-posterior_ (AP) and _dorso-ventral_ (DV) tissue polarization. Third, it is really more an A.I. than a constriction index.
-
-##### Rationale
 
 ###### Parameter definition {#ACI-param}
 
@@ -968,11 +965,11 @@ To obtain a precise and biologically meaningful quantity for AC, first a couple 
 
 ###### Adaption for variation in lateral height {#ACI-lat}
 
-To test different ACI conditions, an apically constricted cell can be approximated by modeling a tetrahedron. For example, shrinking or enlarging a cell symmetrically should not affect the ACI. As described by Harding(2014)[@Harding2013], the _apical width_ of a cell is measured first by manual 3-D object reconstruction, second manual re-orientation, and third by going 1 $\mu$m from the apical tip into the cell (from now on referred  to as $\Delta$ap, \@ref(fig:ACICells)B). Finally, _apical width_ is the total width of the 2-D object.
+To test different A.I. conditions, an apically constricted cell can be approximated by modeling a tetrahedron. For example, shrinking or enlarging a cell symmetrically should not affect the ACI. As described by Harding(2014)[@Harding2013], the _apical width_ of a cell is measured first by manual 3-D object reconstruction, second manual re-orientation, and third by going 1 $\mu$m from the apical tip into the cell (from now on referred  to as $\Delta$ap, \@ref(fig:ACICells)B). Finally, _apical width_ is the total width of the 2-D object.
 
-If $\Delta$ap is a constant, the ACI in a symmetrically enlarged cell increases from e.g. 15 to 23, since _apical width_ stays the same but lateral height increases. On the contrary, if $\Delta$ap is adjusted relative to a cells lateral height, e.g. by percentage, the ACI in a symmetrically enlarged cell stays the same \@ref(fig:ACICells)
+If $\Delta$ap is a constant, the A.I. in a symmetrically enlarged cell increases from e.g. 15 to 23, since _apical width_ stays the same but lateral height increases. On the contrary, if $\Delta$ap is adjusted relative to a cells lateral height, e.g. by percentage, the A.I. in a symmetrically enlarged cell stays the same \@ref(fig:ACICells)
 
-(ref:ACICells) ACI model **A-A’’** ACI Cell Models. A’ and A’’ show cells that are symmetrically increased versions of A. While in A’, constant delta was used, in A’’ delta was adjusted relative to the lateral height. **B** Illustrating delta ap. (left) apically constricted cells volume rendered in XY (top) and as a lateral cross-section in X-Z (bottom). (right) 2D area as seen at delta ap of 1 or 2.5 $\mu$m.
+(ref:ACICells) A.I. model **A-A’’** A.I. Cell Models. A’ and A’’ show cells that are symmetrically increased versions of A. While in A’, constant delta was used, in A’’ delta was adjusted relative to the lateral height. **B** Illustrating delta ap. (left) apically constricted cells volume rendered in XY (top) and as a lateral cross-section in X-Z (bottom). (right) 2D area as seen at delta ap of 1 or 2.5 $\mu$m.
 ```{r ACICells, dpi=200, out.width='75%',fig.cap="(ref:ACICells)", fig.scap = "ACI Cell Models"}
 knitr::include_graphics(path = "figures/summary/aci_fig-01.png")
 ```
@@ -983,7 +980,7 @@ Therefore the measurement for apical width has to be relative to lateral height.
 
 ###### Adaption for tissue polarization {#ACI-pol}
 
-Organs develop in a 3-D space and are polarized along each axis. AC usually describes a 2-D morphogenetic movement towards a center along the X-Y axes. However, the contraction movements along X and Y might be independent of one another. This could mean that they happen at different speeds, or that one is absent. As a result, the tissue would look less radially \@ref(fig:cellpol) constricted, but more constricted against a line. In order to separate those two AC dimensions, the ACI can be calculated for the _anterio-posterior_ and for the _dorso-ventral_ axis \@ref(fig:cellpol).
+Organs develop in a 3-D space and are polarized along each axis. AC usually describes a 2-D morphogenetic movement towards a center along the X-Y axes. However, the contraction movements along X and Y might be independent of one another. This could mean that they happen at different speeds, or that one is absent. As a result, the tissue would look less radially \@ref(fig:cellpol) constricted, but more constricted against a line. In order to separate those two AC dimensions, the A.I. can be calculated for the _anterio-posterior_ and for the _dorso-ventral_ axis \@ref(fig:cellpol).
 
 (ref:cellpol) Schematic AC along the A-P and D-V axis. **A** shows a A-P and D-V constricted cluster of cells. **B** shows a D-V constricted cluster of cells.
 ```{r cellpol, dpi=200, out.width='75%', fig.cap="(ref:cellpol)", fig.scap = "Schematic anisotropic AC"}
@@ -1006,8 +1003,8 @@ knitr::include_graphics("figure/02-MaMo/ACI/ellipse.png")
 
 The two dimensions of AC indices can therefore be described as the following ratios...
 
-\[\mathbf{ACI_{Major}} = \frac{lateral\;height\;[\mu m]}{Major\;axis\;[\mu m]}\]
-\[\mathbf{ACI_{Minor}} = \frac{lateral\;height\;[\mu m]}{Minor\;axis\;[\mu m]}\]
+\[\mathbf{A.I._{Major}} = \frac{lateral\;height\;[\mu m]}{Major\;axis\;[\mu m]}\]
+\[\mathbf{A.I._{Minor}} = \frac{lateral\;height\;[\mu m]}{Minor\;axis\;[\mu m]}\]
 \[\mathbf{Angle_{Major}} = \measuredangle = \mathrm{\Delta}\;from\;horizont\;[0-90^\circ]\]
 
 ##### Measurements {#ACI-Dis}
@@ -1018,9 +1015,9 @@ load("figure/02-MaMo/ACI/SN180_ACI.RData")
 
 ###### Single Cell measurements {#ACI-singlecell}
 
-Each geometric object has a centroid coordinate in X and Y (and Z) which is represented as the mean of all X or Y coordinates within the object. Here, the centroid coordinates in X and Y are used to plot the cells as points in the X-Y plane. Additionally, each point is colored for the ACI value (high values are blue-violet, middle values are green, low values are yellow-red). 
+Each geometric object has a centroid coordinate in X and Y (and Z) which is represented as the mean of all X or Y coordinates within the object. Here, the centroid coordinates in X and Y are used to plot the cells as points in the X-Y plane. Additionally, each point is colored for the A.I. value (high values are blue-violet, middle values are green, low values are yellow-red). 
 
-(ref:ACIMajor) ACI~Major~ single cell measurements
+(ref:ACIMajor) A.I.~Major~ single cell measurements
 ```{r ACIMajor, out.width='85%', fig.height = 1.75, dpi=400, fig.cap="(ref:ACIMajor)"}
 ggplot(SN180, aes(CXN, CY..unit.)) +
   geom_point(aes(colour=ACI_Major), size = 2, shape = 16, show.legend = TRUE) +
@@ -1030,7 +1027,7 @@ ggplot(SN180, aes(CXN, CY..unit.)) +
   mythemeLIGHT_bottom()
 ```
 
-(ref:ACIMinor) ACI~Minor~ single cell measurements
+(ref:ACIMinor) A.I.~Minor~ single cell measurements
 ```{r ACIMinor, out.width='85%', fig.height = 1.75, dpi=400, fig.cap="(ref:ACIMinor)"}
 library(ggplot2)
 ggplot(SN180, aes(CXN, CY..unit.)) +
@@ -1050,12 +1047,12 @@ pander(SN180_count, style ="rmarkdown")
 Table: (\#tab:cellcountaci) ACI Cellcount
 -->
 
-Harding(2013)[@Harding2013] were using a constant $\mathrm{\Delta}$ap to measure the apical width, which we have shown to be incorrect in certain cases. In their study they found that certain mean ACI values in the DMSO go as high as 15, which might be related to this \@ref(fig:ACICells). 
-By measuring apical width at a relative $\mathrm{\Delta}$ap the mean values for ACI~Major~ are at `r round(mean(SN180_DMSO$ACI_H_F20), digits=1)` for the DMSO control and `r round(mean(SN180_SU$ACI_H_F20), digits=1)` for the SU5402 treated condition, which seems to somewhat correlate with their findings\@ref(fig:HardingACI). .
+Harding(2013)[@Harding2013] were using a constant $\mathrm{\Delta}$ap to measure the apical width, which we have shown to be incorrect in certain cases. In their study they found that certain mean A.I. values in the DMSO go as high as 15, which might be related to this \@ref(fig:ACICells). 
+By measuring apical width at a relative $\mathrm{\Delta}$ap the mean values for A.I.~Major~ are at `r round(mean(SN180_DMSO$ACI_H_F20), digits=1)` for the DMSO control and `r round(mean(SN180_SU$ACI_H_F20), digits=1)` for the SU5402 treated condition, which seems to somewhat correlate with their findings\@ref(fig:HardingACI). .
 
 However overall our results indicate that the AC difference is not as strong, at least if all the cells of the PLLp are taken into account.
 
-(ref:HardingACI) **E-G** 3-D reconstructions of the highlighted cell. **H** ACIs for embryos treated with DMSO, SU5402, PD0325901 or following induction of hsp70:dn-Ras. (n=180 cells / N = 6 embryos).
+(ref:HardingACI) **E-G** 3-D reconstructions of the highlighted cell. **H** A.I.s for embryos treated with DMSO, SU5402, PD0325901 or following induction of hsp70:dn-Ras. (n=180 cells / N = 6 embryos).
 ```{r HardingACI, out.width='60%', dpi=200, fig.cap="(ref:HardingACI)", fig.scap = "Published ACI"}
 knitr::include_graphics("figure/02-MaMo/GrTr/HardingACI.png")
 ```
@@ -1074,7 +1071,7 @@ ggplot(SN180_ACIs_melt, aes(value)) +
 
 To check whether there is a bias in orientation of the apical width, the angle measurements \@ref(fig:ellipse) can be shown as a function of density along X. Here, a binwidth of 2.5 and a grouping factor to color the two conditions 'DMSO' and 'SU5402' was used.
 
-\noindent Interestingly the results indicate that there is less of a difference for the Major~Angle~ at angles bigger than 15-20°. This would mean that the _apical width_ in SU5402 treated embryos is more strongly oriented along the horizontal _antero-posterior_ axis.
+\noindent Interestingly the results indicate that there is less of a difference for the Major~Angle~ at angles bigger than 15-20$^\circ$. This would mean that the _apical width_ in SU5402 treated embryos is more strongly oriented along the horizontal _antero-posterior_ axis.
 
 (ref:angledens) Major~Angle~ density
 ```{r angledens, out.width='40%', fig.width=3.5, fig.height=2.5, dpi=400, fig.cap="(ref:angledens)"}
@@ -1085,7 +1082,9 @@ ggplot(SN180, aes(ACI_Angle)) +
   scale_x_continuous(breaks = seq(0, 90, 15)) +
   labs(title = "", x = "Major Angle", y = "KDE") +
   #facet_grid(~GT) +
-  mythemeLIGHT_bottom() + theme(legend.title=element_blank()) + theme(legend.position = c(0.8, 0.85))
+  mythemeLIGHT_bottom() + 
+    theme(legend.title=element_blank()) + 
+    theme(legend.position = c(0.8, 0.85))
 ```
 
 ###### ACI magnitude at different Angles {#ACI-mag}
@@ -1107,14 +1106,22 @@ ggplot(SN180_ACIs, aes(Angle, value)) +
   scale_x_continuous(limits= c(0, 90), breaks = seq(15, 75, 15)) +
   scale_y_continuous(breaks = seq(2, 7, 1)) +
   facet_grid(.~ACI, labeller = label_parsed) +
-  mythemeLIGHT_bottom() + theme(legend.title=element_blank()) + theme(legend.position = c(0.85, 0.85))
+  mythemeLIGHT_bottom() + 
+    theme(legend.title=element_blank()) + 
+    theme(legend.position = c(0.85, 0.85))
 ```
 
 ##### Summary
 
 In summary our results suggest that there is no significant difference either in the exact _anterior-posterior_ axis (at 0°), nor in the exact _dorso-ventral_ axis (at 90$^\circ$) between a DMSO control and a SU5402 treated embryo, but mostly in an angle in between.
 
+#### Timelapse analysis
+
+ImageJ Macro
+
 ## Image Data Sets {#mat-datasets}
+
+Summaries of Image datasets
 
 ### Cell-Cluster {#cc-data}
 
