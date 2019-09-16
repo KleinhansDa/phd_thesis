@@ -417,7 +417,7 @@ load("figure/02-MaMo/GrTr/ClusterAnal/GroundTruth2D.RData")
 ```
 
 
-Comparing the segmented objects count of the Gaussian parameters with the ground truth gives an indication for over- resp. under-segmentation. In figure \@ref(fig:GrTratioCC) the relative numbers for each parameter can be seen in percentage above or below the mean cell count of the ground truth (blue horizon). The red area represents over-segmentation, the green under-segmentation. Additionally, table \@ref(tab:meanabsnuc) shows the absolute numbers.
+Comparing the segmented objects count of the Gaussian parameters with the ground truth gives an indication for over- resp. under-segmentation. In figure \@ref(fig:GrTratioCC) the relative numbers for each parameter can be seen in percentage above or below the mean cell count of the ground truth (blue horizon). The red area represents over-segmentation, the green under-segmentation.
 
 (ref:GrTratioCC) Relative difference of segment counts (N=3, Errorbars = Std./2)
 
@@ -437,11 +437,6 @@ ggplot(NB_all_diff_mean, aes(Group, mean_diff)) +
   mythemeLIGHT_bottom() + 
     theme(legend.position = c(0.18, 0.22)) + 
     theme(legend.text = element_text(size=11))
-```
-
-```{r meanabsnuc, results='asis'}
-knitr::kable(NB_all_mean_mean, "latex", booktabs = T, caption="Nuclei count") %>%
-  kable_styling(full_width = T, latex_options = "striped")
 ```
 
 \noindent To estimate the quality of nuclei detection for each parameter, the ratio of automatically detected and ground truth objects count can be calculated and compared (table \@ref(tab:nrcount)). The closer it is to 1, the better.
@@ -471,8 +466,10 @@ To assess the quality of the anaLLzr3D algorithm the ground truth was modeled as
 
 ```{r model3DGrT}
 tab <- read.delim("figures/materials/anallzrmodel.txt")
-knitr::kable(tab, "latex", booktabs = T, caption="anaLLzr3D Model", align = c("r", "l")) %>%
-  kable_styling(full_width = T, latex_options = c('striped', 'hold_position'))
+knitr::kable(tab, "latex", booktabs = T, caption="anaLLzr3D Model", align = c("r", "l"), escape = F) %>%
+  kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
+  row_spec(0, bold = T) %>%
+  column_spec(1, width = "3cm")
 ```
 
 ###### Training data
@@ -510,17 +507,13 @@ knitr::include_graphics(path = "figures/materials/ground_truth/registration.png"
 
 ```{r imgprop}
 tab <- read.delim("figures/materials/scaling_3D.txt")
-knitr::kable(tab, "latex", booktabs = T, caption="Physical image properties (scaling)", align = c("r", "l")) %>%
-  kable_styling(full_width = T, latex_options = c('striped', 'hold_position'))
+knitr::kable(tab, "latex", booktabs = T, caption = "Physical image properties (scaling)", 
+             align = c("r", "l"), escape = F) %>%
+  kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
+  row_spec(0, bold = T)
 ```
 
-During the registration process, the image is rotated against the horizon and cropped in X and Y. Additionally, the centers of the most constricting areas are detected via an intensity based dynamic threshold and highlighted as magenta circles in \@ref(fig:maxraw). Table \@ref(tab:imgregpar) sums up the registration parameters.
-
-```{r imgregpar}
-tab <- read.delim("figures/materials/reg_param.txt")
-knitr::kable(tab, "latex", booktabs = T, caption="Registration parameters", align = c("c", "c", "c", "c")) %>%
-  kable_styling(full_width = T, latex_options = c('striped', 'hold_position'))
-```
+During the registration process, the image is rotated against the horizon and cropped in X and Y. Additionally, the centers of the most constricting areas are detected via an intensity based dynamic threshold and highlighted as magenta circles in \@ref(fig:maxraw).
 
 ###### Ground Truth data
 
@@ -570,7 +563,8 @@ ggplot(all_count_diff_mean, aes(Group, mean_diff)) +
 
 ```{r gtrcellcount, out.width='75%'}
 knitr::kable(all_count_cells, "latex", booktabs = T, caption="cellcount ground truth") %>%
-  kable_styling(full_width = T, latex_options = "striped")
+  kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
+  row_spec(1, bold = T)
 ```
 
 ###### Cell Morphology
@@ -656,11 +650,11 @@ Adult fish were anesthetized with buffered Tricaine (1X, see 'List of Buffers') 
 
 #### Adult Genotyping
 
-The clipped fins were digested for 1 h at 95 degrees celsius and neutralized subsequently with 1M Tris-HCl of pH 9.
+The clipped fins were digested for 1 h at 95$^\circ$ celsius and neutralized subsequently with 1M Tris-HCl of pH 9.
 
 #### Embryo Genotyping
 
-Single fixed/live embryos were denatured at 95 degrees Celsius in 50mM NaOH for 1 hour and neutralized by adding 1/10 th volume of 1 M Tris-HCl (pH 8.2).
+Single fixed/live embryos were denatured at 95$^\circ$ Celsius in 50mM NaOH for 1 hour and neutralized by adding 1/10 the volume of 1 M Tris-HCl (pH 8.2).
 
 #### Zebrafish Euthanasia
 
@@ -668,7 +662,7 @@ Adult zebrafish were anesthetized in tricaine (1X) till stage II-III of anaestez
 
 #### Fixation
 
-Embryos and dechorionated larvae were fixed in 2 ml of 4 PFA in 1X PBS overnight at 4 degrees Celsius.
+Embryos and dechorionated larvae were fixed in 2 ml of 4$\%$ PFA in 1X PBS overnight at 4$^\circ$ Celsius.
 
 ### Wetlab {#Wet-met}
 
@@ -698,7 +692,7 @@ Embryos and dechorionated larvae were fixed in 2 ml of 4 PFA in 1X PBS overnight
 tab <- read.delim("figures/materials/protkdig.txt")
 knitr::kable(tab, "latex", booktabs = T, caption="Proteinase K digestion", align = "c",
              col.names = c("Stage", "0.6 s", "7 s", "18 s", "24 hpf", "32 hpf", "36 hpf", "42 hpf", "48 hpf", "72 hpf")) %>%
-  kable_styling(full_width = T, latex_options = "striped")
+  kable_styling(full_width = T, latex_options = c('striped', 'hold_position'))
 ```
     
 * Wash 2x in PBST
@@ -766,29 +760,29 @@ knitr::include_graphics("figure/02-MaMo/Mount/mountmicro.png")
 
 ##### Preparations
 
---------------------------------------------------------------------------------------------
-                 **item**  Company   Description                                   cat.-no.
-------------------------- --------- ---------------------------------------------- ---------
-$\mu$-Dish                 ibidi     20-35 mm polymer, #1.5, high wall             81218-200
+-----------------------------------------------------------------------------------------
+                 **item**   Company   Description                               cat.-no.
+-------------------------- --------- ------------------------------------------ ----------
+$\mu$-Dish                 ibidi     20-35 mm polymer, #1.5, high wall          81218-200
 
 3D Mould Stamp             IBG3D     20-35 mm                               
 
-Preparation needles        VWR       -                                             USBE5470
+Preparation needles        VWR       -                                          USBE5470
 
-Glass pipettes             Roth      -                                             4518
+Glass pipettes             Roth      -                                          4518
 
-Silicone bulbs             VWR       -                                             612-2327
+Silicone bulbs             VWR       -                                          612-2327
 
-Microtubes 2 mL            Sarstedt  -                                             2691    
+Microtubes 2 mL            Sarstedt  -                                          2691    
 
-Heating block              PeqLab    -                                             HX2
+Heating block              PeqLab    -                                          HX2
 
-Microwave oven             Severin   -                                             MW7849
+Microwave oven             Severin   -                                          MW7849
 
-Stereo microscope          Leica     -                                             M165FC 
+Stereo microscope          Leica     -                                          M165FC 
 
-Transmitted Light Base     Leica     -                                             MDG36 
-------------------------- --------- ---------------------------------------------- ---------
+Transmitted Light Base     Leica     -                                          MDG36 
+-------------------------- --------- ------------------------------------------ ----------
 Table: (\#tab:mounthard) Mounting hardware
 
 --------------------------------------------------------------------------------
@@ -843,21 +837,22 @@ knitr::include_graphics("figure/02-MaMo/CNN/CNNtrain.png")
     + The output data are continous rational numbers ($\mathbb{Q}$) instead of integers ($\mathbb{Z}$) which does not only tell if a rosette is there fore not, but also for 'how much' (50-100%) it is there.
 3. Training is done relatively quick
 
-|                 | compound  | conc. | nm  | intensity | exposure  | z-planes| magnification |
-| ----            | ----      | ----  | --- | ---       | ---       | ---     | ---           |
-| Rosette control | DMSO      | 1%    | 488 | 100%      | 100 ms    | ~70     | 40X           |
-| SU5402 treated  | SU5402    | 10 $\mu$M | 488 | 100%      | 100 ms    | ~70     | 40X           |
-Table: (\#tab:CNNtraining) CNN training data
+```{r CNNtraining}
+tab <- read.delim("figures/materials/cnn_train_dat.txt")
+knitr::kable(tab, "latex", booktabs = T, caption = "CNN training data", escape = F) %>%
+  kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
+  row_spec(0, bold = T) %>%
+  column_spec(2, width = "1.5cm") %>%
+  column_spec(3, width = "1cm" )%>%
+  column_spec(4, width = "1cm")
+```
 
 #### Proliferation Analysis{#prolif}
 
-The basic principle is based on work done by Laguerre _et al._, 2009[@Laguerre2009a].
+The basic principle is based on work done by Laguerre _et al._, 2009[@Laguerre2009a]. For manual tracking of mitotic events 'MTrackJ'[@Meijering2012] was used...
 
-\noindent For manual tracking of mitotic events 'MTrackJ'[@Meijering2012] was used
-
-* Mitotic events were tracked in the pLLP exclusively from Prometa- / Meta-phase till Ana- / Telo-phase
-* After tracking, the track file was saved and measured
-* 'Tracks' and 'Points' data was saved as '.txt' files (tab seperated)
+* Mitotic events were tracked either in the pLLP or deposited CCs exclusively from Prometa- / Meta-phase till Ana- / Telo-phase
+* 'Tracks' and 'Points' data was saved as '.txt' files
   
 \noindent Figure \@ref(fig:mitodatapoints) shows an exemplary track for the data analyzed.
 
@@ -1063,40 +1058,11 @@ Summaries of Image datasets
 
 ### Cell-Cluster {#cc-data}
 
----------------------------------------------------------------------------------
-Element           condition
------------------ ---------------------------------------------------------------
-**Crossings** 
- 
- Pairs            4         
- 
- Transgenes       _cldnb:lyn-gfp_ +/?
- 
- Mutation         _shroom3_
- 
- Staging          60 min.
- 
-**Mounting**
-
- Fixation         4% PFA o.N.
- 
- agarose          1% LMPA
- 
-**Imaging**
- 
- Magnification    25X objective
- 
- Channels         488 nm
- 
- Z-Stack          2.5 $\mu$m Z-spacing; 110 $\mu$m stack size; 12*X large image
- 
-**Processing**
- 
- Projection       Maximum intensity
- 
- Transformations  Rotation and cropping in XY
------------------ ---------------------------------------------------------------
-Table: (\#tab:ccdata) Cell Cluster dataset
+```{r ccdata}
+tab <- read.delim("figures/materials/imgdat_cc.txt")
+knitr::kable(tab, "latex", booktabs = T, caption = "Cell Cluster dataset", escape = T) %>%
+  kable_styling(full_width = T, latex_options = c('striped', 'hold_position'))
+```
 
 ### Apical Index {#aci-data}
 

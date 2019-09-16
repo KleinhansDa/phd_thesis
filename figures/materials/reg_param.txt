@@ -1,4 +1,4 @@
 Position	angle	centers	Y_reg
-P05	-4.4$^{\circ}$	4	168.25 px
-P07	12.3$^{\circ}$	4	188.35 px                                          
-P08	0$^{\circ}$	3	153.83 px
+P05	-4.4$^\circ$	4	168.25 px
+P07	12.3$^\circ$	4	188.35 px
+P08	0$^\circ$	3	153.83 px
