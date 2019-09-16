@@ -466,9 +466,8 @@ To assess the quality of the anaLLzr3D algorithm the ground truth was modeled as
 
 ```{r model3DGrT}
 tab <- read.delim("figures/materials/anallzrmodel.txt")
-knitr::kable(tab, "latex", booktabs = T, caption="anaLLzr3D Model", align = c("r", "l"), escape = F) %>%
+knitr::kable(tab, "latex", booktabs = T, caption="anaLLzr3D Model", align = c("r", "l"), escape = F, col.names = NULL) %>%
   kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
-  row_spec(0, bold = T) %>%
   column_spec(1, width = "3cm")
 ```
 
@@ -508,9 +507,8 @@ knitr::include_graphics(path = "figures/materials/ground_truth/registration.png"
 ```{r imgprop}
 tab <- read.delim("figures/materials/scaling_3D.txt")
 knitr::kable(tab, "latex", booktabs = T, caption = "Physical image properties (scaling)", 
-             align = c("r", "l"), escape = F) %>%
-  kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
-  row_spec(0, bold = T)
+             align = c("r", "l"), escape = F, col.names = NULL) %>%
+  kable_styling(full_width = T, latex_options = c('striped', 'hold_position'))
 ```
 
 During the registration process, the image is rotated against the horizon and cropped in X and Y. Additionally, the centers of the most constricting areas are detected via an intensity based dynamic threshold and highlighted as magenta circles in \@ref(fig:maxraw).
@@ -562,7 +560,7 @@ ggplot(all_count_diff_mean, aes(Group, mean_diff)) +
 ```
 
 ```{r gtrcellcount, out.width='75%'}
-knitr::kable(all_count_cells, "latex", booktabs = T, caption="cellcount ground truth") %>%
+knitr::kable(all_count_cells, "latex", booktabs = T, caption="Cellcount ground truth") %>%
   kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
   row_spec(1, bold = T)
 ```
@@ -843,7 +841,7 @@ knitr::kable(tab, "latex", booktabs = T, caption = "CNN training data", align = 
   kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
   row_spec(0, bold = T) %>%
   column_spec(2, width = "1cm") %>%
-  column_spec(3, width = "1cm" ) %>%
+  column_spec(3, width = "2.5cm" ) %>%
   column_spec(4, width = "1.5cm") %>%
   column_spec(5, width = "1.5cm") %>%
   column_spec(6, width = "1.5cm")
@@ -996,35 +994,11 @@ However overall our results indicate that the AC difference is not as strong, at
 knitr::include_graphics("figure/02-MaMo/GrTr/HardingACI.png")
 ```
 
-```{r, out.width='30%', fig.width=3.5, fig.height=3, echo=FALSE, eval=TRUE, include=FALSE}
-ggplot(SN180_ACIs_melt, aes(value)) +
-  geom_density(aes(fill=GT), alpha=.5, colour="black", show.legend = TRUE) +
-  #stat_density(aes(y=..density.., colour=group), geom="line", bw=2.5, size=1.5) +
-  labs(title = "ACI value densities", x = "value", y = "density") +
-  facet_grid(~variable, scales="free", labeller = label_parsed) +
-  scale_x_continuous(limits = c(0, 0.6), breaks = seq(0, 1, 0.25)) +
-  mythemeLIGHT()
-```
-
 ###### Angle densities {#ACI-Angledens}
 
 To check whether there is a bias in orientation of the apical width, the angle measurements \@ref(fig:ellipse) can be shown as a function of density along X. Here, a binwidth of 2.5 and a grouping factor to color the two conditions 'DMSO' and 'SU5402' was used.
 
 \noindent Interestingly the results indicate that there is less of a difference for the Major~Angle~ at angles bigger than 15-20$^\circ$. This would mean that the _apical width_ in SU5402 treated embryos is more strongly oriented along the horizontal _antero-posterior_ axis.
-
-(ref:angledens) Major~Angle~ density
-```{r angledens, out.width='40%', fig.width=3.5, fig.height=2.5, dpi=400, fig.cap="(ref:angledens)"}
-ggplot(SN180, aes(ACI_Angle)) +
-  #geom_density(aes(y=..density.., colour=GT), size=1.5, alpha=.5, bw=2.5) +
-  #geom_hline(yintercept=0, colour="white", size=1.5) +
-  stat_density(aes(colour=GT), geom="line", bw=2.5, size=1.5, position = "identity") +
-  scale_x_continuous(breaks = seq(0, 90, 15)) +
-  labs(title = "", x = "Major Angle", y = "KDE") +
-  #facet_grid(~GT) +
-  mythemeLIGHT_bottom() + 
-    theme(legend.title=element_blank()) + 
-    theme(legend.position = c(0.8, 0.85))
-```
 
 ###### ACI magnitude at different Angles {#ACI-mag}
 
@@ -1037,13 +1011,26 @@ Now, to get an idea of the magnitude ACI~Major~ and ACI~Minor~ have at each angl
 2. For the ACI~Major~ the base constriction for both, DMSO and SU5402 is at around 3.6, however there is a peak at around 40-60° in the DMSO control where cells are most constricted having a maximum ACI at `r round(max(SN180_DMSO$ACI_H_F20), digits=1)`. This indicates that cells coming from `r round(mean(SN180_DMSO$apAngle), digits=1)`° are most constricted in the _anterior-posterior_ axis.
 
 (ref:angletoACI) ACI~Major~ / ACI~Minor~ over Major~Angle~
-```{r angletoACI, out.width='60%', fig.width=5, fig.height=2.75, fig.cap="(ref:angletoACI)"}
+```{r angletoACI, out.width='49%', fig.width=5, fig.height=2.75, fig.cap="(ref:angletoACI)", fig.keep='all', fig.show='hold'}
+ggplot(SN180, aes(ACI_Angle)) +
+  stat_density(aes(group=GT), geom="area", bw=3, size=1.5, position = "identity", fill="black", alpha=.1) +
+  stat_density(aes(colour=GT), geom="line", bw=3, size=1.5, position = "identity") +
+  scale_x_continuous(breaks = seq(0, 90, 15)) +
+  labs(title = "", x = "Major Angle", y = "KDE") +
+  coord_cartesian(xlim = c(5, 82), ylim = c(0.002, 0.033)) +
+  annotate("text", x = 5, y = 0.032, label = "A", size=6) +
+  mythemeLIGHT_bottom() + 
+    theme(legend.title=element_blank()) + 
+    theme(legend.position = c(0.8, 0.85))
+
 ggplot(SN180_ACIs, aes(Angle, value)) +
   stat_smooth(aes(colour=GT), geom = "line", se=FALSE, method="loess", span=.3, size=1.5) +
   scale_x_continuous(breaks = seq(0, 90, 25)) +
   labs(title = "", x = "Major Angle", y = "ACI") +
   scale_x_continuous(limits= c(0, 90), breaks = seq(15, 75, 15)) +
   scale_y_continuous(breaks = seq(2, 7, 1)) +
+  coord_cartesian(xlim = c(5, 82)) +
+  annotate("text", x = 6, y = 6.7, label = "B", size=6) +
   facet_grid(.~ACI, labeller = label_parsed) +
   mythemeLIGHT_bottom() + 
     theme(legend.title=element_blank()) + 
@@ -1058,185 +1045,47 @@ ImageJ Macro
 
 Summaries of Image datasets
 
-### Cell-Cluster {#cc-data}
-
-```{r ccdata}
-tab <- read.delim("figures/materials/imgdat_cc.txt")
-knitr::kable(tab, "latex", booktabs = T, caption = "Cell Cluster dataset", escape = T) %>%
+```{r imgdatcc}
+tab <- read.delim("figures/materials/img_data/imgdat_cc.txt")
+knitr::kable(tab, "latex", booktabs = T, caption = "Cell Cluster dataset", escape = F, col.names = NULL) %>%
   kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
-  collapse_rows(columns = 1, latex_hline = "none", valign = "top") 
+  collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
+  column_spec(1, width = "2cm") %>%
+  column_spec(2, width = "2.5cm")
 ```
 
-### Apical Index {#aci-data}
+```{r imgdatai}
+tab <- read.delim("figures/materials/img_data/imgdat_ai.txt")
+knitr::kable(tab, "latex", booktabs = T, caption = "AI dataset", escape = F, col.names = NULL) %>%
+  kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
+  collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
+  column_spec(1, width = "2cm") %>%
+  column_spec(2, width = "2.5cm") 
+``` 
 
----------------------------------------------------------------------------------
-Element           condition
------------------ ---------------------------------------------------------------
-**Crossings** 
- 
- Pairs            4     
- 
- Transgenes       _cldnb:lyn-gfp_ +/+
- 
- Mutation         _shroom3_
- 
- Staging          30 min.
- 
-**Mounting**
+```{r imgdatprol}
+tab <- read.delim("figures/materials/img_data/imgdat_prol.txt")
+knitr::kable(tab, "latex", booktabs = T, caption = "Proliferation dataset", escape = F, col.names = NULL) %>%
+  kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
+  collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
+  column_spec(1, width = "2cm") %>%
+  column_spec(2, width = "2.5cm")
+```
 
- Protocol         190930 D.S. Kleinhans
- 
- agarose          0.5% LMPA + 20% Tricaine (V/V%)
- 
- stamp            stamp v4A
- 
-**Imaging**
- 
- Magnification    40X
- 
- Camera           Binning 1x1; Gain 1; Exposure 100 ms
- 
- Channels         488 nm (100%)
- 
- Positions        4x36 positions 
- 
- Z-Stack          0.4 $\mu$m Z-spacing
------------------ ---------------------------------------------------------------
-Table: (\#tab:acidata) AI dataset
+```{r imgdatdet}
+tab <- read.delim("figures/materials/img_data/imgdat_det.txt")
+knitr::kable(tab, "latex", booktabs = T, caption = "Detection dataset", escape = F, col.names = NULL) %>%
+  kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
+  collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
+  column_spec(1, width = "2cm") %>%
+  column_spec(2, width = "2.5cm")
+```
 
-### Proliferation {#tl-data}
-
----------------------------------------------------------------------------------
-Element           condition
------------------ ---------------------------------------------------------------
-**Crossings** 
- 
- Pairs            6         
- 
- Transgenes       _cldnb:lyn-gfp_ +/?; _cxcr4b_(BAC) _:H2BRFP_ +/0
- 
- Mutation         _shroom3_
- 
- Staging          30 min.
- 
-**Mounting**
-
- Protocol         190930 D.S. Kleinhans
- 
- Agarose          0.3% LMPA + 20% Tricaine (V/V%)
- 
- Stamp            stamp v4A
- 
-**Imaging**
- 
- Magnification    20X + 1.5x zoom
- 
- Camera           Binning 2x2; Gain 4; Exposure 35 ms; full FOV*150 $\mu$m
- 
- Channels         651 nm (25%)
- 
- Positions        36 positions 
- 
- Z-Stack          2.5 $\mu$m Z-spacing; 110 $\mu$m stack size; 2*X large image
- 
- Time             20 h / 7 min. interval / start ~ 2 p.m. (32 hpf)
- 
-**Processing**
- 
- Projection       Maximum intensity
- 
- Transformations  Rotation and cropping in XY and T
------------------ ---------------------------------------------------------------
-Table: (\#tab:prolifdata) Proliferation dataset
-
-### Detection {#detect-data}
-
----------------------------------------------------------------------------------
-Element           condition
------------------ ---------------------------------------------------------------
-**Crossings** 
- 
- Pairs            6         
- 
- Transgenes       _cldnb:lyn-gfp_ +/?
- 
- Mutation         _shroom3_
- 
- Staging          30 min.
- 
-**Mounting**
-
- Protocol         190930 D.S. Kleinhans
- 
- Agarose          0.3% LMPA + 20% Tricaine (V/V%)
- 
- Stamp            stamp v5A
- 
-**Imaging**
- 
- Magnification    20X + 1.5x zoom
- 
- Camera           Binning 2x2; Gain 4; Exposure 20 ms; full FOV*100 $\mu$m
- 
- Channels         488 nm (25%)
- 
- Positions        36 positions 
- 
- Z-Stack          3 $\mu$m Z-spacing; 100 $\mu$m stack size; 3*X large image
- 
- Time             20 h / 10 min. interval / start ~ 2 p.m. (32 hpf)
- 
-**Processing**
- 
- Projection       Maximum intensity
- 
- Transformations  Rotation and cropping in XY and T
------------------ ---------------------------------------------------------------
-Table: (\#tab:detectdata) Detection dataset
-
-### Atoh1a {#mat-ato-set}
-
----------------------------------------------------------------------------------
-Element           condition
------------------ ---------------------------------------------------------------
-**Crossings** 
- 
- Pairs            4         
- 
- Transgenes       _cldnb:lyn-gfp_ +/?; _atoh1a:Tom_ +/0
- 
- Mutation         _shroom3_
- 
- Staging          30 min.
- 
-**Mounting**
-
- Protocol         190930 D.S. Kleinhans
- 
- Agarose          0.3% LMPA + 20% Tricaine (V/V%)
- 
- Stamp            stamp v5A
- 
-**Imaging**
- 
- Magnification    20X
- 
- Camera           Binning 2x2; Gain 4; full FOV*100 $\mu$m
- 
- Channels         488 nm (Int: 20%; Exp: 25ms)
- 
-                  561 nm (Int: 30%; Exp: 50ms)
- 
- Positions        36 positions 
- 
- Z-Stack          2.5 $\mu$m Z-spacing; 100 $\mu$m stack size; 2*X large image
- 
- Time             20 h / 20 min. interval / start ~ 2 p.m. (32 hpf)
- 
-**Processing**
- 
- Projection       Maximum intensity
- 
- Transformations  Rotation and cropping in XY and T
------------------ ---------------------------------------------------------------
-Table: (\#tab:atoset) atoh1a dataset
+```{r imgdatato}
+tab <- read.delim("figures/materials/img_data/imgdat_ato.txt")
+knitr::kable(tab, "latex", booktabs = T, caption = "Atoh1a dataset", escape = F, col.names = NULL) %>%
+  kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
+  collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
+  column_spec(1, width = "2cm") %>%
+  column_spec(2, width = "2.5cm")
+```

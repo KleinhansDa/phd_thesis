@@ -1076,13 +1076,6 @@ cat.-no.\strut
 \midrule
 \endhead
 \begin{minipage}[t]{0.21\columnwidth}\raggedleft
-Ambion Water\strut
-\end{minipage} & \begin{minipage}[t]{0.54\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.16\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedleft
 Cut Smart Buffer\strut
 \end{minipage} & \begin{minipage}[t]{0.54\columnwidth}\centering
 NEB\strut
@@ -1936,8 +1929,7 @@ Total Commander\strut
 \subsection{Ground Truth Data}\label{mat-GrTrDat}}
 
 Analyzing images and extracting quantitative measurements can be a tedious task, especially when the analysis becomes more complex. Fortunately, there are ways to automate image analysis by using either machine learning approaches or by tailoring hand-crafted algorithms in an image analysis software tool like e.g.~ImageJ(\emph{46}).
-
-The main advantages of doing so are.
+The main advantages of doing so are\ldots{}
 \begin{itemize}
 \tightlist
 \item
@@ -2065,7 +2057,7 @@ Figure \ref{fig:countP05} shows the single registered cell clusters from figure 
 \hypertarget{nuclei-count}{%
 \subparagraph{Nuclei Count}\label{nuclei-count}}
 
-Comparing the segmented objects count of the Gaussian parameters with the ground truth gives an indication for over- resp. under-segmentation. In figure \ref{fig:GrTratioCC} the relative numbers for each parameter can be seen in percentage above or below the mean cell count of the ground truth (blue horizon). The red area represents over-segmentation, the green under-segmentation. Additionally, table \ref{tab:meanabsnuc} shows the absolute numbers.
+Comparing the segmented objects count of the Gaussian parameters with the ground truth gives an indication for over- resp. under-segmentation. In figure \ref{fig:GrTratioCC} the relative numbers for each parameter can be seen in percentage above or below the mean cell count of the ground truth (blue horizon). The red area represents over-segmentation, the green under-segmentation.
 
 
 \begin{figure}
@@ -2076,19 +2068,6 @@ Comparing the segmented objects count of the Gaussian parameters with the ground
 
 \caption[Relative difference of segment counts]{Relative difference of segment counts (N=3, Errorbars = Std./2)}\label{fig:GrTratioCC}
 \end{figure}
-\begin{table}[t]
-
-\caption{\label{tab:meanabsnuc}Nuclei count}
-\centering
-\begin{tabu} to \linewidth {>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X}
-\toprule
-  & GrT & NB45 & NB50 & NB55 & NB60 & NB70 & NB80\\
-\midrule
-\rowcolor{gray!6}  Mean\_Nuclei & 40.95 & 52.81 & 45.76 & 41.90 & 38.57 & 34.62 & 31.33\\
-STD. & 21.53 & 27.90 & 22.03 & 20.51 & 18.75 & 16.34 & 14.78\\
-\bottomrule
-\end{tabu}
-\end{table}
 \noindent To estimate the quality of nuclei detection for each parameter, the ratio of automatically detected and ground truth objects count can be calculated and compared (table \ref{tab:nrcount}). The closer it is to 1, the better.
 \begin{table}[t]
 
@@ -2114,7 +2093,7 @@ Maximum performance is achieved at a scaled parameter of 6 \(\mu\)m, with a rati
 \hypertarget{ground-truth-design-1}{%
 \paragraph{Ground Truth Design}\label{ground-truth-design-1}}
 
-To assess the quality of the PLLpANALYZER3D algorithm the ground truth was designed as follows.
+To assess the quality of the anaLLzr3D algorithm the ground truth was modeled as follows.
 
 \hypertarget{model-1}{%
 \subparagraph{Model}\label{model-1}}
@@ -2131,47 +2110,23 @@ To assess the quality of the PLLpANALYZER3D algorithm the ground truth was desig
 \item
   embryos are mounted within a 3D mold for improved 3D alignment
 \end{itemize}
-\begin{longtable}[]{@{}cl@{}}
-\caption{\label{tab:model3DGrT} PLLpANALYZER3D Model}\tabularnewline
+\begin{table}[!h]
+
+\caption{\label{tab:model3DGrT}anaLLzr3D Model}
+\centering
+\begin{tabu} to \linewidth {>{\raggedleft\arraybackslash}p{3cm}>{\raggedright}X}
 \toprule
-\endhead
-\begin{minipage}[t]{0.23\columnwidth}\centering
-Exposure time\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright
-100 ms\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\centering
-Laser intensity\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright
-100\% / 9.3 mW\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\centering
-Objective\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright
-40X; Nikon CFI APO LWD WI; N.A. = 1.15, W.D. = 0.60 mm\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\centering
-Z-spacing\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright
-0.4 - 0.5 \(\mu\)m\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\centering
-Camera\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright
-Andor ZYLA PLUS sCMOS; 4.2 M.Pix; 82\% Q.E.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\centering
-SD system\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright
-Yokogawa CSU - W1; 50 \(\mu\)m pattern\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.23\columnwidth}\centering
-Piezo\strut
-\end{minipage} & \begin{minipage}[t]{0.71\columnwidth}\raggedright
-Piezo Z-table; 300 \(\mu\)m scan range\strut
-\end{minipage}\tabularnewline
+\rowcolor{gray!6}  Exposure time & 100 ms\\
+Laser intensity & 100$\%$ / 9.3 mW\\
+\rowcolor{gray!6}  Objective & 40X; CFI APO LWD WI; N.A. = 1.15, W.D. = 0.60 mm\\
+Z-spacing & 0.4 - 0.5 $\mu$m\\
+\rowcolor{gray!6}  Camera & sCMOS; 4.2 M.Pix; 82$\%$ Q.E.\\
+\addlinespace
+SD system & Yokogawa CSU - W1; 50 $\mu$m pattern\\
+\rowcolor{gray!6}  Piezo & Piezo Z-table; 300 $\mu$m scan range\\
 \bottomrule
-\end{longtable}
+\end{tabu}
+\end{table}
 \hypertarget{training-data-1}{%
 \subparagraph{Training data}\label{training-data-1}}
 
@@ -2182,10 +2137,13 @@ The training set consists of three randomly picked wildtype PLLps. For each the 
 
 To test the algorithm it is run at different segmentation thresholds on the same image data.
 
-\hypertarget{image-analysis-1}{%
-\paragraph{Image Analysis}\label{image-analysis-1}}
+\hypertarget{results-1}{%
+\paragraph{Results}\label{results-1}}
 
-For image analysis a custom IJ macro script was developed that recognizes the cell boundaries via the fluorescence signal emitted by a Lyn Kinase tethered eGFP which expression is controlled by the \emph{cxcr4b} lateral line specific promotor. The central IJ tool used to do this is the MorphoLibJ's(\emph{49}) \emph{Morpholigical Segmentation} plugin. The plugin however requires to choose for a `segmentation threshold' that determines the quality and the quantity of segmented objects. This parameter therefore plays an essential role in the truthfulness of the analysis results.
+\hypertarget{image-analysis-1}{%
+\subparagraph{Image Analysis}\label{image-analysis-1}}
+
+For image analysis a custom IJ macro script was developed that recognizes the cell boundaries via the fluorescence signal emitted by a Lyn Kinase tethered eGFP which expression is controlled by the \emph{cxcr4b} lateral line specific promotor (\emph{21}). The central IJ tool used to do this is the MorphoLibJ's(\emph{49}) \emph{Morpholigical Segmentation} plugin. The plugin however requires to choose for a `segmentation threshold' that determines the quality and the quantity of segmented objects. This parameter therefore plays an essential role in the truthfulness of the analysis results.
 
 \hypertarget{macro-modules-1}{%
 \subparagraph{Macro modules}\label{macro-modules-1}}
@@ -2208,134 +2166,40 @@ The macro developed consists of the following main modules:
 
 The first module of the macro is PLLp registration in X, Y and cropping in Z. This is accomplished by an initial maximum Z projection and blurring of the image, 2-D segmentation using a minimum threshold and lastly by measuring the angle the segment is rotated against the horizon (at 0\(^{\circ}\)). After rotation the PLLp is then registered in Y and the image is cropped by drawing a rectangle with fixed height.
 
-\hypertarget{unprocessed-data}{%
-\subparagraph{Unprocessed data}\label{unprocessed-data}}
-
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.9\linewidth]{figure/02-MaMo/GrTr/Morphology/zmax_comb_2} 
+{\centering \includegraphics[width=0.9\linewidth]{figures/materials/ground_truth/registration} 
 
 }
 
-\caption{Unregistered, Maximum Z projected data}\label{fig:maxraw}
+\caption{Registration of 3D data}\label{fig:maxraw}
 \end{figure}
-\begin{longtable}[]{@{}rl@{}}
-\caption{\label{tab:imgprop} Physical image properties (scaling)}\tabularnewline
+\begin{table}[!h]
+
+\caption{\label{tab:imgprop}Physical image properties (scaling)}
+\centering
+\begin{tabu} to \linewidth {>{\raggedleft}X>{\raggedright}X}
 \toprule
-\endhead
-\begin{minipage}[t]{0.46\columnwidth}\raggedleft
-X / Y resolution\strut
-\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright
-0.1625 / 0.1625 \(\mu\)m\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.46\columnwidth}\raggedleft
-Z resolution\strut
-\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright
-0.4 \(\mu\)m\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.46\columnwidth}\raggedleft
-\(\Delta\)T - Z\strut
-\end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright
-0.5428 s\strut
-\end{minipage}\tabularnewline
+\rowcolor{gray!6}  XY resolution & 0.1625 / 0.1625 $\mu$m\\
+Z resolution & 0.4 $\mu$m\\
+\rowcolor{gray!6}  $\Delta$T in Z & 0.5428 s\\
 \bottomrule
-\end{longtable}
-\hypertarget{registered-data-1}{%
-\subparagraph{Registered data}\label{registered-data-1}}
+\end{tabu}
+\end{table}
+During the registration process, the image is rotated against the horizon and cropped in X and Y. Additionally, the centers of the most constricting areas are detected via an intensity based dynamic threshold and highlighted as magenta circles in \ref{fig:maxraw}.
 
-During the registration process, the image is rotated against the horizon and cropped in X and Y. Additionally, the centers of the most constricting areas are detected via an intensity based dynamic threshold and highlighted as magenta circles in \ref{fig:maxreg}. Table \ref{tab:imgregpar} sums up the registration parameters.
-
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.95\linewidth]{figure/02-MaMo/GrTr/Morphology/zmax_reg_comb_2} 
-
-}
-
-\caption{Registered, Maximum Z projected data}\label{fig:maxreg}
-\end{figure}
-\begin{longtable}[]{@{}cccc@{}}
-\caption{\label{tab:imgregpar} Registration parameters}\tabularnewline
-\toprule
-\begin{minipage}[b]{0.17\columnwidth}\centering
-\textbf{Position}\strut
-\end{minipage} & \begin{minipage}[b]{0.23\columnwidth}\centering
-Angle of rotation\strut
-\end{minipage} & \begin{minipage}[b]{0.26\columnwidth}\centering
-Constriction centers\strut
-\end{minipage} & \begin{minipage}[b]{0.23\columnwidth}\centering
-Y registration\strut
-\end{minipage}\tabularnewline
-\midrule
-\endfirsthead
-\toprule
-\begin{minipage}[b]{0.17\columnwidth}\centering
-\textbf{Position}\strut
-\end{minipage} & \begin{minipage}[b]{0.23\columnwidth}\centering
-Angle of rotation\strut
-\end{minipage} & \begin{minipage}[b]{0.26\columnwidth}\centering
-Constriction centers\strut
-\end{minipage} & \begin{minipage}[b]{0.23\columnwidth}\centering
-Y registration\strut
-\end{minipage}\tabularnewline
-\midrule
-\endhead
-\begin{minipage}[t]{0.17\columnwidth}\centering
-P05\strut
-\end{minipage} & \begin{minipage}[t]{0.23\columnwidth}\centering
--4.4\(^{\circ}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\centering
-4\strut
-\end{minipage} & \begin{minipage}[t]{0.23\columnwidth}\centering
-168.25 px\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.17\columnwidth}\centering
-P07\strut
-\end{minipage} & \begin{minipage}[t]{0.23\columnwidth}\centering
-12.3\(^{\circ}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\centering
-4\strut
-\end{minipage} & \begin{minipage}[t]{0.23\columnwidth}\centering
-188.35 px\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.17\columnwidth}\centering
-P08\strut
-\end{minipage} & \begin{minipage}[t]{0.23\columnwidth}\centering
-0\(^{\circ}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\centering
-3\strut
-\end{minipage} & \begin{minipage}[t]{0.23\columnwidth}\centering
-153.83 px\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\end{longtable}
-\hypertarget{segmentations}{%
-\subsubsection{Segmentations}\label{segmentations}}
-
-\hypertarget{membrane-signal}{%
-\paragraph{Membrane signal}\label{membrane-signal}}
+\hypertarget{ground-truth-data-1}{%
+\subparagraph{Ground Truth data}\label{ground-truth-data-1}}
 
 Watershed segmentation depends on a continuous signal along the boundary of the object to be segmented. Since the PLLp lies within the zebrafish larvae and since light gets scattered more when traveling through more organic tissues, the fluorescence signal in deeper tissue sections is more disturbed. Still, the PLLp is located just superficial to the skin, so the effect may be minor. In figure \ref{fig:stackmem} the fluorescence signal of the three PLLps tested is shown in a single central cross-section in the dorso-ventral and the apico-basal axis.
-
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.5\linewidth]{figure/02-MaMo/GrTr/Morphology/signals} 
-
-}
-
-\caption{Signal intensities in XY and YZ at central cross-sections}\label{fig:stackmem}
-\end{figure}
-\hypertarget{ground-truth-threshold-segments}{%
-\paragraph{Ground Truth \& Threshold segments}\label{ground-truth-threshold-segments}}
 
 To compare the results between the ground truth segments and the segments obtained from different threshold levels graphically, for a single PLLp the ground truth and threshold level{[}n{]} are shown as a composite color image in figure \ref{fig:stackcomp}. By using a green lookup table (LUT) for the ground truth and a magenta LUT for the threshold level{[}n{]}, one can readily detect overlapping objects (white), over segmentation (magenta) and under segmentation (green).
 
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.85\linewidth]{figure/02-MaMo/GrTr/Morphology/volumes} 
+{\centering \includegraphics[width=0.85\linewidth]{figures/materials/ground_truth/volumes} 
 
 }
 
@@ -2344,10 +2208,10 @@ To compare the results between the ground truth segments and the segments obtain
 \noindent Volume renderings have been done with IJ's \href{\%22https://github.com/fiji/Volume_Viewer/releases/tag/Volume_Viewer-2.01.2\%22}{VolumeViewer}
 
 \hypertarget{data-analysis-1}{%
-\subsubsection{Data Analysis}\label{data-analysis-1}}
+\paragraph{Data Analysis}\label{data-analysis-1}}
 
 \hypertarget{cell-count}{%
-\paragraph{Cell Count}\label{cell-count}}
+\subparagraph{Cell Count}\label{cell-count}}
 
 In figure \ref{fig:gtratio} the relative numbers for each threshold level can be seen in percentage above or below the mean cell count of the ground truth (blue horizon). Analogous to the graphical inspection, the magenta area represents over segmentation, the green under segmentation. Additionally, table \ref{tab:gtrcellcount} shows the absolute numbers.
 
@@ -2360,18 +2224,21 @@ In figure \ref{fig:gtratio} the relative numbers for each threshold level can be
 
 \caption[Relative difference of segment counts]{Relative difference of segment counts (N=3, Errorbars = Std./2)}\label{fig:gtratio}
 \end{figure}
-\begin{longtable}[]{@{}ccccccc@{}}
-\caption{\label{tab:gtrcellcount} Absolute numbers}\tabularnewline
+\begin{table}[!h]
+
+\caption{\label{tab:gtrcellcount}Cellcount ground truth}
+\centering
+\begin{tabu} to \linewidth {>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X}
 \toprule
-\endhead
-\textbf{Group} & T01\_GrT & T02 & T03 & T04 & T05 & T10\tabularnewline
-\textbf{P05} & 146 & 139 & 133 & 131 & 131 & 117\tabularnewline
-\textbf{P07} & 150 & 184 & 169 & 164 & 156 & 137\tabularnewline
-\textbf{P08} & 127 & 139 & 133 & 123 & 117 & 92\tabularnewline
+\rowcolor{gray!6}  \textbf{Group} & \textbf{T01\_GrT} & \textbf{T02} & \textbf{T03} & \textbf{T04} & \textbf{T05} & \textbf{T10}\\
+P05 & 146 & 139 & 133 & 131 & 131 & 117\\
+\rowcolor{gray!6}  P07 & 150 & 184 & 169 & 164 & 156 & 137\\
+P08 & 127 & 139 & 133 & 123 & 117 & 92\\
 \bottomrule
-\end{longtable}
+\end{tabu}
+\end{table}
 \hypertarget{cell-morphology}{%
-\paragraph{Cell Morphology}\label{cell-morphology}}
+\subparagraph{Cell Morphology}\label{cell-morphology}}
 \begin{quote}
 \emph{There is always a precision / recall trade-off in detection tasks, e.g., when we set a lower threshold {[}. . .{]}, we can get a higher recall with a lower precision ({[}. . .{]}, but meanwhile we also get more false-positives in the results).}(\emph{41})
 \end{quote}
@@ -2380,7 +2247,7 @@ Inspecting the cell count unfortunately does not directly tell us how well the c
 \noindent The volume of a cell is a very robust morphological feature. Therefore, if its volume does not differ significantly at a given threshold level we consider its morphology to be conserved.
 
 \hypertarget{sample-distribution}{%
-\subsubsection{Sample distribution}\label{sample-distribution}}
+\subparagraph{Sample distribution}\label{sample-distribution}}
 
 In figure \ref{fig:volsecdffull} and \ref{fig:volsecdfzoom} the distribution and amount of the cell volumes across the different threshold levels can be inspected via the `empirical cumulative distribution function' (ECDF). The closer the slopes are to the ground truth, the stronger they are conserved. Figure \ref{fig:volsecdffull} shows the full distribution, where the major differences seem to appear within the 0.4 quantile (red line). Therefore, in figure \ref{fig:volsecdfzoom} only the values within the 0.4 quantile are shown to get a more detailed impression.
 
@@ -2403,7 +2270,7 @@ In figure \ref{fig:volsecdffull} and \ref{fig:volsecdfzoom} the distribution and
 \caption{ECDF - Small cell volumes}\label{fig:volsecdfzoom}
 \end{figure}
 \hypertarget{confidence-level}{%
-\subsubsection{Confidence level}\label{confidence-level}}
+\subparagraph{Confidence level}\label{confidence-level}}
 
 To statistically check how closely related each threshold value sample distribution is compared to the ground truth, a Kolmogorov-Smirnov-Test (ks.test) was performed. The ks.test is a nonparametric test whose null hypothesis is that the both groups compared were sampled from populations with identical populations. Therefore, the closer the p-value is to 1, the more similar the tested sample distribution would be to the ground truth (figure \ref{fig:kstestvol}; 5\% confidence threshold indicated by red line).
 
@@ -2419,11 +2286,6 @@ To statistically check how closely related each threshold value sample distribut
 \caption{Volumetric conservation confidence level}\label{fig:kstestvol}
 \end{figure}
 \noindent In comparison to the Mann-Whitney test, the ks.test is more sensitive to detect changes in the shape of the distribution than to detect a shift of the median(\emph{51})
-
-\hypertarget{summary-2}{%
-\paragraph{Summary}\label{summary-2}}
-
-For the cell count
 
 \hypertarget{met}{%
 \section{Methods}\label{met}}
@@ -2451,12 +2313,12 @@ Adult fish were anesthetized with buffered Tricaine (1X, see `List of Buffers') 
 \hypertarget{adult-genotyping}{%
 \subsubsection{Adult Genotyping}\label{adult-genotyping}}
 
-The clipped fins were digested for 1 h at 95 degrees celsius and neutralized subsequently with 1M Tris-HCl of pH 9.
+The clipped fins were digested for 1 h at 95\(^\circ\) celsius and neutralized subsequently with 1M Tris-HCl of pH 9.
 
 \hypertarget{embryo-genotyping}{%
 \subsubsection{Embryo Genotyping}\label{embryo-genotyping}}
 
-Single fixed/live embryos were denatured at 95 degrees Celsius in 50mM NaOH for 1 hour and neutralized by adding 1/10 th volume of 1 M Tris-HCl (pH 8.2).
+Single fixed/live embryos were denatured at 95\(^\circ\) Celsius in 50mM NaOH for 1 hour and neutralized by adding 1/10 the volume of 1 M Tris-HCl (pH 8.2).
 
 \hypertarget{zebrafish-euthanasia}{%
 \subsubsection{Zebrafish Euthanasia}\label{zebrafish-euthanasia}}
@@ -2466,10 +2328,10 @@ Adult zebrafish were anesthetized in tricaine (1X) till stage II-III of anaestez
 \hypertarget{fixation}{%
 \subsubsection{Fixation}\label{fixation}}
 
-Embryos and dechorionated larvae were fixed in 2 ml of 4 PFA in 1X PBS overnight at 4 degrees Celsius.
+Embryos and dechorionated larvae were fixed in 2 ml of 4\(\%\) PFA in 1X PBS overnight at 4\(^\circ\) Celsius.
 
 \hypertarget{Wet-met}{%
-\subsection{Wetlab Methods}\label{Wet-met}}
+\subsection{Wetlab}\label{Wet-met}}
 
 \hypertarget{ISH-met}{%
 \subsubsection{In Situ Hybridization}\label{ISH-met}}
@@ -2516,79 +2378,18 @@ Embryos and dechorionated larvae were fixed in 2 ml of 4 PFA in 1X PBS overnight
 \item
   Digest embryos in 10 \(\mu\)g/mL Proteinase K according to table
 \end{itemize}
-\begin{longtable}[]{@{}lccccccccc@{}}
-\caption{\label{tab:met-protk} Proteinase K digestion}\tabularnewline
+\begin{table}[!h]
+
+\caption{\label{tab:met-protk}Proteinase K digestion}
+\centering
+\begin{tabu} to \linewidth {>{\centering}X>{\centering}X>{\centering}X>{\centering}X>{\centering}X>{\centering}X>{\centering}X>{\centering}X>{\centering}X>{\centering}X}
 \toprule
-\begin{minipage}[b]{0.07\columnwidth}\raggedright
-\textbf{Stage}\strut
-\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
-0-6 s\strut
-\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
-7 s\strut
-\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
-18 s\strut
-\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
-24 hpf\strut
-\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
-32 hpf\strut
-\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
-36 hpf\strut
-\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
-42 hpf\strut
-\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
-48 hpf\strut
-\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
-72 hpf\strut
-\end{minipage}\tabularnewline
+Stage & 0.6 s & 7 s & 18 s & 24 hpf & 32 hpf & 36 hpf & 42 hpf & 48 hpf & 72 hpf\\
 \midrule
-\endfirsthead
-\toprule
-\begin{minipage}[b]{0.07\columnwidth}\raggedright
-\textbf{Stage}\strut
-\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
-0-6 s\strut
-\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
-7 s\strut
-\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
-18 s\strut
-\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
-24 hpf\strut
-\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
-32 hpf\strut
-\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
-36 hpf\strut
-\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
-42 hpf\strut
-\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
-48 hpf\strut
-\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\centering
-72 hpf\strut
-\end{minipage}\tabularnewline
-\midrule
-\endhead
-\begin{minipage}[t]{0.07\columnwidth}\raggedright
-min.\strut
-\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
-0\strut
-\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
-4\strut
-\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
-6\strut
-\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
-15\strut
-\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
-30\strut
-\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
-40\strut
-\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
-50\strut
-\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
-60\strut
-\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\centering
-60\strut
-\end{minipage}\tabularnewline
+\rowcolor{gray!6}  min. & 0 & 4 & 6 & 15 & 30 & 40 & 50 & 60 & 60\\
 \bottomrule
-\end{longtable}
+\end{tabu}
+\end{table}
 \begin{itemize}
 \tightlist
 \item
@@ -2718,125 +2519,122 @@ For mounting, an improved 3D specimen preparation and well-plate like sample nav
 
 \caption[Stamp and micro-well properties]{Stamp and \(\mu\)-well properties \textbf{A} single micro well in XY and \textbf{A'} in XZ \textbf{B} mounting without \(\mu\)-well and \textbf{B'} mounting with \(\mu\)-well \textbf{C} elements and dimensions of the stamp.}\label{fig:Mountmicro}
 \end{figure}
-\hypertarget{protocol}{%
-\subsubsection{\texorpdfstring{\textbf{PROTOCOL}}{PROTOCOL}}\label{protocol}}
-
 \hypertarget{preparations}{%
 \paragraph{Preparations}\label{preparations}}
-\begin{longtable}[]{@{}lccr@{}}
+\begin{longtable}[]{@{}cccl@{}}
 \caption{\label{tab:mounthard} Mounting hardware}\tabularnewline
 \toprule
-\begin{minipage}[b]{0.25\columnwidth}\raggedright
+\begin{minipage}[b]{0.26\columnwidth}\centering
 \textbf{item}\strut
 \end{minipage} & \begin{minipage}[b]{0.10\columnwidth}\centering
 Company\strut
-\end{minipage} & \begin{minipage}[b]{0.45\columnwidth}\centering
-Product\strut
-\end{minipage} & \begin{minipage}[b]{0.10\columnwidth}\raggedleft
+\end{minipage} & \begin{minipage}[b]{0.42\columnwidth}\centering
+Description\strut
+\end{minipage} & \begin{minipage}[b]{0.11\columnwidth}\raggedright
 cat.-no.\strut
 \end{minipage}\tabularnewline
 \midrule
 \endfirsthead
 \toprule
-\begin{minipage}[b]{0.25\columnwidth}\raggedright
+\begin{minipage}[b]{0.26\columnwidth}\centering
 \textbf{item}\strut
 \end{minipage} & \begin{minipage}[b]{0.10\columnwidth}\centering
 Company\strut
-\end{minipage} & \begin{minipage}[b]{0.45\columnwidth}\centering
-Product\strut
-\end{minipage} & \begin{minipage}[b]{0.10\columnwidth}\raggedleft
+\end{minipage} & \begin{minipage}[b]{0.42\columnwidth}\centering
+Description\strut
+\end{minipage} & \begin{minipage}[b]{0.11\columnwidth}\raggedright
 cat.-no.\strut
 \end{minipage}\tabularnewline
 \midrule
 \endhead
-\begin{minipage}[t]{0.25\columnwidth}\raggedright
+\begin{minipage}[t]{0.26\columnwidth}\centering
 \(\mu\)-Dish\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
 ibidi\strut
-\end{minipage} & \begin{minipage}[t]{0.45\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.42\columnwidth}\centering
 20-35 mm polymer, \#1.5, high wall\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedleft
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
 81218-200\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.25\columnwidth}\raggedright
+\begin{minipage}[t]{0.26\columnwidth}\centering
 3D Mould Stamp\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
 IBG3D\strut
-\end{minipage} & \begin{minipage}[t]{0.45\columnwidth}\centering
+\end{minipage} & \begin{minipage}[t]{0.42\columnwidth}\centering
 20-35 mm\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedleft
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
 \strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.25\columnwidth}\raggedright
+\begin{minipage}[t]{0.26\columnwidth}\centering
 Preparation needles\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
 VWR\strut
-\end{minipage} & \begin{minipage}[t]{0.45\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedleft
+\end{minipage} & \begin{minipage}[t]{0.42\columnwidth}\centering
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
 USBE5470\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.25\columnwidth}\raggedright
+\begin{minipage}[t]{0.26\columnwidth}\centering
 Glass pipettes\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
 Roth\strut
-\end{minipage} & \begin{minipage}[t]{0.45\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedleft
+\end{minipage} & \begin{minipage}[t]{0.42\columnwidth}\centering
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
 4518\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.25\columnwidth}\raggedright
+\begin{minipage}[t]{0.26\columnwidth}\centering
 Silicone bulbs\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
 VWR\strut
-\end{minipage} & \begin{minipage}[t]{0.45\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedleft
+\end{minipage} & \begin{minipage}[t]{0.42\columnwidth}\centering
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
 612-2327\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.25\columnwidth}\raggedright
+\begin{minipage}[t]{0.26\columnwidth}\centering
 Microtubes 2 mL\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
 Sarstedt\strut
-\end{minipage} & \begin{minipage}[t]{0.45\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedleft
+\end{minipage} & \begin{minipage}[t]{0.42\columnwidth}\centering
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
 2691\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.25\columnwidth}\raggedright
+\begin{minipage}[t]{0.26\columnwidth}\centering
 Heating block\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
 PeqLab\strut
-\end{minipage} & \begin{minipage}[t]{0.45\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedleft
+\end{minipage} & \begin{minipage}[t]{0.42\columnwidth}\centering
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
 HX2\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.25\columnwidth}\raggedright
+\begin{minipage}[t]{0.26\columnwidth}\centering
 Microwave oven\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
 Severin\strut
-\end{minipage} & \begin{minipage}[t]{0.45\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedleft
+\end{minipage} & \begin{minipage}[t]{0.42\columnwidth}\centering
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
 MW7849\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.25\columnwidth}\raggedright
+\begin{minipage}[t]{0.26\columnwidth}\centering
 Stereo microscope\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
 Leica\strut
-\end{minipage} & \begin{minipage}[t]{0.45\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedleft
+\end{minipage} & \begin{minipage}[t]{0.42\columnwidth}\centering
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
 M165FC\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.25\columnwidth}\raggedright
+\begin{minipage}[t]{0.26\columnwidth}\centering
 Transmitted Light Base\strut
 \end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
 Leica\strut
-\end{minipage} & \begin{minipage}[t]{0.45\columnwidth}\centering
-\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedleft
+\end{minipage} & \begin{minipage}[t]{0.42\columnwidth}\centering
+-\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
 MDG36\strut
 \end{minipage}\tabularnewline
 \bottomrule
@@ -2876,8 +2674,8 @@ incl.~20\% (v/v) 25X TMS for live imaging\strut
 \end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}
-\hypertarget{preparation}{%
-\paragraph{Preparation}\label{preparation}}
+\hypertarget{protocol}{%
+\paragraph{Protocol}\label{protocol}}
 
 First, make sure your stamp is clean of dust or other particles. If necessary clean it with 70\% Ethanol and / or pressured air. Of a 1\% standard Agarose in E3, apply\ldots{}
 \begin{itemize}
@@ -2889,39 +2687,21 @@ First, make sure your stamp is clean of dust or other particles. If necessary cl
 \end{itemize}
 to the glass or polymer surface and place the stamp on it so that it touches the cover. Place it as central as possible. Excessive agarose not needed for the imprint will fill the surrounding area in the dish and stabilize the structure when removing the stamp again.
 
-gently rotate the dish so that excess agarose solution will cover the whole dish.
+Gently rotate the dish so that excess agarose solution will cover the whole dish.
 
 Wait for \textasciitilde{}45 min., then use a clean preparation needle and slip it through stamp - polymerized agarose interface. Remove the stamp carefully by lifting it and holding the \(\mu\)-Dish in place.
 
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.6\linewidth]{figure/02-MaMo/Mount/stampprod} 
+{\centering \includegraphics[width=0.8\linewidth]{figures/materials/mounting/mounting} 
 
 }
 
-\caption[Stamping procedure]{Stamping procedure \textbf{A} clean stamp surface \textbf{B} preparation of the stamp before lifting \textbf{C} ) ready-for-use agarose imprint.}\label{fig:stampprod}
-\end{figure}
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.6\linewidth]{figure/02-MaMo/Mount/mounting} 
-
-}
-
-\caption[44x mounting stamp]{44x mounting stamp \textbf{A} without LMPA \textbf{B and C} with LMPA, while the latter shows the imprint with light coming from a different angle, making the chambers visible again.}\label{fig:mounting}
-\end{figure}
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.6\linewidth]{figure/02-MaMo/Mount/setup} 
-
-}
-
-\caption[Imaging setup]{Imaging setup \textbf{A} Positioning of the \(\mu\)-well \textbf{B} Alignment in Brightfield and \textbf{C} Definition of a custom well plate.}\label{fig:setup}
+\caption[Steps during improved zebrafish mounting]{Stamping procedure \textbf{Agarose Cast} (A) clean stamp surface (B) preparation of the stamp before lifting (C) ready-for-use agarose imprint. \textbf{Mounting} (A) without LMPA (B and C) with LMPA, while the latter shows the imprint with light coming from a different angle, making the chambers visible again. (D) Horizontal alignment of embryos. \textbf{Imaging} (A) Positioning of the \(\mu\)-well (B) Alignment in Brightfield and (C) Definition of a custom well plate.}\label{fig:stampprod}
 \end{figure}
 \hypertarget{comp-met}{%
-\subsection{Computational Methods}\label{comp-met}}
+\subsection{Computational}\label{comp-met}}
 
 \hypertarget{CNN}{%
 \subsubsection{Rosette Detection}\label{CNN}}
@@ -2960,34 +2740,29 @@ The CNN was trained on 17 wildtype DMSO control and SU5402 treated (Fgf signalin
 \item
   Training is done relatively quick
 \end{enumerate}
-\begin{longtable}[]{@{}llllllll@{}}
-\caption{\label{tab:CNNtraining} CNN training data}\tabularnewline
+\begin{table}[!h]
+
+\caption{\label{tab:CNNtraining}CNN training data}
+\centering
+\begin{tabu} to \linewidth {>{\centering}X>{\centering\arraybackslash}p{1cm}>{\centering\arraybackslash}p{2.5cm}>{\centering\arraybackslash}p{1.5cm}>{\centering\arraybackslash}p{1.5cm}>{\centering\arraybackslash}p{1.5cm}>{\centering}X}
 \toprule
-& compound & conc. & nm & intensity & exposure & z-planes & magnification\tabularnewline
+\textbf{group} & \textbf{conc.} & \textbf{nm} & \textbf{intensity} & \textbf{exposure} & \textbf{z.planes} & \textbf{magnification}\\
 \midrule
-\endfirsthead
-\toprule
-& compound & conc. & nm & intensity & exposure & z-planes & magnification\tabularnewline
-\midrule
-\endhead
-Rosette control & DMSO & 1\% & 488 & 100\% & 100 ms & \textasciitilde{}70 & 40X\tabularnewline
-SU5402 treated & SU5402 & 10 \(\mu\)M & 488 & 100\% & 100 ms & \textasciitilde{}70 & 40X\tabularnewline
+\rowcolor{gray!6}  DMSO & 0.1$\%$ & 488 & 100$\%$ & 100 ms & ~70 & 40X\\
+SU5402 & 10 $\mu$M & 488 & 100$\%$ & 100 ms & ~70 & 40X\\
 \bottomrule
-\end{longtable}
+\end{tabu}
+\end{table}
 \hypertarget{prolif}{%
 \subsubsection{Proliferation Analysis}\label{prolif}}
 
-The basic principle is based on work done by Laguerre \emph{et al.}, 2009(\emph{23}).
-
-\noindent For manual tracking of mitotic events `MTrackJ'(\emph{53}) was used
+The basic principle is based on work done by Laguerre \emph{et al.}, 2009(\emph{23}). For manual tracking of mitotic events `MTrackJ'(\emph{53}) was used\ldots{}
 \begin{itemize}
 \tightlist
 \item
-  Mitotic events were tracked in the pLLP exclusively from Prometa- / Meta-phase till Ana- / Telo-phase
+  Mitotic events were tracked either in the pLLP or deposited CCs exclusively from Prometa- / Meta-phase till Ana- / Telo-phase
 \item
-  After tracking, the track file was saved and measured
-\item
-  `Tracks' and `Points' data was saved as `.txt' files (tab seperated)
+  `Tracks' and `Points' data was saved as `.txt' files
 \end{itemize}
 \noindent Figure \ref{fig:mitodatapoints} shows an exemplary track for the data analyzed.
 
@@ -3002,6 +2777,9 @@ The basic principle is based on work done by Laguerre \emph{et al.}, 2009(\emph{
 \end{figure}
 \hypertarget{ACI}{%
 \subsubsection{Apical Index}\label{ACI}}
+
+\hypertarget{rationale}{%
+\paragraph{Rationale}\label{rationale}}
 
 The earliest attempt found for indexing AC can be found in a study published by Lee \emph{et al}(\emph{54}) where they were interested in the `apical index' (A.I.) of bottle cells during \emph{X.laevis} gastrulation(figure \ref{fig:ACLee}).
 
@@ -3030,9 +2808,6 @@ The earliest attempt found for indexing AC can be found in a study published by 
 \[\mathbf{ACI} = \frac{lateral\;height\;[\mu m]}{apical\;width\;[\mu m]}\]
 
 \noindent While trying to reproduce these results we found two principal weaknesses of applying this ratio to the cells of the PLLp. First, it does not respect the independence of lateral height to AC. Second, it does not differentiate between \emph{anterio-posterior} (AP) and \emph{dorso-ventral} (DV) tissue polarization. Third, it is really more an A.I. than a constriction index.
-
-\hypertarget{rationale}{%
-\paragraph{Rationale}\label{rationale}}
 
 \hypertarget{ACI-param}{%
 \subparagraph{Parameter definition}\label{ACI-param}}
@@ -3072,9 +2847,9 @@ To obtain a precise and biologically meaningful quantity for AC, first a couple 
 \hypertarget{ACI-lat}{%
 \subparagraph{Adaption for variation in lateral height}\label{ACI-lat}}
 
-To test different ACI conditions, an apically constricted cell can be approximated by modeling a tetrahedron. For example, shrinking or enlarging a cell symmetrically should not affect the ACI. As described by Harding(2014)(\emph{56}), the \emph{apical width} of a cell is measured first by manual 3-D object reconstruction, second manual re-orientation, and third by going 1 \(\mu\)m from the apical tip into the cell (from now on referred to as \(\Delta\)ap, \ref{fig:ACICells}B). Finally, \emph{apical width} is the total width of the 2-D object.
+To test different A.I. conditions, an apically constricted cell can be approximated by modeling a tetrahedron. For example, shrinking or enlarging a cell symmetrically should not affect the ACI. As described by Harding(2014)(\emph{56}), the \emph{apical width} of a cell is measured first by manual 3-D object reconstruction, second manual re-orientation, and third by going 1 \(\mu\)m from the apical tip into the cell (from now on referred to as \(\Delta\)ap, \ref{fig:ACICells}B). Finally, \emph{apical width} is the total width of the 2-D object.
 
-If \(\Delta\)ap is a constant, the ACI in a symmetrically enlarged cell increases from e.g.~15 to 23, since \emph{apical width} stays the same but lateral height increases. On the contrary, if \(\Delta\)ap is adjusted relative to a cells lateral height, e.g.~by percentage, the ACI in a symmetrically enlarged cell stays the same \ref{fig:ACICells}
+If \(\Delta\)ap is a constant, the A.I. in a symmetrically enlarged cell increases from e.g.~15 to 23, since \emph{apical width} stays the same but lateral height increases. On the contrary, if \(\Delta\)ap is adjusted relative to a cells lateral height, e.g.~by percentage, the A.I. in a symmetrically enlarged cell stays the same \ref{fig:ACICells}
 
 
 \begin{figure}
@@ -3083,7 +2858,7 @@ If \(\Delta\)ap is a constant, the ACI in a symmetrically enlarged cell increase
 
 }
 
-\caption[ACI Cell Models]{ACI model \textbf{A-A''} ACI Cell Models. A' and A'' show cells that are symmetrically increased versions of A. While in A', constant delta was used, in A'' delta was adjusted relative to the lateral height. \textbf{B} Illustrating delta ap. (left) apically constricted cells volume rendered in XY (top) and as a lateral cross-section in X-Z (bottom). (right) 2D area as seen at delta ap of 1 or 2.5 \(\mu\)m.}\label{fig:ACICells}
+\caption[ACI Cell Models]{A.I. model \textbf{A-A''} A.I. Cell Models. A' and A'' show cells that are symmetrically increased versions of A. While in A', constant delta was used, in A'' delta was adjusted relative to the lateral height. \textbf{B} Illustrating delta ap. (left) apically constricted cells volume rendered in XY (top) and as a lateral cross-section in X-Z (bottom). (right) 2D area as seen at delta ap of 1 or 2.5 \(\mu\)m.}\label{fig:ACICells}
 \end{figure}
 Therefore the measurement for apical width has to be relative to lateral height.
 
@@ -3092,7 +2867,7 @@ Therefore the measurement for apical width has to be relative to lateral height.
 \hypertarget{ACI-pol}{%
 \subparagraph{Adaption for tissue polarization}\label{ACI-pol}}
 
-Organs develop in a 3-D space and are polarized along each axis. AC usually describes a 2-D morphogenetic movement towards a center along the X-Y axes. However, the contraction movements along X and Y might be independent of one another. This could mean that they happen at different speeds, or that one is absent. As a result, the tissue would look less radially \ref{fig:cellpol} constricted, but more constricted against a line. In order to separate those two AC dimensions, the ACI can be calculated for the \emph{anterio-posterior} and for the \emph{dorso-ventral} axis \ref{fig:cellpol}.
+Organs develop in a 3-D space and are polarized along each axis. AC usually describes a 2-D morphogenetic movement towards a center along the X-Y axes. However, the contraction movements along X and Y might be independent of one another. This could mean that they happen at different speeds, or that one is absent. As a result, the tissue would look less radially \ref{fig:cellpol} constricted, but more constricted against a line. In order to separate those two AC dimensions, the A.I. can be calculated for the \emph{anterio-posterior} and for the \emph{dorso-ventral} axis \ref{fig:cellpol}.
 
 
 \begin{figure}
@@ -3140,8 +2915,8 @@ Organs develop in a 3-D space and are polarized along each axis. AC usually desc
 \end{figure}
 The two dimensions of AC indices can therefore be described as the following ratios\ldots{}
 
-\[\mathbf{ACI_{Major}} = \frac{lateral\;height\;[\mu m]}{Major\;axis\;[\mu m]}\]
-\[\mathbf{ACI_{Minor}} = \frac{lateral\;height\;[\mu m]}{Minor\;axis\;[\mu m]}\]
+\[\mathbf{A.I._{Major}} = \frac{lateral\;height\;[\mu m]}{Major\;axis\;[\mu m]}\]
+\[\mathbf{A.I._{Minor}} = \frac{lateral\;height\;[\mu m]}{Minor\;axis\;[\mu m]}\]
 \[\mathbf{Angle_{Major}} = \measuredangle = \mathrm{\Delta}\;from\;horizont\;[0-90^\circ]\]
 
 \hypertarget{ACI-Dis}{%
@@ -3150,7 +2925,7 @@ The two dimensions of AC indices can therefore be described as the following rat
 \hypertarget{ACI-singlecell}{%
 \subparagraph{Single Cell measurements}\label{ACI-singlecell}}
 
-Each geometric object has a centroid coordinate in X and Y (and Z) which is represented as the mean of all X or Y coordinates within the object. Here, the centroid coordinates in X and Y are used to plot the cells as points in the X-Y plane. Additionally, each point is colored for the ACI value (high values are blue-violet, middle values are green, low values are yellow-red).
+Each geometric object has a centroid coordinate in X and Y (and Z) which is represented as the mean of all X or Y coordinates within the object. Here, the centroid coordinates in X and Y are used to plot the cells as points in the X-Y plane. Additionally, each point is colored for the A.I. value (high values are blue-violet, middle values are green, low values are yellow-red).
 
 
 \begin{figure}
@@ -3159,7 +2934,7 @@ Each geometric object has a centroid coordinate in X and Y (and Z) which is repr
 
 }
 
-\caption{ACI\textsubscript{Major} single cell measurements}\label{fig:ACIMajor}
+\caption{A.I.\textsubscript{Major} single cell measurements}\label{fig:ACIMajor}
 \end{figure}
 
 \begin{figure}
@@ -3168,10 +2943,10 @@ Each geometric object has a centroid coordinate in X and Y (and Z) which is repr
 
 }
 
-\caption{ACI\textsubscript{Minor} single cell measurements}\label{fig:ACIMinor}
+\caption{A.I.\textsubscript{Minor} single cell measurements}\label{fig:ACIMinor}
 \end{figure}
-Harding(2013)(\emph{56}) were using a constant \(\mathrm{\Delta}\)ap to measure the apical width, which we have shown to be incorrect in certain cases. In their study they found that certain mean ACI values in the DMSO go as high as 15, which might be related to this \ref{fig:ACICells}.
-By measuring apical width at a relative \(\mathrm{\Delta}\)ap the mean values for ACI\textsubscript{Major} are at 4.7 for the DMSO control and 3.6 for the SU5402 treated condition, which seems to somewhat correlate with their findings\ref{fig:HardingACI}. .
+Harding(2013)(\emph{56}) were using a constant \(\mathrm{\Delta}\)ap to measure the apical width, which we have shown to be incorrect in certain cases. In their study they found that certain mean A.I. values in the DMSO go as high as 15, which might be related to this \ref{fig:ACICells}.
+By measuring apical width at a relative \(\mathrm{\Delta}\)ap the mean values for A.I.\textsubscript{Major} are at 4.7 for the DMSO control and 3.6 for the SU5402 treated condition, which seems to somewhat correlate with their findings\ref{fig:HardingACI}. .
 
 However overall our results indicate that the AC difference is not as strong, at least if all the cells of the PLLp are taken into account.
 
@@ -3182,24 +2957,15 @@ However overall our results indicate that the AC difference is not as strong, at
 
 }
 
-\caption[Published ACI]{\textbf{E-G} 3-D reconstructions of the highlighted cell. \textbf{H} ACIs for embryos treated with DMSO, SU5402, PD0325901 or following induction of hsp70:dn-Ras. (n=180 cells / N = 6 embryos).}\label{fig:HardingACI}
+\caption[Published ACI]{\textbf{E-G} 3-D reconstructions of the highlighted cell. \textbf{H} A.I.s for embryos treated with DMSO, SU5402, PD0325901 or following induction of hsp70:dn-Ras. (n=180 cells / N = 6 embryos).}\label{fig:HardingACI}
 \end{figure}
 \hypertarget{ACI-Angledens}{%
 \subparagraph{Angle densities}\label{ACI-Angledens}}
 
 To check whether there is a bias in orientation of the apical width, the angle measurements \ref{fig:ellipse} can be shown as a function of density along X. Here, a binwidth of 2.5 and a grouping factor to color the two conditions `DMSO' and `SU5402' was used.
 
-\noindent Interestingly the results indicate that there is less of a difference for the Major\textsubscript{Angle} at angles bigger than 15-20°. This would mean that the \emph{apical width} in SU5402 treated embryos is more strongly oriented along the horizontal \emph{antero-posterior} axis.
+\noindent Interestingly the results indicate that there is less of a difference for the Major\textsubscript{Angle} at angles bigger than 15-20\(^\circ\). This would mean that the \emph{apical width} in SU5402 treated embryos is more strongly oriented along the horizontal \emph{antero-posterior} axis.
 
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.4\linewidth]{thesis_files/figure-latex/angledens-1} 
-
-}
-
-\caption{Major\textsubscript{Angle} density}\label{fig:angledens}
-\end{figure}
 \hypertarget{ACI-mag}{%
 \subparagraph{ACI magnitude at different Angles}\label{ACI-mag}}
 
@@ -3216,500 +2982,176 @@ Now, to get an idea of the magnitude ACI\textsubscript{Major} and ACI\textsubscr
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.6\linewidth]{thesis_files/figure-latex/angletoACI-1} 
+{\centering \includegraphics[width=0.49\linewidth]{thesis_files/figure-latex/angletoACI-1} \includegraphics[width=0.49\linewidth]{thesis_files/figure-latex/angletoACI-2} 
 
 }
 
 \caption{ACI\textsubscript{Major} / ACI\textsubscript{Minor} over Major\textsubscript{Angle}}\label{fig:angletoACI}
 \end{figure}
-\hypertarget{summary-3}{%
-\paragraph{Summary}\label{summary-3}}
+\hypertarget{timelapse-analysis}{%
+\subsubsection{Timelapse analysis}\label{timelapse-analysis}}
 
-In summary our results suggest that there is no significant difference either in the exact \emph{anterior-posterior} axis (at 0°), nor in the exact \emph{dorso-ventral} axis (at 90\(^\circ\)) between a DMSO control and a SU5402 treated embryo, but mostly in an angle in between.
+ImageJ Macro
 
 \hypertarget{mat-datasets}{%
 \section{Image Data Sets}\label{mat-datasets}}
 
-\hypertarget{cc-data}{%
-\subsection{Cell-Cluster}\label{cc-data}}
-\begin{longtable}[]{@{}ll@{}}
-\caption{\label{tab:ccdata} Cell Cluster dataset}\tabularnewline
+Summaries of Image datasets
+\begin{table}[!h]
+
+\caption{\label{tab:imgdatcc}Cell Cluster dataset}
+\centering
+\begin{tabu} to \linewidth {>{\raggedright\arraybackslash}p{2cm}>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright}X}
 \toprule
-\endhead
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-\textbf{Crossings}\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Pairs\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-4\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Transgenes\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-\emph{cldnb:lyn-gfp} +/?\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Mutation\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-\emph{shroom3}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Staging\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-60 min.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-\textbf{Mounting}\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Fixation\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-4\% PFA o.N.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-agarose\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-1\% LMPA\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-\textbf{Imaging}\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Magnification\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-25X objective\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Channels\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-488 nm\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Z-Stack\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-2.5 \(\mu\)m Z-spacing; 110 \(\mu\)m stack size; 12*X large image\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-\textbf{Processing}\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Projection\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-Maximum intensity\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Transformations\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-Rotation and cropping in XY\strut
-\end{minipage}\tabularnewline
+\rowcolor{gray!6}  Crossings & Pairs & 4\\
+ & Transgenes & cldnb:lyn-gfp +/?\\
+
+\rowcolor{gray!6}   & Mutation & shroom3\\
+
+\multirow[t]{-3}{*}{\raggedright\arraybackslash Crossings} & Staging & 60 min.\\
+
+\rowcolor{gray!6}   & Fixation & 4$\%$ PFA o.N.\\
+
+\multirow[t]{-2}{*}{\raggedright\arraybackslash Mounting} & Agarose & 1$\%$ LMPA\\
+
+\rowcolor{gray!6}   & Magnification & 25X WI\\
+
+ & Channels & 488 nm\\
+
+\rowcolor{gray!6}  \multirow[t]{-3}{*}{\raggedright\arraybackslash Imaging} & Z-Stack & 2.5 $\mu$m Z-spacing; 110 $\mu$m stack size; 12*X large image\\
 \bottomrule
-\end{longtable}
-\hypertarget{aci-data}{%
-\subsection{Apical Index}\label{aci-data}}
-\begin{longtable}[]{@{}ll@{}}
-\caption{\label{tab:acidata} AI dataset}\tabularnewline
+\end{tabu}
+\end{table}
+\begin{table}[!h]
+
+\caption{\label{tab:imgdatai}AI dataset}
+\centering
+\begin{tabu} to \linewidth {>{\raggedright\arraybackslash}p{2cm}>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright}X}
 \toprule
-\endhead
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-\textbf{Crossings}\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Pairs\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-4\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Transgenes\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-\emph{cldnb:lyn-gfp} +/+\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Mutation\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-\emph{shroom3}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Staging\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-30 min.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-\textbf{Mounting}\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Protocol\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-190930 D.S. Kleinhans\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-agarose\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-0.5\% LMPA + 20\% Tricaine (V/V\%)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-stamp\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-stamp v4A\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-\textbf{Imaging}\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Magnification\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-40X\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Camera\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-Binning 1x1; Gain 1; Exposure 100 ms\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Channels\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-488 nm (100\%)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Positions\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-4x36 positions\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Z-Stack\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-0.4 \(\mu\)m Z-spacing\strut
-\end{minipage}\tabularnewline
+\rowcolor{gray!6}  Crossings & Pairs & 4\\
+ & Transgenes & cldnb:lyn-gfp +/?\\
+
+\rowcolor{gray!6}   & Mutation & shroom3\\
+
+\multirow[t]{-3}{*}{\raggedright\arraybackslash Crossings} & Staging & 30 min.\\
+
+\rowcolor{gray!6}   & Protocol & 190930 D.S. Kleinhans\\
+
+ & Agarose & 0.5$\%$ LMPA + 20$\%$ Tricaine (V/V$\%$)\\
+
+\rowcolor{gray!6}  \multirow[t]{-3}{*}{\raggedright\arraybackslash Mounting} & stamp & stamp v4A\\
+
+ & Magnification & 40X objective\\
+
+\rowcolor{gray!6}   & Camera & Binning 1x1; Gain 1; Exposure 100 ms\\
+
+ & Channels & 488 nm (100$\%$)\\
+
+\rowcolor{gray!6}  \multirow[t]{-4}{*}{\raggedright\arraybackslash Imaging} & Z-Stack & 0.4 $\mu$m Z-spacing\\
 \bottomrule
-\end{longtable}
-\hypertarget{tl-data}{%
-\subsection{Proliferation}\label{tl-data}}
-\begin{longtable}[]{@{}ll@{}}
-\caption{\label{tab:prolifdata} Proliferation dataset}\tabularnewline
+\end{tabu}
+\end{table}
+\begin{table}[!h]
+
+\caption{\label{tab:imgdatprol}Proliferation dataset}
+\centering
+\begin{tabu} to \linewidth {>{\raggedright\arraybackslash}p{2cm}>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright}X}
 \toprule
-\endhead
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-\textbf{Crossings}\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Pairs\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-6\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Transgenes\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-\emph{cldnb:lyn-gfp} +/?; \emph{cxcr4b}(BAC) \emph{:H2BRFP} +/0\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Mutation\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-\emph{shroom3}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Staging\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-30 min.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-\textbf{Mounting}\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Protocol\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-190930 D.S. Kleinhans\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Agarose\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-0.3\% LMPA + 20\% Tricaine (V/V\%)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Stamp\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-stamp v4A\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-\textbf{Imaging}\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Magnification\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-20X + 1.5x zoom\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Camera\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-Binning 2x2; Gain 4; Exposure 35 ms; full FOV*150 \(\mu\)m\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Channels\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-651 nm (25\%)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Positions\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-36 positions\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Z-Stack\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-2.5 \(\mu\)m Z-spacing; 110 \(\mu\)m stack size; 2*X large image\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Time\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-20 h / 7 min. interval / start \textasciitilde{} 2 p.m. (32 hpf)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-\textbf{Processing}\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Projection\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-Maximum intensity\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Transformations\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-Rotation and cropping in XY and T\strut
-\end{minipage}\tabularnewline
+\rowcolor{gray!6}  Crossings & Pairs & 6\\
+ & Transgenes & cldnb:lyn-gfp +/?; cxcr4b(BAC):H2BRFP +/0\\
+
+\rowcolor{gray!6}   & Mutation & shroom3\\
+
+\multirow[t]{-3}{*}{\raggedright\arraybackslash Crossings} & Staging & 30 min.\\
+
+\rowcolor{gray!6}   & Protocol & 190930 D.S. Kleinhans\\
+
+ & Agarose & 0.3$\%$ LMPA + 20$\%$ Tricaine (V/V$\%$)\\
+
+\rowcolor{gray!6}  \multirow[t]{-3}{*}{\raggedright\arraybackslash Mounting} & stamp v4A & \\
+
+ & Magnification & 20X + 1.5x zoom\\
+
+\rowcolor{gray!6}   & Camera & Binning 2x2; Gain 4; Exposure 35 ms; full FOV*150 $\mu$m\\
+
+ & Channels & 651 nm (25$\%$)\\
+
+\rowcolor{gray!6}   & Positions & 36\\
+
+ & Z-Stack & 2.5 $\mu$m Z-spacing; 110 $\mu$m stack size; 2*X large image\\
+
+\rowcolor{gray!6}  \multirow[t]{-6}{*}{\raggedright\arraybackslash Imaging} & Time & 20 h / 7 min. interval / start ~ 2 p.m.\\
 \bottomrule
-\end{longtable}
-\hypertarget{detect-data}{%
-\subsection{Detection}\label{detect-data}}
-\begin{longtable}[]{@{}ll@{}}
-\caption{\label{tab:detectdata} Detection dataset}\tabularnewline
+\end{tabu}
+\end{table}
+\begin{table}[!h]
+
+\caption{\label{tab:imgdatdet}Detection dataset}
+\centering
+\begin{tabu} to \linewidth {>{\raggedright\arraybackslash}p{2cm}>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright}X}
 \toprule
-\endhead
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-\textbf{Crossings}\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Pairs\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-6\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Transgenes\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-\emph{cldnb:lyn-gfp} +/?\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Mutation\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-\emph{shroom3}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Staging\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-30 min.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-\textbf{Mounting}\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Protocol\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-190930 D.S. Kleinhans\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Agarose\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-0.3\% LMPA + 20\% Tricaine (V/V\%)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Stamp\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-stamp v5A\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-\textbf{Imaging}\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Magnification\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-20X + 1.5x zoom\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Camera\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-Binning 2x2; Gain 4; Exposure 20 ms; full FOV*100 \(\mu\)m\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Channels\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-488 nm (25\%)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Positions\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-36 positions\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Z-Stack\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-3 \(\mu\)m Z-spacing; 100 \(\mu\)m stack size; 3*X large image\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Time\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-20 h / 10 min. interval / start \textasciitilde{} 2 p.m. (32 hpf)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-\textbf{Processing}\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Projection\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-Maximum intensity\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Transformations\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-Rotation and cropping in XY and T\strut
-\end{minipage}\tabularnewline
+\rowcolor{gray!6}  Crossings & Pairs & 6\\
+ & Transgenes & cldnb:lyn-gfp +/?\\
+
+\rowcolor{gray!6}   & Mutation & shroom3\\
+
+\multirow[t]{-3}{*}{\raggedright\arraybackslash Crossings} & Staging & 30 min.\\
+
+\rowcolor{gray!6}   & Protocol & 190930 D.S. Kleinhans\\
+
+ & Agarose & 0.3$\%$ LMPA + 20$\%$ Tricaine (V/V$\%$)\\
+
+\rowcolor{gray!6}  \multirow[t]{-3}{*}{\raggedright\arraybackslash Mounting} & stamp v5A & \\
+
+ & Magnification & 20X + 1.5x zoom\\
+
+\rowcolor{gray!6}   & Camera & Binning 2x2; Gain 4; Exposure 20 ms; full FOV*150 $\mu$m\\
+
+ & Channels & 488 nm (25$\%$)\\
+
+\rowcolor{gray!6}   & Positions & 36\\
+
+ & Z-Stack & 3 $\mu$m Z-spacing; 100 $\mu$m stack size; 3*X large image\\
+
+\rowcolor{gray!6}  \multirow[t]{-6}{*}{\raggedright\arraybackslash Imaging} & Time & 20 h / 10 min. interval / start ~ 2 p.m.\\
 \bottomrule
-\end{longtable}
-\hypertarget{mat-ato-set}{%
-\subsection{Atoh1a}\label{mat-ato-set}}
-\begin{longtable}[]{@{}ll@{}}
-\caption{\label{tab:atoset} atoh1a dataset}\tabularnewline
+\end{tabu}
+\end{table}
+\begin{table}[!h]
+
+\caption{\label{tab:imgdatato}Atoh1a dataset}
+\centering
+\begin{tabu} to \linewidth {>{\raggedright\arraybackslash}p{2cm}>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright}X}
 \toprule
-\endhead
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-\textbf{Crossings}\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Pairs\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-4\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Transgenes\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-\emph{cldnb:lyn-gfp} +/?; \emph{atoh1a:Tom} +/0\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Mutation\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-\emph{shroom3}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Staging\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-30 min.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-\textbf{Mounting}\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Protocol\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-190930 D.S. Kleinhans\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Agarose\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-0.3\% LMPA + 20\% Tricaine (V/V\%)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Stamp\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-stamp v5A\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-\textbf{Imaging}\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Magnification\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-20X\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Camera\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-Binning 2x2; Gain 4; full FOV*100 \(\mu\)m\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Channels\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-488 nm (Int: 20\%; Exp: 25ms)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-561 nm (Int: 30\%; Exp: 50ms)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Positions\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-36 positions\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Z-Stack\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-2.5 \(\mu\)m Z-spacing; 100 \(\mu\)m stack size; 2*X large image\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Time\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-20 h / 20 min. interval / start \textasciitilde{} 2 p.m. (32 hpf)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-\textbf{Processing}\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Projection\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-Maximum intensity\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.21\columnwidth}\raggedright
-Transformations\strut
-\end{minipage} & \begin{minipage}[t]{0.73\columnwidth}\raggedright
-Rotation and cropping in XY and T\strut
-\end{minipage}\tabularnewline
+\rowcolor{gray!6}  Crossings & Pairs & 4\\
+ & Transgenes & cldnb:lyn-gfp +/?; atoh1a:Tom +/0\\
+
+\rowcolor{gray!6}   & Mutation & shroom3\\
+
+\multirow[t]{-3}{*}{\raggedright\arraybackslash Crossings} & Staging & 30 min.\\
+
+\rowcolor{gray!6}   & Protocol & 190930 D.S. Kleinhans\\
+
+ & Agarose & 0.3$\%$ LMPA + 20$\%$ Tricaine (V/V$\%$)\\
+
+\rowcolor{gray!6}  \multirow[t]{-3}{*}{\raggedright\arraybackslash Mounting} & stamp v5A & \\
+
+ & Magnification & 20X\\
+
+\rowcolor{gray!6}   & Camera & Binning 2x2; Gain 4; full FOV*150 $\mu$m\\
+
+ & Channels & 488 nm (Int: 20$\%$; Exp: 25 ms)\\
+
+\rowcolor{gray!6}   & Channels & 561 nm (Int: 30$\%$; Exp: 50 ms)\\
+
+ & Positions & 36\\
+
+\rowcolor{gray!6}   & Z-Stack & 2.5 $\mu$m Z-spacing; 100 $\mu$m stack size; 2*X large image\\
+
+\multirow[t]{-7}{*}{\raggedright\arraybackslash Imaging} & Time & 20 h / 20 min. interval / start ~ 2 p.m.\\
 \bottomrule
-\end{longtable}
+\end{tabu}
+\end{table}
 \hypertarget{res}{%
 \chapter{Results}\label{res}}
 

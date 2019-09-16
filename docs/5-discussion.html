@@ -63,9 +63,6 @@
 <ul class="summary">
 <li><a href="./"></a></li>
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Zusammenfassung</a></li>
-<li class="chapter" data-level="" data-path="summary.html"><a href="summary.html"><i class="fa fa-check"></i>Summary</a></li>
-<li class="chapter" data-level="" data-path="list-of-abbreviations.html"><a href="list-of-abbreviations.html"><i class="fa fa-check"></i>List of Abbreviations</a></li>
 <li class="chapter" data-level="1" data-path="1-Intro.html"><a href="1-Intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
 <li class="chapter" data-level="1.1" data-path="1-Intro.html"><a href="1-Intro.html#development"><i class="fa fa-check"></i><b>1.1</b> Development</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="1-Intro.html"><a href="1-Intro.html#cell-types"><i class="fa fa-check"></i><b>1.1.1</b> Cell Types</a></li>
@@ -105,16 +102,10 @@
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="2-mat-met.html"><a href="2-mat-met.html#met"><i class="fa fa-check"></i><b>2.2</b> Methods</a><ul>
 <li class="chapter" data-level="2.2.1" data-path="2-mat-met.html"><a href="2-mat-met.html#Zeb-met"><i class="fa fa-check"></i><b>2.2.1</b> Zebrafish</a></li>
-<li class="chapter" data-level="2.2.2" data-path="2-mat-met.html"><a href="2-mat-met.html#Wet-met"><i class="fa fa-check"></i><b>2.2.2</b> Wetlab Methods</a></li>
-<li class="chapter" data-level="2.2.3" data-path="2-mat-met.html"><a href="2-mat-met.html#comp-met"><i class="fa fa-check"></i><b>2.2.3</b> Computational Methods</a></li>
+<li class="chapter" data-level="2.2.2" data-path="2-mat-met.html"><a href="2-mat-met.html#Wet-met"><i class="fa fa-check"></i><b>2.2.2</b> Wetlab</a></li>
+<li class="chapter" data-level="2.2.3" data-path="2-mat-met.html"><a href="2-mat-met.html#comp-met"><i class="fa fa-check"></i><b>2.2.3</b> Computational</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="2-mat-met.html"><a href="2-mat-met.html#mat-datasets"><i class="fa fa-check"></i><b>2.3</b> Image Data Sets</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="2-mat-met.html"><a href="2-mat-met.html#cc-data"><i class="fa fa-check"></i><b>2.3.1</b> Cell-Cluster</a></li>
-<li class="chapter" data-level="2.3.2" data-path="2-mat-met.html"><a href="2-mat-met.html#aci-data"><i class="fa fa-check"></i><b>2.3.2</b> Apical Index</a></li>
-<li class="chapter" data-level="2.3.3" data-path="2-mat-met.html"><a href="2-mat-met.html#tl-data"><i class="fa fa-check"></i><b>2.3.3</b> Proliferation</a></li>
-<li class="chapter" data-level="2.3.4" data-path="2-mat-met.html"><a href="2-mat-met.html#detect-data"><i class="fa fa-check"></i><b>2.3.4</b> Detection</a></li>
-<li class="chapter" data-level="2.3.5" data-path="2-mat-met.html"><a href="2-mat-met.html#mat-ato-set"><i class="fa fa-check"></i><b>2.3.5</b> Atoh1a</a></li>
-</ul></li>
+<li class="chapter" data-level="2.3" data-path="2-mat-met.html"><a href="2-mat-met.html#mat-datasets"><i class="fa fa-check"></i><b>2.3</b> Image Data Sets</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="3-res.html"><a href="3-res.html"><i class="fa fa-check"></i><b>3</b> Results</a><ul>
 <li class="chapter" data-level="3.1" data-path="3-res.html"><a href="3-res.html#lateral-line-morphometrics"><i class="fa fa-check"></i><b>3.1</b> Lateral Line Morphometrics</a><ul>
@@ -209,7 +200,7 @@ To create a robust model, it is necessary to have robust methods that allow to g
 </div>
 <div id="single-cell-reconstruction-and-ac-measurement" class="section level2">
 <h2><span class="header-section-number">5.4</span> Single cell reconstruction and AC measurement</h2>
-<p>Earlier attempts for indexing AC include measuring the ‘apical index’ (A.I.) of bottle cells during <em>X.laevis</em> gastrulation <span class="citation">(<em>75</em>)</span> or the ACI for cells of the pLLP <span class="citation">(<em>55</em>)</span>. For both, the metric describes the ratio of lateral height over apical width which, depending on the situation, is a very coarse and inaccurate description. In the pLLP cells of different forms, volumes and heights can be found. When measuring apical width at a fix distance from the apical site cells with different height but otherwise equal degree of AC turn out to have a very different ACI (<a href="2-mat-met.html#fig:ACICells">2.20</a>A and A’). If however apical width is measured at a distance relative to the cells height, cells turn out to have the same ACI (<a href="2-mat-met.html#fig:ACICells">2.20</a>A and A’’). In addition, it remains questionable exactly how to define <em>apical width</em> in a two-dimensional cellular cross-section. By introducing apical width measurement along both, the major and the minor axis (section <a href="2-mat-met.html#ACI-pol">2.2.3.3.1.3</a>), the improved model for AC and method for automated and unbiased cellular segmentation therefore represents a major advancement.</p>
+<p>Earlier attempts for indexing AC include measuring the ‘apical index’ (A.I.) of bottle cells during <em>X.laevis</em> gastrulation <span class="citation">(<em>75</em>)</span> or the ACI for cells of the pLLP <span class="citation">(<em>55</em>)</span>. For both, the metric describes the ratio of lateral height over apical width which, depending on the situation, is a very coarse and inaccurate description. In the pLLP cells of different forms, volumes and heights can be found. When measuring apical width at a fix distance from the apical site cells with different height but otherwise equal degree of AC turn out to have a very different ACI (<a href="2-mat-met.html#fig:ACICells">2.16</a>A and A’). If however apical width is measured at a distance relative to the cells height, cells turn out to have the same ACI (<a href="2-mat-met.html#fig:ACICells">2.16</a>A and A’’). In addition, it remains questionable exactly how to define <em>apical width</em> in a two-dimensional cellular cross-section. By introducing apical width measurement along both, the major and the minor axis (section <a href="2-mat-met.html#ACI-pol">2.2.3.3.1.3</a>), the improved model for AC and method for automated and unbiased cellular segmentation therefore represents a major advancement.</p>
 <p>AC is also correlated with cell height. To get a more detailed impression about how variables are distributed within the cells of the pLLP, single cell measurements of pLLPs that are normalized in orientation can be superimposed in a two-dimensional map of organ length and width. Next, cell coordinates in this map can be grouped into bins of hexagons and the summary statistic represented as color on a continuous scale (<a href="5-discussion.html#fig:dismap">5.1</a>). Doing so reveals that for stages 32 and 36 hpf, height in <em>shroom3</em><span class="math inline">\(--\)</span> cells is not as strongly reduced as in SU5402 treated ones and that cells in the central region of the pLLP are higher than in the leading, trailing and lateral regions. In this specific case this may not lead to new insights, but it improves the visual perception and therefore may assist more concise questioning and reasoning.</p>
 
 <div class="figure" style="text-align: center"><span id="fig:dismap"></span>
