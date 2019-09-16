@@ -395,7 +395,7 @@ The macro developed consists of the following main modules:
 Figure \@ref(fig:maxllreg) shows a registered maximum Z projected lateral line used for ground truth evaluation.
 
 (ref:maxllreg) Registered, Maximum Z projected data with cell cluster labels
-```{r maxllreg, echo=FALSE, warning=FALSE, fig.align='center', dpi=200, out.width='90%', fig.cap="(ref:maxllreg)"}
+```{r maxllreg, out.width='90%', fig.cap="(ref:maxllreg)"}
 knitr::include_graphics("figure/02-MaMo/GrTr/ClusterAnal/B06SB1P05_montage.png")
 ```
 
@@ -404,7 +404,7 @@ knitr::include_graphics("figure/02-MaMo/GrTr/ClusterAnal/B06SB1P05_montage.png")
 Figure \@ref(fig:countP05) shows the single registered cell clusters from figure 1 and the manually labeled nuclei within.
 
 (ref:countP05) Nuclei labels
-```{r countP05, echo=FALSE, warning=FALSE, fig.align='center', dpi=200, out.width='90%', fig.cap="(ref:countP05)"}
+```{r countP05, out.width='90%', fig.cap="(ref:countP05)"}
 knitr::include_graphics("figure/02-MaMo/GrTr/ClusterAnal/count_P05.png")
 ```
 
@@ -420,15 +420,14 @@ load("figure/02-MaMo/GrTr/ClusterAnal/GroundTruth2D.RData")
 Comparing the segmented objects count of the Gaussian parameters with the ground truth gives an indication for over- resp. under-segmentation. In figure \@ref(fig:GrTratioCC) the relative numbers for each parameter can be seen in percentage above or below the mean cell count of the ground truth (blue horizon). The red area represents over-segmentation, the green under-segmentation. Additionally, table \@ref(tab:meanabsnuc) shows the absolute numbers.
 
 (ref:GrTratioCC) Relative difference of segment counts (N=3, Errorbars = Std./2)
-```{r GrTratioCC, out.width='65%', fig.height=2.5, dpi=400, fig.cap="(ref:GrTratioCC)", fig.scap = "Relative difference of segment counts"}
+
+```{r GrTratioCC, out.width='65%', fig.height=2.5, fig.cap="(ref:GrTratioCC)", fig.scap = "Relative difference of segment counts"}
 ggplot(NB_all_diff_mean, aes(Group, mean_diff)) +
-  #geom_polygon(aes(x=c(0,1,1,0),y=c(0.5,0.5,4.5,4.5)),fill="#FFFF0044",color=NA)+
   geom_bar(aes(fill=Group), colour = "black", stat="identity", show.legend = FALSE) +
     geom_rect(aes(xmin=-Inf, xmax=Inf, ymin=0, ymax=Inf), fill="red", alpha=.05) +
       annotate(geom="text", x=5.5, y=5, fontface="bold", label="false negative", color="red") +
     geom_rect(aes(xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=0), fill='green', alpha=.025) +
       annotate(geom="text", x=1.5, y=-5, fontface="bold", label="false positive", color="darkgreen") +
-  #scale_fill_identity(name = 'the fill', guide = 'legend',labels = c('m1', 'm2')) +
   geom_bar(aes(fill=Group), colour = "black", stat="identity", show.legend = FALSE) +
   geom_hline(aes(yintercept = 0, linetype="Ground Truth 100%"), colour="blue", size=1) +
   geom_errorbar(aes(fill=Group, ymin=mean_diff-(sd_diff/2), ymax=mean_diff+(sd_diff/2)), width=.2, position=position_dodge(.9)) +
@@ -443,7 +442,6 @@ ggplot(NB_all_diff_mean, aes(Group, mean_diff)) +
 ```{r meanabsnuc, results='asis'}
 knitr::kable(NB_all_mean_mean, "latex", booktabs = T, caption="Nuclei count") %>%
   kable_styling(full_width = T, latex_options = "striped")
-#pander(NB_all_mean_mean, style ="rmarkdown")
 ```
 
 \noindent To estimate the quality of nuclei detection for each parameter, the ratio of automatically detected and ground truth objects count can be calculated and compared (table \@ref(tab:nrcount)). The closer it is to 1, the better.
@@ -451,7 +449,6 @@ knitr::kable(NB_all_mean_mean, "latex", booktabs = T, caption="Nuclei count") %>
 ```{r nrcount, results='asis'}
 knitr::kable(NB_all_CC_NR_mean, "latex", booktabs = T, caption = "Nuclei count ratio") %>%
   kable_styling(full_width = T, latex_options = "striped")
-#pander(NB_all_CC_NR_mean, style ="rmarkdown")
 ```
 
 ##### Summary
@@ -462,7 +459,7 @@ Maximum performance is achieved at a scaled parameter of 6 $\mu$m, with a ratio 
 
 ##### Ground Truth Design
 
-To assess the quality of the PLLpANALYZER3D algorithm the ground truth was designed as follows.
+To assess the quality of the anaLLzr3D algorithm the ground truth was modeled as follows.
 
 ###### Model
 
@@ -472,22 +469,11 @@ To assess the quality of the PLLpANALYZER3D algorithm the ground truth was desig
 -	embryos are imaged live to conserve signal and membrane integrity
 - embryos are mounted within a 3D mold for improved 3D alignment
 
------------------ ------------------------------------------------------
- Exposure time    100 ms         
- 
- Laser intensity  100% / 9.3 mW
- 
- Objective        40X; Nikon CFI APO LWD WI; N.A. = 1.15, W.D. = 0.60 mm
- 
- Z-spacing        0.4 - 0.5 $\mu$m
- 
- Camera           Andor ZYLA PLUS sCMOS; 4.2 M.Pix; 82% Q.E.
- 
- SD system        Yokogawa CSU - W1; 50 $\mu$m pattern
- 
- Piezo            Piezo Z-table; 300 $\mu$m scan range
------------------ ------------------------------------------------------
-Table: (\#tab:model3DGrT) PLLpANALYZER3D Model
+```{r model3DGrT}
+tab <- read.delim("figures/materials/anallzrmodel.txt")
+knitr::kable(tab, "latex", booktabs = T, caption="anaLLzr3D Model", align = c("r", "l")) %>%
+  kable_styling(full_width = T, latex_options = c('striped', 'hold_position'))
+```
 
 ###### Training data
 
@@ -497,7 +483,9 @@ The training set consists of three randomly picked wildtype PLLps. For each the 
 
 To test the algorithm it is run at different segmentation thresholds on the same image data.
 
-##### Image Analysis
+##### Results
+
+###### Image Analysis
 
 For image analysis a custom IJ macro script was developed that recognizes the cell boundaries via the fluorescence signal emitted by a Lyn Kinase tethered eGFP which expression is controlled by the _cxcr4b_ lateral line specific promotor [@Haas2006c]. The central IJ tool used to do this is the MorphoLibJ's[@Legland2016] _Morpholigical Segmentation_ plugin. The plugin however requires to choose for a 'segmentation threshold' that determines the quality and the quantity of segmented objects. This parameter therefore plays an essential role in the truthfulness of the analysis results.
 
@@ -514,74 +502,53 @@ The macro developed consists of the following main modules:
 
 The first module of the macro is PLLp registration in X, Y and cropping in Z. This is accomplished by an initial maximum Z projection and blurring of the image, 2-D segmentation using a minimum threshold and lastly by measuring the angle the segment is rotated against the horizon (at 0$^{\circ}$). After rotation the PLLp is then registered in Y and the image is cropped by drawing a rectangle with fixed height. 
 
-(ref:maxraw) Unregistered, Maximum Z projected data
-```{r maxraw, dpi=200, out.width='90%', fig.align='center', echo=FALSE, fig.cap="(ref:maxraw)"}
-knitr::include_graphics(path = "figure/02-MaMo/GrTr/Morphology/zmax_comb_2.png")
+(ref:maxraw) Registration of 3D data
+
+```{r maxraw, dpi=200, out.width='90%', fig.cap="(ref:maxraw)"}
+knitr::include_graphics(path = "figures/materials/ground_truth/registration.png")
 ```
 
----------------------------------- ----------------------------------
-                  X / Y resolution 0.1625 / 0.1625 $\mu$m        
- 
-                      Z resolution 0.4 $\mu$m 
- 
-                     $\Delta$T - Z 0.5428 s
----------------------------------- ----------------------------------
-Table: (\#tab:imgprop) Physical image properties (scaling)
-
-During the registration process, the image is rotated against the horizon and cropped in X and Y. Additionally, the centers of the most constricting areas are detected via an intensity based dynamic threshold and highlighted as magenta circles in \@ref(fig:maxreg). Table \@ref(tab:imgregpar) sums up the registration parameters.
-
-(ref:maxreg) Registered, Maximum Z projected data
-```{r maxreg, dpi=200, out.width='95%', fig.align='center', echo=FALSE, fig.cap="(ref:maxreg)"}
-knitr::include_graphics("figure/02-MaMo/GrTr/Morphology/zmax_reg_comb_2.jpg")
+```{r imgprop}
+tab <- read.delim("figures/materials/scaling_3D.txt")
+knitr::kable(tab, "latex", booktabs = T, caption="Physical image properties (scaling)", align = c("r", "l")) %>%
+  kable_styling(full_width = T, latex_options = c('striped', 'hold_position'))
 ```
 
------------------------------------------------------------------------------
- **Position**   Angle of rotation   Constriction centers   Y registration
--------------- ------------------- ---------------------- -------------------
- P05              -4.4$^{\circ}$              4               168.25 px
- 
- P07             12.3$^{\circ}$               4               188.35 px                                          
- 
- P08                0$^{\circ}$               3               153.83 px
--------------- ------------------- ---------------------- -------------------
-Table: (\#tab:imgregpar) Registration parameters
+During the registration process, the image is rotated against the horizon and cropped in X and Y. Additionally, the centers of the most constricting areas are detected via an intensity based dynamic threshold and highlighted as magenta circles in \@ref(fig:maxraw). Table \@ref(tab:imgregpar) sums up the registration parameters.
 
-#### Segmentation
-
-##### Membrane signal
-
-Watershed segmentation depends on a continuous signal along the boundary of the object to be segmented. Since the PLLp lies within the zebrafish larvae and since light gets scattered more when traveling through more organic tissues, the fluorescence signal in deeper tissue sections is more disturbed. Still, the PLLp is located just superficial to the skin, so the effect may be minor. In figure \@ref(fig:stackmem) the fluorescence signal of the three PLLps tested is shown in a single central cross-section in the dorso-ventral and the apico-basal axis.
-
-(ref:stackmem) Signal intensities in XY and YZ at central cross-sections
-```{r stackmem, dpi=200, out.width='50%', fig.align='center', echo=FALSE, fig.cap="(ref:stackmem)"}
-knitr::include_graphics("figure/02-MaMo/GrTr/Morphology/signals.jpg")
+```{r imgregpar}
+tab <- read.delim("figures/materials/reg_param.txt")
+knitr::kable(tab, "latex", booktabs = T, caption="Registration parameters", align = c("c", "c", "c", "c")) %>%
+  kable_styling(full_width = T, latex_options = c('striped', 'hold_position'))
 ```
 
-##### Ground Truth & Threshold segments
+###### Ground Truth data
 
 ```{r load3DGrT, eval=TRUE, echo=FALSE}
-load("figure/02-MaMo/GrTr/Morphology/GroundTruth.RData")
+load("data/ground_truth_3d.RData")
 ```
+
+Watershed segmentation depends on a continuous signal along the boundary of the object to be segmented. Since the PLLp lies within the zebrafish larvae and since light gets scattered more when traveling through more organic tissues, the fluorescence signal in deeper tissue sections is more disturbed. Still, the PLLp is located just superficial to the skin, so the effect may be minor. In figure \@ref(fig:stackmem) the fluorescence signal of the three PLLps tested is shown in a single central cross-section in the dorso-ventral and the apico-basal axis.
 
 To compare the results between the ground truth segments and the segments obtained from different threshold levels graphically, for a single PLLp the ground truth and threshold level[n] are shown as a composite color image in figure \@ref(fig:stackcomp). By using a green lookup table (LUT) for the ground truth and a magenta LUT for the threshold level[n], one can readily detect overlapping objects (white), over segmentation (magenta) and under segmentation (green).
 
 (ref:stackcomp) Graphical comparison of the thresholds tested
-```{r stackcomp, dpi=200, out.width='85%', fig.align='center', echo=FALSE, fig.cap="(ref:stackcomp)"}
-knitr::include_graphics("figure/02-MaMo/GrTr/Morphology/volumes.jpg")
+
+```{r stackcomp, out.width='85%', fig.cap="(ref:stackcomp)"}
+knitr::include_graphics("figures/materials/ground_truth/volumes.png")
 ```
 
 \noindent Volume renderings have been done with IJ's [VolumeViewer]("https://github.com/fiji/Volume_Viewer/releases/tag/Volume_Viewer-2.01.2")
 
-#### Data Analysis
+##### Data Analysis
 
-##### Cell Count
+###### Cell Count
 
 In figure \@ref(fig:gtratio) the relative numbers for each threshold level can be seen in percentage above or below the mean cell count of the ground truth (blue horizon). Analogous to the graphical inspection, the magenta area represents over segmentation, the green under segmentation. Additionally, table \@ref(tab:gtrcellcount) shows the absolute numbers.
 
 (ref:gtratio) Relative difference of segment counts (N=3, Errorbars = Std./2)
-```{r gtratio, out.width='65%', fig.height=2.5, dpi=400, fig.cap="(ref:gtratio)", fig.scap = "Relative difference of segment counts"}
-load("figure/02-MaMo/GrTr/Morphology/GroundTruth.RData")
-library(ggplot2)
+
+```{r gtratio, out.width='65%', fig.height=2.5, fig.cap="(ref:gtratio)", fig.scap = "Relative difference of segment counts"}
 ggplot(all_count_diff_mean, aes(Group, mean_diff)) +
   #geom_polygon(aes(x=c(0,1,1,0),y=c(0.5,0.5,4.5,4.5)),fill="#FFFF0044",color=NA)+
   geom_bar(aes(fill=Group), colour = "black", stat="identity", show.legend = FALSE) +
@@ -601,15 +568,12 @@ ggplot(all_count_diff_mean, aes(Group, mean_diff)) +
     theme(legend.text = element_text(size=11))
 ```
 
-```{r gtrcellcount, echo=FALSE, out.width='75%',fig.align='center', warning=FALSE, fig.cap="cellcount ground truth"}
-load("figure/02-MaMo/GrTr/Morphology/GroundTruth.RData")
-library(kableExtra)
-#knitr::kable(all_count_cells, format ="rmarkdown", align = 'c', caption="Cellcount")
-pander(all_count_cells, style ="rmarkdown")
+```{r gtrcellcount, out.width='75%'}
+knitr::kable(all_count_cells, "latex", booktabs = T, caption="cellcount ground truth") %>%
+  kable_styling(full_width = T, latex_options = "striped")
 ```
-Table: (\#tab:gtrcellcount) Absolute numbers
 
-##### Cell Morphology
+###### Cell Morphology
 
 >  _There is always a precision / recall trade-off in detection tasks, e.g., when we set a lower threshold [. . .], we can get a higher recall with a lower precision ([. . .], but meanwhile we also get more false-positives in the results)._[@Liu]
 
@@ -617,14 +581,12 @@ Inspecting the cell count unfortunately does not directly tell us how well the c
 
 \noindent The volume of a cell is a very robust morphological feature. Therefore, if its volume does not differ significantly at a given threshold level we consider its morphology to be conserved.
 
-#### Sample distribution
+###### Sample distribution
 
 In figure \@ref(fig:volsecdffull) and \@ref(fig:volsecdfzoom) the distribution and amount of the cell volumes across the different threshold levels can be inspected via the 'empirical cumulative distribution function' (ECDF). The closer the slopes are to the ground truth, the stronger they are conserved. Figure \@ref(fig:volsecdffull) shows the full distribution, where the major differences seem to appear within the 0.4 quantile (red line). Therefore, in figure \@ref(fig:volsecdfzoom) only the values within the 0.4 quantile are shown to get a more detailed impression.
 
 (ref:volsecdffull) ECDF - All cell volumes
-```{r volsecdffull, echo=FALSE, fig.height=2.3, out.width='90%', warning=FALSE, fig.cap="(ref:volsecdffull)"}
-load("figure/02-MaMo/GrTr/Morphology/GroundTruth.RData")
-library(ggplot2)
+```{r volsecdffull, fig.height=2.3, out.width='90%', fig.cap="(ref:volsecdffull)"}
 ggplot(all_vol, aes(Vol..unit., colour=Group)) +
   geom_vline(aes(xintercept = quantile(Vol..unit., 0.4, na.rm=TRUE)), colour="red") +
   stat_ecdf(geom="step", pad=FALSE, size=1.1) +
@@ -639,9 +601,7 @@ ggplot(all_vol, aes(Vol..unit., colour=Group)) +
 ```
 
 (ref:volsecdfzoom) ECDF - Small cell volumes
-```{r volsecdfzoom, echo=FALSE, fig.height=2.3, out.width='90%', warning=FALSE, fig.cap="(ref:volsecdfzoom)"}
-load("figure/02-MaMo/GrTr/Morphology/GroundTruth.RData")
-library(ggplot2)
+```{r volsecdfzoom, fig.height=2.3, out.width='90%', fig.cap="(ref:volsecdfzoom)"}
 ggplot(all_vol, aes(Vol..unit., colour=Group)) +
   stat_ecdf(geom="step", pad=FALSE, size=1.1) +
   labs(title = "test", x = "Volumes", y = "Relative amount", color = "group") +
@@ -655,16 +615,15 @@ ggplot(all_vol, aes(Vol..unit., colour=Group)) +
     theme(legend.text = element_text(size=9))
 ```
 
-#### Confidence level
+###### Confidence level
 
 To statistically check how closely related each threshold value sample distribution is compared to the ground truth, a Kolmogorov-Smirnov-Test (ks.test) was performed. The ks.test is a nonparametric test whose null hypothesis is that the both groups compared were sampled from populations with identical populations. Therefore, the closer the p-value is to 1, the more similar the tested sample distribution would be to the ground truth (figure \@ref(fig:kstestvol); 5% confidence threshold indicated by red line).
 
 \[H_{0} : F_X(x)=F_0(x)\]
 
 (ref:kstestvol) Volumetric conservation confidence level
-```{r kstestvol, out.width='60%', fig.height=1.7, dpi=400, fig.cap="(ref:kstestvol)"}
-load("figure/02-MaMo/GrTr/Morphology/GroundTruth.RData")
-library(ggplot2)
+
+```{r kstestvol, out.width='60%', fig.height=1.7, fig.cap="(ref:kstestvol)"}
 ggplot(ks.test_all, aes(variable, value)) +
   geom_hline(yintercept = 0.95, colour="red") +
   geom_point(aes(fill=group, shape=group), size=5, colour="black") +
@@ -676,10 +635,6 @@ ggplot(ks.test_all, aes(variable, value)) +
 ```
 
 \noindent In comparison to the Mann-Whitney test, the ks.test is more sensitive to detect changes in the shape of the distribution than to detect a shift of the median[@Lehman]
-
-##### Summary
-
-For the cell count 
 
 ## Methods {#met}
 
@@ -739,12 +694,12 @@ Embryos and dechorionated larvae were fixed in 2 ml of 4 PFA in 1X PBS overnight
 * Wash 2x in PBST
 * Digest embryos in 10 $\mu$g/mL Proteinase K according to table
 
--------------------------------------------------------------------------------------------------------------
-**Stage**    0-6 s      7 s        18 s      24 hpf     32 hpf     36 hpf     42 hpf     48 hpf     72 hpf   
----------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
-min.        0           4           6         15           30         40         50        60          60
--------------------------------------------------------------------------------------------------------------
-Table: (\#tab:met-protk) Proteinase K digestion
+```{r met-protk, out.width='99%'}
+tab <- read.delim("figures/materials/protkdig.txt")
+knitr::kable(tab, "latex", booktabs = T, caption="Proteinase K digestion", align = "c",
+             col.names = c("Stage", "0.6 s", "7 s", "18 s", "24 hpf", "32 hpf", "36 hpf", "42 hpf", "48 hpf", "72 hpf")) %>%
+  kable_styling(full_width = T, latex_options = "striped")
+```
     
 * Wash 2x in PBST
 * PostFix in 4% PFA at 4$^\circ$C for > 30 min.
@@ -804,36 +759,35 @@ For mounting, an improved 3D specimen preparation and well-plate like sample nav
 3. **To have the embryos aligned with the 3D movements of the microscopic table.** Instead of transforming and aligning the image data in a post-processing approach, the specimen can be imaged in the right spacial configuration in the first place. This is not only important for 3D analysis, but also for Z projected data. If the specimen body axes are not aligned with the axes of the microscopic table, the image stacks need to be bigger to record the volume of interest. In the Z projections, this will end up in X Y coordinates not aligned in Z, as noise or false signal (figure 1B). The method therefore provides significant improvement over existing mounting techniques. 
 
 (ref:mountmicro) Stamp and $\mu$-well properties **A** single micro well in XY and **A'** in XZ **B** mounting without $\mu$-well and **B'** mounting with $\mu$-well **C** elements and dimensions of the stamp.
-```{r Mountmicro, dpi=200, out.width='80%', fig.align='center', echo=FALSE, fig.cap="(ref:mountmicro)", fig.scap = "Stamp and micro-well properties"}
+
+```{r Mountmicro, out.width='80%', fig.cap="(ref:mountmicro)", fig.scap = "Stamp and micro-well properties"}
 knitr::include_graphics("figure/02-MaMo/Mount/mountmicro.png")
 ```
-
-#### Protocol
 
 ##### Preparations
 
 --------------------------------------------------------------------------------------------
-**item**                   Company   Product                                        cat.-no.
+                 **item**  Company   Description                                   cat.-no.
 ------------------------- --------- ---------------------------------------------- ---------
 $\mu$-Dish                 ibidi     20-35 mm polymer, #1.5, high wall             81218-200
 
 3D Mould Stamp             IBG3D     20-35 mm                               
 
-Preparation needles        VWR                                                     USBE5470
+Preparation needles        VWR       -                                             USBE5470
 
-Glass pipettes             Roth                                                     4518
+Glass pipettes             Roth      -                                             4518
 
-Silicone bulbs             VWR                                                     612-2327
+Silicone bulbs             VWR       -                                             612-2327
 
-Microtubes 2 mL            Sarstedt                                                2691    
+Microtubes 2 mL            Sarstedt  -                                             2691    
 
-Heating block              PeqLab                                                  HX2
+Heating block              PeqLab    -                                             HX2
 
-Microwave oven             Severin                                                 MW7849
+Microwave oven             Severin   -                                             MW7849
 
-Stereo microscope          Leica                                                   M165FC 
+Stereo microscope          Leica     -                                             M165FC 
 
-Transmitted Light Base     Leica                                                   MDG36 
+Transmitted Light Base     Leica     -                                             MDG36 
 ------------------------- --------- ---------------------------------------------- ---------
 Table: (\#tab:mounthard) Mounting hardware
 
@@ -848,7 +802,7 @@ Table: (\#tab:mounthard) Mounting hardware
 --------------------------------- ----------------------------------------------    
 Table: (\#tab:mountsol) Mounting solutions
 
-##### Preparation
+##### Protocol
 
 First, make sure your stamp is clean of dust or other particles. If necessary clean it with 70% Ethanol and / or pressured air. Of a 1% standard Agarose in E3, apply...
 
@@ -857,26 +811,14 @@ First, make sure your stamp is clean of dust or other particles. If necessary cl
 
 to the glass or polymer surface and place the stamp on it so that it touches the cover. Place it as central as possible. Excessive agarose not needed for the imprint will fill the surrounding area in the dish and stabilize the structure when removing the stamp again. 
 
-gently rotate the dish so that excess agarose solution will cover the whole dish.
+Gently rotate the dish so that excess agarose solution will cover the whole dish.
 
 Wait for ~45 min., then use a clean preparation needle and slip it through stamp - polymerized agarose interface. Remove the stamp carefully by lifting it and holding the $\mu$-Dish in place.
 
-(ref:stampprod) Stamping procedure **A** clean stamp surface **B** preparation of the stamp before lifting **C** ) ready-for-use agarose imprint.
+(ref:stampprod) Stamping procedure **Agarose Cast** (A) clean stamp surface (B) preparation of the stamp before lifting (C) ready-for-use agarose imprint. **Mounting** (A) without LMPA (B and C) with LMPA, while the latter shows the imprint with light coming from a different angle, making the chambers visible again. (D) Horizontal alignment of embryos. **Imaging** (A) Positioning of the $\mu$-well (B) Alignment in Brightfield and (C) Definition of a custom well plate.
 
-```{r stampprod, dpi=200, out.width='60%', fig.cap="(ref:stampprod)", fig.scap = "Stamping procedure"}
-knitr::include_graphics("figure/02-MaMo/Mount/stampprod.png")
-```
-
-(ref:mounting) 44x mounting stamp **A** without LMPA **B and C** with LMPA, while the latter shows the imprint with light coming from a different angle, making the chambers visible again.
-
-```{r mounting, dpi=200, out.width='60%', fig.cap="(ref:mounting)", fig.scap = "44x mounting stamp"}
-knitr::include_graphics("figure/02-MaMo/Mount/mounting.png")
-```
-
-(ref:setup) Imaging setup **A** Positioning of the $\mu$-well **B** Alignment in Brightfield and **C** Definition of a custom well plate.
-
-```{r setup, dpi=200, out.width='60%', fig.cap="(ref:setup)", fig.scap = "Imaging setup"}
-knitr::include_graphics("figure/02-MaMo/Mount/setup.png")
+```{r stampprod, out.width='80%', fig.cap="(ref:stampprod)", fig.scap = "Steps during improved zebrafish mounting"}
+knitr::include_graphics("figures/materials/mounting/mounting.png")
 ```
 
 ### Computational {#comp-met}
@@ -889,8 +831,8 @@ The CNN was trained on 17 wildtype DMSO control and SU5402 treated (Fgf signalin
 
 (ref:CNNtrain) Example for rosette detection on the training data. **left** Maximum Z-projected input data. **middle** heatmap of scores. blue indicates a low score, red a high one. **right** score map projected onto the input data.
 
-```{r CNNtrain, dpi=200, out.width='75%', fig.cap="(ref:CNNtrain)", fig.scap = "Example for rosette detection on the training data"}
-knitr::include_graphics(path = "figure/02-MaMo/CNN/CNNtrain.png")
+```{r CNNtrain, out.width='75%', fig.cap="(ref:CNNtrain)", fig.scap = "Example for rosette detection on the training data"}
+knitr::include_graphics("figure/02-MaMo/CNN/CNNtrain.png")
 ```
 
 \noindent The main advantages for using a neural network in a task like this are...
@@ -983,7 +925,7 @@ Therefore the measurement for apical width has to be relative to lateral height.
 Organs develop in a 3-D space and are polarized along each axis. AC usually describes a 2-D morphogenetic movement towards a center along the X-Y axes. However, the contraction movements along X and Y might be independent of one another. This could mean that they happen at different speeds, or that one is absent. As a result, the tissue would look less radially \@ref(fig:cellpol) constricted, but more constricted against a line. In order to separate those two AC dimensions, the A.I. can be calculated for the _anterio-posterior_ and for the _dorso-ventral_ axis \@ref(fig:cellpol).
 
 (ref:cellpol) Schematic AC along the A-P and D-V axis. **A** shows a A-P and D-V constricted cluster of cells. **B** shows a D-V constricted cluster of cells.
-```{r cellpol, dpi=200, out.width='75%', fig.cap="(ref:cellpol)", fig.scap = "Schematic anisotropic AC"}
+```{r cellpol, out.width='75%', fig.cap="(ref:cellpol)", fig.scap = "Schematic anisotropic AC"}
 knitr::include_graphics("figure/02-MaMo/ACI/ACI_Cells_pol.png")
 ```
 
@@ -997,7 +939,7 @@ knitr::include_graphics("figure/02-MaMo/ACI/ACI_Cells_pol.png")
     + indicative for orientation of _lateral height_
 
 (ref:ellipse) Scheme of ellipsoid measures. **A** shows the major axis as apical width and the minor axis as apical height. **B** shows the angular displacement from the horizon in steps of 30$^\circ$.
-```{r ellipse, dpi=200, out.width='75%', fig.cap="(ref:ellipse)", fig.scap = "Scheme of ellipsoid measures"}
+```{r ellipse, out.width='75%', fig.cap="(ref:ellipse)", fig.scap = "Scheme of ellipsoid measures"}
 knitr::include_graphics("figure/02-MaMo/ACI/ellipse.png")
 ```
 
@@ -1018,7 +960,7 @@ load("figure/02-MaMo/ACI/SN180_ACI.RData")
 Each geometric object has a centroid coordinate in X and Y (and Z) which is represented as the mean of all X or Y coordinates within the object. Here, the centroid coordinates in X and Y are used to plot the cells as points in the X-Y plane. Additionally, each point is colored for the A.I. value (high values are blue-violet, middle values are green, low values are yellow-red). 
 
 (ref:ACIMajor) A.I.~Major~ single cell measurements
-```{r ACIMajor, out.width='85%', fig.height = 1.75, dpi=400, fig.cap="(ref:ACIMajor)"}
+```{r ACIMajor, out.width='85%', fig.height = 1.75, fig.cap="(ref:ACIMajor)"}
 ggplot(SN180, aes(CXN, CY..unit.)) +
   geom_point(aes(colour=ACI_Major), size = 2, shape = 16, show.legend = TRUE) +
   scale_colour_gradientn(colours = rainbow(5)) +
@@ -1028,7 +970,7 @@ ggplot(SN180, aes(CXN, CY..unit.)) +
 ```
 
 (ref:ACIMinor) A.I.~Minor~ single cell measurements
-```{r ACIMinor, out.width='85%', fig.height = 1.75, dpi=400, fig.cap="(ref:ACIMinor)"}
+```{r ACIMinor, out.width='85%', fig.height = 1.75, fig.cap="(ref:ACIMinor)"}
 library(ggplot2)
 ggplot(SN180, aes(CXN, CY..unit.)) +
   geom_point(aes(colour=ACI_Minor), size = 2, shape = 16, show.legend = TRUE) +
@@ -1111,10 +1053,6 @@ ggplot(SN180_ACIs, aes(Angle, value)) +
     theme(legend.position = c(0.85, 0.85))
 ```
 
-##### Summary
-
-In summary our results suggest that there is no significant difference either in the exact _anterior-posterior_ axis (at 0°), nor in the exact _dorso-ventral_ axis (at 90$^\circ$) between a DMSO control and a SU5402 treated embryo, but mostly in an angle in between.
-
 #### Timelapse analysis
 
 ImageJ Macro
@@ -1125,6 +1063,8 @@ Summaries of Image datasets
 
 ### Cell-Cluster {#cc-data}
 
+---------------------------------------------------------------------------------
+Element           condition
 ----------------- ---------------------------------------------------------------
 **Crossings** 
  
@@ -1160,6 +1100,8 @@ Table: (\#tab:ccdata) Cell Cluster dataset
 
 ### Apical Index {#aci-data}
 
+---------------------------------------------------------------------------------
+Element           condition
 ----------------- ---------------------------------------------------------------
 **Crossings** 
  
@@ -1195,6 +1137,8 @@ Table: (\#tab:acidata) AI dataset
 
 ### Proliferation {#tl-data}
 
+---------------------------------------------------------------------------------
+Element           condition
 ----------------- ---------------------------------------------------------------
 **Crossings** 
  
@@ -1238,6 +1182,8 @@ Table: (\#tab:prolifdata) Proliferation dataset
 
 ### Detection {#detect-data}
 
+---------------------------------------------------------------------------------
+Element           condition
 ----------------- ---------------------------------------------------------------
 **Crossings** 
  
@@ -1281,6 +1227,8 @@ Table: (\#tab:detectdata) Detection dataset
 
 ### Atoh1a {#mat-ato-set}
 
+---------------------------------------------------------------------------------
+Element           condition
 ----------------- ---------------------------------------------------------------
 **Crossings** 
  

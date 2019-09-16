@@ -1,0 +1,4 @@
+Property	value
+X / Y resolution	0.1625 / 0.1625 $\mu$m        
+Z resolution	0.4 $\mu$m 
+$\Delta$T - Z	0.5428 s

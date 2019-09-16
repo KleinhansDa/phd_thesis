@@ -1,0 +1,8 @@
+Element	condition
+Exposure time	100 ms         
+Laser intensity	100$\%$ / 9.3 mW
+Objective	40X; Nikon CFI APO LWD WI; N.A. = 1.15, W.D. = 0.60 mm
+Z-spacing	0.4 - 0.5 $\mu$m
+Camera	Andor ZYLA PLUS sCMOS; 4.2 M.Pix; 82$\%$ Q.E.
+SD system	Yokogawa CSU - W1; 50 $\mu$m pattern
+Piezo	Piezo Z-table; 300 $\mu$m scan range
