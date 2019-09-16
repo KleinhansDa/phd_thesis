@@ -1,0 +1,16 @@
+Element	condition
+Crossings
+Pairs	4         
+Transgenes	_cldnb:lyn-gfp_ +/?
+Mutation	_shroom3_
+Staging	60 min.
+Mounting
+Fixation	4% PFA o.N.
+agarose	1% LMPA
+Imaging
+Magnification	25X objective
+Channels	488 nm
+Z-Stack	2.5 $\mu$m Z-spacing; 110 $\mu$m stack size; 12*X large image
+Processing
+Projection	Maximum intensity
+Transformations	Rotation and cropping in XY

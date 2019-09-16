@@ -1,0 +1,3 @@
+group	conc.	nm	intensity	exposure	z-planes	magnification
+DMSO	0.1$\%$	488	100$\%$	100 ms	~70	40X
+SU5402	10 $\mu$M	488	100$\%$	100 ms	~70	40X
