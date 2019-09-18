@@ -1,0 +1,2 @@
+Stage	6s	7s	18s	24hpf	32hpf	36hpf	42hpf	48hpf	72hpf
+min.	0	4	6	15	30	40	50	60	60

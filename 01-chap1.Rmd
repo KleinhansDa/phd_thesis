@@ -127,7 +127,7 @@ In nature zebrafish can be found in the shallow waters of the Indian and Pakista
 
 (ref:zebra) Model organism _Danio rerio_ (aquarell by Christine Molenda)
 
-```{r zebra, out.width = "0.50\\textwidth", fig.cap = "(ref:zebra)"}
+```{r zebra, out.width = "0.50\\textwidth", fig.cap = "(ref:zebra)", fig.scap = "Model organism Danio rerio"}
 knitr::include_graphics("figures/intro/CM_fish.png")
 ```
 
@@ -218,7 +218,7 @@ Based on these and previous results, the current model for apical constriction i
 
 (ref:shrmmodel) Shroom3 current model
 
-```{r shrmmodel, out.width = ".70\\textwidth", fig.cap="(ref:shrmmodel)"}
+```{r shrmmodel, out.width = ".5\\textwidth", fig.cap="(ref:shrmmodel)"}
 knitr::include_graphics("figures/intro/shrm_model.png")
 ```
 

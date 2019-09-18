@@ -365,5 +365,3 @@
 	}
 
 \makeatother
-
-\usepackage{lipsum} % to generate sample text

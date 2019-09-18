@@ -149,12 +149,14 @@ $endfor$
 
 \begin{document}
 
-\pagenumbering{arabic} % Make sure a page numbering scheme is explicitly set at the beginning.
+\pagenumbering{roman} % Make sure a page numbering scheme is explicitly set at the beginning.
 
 $if(title)$
   \maketitle
 $endif$
 
+\frontmatter
+\pagenumbering{roman}
 %\frontmatter % this stuff will be roman-numbered
 \pagestyle{empty} % this removes page numbers from the frontmatter
 
@@ -162,7 +164,7 @@ $if(acknowledgements)$
   \begin{acknowledgements}
     $acknowledgements$
     \begin{center}
-      \includegraphics[width=0.5\textwidth]{figure/05-Appendix/DSC07341.png}
+      \includegraphics[width=0.5\textwidth]{figures/ackn_sn161.png}
     \end{center}
   \end{acknowledgements}
 $endif$
@@ -202,6 +204,7 @@ $if(dedication)$
 $endif$
 
 \mainmatter % here the regular arabic numbering starts
+\pagenumbering{arabic} % Make sure a page numbering scheme is explicitly set at the beginning.
 \pagestyle{fancyplain} % turns page numbering back on
 
 $body$

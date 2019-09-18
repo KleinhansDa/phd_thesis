@@ -394,18 +394,10 @@ The macro developed consists of the following main modules:
 
 Figure \@ref(fig:maxllreg) shows a registered maximum Z projected lateral line used for ground truth evaluation.
 
-(ref:maxllreg) Registered, Maximum Z projected data with cell cluster labels
-```{r maxllreg, out.width='90%', fig.cap="(ref:maxllreg)"}
-knitr::include_graphics("figure/02-MaMo/GrTr/ClusterAnal/B06SB1P05_montage.png")
-```
+(ref:maxllreg) Registration of 2D data **cluster segments** Registered, MaxIP data with cell cluster segments of the lyn-GFP signal laid upon the DAPI signal. **cell labels** Nuclei labels within regions of interest.
 
-###### Ground Truth data
-
-Figure \@ref(fig:countP05) shows the single registered cell clusters from figure 1 and the manually labeled nuclei within.
-
-(ref:countP05) Nuclei labels
-```{r countP05, out.width='90%', fig.cap="(ref:countP05)"}
-knitr::include_graphics("figure/02-MaMo/GrTr/ClusterAnal/count_P05.png")
+```{r maxllreg, out.width='90%', fig.cap="(ref:maxllreg)", fig.scap = "Registration of 2D data"}
+knitr::include_graphics("figures/materials/ground_truth/clusters/clusters.png")
 ```
 
 ##### Data Analysis
@@ -413,9 +405,8 @@ knitr::include_graphics("figure/02-MaMo/GrTr/ClusterAnal/count_P05.png")
 ###### Nuclei Count
 
 ```{r, echo=F}
-load("figure/02-MaMo/GrTr/ClusterAnal/GroundTruth2D.RData")
+load("data/ground_truth_2D.RData")
 ```
-
 
 Comparing the segmented objects count of the Gaussian parameters with the ground truth gives an indication for over- resp. under-segmentation. In figure \@ref(fig:GrTratioCC) the relative numbers for each parameter can be seen in percentage above or below the mean cell count of the ground truth (blue horizon). The red area represents over-segmentation, the green under-segmentation.
 
@@ -441,8 +432,8 @@ ggplot(NB_all_diff_mean, aes(Group, mean_diff)) +
 
 \noindent To estimate the quality of nuclei detection for each parameter, the ratio of automatically detected and ground truth objects count can be calculated and compared (table \@ref(tab:nrcount)). The closer it is to 1, the better.
 
-```{r nrcount, results='asis'}
-knitr::kable(NB_all_CC_NR_mean, "latex", booktabs = T, caption = "Nuclei count ratio") %>%
+```{r nrcount}
+knitr::kable(NB_all_CC_NR_mean, booktabs = T, caption = "Nuclei count ratio") %>%
   kable_styling(full_width = T, latex_options = "striped")
 ```
 
@@ -465,8 +456,8 @@ To assess the quality of the anaLLzr3D algorithm the ground truth was modeled as
 - embryos are mounted within a 3D mold for improved 3D alignment
 
 ```{r model3DGrT}
-tab <- read.delim("figures/materials/anallzrmodel.txt")
-knitr::kable(tab, "latex", booktabs = T, caption="anaLLzr3D Model", align = c("r", "l"), escape = F, col.names = NULL) %>%
+tab <- read.delim("tables/ground_truth/anallzrmodel.txt")
+knitr::kable(tab, booktabs = T, caption="anaLLzr3D Model", align = c("r", "l"), escape = F, col.names = NULL) %>%
   kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
   column_spec(1, width = "3cm")
 ```
@@ -505,8 +496,8 @@ knitr::include_graphics(path = "figures/materials/ground_truth/registration.png"
 ```
 
 ```{r imgprop}
-tab <- read.delim("figures/materials/scaling_3D.txt")
-knitr::kable(tab, "latex", booktabs = T, caption = "Physical image properties (scaling)", 
+tab <- read.delim("tables/ground_truth/scaling_3D.txt")
+knitr::kable(tab, booktabs = T, caption = "Physical image properties (scaling)", 
              align = c("r", "l"), escape = F, col.names = NULL) %>%
   kable_styling(full_width = T, latex_options = c('striped', 'hold_position'))
 ```
@@ -559,8 +550,8 @@ ggplot(all_count_diff_mean, aes(Group, mean_diff)) +
     theme(legend.text = element_text(size=11))
 ```
 
-```{r gtrcellcount, out.width='75%'}
-knitr::kable(all_count_cells, "latex", booktabs = T, caption="Cellcount ground truth") %>%
+```{r gtrcellcount}
+knitr::kable(all_count_cells, booktabs = T, caption="Cellcount ground truth") %>%
   kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
   row_spec(1, bold = T)
 ```
@@ -686,9 +677,9 @@ Embryos and dechorionated larvae were fixed in 2 ml of 4$\%$ PFA in 1X PBS overn
 * Wash 2x in PBST
 * Digest embryos in 10 $\mu$g/mL Proteinase K according to table
 
-```{r met-protk, out.width='99%'}
+```{r met-protk}
 tab <- read.delim("figures/materials/protkdig.txt")
-knitr::kable(tab, "latex", booktabs = T, caption="Proteinase K digestion", align = "c",
+knitr::kable(tab, booktabs = T, caption="Proteinase K digestion", align = "c",
              col.names = c("Stage", "0.6 s", "7 s", "18 s", "24 hpf", "32 hpf", "36 hpf", "42 hpf", "48 hpf", "72 hpf")) %>%
   kable_styling(full_width = T, latex_options = c('striped', 'hold_position'))
 ```
@@ -753,7 +744,7 @@ For mounting, an improved 3D specimen preparation and well-plate like sample nav
 (ref:mountmicro) Stamp and $\mu$-well properties **A** single micro well in XY and **A'** in XZ **B** mounting without $\mu$-well and **B'** mounting with $\mu$-well **C** elements and dimensions of the stamp.
 
 ```{r Mountmicro, out.width='80%', fig.cap="(ref:mountmicro)", fig.scap = "Stamp and micro-well properties"}
-knitr::include_graphics("figure/02-MaMo/Mount/mountmicro.png")
+knitr::include_graphics("figures/materials/mounting/mountmicro.png")
 ```
 
 ##### Preparations
@@ -783,16 +774,13 @@ Transmitted Light Base     Leica     -                                          
 -------------------------- --------- ------------------------------------------ ----------
 Table: (\#tab:mounthard) Mounting hardware
 
---------------------------------------------------------------------------------
-**solution**                           Info    
---------------------------------- ---------------------------------------------- 
-1.0% (m/V) Agarose / E3           -               
 
-0.3% (m/V) LMPA / E3              incl. 20% (v/v) 25X TMS for live imaging 
-
-0.5% (m/V) LMPA / E3              incl. 20% (v/v) 25X TMS for live imaging
---------------------------------- ----------------------------------------------    
-Table: (\#tab:mountsol) Mounting solutions
+```{r mountsol}
+tab <- read.delim("tables/mount_sol.txt")
+knitr::kable(tab, booktabs = T, caption = "Mounting solutions", col.names = NULL) %>%
+  kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
+  column_spec(1, width = "5cm", bold=T)
+```
 
 ##### Protocol
 
@@ -824,7 +812,7 @@ The CNN was trained on 17 wildtype DMSO control and SU5402 treated (Fgf signalin
 (ref:CNNtrain) Example for rosette detection on the training data. **left** Maximum Z-projected input data. **middle** heatmap of scores. blue indicates a low score, red a high one. **right** score map projected onto the input data.
 
 ```{r CNNtrain, out.width='75%', fig.cap="(ref:CNNtrain)", fig.scap = "Example for rosette detection on the training data"}
-knitr::include_graphics("figure/02-MaMo/CNN/CNNtrain.png")
+knitr::include_graphics("figures/materials/cnn/CNNtrain.png")
 ```
 
 \noindent The main advantages for using a neural network in a task like this are...
@@ -832,16 +820,16 @@ knitr::include_graphics("figure/02-MaMo/CNN/CNNtrain.png")
 1. Objectivity
     + Unlike the human brain, one a CNN is trained it is static and does not keep on learning. This makes it possible to have an unbiased quantification of rosette counts.
 2. Degree of rosette registration    
-    + The output data are continous rational numbers ($\mathbb{Q}$) instead of integers ($\mathbb{Z}$) which does not only tell if a rosette is there fore not, but also for 'how much' (50-100%) it is there.
+    + The output data are continous rational numbers ($\mathbb{Q}$) instead of integers ($\mathbb{Z}$) which does not only tell if a rosette is there fore not, but also for 'how much' (50-100$\%$) it is there.
 3. Training is done relatively quick
 
 ```{r CNNtraining}
-tab <- read.delim("figures/materials/cnn_train_dat.txt")
-knitr::kable(tab, "latex", booktabs = T, caption = "CNN training data", align = 'c', escape = F) %>%
+tab <- read.delim("tables/train_dat/cnn_train_dat.txt")
+knitr::kable(tab, booktabs = T, caption = "CNN training data", align = 'c', escape = F) %>%
   kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
   row_spec(0, bold = T) %>%
   column_spec(2, width = "1cm") %>%
-  column_spec(3, width = "2.5cm" ) %>%
+  column_spec(3, width = "2cm" ) %>%
   column_spec(4, width = "1.5cm") %>%
   column_spec(5, width = "1.5cm") %>%
   column_spec(6, width = "1.5cm")
@@ -857,27 +845,21 @@ The basic principle is based on work done by Laguerre _et al._, 2009[@Laguerre20
 \noindent Figure \@ref(fig:mitodatapoints) shows an exemplary track for the data analyzed.
 
 (ref:mitodatapoints) Tracking of mitotic events
-```{r mitodatapoints, out.width='50%', fig.cap="(ref:mitodatapoints)"}
-knitr::include_graphics("figure/02-MaMo/Prol/Prolif.png")
+
+```{r mitodatapoints, out.width='50%', fig.cap="(ref:mitodatapoints)", fig.scap = "Tracking of mitotic events"}
+knitr::include_graphics("figures/materials/prol/Prolif.png")
 ```
 
 #### Apical Index{#ACI}
 
 ##### Rationale
 
-The earliest attempt found for indexing AC can be found in a study published by Lee _et al_[@Lee2009] where they were interested in the 'apical index' (A.I.) of bottle cells during _X.laevis_ gastrulation(figure \@ref(fig:ACLee)).
+The earliest attempt found for indexing AC can be found in a study published by Lee _et al_[@Lee2009] where they were interested in the 'apical index' (A.I.) of bottle cells during _X.laevis_ gastrulation(figure \@ref(fig:ai) Lee). Another example for measuring AC is the apical _constriction_ index (ACI, figure \@ref(fig:ai) Harding) for the cells of the _D.rerio_ lateral line primordium (PLLp), which can be found in a study from 2012 where it was shown that Fgfr-Ras-MAPK signaling is required for AC and Rock2a localization6 [@Harding2012; @Harding2013].
 
-(ref:ACLee) A.I. of _X.leavis_ bottle cells.
-```{r ACLee, out.width='75%', fig.cap="(ref:ACLee)"}
-knitr::include_graphics("figure/02-MaMo/ACI/Jen_yi_Lee.png")
-```
+(ref:ai) A.I. indeces in the literature. **Lee** A.I. of _X.leavis_ bottle cells measured in 2D. **Harding** A.I. of _D.r._ pLLP cells measured in 3D.
 
-\noindent Another example for measuring AC is the apical _constriction_ index (ACI, figure \@ref(fig:ACHard)) for the cells of the _D.rerio_ lateral line primordium (PLLp), which can be found in a study from 2012 where it was shown that Fgfr-Ras-MAPK signaling is required for AC and Rock2a localization6 [@Harding2012; @Harding2013].
-
-(ref:ACHard) Apical constriction index. **A** 3D reconstructed cells of a CLCLNA control primordium and **B** of a primordium deficient of Fgf signaling.
-
-```{r ACHard, dpi=200, out.width='75%', fig.cap="(ref:ACHard)", fig.scap = "Apical constriction index"}
-knitr::include_graphics("figure/02-MaMo/ACI/Harding.jpg")
+```{r ACLee, out.width='75%', fig.cap="(ref:ACLee)", fig.scap = "A.I. indeces in the literature"}
+knitr::include_graphics("figures/materials/models/ai.png")
 ```
 
 \noindent In both cases, the measurements for the A.I.[@Lee2009] or ACI[@Harding2013] does not differ and describes the ratio for lateral height over apical width \@ref(fig:ACICells). 
@@ -921,7 +903,7 @@ Organs develop in a 3-D space and are polarized along each axis. AC usually desc
 
 (ref:cellpol) Schematic AC along the A-P and D-V axis. **A** shows a A-P and D-V constricted cluster of cells. **B** shows a D-V constricted cluster of cells.
 ```{r cellpol, out.width='75%', fig.cap="(ref:cellpol)", fig.scap = "Schematic anisotropic AC"}
-knitr::include_graphics("figure/02-MaMo/ACI/ACI_Cells_pol.png")
+knitr::include_graphics("figures/materials/models/ACI_Cells_pol.png")
 ```
 
 \noindent By fitting an ellipsoid to the volume area taken at $\mathrm{\Delta}$ap, one will obtain the following parameters.
@@ -935,7 +917,7 @@ knitr::include_graphics("figure/02-MaMo/ACI/ACI_Cells_pol.png")
 
 (ref:ellipse) Scheme of ellipsoid measures. **A** shows the major axis as apical width and the minor axis as apical height. **B** shows the angular displacement from the horizon in steps of 30$^\circ$.
 ```{r ellipse, out.width='75%', fig.cap="(ref:ellipse)", fig.scap = "Scheme of ellipsoid measures"}
-knitr::include_graphics("figure/02-MaMo/ACI/ellipse.png")
+knitr::include_graphics("figures/materials/models/ellipse.png")
 ```
 
 The two dimensions of AC indices can therefore be described as the following ratios...
@@ -947,7 +929,7 @@ The two dimensions of AC indices can therefore be described as the following rat
 ##### Measurements {#ACI-Dis}
 
 ```{r, echo = F}
-load("figure/02-MaMo/ACI/SN180_ACI.RData")
+load("data/SN180_ACI.RData")
 ```
 
 ###### Single Cell measurements {#ACI-singlecell}
@@ -975,23 +957,15 @@ ggplot(SN180, aes(CXN, CY..unit.)) +
   mythemeLIGHT_bottom()
 ```
 
-<!--
-```{r acicellcount, echo=FALSE, fig.align='center', fig.cap="Cellcount ACI"}
-load("figure/02-MaMo/ACI/SN180_ACI.RData")
-#knitr::kable(head(SN180_count), format ="rmarkdown", align = 'c', caption="Cellcount")
-pander(SN180_count, style ="rmarkdown")
-```
-Table: (\#tab:cellcountaci) ACI Cellcount
--->
-
 Harding(2013)[@Harding2013] were using a constant $\mathrm{\Delta}$ap to measure the apical width, which we have shown to be incorrect in certain cases. In their study they found that certain mean A.I. values in the DMSO go as high as 15, which might be related to this \@ref(fig:ACICells). 
 By measuring apical width at a relative $\mathrm{\Delta}$ap the mean values for A.I.~Major~ are at `r round(mean(SN180_DMSO$ACI_H_F20), digits=1)` for the DMSO control and `r round(mean(SN180_SU$ACI_H_F20), digits=1)` for the SU5402 treated condition, which seems to somewhat correlate with their findings\@ref(fig:HardingACI). .
 
 However overall our results indicate that the AC difference is not as strong, at least if all the cells of the PLLp are taken into account.
 
-(ref:HardingACI) **E-G** 3-D reconstructions of the highlighted cell. **H** A.I.s for embryos treated with DMSO, SU5402, PD0325901 or following induction of hsp70:dn-Ras. (n=180 cells / N = 6 embryos).
-```{r HardingACI, out.width='60%', dpi=200, fig.cap="(ref:HardingACI)", fig.scap = "Published ACI"}
-knitr::include_graphics("figure/02-MaMo/GrTr/HardingACI.png")
+(ref:HardingACI) AI indices by Harding et al. **E-G'** 3-D reconstructions of the highlighted cell. **H** A.I.s for embryos treated with DMSO, SU5402, PD0325901 or following induction of hsp70:dn-Ras. (n=180 cells / N = 6 embryos).
+
+```{r HardingACI, out.width='60%', dpi=200, fig.cap="(ref:HardingACI)", fig.scap = "AI indices by Harding et al."}
+knitr::include_graphics("figures/materials/models/harding.png")
 ```
 
 ###### Angle densities {#ACI-Angledens}
@@ -1046,8 +1020,8 @@ ImageJ Macro
 Summaries of Image datasets
 
 ```{r imgdatcc}
-tab <- read.delim("figures/materials/img_data/imgdat_cc.txt")
-knitr::kable(tab, "latex", booktabs = T, caption = "Cell Cluster dataset", escape = F, col.names = NULL) %>%
+tab <- read.delim("tables/img_data/imgdat_cc.txt")
+knitr::kable(tab, booktabs = T, caption = "Cell Cluster dataset", escape = F, col.names = NULL) %>%
   kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
   collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
   column_spec(1, width = "2cm") %>%
@@ -1055,8 +1029,8 @@ knitr::kable(tab, "latex", booktabs = T, caption = "Cell Cluster dataset", escap
 ```
 
 ```{r imgdatai}
-tab <- read.delim("figures/materials/img_data/imgdat_ai.txt")
-knitr::kable(tab, "latex", booktabs = T, caption = "AI dataset", escape = F, col.names = NULL) %>%
+tab <- read.delim("tables/img_data/imgdat_ai.txt")
+knitr::kable(tab, booktabs = T, caption = "AI dataset", escape = F, col.names = NULL) %>%
   kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
   collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
   column_spec(1, width = "2cm") %>%
@@ -1064,8 +1038,8 @@ knitr::kable(tab, "latex", booktabs = T, caption = "AI dataset", escape = F, col
 ``` 
 
 ```{r imgdatprol}
-tab <- read.delim("figures/materials/img_data/imgdat_prol.txt")
-knitr::kable(tab, "latex", booktabs = T, caption = "Proliferation dataset", escape = F, col.names = NULL) %>%
+tab <- read.delim("tables/img_data/imgdat_prol.txt")
+knitr::kable(tab, booktabs = T, caption = "Proliferation dataset", escape = F, col.names = NULL) %>%
   kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
   collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
   column_spec(1, width = "2cm") %>%
@@ -1073,8 +1047,8 @@ knitr::kable(tab, "latex", booktabs = T, caption = "Proliferation dataset", esca
 ```
 
 ```{r imgdatdet}
-tab <- read.delim("figures/materials/img_data/imgdat_det.txt")
-knitr::kable(tab, "latex", booktabs = T, caption = "Detection dataset", escape = F, col.names = NULL) %>%
+tab <- read.delim("tables/img_data/imgdat_det.txt")
+knitr::kable(tab, booktabs = T, caption = "Detection dataset", escape = F, col.names = NULL) %>%
   kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
   collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
   column_spec(1, width = "2cm") %>%
@@ -1082,8 +1056,8 @@ knitr::kable(tab, "latex", booktabs = T, caption = "Detection dataset", escape =
 ```
 
 ```{r imgdatato}
-tab <- read.delim("figures/materials/img_data/imgdat_ato.txt")
-knitr::kable(tab, "latex", booktabs = T, caption = "Atoh1a dataset", escape = F, col.names = NULL) %>%
+tab <- read.delim("tables/img_data/imgdat_ato.txt")
+knitr::kable(tab, booktabs = T, caption = "Atoh1a dataset", escape = F, col.names = NULL) %>%
   kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
   collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
   column_spec(1, width = "2cm") %>%

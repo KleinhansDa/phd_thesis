@@ -1,0 +1,40 @@
+# Instructions {.unnumbered}
+
+![](figures/flipbook/flip.png)
+
+## Print version {.unnumbered}
+
+- Flipbook for lateral line development
+    + right pages (odd numbers) show the wildtype
+    + left pages (even numbers) show the mutant
+
+## Electronic version {.unnumbered}
+
+- https://kleinhansda.github.io/phd_thesis/index.html
+- Lets you search the document
+
+## repository {.unnumbered}
+
+- Look up the data at https://kleinhansda.github.io/reports/
+- Look up the repository https://github.com/KleinhansDa/phd_thesis
+
+# List of Abbreviations {.unnumbered}
+
+```{r abbrev}
+options(knitr.kable.NA = '')
+data <- read.delim("Abbreviations.txt")
+knitr::kable(data, booktabs=T, col.names = c("Index", "Abbreviation", "Elaboration"), align=c('c', 'c', 'l')) %>%
+  kable_styling(full_width = T, latex_options = "striped") %>%
+  row_spec(0, bold = T) %>%
+  column_spec(1, bold = T) %>%
+  column_spec(3, width = "10cm") %>%
+  collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
+  kable_styling(font_size = 9)
+  #add_header_above(c("id labels" = 2, "metrics" = 3))
+#pack_rows("Group 1", 4, 7) %>%
+#pack_rows("Group 2", 8, 10)
+```
+
+# Zusammenfassung {.unnumbered}
+
+Während der Entwicklung von Organen wird aus einer zunächst uniformen und relativ losen Ansammlung von Zellen nach und nach ein strukturiertes Gebilde bei dem das Zusammenspiel dieser Strukturen die Funktion des Gesamtsystems garantiert. Verantwortlich für die Entstehung dieser Strukturen ist ein dichtes Netzwerk von chemischen (Signalbotenstoffe), genetischen (Gen-aktivierung/deaktivierung) sowie physikalischen (Zugkräfte, Druck, Temperatur, Licht) Faktoren die zu verschiedenen Zeitpunkten der Entwicklung in unterschiedlicher Kombination und Ausprägung vorliegen und die Entwicklung somit unterschiedlich beeinflussen und dirigieren.

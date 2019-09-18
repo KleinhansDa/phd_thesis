@@ -1,0 +1,4 @@
+solution	Info
+1.0$\%$ (m/V) Agarose / E3	-
+0.3$\%$ (m/V) LMPA / E3	incl. 20$\%$ (v/v) 25X TMS for live imaging
+0.5$\%$ (m/V) LMPA / E3	incl. 20$\%$ (v/v) 25X TMS for live imaging

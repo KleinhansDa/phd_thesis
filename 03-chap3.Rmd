@@ -13,8 +13,6 @@ To confirm these findings quantitatively a dataset was put together consisting o
 
 we also measured the area each CC took up and counted the number of cells each CC was made up of.
 
-A full data analysis report can be found on [github](https://github.com/KleinhansDa/reports/blob/master/b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3/clusters_eom.html)
-
 ### Number and Position of Cell Clusters {#res-ccounts}
 
 To normalize the number of deposited CCs to individual LL lengths, for comparison the ratio of LL length over CC count is used (\@ref(fig:llcounts)B). To correct for uneven LL paths^[fixation with PFA may introduce a slight bending of the embryo] and irregularities in mounting^[When mounted, all embryos have a different tilt], CC distances are calculated in Euclidian space rather than solely in dimension X. While _shrm3++_ embryos deposit 6 $\pm$ 0.7 CCs, _shroom3_$--$ embryos deposit 8 $\pm$ 0.9 CCs (\@ref(fig:llcounts)A). This difference stays true also when normalizing against length (\@ref(fig:llcounts)B).
@@ -84,8 +82,6 @@ The image data set analyzed consists of 20 time-lapse movies (11 _shroom3_$--$, 
 knitr::include_graphics("figures/results/03_rosettes/RDT-01.png")
 ```
 
-A full data analysis report can be found on [github](https://github.com/KleinhansDa/reports/blob/master/b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3/report_RDT.html)
-
 ### Cluster Deposition
 
 Figure \@ref(fig:rdtdepo)A shows a montage of a _shroom3_++ and a _shroom3_$--$ scenario in cluster deposition (3.5 h / ~20 min. interval). For _shroom3_++ the rosette structure seems tight and two depositions occur in a regular manner. In the _shroom3_$--$ on the other hand, rosette structure seems more fragile with less pronounced rosette centers and four observed depositions. Interestingly, based on the _cldnb:lyn-gfp_ signal the area of constriction seems to be less radially organized but more oriented towards the horizontal midline. Furthermore, the trailing rosettes are significantly smaller and do not seem to delaminate as clean from the migrating primordium. In addition, for L3 it first seems like two CCs could be deposited, until they merge again to a single CC about 1.5 h later.
@@ -93,7 +89,7 @@ On average, as it was shown before (section \@ref(res-ccounts)), there’s a sig
 
 (ref:rdtdepo) Cluster Deposition **A** _shroom3_++ and _shroom3_$--$ LL development in comparison. L1 - L4 are deposited CCs. Arrows indicate deposition events. Dotted lines are tracks of rosette to CC transition. **B** Statistics of deposited cluster counts **C** Change of CC position through time. Each line represents the locally weighted scatterplot smoothing (LOESS) of all CCn positions observed. 
 
-```{r rdtdepo, out.width = "0.95\\textwidth", fig.cap="(ref:rdtdepo)", fig.scap="Cluster Deposition"}
+```{r rdtdepo, fig.cap="(ref:rdtdepo)", fig.scap="Cluster Deposition"}
 knitr::include_graphics("figures/results/03_rosettes/tracking-01.png")
 ```
 
@@ -104,7 +100,7 @@ While for the area no difference can be detected (\@ref(fig:rdtreg)B), interesti
 
 (ref:rdtreg) pLLP time-resolved morphometrics **A-A’** Leading edge (l.e.) speed and acceleration in $\mu$m/h, displayed as LOESS curves with at a span of 0.5 **B** Area in square $\mu$m and **C** Roundness displayed as mean±se (standard error).
 
-```{r rdtreg, out.width = "0.95\\textwidth", fig.cap="(ref:rdtreg)", fig.scap="pLLP time-resolved morphometrics"}
+```{r rdtreg, fig.cap="(ref:rdtreg)", fig.scap="pLLP time-resolved morphometrics"}
 knitr::include_graphics("figures/results/03_rosettes/registration.png")
 ```
 
@@ -116,7 +112,7 @@ In addition, the data distributions attached to the sides (\@ref(fig:rdtreg)B’
 
 (ref:rdtdet) Rosette counts and weights. **A-A’** pLLP kymographs. Length = 100 $\mu$m. (A) shows the signal and line drawn. (A') shows the signal through time **B-B’’ and C-C’’** Different graphic representation of rosette count data. (B) Filled histogram (B’) Median$\pm$standard deviation (B’’) KDE.
 
-```{r rdtdet, out.width = "0.95\\textwidth", fig.cap="(ref:rdtdet)", fig.scap="Rosette counts and weights"}
+```{r rdtdet, fig.cap="(ref:rdtdet)", fig.scap="Rosette counts and weights"}
 knitr::include_graphics("figures/results/03_rosettes/detection.png")
 ```
 
@@ -128,7 +124,7 @@ The hypothesis to test for figure \@ref(fig:rdtcorr)B was if lower rosettiness l
 
 (ref:rdtcorr) Developmental interdependencies. Digits = pearson coefficient **A** Pearson correlation coefficient between rosettiness and speed of migration through time **B** Correlation between shrm3++ and shrm3$--$ at end of migration. 
 
-```{r rdtcorr, out.width = "0.95\\textwidth", fig.cap="(ref:rdtcorr)", fig.scap="Developmental interdependencies"}
+```{r rdtcorr, fig.cap="(ref:rdtcorr)", fig.scap="Developmental interdependencies"}
 knitr::include_graphics("figures/results/03_rosettes/rdt_corr_speed-ros.png")
 ```
 
@@ -141,7 +137,7 @@ To gain further insight into rosette assembly and the contribution of apical con
 
 (ref:acdata) High resolution, volumetric image data. Upper row shows the fluorescence signal at the membranes. Lower row shows the 3D reconstructed cells. Columns show the same pLLP from different angles.
 
-```{r acdata, out.width = "0.95\\textwidth", fig.cap="(ref:acdata)", fig.scap="High resolution, volumetric image data"}
+```{r acdata,, fig.cap="(ref:acdata)", fig.scap="High resolution, volumetric image data"}
 knitr::include_graphics("figures/results/04_constriction/reconstriction_data.png")
 ```
 
@@ -157,9 +153,9 @@ The dataset generated consists of three pLLP stages (\@ref(fig:acstages)), four 
 knitr::include_graphics("figures/results/04_constriction/Yolk_ext.png")
 ```
 
-```{r acdatatab}
+```{r acdatatab, eval=F}
 acdata <- read.delim("data/tables/acdata.txt")
-knitr::kable(acdata, "latex", booktabs=T, align=c('l', 'l', 'c', 'c', 'c'), escape = F, 
+knitr::kable(acdata, booktabs=T, align=c('l', 'l', 'c', 'c', 'c'), escape = F, 
              caption = 'Apical Constriction dataset summary') %>%
   kable_styling(full_width = T) %>%
   kable_styling(font_size = 11) %>%
@@ -176,7 +172,7 @@ Figure \@ref(fig:acshape)B’ illustrates the three developmental stages used he
 
 (ref:acshape) Apical Constriction in 3D. The stages are in columns, the groups are in rows. Each panel shows a MaxIP (top left), and orthogonal views along the length (XZ, bottom left) and along the width (YZ, right). Arrow annotations in YZ panels indicate points of constriction, bar annotations in XZ indicate the spread of region of constriction.
 
-```{r acshape, out.width = "0.95\\textwidth", fig.cap="(ref:acshape)", fig.scap="Apical Constriction in 3D"}
+```{r acshape, fig.cap="(ref:acshape)", fig.scap="Apical Constriction in 3D"}
 knitr::include_graphics("figures/results/04_constriction/Figure_5-1.png")
 ```
 
@@ -188,7 +184,7 @@ While reduction in ACI Major is stronger than the ACI Minor in shroom3$--$ cells
 
 (ref:acaci) 3D metrics and pLLP maps. **A-A’** Measurements. (A) Oval (black outline) represents the fit ellipse. Red arrows represent major and minor axes which are representative for A-P and D-V respectively (A’) Angle measurements and intervals **B** Cellular orientation as bar chart. Statistics are indicated as stars. **C-C’** Apical Constriction measurements. Colored bars represent the median. Errorbars indicate 95% CI.
 
-```{r acaci, out.width = "0.95\\textwidth", fig.cap="(ref:acaci)", fig.scap="3D metrics and pLLP maps"}
+```{r acaci, fig.cap="(ref:acaci)", fig.scap="3D metrics and pLLP maps"}
 knitr::include_graphics("figures/results/04_constriction/Figure_5-2.png")
 ```
 
@@ -199,7 +195,7 @@ Traditional ISH allows for extremely sensitive detection of RNA transcripts on a
 
 (ref:hcish) Expression of _deltaD_ and _atoh1a_ in the pLLP. Recorded in greyscale at brightfield at 20X Magnification. Images show background subtracted and de-noised EDFs of original Z-stack data.
 
-```{r hcish, out.width = "0.95\\textwidth", fig.cap="(ref:hcish)", fig.scap="Expression of deltaD and atoh1a in the pLLP"}
+```{r hcish, fig.cap="(ref:hcish)", fig.scap="Expression of deltaD and atoh1a in the pLLP"}
 knitr::include_graphics("figures/results/05_atoh/hc_ish.png")
 ```
 
@@ -211,15 +207,13 @@ The dataset generated consists of two groups, _shroom3_++ and _shroom3_$--$, whe
 
 ```{r hcdatatab}
 hcdata <- read.delim("data/tables/hcdata.txt")
-knitr::kable(hcdata, "latex", booktabs=T, align=c('l', 'l', 'c', 'c', 'c'), escape = F,
+knitr::kable(hcdata, booktabs=T, align=c('l', 'l', 'c', 'c', 'c'), escape = F,
              caption = 'Haircell specification dataset summary',
              col.names = c("genotype", "sub-structure", "embryos", "timepoints", "per 3h")) %>%
   kable_styling(full_width = T) %>%
   kable_styling(font_size = 11) %>%
   add_header_above(c("id labels" = 2, "metrics" = 3), bold = T)
 ```
-
-A full data analysis report can be found on [github](https://github.com/KleinhansDa/reports/blob/master/b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3/clusters_tl_tom.html)
 
 ### Atoh1a in the LL
 
@@ -228,7 +222,7 @@ While there is no difference in relative numbers of _atoh1a_ expressing cells wi
 
 (ref:hctl) Haircell specification in the LL. **A and B** maximum Tom intensities in the pLLP and CCs. All CC lifetimes were normalized to the timepoint of deposition (timepoint zero, highlighted by striped vertical line). pLLP intensities are shows to the right, CC intensities are shows on a negative scale to the left. **C** Relative numbers of _atoh1a_ expressing cells and **C’** mean counts of _atoh1a_ expressing cells. **D-D’** Kymographs along the horizontal midline showing nascent signal of Tom (in magenta) **D** two individual pLLPs that were registered in time and to the leading edge. And **D’** Tom signal during LL development. 
 
-```{r hctl, out.width = "0.95\\textwidth", fig.cap="(ref:hctl)", fig.scap="Haircell specification in the LL"}
+```{r hctl, fig.cap="(ref:hctl)", fig.scap="Haircell specification in the LL"}
 knitr::include_graphics("figures/results/05_atoh/Figure_7-white-01.png")
 ```
 
@@ -244,22 +238,22 @@ While CC count is restored in heat-shocked, _shroom3_$--$, transgene carrying em
 
 (ref:rescshrm) _shroom3_ ectopic expression  **A** Normalized cluster count and statistics **B** Rosettiness and statistics **C** Correlations between beginning of migration rosettiness and end of migration cluster count
 
-```{r rescshrm, out.width = "0.95\\textwidth", fig.cap="(ref:rescshrm)", fig.scap="shroom3 ectopic expression"}
+```{r rescshrm, fig.cap="(ref:rescshrm)", fig.scap="shroom3 ectopic expression"}
 knitr::include_graphics("figures/results/06_rescues/shrm3/rescue_temp.png")
 ```
 
-```{r rescshrmtab, out.width = "0.95\\textwidth"}
+```{r rescshrmtab}
 data <- read.delim("data/tables/hsdata.txt")
-knitr::kable(data, "latex", booktabs=T, caption = 'Heatshock rescue dataset summary', escape = F, align=c('r', 'c', 'c', 'c', 'c')) %>%
+knitr::kable(data, booktabs=T, caption = 'Heatshock rescue dataset summary', escape = F, align=c('r', 'c', 'c', 'c', 'c')) %>%
   kable_styling(full_width = T) %>%
   kable_styling(font_size = 11) %>%
   collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
   add_header_above(c("id labels" = 3, "metrics" = 2), bold=T)
 ```
 
-```{r rescshrmsignif, out.width = "0.95\\textwidth"}
+```{r rescshrmsignif}
 data <- read.delim("data/tables/hssignif_clus.txt")
-knitr::kable(data, "latex", booktabs=T, caption = 'Heatshock statistics',
+knitr::kable(data, booktabs=T, caption = 'Heatshock statistics',
              col.names = c("group1", "group2", "p", "adj.p", "level", "p", "adj.p", "level"),
              align = c('l','l','c','c','c','c','c','c')) %>%
   kable_styling(full_width = T) %>%
@@ -270,8 +264,6 @@ knitr::kable(data, "latex", booktabs=T, caption = 'Heatshock statistics',
   add_header_above(c("id labels" = 2, "cluster counts" = 3, "rosettiness" = 3), bold=T)
 ```
 
-A full data analysis report can be found on [github](https://github.com/KleinhansDa/reports/blob/master/b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3/clusters_hsshrm3.html)
-
 ### Morphogen Rescue
 
 It is known that increasing concentrations of SU5402 inhibit pLLP migration and rosette formation, leading to a reduced length of the LL system and the number of CCs deposited [@Durdu2014a; @Lecaudey2008a]. 
@@ -279,23 +271,21 @@ The idea for this experiment was to rescue the _shroom3_ phenotype by combining 
 
 (ref:rescsu) Titration of Fgf inhibitor **A** LL lengths are reduced with increased concentrations of Fgf inhibitor **B** Groupwise comparison of the length normalized cluster count per concentration of Fgf inhibitor.
 
-```{r rescsu, out.width = "0.95\\textwidth", fig.cap="(ref:rescsu)", fig.scap="Titration of Fgf inhibitor"}
+```{r rescsu, fig.cap="(ref:rescsu)", fig.scap="Titration of Fgf inhibitor"}
 knitr::include_graphics("figures/results/06_rescues/su54/rescue_su.png")
 ```
 
-```{r rescsutab, out.width = "0.95\\textwidth"}
+```{r rescsutab}
 data <- read.delim("data/tables/sudata.txt")
-knitr::kable(data, "latex", booktabs=T, caption = 'Morphogen rescue dataset summary', escape = F, align=c('c', 'c', 'c', 'c', 'c', 'c'),
+knitr::kable(data, booktabs=T, caption = 'Morphogen rescue dataset summary', escape = F, align=c('c', 'c', 'c', 'c', 'c', 'c'),
              col.names = c("genotype", "conc. ($\\mu$M)", "LLs", "genotype", "conc. ($\\mu$M)", "LLs")) %>%
   kable_styling(full_width = T) %>%
   kable_styling(font_size = 11) %>%
   collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
-  add_header_above(c("shroom3++" = 3, "shroom3--" = 3), bold=T) %>%
+  #add_header_above(c("shroom3++" = 3, "shroom3--" = 3), bold=T) %>%
   collapse_rows(columns = 4, latex_hline = "none", valign = "top") %>%
   footnote(general = "concentrations in 0.1% DMSO")
 ```
-
-A full data analysis report can be found on [github](https://github.com/KleinhansDa/reports/blob/master/b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3/clusters_su.html)
 
 ### Mechanic Rescue {#res-rockresc}
 
@@ -307,20 +297,18 @@ Embryos were incubated at distinct (figure \@ref(fig:rescrock) legend) concentra
 
 (ref:rescrock) Titration of Rock inhibitor **A** LL lengths are reduced with increased concentrations of Rock inhibitor **B** Groupwise comparison of the length normalized cluster count per concentration of Fgf inhibitor.
 
-```{r rescrock, out.width = "0.95\\textwidth", fig.cap="(ref:rescrock)", fig.scap="Titration of Rock inhibitor"}
+```{r rescrock, fig.cap="(ref:rescrock)", fig.scap="Titration of Rock inhibitor"}
 knitr::include_graphics("figures/results/06_rescues/rockout/rescue_rockout.png")
 ```
 
-```{r rescrocktab, out.width = "0.95\\textwidth", fig.cap="(ref:rescrock)", fig.scap="Titration of Rock inhibitor"}
+```{r rescrocktab}
 data <- read.delim("data/tables/rkoutdata.txt")
-knitr::kable(data, "latex", booktabs=T, caption = 'Rockout rescue dataset summary', align=c('r', 'c', 'l'), escape=F,
+knitr::kable(data, booktabs=T, caption = 'Rockout rescue dataset summary', align=c('r', 'c', 'l'), escape=F,
              col.names = c("genotype", "conc. ($\\mu$M)", "LLs")) %>%
   kable_styling(full_width = T) %>%
   kable_styling(font_size = 11)  %>%
   footnote(general = "concentrations in 0.1% DMSO")
 ```
-
-A full data analysis report can be found on [github](https://github.com/KleinhansDa/reports/blob/master/b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3/clusters_rkout.html)
 
 #### Rock induction
 
@@ -332,16 +320,14 @@ The idea for this experiment was to rescue _shroom3_$--$ embryos by enhancing th
 knitr::include_graphics("figures/results/06_rescues/caliculyn/rescue_cali.png")
 ```
 
-```{r resccaltab, out.width = "0.95\\textwidth", fig.cap="(ref:resccal)", fig.scap="Calyculin treatment"}
+```{r resccaltab}
 data <- read.delim("data/tables/caldata.txt")
-knitr::kable(data, "latex", booktabs=T, caption = 'Calyculin rescue dataset summary', align=c('c', 'c', 'c'), escape=F,
+knitr::kable(data, booktabs=T, caption = 'Calyculin rescue dataset summary', align=c('c', 'c', 'c'), escape=F,
              col.names = c("genotype", "conc. (nM)", "LLs", "genotype", "conc. (nM)", "LLs")) %>%
   kable_styling(full_width = T) %>%
   kable_styling(font_size = 11) %>%
   footnote(general = "concentrations in 0.1% DMSO")
 ```
-
-A full data analysis report can be found on [github](https://github.com/KleinhansDa/reports/blob/master/b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3/clusters_clcln.html)
 
 ### Thermodynamic Rescue {#res-tempresc}
 
@@ -354,26 +340,24 @@ Even though the CC count in _shroom3_$--$ embryos incubated at 25$^\circ$C canno
 knitr::include_graphics("figures/results/06_rescues/temp/rescue_temp.png")
 ```
 
-```{r resctemptab, out.width = "0.95\\textwidth"}
+```{r resctemptab}
 data <- read.delim("data/tables/tempdata.txt")
-knitr::kable(data, "latex", booktabs=T, caption = 'Thermodynamic rescue dataset summary', align=c('c', 'c', 'c'), escape=F,
+knitr::kable(data, booktabs=T, caption = 'Thermodynamic rescue dataset summary', align=c('c', 'c', 'c'), escape=F,
              col.names = c("genotype", "treatment", "LLs", "genotype", "treatment", "LLs")) %>%
   kable_styling(full_width = T) %>%
   kable_styling(font_size = 11) %>%
   add_header_above(c("shroom3++" = 3, "shroom3--" = 3), bold=T)
 ```
 
-```{r resctempsignif, out.width = "0.95\\textwidth"}
+```{r resctempsignif}
 data <- read.delim("data/tables/tempsignif.txt")
-knitr::kable(data, "latex", booktabs=T, caption = 'Thermodynamic rescue statistics',
+knitr::kable(data, booktabs=T, caption = 'Thermodynamic rescue statistics',
              align = c('l','l','c','c','c')) %>%
   collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
   kable_styling(full_width = T) %>%
   kable_styling(font_size = 8) #%>%
   #add_header_above(c("id labels" = 2, "metrics" = 3))
 ```
-
-A full data analysis report can be found on [github](https://github.com/KleinhansDa/reports/blob/master/b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3/clusters_temp.html)
 
 ### atoh1a knockdown
 
@@ -381,27 +365,25 @@ Referring back to the results we got from the hair cell analysis in section \@re
 
 (ref:rescato) atoh1a knockdown (A) (B) 
 
-```{r rescato, out.width = "0.95\\textwidth", fig.cap="(ref:rescato)", fig.scap="atoh1a knockdown"}
+```{r rescato, fig.cap="(ref:rescato)", fig.scap="atoh1a knockdown"}
 knitr::include_graphics("figures/results/06_rescues/atoh1a/rescue_atoh.png")
 ```
 
-```{r rescatotab, out.width = "0.95\\textwidth"}
+```{r rescatotab}
 data <- read.delim("data/tables/atodata.txt")
-knitr::kable(data, "latex", booktabs=T, caption = 'Atoh rescue dataset summary', align=c('c', 'c', 'c'), escape=F,
+knitr::kable(data, booktabs=T, caption = 'Atoh rescue dataset summary', align=c('c', 'c', 'c'), escape=F,
              col.names = c("genotype", "group", "LLs", "genotype", "group", "LLs")) %>%
   kable_styling(full_width = T) %>%
   kable_styling(font_size = 11) %>%
   add_header_above(c("shroom3++" = 3, "shroom3--" = 3), bold=T)
 ```
 
-```{r rescatosignif, out.width = "0.95\\textwidth"}
+```{r rescatosignif}
 data <- read.delim("data/tables/atosignif.txt")
-knitr::kable(data, "latex", booktabs=T, caption = 'Atoh1a MO rescue statistics',
+knitr::kable(data, booktabs=T, caption = 'Atoh1a MO rescue statistics',
              align = c('l','l','c','c','c')) %>%
   collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
   kable_styling(full_width = T) %>%
   kable_styling(font_size = 8) #%>%
   #add_header_above(c("id labels" = 2, "metrics" = 3))
 ```
-
-A full data analysis report can be found on [github](https://github.com/KleinhansDa/reports/blob/master/b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3/clusters_ato-mo.html)

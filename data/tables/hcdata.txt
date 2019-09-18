@@ -3,4 +3,3 @@ shroom3++	pLLP	28	1566	261
 	CC	28	2499	-
 shroom3\texttt{-{}-}	pLLP	21	1134	189
 	CC	21	3566	-
-

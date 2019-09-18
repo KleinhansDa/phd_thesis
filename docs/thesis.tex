@@ -152,11 +152,7 @@ For trust shown in the process, for support and demand. \newline For their patie
 \noindent and my animals, without whom this work would not have been possible.
 \vspace{0.2cm}}
 
-\Dedication{These \pageref{LastPage} pages are dedicated to YOU, the \emph{reader}.\newline
-
-The decision to get a PhD for me was not a career option. I chose to be a scientist because \emph{science} because I was motivated by its ideals - autonomy, purity and freedom of presupposition (Aristotle) - to offer a solution to many wronggoings in the world. to to me meant I believed it was a reasonable way, the only way, a better future. Today, even though we are on the verge of becoming a technocracy, society doesn't trust scientific results anymore. This has many reasons.\newline
-
-``Tell the truth. Don't blame people. Be strong. Do your best. Try hard. Forgive. Stay the course.'' - Bush Senior}
+\Dedication{}
 
 \Preface{\begin{quote}
 "The most exciting time in the history of developmental biology is right now. Fueled both by new technologies and by new thought from other fields, we are exploding old notions and opening fantastic new horizons in embryology. {[}\ldots{}{]}
@@ -190,10 +186,12 @@ Next, let's discuss why developmental biology --- both normal and pathological -
 %
 \begin{document}
 
-\pagenumbering{arabic} % Make sure a page numbering scheme is explicitly set at the beginning.
+\pagenumbering{roman} % Make sure a page numbering scheme is explicitly set at the beginning.
 
   \maketitle
 
+\frontmatter
+\pagenumbering{roman}
 %\frontmatter % this stuff will be roman-numbered
 \pagestyle{empty} % this removes page numbers from the frontmatter
   \begin{acknowledgements}
@@ -228,7 +226,7 @@ Next, let's discuss why developmental biology --- both normal and pathological -
     \noindent and my animals, without whom this work would not have been possible.
     \vspace{0.2cm}
     \begin{center}
-      \includegraphics[width=0.5\textwidth]{figure/05-Appendix/DSC07341.png}
+      \includegraphics[width=0.5\textwidth]{figures/ackn_sn161.png}
     \end{center}
   \end{acknowledgements}
 %\mainmatter % here the regular arabic numbering starts
@@ -246,27 +244,11 @@ Next, let's discuss why developmental biology --- both normal and pathological -
     \textbf{Disclosure}\\
     {Unless otherwise noted, all figures in this manuscript are an expression of my own creative achievement. Similarities between molecule, protein and signalling models exist and are based on well-known textbooks such as Lodish et al., Molecular Cell Biology, 5th Edt. and Scott F. Gilbert et al., Developmental Biology 11th Edt.}
   \end{center}
-  \begin{dedication}
-    These \pageref{LastPage} pages are dedicated to YOU, the \emph{reader}.\newline
-    
-    The decision to get a PhD for me was not a career option. I chose to be a scientist because \emph{science} because I was motivated by its ideals - autonomy, purity and freedom of presupposition (Aristotle) - to offer a solution to many wronggoings in the world. to to me meant I believed it was a reasonable way, the only way, a better future. Today, even though we are on the verge of becoming a technocracy, society doesn't trust scientific results anymore. This has many reasons.\newline
-    
-    ``Tell the truth. Don't blame people. Be strong. Do your best. Try hard. Forgive. Stay the course.'' - Bush Senior
-  \end{dedication}
+
+
 \mainmatter % here the regular arabic numbering starts
+\pagenumbering{arabic} % Make sure a page numbering scheme is explicitly set at the beginning.
 \pagestyle{fancyplain} % turns page numbering back on
-
-\hypertarget{zusammenfassung}{%
-\chapter*{Zusammenfassung}\label{zusammenfassung}}
-\addcontentsline{toc}{chapter}{Zusammenfassung}
-
-something
-
-\hypertarget{summary}{%
-\chapter*{Summary}\label{summary}}
-\addcontentsline{toc}{chapter}{Summary}
-
-something
 
 \hypertarget{list-of-abbreviations}{%
 \chapter*{List of Abbreviations}\label{list-of-abbreviations}}
@@ -365,6 +347,59 @@ O & o.n. & over night\\
 \bottomrule
 \end{tabu}
 \endgroup{}
+
+\hypertarget{instructions}{%
+\chapter*{Instructions}\label{instructions}}
+\addcontentsline{toc}{chapter}{Instructions}
+
+\includegraphics{figures/flipbook/flip.png}
+
+\hypertarget{the-print-version}{%
+\section*{The print version}\label{the-print-version}}
+\addcontentsline{toc}{section}{The print version}
+\begin{itemize}
+\tightlist
+\item
+  Flipbook for lateral line development
+  \begin{itemize}
+  \tightlist
+  \item
+    right pages (odd numbers) show the wildtype
+  \item
+    left pages (even numbers) show the mutant
+  \end{itemize}
+\end{itemize}
+\hypertarget{the-electronic-version}{%
+\section*{The electronic version}\label{the-electronic-version}}
+\addcontentsline{toc}{section}{The electronic version}
+\begin{itemize}
+\tightlist
+\item
+  \url{https://kleinhansda.github.io/phd_thesis/index.html}
+\item
+  Lets you search the document
+\end{itemize}
+\hypertarget{repository}{%
+\section*{repository}\label{repository}}
+\addcontentsline{toc}{section}{repository}
+\begin{itemize}
+\tightlist
+\item
+  Look up the data at \url{https://kleinhansda.github.io/reports/}
+\item
+  Look up the repository \url{https://github.com/KleinhansDa/phd_thesis}
+\end{itemize}
+\hypertarget{zusammenfassung}{%
+\chapter*{Zusammenfassung}\label{zusammenfassung}}
+\addcontentsline{toc}{chapter}{Zusammenfassung}
+
+Während der Entwicklung von Organen wird aus einer zunächst uniformen und relativ losen Ansammlung von Zellen nach und nach ein strukturiertes Gebilde bei dem das Zusammenspiel dieser Strukturen die Funktion des Gesamtsystems garantiert. Verantwortlich für die Entstehung dieser Strukturen ist ein dichtes Netzwerk von chemischen (Signalbotenstoffe), genetischen (Gen-aktivierung/deaktivierung) sowie physikalischen (Zugkräfte, Druck, Temperatur, Licht) Faktoren die zu verschiedenen Zeitpunkten der Entwicklung in unterschiedlicher Kombination und Ausprägung vorliegen und die Entwicklung somit unterschiedlich beeinflussen und dirigieren.
+
+\hypertarget{summary}{%
+\chapter*{Summary}\label{summary}}
+\addcontentsline{toc}{chapter}{Summary}
+
+something
 
 \hypertarget{Intro}{%
 \chapter{Introduction}\label{Intro}}
@@ -544,7 +579,7 @@ In nature zebrafish can be found in the shallow waters of the Indian and Pakista
 
 }
 
-\caption{Model organism \emph{Danio rerio} (aquarell by Christine Molenda)}\label{fig:zebra}
+\caption[Model organism Danio rerio]{Model organism \emph{Danio rerio} (aquarell by Christine Molenda)}\label{fig:zebra}
 \end{figure}
 \hypertarget{developmental-stages}{%
 \subsection{Developmental Stages}\label{developmental-stages}}
@@ -663,7 +698,7 @@ Based on these and previous results, the current model for apical constriction i
 
 \begin{figure}
 
-{\centering \includegraphics[width=.70\textwidth]{figures/intro/shrm_model} 
+{\centering \includegraphics[width=.5\textwidth]{figures/intro/shrm_model} 
 
 }
 
@@ -2031,25 +2066,11 @@ Figure \ref{fig:maxllreg} shows a registered maximum Z projected lateral line us
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.9\linewidth]{figure/02-MaMo/GrTr/ClusterAnal/B06SB1P05_montage} 
+{\centering \includegraphics[width=0.9\linewidth]{figures/materials/ground_truth/clusters/clusters} 
 
 }
 
-\caption{Registered, Maximum Z projected data with cell cluster labels}\label{fig:maxllreg}
-\end{figure}
-\hypertarget{ground-truth-data}{%
-\subparagraph{Ground Truth data}\label{ground-truth-data}}
-
-Figure \ref{fig:countP05} shows the single registered cell clusters from figure 1 and the manually labeled nuclei within.
-
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{figure/02-MaMo/GrTr/ClusterAnal/count_P05} 
-
-}
-
-\caption{Nuclei labels}\label{fig:countP05}
+\caption[Registration of 2D data]{Registration of 2D data \textbf{cluster segments} Registered, MaxIP data with cell cluster segments of the lyn-GFP signal laid upon the DAPI signal. \textbf{cell labels} Nuclei labels within regions of interest.}\label{fig:maxllreg}
 \end{figure}
 \hypertarget{data-analysis}{%
 \paragraph{Data Analysis}\label{data-analysis}}
@@ -2189,8 +2210,8 @@ Z resolution & 0.4 $\mu$m\\
 \end{table}
 During the registration process, the image is rotated against the horizon and cropped in X and Y. Additionally, the centers of the most constricting areas are detected via an intensity based dynamic threshold and highlighted as magenta circles in \ref{fig:maxraw}.
 
-\hypertarget{ground-truth-data-1}{%
-\subparagraph{Ground Truth data}\label{ground-truth-data-1}}
+\hypertarget{ground-truth-data}{%
+\subparagraph{Ground Truth data}\label{ground-truth-data}}
 
 Watershed segmentation depends on a continuous signal along the boundary of the object to be segmented. Since the PLLp lies within the zebrafish larvae and since light gets scattered more when traveling through more organic tissues, the fluorescence signal in deeper tissue sections is more disturbed. Still, the PLLp is located just superficial to the skin, so the effect may be minor. In figure \ref{fig:stackmem} the fluorescence signal of the three PLLps tested is shown in a single central cross-section in the dorso-ventral and the apico-basal axis.
 
@@ -2513,7 +2534,7 @@ For mounting, an improved 3D specimen preparation and well-plate like sample nav
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{figure/02-MaMo/Mount/mountmicro} 
+{\centering \includegraphics[width=0.8\linewidth]{figures/materials/mounting/mountmicro} 
 
 }
 
@@ -2639,41 +2660,18 @@ MDG36\strut
 \end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}
-\begin{longtable}[]{@{}lc@{}}
-\caption{\label{tab:mountsol} Mounting solutions}\tabularnewline
+\begin{table}[!h]
+
+\caption{\label{tab:mountsol}Mounting solutions}
+\centering
+\begin{tabu} to \linewidth {>{\bfseries\raggedright\arraybackslash}p{5cm}>{\raggedright}X}
 \toprule
-\begin{minipage}[b]{0.39\columnwidth}\raggedright
-\textbf{solution}\strut
-\end{minipage} & \begin{minipage}[b]{0.55\columnwidth}\centering
-Info\strut
-\end{minipage}\tabularnewline
-\midrule
-\endfirsthead
-\toprule
-\begin{minipage}[b]{0.39\columnwidth}\raggedright
-\textbf{solution}\strut
-\end{minipage} & \begin{minipage}[b]{0.55\columnwidth}\centering
-Info\strut
-\end{minipage}\tabularnewline
-\midrule
-\endhead
-\begin{minipage}[t]{0.39\columnwidth}\raggedright
-1.0\% (m/V) Agarose / E3\strut
-\end{minipage} & \begin{minipage}[t]{0.55\columnwidth}\centering
--\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.39\columnwidth}\raggedright
-0.3\% (m/V) LMPA / E3\strut
-\end{minipage} & \begin{minipage}[t]{0.55\columnwidth}\centering
-incl.~20\% (v/v) 25X TMS for live imaging\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.39\columnwidth}\raggedright
-0.5\% (m/V) LMPA / E3\strut
-\end{minipage} & \begin{minipage}[t]{0.55\columnwidth}\centering
-incl.~20\% (v/v) 25X TMS for live imaging\strut
-\end{minipage}\tabularnewline
+\rowcolor{gray!6}  1.0\$\textbackslash{}\%\$ (m/V) Agarose / E3 & -\\
+0.3\$\textbackslash{}\%\$ (m/V) LMPA / E3 & incl. 20\$\textbackslash{}\%\$ (v/v) 25X TMS for live imaging\\
+\rowcolor{gray!6}  0.5\$\textbackslash{}\%\$ (m/V) LMPA / E3 & incl. 20\$\textbackslash{}\%\$ (v/v) 25X TMS for live imaging\\
 \bottomrule
-\end{longtable}
+\end{tabu}
+\end{table}
 \hypertarget{protocol}{%
 \paragraph{Protocol}\label{protocol}}
 
@@ -2713,7 +2711,7 @@ The CNN was trained on 17 wildtype DMSO control and SU5402 treated (Fgf signalin
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.75\linewidth]{figure/02-MaMo/CNN/CNNtrain} 
+{\centering \includegraphics[width=0.75\linewidth]{figures/materials/cnn/CNNtrain} 
 
 }
 
@@ -2735,7 +2733,7 @@ The CNN was trained on 17 wildtype DMSO control and SU5402 treated (Fgf signalin
   \begin{itemize}
   \tightlist
   \item
-    The output data are continous rational numbers (\(\mathbb{Q}\)) instead of integers (\(\mathbb{Z}\)) which does not only tell if a rosette is there fore not, but also for `how much' (50-100\%) it is there.
+    The output data are continous rational numbers (\(\mathbb{Q}\)) instead of integers (\(\mathbb{Z}\)) which does not only tell if a rosette is there fore not, but also for `how much' (50-100\(\%\)) it is there.
   \end{itemize}
 \item
   Training is done relatively quick
@@ -2744,12 +2742,12 @@ The CNN was trained on 17 wildtype DMSO control and SU5402 treated (Fgf signalin
 
 \caption{\label{tab:CNNtraining}CNN training data}
 \centering
-\begin{tabu} to \linewidth {>{\centering}X>{\centering\arraybackslash}p{1cm}>{\centering\arraybackslash}p{2.5cm}>{\centering\arraybackslash}p{1.5cm}>{\centering\arraybackslash}p{1.5cm}>{\centering\arraybackslash}p{1.5cm}>{\centering}X}
+\begin{tabu} to \linewidth {>{\centering}X>{\centering\arraybackslash}p{1cm}>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{1.5cm}>{\centering\arraybackslash}p{1.5cm}>{\centering\arraybackslash}p{1.5cm}>{\centering}X}
 \toprule
-\textbf{group} & \textbf{conc.} & \textbf{nm} & \textbf{intensity} & \textbf{exposure} & \textbf{z.planes} & \textbf{magnification}\\
+\textbf{group} & \textbf{conc.} & \textbf{nm} & \textbf{intensity....} & \textbf{exposure} & \textbf{z.planes} & \textbf{magnification}\\
 \midrule
-\rowcolor{gray!6}  DMSO & 0.1$\%$ & 488 & 100$\%$ & 100 ms & ~70 & 40X\\
-SU5402 & 10 $\mu$M & 488 & 100$\%$ & 100 ms & ~70 & 40X\\
+\rowcolor{gray!6}  DMSO & 0.1$\%$ & 488 & 100 & 100 ms & ~70 & 40X\\
+SU5402 & 10$\mu$M & 488 & 100 & 100 ms & ~70 & 40X\\
 \bottomrule
 \end{tabu}
 \end{table}
@@ -2769,11 +2767,11 @@ The basic principle is based on work done by Laguerre \emph{et al.}, 2009(\emph{
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.5\linewidth]{figure/02-MaMo/Prol/Prolif} 
+{\centering \includegraphics[width=0.5\linewidth]{figures/materials/prol/Prolif} 
 
 }
 
-\caption{Tracking of mitotic events}\label{fig:mitodatapoints}
+\caption[Tracking of mitotic events]{Tracking of mitotic events}\label{fig:mitodatapoints}
 \end{figure}
 \hypertarget{ACI}{%
 \subsubsection{Apical Index}\label{ACI}}
@@ -2781,27 +2779,16 @@ The basic principle is based on work done by Laguerre \emph{et al.}, 2009(\emph{
 \hypertarget{rationale}{%
 \paragraph{Rationale}\label{rationale}}
 
-The earliest attempt found for indexing AC can be found in a study published by Lee \emph{et al}(\emph{54}) where they were interested in the `apical index' (A.I.) of bottle cells during \emph{X.laevis} gastrulation(figure \ref{fig:ACLee}).
+The earliest attempt found for indexing AC can be found in a study published by Lee \emph{et al}(\emph{54}) where they were interested in the `apical index' (A.I.) of bottle cells during \emph{X.laevis} gastrulation(figure \ref{fig:ai} Lee). Another example for measuring AC is the apical \emph{constriction} index (ACI, figure \ref{fig:ai} Harding) for the cells of the \emph{D.rerio} lateral line primordium (PLLp), which can be found in a study from 2012 where it was shown that Fgfr-Ras-MAPK signaling is required for AC and Rock2a localization6 (\emph{55}, \emph{56}).
 
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.75\linewidth]{figure/02-MaMo/ACI/Jen_yi_Lee} 
+{\centering \includegraphics[width=0.75\linewidth]{figures/materials/models/ai} 
 
 }
 
-\caption{A.I. of \emph{X.leavis} bottle cells.}\label{fig:ACLee}
-\end{figure}
-\noindent Another example for measuring AC is the apical \emph{constriction} index (ACI, figure \ref{fig:ACHard}) for the cells of the \emph{D.rerio} lateral line primordium (PLLp), which can be found in a study from 2012 where it was shown that Fgfr-Ras-MAPK signaling is required for AC and Rock2a localization6 (\emph{55}, \emph{56}).
-
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.75\linewidth]{figure/02-MaMo/ACI/Harding} 
-
-}
-
-\caption[Apical constriction index]{Apical constriction index. \textbf{A} 3D reconstructed cells of a CLCLNA control primordium and \textbf{B} of a primordium deficient of Fgf signaling.}\label{fig:ACHard}
+\caption[A.I. indeces in the literature]{(ref:ACLee)}\label{fig:ACLee}
 \end{figure}
 \noindent In both cases, the measurements for the A.I.(\emph{54}) or ACI(\emph{56}) does not differ and describes the ratio for lateral height over apical width \ref{fig:ACICells}.
 
@@ -2872,7 +2859,7 @@ Organs develop in a 3-D space and are polarized along each axis. AC usually desc
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.75\linewidth]{figure/02-MaMo/ACI/ACI_Cells_pol} 
+{\centering \includegraphics[width=0.75\linewidth]{figures/materials/models/ACI_Cells_pol} 
 
 }
 
@@ -2907,7 +2894,7 @@ Organs develop in a 3-D space and are polarized along each axis. AC usually desc
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.75\linewidth]{figure/02-MaMo/ACI/ellipse} 
+{\centering \includegraphics[width=0.75\linewidth]{figures/materials/models/ellipse} 
 
 }
 
@@ -2953,11 +2940,11 @@ However overall our results indicate that the AC difference is not as strong, at
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.6\linewidth]{figure/02-MaMo/GrTr/HardingACI} 
+{\centering \includegraphics[width=0.6\linewidth]{figures/materials/models/harding} 
 
 }
 
-\caption[Published ACI]{\textbf{E-G} 3-D reconstructions of the highlighted cell. \textbf{H} A.I.s for embryos treated with DMSO, SU5402, PD0325901 or following induction of hsp70:dn-Ras. (n=180 cells / N = 6 embryos).}\label{fig:HardingACI}
+\caption[AI indices by Harding et al.]{AI indices by Harding et al.~\textbf{E-G'} 3-D reconstructions of the highlighted cell. \textbf{H} A.I.s for embryos treated with DMSO, SU5402, PD0325901 or following induction of hsp70:dn-Ras. (n=180 cells / N = 6 embryos).}\label{fig:HardingACI}
 \end{figure}
 \hypertarget{ACI-Angledens}{%
 \subparagraph{Angle densities}\label{ACI-Angledens}}
