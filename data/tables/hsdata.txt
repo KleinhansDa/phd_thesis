@@ -1,7 +1,7 @@
 treatment	genotype	transgene	CCs	LLs
 hs	++ / +-	Yes	232	153
 hs	++ / +-	No	320	
-hs	--	Yes	175	
-hs	--	No	202	
+hs	\-\-	Yes	175	
+hs	\-\-	No	202	
 nhs	++ / +-	Unknown	543	127
-nhs	--	Unknown	354	
+nhs	\-\-	Unknown	354	

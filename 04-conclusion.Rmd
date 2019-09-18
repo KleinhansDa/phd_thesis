@@ -79,7 +79,7 @@ Earlier attempts for indexing AC include measuring the ‘apical index’ (A.I.)
 
 AC is also correlated with cell height. To get a more detailed impression about how variables are distributed within the cells of the pLLP, single cell measurements of pLLPs that are normalized in orientation can be superimposed in a two-dimensional map of organ length and width. Next, cell coordinates in this map can be grouped into bins of hexagons and the summary statistic represented as color on a continuous scale (\@ref(fig:dismap)). Doing so reveals that for stages 32 and 36 hpf, height in _shroom3_$--$ cells is not as strongly reduced as in SU5402 treated ones and that cells in the central region of the pLLP are higher than in the leading, trailing and lateral regions. In this specific case this may not lead to new insights, but it improves the visual perception and therefore may assist more concise questioning and reasoning.
 
-(ref:dismap) pLLP Maps
+(ref:dismap) pLLP Maps. The QR code links to the LLMapR web-app (dskleinhans.shinyapps.io/LLmapR).
 
 ```{r dismap, out.width='95%', fig.cap="(ref:dismap)", fig.scap="pLLP Maps"}
 knitr::include_graphics("figures/summary/methodology_mapr.png")
@@ -87,7 +87,7 @@ knitr::include_graphics("figures/summary/methodology_mapr.png")
 
 In addition to visualization, large multidimensional datasets offer the possibility for advanced computational methods such as Machine- and Deep learning. For example, one could use clustering methods such as Principal Component Analysis to find out which dimensions contribute the most to separate a number of clusters from each other (\@ref(fig:dispca)). Another scenario would be to manually label cells of a dataset as either leading, trailing, rosette, lateral, ... etc. to train an Machine learning model on. The model could then be used on unlabeled data to assign the previous learned labels to cells that fit the right parameters.
 
-(ref:dispca) Principal Component Analysis (A) (B)
+(ref:dispca) Principal Component Analysis **A and B** show dimension 1 (explaining 42.6$\%$ of the data) and dimension 2(explaining 23.3$\%$ of the data) in a scatter plot. The bigger dots represent the respective centers. Ellipsoids show the spread of the data. In addition **B** shows the individual principal components. The arrows direction is the PCs direction, the length represents its importance.
 
 ```{r dispca, out.width='85%', fig.cap="(ref:dispca)", fig.scap="Principal Component Analysis"}
 knitr::include_graphics("figures/summary/pca_fig.png")

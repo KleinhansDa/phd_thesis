@@ -269,7 +269,7 @@ knitr::kable(data, booktabs=T, caption = 'Heatshock statistics',
 It is known that increasing concentrations of SU5402 inhibit pLLP migration and rosette formation, leading to a reduced length of the LL system and the number of CCs deposited [@Durdu2014a; @Lecaudey2008a]. 
 The idea for this experiment was to rescue the _shroom3_ phenotype by combining it with the phenotype of impaired Fgf signaling. Since inhibition of Fgf also reduces LL length, a titration experiment was planned to find a concentration that would not affect the length of the LL but still restore _shroom3_++ levels of CC count. While concentrations 0.10 and 0.20 $\mu$M do not show a significant reduction in LL length, they also do not exhibit any difference in cell count.\newline
 
-(ref:rescsu) Titration of Fgf inhibitor **A** LL lengths are reduced with increased concentrations of Fgf inhibitor **B** Groupwise comparison of the length normalized cluster count per concentration of Fgf inhibitor.
+(ref:rescsu) Titration of Fgf inhibitor **A** LL lengths are reduced with increased concentrations of Fgf inhibitor and **B** groupwise comparison of the length normalized cluster count per concentration of Fgf inhibitor.
 
 ```{r rescsu, fig.cap="(ref:rescsu)", fig.scap="Titration of Fgf inhibitor"}
 knitr::include_graphics("figures/results/06_rescues/su54/rescue_su.png")
@@ -281,9 +281,8 @@ knitr::kable(data, booktabs=T, caption = 'Morphogen rescue dataset summary', esc
              col.names = c("genotype", "conc. ($\\mu$M)", "LLs", "genotype", "conc. ($\\mu$M)", "LLs")) %>%
   kable_styling(full_width = T) %>%
   kable_styling(font_size = 11) %>%
-  collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
-  #add_header_above(c("shroom3++" = 3, "shroom3--" = 3), bold=T) %>%
-  collapse_rows(columns = 4, latex_hline = "none", valign = "top") %>%
+  collapse_rows(columns = c(1, 4), latex_hline = "none", valign = "top") %>%
+  add_header_above(c("shroom3++" =3, "shroom3--" = 3), bold=T) %>%
   footnote(general = "concentrations in 0.1% DMSO")
 ```
 
@@ -295,7 +294,7 @@ It is very well known that Rho kinases are necessary for mechanic force transmis
 
 Embryos were incubated at distinct (figure \@ref(fig:rescrock) legend) concentrations from 24 hpf till end of migration (about 60 hpf). At this stage embryos incubated at higher concentrations displayed a significant reduction in overall body length (\@ref(fig:rescrock)A'). Therefore, to see if there is a lateral line specific effect on LL length, LL length was normalized to body length. Rockout treatment at 10 $\mu$M does not lead to a significant reduction in LL length but does significantly increase the number of cell clusters deposited.\newline
 
-(ref:rescrock) Titration of Rock inhibitor **A** LL lengths are reduced with increased concentrations of Rock inhibitor **B** Groupwise comparison of the length normalized cluster count per concentration of Fgf inhibitor.
+(ref:rescrock) Titration of Rock inhibitor **A** LL lengths are reduced with increased concentrations of Rock inhibitor and **B** groupwise comparison of the length normalized cluster count per concentration of Fgf inhibitor.
 
 ```{r rescrock, fig.cap="(ref:rescrock)", fig.scap="Titration of Rock inhibitor"}
 knitr::include_graphics("figures/results/06_rescues/rockout/rescue_rockout.png")
@@ -314,7 +313,7 @@ knitr::kable(data, booktabs=T, caption = 'Rockout rescue dataset summary', align
 
 The idea for this experiment was to rescue _shroom3_$--$ embryos by enhancing the effects of Rock. Incubation at 100 nM, the maximum solubility, does not lead any significant differences.\newline
 
-(ref:resccal) Calyculin treatment (A) (B) 
+(ref:resccal) Calyculin treatment **A** LL lengths and **B** groupwise comparison of the length normalized cluster count.
 
 ```{r resccal, out.width='85%', fig.cap="(ref:resccal)", fig.scap="Calyculin treatment"}
 knitr::include_graphics("figures/results/06_rescues/caliculyn/rescue_cali.png")
@@ -334,7 +333,7 @@ knitr::kable(data, booktabs=T, caption = 'Calyculin rescue dataset summary', ali
 Increasing temperature usually leads to an acceleration in thermodynamics and embryonic development, while lower temperatures decelerate [@Dettlaff1991]. Decelerated development also leads to a reduction in speed of migration and therefore to a reduction in forces that act on cells, cell-cell junctions and organ structures. In this experiment the hypothesis was that it should be possible to at least partially restore the _shroom3_++ number of CCs since reduced forces would stabilize rosettes and therefore rosettes would have longer time to develop properly. Since embryos develop at different speeds, it is more challenging to exactly stage match them at end of migration. To account for this the CC count was normalized to LL length.
 Even though the CC count in _shroom3_$--$ embryos incubated at 25$^\circ$C cannot be completely restored, they are hardly more different than levels of _shroom3_++ embryos incubated at 30$^\circ$C.\newline
 
-(ref:resctemp) Thermodynamic rescue (A) (B) 
+(ref:resctemp) Thermodynamic rescue **A** LL lengths and **B** groupwise comparison of the length normalized cluster count. 
 
 ```{r resctemp, out.width='85%', fig.cap="(ref:resctemp)", fig.scap="Thermodynamic rescue"}
 knitr::include_graphics("figures/results/06_rescues/temp/rescue_temp.png")
@@ -363,7 +362,7 @@ knitr::kable(data, booktabs=T, caption = 'Thermodynamic rescue statistics',
 
 Referring back to the results we got from the hair cell analysis in section \@ref(res-hc), the hypothesis to test was if premature CC deposition in _shroom3_$--$ embryos is determined by a premature rise in Atoh1a signaling. To inhibit Atoh1a, a morpholino (MO) for _atoh1a_ mRNA was injected at 0.4 ng/mL, a concentration that had already been shown to be sufficient to deplete Atoh1a signaling [@Lecaudey2008a]. Furthermore, since many MOs have been shown to induce cell death [@Eisen2008b], in a second group we co-injected embryos with an MO for p53^[p53 is a gene upregulated in cancer cells, which would then self-destruct]. Interestingly injection of _atoh1a_ MO leads to a loss of the first CC deposited usually deposited at around 400 $\mu$m distance (\@ref(fig:rescato)A). Furthermore, while median CC counts in _atoh1a_ MO injected _shroom3_$--$ embryos are actually restored to _shroom3_++ levels, CC counts in _shroom3_++ embryos are reduced as well.\newline
 
-(ref:rescato) atoh1a knockdown (A) (B) 
+(ref:rescato) atoh1a knockdown **A** CC mean positions and **B** groupwise comparison of the length normalized cluster count.
 
 ```{r rescato, fig.cap="(ref:rescato)", fig.scap="atoh1a knockdown"}
 knitr::include_graphics("figures/results/06_rescues/atoh1a/rescue_atoh.png")
