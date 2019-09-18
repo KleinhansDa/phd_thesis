@@ -36,7 +36,7 @@ In summary, AC is significantly reduced in _shroom3_$--$ embryos for the severe 
 
 (ref:sumcells) Rosette and Cell Shape Model
 
-```{r sumcells, out.width = "0.95\\textwidth", fig.cap="(ref:sumcells)", fig.scap="Rosette and Cell Shape Model"}
+```{r sumcells, out.width='90%', fig.cap="(ref:sumcells)", fig.scap="Rosette and Cell Shape Model"}
 knitr::include_graphics("figures/summary/cell-model.png")
 ```
 
@@ -48,7 +48,7 @@ Based on these results - In contrast to the current model - the _shroom3_$--$ ph
 
 (ref:summodel) Shroom3 dependent rosette formation
 
-```{r summodel, out.width = "0.95\\textwidth", fig.cap="(ref:summodel)", fig.scap="Shroom3 dependent rosette formation"}
+```{r summodel, out.width='95%', fig.cap="(ref:summodel)", fig.scap="Shroom3 dependent rosette formation"}
 knitr::include_graphics("figures/summary/CurrentModel_new-01.png")
 ```
 
@@ -81,7 +81,7 @@ AC is also correlated with cell height. To get a more detailed impression about 
 
 (ref:dismap) pLLP Maps
 
-```{r dismap, out.width = "0.95\\textwidth", fig.cap="(ref:dismap)", fig.scap="pLLP Maps"}
+```{r dismap, out.width='95%', fig.cap="(ref:dismap)", fig.scap="pLLP Maps"}
 knitr::include_graphics("figures/summary/methodology_mapr.png")
 ```
 
@@ -89,7 +89,7 @@ In addition to visualization, large multidimensional datasets offer the possibil
 
 (ref:dispca) Principal Component Analysis (A) (B)
 
-```{r dispca, out.width = "0.85\\textwidth", fig.cap="(ref:dispca)", fig.scap="Principal Component Analysis"}
+```{r dispca, out.width='85%', fig.cap="(ref:dispca)", fig.scap="Principal Component Analysis"}
 knitr::include_graphics("figures/summary/pca_fig.png")
 ```
 

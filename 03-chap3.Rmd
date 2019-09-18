@@ -149,7 +149,7 @@ The dataset generated consists of three pLLP stages (\@ref(fig:acstages)), four 
 
 (ref:acstages) Scheme showing a part of the posterior part of a zebrafish embryo and recorded developmental stages for 3D reconstruction
 
-```{r acstages, out.width = "0.60\\textwidth", fig.cap="(ref:acstages)", fig.scap="Recorded developmental stages for 3D reconstruction"}
+```{r acstages, out.width='60%', fig.cap="(ref:acstages)", fig.scap="Recorded developmental stages for 3D reconstruction"}
 knitr::include_graphics("figures/results/04_constriction/Yolk_ext.png")
 ```
 
