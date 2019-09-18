@@ -506,7 +506,7 @@ During the registration process, the image is rotated against the horizon and cr
 
 ###### Ground Truth data
 
-```{r load3DGrT, eval=TRUE, echo=FALSE}
+```{r load3DGrT, echo=FALSE}
 load("data/ground_truth_3d.RData")
 ```
 

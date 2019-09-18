@@ -1,22 +1,23 @@
-# Instructions {.unnumbered}
+# About {.unnumbered}
+
+Besides a print version, there is also an electronic version (gitbook) of this thesis^[kleinhansda.github.io/phd_thesis]. 
+
+This thesis are stored in a git repository^[github.com/KleinhansDa/phd_thesis].
 
 ![](figures/flipbook/flip.png)
 
-## Print version {.unnumbered}
+### Print version {.unnumbered}
 
-- Flipbook for lateral line development
+- Including Ackknowlegements and Preface
+- Lateral line primordium _flipbook_
     + right pages (odd numbers) show the wildtype
     + left pages (even numbers) show the mutant
 
 ## Electronic version {.unnumbered}
 
-- https://kleinhansda.github.io/phd_thesis/index.html
-- Lets you search the document
-
-## repository {.unnumbered}
-
-- Look up the data at https://kleinhansda.github.io/reports/
-- Look up the repository https://github.com/KleinhansDa/phd_thesis
+- Download pdf
+- Change display settings
+- Search contents
 
 # List of Abbreviations {.unnumbered}
 

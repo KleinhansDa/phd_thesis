@@ -19,7 +19,7 @@ To normalize the number of deposited CCs to individual LL lengths, for compariso
 
 (ref:llcounts) Cluster counts **A** cluster count **B** normalized to length (LL length [µm] / cluster count [n])
 
-```{r llcounts, out.width = "0.6\\textwidth", fig.cap="(ref:llcounts)", fig.scap="Cluster Counts"}
+```{r llcounts, out.width='85%', fig.cap="(ref:llcounts)", fig.scap="Cluster Counts"}
 knitr::include_graphics("figures/results/01_morphometrics/ll_counts.png")
 ```
 
@@ -28,7 +28,7 @@ Figure \@ref(fig:llpos)A', shows the kernel density distribution for the CC posi
 
 (ref:llpos) Cell Cluster positions **A** Exemplary _shroom3_++ and $--$ embryos with CCs hightlighted. CC0 marks the reference location to compare individual embryos. Scale bar = 1 mm **A'** Kernel Density Estimate without (KDE) grouping (n++=162, n--=206) **A'\'** Dots = mean positions, bars = standard deviation (nmax for both ++ and -\- =26).
 
-```{r llpos, out.width = "0.85\\textwidth", fig.cap="(ref:llpos)", fig.scap="Cell Cluster Positions"}
+```{r llpos, out.width='85%', fig.cap="(ref:llpos)", fig.scap="Cell Cluster Positions"}
 knitr::include_graphics("figures/results/01_morphometrics/ll_positions.png")
 ```
 
@@ -38,7 +38,7 @@ To get an idea about whether facilitated proliferation contributes to the phenot
 
 (ref:llclus) LL Morphometrics **A** individual CC statistics **B** Sums per embryo. (Bars = median, errorbars = 95% CI)
 
-```{r llclus, out.width = "0.7\\textwidth", fig.cap="(ref:llclus)", fig.scap="LL Morphometrics"}
+```{r llclus, out.width='85%', fig.cap="(ref:llclus)", fig.scap="LL Morphometrics"}
 knitr::include_graphics("figures/results/01_morphometrics/ll_clusters.png")
 ```
 
@@ -61,7 +61,7 @@ Tracking mitoses in the pLLP does not reveal any difference in proliferation fro
 
 (ref:prolpllp) pLLP proliferation **A** Tracks of Mitosis. (Image data) Last timepoint of Z-projected time-lapse movie. (Labels) each dots marks a mitotic events. Each color represents one mitosis. Each connection between two dots represents 6 min. **B-B'\'** Mitoses in the pLLP. (B) Count of Mitoses through time (mean$\pm$sd) (B') Proliferation Index at 36 hpf for EdU and phospho Histone labeled pLLPs (B'') Examples of EdU staining (scale bar = 100 $\mu$m) **C** Mitoses in Cell Clusters. B' and C, the colored bar indicated the median, bars indicate the 95% CI. 
 
-```{r prolpllp, out.width = "0.85\\textwidth", fig.cap="(ref:prolpllp)", fig.scap="pLLP proliferation"}
+```{r prolpllp, out.width='85%', fig.cap="(ref:prolpllp)", fig.scap="pLLP proliferation"}
 knitr::include_graphics("figures/results/02_proliferation/prol-01.png")
 ```
 
@@ -78,7 +78,7 @@ The image data set analyzed consists of 20 time-lapse movies (11 _shroom3_$--$, 
 
 (ref:rdt) Merged Datasets. (Tracking) pLLP is marked as no.1. The rest of the CCs is numbered sequentially as they appear. (Registration) The black outline marks the region of interest (ROI) that is the pLLP as it is detected by the anaLLzr2DT. The red line highlights the pLLPs leading edge. (Detection) Each square highlights a detected rosette by the CNN, colors represent rosette weights.
 
-```{r rdt, out.width = "0.7\\textwidth", fig.cap="(ref:rdt)", fig.scap="RDT Merged Datasets"}
+```{r rdt, out.width='85%', fig.cap="(ref:rdt)", fig.scap="RDT Merged Datasets"}
 knitr::include_graphics("figures/results/03_rosettes/RDT-01.png")
 ```
 
@@ -153,7 +153,7 @@ The dataset generated consists of three pLLP stages (\@ref(fig:acstages)), four 
 knitr::include_graphics("figures/results/04_constriction/Yolk_ext.png")
 ```
 
-```{r acdatatab, eval=F}
+```{r acdatatab}
 acdata <- read.delim("data/tables/acdata.txt")
 knitr::kable(acdata, booktabs=T, align=c('l', 'l', 'c', 'c', 'c'), escape = F, 
              caption = 'Apical Constriction dataset summary') %>%
@@ -195,7 +195,7 @@ Traditional ISH allows for extremely sensitive detection of RNA transcripts on a
 
 (ref:hcish) Expression of _deltaD_ and _atoh1a_ in the pLLP. Recorded in greyscale at brightfield at 20X Magnification. Images show background subtracted and de-noised EDFs of original Z-stack data.
 
-```{r hcish, fig.cap="(ref:hcish)", fig.scap="Expression of deltaD and atoh1a in the pLLP"}
+```{r hcish, out.width='85%', fig.cap="(ref:hcish)", fig.scap="Expression of deltaD and atoh1a in the pLLP"}
 knitr::include_graphics("figures/results/05_atoh/hc_ish.png")
 ```
 
@@ -316,7 +316,7 @@ The idea for this experiment was to rescue _shroom3_$--$ embryos by enhancing th
 
 (ref:resccal) Calyculin treatment (A) (B) 
 
-```{r resccal, out.width = "0.85\\textwidth", fig.cap="(ref:resccal)", fig.scap="Calyculin treatment"}
+```{r resccal, out.width='85%', fig.cap="(ref:resccal)", fig.scap="Calyculin treatment"}
 knitr::include_graphics("figures/results/06_rescues/caliculyn/rescue_cali.png")
 ```
 
@@ -336,7 +336,7 @@ Even though the CC count in _shroom3_$--$ embryos incubated at 25$^\circ$C canno
 
 (ref:resctemp) Thermodynamic rescue (A) (B) 
 
-```{r resctemp, out.width = "0.75\\textwidth", fig.cap="(ref:resctemp)", fig.scap="Thermodynamic rescue"}
+```{r resctemp, out.width='85%', fig.cap="(ref:resctemp)", fig.scap="Thermodynamic rescue"}
 knitr::include_graphics("figures/results/06_rescues/temp/rescue_temp.png")
 ```
 

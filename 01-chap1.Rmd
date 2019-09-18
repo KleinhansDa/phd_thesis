@@ -41,7 +41,7 @@ With rising numbers of cells and differentiated tissue a shape and body axes beg
 
 (ref:heak) Ontogenesis across species (George Romanes, 1892)
 
-```{r heak, out.width = "0.75\\textwidth", fig.cap = "(ref:heak)", fig.scap="Ontogenesis across species"}
+```{r heak, out.width='85%', fig.cap = "(ref:heak)", fig.scap="Ontogenesis across species"}
 knitr::include_graphics("figures/intro/haekel.jpg")
 ```
 
@@ -60,7 +60,7 @@ For a cell, its present shape impacts its further specification by impacting how
 
 scale hierarchy, where each scale’s output again feeds back to the others (figure \@ref(fig:feedb)). E.g. it has been shown that simple changes in cell geometry affect fundamental processes such as cell growth, death, or direction of cell divisions [@Galli2016; @Miller2013; @Thery2007].
 
-```{r feedb, out.width = "0.75\\textwidth", fig.cap = "Form and function feedback loops"}
+```{r feedb, out.width='85%', fig.cap = "Form and function feedback loops"}
 knitr::include_graphics("figures/intro/feedback.png")
 ```
 
@@ -70,7 +70,7 @@ A defining feature of Epithelial cells is they have a basal- (bottom) to apical 
 
 Apical constriction (AC) is a single cell morphogenetic process manifest by an active apical narrowing, making the cell appear bottle or wedge shaped. It is usually coordinated by multiple cells within an epithelial layer that raise forces necessary to deform a tissue. 
 
-```{r arrange, out.width = "0.75\\textwidth", fig.cap = "Multi-cellular Arrangements"}
+```{r arrange, out.width='85%', fig.cap = "Multi-cellular Arrangements"}
 knitr::include_graphics("figures/intro/arrangements.png")
 ```
 
@@ -84,7 +84,7 @@ Developmental processes that involve AC are...
 Epithelial rosettes are intermediate structures of radially organized cells within an epithelial tissue whose vertices interface a common center. While the mechanisms of cytoskeletal rearrangements seem to be well conserved, the extracellular cues that lead to rosette formation are less well understood and more diverse.
 At least two architectural distinct types of rosettes exist, depending on the tissues polarization (figure \@ref(fig:constr)). First, in a planar polarized tissue, several cells converge at a central apico-basal (A-B) line with no shrinkage of the apical surface to form a cylindrical structure. Such rosettes are usually observed during tissue elongation and rather short-lived. In a second scenario, cells converge to a central apical point through AC. This type of rosette is more long-lived and, usually does not resolve but already represents a morphologically pre-mature state of the organ to be formed [@Harding2014b].
 
-```{r constr, out.width = "0.75\\textwidth", fig.cap = "Modes of Constriction"}
+```{r constr, out.width='85%', fig.cap = "Modes of Constriction"}
 knitr::include_graphics("figures/intro/constriction.png")
 ```
 
@@ -127,7 +127,7 @@ In nature zebrafish can be found in the shallow waters of the Indian and Pakista
 
 (ref:zebra) Model organism _Danio rerio_ (aquarell by Christine Molenda)
 
-```{r zebra, out.width = "0.50\\textwidth", fig.cap = "(ref:zebra)", fig.scap = "Model organism Danio rerio"}
+```{r zebra, out.width='50%', fig.cap = "(ref:zebra)", fig.scap = "Model organism Danio rerio"}
 knitr::include_graphics("figures/intro/CM_fish.png")
 ```
 
@@ -139,7 +139,7 @@ After Blastula and **up to 10 h** the _Gastrula_ period takes place, followed by
 
 (ref:stages) Zebrafish embryonic development. Microscopic images are from a time-lapse where 24 embryos were imaged simultaneously in brightfield and at 488 nm Z-Stacks. Representation shows contrast enhanced EDFs. Bottom row (30-48 hpf) stages are handmade drawings from live embryos made during the first week of my PhD.
 
-```{r stages, out.width = ".95\\textwidth", fig.cap = "(ref:stages)", fig.scap="Zebrafish embryonic development"}
+```{r stages, fig.cap = "(ref:stages)", fig.scap="Zebrafish embryonic development"}
 knitr::include_graphics("figures/intro/stages.png")
 ```
 
@@ -149,7 +149,7 @@ The lateral line (LL) system is a mechano-sensory organ that is common to all te
 
 (ref:llsys) The lateral line system. **A** modified after (Ghysen et al., 2012) and A.Bergs, 2016 (student presentation at AK Lecaudey). Development of the later line system at embryonic, larval and juvenile stage. **B** Schematic showing a crossection and organization of a single neuromast. **C-C’** SEM images of a single, pre-mature (3 dpf) neuromast.
 
-```{r llsystem, out.width = ".95\\textwidth", fig.cap = "(ref:llsys)", fig.scap = "The lateral line system"}
+```{r llsystem, out.width='85%', fig.cap = "(ref:llsys)", fig.scap = "The lateral line system"}
 knitr::include_graphics("figures/intro/ll_system.jpg")
 ```
 
@@ -158,7 +158,7 @@ An important breakthrough in LL research has been the development of a transgeni
 
 (ref:llgfp) Neuromast deposition and pattern **A** Scheme showing NM deposition over three timepoints (10 min. interval). Dotted lines are time-tracks of rosettes, which become more concentrated over time. Bottom arrow indicates regions of rosette formation, maturation and deposition within the pLLP (scale bar = 20 µm; 20X WI; ~20 Z-planes; 2.5 µm spacing. MaxIP. Colors inverted.) **B** Scheme showing the lateral line at end of migration (~60 hpf) and other parts visible through the cldnb:lyn-gfp transgene (as documented through zfin.org) (air objective + 1.5X tube lens; four tiles; ~20 Z-planes; 5 µm spacing. MaxIP. Colors inverted).
 
-```{r llgfp, out.width = ".95\\textwidth", fig.cap = "(ref:llgfp)", fig.scap = "Neuromast deposition and pattern"}
+```{r llgfp, fig.cap = "(ref:llgfp)", fig.scap = "Neuromast deposition and pattern"}
 knitr::include_graphics('figures/intro/ll_gfp.jpg')
 ```
 
@@ -169,7 +169,7 @@ The pLLP is about 100-150 $\mu$m in length (depending on deposition cycle) over 
 
 (ref:pllp) Summary of signaling gradients within the pLLP. Cross-section of the lateral line primordium. (red = trailing region, yellow = leading region; embryonic axes indicated by arrows. Signaling gradients indicated by black-white gradients, sorted by hierarchy.)
 
-```{r pllp, out.width = ".75\\textwidth", fig.cap="(ref:pllp)", fig.scap = "Summary of signaling gradients within the pLLP"}
+```{r pllp, out.width='75%', fig.cap="(ref:pllp)", fig.scap = "Summary of signaling gradients within the pLLP"}
 knitr::include_graphics("figures/intro/pllp.png")
 ```
 
@@ -195,7 +195,7 @@ Shroom proteins have three characteristic domains (1) a _PDZ_ domain close to th
 
 (ref:interact) Shroom3 functional domains and mode of operation. Sequence of events numbered from 1-4. Approximate scale jumps indicated at arrows.
 
-```{r shrminteract, out.width = ".95\\textwidth", fig.cap="(ref:interact)", fig.scap = "Shroom3 functional domains and mode of operation"}
+```{r shrminteract, out.width='95%', fig.cap="(ref:interact)", fig.scap = "Shroom3 functional domains and mode of operation"}
 knitr::include_graphics("figures/intro/shrm3_interaction.png")
 ```
 
@@ -208,7 +208,7 @@ While in all of the above-mentioned studies Shroom3 was the focus of interest, i
 
 (ref:ernst) Shroom3 in rosette formation (adapted from Ernst et al., 2012) **A** composite MaxIPs of membrane label and fusion protein showing the localization of Shroom within the pLLP **B** uninjected control and shroom3 MO injected MaxIPs **B’** Heat-maps of rosette detector score.
 
-```{r shrmernst, out.width = ".95\\textwidth", fig.cap="(ref:ernst)", fig.scap = "Shroom3 in rosette formation"}
+```{r shrmernst, fig.cap="(ref:ernst)", fig.scap = "Shroom3 in rosette formation"}
 knitr::include_graphics("figures/intro/shrm_ernst.png")
 ```
 
@@ -218,7 +218,7 @@ Based on these and previous results, the current model for apical constriction i
 
 (ref:shrmmodel) Shroom3 current model
 
-```{r shrmmodel, out.width = ".5\\textwidth", fig.cap="(ref:shrmmodel)"}
+```{r shrmmodel, out.width='50%', fig.cap="(ref:shrmmodel)"}
 knitr::include_graphics("figures/intro/shrm_model.png")
 ```
 
@@ -232,7 +232,7 @@ While birth rates follow a distribution of Mendelian inheritance (after genotypi
 
 (ref:shrmmut) _shroom3_ mutant phenotype **(A-A’)** mutation strategy (A) Talen arms (black blocks) bordering a sequence within SD1 including a restriction site for NsiI (indicated back arrows and grey background) (A’) wildtype and mutant allele with 8 bp deletion **(B-B’)** Amino acid code and protein schematic with functional domains and stop codon (indicated by asterisk) **(C-C’)** Adult phenotype with closeup to gill flaps **(D)** pLLP phenotype for three different stages (columns) and different manifestations (rows) (40X WI objective). Arrows indicate epithelial rosettes. **(E)** LL phenotype at end of migration (10X air objective). Scale bars = 1 mm. MaxIPs for D-E.
 
-```{r shrmmut, out.width = ".95\\textwidth", fig.cap="(ref:shrmmut)", fig.scap = "shroom3 mutant phenotype"}
+```{r shrmmut, fig.cap="(ref:shrmmut)", fig.scap = "shroom3 mutant phenotype"}
 knitr::include_graphics("figures/intro/shrm_mutants.png")
 ```
 
