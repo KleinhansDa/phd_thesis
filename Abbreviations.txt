@@ -17,6 +17,7 @@ H	hpf	hours post fertilization
 I	IJ	ImageJ
 I	ISH	In Situ Hybridization
 K	KDE	Kernel Density Estimation
+K	k.s.	Kolmogorov-Smirnov
 L	l.e.	leading edge
 L	LL 	Lateral Line
 L	LOESS  	Locally Weighted Scatterplot Smoothing
@@ -25,6 +26,7 @@ L	LUT	Lookup Table
 L	LMPA	low melting point agarose
 M	MaxIP  	Maximum Intensity Projection
 M	MO	Morpholino
+M	mQ	milli-Q water
 N	N.A.	Numerical Aperture3
 N	NGS	Normal Goat Serum
 N	NICD	Notch intracellular domain

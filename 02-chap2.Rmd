@@ -1,4 +1,5 @@
 # Materials and Methods {#mat-met}
+
 ## Materials {#mat}
 
 ### Chemicals {#mat-chem}
@@ -6,83 +7,85 @@
 ---------------------------------------------------------------------------------------------
               **Chemical**    Company                                         cat.-no.   
 -------------------------- -------------------------------------------------- ---------------
-Agarose                     Roth                                                    6351.2           
+Agarose                       Roth                                                6351.2           
 
-Agar-Agar                   Roth                                                    5210.3
+Agar-Agar                     Roth                                                5210.3
 
-Ampicillin                  Roth                                                    K029.2
+Ampicillin                    Roth                                                K029.2
 
-ATP                         Epicentre                                               E311K
+ATP                           Epicentre                                           E311K
 
-Blocking Reagent            Roche                                                   11096176001
+Blocking Reagent              Roche                                               11096176001
 
-BCIP                        Fermentas                                               R0822
+BCIP                          Fermentas                                           R0822
 
-CaCl\textsubscript{2}       Roth                                                    886.1
+CaCl\textsubscript{2}         Roth                                                886.1
 
-Calyculin
+Calyculin                     Sigma                                               208851
 
-DIG RNA Mix                 Roche                                                   11277073910
+DAPI                          Sigma                                               D9542
 
-DMSO                        Roth                                                    4720.2
+DIG RNA Mix                   Roche                                               11277073910
 
-EtBr                        Roth                                                    2218.3
+DMSO                          Roth                                                4720.2
 
-EtOH                        Roth                                                    9065.3
+EtBr                          Roth                                                2218.3
 
-Formaldehyde                Roth                                                    7398.1
+EtOH                          Roth                                                9065.3
 
-Formamide                   Roth                                                    P040.1
+Formaldehyde                  Roth                                                7398.1
 
-Glycerol                    Roth                                                    3783.2
+Formamide                     Roth                                                P040.1
 
-IPTG                        Thermo                                                  R1171
+Glycerol                      Roth                                                3783.2
 
-KCl                         Roth                                                    P017.1
+IPTG                          Thermo                                              R1171
 
-Low melting point Agarose   Roth                                                    A9539 
+KCl                           Roth                                                P017.1
 
-Maleic Acid
+Low melting point Agarose     Roth                                                A9539 
 
-MeOH                        Roth                                                    CP43.3
+Maleic Acid                   Roth                                                3810.3
 
-MgCl\textsubscript{2}       Roth                                                    2189.1
+MeOH                          Roth                                                CP43.3
 
-NaCl                        Roth                                                    9265.2
+MgCl\textsubscript{2}         Roth                                                2189.1
 
-NaHCO\textsubscript{3}      Roth                                                    855.1
+NaCl                          Roth                                                9265.2
 
-NaOH                        Roth
+NaHCO\textsubscript{3}        Roth                                                855.1
 
-NGS                         Sigma                                                   C6767
+NaOH                          Roth                                                6771.3
 
-_p_-Formaldehyd             Sigma                                                   P6148
+NGS                           Sigma                                               C6767
 
-Phenol Red                  Sigma                                                   P0290
+_p_-Formaldehyd               Sigma                                               P6148
 
-Propan-2-ol                 VWR                                                     20842330
+Phenol Red                    Sigma                                               P0290
 
-Proteinase K                Roth                                                    7528.4
+Propan-2-ol                   VWR                                                 20842330
 
-PTU                         Sigma                                                   P7629
+Proteinase K                  Roth                                                7528.4
 
-Rockout
+PTU                           Sigma                                               P7629
 
-SSC
+Rockout                       Sigma                                               555553
 
-SU5402                      CALBIOCHEM                                              572630
+SSC                           Roth                                                1232.1
 
-Torula RNA                  Sigma                                                   R6625
+SU5402                        CALBIOCHEM                                          572630
 
-Tricaine                    Fluka                                                   A5040
+Torula RNA                    Sigma                                               R6625
 
-Tris Base                   Roth                                                    4855.2
+Tricaine                      Sigma                                               A5040
 
-Triton-X100                 Roth                                                    3051.2
+Tris Base                     Roth                                                4855.2
 
-Trizol                      Ambion                                                  15596018
+Triton-X100                   Roth                                                3051.2
 
-Tween20                     Sigma                                                   P1379
+Trizol                        mbion                                               15596018
+
+Tween20                       Sigma                                               P1379
 -------------------------- -------------------------------------------------- ---------------
 Table: (\#tab:mat-chem) Chemicals
 
@@ -102,14 +105,18 @@ Table: (\#tab:mat-sol) Solutions
 ### Antibodies {#mat-anitb}
 
 ---------------------------------------------------------------------------------------------
-         **Antibody**     Company                                             cat.-no.   
---------------------- ------------------------------------------------------- ---------------
-Anti-Digoxigenin        Roche                                                   11093274910
+         **Antibody**     Company / Provider                concentration     cat.-no.   
+--------------------- ----------------------------------- ------------------- ---------------
+Anti-Digoxigenin        Roche                                 1:200            11093274910
 
-JL8     
+anti-GFP                Torrey Pines                          1:200            -
 
-Anti-TAZ
---------------------- ---------------- ------------ ------------ ------------ ---------------
+Anti-TAZ (rabbit)       Cell Signaling Technology             1:200            D24E4
+
+Alexa Fluor488          Invitrogen                            1:500            710369
+
+Alexa Fluor555          Invitrogen                            1:500            Z25005
+--------------------- ----------------------------------- ------------------- ---------------
 Table: (\#tab:mat-antib) Antibodies
 
 ### Enzymes {#mat-enz}
@@ -117,36 +124,38 @@ Table: (\#tab:mat-antib) Antibodies
 ---------------------------------------------------------------------------------------------
                **Enzyme**     Company                                         cat.-no.   
 ------------------------- --------------------------------------------------- ---------------
-BtsCI                       NEB                                                     #R0647  
+BtsCI                       NEB                                                 R0647  
 
-DdeI                        NEB                                                     #R0175    
+DdeI                        NEB                                                 R0175    
 
-HaeIII                      NEB                                                     #R0108   
+HaeIII                      NEB                                                 R0108   
 
-MnlII                       NEB                                                     #R0163  
+MnlII                       NEB                                                 R0163  
 
-NlaIII Restriction          NEB                                                     #R0125   
+NlaIII                      NEB                                                 R0125   
 
-NsiI-HF Restriction         NEB                                                     #R3127  
+NsiI-HF                     NEB                                                 R3127  
 
-Phusion Polymerase          NEB                                                     #M0530L
+Phusion Polymerase          NEB                                                 M0530L
 
-Ribolock                    Thermo                                                  #EO0381
+Pronase                     Sigma                                               P5147
 
-RNase A                     Quiagen                                                 1006657
+Ribolock                    Thermo                                              EO0381
 
-RNase H                     NEB                                                     M0297L
+RNase A                     Quiagen                                             1006657
 
-sp6 RNA Polymerase          Thermo                                                  #EP0131
+RNase H                     NEB                                                 M0297L
 
-T4 Ligase                   NEB                                                     #M0202T
+SP6 RNA Polymerase          Thermo                                              EP0131
 
-T7 RNA Polymerase           Thermo                                                  #EP0111
+T4 Ligase                   NEB                                                 M0202T
 
-Taq DNA Polymerase          Invitrogen                                              #10342-020 
+T7 RNA Polymerase           Thermo                                              EP0111
 
-Taq DNA Polymerase          VWR                                                     
-------------------------- ---------------- ------------ ------------------------- -----------
+Taq DNA Polymerase          Invitrogen                                          10342-020 
+
+Taq DNA Polymerase          VWR                                                 733-1301
+------------------------- --------------------------------------------------- ---------------
 Table: (\#tab:mat-enz) Enzymes
 
 ### Molecular Biology Kits {#mat-mobikits}
@@ -154,16 +163,18 @@ Table: (\#tab:mat-enz) Enzymes
 ---------------------------------------------------------------------------------------------
                                            **Kit**    Company                 cat.-no.   
 -------------------------------------------------- -------------------------- ---------------
-mMessage mMachine Sp6 Polymerase                    Invitrogen                   AM1340
+EdU Click-iT                                        Invitrogen                  MP 10083
 
-pGEM-T TA Cloning                                   Promega                      A3600
+mMessage mMachine Sp6 Polymerase                    Invitrogen                  AM1340
+
+PCR & Gel Clean-Up                                  Sigma                       NA1020
+
+pGEM-T TA Cloning                                   Promega                     A3600
 
 Superscript III cDNA Synthesis                      Thermo                      18080051
 
-Wizard SV Gel and PCR Clean-Up                      Promega                      A9282
-
-PCR & Gel Clean-Up                                  Sigma
--------------------------------------- -------------------------------------- ---------------
+Wizard SV Gel and PCR Clean-Up                      Promega                     A9282
+-------------------------------------------------- -------------------------- ---------------
 Table: (\#tab:mat-mobikits) Molecular Biology Kits
 
 ### Buffers {#mat-buff}
@@ -171,15 +182,13 @@ Table: (\#tab:mat-mobikits) Molecular Biology Kits
 ---------------------------------------------------------------------------------------------
 **Buffer**                 
 ------------------------- -------------------------------------------------------------------
-Blocking Reagent (BR) 
+Blocking Reagent (BR)       2% BR in maleic buffer + 5% serum
 
-Cut Smart Buffer
+E3                          [@Westerfield2007]
 
-E3
+Hybridization buffer        50% Formamide + 25 % 20x SSC + 50mg/mL  Heparine + mQ
 
-Hybridization buffer
-
-LB Medium / Agar
+Maleic buffer               250 mM maleic acid + 5M NaCl + 10%  0.1% Tween-20 + mQ
 
 NTMT                        75 mM NaCl + 15 mM MgCl\textsubscript{2} + 15 mM
 
@@ -189,15 +198,17 @@ PBST                        PBS + 0.1% Tween20
 
 PBDT                        PBS + 1% BSA + 1% DMSO + 0.3% Triton
 
-P1
+PFA                         
 
-P2
+P1                          50 mM Tris-HCl pH 8.0 + 10 mM EDTA pH 8.0 + 100 µg/mL RNAse
 
-P3
+P2                          1M NaOH + 10 % (w/v) SDS
+
+P3                          3M KOAc pH 5.5
+
+TNT                         50 mM Tris-HCl pH 8.0 + 100 mM NaCl + 0.1% Tween-20 
 
 Tricaine
-
-TNT
 ------------------------- -------------------------------------------------------------------
 Table: (\#tab:mat-buff) Buffers
 
@@ -218,20 +229,12 @@ m1274Tg       _hsp70:shr3v1FL-taqRFP_      -
 ------------ ----------------------------- ----------------------------------------------------
 Table: (\#tab:mat-lines) Zebrafish lines
 
-### ISH probes {#mat-probes}
+### ISH probe list {#mat-probes}
 
 ---------------------------------------------------------------------------------------------
 **Probe**  **Sequence**                
 ---------- ----------------------------------------------------------------------------------
-atoh1a      \scriptsize \texttt{TCCGTCCCTGTATCCATAGCCACAAACTTTCCTCCCAAAAGCACAAACCAACAGAATGGATGGAATGAGCACGGATACAAGAGA\newline 
-            GGTGGTTGAACTCGACGTCCAGCATTCGAGCTTGGGGCGGGGGGAGCAGAGCGAGTACCCACCAGCCTTGGCACTCATGGCCAG\newline 
-            CAGTGACCCACGCGCCTGGCTGGCTCCCGTGCAGGCTGGCACCTGCGCGGCACACGCCGAATACCTGCTGCACTCGCCCGGCTC\newline 
-            GAGCGCGGAAGGCGTGTCCTCTGCCTCCAACTTCAGGAAGAGCAGCAAGAGTCCTGTCAAAGTACGCGAGCTCTGCCGGCTTAA\newline 
-            AGGAGCTGTGGGGGCAGATGAGGGCAGACAGCGGGCCCCATCCAGCAAATCCACCAACGTCGTGCAGAAACAGAGGCGAATGGC\newline 
-            TGCCAATGCCCGGGAGAGGCGAAGAATGCACGGATTGAACCACGCGTTCGACGAGCTGCGCAGTGTCATCCCAGCCTTTGACAA\newline 
-            CGACAAGAAACTCTCCAAGTACGAAACCCTGCAGATGGCCCAGATCTACATCAACGCCCTGTCCGACTTACTACAGGGCCCCGG\newline 
-            TGCTAAAGCCGACCCGCCAAACTGCGACCTGCTGCATGCCAACGTGTTAGAAACGGACCGATCTCCCAGAGGATCACCGGGCGT\newline 
-            CTGTCGGAGAGGCACGGGCGTGGGTTACCCGTACCAGTACGAGGACGGAACATTCAAC}
+atoh1a      see [@Lecaudey2008a]
 
 deltaD      see [@Haddon1998]
 ---------- ----------------------------------------------------------------------------------
@@ -241,7 +244,7 @@ Table: (\#tab:mat-probes) ISH probes
 
 #### Mounting Stamp {#mat-stamp}
 
-The stl file for printing can be found at [github.com/KleinhansDa/3DModels](https://github.com/KleinhansDa/3DModels)
+An stl file for 3D printing can be found at [github.com/KleinhansDa/3DModels](https://github.com/KleinhansDa/3DModels)
 
 #### Spinning Disc Microscopy {#mat-SD}
 
@@ -330,30 +333,40 @@ Table: (\#tab:PCcomp) Workstation hardware components
 ------------------------------ -------------- ------------------------------
 Table: (\#tab:sftwr) Used software
 
+#### Image I macros
+
+##### Cluster Analysis
+
+##### Morphometric Analysis
+
+##### Timelapse Analysis
+
 ### Ground Truth Data {#mat-GrTrDat}
 
 Analyzing images and extracting quantitative measurements can be a tedious task, especially when the analysis becomes more complex. Fortunately, there are ways to automate image analysis by using either machine learning approaches or by tailoring hand-crafted algorithms in an image analysis software tool like e.g. ImageJ[@Schindelin2012]. 
-The main advantages of doing so are...
+The main advantages of doing so are to...
 
--	to be independent of confirmation bias
--	to make the analysis more robust against oversight
--	to increase the statistical power by increasing the number of data points[@Button2013]
--	to increase effect size by increasing the measurement accuracy[@Button2013]
+-	be independent of confirmation bias
+-	make the analysis more robust against oversight
+-	increase the statistical power by increasing the number of data points[@Button2013]
+-	increase effect size by increasing the measurement accuracy[@Button2013]
 
-However, to reassure the measurements taken by a tailored or trained algorithm are meaningful, they must be compared to a _ground truth_ dataset which again describes a general measure of algorithmic quality performance[@Krig2014].
+However, to ensure the measurements taken by a tailored or trained algorithm are meaningful, they must be compared to a _ground truth_ dataset which again describes a general measure of algorithmic quality performance[@Krig2014].
 
-#### 2-D Ground Truth
+#### Cluster Analysis
 
-#####  Ground Truth Design
+The _Cluster Analysis_ algorithm was designed for semi-automatic cell cluster detection in the _cldnb:lyn-gfp_ transgenic line and optional nuclei counting in a second DAPI labeled channel within the Regions of Interest (ROIs) derived from the cell cluster detection.
+
+#####  Design
 
 To assess the quality of the _ClusterAnalysis_ algorithm for nuclei detection the ground truth was designed as follows.
 
 ###### Model
 
--	each CellCluster (CC) consists of a number of objects (cells)
+-	each Cell Cluster (CC) consists of a number of objects (cells)
 -	each object is part of the respective CC and defines one cell entity
 -	each object is determined via a fluorescent nucleus label
-- embryos are mounted within a 3D mold to reduce noise
+- embryos are mounted within a 3D mold (section \@ref(mount-met)) to reduce noise
 
 ---------------------------------- ----------------------------------
                           XY scale 0.32 px/$\mu$m
@@ -366,7 +379,7 @@ Table: (\#tab:imgcond3DGrT) Cluster Analysis Model
 
 ###### Training data
 
-The training set consists of three randomly picked wild type PLLps. For each the algorithm is run with standard parameters. Cell cluster ROIs and nuclei multi point labels are edited manually.
+The training set consists of three randomly picked wild type PLLps. For each the algorithm was run with standard parameters. Cell cluster ROIs and nuclei multi point labels were edited manually.
 
 ###### Test data
 
@@ -376,7 +389,7 @@ To test the algorithm, it is run at different nuclei detection thresholds on the
 
 ###### Image Analysis
 
-For image analysis a custom IJ macro script was developed that segments individual cell clusters based on morphological filtering[@Legland2016], Gaussian blurring and subsequent thresholding. The user is then presented the segmentation ROIs to manually edit them, if necessary. Using those ROIs as masks, the nuclei within them are count based on Gaussian blurring and a 2-D maxima finder. To detect the right amount of nuclei however, it is necessary to evaluate the distance over which the blurring should be applied.
+For image analysis a custom IJ macro script was developed that segments individual cell clusters based on morphological filtering[@Legland2016], Gaussian blurring and subsequent thresholding. The user is then presented the segmentation ROIs to manually edit them, if necessary. Using those ROIs as masks, the nuclei within them are counted with a 2-D maxima finder. To detect the right amount of nuclei however, it is necessary to evaluate the distance over which the blurring should be applied.
 
 A typical nucleus in the PLLp is about 5 $\mu$m in diameter. To determine the right blurring value, a range of 4-6 $\mu$m in steps of 0.5 is tested.
 
@@ -394,7 +407,7 @@ The macro developed consists of the following main modules:
 
 Figure \@ref(fig:maxllreg) shows a registered maximum Z projected lateral line used for ground truth evaluation.
 
-(ref:maxllreg) Registration of 2D data **cluster segments** Registered, MaxIP data with cell cluster segments of the lyn-GFP signal laid upon the DAPI signal. **cell labels** Nuclei labels within regions of interest.
+(ref:maxllreg) Registration of 2D data **cluster segments** Registered, MaxIP data with cell cluster segments of the lyn-GFP signal laid upon the DAPI signal. **cell labels** Magenta dots represent the maxima found within each ROI and hence the nuclei labels.
 
 ```{r maxllreg, out.width='90%', fig.cap="(ref:maxllreg)", fig.scap = "Registration of 2D data"}
 knitr::include_graphics("figures/materials/ground_truth/clusters/clusters.png")
@@ -408,22 +421,24 @@ knitr::include_graphics("figures/materials/ground_truth/clusters/clusters.png")
 load("data/ground_truth_2D.RData")
 ```
 
-Comparing the segmented objects count of the Gaussian parameters with the ground truth gives an indication for over- resp. under-segmentation. In figure \@ref(fig:GrTratioCC) the relative numbers for each parameter can be seen in percentage above or below the mean cell count of the ground truth (blue horizon). The red area represents over-segmentation, the green under-segmentation.
+Comparing the segmented objects count of the Gaussian parameters with the ground truth gives an indication for over- resp. under-segmentation. In figure \@ref(fig:GrTratioCC) the relative numbers for each blurring parameter can be seen in percentage above or below the mean cell count of the ground truth (blue horizon). The red area represents over-segmentation, the green under-segmentation.
 
-(ref:GrTratioCC) Relative difference of segment counts (N=3, Errorbars = Std./2)
+(ref:GrTratioCC) Relative difference of segment counts (N=3, Error bars = Std./2, NB = nuclei blurring)
 
 ```{r GrTratioCC, out.width='65%', fig.height=2.5, fig.cap="(ref:GrTratioCC)", fig.scap = "Relative difference of segment counts"}
 ggplot(NB_all_diff_mean, aes(Group, mean_diff)) +
-  geom_bar(aes(fill=Group), colour = "black", stat="identity", show.legend = FALSE) +
-    geom_rect(aes(xmin=-Inf, xmax=Inf, ymin=0, ymax=Inf), fill="red", alpha=.05) +
-      annotate(geom="text", x=5.5, y=5, fontface="bold", label="false negative", color="red") +
-    geom_rect(aes(xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=0), fill='green', alpha=.025) +
-      annotate(geom="text", x=1.5, y=-5, fontface="bold", label="false positive", color="darkgreen") +
-  geom_bar(aes(fill=Group), colour = "black", stat="identity", show.legend = FALSE) +
-  geom_hline(aes(yintercept = 0, linetype="Ground Truth 100%"), colour="blue", size=1) +
-  geom_errorbar(aes(fill=Group, ymin=mean_diff-(sd_diff/2), ymax=mean_diff+(sd_diff/2)), width=.2, position=position_dodge(.9)) +
-  labs(title = "", x = "Blurring Parameters", y = "Rel. Count Difference [%]") +
-  scale_fill_brewer(palette = "Greys", direction=-1) +
+  geom_bar(aes(fill = Group), colour = "black", stat = "identity", show.legend = FALSE) +
+    geom_rect(aes(xmin = -Inf, xmax = Inf, ymin = 0, ymax = Inf), fill = "red", alpha = .05) +
+      annotate(geom = "text", x = 5.5, y = 5, fontface = "bold", label = "false negative", color = "red") +
+    geom_rect(aes(xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = 0), fill = 'green', alpha = .025) +
+      annotate(geom = "text", x = 1.5, y = -5, fontface = "bold", label = "false positive", color = "darkgreen") +
+  geom_bar(aes(fill = Group), colour = "black", stat = "identity", show.legend = FALSE) +
+  geom_hline(aes(yintercept = 0, linetype = "Ground Truth 100%"), colour = "blue", size = 1) +
+  geom_errorbar(
+    aes(fill = Group, ymin = mean_diff-(sd_diff/2), 
+        ymax = mean_diff + (sd_diff/2)), width = .2, position = position_dodge(.9)) +
+  labs(title = "", x = "Blurring Parameters", y = "Rel. Count Diff. [%]") +
+  scale_fill_brewer(palette = "Greys", direction = -1) +
   scale_linetype_manual(name = "", values = c(1)) +
   mythemeLIGHT_bottom() + 
     theme(legend.position = c(0.18, 0.22)) + 
@@ -441,9 +456,11 @@ knitr::kable(NB_all_CC_NR_mean, booktabs = T, caption = "Nuclei count ratio") %>
 
 Maximum performance is achieved at a scaled parameter of 6 $\mu$m, with a ratio of of `r NB_all_CC_NR_mean[1,"NB60"]` for the count objects and a standard deviation of `r NB_all_CC_NR_mean[2,"NB60"]`.
 
-#### 3-D Ground Truth
+#### anallzr3D
 
-##### Ground Truth Design
+The anallzr3D algorithm was designed for fully automated, single cell volume segmentation in the _cldnb:lyn-gfp_ transgenic line. In addition to 3D cellular metrics, it offers Apical Constriction measurement of each cell.
+
+##### Design
 
 To assess the quality of the anaLLzr3D algorithm the ground truth was modeled as follows.
 
@@ -474,7 +491,7 @@ To test the algorithm it is run at different segmentation thresholds on the same
 
 ###### Image Analysis
 
-For image analysis a custom IJ macro script was developed that recognizes the cell boundaries via the fluorescence signal emitted by a Lyn Kinase tethered eGFP which expression is controlled by the _cxcr4b_ lateral line specific promotor [@Haas2006c]. The central IJ tool used to do this is the MorphoLibJ's[@Legland2016] _Morpholigical Segmentation_ plugin. The plugin however requires to choose for a 'segmentation threshold' that determines the quality and the quantity of segmented objects. This parameter therefore plays an essential role in the truthfulness of the analysis results.
+For image analysis a custom IJ macro script was developed that recognizes the cell boundaries via the fluorescence signal emitted by a Lyn Kinase tethered eGFP which expression is controlled by the _cxcr4b_ lateral line specific promotor [@Haas2006c]. The central IJ tool used to do this is the MorphoLibJ's[@Legland2016] _Morpholigical Segmentation_ plugin. The plugin however requires to choose for a 'segmentation threshold' that determines the quality and the quantity of segmented objects. This parameter therefore plays an essential role in the reliability of the analysis results.
 
 ###### Macro modules
 
@@ -487,11 +504,10 @@ The macro developed consists of the following main modules:
 
 ###### Registration
 
-The first module of the macro is PLLp registration in X, Y and cropping in Z. This is accomplished by an initial maximum Z projection and blurring of the image, 2-D segmentation using a minimum threshold and lastly by measuring the angle the segment is rotated against the horizon (at 0$^{\circ}$). After rotation the PLLp is then registered in Y and the image is cropped by drawing a rectangle with fixed height. 
+The first module of the macro is PLLp registration in X, Y and cropping in Z. This is accomplished by an initial maximum Z projection and blurring of the image, 2D segmentation using a minimum threshold and lastly by rotating the segment through the angle formed by the long axis of the ellipsoid and the horizon (at 0$^{\circ}$). After rotation the image is cropped according to the obtained ROI. Additionally, the centers of the most constricting areas are detected via an intensity based dynamic threshold and highlighted as magenta circles in \@ref(fig:maxraw).
 
 (ref:maxraw) Registration of 3D data
-
-```{r maxraw, dpi=200, out.width='90%', fig.cap="(ref:maxraw)"}
+```{r maxraw, out.width='90%', fig.cap = "(ref:maxraw)"}
 knitr::include_graphics(path = "figures/materials/ground_truth/registration.png")
 ```
 
@@ -502,21 +518,24 @@ knitr::kable(tab, booktabs = T, caption = "Physical image properties (scaling)",
   kable_styling(full_width = T, latex_options = c('striped', 'hold_position'))
 ```
 
-During the registration process, the image is rotated against the horizon and cropped in X and Y. Additionally, the centers of the most constricting areas are detected via an intensity based dynamic threshold and highlighted as magenta circles in \@ref(fig:maxraw).
-
 ###### Ground Truth data
 
 ```{r load3DGrT, echo=FALSE}
 load("data/ground_truth_3d.RData")
 ```
 
-Watershed segmentation depends on a continuous signal along the boundary of the object to be segmented. Since the PLLp lies within the zebrafish larvae and since light gets scattered more when traveling through more organic tissues, the fluorescence signal in deeper tissue sections is more disturbed. Still, the PLLp is located just superficial to the skin, so the effect may be minor. In figure \@ref(fig:stackmem) the fluorescence signal of the three PLLps tested is shown in a single central cross-section in the dorso-ventral and the apico-basal axis.
+In figure \@ref(fig:stackmem) the fluorescence signal of the three PLLps tested is shown in a single central cross-section in the dorso-ventral and the apico-basal axis.
 
 To compare the results between the ground truth segments and the segments obtained from different threshold levels graphically, for a single PLLp the ground truth and threshold level[n] are shown as a composite color image in figure \@ref(fig:stackcomp). By using a green lookup table (LUT) for the ground truth and a magenta LUT for the threshold level[n], one can readily detect overlapping objects (white), over segmentation (magenta) and under segmentation (green).
 
+(ref:stackmem) _cldnb:lyn-gfp_ fluorescence signal in a cross-section of the PLLp (Obj.: 40X APO)
+```{r stackcomp, out.width='85%', fig.cap = "(ref:stackcomp)"}
+knitr::include_graphics("figures/materials/ground_truth/stackmem.png")
+```
+
 (ref:stackcomp) Graphical comparison of the thresholds tested
 
-```{r stackcomp, out.width='85%', fig.cap="(ref:stackcomp)"}
+```{r anallzrvols, out.width='85%', fig.cap = "(ref:stackcomp)"}
 knitr::include_graphics("figures/materials/ground_truth/volumes.png")
 ```
 
@@ -528,26 +547,28 @@ knitr::include_graphics("figures/materials/ground_truth/volumes.png")
 
 In figure \@ref(fig:gtratio) the relative numbers for each threshold level can be seen in percentage above or below the mean cell count of the ground truth (blue horizon). Analogous to the graphical inspection, the magenta area represents over segmentation, the green under segmentation. Additionally, table \@ref(tab:gtrcellcount) shows the absolute numbers.
 
-(ref:gtratio) Relative difference of segment counts (N=3, Errorbars = Std./2)
+(ref:gtratio) Relative difference of segment counts (N = 3, Errorbars = Std./2)
 
 ```{r gtratio, out.width='65%', fig.height=2.5, fig.cap="(ref:gtratio)", fig.scap = "Relative difference of segment counts"}
 ggplot(all_count_diff_mean, aes(Group, mean_diff)) +
   #geom_polygon(aes(x=c(0,1,1,0),y=c(0.5,0.5,4.5,4.5)),fill="#FFFF0044",color=NA)+
-  geom_bar(aes(fill=Group), colour = "black", stat="identity", show.legend = FALSE) +
-    geom_rect(aes(xmin=-Inf, xmax=Inf, ymin=0, ymax=Inf), fill="magenta", alpha=.025) +
-      annotate(geom="text", x=4.5, y=5, fontface="bold", label="over segmentation", color="magenta") +
-    geom_rect(aes(xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=0), fill='green', alpha=.025) +
-      annotate(geom="text", x=1.5, y=-5, fontface="bold", label="under segmentation", color="darkgreen") +
+  geom_bar(aes(fill = Group), colour = "black", stat = "identity", show.legend = FALSE) +
+    geom_rect(aes(xmin = -Inf, xmax = Inf, ymin = 0, ymax = Inf), fill = "magenta", alpha = .025) +
+      annotate(geom = "text", x = 4.5, y=5, fontface = "bold", label = "over segmentation", color = "magenta") +
+    geom_rect(aes(xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = 0), fill = 'green', alpha = .025) +
+      annotate(geom = "text", x = 1.5, y=-5, fontface = "bold", label = "under segmentation", color = "darkgreen") +
   #scale_fill_identity(name = 'the fill', guide = 'legend',labels = c('m1', 'm2')) +
-  geom_bar(aes(fill=Group), colour = "black", stat="identity", show.legend = FALSE) +
-  geom_hline(aes(yintercept = 0, linetype="Ground Truth 100%"), colour="blue", size=1) +
-  geom_errorbar(aes(fill=Group, ymin=mean_diff-(sd_diff/2), ymax=mean_diff+(sd_diff/2)), width=.2, position=position_dodge(.9)) +
+  geom_bar(aes(fill=Group), colour = "black", stat = "identity", show.legend = FALSE) +
+  geom_hline(aes(yintercept = 0, linetype = "Ground Truth 100%"), colour = "blue", size = 1) +
+  geom_errorbar(
+    aes(fill = Group, ymin = mean_diff - (sd_diff/2),
+    ymax = mean_diff + (sd_diff/2)), width = .2, position = position_dodge(.9)) +
   labs(title = "", x = "Threshold levels", y = "Rel. Count Diff. [%]") +
-  scale_fill_brewer(palette = "Greys", direction=-1) +
+  scale_fill_brewer(palette = "Greys", direction = -1) +
   scale_linetype_manual(name = "", values = c(1)) +
   mythemeLIGHT_bottom() + 
     theme(legend.position = c(0.18, 0.3)) + 
-    theme(legend.text = element_text(size=11))
+    theme(legend.text = element_text(size = 11))
 ```
 
 ```{r gtrcellcount}
@@ -568,43 +589,49 @@ Inspecting the cell count unfortunately does not directly tell us how well the c
 
 In figure \@ref(fig:volsecdffull) and \@ref(fig:volsecdfzoom) the distribution and amount of the cell volumes across the different threshold levels can be inspected via the 'empirical cumulative distribution function' (ECDF). The closer the slopes are to the ground truth, the stronger they are conserved. Figure \@ref(fig:volsecdffull) shows the full distribution, where the major differences seem to appear within the 0.4 quantile (red line). Therefore, in figure \@ref(fig:volsecdfzoom) only the values within the 0.4 quantile are shown to get a more detailed impression.
 
-(ref:volsecdffull) ECDF - All cell volumes
-```{r volsecdffull, fig.height=2.3, out.width='90%', fig.cap="(ref:volsecdffull)"}
-ggplot(all_vol, aes(Vol..unit., colour=Group)) +
+(ref:volsecdffull) Cell volumes full distribution (red line = .4 Quantile)
+```{r volsecdffull, fig.height = 2.3, out.width='90%', fig.cap="(ref:volsecdffull)"}
+ggplot(all_vol, aes(Vol..unit., colour = Group)) +
   geom_vline(aes(xintercept = quantile(Vol..unit., 0.4, na.rm=TRUE)), colour="red") +
-  stat_ecdf(geom="step", pad=FALSE, size=1.1) +
-  labs(title = "test", x = "Volumes", y = "Relative amount", color = "group") +
+  stat_ecdf(geom = "step", pad = FALSE, size = 1.1) +
+  labs(title = "test", x = "Volumes", y = "Relative amount", color = "level") +
   scale_x_continuous(limits = c(0, 750), breaks = seq(0, 1000, 200)) +
-  scale_colour_brewer(palette = "Greys", direction=-1) +
-  facet_grid(.~Obj, scale="free", labeller = label_parsed) +
+  scale_colour_brewer(palette = "Greys", direction = -1) +
+  facet_grid(.~Obj, scale = "free", labeller = label_parsed) +
   mythemeLIGHT_bottom() + 
-    theme(panel.background = element_rect(fill = "slategray3", colour = "black")) + 
-    theme(legend.background = element_rect(fill = "slategray3", colour = "black")) + 
-    theme(legend.text = element_text(size=9))
+    theme(
+      axis.text = element_text(size = 9),
+      panel.background = element_rect(fill = "slategray3", colour = "black"),
+      strip.background = element_blank(),
+      legend.background = element_rect(fill = "slategray3", colour = "black"),
+      legend.text = element_text(size = 9))
 ```
 
-(ref:volsecdfzoom) ECDF - Small cell volumes
-```{r volsecdfzoom, fig.height=2.3, out.width='90%', fig.cap="(ref:volsecdfzoom)"}
-ggplot(all_vol, aes(Vol..unit., colour=Group)) +
-  stat_ecdf(geom="step", pad=FALSE, size=1.1) +
-  labs(title = "test", x = "Volumes", y = "Relative amount", color = "group") +
+(ref:volsecdfzoom) Cell volumes distribution within .4 Quantile
+```{r volsecdfzoom, fig.height = 2.3, out.width='90%', fig.cap="(ref:volsecdfzoom)"}
+ggplot(all_vol, aes(Vol..unit., colour = Group)) +
+  stat_ecdf(geom = "step", pad = FALSE, size = 1.1) +
+  labs(title = "test", x = "Volumes", y = "Relative amount", color = "level") +
   scale_x_continuous(limits = c(0, 600), breaks = seq(0, 1000, 50)) +
-  scale_colour_brewer(palette = "Greys", direction=-1) +
+  scale_colour_brewer(palette = "Greys", direction = -1) +
   coord_cartesian(ylim = c(0, 0.5), xlim = c(20, 210)) +
-  facet_grid(.~Obj, scale="free", labeller = label_parsed) +
+  facet_grid(.~Obj, scale = "free", labeller = label_parsed) +
   mythemeLIGHT_bottom() + 
-    theme(panel.background = element_rect(fill = "slategray3", colour = "black")) + 
-    theme(legend.background = element_rect(fill = "slategray3", colour = "black")) + 
-    theme(legend.text = element_text(size=9))
+    theme(
+      axis.text = element_text(size = 9),
+      panel.background = element_rect(fill = "slategray3", colour = "black"),
+      strip.background = element_blank(),
+      legend.background = element_rect(fill = "slategray3", colour = "black"),
+      legend.text = element_text(size = 9))
 ```
 
 ###### Confidence level
 
-To statistically check how closely related each threshold value sample distribution is compared to the ground truth, a Kolmogorov-Smirnov-Test (ks.test) was performed. The ks.test is a nonparametric test whose null hypothesis is that the both groups compared were sampled from populations with identical populations. Therefore, the closer the p-value is to 1, the more similar the tested sample distribution would be to the ground truth (figure \@ref(fig:kstestvol); 5% confidence threshold indicated by red line).
+To statistically check how closely related each threshold level sample distribution is compared to the ground truth, a Kolmogorov-Smirnov-Test (ks.test) was performed. The ks.test is a nonparametric test whose null hypothesis is that the both groups compared were sampled from populations with identical populations. Therefore, the closer the p-value is to 1, the more similar the tested sample distribution would be to the ground truth (figure \@ref(fig:kstestvol); 5$\%$ confidence threshold indicated by red line).
 
 \[H_{0} : F_X(x)=F_0(x)\]
 
-(ref:kstestvol) Volumetric conservation confidence level
+(ref:kstestvol) Volumetric conservation (red line = 5$\%$ confidence threshold)
 
 ```{r kstestvol, out.width='60%', fig.height=1.7, fig.cap="(ref:kstestvol)"}
 ggplot(ks.test_all, aes(variable, value)) +
@@ -614,7 +641,8 @@ ggplot(ks.test_all, aes(variable, value)) +
   scale_fill_brewer(palette = "Greys", direction = -1) +
   scale_y_reverse(limits = c(1, 0), breaks = seq(0, 1, 0.1)) +
   coord_flip() +
-  mythemeLIGHT_bottom() + theme(legend.text = element_text(size=11))
+  mythemeLIGHT_bottom() + 
+  theme(legend.text = element_text(size=11))
 ```
 
 \noindent In comparison to the Mann-Whitney test, the ks.test is more sensitive to detect changes in the shape of the distribution than to detect a shift of the median[@Lehman]
@@ -625,21 +653,21 @@ ggplot(ks.test_all, aes(variable, value)) +
 
 #### Husbandry
 
-The zebrafish husbandry is maintained at the University of Frankfurt am Main. All the legal procedures were followed while handling and maintaining the zebrafish husbandry. All the zebrafish lines used in and generated for this study are listed in the Appendix A.
+Zebraﬁsh husbandry was maintained at the University of Frankfurt am Main. All legal procedures were followed while handling and maintaining zebraﬁsh husbandry. All zebraﬁsh lines used in and generated for this study are listed in the Appendix A.
 
 #### Handling and rearing
 
-12 h before the embryo collection, males and females are set up in crossing cages filled ~75. Next day, before noon, separators are removed and eggs are laid. The zebrafish eggs are then collected and reared untill the larval stage (Day 5) in the well-defined culture medium E3 (Kimmel et.al. 1995, Table no. 6 in 'List of Buffers' section) at 25, 28.5, or 30 degrees celsius, according to the need of experiments.
+In the afternoon preceding the embryo collection, 1 male and female were set up in crossing cages, physically separated by a transparent separator. Next day, before noon, separators were removed allowing fertilization. Fertilized eggs were then collected, sorted and reared in the well-defined culture medium E3 (Kimmel et.al. 1995, section \@ref(mat-buff)) at 25$^\circ$, 28.5$^\circ$, or 30$^\circ$ Celsius depending on the experimental condition required.
 
 To grow larvae to the adulthood, they were transferred to the system on day 5. Till day 12, larvae were fed Vinegar Eels, Paramecia, and Caviar powder. After the 12 th day, water supply was started and fish were fed Brine Shrimp, Artemia, Paramecia and Vinegar Eels. Adult fish (>1 Month) were fed Artemia and the dry flakes.
 
 #### Zebrafish fin clips
 
-Adult fish were anesthetized with buffered Tricaine (1X, see 'List of Buffers') until stage II-III of anaestezia. About 1/3 rd of the pectoral fin was cut with a sterile scalpel in a sterile petri plate. Immediately the cut fin was transferred to 50 mM NaOH. Fish were returned to system water and kept in the single tanks with 200 micro liters of 0.01 percent methylen blue, maximum up to 4 days. 
+Adult ﬁsh were anesthetized with buﬀered Tricaine (1X, see section \@ref(mat-buff)) until. About 1/3 rd of the caudal ﬁn was cut with a sterile scalpel in a sterile Petri Dish. Immediately the cut ﬁn was transferred to 50 mM NaOH. Fish were returned to system water and kept in 1L system water in single tanks with 200 $\mu$L of 0.01$\%$ Methylene Blue.
 
 #### Adult Genotyping
 
-The clipped fins were digested for 1 h at 95$^\circ$ celsius and neutralized subsequently with 1M Tris-HCl of pH 9.
+The clipped fins were digested for 1 h at 95$^\circ$ Celsius and neutralized subsequently with 1M Tris-HCl of (pH 9).
 
 #### Embryo Genotyping
 
@@ -653,29 +681,25 @@ Adult zebrafish were anesthetized in tricaine (1X) till stage II-III of anaestez
 
 Embryos and dechorionated larvae were fixed in 2 ml of 4$\%$ PFA in 1X PBS overnight at 4$^\circ$ Celsius.
 
-### Wetlab {#Wet-met}
+### Wet lab {#Wet-met}
+
+#### Sample preparation {#sampleprep}
+
+For samples **later than 24 hpf**, embryos were grown in 1X PTU till desired stage and treated with 150 $\mu$L per 10 mL of 0.1 mg/mL Pronase for ~30 min.. Choria were removed by gentle pipetting with a 2 mL plastic pasteur pipette. To replace the Pronase solution with fresh E3, embryos were immobilized by anesthesia and collected in the center of the dish by gentle rotational movement. Then the medium was poured away by collecting the embryos at the corner bottom of the dish while taking care not to loose any. After, the dish was filled with fresh E3. This process was repeated three times.
+
+For samples **earlier than 18s**, embryos were treated with 150 $\mu$L per 10 mL of 0.1 mg/mL Pronase directly. Choria were removed the same way as for > 24 hpf embryos but when pouring away the Pronase solution, the dish was simultaneously and very carefully filled with fresh E3 again. Since younger embryos are more fragile and to avoid damage, they must be kept in solution constantly.
+
+Fixation started at the desired stage in 4% PFA in 0.1% PBST at 4$^\circ$C o.n.. The next day, samples were rinsed 3 times for ~5 min. in PBST and passed through a MeOH series of 25$\%$ $\rightarrow$ 50$\%$ $\rightarrow$ 75$\%$ $\rightarrow$ 100$\%$ MeOH/PBST (V/V)). For permanent storage, samples were stored in 100$\%$ MeOH at -20$^\circ$C.
 
 #### In Situ Hybridization {#ISH-met}
 
-##### 0. Breeding & Fixation
-
-* Embryos are grown till desired stage
-    + from 24 hpf on in 1X PTU
-* Dechorionation in 0.1 mg/mL Pronase
-    + 150 $\mu$L per 10 mL for ~30 min.
-    + For embryos younger than 18s, keep embryos in solution while washing and gently add fresh E3
-* Fixation at desired stage in 4% PFA in 0.1% PBST at 4$^\circ$C o.n.
-* Rinse 3x5 min. in PBST
-* Pass through MeOH series (25% $\rightarrow$ 50% $\rightarrow$  75% $\rightarrow$  100% MeOH/PBST (V/V))
-* Store in 100% MeOH at -20$^\circ$C for > 2h
+Sample preparation as described in section \@ref(sampleprep).
 
 ##### 1. Permeabilisation & Probe Hybridization \newline \newline
 
 **Permeabilisation** \newline $\rightarrow$ without shaking
 
-* Rehydrate embryos (75% $\rightarrow$ 50% $\rightarrow$  25% $\rightarrow$  0% PBST)
-* Wash 2x in PBST
-* Digest embryos in 10 $\mu$g/mL Proteinase K according to table
+Samples were rehydrated in an inverse MeOH series of 75$\%$ $\rightarrow$ 50$\%$ $\rightarrow$ 25$\%$ $\rightarrow$ 0$\%$ PBST and washed again for 5 min. two times in pure PBST. Finally, samples were digested in 10 $\mu$g/mL Proteinase K according to table \@ref(tab:met-protk).
 
 ```{r met-protk}
 tab <- read.delim("figures/materials/protkdig.txt")
@@ -684,103 +708,39 @@ knitr::kable(tab, booktabs = T, caption="Proteinase K digestion", align = "c",
   kable_styling(full_width = T, latex_options = c('striped', 'hold_position'))
 ```
     
-* Wash 2x in PBST
-* PostFix in 4% PFA at 4$^\circ$C for > 30 min.
-* Wash 3x in PBST
+Samples were washed again for 5 min. two times in PBST and post-fixated in 4$\%$ PFA at 4$^\circ$C for > 30 min. Samples were washed again for 5 min. three times in PBST.
 
 **Probe Hybridisation** \newline $\rightarrow$ all steps at 60$^\circ$C, except stated differently
 
-* Prehybridise in 350 $\mu$L of Hyb buffer for 1 - 8 h
-* Heat the probe in 200 $\mu$L of Hyb to 80$^\circ$C, then replace Hyb buffer with it
-* Incubate o.n.
+Samples were pre-hybridized in 350 $\mu$L of hybridization buffer (section \@ref(mat-buff)) for 1 - 8 h. Just before detection probe treatment, the probe was denatured at 80$^\circ$C in 1:200 of hybridization buffer. Subsequently, hybridization buffer was taken off the samples and replaced with the heated probe. Finally, samples were incubated o.n. at a desired temperature (around 65$^\circ$C).
 
 ##### 2. Probe removal & Antibody incubation
 
-* Collect probe \newline $\rightarrow$ For reuse, store at -20$^\circ$C
-* Wash at the same temperature as hybridisation \newline $\rightarrow$ use Thermo-Block and waterbath or oven to keep solutions at temperature
-    + 1 x 20 min. Hyb buffer
-    + 2 x 30 min. 50% Formamide
-    + 1 x 20 min. 25% Formamide
-    + 2 x 15 min. 2X SSCT
-    + 2 x 30 min. 0.2X SSCT
-    + 1 x 5 min. TNT
-* Block for 1 - 8 h in 350 $\mu$L of 2% BR/TNT at RT
-* Incubate in 100 $\mu$L antibody in 2% BR/TNT for 2 h at RT or o.n. at 4$^\circ$C
-    + antibody = Anti-Digoxigenin (1/4000 (V/V))
-    + diluent = NTMT buffer
+The next day the probe got collected and stored at -20$^\circ$C for re-use. Washing took place at the same temperature as hybridization (from step 1) To keep solutions at temperature a Thermo-Block was used. For the washing series the samples were first washed one time for 20 min. in hybridization buffer, then two times for 30 min. in 50$\%$ Formamide and one time for 20 min. in 25$\%$ Formamide. Then two times for 15 min. in 2X SSCT and two times for 30 min. in 0.2X SSCT. Finally, one time for 5 min. in TNT.
+
+To reduce noise and increase specific signal strength, the samples were treated with blocking solution (section \@ref(mat-buff)) for 1 - 8 h in 350 $\mu$L of 2% BR/TNT at room temperature (RT). Afterwards the samples were incubated in 100 $\mu$L Anti-Digoxigenin diluted in NTMT buffer (1/4000 (V/V)) in 2$\%$ BR/TNT for 2 h at RT or o.n. at 4$^\circ$C.
 
 ##### 3. Probe detection
 
-* Wash 6 x 20 min. in TNT (or one wash o.n.)
-* Wash 2 x 5 min. in NTMT
-* Replace with... 
-    + 4.5 NBT $\mu$L + 3.5 $\mu$L BCIP per mL NTMT or
-    + 150 $\mu$L BM Purple
-* Develop at RT in the dark without shaking \newline $\rightarrow$ 2 - 8 h depending on probe
-* Wash 3x in PBST
-* If necessary, proceed to immunostaining
-* For permanent storage, keep specimen in 50% Glycerol at 4$^\circ$C
+First, the samples were washed six times for ~20 min. (or one wash o.n.) in TNT and two times for ~ 5min. in NTMT. After washing, color staining was performed with 4.5 NBT $\mu$L + 3.5 $\mu$L BCIP per mL NTMT in the dark and at RT without shaking (in a drawer) for 2 - 8 h, regularly checking the progression of the reaction. As soon as an appropriate degree of color intensity on the target site was achieved (up to two days), the samples were again washed three times in PBST. 
+
+Afterwards the samples were either prepared for immunostaining or imaging. For permanent storage samples were kept in 50$\%$ Glycerol at 4$^\circ$C.
 
 #### Immuno staining {#immuno-met}
 
-* Breeding and Fixation as for ISH
-* Block for 30 min. in 2% Goat Serum / PBDT (V/V)
-* Primary Antibody
-    + Incubate for 2 h at RT (or o.n. at 4$^\circ$C) in 150 $\mu$L of 2% NGS / PBDT (V/V)
-    + Wash in PBDT for 2 h (change solution ~6x)
-* Secondary Antibody
-    + Incubate for 2 h at RT (or o.n. at 4$^\circ$C) in 150 $\mu$L of 2% NGS / PBDT (V/V)
-    + Wash in PBDT for 2 h (change solution ~6x)
+Sample preparation as described in section \@ref(sampleprep).
+
+First, samples were blocked in 2$\%$ Goat Serum / PBDT (V/V) for 30 min.. For protein target site detection, a **primary antibody** (150 $\mu$L of 2% NGS / PBDT (V/V)) was incubated for ~2 h at RT or o.n. at 4$^\circ$C. Samples were washed for 2 h in PBDT while changing the solution 5 - 6 times. To stain the now bound primary antibody, a **secondary antibody** (150 $\mu$L of 2% NGS / PBDT (V/V)) was incubated for 2 h at RT or o.n. at 4$^\circ$C. Samples were washed for 2 h in PBDT while changing the solution 5 - 6 times.
 
 #### Mounting {#mount-met}
 
 For mounting, an improved 3D specimen preparation and well-plate like sample navigation for zebrafish larvae confocal microscopy was developed which offers the following improvements...
 
-1. **To obtain a sufficient amount of data that is closely staged and still comprises > 4 independent groups.** Using this protocol, it is possible to define a custom well plate (figure 5) in your preferred imaging software, which greatly facilitates the imaging procedure and therefore helps to stay focused. However, once the well plate is aligned and the positions are defined it still needs some minor correction in Z. 
-2. **To do the imaging live. Most of the time, especially in morphological analyses, live imaging is preferred since any fixation alters cell and therefore organ morphology.** Live imaging guarantees an undisturbed and unbiased look at the in vivo situation. Using this protocol, the embryonic body axes will be more in line with the movement axes of the microscopic table which results, depending on the volume of interest, in narrower Z-stacks. This ultimately also leads to a reduction of photo-bleaching, phototoxicity and expenditure of time. The won time difference can then be used to image shorter time-intervals in timelapse imaging. 
+1. **To obtain a sufficient amount of data that is closely staged and still comprises > 4 independent groups.** Using this protocol, it is possible to define a custom well plate (figure \@ref(fig:stampprod) C) in your preferred imaging software, which greatly facilitates the imaging procedure and therefore helps to stay focused. However, once the well plate is aligned and the positions are defined it still needs some minor correction in Z.
 
-3. **To have the embryos aligned with the 3D movements of the microscopic table.** Instead of transforming and aligning the image data in a post-processing approach, the specimen can be imaged in the right spacial configuration in the first place. This is not only important for 3D analysis, but also for Z projected data. If the specimen body axes are not aligned with the axes of the microscopic table, the image stacks need to be bigger to record the volume of interest. In the Z projections, this will end up in X Y coordinates not aligned in Z, as noise or false signal (figure 1B). The method therefore provides significant improvement over existing mounting techniques. 
+2. **To do the imaging live. Most of the time, especially in morphological analyses, live imaging is preferred since any fixation alters cell - and therefore organ morphology.** Live imaging guarantees an undisturbed and unbiased look at the _in vivo_ situation. Using this protocol, the embryonic body axes will be more in line with the XY displacement of the microscope stage which results, depending on the volume of interest, in narrower Z-stacks. This ultimately also leads to a reduction of photo-bleaching, phototoxicity and expenditure of time. The gained time can then be used to image shorter time-intervals in timelapse imaging. 
 
-(ref:mountmicro) Stamp and $\mu$-well properties **A** single micro well in XY and **A'** in XZ **B** mounting without $\mu$-well and **B'** mounting with $\mu$-well **C** elements and dimensions of the stamp.
-
-```{r Mountmicro, out.width='80%', fig.cap="(ref:mountmicro)", fig.scap = "Stamp and micro-well properties"}
-knitr::include_graphics("figures/materials/mounting/mountmicro.png")
-```
-
-##### Preparations
-
------------------------------------------------------------------------------------------
-                 **item**   Company   Description                               cat.-no.
--------------------------- --------- ------------------------------------------ ----------
-$\mu$-Dish                 ibidi     20-35 mm polymer, #1.5, high wall          81218-200
-
-3D Mould Stamp             IBG3D     20-35 mm                               
-
-Preparation needles        VWR       -                                          USBE5470
-
-Glass pipettes             Roth      -                                          4518
-
-Silicone bulbs             VWR       -                                          612-2327
-
-Microtubes 2 mL            Sarstedt  -                                          2691    
-
-Heating block              PeqLab    -                                          HX2
-
-Microwave oven             Severin   -                                          MW7849
-
-Stereo microscope          Leica     -                                          M165FC 
-
-Transmitted Light Base     Leica     -                                          MDG36 
--------------------------- --------- ------------------------------------------ ----------
-Table: (\#tab:mounthard) Mounting hardware
-
-
-```{r mountsol}
-tab <- read.delim("tables/mount_sol.txt")
-knitr::kable(tab, booktabs = T, caption = "Mounting solutions", col.names = NULL) %>%
-  kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
-  column_spec(1, width = "5cm", bold=T)
-```
+3. **To reduce background signal and noise.** Instead of transforming and aligning the image data in a post-processing approach, the specimen can be imaged in the right spacial configuration in the first place. This is not only important for 3D analysis, but also for Z projected data. If the specimen body axes are not aligned with the axes of the microscopic table, the image stacks need to be bigger to record the volume of interest. In Z projections, for X Y coordinates out of the volume of interest, this will end up as background signal or noise (figure \@ref(fig:stampprod) B), complicating quantitative analysis and interpretation. The method therefore provides significant improvement over existing mounting techniques. 
 
 ##### Protocol
 
@@ -797,17 +757,20 @@ Wait for ~45 min., then use a clean preparation needle and slip it through stamp
 
 (ref:stampprod) Stamping procedure **Agarose Cast** (A) clean stamp surface (B) preparation of the stamp before lifting (C) ready-for-use agarose imprint. **Mounting** (A) without LMPA (B and C) with LMPA, while the latter shows the imprint with light coming from a different angle, making the chambers visible again. (D) Horizontal alignment of embryos. **Imaging** (A) Positioning of the $\mu$-well (B) Alignment in Brightfield and (C) Definition of a custom well plate.
 
-```{r stampprod, out.width='80%', fig.cap="(ref:stampprod)", fig.scap = "Steps during improved zebrafish mounting"}
-knitr::include_graphics("figures/materials/mounting/mounting.png")
+```{r stampprod, out.width='95%', fig.cap="(ref:stampprod)", fig.scap = "Steps during improved zebrafish mounting"}
+knitr::include_graphics("files/pubs/klein_2019/006_prep.jpg")
+knitr::include_graphics("files/pubs/klein_2019/007.jpg")
+knitr::include_graphics("files/pubs/klein_2019/008.jpg")
+knitr::include_graphics("files/pubs/klein_2019/009.jpg")
 ```
 
-### Computational {#comp-met}
+### Dry lab {#comp-met}
 
 #### Rosette Detection {#CNN}
 
-The method used for rosette detection is based on a convolutional neuronal network (CNN) and is similar method to what was used before by Ernst _et al._(2012)[@Ernst2012a; @Liu] for the description of the _shroom3_ morpholino injected phenotype. Since the former method was technically deprecated and since we had new data to detect rosettes, we updated the former method to a state of the art CNN using Caffe[@Jia2014] as a backend. The training was done by our partners at the institute for informatics, Albert-Ludwigs-University Freiburg.
+The method used for rosette detection is based on a convolutional neuronal network (CNN) and was modified from the "rosette detector" algorithm previously used in the lab and described in [@Ernst2012a; @Liu]. Since the former method was technically outdated and since we had new data in which we needed to detect rosettes, we updated the former method to a state of the art CNN using Caffe[@Jia2014] as a backend. The training was done by our collaborators at the institute for Informatics, Albert-Ludwigs-University Freiburg.
 
-The CNN was trained on 17 wildtype DMSO control and SU5402 treated (Fgf signaling depleted embryos which do not form rosettes[@Lecaudey2008a]) embryos each. In order togive the network something to learn, the data had to be labeled manually, which was done in imagej by placing multipoint rois at the center of the rosettes. The data was then further permutated to artificially increase the amount of training data and make the detection more robust against different kinds of input. Further parameters about the training data is listed in Table \@ref(tab:CNNtraining). One example for each is shown in figure \@ref(fig:CNNtrain).
+The CNN was trained on 17 DMSO- and SU5402- treated embryos each. SU5402 is an inhibitor of FGF receptors and embryos treated with these inhibitors show a strongly reduced number of rosettes ([@Lecaudey2008a]). In order to give the network something to learn, the data had to be labeled manually, which was done in ImageJ by placing multipoint ROIs at the center of the rosettes. The data was then further permutated to artificially increase the amount of training data and make the detection more robust against different kinds of input. Further parameters about the training data is listed in Table \@ref(tab:CNNtraining). One example for each is shown in figure \@ref(fig:CNNtrain).
 
 (ref:CNNtrain) Example for rosette detection on the training data. **left** Maximum Z-projected input data. **middle** heatmap of scores. blue indicates a low score, red a high one. **right** score map projected onto the input data.
 
@@ -818,7 +781,8 @@ knitr::include_graphics("figures/materials/cnn/CNNtrain.png")
 \noindent The main advantages for using a neural network in a task like this are...
 
 1. Objectivity
-    + Unlike the human brain, one a CNN is trained it is static and does not keep on learning. This makes it possible to have an unbiased quantification of rosette counts.
+    + A computer model is not biased in a way that it prefers one outcome over the other. It evaluates based on what it was trained to.
+    + Unlike the human brain, once a CNN is trained it is static and does not keep on learning. 
 2. Degree of rosette registration    
     + The output data are continous rational numbers ($\mathbb{Q}$) instead of integers ($\mathbb{Z}$) which does not only tell if a rosette is there fore not, but also for 'how much' (50-100$\%$) it is there.
 3. Training is done relatively quick
@@ -837,10 +801,9 @@ knitr::kable(tab, booktabs = T, caption = "CNN training data", align = 'c', esca
 
 #### Proliferation Analysis{#prolif}
 
-The basic principle is based on work done by Laguerre _et al._, 2009[@Laguerre2009a]. For manual tracking of mitotic events 'MTrackJ'[@Meijering2012] was used...
+The basic principle is based on work done by Laguerre _et al._, 2009[@Laguerre2009a]. For registration of mitotic events an IJ manual tracking tool was used was used that allows to track an image feature through a stack of images creating tracks as it progresses through volume / time ('MTrackJ'[@Meijering2012]).
 
-* Mitotic events were tracked either in the pLLP or deposited CCs exclusively from Prometa- / Meta-phase till Ana- / Telo-phase
-* 'Tracks' and 'Points' data was saved as '.txt' files
+For mounting the procedure described in section \@ref(mount-met) was used. Nuclei were visualized in a _cxcr4b_(BAC):_H2BRFP_ transgenic line. Z-projection of volumetric timelapses, Mitotic events were tracked in each CC and the pLLP. Afterwards the data was exported as one table per embryo and processes by counting mitoses per pLLP / CC / total CC mitoses per embryo.
   
 \noindent Figure \@ref(fig:mitodatapoints) shows an exemplary track for the data analyzed.
 
@@ -854,27 +817,27 @@ knitr::include_graphics("figures/materials/prol/Prolif.png")
 
 ##### Rationale
 
-The earliest attempt found for indexing AC can be found in a study published by Lee _et al_[@Lee2009] where they were interested in the 'apical index' (A.I.) of bottle cells during _X.laevis_ gastrulation(figure \@ref(fig:ai) Lee). Another example for measuring AC is the apical _constriction_ index (ACI, figure \@ref(fig:ai) Harding) for the cells of the _D.rerio_ lateral line primordium (PLLp), which can be found in a study from 2012 where it was shown that Fgfr-Ras-MAPK signaling is required for AC and Rock2a localization6 [@Harding2012; @Harding2013].
+The earliest attempt found for indexing AC can be found in a study published by Lee _et al_[@Lee2009] where they were interested in the 'apical index' (A.I.) of bottle cells during _X.laevis_ gastrulation(figure \@ref(fig:ACLee) Lee). Another example for measuring AC is the apical _constriction_ index (ACI, figure \@ref(fig:ACLee) Harding) for the cells of the _D.rerio_ lateral line primordium (pLLP), which can be found in a study from 2012 where it was shown that Fgfr-Ras-MAPK signaling is required for AC and Rock2a localization [@Harding2012; @Harding2013].
 
-(ref:ai) A.I. indeces in the literature. **Lee** A.I. of _X.leavis_ bottle cells measured in 2D. **Harding** A.I. of _D.r._ pLLP cells measured in 3D.
+(ref:ACLee) A.I. indeces in the literature. **Lee** A.I. of _X.leavis_ bottle cells measured in 2D. **Harding** A.I. of _D.r._ pLLP cells measured in 3D.
 
-```{r ACLee, out.width='75%', fig.cap="(ref:ACLee)", fig.scap = "A.I. indeces in the literature"}
+```{r ACLee, out.width = '75%', fig.cap = "(ref:ACLee)", fig.scap = "A.I. indeces in the literature"}
 knitr::include_graphics("figures/materials/models/ai.png")
 ```
 
-\noindent In both cases, the measurements for the A.I.[@Lee2009] or ACI[@Harding2013] does not differ and describes the ratio for lateral height over apical width \@ref(fig:ACICells). 
+\noindent In these two publications, the way they measure A.I. [@Lee2009] and ACI [@Harding2013] respectively, does not differ and is the ratio of lateral height over apical width. 
 
 \[\mathbf{ACI} = \frac{lateral\;height\;[\mu m]}{apical\;width\;[\mu m]}\]
 
-\noindent While trying to reproduce these results we found two principal weaknesses of applying this ratio to the cells of the PLLp. First, it does not respect the independence of lateral height to AC. Second, it does not differentiate between _anterio-posterior_ (AP) and _dorso-ventral_ (DV) tissue polarization. Third, it is really more an A.I. than a constriction index.
+\noindent We found two principal weaknesses of applying this ratio to the cells of the PLLp. First, it does not respect the independence of lateral height to AC. Second, it does not differentiate between _anterio-posterior_ (AP) and _dorso-ventral_ (DV) tissue polarization. Third, it actually represents the A.I. rather than the apical _constriction_ index.
 
 ###### Parameter definition {#ACI-param}
 
-To obtain a precise and biologically meaningful quantity for AC, first a couple of definitions have to be made.
+To obtain a precise and biologically meaningful quantity for AC, first a couple of definitions had to be made.
 
 1. AC is independent of orientation and polarization
-    + Cells can be polarized along the AP axis
-    + Cells can also be polarized along the DV axis
+    + Cells may be polarized along the AP axis
+    + Cells may also be polarized along the DV axis
 2. AC is independent of lateral height
     + Lateral height can be described as the distance of the two farthest points on the surface area of a cell
     + Two cells with different lateral heights can be equally apically constricted
@@ -884,12 +847,12 @@ To obtain a precise and biologically meaningful quantity for AC, first a couple 
 
 ###### Adaption for variation in lateral height {#ACI-lat}
 
-To test different A.I. conditions, an apically constricted cell can be approximated by modeling a tetrahedron. For example, shrinking or enlarging a cell symmetrically should not affect the ACI. As described by Harding(2014)[@Harding2013], the _apical width_ of a cell is measured first by manual 3-D object reconstruction, second manual re-orientation, and third by going 1 $\mu$m from the apical tip into the cell (from now on referred  to as $\Delta$ap, \@ref(fig:ACICells)B). Finally, _apical width_ is the total width of the 2-D object.
+To test different A.I. conditions, an apically constricted cell can be approximated by modeling a tetrahedron. For example, shrinking or enlarging a cell symmetrically should not affect the ACI. As described by Harding(2014)[@Harding2013], the _apical width_ of a cell is measured first by manual 3-D reconstruction, second manual re-orientation, and third by going 1 $\mu$m from the apical tip into the cell (from now on referred to as $\Delta$ap, \@ref(fig:ACICells)B). Finally, _apical width_ is the total width of the 2-D object in the respective Z-stack plane.
 
-If $\Delta$ap is a constant, the A.I. in a symmetrically enlarged cell increases from e.g. 15 to 23, since _apical width_ stays the same but lateral height increases. On the contrary, if $\Delta$ap is adjusted relative to a cells lateral height, e.g. by percentage, the A.I. in a symmetrically enlarged cell stays the same \@ref(fig:ACICells)
+If $\Delta$ap is a constant, the A.I. in a symmetrically enlarged cell increases from e.g. ~15 to ~23, since _apical width_ stays the same but lateral height increases. On the contrary, if $\Delta$ap is adjusted relative to a cells lateral height, e.g. by percentage, the A.I. in a symmetrically enlarged cell stays the same (figure \@ref(fig:ACICells)).
 
 (ref:ACICells) A.I. model **A-A’’** A.I. Cell Models. A’ and A’’ show cells that are symmetrically increased versions of A. While in A’, constant delta was used, in A’’ delta was adjusted relative to the lateral height. **B** Illustrating delta ap. (left) apically constricted cells volume rendered in XY (top) and as a lateral cross-section in X-Z (bottom). (right) 2D area as seen at delta ap of 1 or 2.5 $\mu$m.
-```{r ACICells, dpi=200, out.width='75%',fig.cap="(ref:ACICells)", fig.scap = "ACI Cell Models"}
+```{r ACICells, dpi = 200, out.width = '75%',fig.cap = "(ref:ACICells)", fig.scap = "ACI Cell Models"}
 knitr::include_graphics(path = "figures/summary/aci_fig-01.png")
 ```
 
@@ -899,21 +862,21 @@ Therefore the measurement for apical width has to be relative to lateral height.
 
 ###### Adaption for tissue polarization {#ACI-pol}
 
-Organs develop in a 3-D space and are polarized along each axis. AC usually describes a 2-D morphogenetic movement towards a center along the X-Y axes. However, the contraction movements along X and Y might be independent of one another. This could mean that they happen at different speeds, or that one is absent. As a result, the tissue would look less radially \@ref(fig:cellpol) constricted, but more constricted against a line. In order to separate those two AC dimensions, the A.I. can be calculated for the _anterio-posterior_ and for the _dorso-ventral_ axis \@ref(fig:cellpol).
+Organs develop in a 3-D space and are polarized along each axis. AC usually describes a 2-D morphogenetic movement towards a center along the X-Y axes. However, the contraction movements along X and Y might be independent of one another. This could mean that they happen at different speeds, or that one is absent. As a result, the tissue would look less radially (figure \@ref(fig:cellpol)B) constricted, but more constricted along one particular axis (anisotropic). In order to separate those two AC dimensions, the A.I. can be calculated for the _anterio-posterior_ and for the _dorso-ventral_ axis (figure \@ref(fig:cellpol), horizontal vs. vertical).
 
 (ref:cellpol) Schematic AC along the A-P and D-V axis. **A** shows a A-P and D-V constricted cluster of cells. **B** shows a D-V constricted cluster of cells.
-```{r cellpol, out.width='75%', fig.cap="(ref:cellpol)", fig.scap = "Schematic anisotropic AC"}
+```{r cellpol, out.width = '75%', fig.cap = "(ref:cellpol)", fig.scap = "Schematic anisotropic AC"}
 knitr::include_graphics("figures/materials/models/ACI_Cells_pol.png")
 ```
 
-\noindent By fitting an ellipsoid to the volume area taken at $\mathrm{\Delta}$ap, one will obtain the following parameters.
+\noindent By fitting an ellipsoid to the volume area taken at $\mathrm{\Delta}$ap, one will obtain the following parameters (figure \@ref(fig:ellipse)).
 
-1. Length of Major axis (figure \@ref(fig:ellipse))
+1. Length of Major axis
     + constituting _apical width_
-2. Length of Minor axis (figure \@ref(fig:ellipse))
+2. Length of Minor axis
     + constituting _apical height_
-3. Angle of Major from 0$^\circ$ (figure \@ref(fig:ellipse))
-    + indicative for orientation of _lateral height_
+3. Angle of Major from 0$^\circ$
+    + indicative for orientation of _lateral height_: If the angle is close to 0$^\circ$, the long axis of the apical area is parallel to the AP axis (the cell is constricted along the DV axis). If the angle is close to 90$^\circ$, the long axis of the apical area is parallel to the DV axis (the cell is constricted along the AP axis).
 
 (ref:ellipse) Scheme of ellipsoid measures. **A** shows the major axis as apical width and the minor axis as apical height. **B** shows the angular displacement from the horizon in steps of 30$^\circ$.
 ```{r ellipse, out.width='75%', fig.cap="(ref:ellipse)", fig.scap = "Scheme of ellipsoid measures"}
@@ -930,40 +893,105 @@ The two dimensions of AC indices can therefore be described as the following rat
 
 ```{r, echo = F}
 load("data/SN180_ACI.RData")
+load("data/ac.RData")
 ```
 
 ###### Single Cell measurements {#ACI-singlecell}
 
-Each geometric object has a centroid coordinate in X and Y (and Z) which is represented as the mean of all X or Y coordinates within the object. Here, the centroid coordinates in X and Y are used to plot the cells as points in the X-Y plane. Additionally, each point is colored for the A.I. value (high values are blue-violet, middle values are green, low values are yellow-red). 
+Each geometric object has a centroid coordinate in X and Y (and Z) which is represented as the mean of all X or Y coordinates within the object. Here, the centroid coordinates in X and Y are used to plot the cells as points in the X-Y plane. Additionally, each point is colored for the A.I. value (high values are red - dark red, middle values are green, low values are cyan - blue). 
 
-(ref:ACIMajor) A.I.~Major~ single cell measurements
-```{r ACIMajor, out.width='85%', fig.height = 1.75, fig.cap="(ref:ACIMajor)"}
-ggplot(SN180, aes(CXN, CY..unit.)) +
-  geom_point(aes(colour=ACI_Major), size = 2, shape = 16, show.legend = TRUE) +
-  scale_colour_gradientn(colours = rainbow(5)) +
-  labs(title = "", x = "X centroid normalized to leading edge [µm]", y = "Y centroid [µm]") +
-  facet_grid(.~GT, labeller = label_parsed) +
-  mythemeLIGHT_bottom()
+```{r include = FALSE}
+SN180_long <-
+SN180 %>% 
+  as_tibble() %>% 
+  select(CXN, 
+         CYU = CY..unit., 
+         ACI_Minor, 
+         ACI_Major,
+         GT) %>% 
+  pivot_longer(
+    cols = c(ACI_Minor, ACI_Major)
+    ) %>%
+  mutate(
+    name =
+    case_when(
+      name == 'ACI_Minor' ~ 'ACI[Minor]',
+      name == 'ACI_Major' ~ 'ACI[Major]'
+      )
+  ) %>%
+  #group_by(GT, name) %>%
+  filter(
+    value < quantile(.$value, .95),
+    !CXN < quantile(.$CXN, .01) & !CXN > quantile(.$CXN, .99)
+  ) 
+
+SN180_summary <-
+  SN180_long %>% 
+  group_by(GT, name) %>% 
+  summarize(
+    min_x = min(CXN, na.rm = T),
+    max_ac = max(value, na.rm = T),
+    mean_ac = mean(value)
+    )
 ```
 
-(ref:ACIMinor) A.I.~Minor~ single cell measurements
-```{r ACIMinor, out.width='85%', fig.height = 1.75, fig.cap="(ref:ACIMinor)"}
-library(ggplot2)
-ggplot(SN180, aes(CXN, CY..unit.)) +
-  geom_point(aes(colour=ACI_Minor), size = 2, shape = 16, show.legend = TRUE) +
-  scale_colour_gradientn(colours = rainbow(5)) +
-  labs(title = "", x = "X centroid normalized to leading edge [µm]", y = "Y centroid [µm]") +
-  facet_grid(.~GT, labeller = label_parsed) +
-  mythemeLIGHT_bottom()
+(ref:ACIMinor) A.C.I.~Major / Minor~ single cell measurements
+```{r, out.width = '85%', fig.cap = "(ref:ACIMinor)"}
+ggplot(SN180_long, aes(CXN, CYU)) +
+  geom_vline(
+    data = SN180_summary,
+    aes(xintercept = min_x, fill = "L.E."), 
+    linetype = 2, size = .5, show.legend = TRUE) +
+  geom_point(aes(colour = value), size = 1.5, shape = 16) +
+  labs(title = "", 
+       caption = 'L.E. = leading edge',
+       x = "X centroid normalized to leading edge [µm]", 
+       y = "Y centroid [µm]") +
+  #scale_colour_gradientn(colours = rev(rainbow(5))) +
+  scale_colour_gradientn(colours = jet.colors(5)) +
+  facet_grid(name~GT, labeller = label_parsed) +
+  scale_y_continuous(limits = c(-10, 55)) +
+  coord_fixed() +
+  mythemeLIGHT_bottom() +
+    theme(
+      legend.title = element_blank(),
+      strip.background = element_blank(),
+      strip.text = element_text(size = rel(1.2), face = 'bold')
+      )
+```
+
+```{r include = FALSE}
+load("data/SN180_ACI.RData")
+SN180_summary <-
+SN180 %>% 
+  as_tibble() %>% 
+  select(CXN, 
+         CYU = CY..unit., 
+         ACI_Minor, 
+         ACI_Major,
+         GT) %>% 
+  pivot_longer(
+    cols = c(ACI_Minor, ACI_Major)
+    ) %>%
+  mutate(
+    name =
+    case_when(
+      name == 'ACI_Minor' ~ 'ACI[Minor]',
+      name == 'ACI_Major' ~ 'ACI[Major]'
+      )
+  ) %>%
+  group_by(GT, name) %>% 
+  summarize(
+    min_x = min(CXN, na.rm = T),
+    max_ac = max(value, na.rm = T),
+    mean_ac = mean(value)
+    )
 ```
 
 Harding(2013)[@Harding2013] were using a constant $\mathrm{\Delta}$ap to measure the apical width, which we have shown to be incorrect in certain cases. In their study they found that certain mean A.I. values in the DMSO go as high as 15, which might be related to this \@ref(fig:ACICells). 
-By measuring apical width at a relative $\mathrm{\Delta}$ap the mean values for A.I.~Major~ are at `r round(mean(SN180_DMSO$ACI_H_F20), digits=1)` for the DMSO control and `r round(mean(SN180_SU$ACI_H_F20), digits=1)` for the SU5402 treated condition, which seems to somewhat correlate with their findings\@ref(fig:HardingACI). .
+By measuring apical width at a relative $\mathrm{\Delta}$ap and taking into account all pLLP cells these two exemplary pLLPs show a mean difference in the Major of `r round(SN180_summary %>% filter(GT == 'DMSO', name == 'ACI[Major]') %>% pull(mean_ac) - SN180_summary %>% filter(GT == 'SU5402', name == 'ACI[Major]') %>% pull(mean_ac), 2)` and `r round(SN180_summary %>% filter(GT == 'DMSO', name == 'ACI[Minor]') %>% pull(mean_ac) - SN180_summary %>% filter(GT == 'SU5402', name == 'ACI[Minor]') %>% pull(mean_ac), 2)` in the Minor (see table \@ref(tab:aci_summary)).
 
-However overall our results indicate that the AC difference is not as strong, at least if all the cells of the PLLp are taken into account.
-
-(ref:HardingACI) AI indices by Harding et al. **E-G'** 3-D reconstructions of the highlighted cell. **H** A.I.s for embryos treated with DMSO, SU5402, PD0325901 or following induction of hsp70:dn-Ras. (n=180 cells / N = 6 embryos).
-
+(ref:HardingACI) AI indices by Harding et al. **E-G'** 3-D reconstructions of the highlighted cell. **H** A.I.s for embryos treated with DMSO, SU5402, PD0325901 or following induction of _hsp70:dn-Ras_. (n = 180 cells / N = 6 embryos).
 ```{r HardingACI, out.width='60%', dpi=200, fig.cap="(ref:HardingACI)", fig.scap = "AI indices by Harding et al."}
 knitr::include_graphics("figures/materials/models/harding.png")
 ```
@@ -985,30 +1013,60 @@ Now, to get an idea of the magnitude ACI~Major~ and ACI~Minor~ have at each angl
 2. For the ACI~Major~ the base constriction for both, DMSO and SU5402 is at around 3.6, however there is a peak at around 40-60° in the DMSO control where cells are most constricted having a maximum ACI at `r round(max(SN180_DMSO$ACI_H_F20), digits=1)`. This indicates that cells coming from `r round(mean(SN180_DMSO$apAngle), digits=1)`° are most constricted in the _anterior-posterior_ axis.
 
 (ref:angletoACI) ACI~Major~ / ACI~Minor~ over Major~Angle~
-```{r angletoACI, out.width='49%', fig.width=5, fig.height=2.75, fig.cap="(ref:angletoACI)", fig.keep='all', fig.show='hold'}
+```{r angletoACI, out.width='49%', fig.width = 5, fig.height = 2.9, fig.cap = "(ref:angletoACI)", fig.keep = 'all', fig.show = 'hold'}
+# Major Angle KDE
+
 ggplot(SN180, aes(ACI_Angle)) +
-  stat_density(aes(group=GT), geom="area", bw=3, size=1.5, position = "identity", fill="black", alpha=.1) +
-  stat_density(aes(colour=GT), geom="line", bw=3, size=1.5, position = "identity") +
+  stat_density(aes(group = GT), geom = "area", bw = 3, size = 1.5, position = "identity", fill = "black", alpha = .1) +
+  stat_density(aes(colour = GT), geom = "line", bw = 3, size = 1.5, position = "identity") +
   scale_x_continuous(breaks = seq(0, 90, 15)) +
-  labs(title = "", x = "Major Angle", y = "KDE") +
-  coord_cartesian(xlim = c(5, 82), ylim = c(0.002, 0.033)) +
-  annotate("text", x = 5, y = 0.032, label = "A", size=6) +
+  labs(
+    title = "",
+    caption = 'curve = kernel density estimate',
+    x = "Major Angle", 
+    y = "Density") +
+  coord_cartesian(
+    xlim = c(5, 82), 
+    ylim = c(0.002, 0.035)
+    ) +
+  annotate("text", x = 5, y = 0.032, label = "A", size = 6) +
   mythemeLIGHT_bottom() + 
-    theme(legend.title=element_blank()) + 
-    theme(legend.position = c(0.8, 0.85))
+    theme(
+      strip.background = element_blank(),
+      legend.title = element_blank(),
+      legend.position = c(0.85, 0.85)
+      )
+
+# Major Angle over ACI Major and Minor
+
+ann_text <- 
+  data.frame(
+    value = c(6.7, 6.7),
+    Angle = c(6.1, 6.1),
+    lab = c('B','B\''), 
+    ACI = factor(c("ACI[Minor]", "ACI[Major]"))
+    )
 
 ggplot(SN180_ACIs, aes(Angle, value)) +
-  stat_smooth(aes(colour=GT), geom = "line", se=FALSE, method="loess", span=.3, size=1.5) +
+  stat_smooth(aes(colour = GT), geom = "line", se = FALSE, method = "loess", span = .3, size = 1.5) +
   scale_x_continuous(breaks = seq(0, 90, 25)) +
-  labs(title = "", x = "Major Angle", y = "ACI") +
-  scale_x_continuous(limits= c(0, 90), breaks = seq(15, 75, 15)) +
+  labs(
+    title = "",
+    caption = 'curve = local polynomial regression',
+    x = "Major Angle", 
+    y = "ACI") +
+  scale_x_continuous(limits = c(0, 90), breaks = seq(15, 75, 15)) +
   scale_y_continuous(breaks = seq(2, 7, 1)) +
   coord_cartesian(xlim = c(5, 82)) +
-  annotate("text", x = 6, y = 6.7, label = "B", size=6) +
+  geom_text(data = ann_text, label = c('B\'', 'B'), size = 6, face = 'bold') +
   facet_grid(.~ACI, labeller = label_parsed) +
   mythemeLIGHT_bottom() + 
-    theme(legend.title=element_blank()) + 
-    theme(legend.position = c(0.85, 0.85))
+    theme(
+      strip.background = element_blank(),
+      strip.text = element_text(size = rel(1.2), face = 'bold'),
+      legend.title = element_blank(),
+      legend.position = c(0.85, 0.85)
+      )
 ```
 
 #### Timelapse analysis

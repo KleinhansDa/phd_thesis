@@ -49,7 +49,8 @@ acknowledgements: |
 preface: |
   > "The most exciting time in the history of developmental biology is right now. Fueled both by new technologies and by new thought from other fields, we are exploding old notions and opening fantastic new horizons in embryology. [...]
   
-  > Next, let’s discuss why developmental biology — both normal and pathological — holds such enduring fascination. I see two intertwined explanations. Obviously, it’s the ultimate personal creation story, telling each of us both where we came from and how we were constructed. Less obvious, but perhaps more tantalizing for us scientists, is the sheer complexity of the process. A single cell with a single genome can somehow create trillions of cells in hundreds of radically different types, and those cells can organize themselves into a specific form. The scale of this self-organization process is mind boggling, surely the most amazing of emergent properties."
+  > Next, let’s discuss why developmental biology — both normal and pathological — holds such enduring fascination. I see two intertwined explanations. Obviously, it’s the ultimate personal creation story, telling each of us both where we came from and how we were constructed. Less obvious, but perhaps more tantalizing for us scientists, is the sheer complexity of the process. A single cell with a single genome can somehow create tril
+  lions of cells in hundreds of radically different types, and those cells can organize themselves into a specific form. The scale of this self-organization process is mind boggling, surely the most amazing of emergent properties."
   
   > \- John B. Wallingford, 2019^["We Are All Developmental Biologists", Developmental Cell, Vol.50, Issue 2, Jul 22, 2019]
 
@@ -75,19 +76,29 @@ library(thesisdown)
 ```
 
 ```{r chunkopts, include=FALSE}
-knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE, 
-                      fig.align='center', dpi = 200,# fig.pos = 'H',
-                      dev.args=list(bg="transparent"), dev='png') #, dev='pdf'
-library(pROC)
-#library(plyr)
-#library(dplyr)
-#library(data.table)
-library(ggplot2)
-library(ggpubr)
-library(pander)
-library(kableExtra)
-library(magrittr)
-#library(ggpaired)
+knitr::opts_chunk$set(echo = FALSE, 
+                      warning = FALSE, 
+                      message = FALSE, 
+                      fig.align = 'center', 
+                      dpi = 200,# fig.pos = 'H',
+                      dev.args = list(bg="transparent"), 
+                      dev = 'png') #, dev='pdf'
+# libraries
+  library(pROC)
+  #library(data.table)
+  library(ggplot2)
+  library(ggpubr)
+  library(pander)
+  library(kableExtra)
+  library(magrittr)
+  library(tidyverse)
+  #library(ggpaired)
+# colors
+  jet.colors <- 
+    colorRampPalette(c("#00007F", "blue", "#007FFF", "cyan", "#7FFF7F", "yellow", "#FF7F00", "red", "#7F0000"))
+  angle.colors <- 
+    colorRampPalette(c("#00007F", "blue", "#007FFF", "cyan", "#7FFF7F", "yellow", "#FF7F00", "red", "#7F0000", 
+                                  "red", "#FF7F00", "yellow","#7FFF7F", "cyan", "#007FFF", "blue", "#00007F"))
 ```
 
 ```{r tablechunkopts, echo = FALSE}

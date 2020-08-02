@@ -19,6 +19,12 @@ In addition data, figures and tables are stored in a dedicated git repository^[g
 - Change display settings
 - Search contents
 
+# List of publications {.unnumbered}
+
+This thesis contains material from the following papers. The rights have been granted by the publisher to include the material in this dissertation. Some passages have been quoted _verbatim_ for the scientific accuracy from the following sources:
+
+1. Kleinhans, D. S., & Lecaudey, V. (2019). Standardized mounting method of (zebrafish) embryos using a 3D-printed stamp for high-content, semi-automated confocal imaging. 1–10.
+
 # List of Abbreviations {.unnumbered}
 
 ```{r abbrev}
