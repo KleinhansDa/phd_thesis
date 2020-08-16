@@ -236,7 +236,7 @@ m1274Tg       _hsp70:shr3v1FL-taqRFP_      -
 ------------ ----------------------------- ----------------------------------------------------
 Table: (\#tab:mat-lines) Zebrafish lines
 
-### ISH probe list {#mat-probes}
+### ISH probes {#mat-probes}
 
 ---------------------------------------------------------------------------------------------
 **Probe**  **Sequence**                
@@ -247,7 +247,7 @@ deltaD      see [@Haddon1998]
 ---------- ----------------------------------------------------------------------------------
 Table: (\#tab:mat-probes) ISH probes
 
-### ISH probe list {#mat-mos}
+### Morpholinos {#mat-mos}
 
 ---------------------------------------------------------------------------------------------
 **Probe**  **Sequence**                   **Concentration** 
@@ -668,13 +668,13 @@ Code-snippets describing the main functionality are described in the next couple
 			run("Convert to Mask");
 			REG = getTitle();
 
-	# ############################################## ANALYSIS ###########################################
+	# ### ANALYSIS ###
 	
 		run("Analyze Particles...", "size=150-10000 include exclude add");
 		rmcount = roiManager("count")-1;
 		print("rois: "+rmcount);
 		
-	# ############################################## ANGLE ###########################################
+	# ### ANGLE ###
 	
 		if(roiManager("count") == 1) {
 			roiManager("select", 0);
@@ -707,7 +707,7 @@ Code-snippets describing the main functionality are described in the next couple
 			run("Make Binary");
 			REG = getTitle();
 		
-		# ############################################ CROPPING ######################################### 
+		# ### CROPPING ### 
 
 			roiManager("reset");
 			run("Analyze Particles...", "size=150-10000 include add");
@@ -726,7 +726,7 @@ Code-snippets describing the main functionality are described in the next couple
 			close(REGD);
   		} 
 
-	# ############################################ REGISTER ###########################################
+	# #### REGISTER ###
 	
 		resetMinAndMax();
 		if (dual) {
@@ -777,7 +777,7 @@ Code-snippets describing the main functionality are described in the next couple
 ###### Segmentation
 
 ```{r anallzr2dt_seg, echo = T, eval = F}
-#  #################################### Background correction ####################################
+#  ### Background correction ###
 	
 	print("  Segmenting "+embryoID+"_RC...");
 		selectWindow(ORG);
@@ -801,7 +801,7 @@ Code-snippets describing the main functionality are described in the next couple
 		run("Images to Stack", "name="+ ORG +" title = [] use");
 		MC = getTitle();
 		
-	#	############################################ SEGMENTATION #######################################
+	#	### SEGMENTATION ###
 	
 		selectWindow(MC);
 		run("Gaussian Blur...", "sigma=5.5 scaled stack");
@@ -875,7 +875,7 @@ for (b = 0; b < orgdirlist.length; b++) {
 		dotIndex = indexOf(RC, ".");
 		title = substring(RC, 0, dotIndex);
 	
-# #############################  ENTER 2nd LOOP TO INCREMENT OVER EACH SLICE OF THE TIME-SERIES ##############################
+# ###  ENTER 2nd LOOP TO INCREMENT OVER EACH SLICE OF THE TIME-SERIES ###
 
 	selectWindow(BIN); 	 # select binary
 	pangles = newArray(nSlices()+1);
@@ -1523,7 +1523,7 @@ The training dataset consitsts of 17 DMSO- and SU5402- treated embryos each. SU5
 
 (ref:CNNtrain) Example for rosette detection on the training data. **left** Maximum Z-projected input data. **middle** heatmap of scores. blue indicates a low score, red a high one. **right** score map projected onto the input data.
 
-```{r CNNtrain, out.width='75%', fig.scap="(ref:CNNtrain)", fig.scap = "Example for rosette detection on the training data"}
+```{r CNNtrain, out.width = '75%', fig.scap = "(ref:CNNtrain)", fig.scap = "Example for rosette detection on the training data"}
 knitr::include_graphics("figures/materials/cnn/CNNtrain.png")
 ```
 
@@ -1558,7 +1558,7 @@ For mounting the procedure described in section \@ref(mount-met) was used. Nucle
 
 (ref:mitodatapoints) Tracking of mitotic events
 
-```{r mitodatapoints, out.width='60%', fig.scap="(ref:mitodatapoints)", fig.scap = "Tracking of mitotic events"}
+```{r mitodatapoints, out.width = '60%', fig.scap = "(ref:mitodatapoints)", fig.scap = "Tracking of mitotic events"}
 knitr::include_graphics("figures/materials/prol/Prolif.png")
 ```
 
@@ -1602,7 +1602,7 @@ If $\Delta$ap is a constant, the A.I. in a symmetrically enlarged cell increases
 
 (ref:ACICells) A.I. model **A-A’’** A.I. Cell Models. A’ and A’’ show cells that are symmetrically increased versions of A. While in A’, constant delta was used, in A’’ delta was adjusted relative to the lateral height. **B** Illustrating delta ap. (left) apically constricted cells volume rendered in XY (top) and as a lateral cross-section in X-Z (bottom). (right) 2D area as seen at delta ap of 1 or 2.5 $\mu$m.
 
-```{r ACICells, dpi = 200, out.width = '75%', fig.cap = "(ref:ACICells)", fig.scap = "ACI Cell Models"}
+```{r ACICells, out.width = '75%', fig.cap = "(ref:ACICells)", fig.scap = "ACI Cell Models"}
 knitr::include_graphics(path = "figures/summary/aci_fig-01.png")
 ```
 
@@ -1630,7 +1630,8 @@ knitr::include_graphics("figures/materials/models/ACI_Cells_pol.png")
     + indicative for orientation of _lateral height_: If the angle is close to 0$^\circ$, the long axis of the apical area is parallel to the AP axis (the cell is constricted along the DV axis). If the angle is close to 90$^\circ$, the long axis of the apical area is parallel to the DV axis (the cell is constricted along the AP axis).
 
 (ref:ellipse) Scheme of ellipsoid measures. **A** shows the major axis as apical width and the minor axis as apical height. **B** shows the angular displacement from the horizon in steps of 30$^\circ$.
-```{r ellipse, out.width='75%', fig.scap="(ref:ellipse)", fig.scap = "Scheme of ellipsoid measures"}
+
+```{r ellipse, out.width = '75%', fig.scap = "(ref:ellipse)", fig.scap = "Scheme of ellipsoid measures"}
 knitr::include_graphics("figures/materials/models/ellipse.png")
 ```
 
@@ -1760,7 +1761,7 @@ Now, to get an idea of the magnitude ACI~Major~ and ACI~Minor~ have at each angl
 
 (ref:angletoACI) ACI~Major~ / ACI~Minor~ over Major~Angle~
 
-```{r angletoACI, out.width='49%', fig.width = 5, fig.height = 2.9, fig.cap = "(ref:angletoACI)", fig.keep = 'all', fig.show = 'hold'}
+```{r angletoACI, out.width = '49%', fig.width = 5, fig.height = 2.9, fig.cap = "(ref:angletoACI)", fig.keep = 'all', fig.show = 'hold'}
 # Major Angle KDE
 
 ggplot(SN180, aes(ACI_Angle)) +

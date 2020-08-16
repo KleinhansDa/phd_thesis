@@ -87,7 +87,7 @@ Epithelial rosettes are intermediate structures of radially organized cells with
 At least two architectural distinct types of rosettes exist, depending on the tissues polarization. 
 First, in a planar polarized tissue, several cells converge at a central apico-basal line with no shrinkage of the apical surface to form a cylindrical structure (like a pie cut into $\geq$ 4) (figure \@ref(fig:constr)B). Such rosettes are usually observed during tissue elongation and rather short-lived. In a second scenario, cells converge to a central apical point through AC (figure \@ref(fig:constr)A). This type of rosette is more long-lived and usually does not resolve but already represents a morphologically pre-mature state of the organ to be formed [@Harding2014b].
 
-(ref:constr) Modes of constriction. *A* Cells converge to a central apical point *B* Cells converge at a central apico-basal line.
+(ref:constr) Modes of constriction. **A** Cells converge to a central apical point **B** Cells converge at a central apico-basal line.
 
 ```{r constr, out.width = '85%', fig.cap = "(ref:constr)", fig.scap = "Modes of constriction"}
 knitr::include_graphics("figures/intro/constriction.png")
