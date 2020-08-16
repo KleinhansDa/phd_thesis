@@ -11,8 +11,10 @@ title: '**Mechano – Chemical Feedback Loops \linebreak During Vertebrate Organ
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 output: 
-  #thesisdown::thesis_pdf: default
-  thesisdown::thesis_gitbook: default
+  thesisdown::thesis_pdf: default
+  #thesisdown::thesis_gitbook:
+    #highlight: monochrome # https://stackoverflow.com/questions/30880200/pandoc-what-are-the-available-syntax-highlighters
+
 #  thesisdown::thesis_word: default
 #  thesisdown::thesis_epub: default
 # If you are creating a PDF you'll need to write your preliminary content here or
@@ -81,7 +83,7 @@ knitr::opts_chunk$set(echo = FALSE,
                       message = FALSE, 
                       fig.align = 'center', 
                       dpi = 200,# fig.pos = 'H',
-                      dev.args = list(bg="transparent"), 
+                      dev.args = list(bg = "transparent"), 
                       dev = 'png') #, dev='pdf'
 # libraries
   library(pROC)

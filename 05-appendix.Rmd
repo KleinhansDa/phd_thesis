@@ -43,7 +43,7 @@ knitr::include_graphics("figures/supp/immunos.png")
 
 (ref:suppshrmort) Shroom Ortho- and Paralogs
 
-```{r suppshrmort, out.width='85%', fig.cap="(ref:suppshrmort)", fig.scap="Shroom Ortho- and Paralogs"}
+```{r suppshrmort, out.width='85%', fig.cap = "(ref:suppshrmort)", fig.scap = "Shroom Ortho- and Paralogs"}
 knitr::include_graphics("figures/supp/Shroom3_orthology-01.png")
 ```
 

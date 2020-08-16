@@ -1,19 +1,19 @@
 # Index {.unnumbered}
 
-Besides a print version, there is also an electronic version (gitbook) of this thesis^[kleinhansda.github.io/phd_thesis]. 
+Besides a print version, there is also an electronic version [gitbook](kleinhansda.github.io/phd_thesis)^[kleinhansda.github.io/phd_thesis] of this thesis. 
 
-In addition data, figures and tables are stored in a dedicated git repository^[github.com/KleinhansDa/phd_thesis].
+In addition data, data analysis scripts, figures and tables are stored in a dedicated [git repository](github.com/KleinhansDa/phd_thesis)^[github.com/KleinhansDa/phd_thesis].
 
 ![](figures/flipbook/flip.png)
 
-### Print version {.unnumbered}
+### Print version {-}
 
 - Including Ackknowlegements and Preface
 - Lateral line primordium _flipbook_
     + right pages (odd numbers) show the wildtype
     + left pages (even numbers) show the mutant
 
-### Electronic version {.unnumbered}
+### Electronic version {-}
 
 - Download pdf
 - Change display settings

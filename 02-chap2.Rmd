@@ -1,3 +1,10 @@
+```{r, echo = F}
+load("data/ground_truth_2D.RData")
+load("data/SN180_ACI.RData")
+load("data/ac.RData")
+load("data/ground_truth_3d.RData")
+```
+
 # Materials and Methods {#mat-met}
 
 ## Materials {#mat}
@@ -198,7 +205,7 @@ PBST                        PBS + 0.1% Tween20
 
 PBDT                        PBS + 1% BSA + 1% DMSO + 0.3% Triton
 
-PFA                         
+PFA                         4% paraformaldehyde in PBS
 
 P1                          50 mM Tris-HCl pH 8.0 + 10 mM EDTA pH 8.0 + 100 µg/mL RNAse
 
@@ -240,6 +247,17 @@ deltaD      see [@Haddon1998]
 ---------- ----------------------------------------------------------------------------------
 Table: (\#tab:mat-probes) ISH probes
 
+### ISH probe list {#mat-mos}
+
+---------------------------------------------------------------------------------------------
+**Probe**  **Sequence**                   **Concentration** 
+---------- ------------------------------ ---------------------------------------------------
+MoAtoh1a    see [@Lecaudey2008a; @Ma2009]  0.4 ng/mM
+
+p53         see [@Robu2007]                2 ng/mM
+---------- ------------------------------ ---------------------------------------------------
+Table: (\#tab:mat-mos) Morpholinos
+
 ### Hardware {#mat-hrdwr}
 
 #### Mounting Stamp {#mat-stamp}
@@ -251,25 +269,25 @@ An stl file for 3D printing can be found at [github.com/KleinhansDa/3DModels](ht
 ---------------------------------------------------------------------------------------------
        **Component**    Company         Product               Specs    
 -------------------- ---------------- ----------------------- -------------------------------
- Microscope            Nikon              Eclipse Ti-E             fully motorized 
+ Microscope            Nikon            Eclipse Ti-E            fully motorized 
  
- PFS                   Nikon              Perfect focus system     Z repositioning 
+ PFS                   Nikon            Perfect focus system    Z repositioning 
  
- XY-table              Merzhaeuser        XY motorized table       1 $\mu$m accuracy  
+ XY-table              Merzhaeuser      XY motorized table      1 $\mu$m accuracy  
  
- Piezo                                    Piezo Z-table            300 $\mu$m scan range
+ Piezo                                  Piezo Z-table           300 $\mu$m scan range
  
- SD system             Yokogawa           CSU-W1                   50 $\mu$m pattern
+ SD system             Yokogawa         CSU-W1                  50 $\mu$m pattern
  
- Laser                                    Laser Combiner           see table \@ref(tab:lasers)
+ Laser                                  Laser Combiner          see table \@ref(tab:lasers)
 
- FRAPPA                Revolution         FRAPPA                   -
+ FRAPPA                Revolution       FRAPPA                  -
  
- Borealis              Borealis           Borealis                 flat field correction 
+ Borealis              Borealis         Borealis                flat field correction 
  
- sCMOS                 Andor              ZYLA PLUS                4.2Mpix; 82%QE
+ sCMOS                 Andor            ZYLA PLUS               4.2Mpix; 82%QE
  
- Immersion             Merzhaeuser        Liquid Dispenser         -
+ Immersion             Merzhaeuser      Liquid Dispenser        -
 -------------------- ---------------- ----------------------- -------------------------------
 Table: (\#tab:SDcomp) Spinning Disc system components
 
@@ -321,333 +339,51 @@ Table: (\#tab:PCcomp) Workstation hardware components
 ----------------------------------------------------------------------------
                   **Software**   Version      web                    
 ------------------------------ -------------- ------------------------------ 
- Imagej FIJI                    1.48            [https://fiji.sc/]
+ Imagej FIJI                    1.48            https://fiji.sc/
  
- RStudio                        1.0.153         [https://www.rstudio.com/]
+ RStudio                        1.0.153         https://www.rstudio.com/
  
- Ubuntu                         17.1            [https://www.ubuntu.com/]
+ Ubuntu                         17.1            https://www.ubuntu.com/
  
  Windows 10 Pro                 10.0.16299
  
- Total Commander                9.0             [http://ghisler.com/]
+ Total Commander                9.0             http://ghisler.com/
 ------------------------------ -------------- ------------------------------
 Table: (\#tab:sftwr) Used software
 
-#### Image I macros
-
-##### Cluster Analysis
-
-##### Morphometric Analysis
-
-##### Timelapse Analysis
-
-### Ground Truth Data {#mat-GrTrDat}
-
-Analyzing images and extracting quantitative measurements can be a tedious task, especially when the analysis becomes more complex. Fortunately, there are ways to automate image analysis by using either machine learning approaches or by tailoring hand-crafted algorithms in an image analysis software tool like e.g. ImageJ[@Schindelin2012]. 
-The main advantages of doing so are to...
-
--	be independent of confirmation bias
--	make the analysis more robust against oversight
--	increase the statistical power by increasing the number of data points[@Button2013]
--	increase effect size by increasing the measurement accuracy[@Button2013]
-
-However, to ensure the measurements taken by a tailored or trained algorithm are meaningful, they must be compared to a _ground truth_ dataset which again describes a general measure of algorithmic quality performance[@Krig2014].
-
-#### Cluster Analysis
-
-The _Cluster Analysis_ algorithm was designed for semi-automatic cell cluster detection in the _cldnb:lyn-gfp_ transgenic line and optional nuclei counting in a second DAPI labeled channel within the Regions of Interest (ROIs) derived from the cell cluster detection.
-
-#####  Design
-
-To assess the quality of the _ClusterAnalysis_ algorithm for nuclei detection the ground truth was designed as follows.
-
-###### Model
-
--	each Cell Cluster (CC) consists of a number of objects (cells)
--	each object is part of the respective CC and defines one cell entity
--	each object is determined via a fluorescent nucleus label
-- embryos are mounted within a 3D mold (section \@ref(mount-met)) to reduce noise
-
----------------------------------- ----------------------------------
-                          XY scale 0.32 px/$\mu$m
- 
-                         Z-spacing 4 $\mu$m
- 
-                            Camera Rolera
----------------------------------- ----------------------------------
-Table: (\#tab:imgcond3DGrT) Cluster Analysis Model
-
-###### Training data
-
-The training set consists of three randomly picked wild type PLLps. For each the algorithm was run with standard parameters. Cell cluster ROIs and nuclei multi point labels were edited manually.
-
-###### Test data
-
-To test the algorithm, it is run at different nuclei detection thresholds on the same image data.
-
-##### Results
-
-###### Image Analysis
-
-For image analysis a custom IJ macro script was developed that segments individual cell clusters based on morphological filtering[@Legland2016], Gaussian blurring and subsequent thresholding. The user is then presented the segmentation ROIs to manually edit them, if necessary. Using those ROIs as masks, the nuclei within them are counted with a 2-D maxima finder. To detect the right amount of nuclei however, it is necessary to evaluate the distance over which the blurring should be applied.
-
-A typical nucleus in the PLLp is about 5 $\mu$m in diameter. To determine the right blurring value, a range of 4-6 $\mu$m in steps of 0.5 is tested.
-
-###### Macro modules
-
-The macro developed consists of the following main modules:
-
-1. Background subtraction, morphological filtering, Gaussian blurring & segmentation
-2. Manual correction for cell cluster segmentation masks
-3. ROI indexing from left (1) to right (n)
-3. Nuclei counting within cell cluster masks
-4. Export of results table (Area, Count, ...)
-
-###### Registered data
-
-Figure \@ref(fig:maxllreg) shows a registered maximum Z projected lateral line used for ground truth evaluation.
-
-(ref:maxllreg) Registration of 2D data **cluster segments** Registered, MaxIP data with cell cluster segments of the lyn-GFP signal laid upon the DAPI signal. **cell labels** Magenta dots represent the maxima found within each ROI and hence the nuclei labels.
-
-```{r maxllreg, out.width='90%', fig.cap="(ref:maxllreg)", fig.scap = "Registration of 2D data"}
-knitr::include_graphics("figures/materials/ground_truth/clusters/clusters.png")
-```
-
-##### Data Analysis
-
-###### Nuclei Count
-
-```{r, echo=F}
-load("data/ground_truth_2D.RData")
-```
-
-Comparing the segmented objects count of the Gaussian parameters with the ground truth gives an indication for over- resp. under-segmentation. In figure \@ref(fig:GrTratioCC) the relative numbers for each blurring parameter can be seen in percentage above or below the mean cell count of the ground truth (blue horizon). The red area represents over-segmentation, the green under-segmentation.
-
-(ref:GrTratioCC) Relative difference of segment counts (N=3, Error bars = Std./2, NB = nuclei blurring)
-
-```{r GrTratioCC, out.width='65%', fig.height=2.5, fig.cap="(ref:GrTratioCC)", fig.scap = "Relative difference of segment counts"}
-ggplot(NB_all_diff_mean, aes(Group, mean_diff)) +
-  geom_bar(aes(fill = Group), colour = "black", stat = "identity", show.legend = FALSE) +
-    geom_rect(aes(xmin = -Inf, xmax = Inf, ymin = 0, ymax = Inf), fill = "red", alpha = .05) +
-      annotate(geom = "text", x = 5.5, y = 5, fontface = "bold", label = "false negative", color = "red") +
-    geom_rect(aes(xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = 0), fill = 'green', alpha = .025) +
-      annotate(geom = "text", x = 1.5, y = -5, fontface = "bold", label = "false positive", color = "darkgreen") +
-  geom_bar(aes(fill = Group), colour = "black", stat = "identity", show.legend = FALSE) +
-  geom_hline(aes(yintercept = 0, linetype = "Ground Truth 100%"), colour = "blue", size = 1) +
-  geom_errorbar(
-    aes(fill = Group, ymin = mean_diff-(sd_diff/2), 
-        ymax = mean_diff + (sd_diff/2)), width = .2, position = position_dodge(.9)) +
-  labs(title = "", x = "Blurring Parameters", y = "Rel. Count Diff. [%]") +
-  scale_fill_brewer(palette = "Greys", direction = -1) +
-  scale_linetype_manual(name = "", values = c(1)) +
-  mythemeLIGHT_bottom() + 
-    theme(legend.position = c(0.18, 0.22)) + 
-    theme(legend.text = element_text(size=11))
-```
-
-\noindent To estimate the quality of nuclei detection for each parameter, the ratio of automatically detected and ground truth objects count can be calculated and compared (table \@ref(tab:nrcount)). The closer it is to 1, the better.
-
-```{r nrcount}
-knitr::kable(NB_all_CC_NR_mean, booktabs = T, caption = "Nuclei count ratio") %>%
-  kable_styling(full_width = T, latex_options = "striped")
-```
-
-##### Summary
-
-Maximum performance is achieved at a scaled parameter of 6 $\mu$m, with a ratio of of `r NB_all_CC_NR_mean[1,"NB60"]` for the count objects and a standard deviation of `r NB_all_CC_NR_mean[2,"NB60"]`.
-
-#### anallzr3D
-
-The anallzr3D algorithm was designed for fully automated, single cell volume segmentation in the _cldnb:lyn-gfp_ transgenic line. In addition to 3D cellular metrics, it offers Apical Constriction measurement of each cell.
-
-##### Design
-
-To assess the quality of the anaLLzr3D algorithm the ground truth was modeled as follows.
-
-###### Model
-
--	each PLLp consists of a number of objects (cells)
--	each object is part of the PLLp and defines one cell entity
--	cell boundaries are determined via the transgene _cldnb:lyn-gfp_ +/+
--	embryos are imaged live to conserve signal and membrane integrity
-- embryos are mounted within a 3D mold for improved 3D alignment
-
-```{r model3DGrT}
-tab <- read.delim("tables/ground_truth/anallzrmodel.txt")
-knitr::kable(tab, booktabs = T, caption="anaLLzr3D Model", align = c("r", "l"), escape = F, col.names = NULL) %>%
-  kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
-  column_spec(1, width = "3cm")
-```
-
-###### Training data
-
-The training set consists of three randomly picked wildtype PLLps. For each the algorithm is run with no filters (X, Y, Z border objects, size) and a minimum segmentation threshold. Afterwards the segmentation result is corrected manually for over- and under-segmentation and objects that are not part of the PLLp.
-
-###### Test data
-
-To test the algorithm it is run at different segmentation thresholds on the same image data.
-
-##### Results
-
-###### Image Analysis
-
-For image analysis a custom IJ macro script was developed that recognizes the cell boundaries via the fluorescence signal emitted by a Lyn Kinase tethered eGFP which expression is controlled by the _cxcr4b_ lateral line specific promotor [@Haas2006c]. The central IJ tool used to do this is the MorphoLibJ's[@Legland2016] _Morpholigical Segmentation_ plugin. The plugin however requires to choose for a 'segmentation threshold' that determines the quality and the quantity of segmented objects. This parameter therefore plays an essential role in the reliability of the analysis results.
-
-###### Macro modules
-
-The macro developed consists of the following main modules:
-
-1. PLLp registration and cropping in X, Y and Z
-2. Image segmentation using the MorphoLibJ's[@Legland2016] _Morpholigical Segmentation_ plugin
-3. Extration of 3-D measurements using the 3D ImageJ Suite's[@Ollion2013] _3D Manager_ plugin
-4. Cropping, clearing and measurement of single cell volumes using a custom IJ script
-
-###### Registration
-
-The first module of the macro is PLLp registration in X, Y and cropping in Z. This is accomplished by an initial maximum Z projection and blurring of the image, 2D segmentation using a minimum threshold and lastly by rotating the segment through the angle formed by the long axis of the ellipsoid and the horizon (at 0$^{\circ}$). After rotation the image is cropped according to the obtained ROI. Additionally, the centers of the most constricting areas are detected via an intensity based dynamic threshold and highlighted as magenta circles in \@ref(fig:maxraw).
-
-(ref:maxraw) Registration of 3D data
-```{r maxraw, out.width='90%', fig.cap = "(ref:maxraw)"}
-knitr::include_graphics(path = "figures/materials/ground_truth/registration.png")
-```
-
-```{r imgprop}
-tab <- read.delim("tables/ground_truth/scaling_3D.txt")
-knitr::kable(tab, booktabs = T, caption = "Physical image properties (scaling)", 
-             align = c("r", "l"), escape = F, col.names = NULL) %>%
-  kable_styling(full_width = T, latex_options = c('striped', 'hold_position'))
-```
-
-###### Ground Truth data
-
-```{r load3DGrT, echo=FALSE}
-load("data/ground_truth_3d.RData")
-```
-
-In figure \@ref(fig:stackmem) the fluorescence signal of the three PLLps tested is shown in a single central cross-section in the dorso-ventral and the apico-basal axis.
-
-To compare the results between the ground truth segments and the segments obtained from different threshold levels graphically, for a single PLLp the ground truth and threshold level[n] are shown as a composite color image in figure \@ref(fig:stackcomp). By using a green lookup table (LUT) for the ground truth and a magenta LUT for the threshold level[n], one can readily detect overlapping objects (white), over segmentation (magenta) and under segmentation (green).
-
-(ref:stackmem) _cldnb:lyn-gfp_ fluorescence signal in a cross-section of the PLLp (Obj.: 40X APO)
-```{r stackcomp, out.width='85%', fig.cap = "(ref:stackcomp)"}
-knitr::include_graphics("figures/materials/ground_truth/stackmem.png")
-```
-
-(ref:stackcomp) Graphical comparison of the thresholds tested
-
-```{r anallzrvols, out.width='85%', fig.cap = "(ref:stackcomp)"}
-knitr::include_graphics("figures/materials/ground_truth/volumes.png")
-```
-
-\noindent Volume renderings have been done with IJ's [VolumeViewer]("https://github.com/fiji/Volume_Viewer/releases/tag/Volume_Viewer-2.01.2")
-
-##### Data Analysis
-
-###### Cell Count
-
-In figure \@ref(fig:gtratio) the relative numbers for each threshold level can be seen in percentage above or below the mean cell count of the ground truth (blue horizon). Analogous to the graphical inspection, the magenta area represents over segmentation, the green under segmentation. Additionally, table \@ref(tab:gtrcellcount) shows the absolute numbers.
-
-(ref:gtratio) Relative difference of segment counts (N = 3, Errorbars = Std./2)
-
-```{r gtratio, out.width='65%', fig.height=2.5, fig.cap="(ref:gtratio)", fig.scap = "Relative difference of segment counts"}
-ggplot(all_count_diff_mean, aes(Group, mean_diff)) +
-  #geom_polygon(aes(x=c(0,1,1,0),y=c(0.5,0.5,4.5,4.5)),fill="#FFFF0044",color=NA)+
-  geom_bar(aes(fill = Group), colour = "black", stat = "identity", show.legend = FALSE) +
-    geom_rect(aes(xmin = -Inf, xmax = Inf, ymin = 0, ymax = Inf), fill = "magenta", alpha = .025) +
-      annotate(geom = "text", x = 4.5, y=5, fontface = "bold", label = "over segmentation", color = "magenta") +
-    geom_rect(aes(xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = 0), fill = 'green', alpha = .025) +
-      annotate(geom = "text", x = 1.5, y=-5, fontface = "bold", label = "under segmentation", color = "darkgreen") +
-  #scale_fill_identity(name = 'the fill', guide = 'legend',labels = c('m1', 'm2')) +
-  geom_bar(aes(fill=Group), colour = "black", stat = "identity", show.legend = FALSE) +
-  geom_hline(aes(yintercept = 0, linetype = "Ground Truth 100%"), colour = "blue", size = 1) +
-  geom_errorbar(
-    aes(fill = Group, ymin = mean_diff - (sd_diff/2),
-    ymax = mean_diff + (sd_diff/2)), width = .2, position = position_dodge(.9)) +
-  labs(title = "", x = "Threshold levels", y = "Rel. Count Diff. [%]") +
-  scale_fill_brewer(palette = "Greys", direction = -1) +
-  scale_linetype_manual(name = "", values = c(1)) +
-  mythemeLIGHT_bottom() + 
-    theme(legend.position = c(0.18, 0.3)) + 
-    theme(legend.text = element_text(size = 11))
-```
-
-```{r gtrcellcount}
-knitr::kable(all_count_cells, booktabs = T, caption="Cellcount ground truth") %>%
-  kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
-  row_spec(1, bold = T)
-```
-
-###### Cell Morphology
-
->  _There is always a precision / recall trade-off in detection tasks, e.g., when we set a lower threshold [. . .], we can get a higher recall with a lower precision ([. . .], but meanwhile we also get more false-positives in the results)._[@Liu]
-
-Inspecting the cell count unfortunately does not directly tell us how well the cell morphology is conserved at different threshold levels, since at higher threshold levels the cell boundaries are differently determined and eventually not even recognized as such anymore. 
-
-\noindent The volume of a cell is a very robust morphological feature. Therefore, if its volume does not differ significantly at a given threshold level we consider its morphology to be conserved.
-
-###### Sample distribution
-
-In figure \@ref(fig:volsecdffull) and \@ref(fig:volsecdfzoom) the distribution and amount of the cell volumes across the different threshold levels can be inspected via the 'empirical cumulative distribution function' (ECDF). The closer the slopes are to the ground truth, the stronger they are conserved. Figure \@ref(fig:volsecdffull) shows the full distribution, where the major differences seem to appear within the 0.4 quantile (red line). Therefore, in figure \@ref(fig:volsecdfzoom) only the values within the 0.4 quantile are shown to get a more detailed impression.
-
-(ref:volsecdffull) Cell volumes full distribution (red line = .4 Quantile)
-```{r volsecdffull, fig.height = 2.3, out.width='90%', fig.cap="(ref:volsecdffull)"}
-ggplot(all_vol, aes(Vol..unit., colour = Group)) +
-  geom_vline(aes(xintercept = quantile(Vol..unit., 0.4, na.rm=TRUE)), colour="red") +
-  stat_ecdf(geom = "step", pad = FALSE, size = 1.1) +
-  labs(title = "test", x = "Volumes", y = "Relative amount", color = "level") +
-  scale_x_continuous(limits = c(0, 750), breaks = seq(0, 1000, 200)) +
-  scale_colour_brewer(palette = "Greys", direction = -1) +
-  facet_grid(.~Obj, scale = "free", labeller = label_parsed) +
-  mythemeLIGHT_bottom() + 
-    theme(
-      axis.text = element_text(size = 9),
-      panel.background = element_rect(fill = "slategray3", colour = "black"),
-      strip.background = element_blank(),
-      legend.background = element_rect(fill = "slategray3", colour = "black"),
-      legend.text = element_text(size = 9))
-```
-
-(ref:volsecdfzoom) Cell volumes distribution within .4 Quantile
-```{r volsecdfzoom, fig.height = 2.3, out.width='90%', fig.cap="(ref:volsecdfzoom)"}
-ggplot(all_vol, aes(Vol..unit., colour = Group)) +
-  stat_ecdf(geom = "step", pad = FALSE, size = 1.1) +
-  labs(title = "test", x = "Volumes", y = "Relative amount", color = "level") +
-  scale_x_continuous(limits = c(0, 600), breaks = seq(0, 1000, 50)) +
-  scale_colour_brewer(palette = "Greys", direction = -1) +
-  coord_cartesian(ylim = c(0, 0.5), xlim = c(20, 210)) +
-  facet_grid(.~Obj, scale = "free", labeller = label_parsed) +
-  mythemeLIGHT_bottom() + 
-    theme(
-      axis.text = element_text(size = 9),
-      panel.background = element_rect(fill = "slategray3", colour = "black"),
-      strip.background = element_blank(),
-      legend.background = element_rect(fill = "slategray3", colour = "black"),
-      legend.text = element_text(size = 9))
-```
-
-###### Confidence level
-
-To statistically check how closely related each threshold level sample distribution is compared to the ground truth, a Kolmogorov-Smirnov-Test (ks.test) was performed. The ks.test is a nonparametric test whose null hypothesis is that the both groups compared were sampled from populations with identical populations. Therefore, the closer the p-value is to 1, the more similar the tested sample distribution would be to the ground truth (figure \@ref(fig:kstestvol); 5$\%$ confidence threshold indicated by red line).
-
-\[H_{0} : F_X(x)=F_0(x)\]
-
-(ref:kstestvol) Volumetric conservation (red line = 5$\%$ confidence threshold)
-
-```{r kstestvol, out.width='60%', fig.height=1.7, fig.cap="(ref:kstestvol)"}
-ggplot(ks.test_all, aes(variable, value)) +
-  geom_hline(yintercept = 0.95, colour="red") +
-  geom_point(aes(fill=group, shape=group), size=5, colour="black") +
-  labs(title = "", x = "PLLp", y = "p value") +
-  scale_fill_brewer(palette = "Greys", direction = -1) +
-  scale_y_reverse(limits = c(1, 0), breaks = seq(0, 1, 0.1)) +
-  coord_flip() +
-  mythemeLIGHT_bottom() + 
-  theme(legend.text = element_text(size=11))
-```
-
-\noindent In comparison to the Mann-Whitney test, the ks.test is more sensitive to detect changes in the shape of the distribution than to detect a shift of the median[@Lehman]
-
 ## Methods {#met}
+
+### Data Strategy and Analysis
+
+Due to the history of Developmental Biology and the complexity of biological processes _per se_, the field heavily relies on image data. Since the advent of electronic imaging techniques^[e.g. photomultipliers or charge-coupled devices] scientific image data can be processed and analyzed _in silico_. To make use of the possibility of 
+
+1. live imaging, which (as compared to fixation techniques) conserves the cellular integrity and morphology while also offers the possibility of recording time-lapses 
+2. the optically clear specimen and 
+3. high throughput image analysis and state-of-the-art data science using algorithmic implementations, 
+
+the three following points were paid special attention to.
+
+#### Sample Preparation
+
+For fluorescence microscopy zebrafish embryos are usually immersed in a 1% solution of _low melting-point agarose_ (LMPA) solution and then oriented on an optical cover slip manually until the LMPA has solidified. This process allows to mount^[the process of embedding the samples in agarose] eight to ten embryos _per_ dish. To make use of the high number of offspring a single zebrafish female may lay, which rapidly leads to a sample number of more than 300, a new sample preparation technique was devised that allows for (1) a four to five times increase in samples per dish (2) a facilitated navigation _via_ a grid-like orientation through the samples and (3) an improved spatial orientation where the embryos body axes are aligned parallel to the optical Z-sections of the confocal microscope. For details, see Materials and Methods section \@ref(mount-met) and Kleinhans _et al._, 2019[@Kleinhans2019].
+
+#### Imaging
+
+Technically, speed and sensitivity are most important for live imaging. Considering these two parameters a light-sheet [@Keller2010c] fluorescence microscope (LSFM) would be the best fit. However, LSFMs also have several limitations. First, due to the sample preparation methods available the number of samples that can be imaged at a time is highly restricted. Second, for subcellular resolution a high magnification is required, which is limited by working distances and third - for optimal image analysis a high Signal-to-Noise ratio (SNR) and numerical aperture (N.A.) is preferable. Therefore a spinning disc [@Graf2005] system was chosen for most of the imaging. 
+The system makes use of (1) an extra-large field of view (FOV) ideal for large specimen (2) the possibility of a high degree of automation with state-of-the-art software and (3) a water dispension system for long-term water immersion imaging. For details about the system see Materials and Methods section \@ref(mat-SD).
+
+#### Data handling
+
+Subsequently after data acquisition and pre-processing the image data was transferred from the microscope system to the labs main workstation. To uniquely identify each file and have them appear in a structured manner, a file-naming system was established after the following structure
+
+\makebox[\linewidth]{$[stage]\_[group]\_[id]\_[date]$}
+\newline
+
+Where _stage_ would e.g. be 32hpf, _group_ would be a genotype or drug treatment, _id_ would be a positional identifier on an imaging dish like B1P01^[Where B stands for a batch, that is if multiple dishes were imaged and P stands for the position within a single batch] and _date_ would be a date in the form of YYMMDD.
+
+#### Image and Data Analysis
+
+In order to be as objective an as high throughput as possible, almost all of the analyses performed for this study was solved using either algorithmically or state-of-the-art convolutional neural networks (CNNs). Furthermore, to meet the terms and conditions of _open science_^[“movement to make scientific research […] and its dissemination accessible to all levels of an inquiring society” – Wikipedia/en/Open_science] standards, all pipelines were implemented in open source software frameworks such as _Fiji is just image J_ (FIJI) and R. For further information about training datasets, algorithms and versions used see Materials and Methods section \@ref(mat-sftwr).
 
 ### Zebrafish {#Zeb-met}
 
@@ -691,11 +427,17 @@ For samples **earlier than 18s**, embryos were treated with 150 $\mu$L per 10 mL
 
 Fixation started at the desired stage in 4% PFA in 0.1% PBST at 4$^\circ$C o.n.. The next day, samples were rinsed 3 times for ~5 min. in PBST and passed through a MeOH series of 25$\%$ $\rightarrow$ 50$\%$ $\rightarrow$ 75$\%$ $\rightarrow$ 100$\%$ MeOH/PBST (V/V)). For permanent storage, samples were stored in 100$\%$ MeOH at -20$^\circ$C.
 
+#### Plasmid preparation {#miniprep}
+
+To remove solvent and medium, in a 1.5 or 2 mL tube, the bacteria were centrifuged in 2 mL tubes for 3 min. at 12000 rpm. To solve the pellet, the supernatant was discarded by pouring on a tissue and 200 $\mu$L of buffer P1 were added followed by thorough vortexing. To lyse the bacteria 400 $\mu$L of P2 were added, standing still. After a maximum of 5 min. 300 $\mu$L of P3 were added to neutralize the reaction and bind cellular material, and the tube was inverted five to six times.
+
+To harvest the plasmid DNA the solution was then first centrifuged for 10 min. at 12000 rpm and at RT. After, the supernatant was transferred to a new 2 mL tube. Second, to precipitate the DNA, 700 $\mu$L of iso-propanol were added and centrifuged for 20 min. at full speed and at 4$^\circ$C. After, the tube was checked for a opaque pellet and the supernatant was discarded. Third, to wash the pellet, 200 $\mu$L of 70$%$ EtOH were added and centrifuged for 7 min. at full speed and at 4$^\circ$C. The supernatant was discarded again. Finally, the pellet was air dryed under the hood and re-suspended in 50 $\mu$L ddH\textsubscript{2}O.
+
 #### In Situ Hybridization {#ISH-met}
 
 Sample preparation as described in section \@ref(sampleprep).
 
-##### 1. Permeabilisation & Probe Hybridization \newline \newline
+##### 1. Permeabilisation & Probe Hybridization
 
 **Permeabilisation** \newline $\rightarrow$ without shaking
 
@@ -736,45 +478,1052 @@ First, samples were blocked in 2$\%$ Goat Serum / PBDT (V/V) for 30 min.. For pr
 
 For mounting, an improved 3D specimen preparation and well-plate like sample navigation for zebrafish larvae confocal microscopy was developed which offers the following improvements...
 
-1. **To obtain a sufficient amount of data that is closely staged and still comprises > 4 independent groups.** Using this protocol, it is possible to define a custom well plate (figure \@ref(fig:stampprod) C) in your preferred imaging software, which greatly facilitates the imaging procedure and therefore helps to stay focused. However, once the well plate is aligned and the positions are defined it still needs some minor correction in Z.
+1. **To obtain a sufficient amount of data that is closely staged and still comprises > 4 independent groups.** Using this protocol, it is possible to define a custom well plate in your preferred imaging software, which greatly facilitates the imaging procedure and therefore helps to stay focused. However, once the well plate is aligned and the positions are defined it still needs some minor correction in Z.
 
 2. **To do the imaging live. Most of the time, especially in morphological analyses, live imaging is preferred since any fixation alters cell - and therefore organ morphology.** Live imaging guarantees an undisturbed and unbiased look at the _in vivo_ situation. Using this protocol, the embryonic body axes will be more in line with the XY displacement of the microscope stage which results, depending on the volume of interest, in narrower Z-stacks. This ultimately also leads to a reduction of photo-bleaching, phototoxicity and expenditure of time. The gained time can then be used to image shorter time-intervals in timelapse imaging. 
 
-3. **To reduce background signal and noise.** Instead of transforming and aligning the image data in a post-processing approach, the specimen can be imaged in the right spacial configuration in the first place. This is not only important for 3D analysis, but also for Z projected data. If the specimen body axes are not aligned with the axes of the microscopic table, the image stacks need to be bigger to record the volume of interest. In Z projections, for X Y coordinates out of the volume of interest, this will end up as background signal or noise (figure \@ref(fig:stampprod) B), complicating quantitative analysis and interpretation. The method therefore provides significant improvement over existing mounting techniques. 
+3. **To reduce background signal and noise.** Instead of transforming and aligning the image data in a post-processing approach, the specimen can be imaged in the right spacial configuration in the first place. This is not only important for 3D analysis, but also for Z projected data. If the specimen body axes are not aligned with the axes of the microscopic table, the image stacks need to be bigger to record the volume of interest. In Z projections, for X Y coordinates out of the volume of interest, this will end up as background signal or noise, complicating quantitative analysis and interpretation. The method therefore provides significant improvement over existing mounting techniques. 
 
 ##### Protocol
 
-First, make sure your stamp is clean of dust or other particles. If necessary clean it with 70% Ethanol and / or pressured air. Of a 1% standard Agarose in E3, apply...
-
-- 600 $\mu$L in case of a $\varnothing$ 35 mm ibidi dish 
-- 2000 $\mu$L in case of a $\varnothing$ 50 mm mattek dish 
-
-to the glass or polymer surface and place the stamp on it so that it touches the cover. Place it as central as possible. Excessive agarose not needed for the imprint will fill the surrounding area in the dish and stabilize the structure when removing the stamp again. 
-
-Gently rotate the dish so that excess agarose solution will cover the whole dish.
-
-Wait for ~45 min., then use a clean preparation needle and slip it through stamp - polymerized agarose interface. Remove the stamp carefully by lifting it and holding the $\mu$-Dish in place.
-
 (ref:stampprod) Stamping procedure **Agarose Cast** (A) clean stamp surface (B) preparation of the stamp before lifting (C) ready-for-use agarose imprint. **Mounting** (A) without LMPA (B and C) with LMPA, while the latter shows the imprint with light coming from a different angle, making the chambers visible again. (D) Horizontal alignment of embryos. **Imaging** (A) Positioning of the $\mu$-well (B) Alignment in Brightfield and (C) Definition of a custom well plate.
 
-```{r stampprod, out.width='95%', fig.cap="(ref:stampprod)", fig.scap = "Steps during improved zebrafish mounting"}
-knitr::include_graphics("files/pubs/klein_2019/006_prep.jpg")
+```{r stampprod, out.width = '95%', fig.cap = "(ref:stampprod)", fig.scap = "Steps during improved zebrafish mounting"}
+knitr::include_graphics("files/pubs/klein_2019/006_03.jpg")
 knitr::include_graphics("files/pubs/klein_2019/007.jpg")
 knitr::include_graphics("files/pubs/klein_2019/008.jpg")
 knitr::include_graphics("files/pubs/klein_2019/009.jpg")
+knitr::include_graphics("files/pubs/klein_2019/010.jpg")
 ```
 
 ### Dry lab {#comp-met}
 
+#### Image J macros
+
+Three IJ macros have been developed to facilitate image analysis and make results more reproducible. Each of them is specifically designed for input of LL and pLLP images of the _cldnb:lyn-gfp_ transgenic line.
+
+Hence, they are called __anaLLzr__ ...
+
+- **2D** - analysis of Z-projected images of the LL at end of migration
+- **2DT** - analysis of Z-projected images of the LL during migration
+- **3D** - analysis of 3D image stacks of the pLLP at a given timepoint
+
+##### anaLLzr2D {#mat-anallzr2d}
+
+From the opening dialog (figure \@ref(fig:anallzr2ddialog)) the user can choose to _count nuclei_ and / or _sort ROIs_. 
+
+If nuclei count is chosen, the macro expects a dual-channel _tiff_-file as input. 
+If ROI sorting is selected, segmented CCs are numbered and sorted from left to right instead of IJ's native sorting method (from top to bottom). 
+
+Slider values are optimized for the the microscope setup described in section \@ref(mat-SD).
+
+- _Membrane label blur_ controls the detail of pLLP and CC segmentation, where lower values result in more detail
+- _Closing filter_ controls how harsh objects are separated from each other
+- _Nuclei label blur_ controls the details of single nuclei and is evaluated after ground truth data described in section \@ref(mat-GrTrDat)
+
+(ref:anallzr2ddialog) anaLLzR2D opening dialog **checkboxes** Choose to count nuclei and whether ROIs sorting should be applied. **sliders** Choose filter and blurring levels.
+
+```{r anallzr2ddialog, out.width = '40%', fig.cap = "(ref:anallzr2ddialog)", fig.scap = "anaLLzR2D opening dialog"}
+knitr::include_graphics("figures/materials/macros/anallzr2D_macro.png")
+```
+
+Code-snippets describing the main functionality are described in the next couple of sub-sections.
+
+###### Segmentation
+
+The membrane labeled image is segmented based on optimized hard coded values which are based on experience. After, the macro halts for manual correction.
+
+```{r anallzr2d_seg, echo = TRUE, eval = FALSE}
+# Background subtraction
+	run("Subtract Background...", "rolling = 50");
+	run("Morphological Filters", "operation = Opening element = Disk radius = 20");
+	run("Gaussian Blur...", "sigma = 5 scaled");
+# Thresholding
+	setAutoThreshold("Moments dark");
+	setOption("BlackBackground", false);
+	run("Convert to Mask");
+# Particle analysis
+	run("Analyze Particles...", "size = 250-Infinity exclude add");
+	roiManager("Show All without labels");
+	run("Enhance Contrast", "saturated = 0.35");
+	waitForUser("Check ROIs, correct if necessary");
+	if (sort) {
+		sortROIs();
+	}
+```
+
+###### Sorting
+
+To sort manually corrected ROIs from left to right, each ROIs position in calculated relatively to total image width.
+
+```{r anallzr2d_sorting, echo = T, eval = F}
+# Sort ROIs from left to right
+function sortROIs() {
+	run("Set Measurements...", "centroid redirect = None decimal = 0");
+			for (j = 0 ; j<roiManager("count"); j++) {
+    			roiManager("select", j);
+   			 	roiManager("measure");
+    			x = getResult("X", 0);
+    			w = getWidth();
+    			a = x/w;
+    			roiManager("rename", a);
+    			run("Clear Results");
+				}
+		setBatchMode(false);
+		roiManager("sort");	
+			for (j = 0 ; j < roiManager("count"); j++) {
+    			roiManager("select", j);
+    			roiManager("rename", j);
+    			run("Clear Results");
+				}	
+			for (j = 0 ; j < roiManager("count"); j++) {
+    			roiManager("select", j);
+    			roiManager("rename", j+1);
+    			run("Clear Results");
+				}
+}
+```
+
+###### Count nuclei
+
+After smoothing the nuclei signal in the DAPI labeled channel, maxima are detected only within each ROI.
+
+```{r anallzr2d_counts, echo = T, eval = F}
+# count nuclei within segmented cell clusters
+# steps performed on DAPI channel
+# count nuclei
+	run("Gaussian Blur...", "sigma = 0.6 scaled");
+	roiManager("open", datdir + filename + "_ROIset.zip");
+	rcount = roiManager("count");
+# for each ROI
+	for (j = 0 ; j < rcount; j++) {
+		roiManager("open", datdir + filename + "_ROIset.zip");
+  		roiManager("select", j);
+  			run("Duplicate...", " ");
+  			run("Enhance Contrast", "saturated = 0.35");
+  			run("Find Maxima...", "noise = 0 output = [Point Selection]");
+  			run("Capture Image");
+  		roiManager("select", j);
+		run("Find Maxima...", "noise = 0 output = Count");
+		NC = getResult("Count");
+		setResult("Nuclei", j, NC);
+		setResult("Pos", j, j + 1);
+	}
+```
+
+##### anaLLzR2DT {#mat-anallzr2dt}
+
+Upon macro execution the opening dialog is presented which is divided in three sections (figure \@ref(fig:anallzr2dtdialog)A).
+
+In the **processing** section the user may choose which modules are executed. 
+
+- _Segmentation_ controls whether the images are segmented before measurement. If de-seleted the user has to provide segmentation masks seperately.
+- _Include Cell Clusters_ controls whether Cell Clusters should be included in the analysis. If de-selected, only the pLLP will be considered.
+- _Registration_ controls whether the pLLP should be captured in time and space and saved in a separate stack.
+- _Multichannel_ controls whether on a second channel summary statistics from each ROI at each timepoint should be taken.
+  + measurements taken are the mean, standard deviation, minimum and maximum intensity
+
+In the **options** section the user may choose whether the macro should be run in _headless mode_ (without showing every single action), whether the input images are timeseries and whether all other windows should be closed upon start of processing.
+
+After confirmation, the user has to enter a date of experiment as an identifier in a second dialog. Furthermore the user is presented the images physical properties pre-filled where the idea here is just a review since this is a major source of mistakes. Finally, a third dialog is presented to the user giving an approximate duration and basic instructions.
+
+(ref:anallzr2dtdialog) anaLLzR2DT opening dialog **A** Opening dialog: Main functionality **B** Opening Dialog: metadata setup options **C** Time approximation dialog and basic instructions.
+
+```{r anallzr2dtdialog, out.width = '95%', fig.cap = "(ref:anallzr2dtdialog)", fig.scap = "anaLLzR2DT opening dialog"}
+knitr::include_graphics("figures/materials/macros/anallzr2DT_macro.png")
+```
+
+Code-snippets describing the main functionality are described in the next couple of sub-sections.
+
+###### Registration
+
+```{r anallzr2dt_reg, echo = T, eval = F}
+#	Subtract background
+		run("Z Project...", "projection=[Average Intensity]");
+		ZPAVG = getTitle();
+  		if (reg) {
+			print("Calculating registration parameters...");
+			selectWindow(ORG);
+			setSlice(n);
+			run("Duplicate...", " "); 
+			DORG = getTitle();
+			imageCalculator("Subtract create", DORG, ZPAVG);
+			IC = getTitle();
+			close(DORG);
+			run("Morphological Filters", "operation=Closing element=Disk radius=15");
+			REG = getTitle();
+			close(IC);
+			close(IC);
+			close(DORG);
+		#	Thresholding 
+			run("Gaussian Blur...", "sigma=6 scaled"); 
+			REG = getTitle();
+			run("Duplicate...", " ");
+			REGD = getTitle();
+			selectWindow(REG);
+			run("Enhance Contrast...", "saturated=0.3 normalize");
+			run("8-bit");
+			selectWindow(REG);
+			setAutoThreshold("MaxEntropy  dark");
+			run("Convert to Mask");
+			REG = getTitle();
+
+	# ############################################## ANALYSIS ###########################################
+	
+		run("Analyze Particles...", "size=150-10000 include exclude add");
+		rmcount = roiManager("count")-1;
+		print("rois: "+rmcount);
+		
+	# ############################################## ANGLE ###########################################
+	
+		if(roiManager("count") == 1) {
+			roiManager("select", 0);
+			List.setMeasurements;
+			Angle = List.getValue("FeretAngle");
+			print("Angle: "+Angle);
+			if (Angle < 0) {Angle = Angle*(-1);}
+			if (Angle > 90) {Angle = (180-Angle)*(-1);}
+		} else {
+			roiManager("select", rmcount);
+			List.setMeasurements;
+			X1Line = List.getValue("X");
+			Y1Line = List.getValue("Y");
+			roiManager("select", 0);
+			List.setMeasurements;
+			X2Line = List.getValue("X");
+			Y2Line = List.getValue("Y");
+			makeLine(X1Line, Y1Line, X2Line, Y2Line);
+			List.setMeasurements;
+			Angle = List.getValue("Angle");
+			if (Angle < 0) {Angle = Angle*(-1);}
+			if (Angle > 90) {Angle = (180-Angle)*(-1);}
+			}
+			print("Angle: "+Angle);
+			selectWindow(ZPAVG);
+			run("Rotate... ", "angle="+Angle+" grid=1 interpolation=Bilinear");
+			ZPAVG = getTitle();
+			selectWindow(REG);
+			run("Rotate... ", "angle="+Angle+" grid=1 interpolation=Bilinear");
+			run("Make Binary");
+			REG = getTitle();
+		
+		# ############################################ CROPPING ######################################### 
+
+			roiManager("reset");
+			run("Analyze Particles...", "size=150-10000 include add");
+			roiManager("select", 0); # oder doch rmcount?
+			List.setMeasurements;
+			XRect = List.getValue("X");
+			YRect = List.getValue("Y");
+			selectWindow(REG);
+			getDimensions(width, height, channels, slices, frames);
+			List.setMeasurements;
+			height = 120/sizeX; # change height of rect here
+			toUnscaled(YRect);
+			YRect = YRect-(height/2);
+			print("YRectcor: "+YRect);
+			close(REG);
+			close(REGD);
+  		} 
+
+	# ############################################ REGISTER ###########################################
+	
+		resetMinAndMax();
+		if (dual) {
+		# 	C1
+			selectWindow(ORG);
+			if (reg) {
+				print("  Registering "+embryoID+"...");
+				run("Rotate... ", "angle="+Angle+" grid=1 interpolation=Bilinear stack");
+				makeRectangle(0, YRect, width, height);
+				run("Crop");
+			}
+			print("    Saving: "+embryoID+"_RC_C1");
+			saveAs("Tiff", rcdirc1 + orgname + "_RC.tif");
+		# 	C2
+			open(dualdir+dualdirlist[q]);
+			dualname = replace(dualdirlist[q], ".tif", ""); 
+			ORGC2 = getTitle();
+			if (reg) {
+				run("Rotate... ", "angle="+Angle+" grid=1 interpolation=Bilinear stack");
+				makeRectangle(0, YRect, width, height);
+				run("Crop");
+			}
+			print("    Saving: "+embryoID+"_RC_C2");
+			saveAs("Tiff", rcdirc2 + orgname + "_RC.tif");
+			close();
+		} else {
+			selectWindow(ORG);
+			if (reg) {
+				run("Rotate... ", "angle="+Angle+" grid=1 interpolation=Bilinear stack");
+				makeRectangle(0, YRect, width, height);
+				run("Crop");
+				print("    Saving: "+orgname+"_RC");
+				saveAs("Tiff", rcdir + orgname + "_RC.tif");
+			} else {
+				print("    Saving: "+orgname);
+				saveAs("Tiff", rcdir + orgname);	
+			}
+		}
+		ORG = getTitle();  # Name ORG changed by saving
+	# crop ZPAVG for image calc
+		selectWindow(ZPAVG);
+		if (reg) {
+		makeRectangle(0, YRect, width, height);
+		run("Crop");
+		}
+```
+
+###### Segmentation
+
+```{r anallzr2dt_seg, echo = T, eval = F}
+#  #################################### Background correction ####################################
+	
+	print("  Segmenting "+embryoID+"_RC...");
+		selectWindow(ORG);
+		getDimensions(width, height, channels, slices, frames);
+		imageCalculator("Subtract create stack", ORG, ZPAVG);
+		IC = getTitle();
+		close(ZPAVG);
+	selectWindow(IC);
+		print("Bleach correction...");
+		run("Bleach Correction", "correction=[Simple Ratio] background=0");
+		BC = getTitle();
+		close(IC);
+		selectWindow(BC);
+		nslbc = nSlices();
+		for (j = 1; j < nslbc; j++) {
+			selectWindow(BC);
+			setSlice(j);
+			run("Morphological Filters", "operation=Closing element=Disk radius=15");
+		}
+		close(BC);
+		run("Images to Stack", "name="+ ORG +" title = [] use");
+		MC = getTitle();
+		
+	#	############################################ SEGMENTATION #######################################
+	
+		selectWindow(MC);
+		run("Gaussian Blur...", "sigma=5.5 scaled stack");
+	#	Normalize saturated pixels
+		run("Enhance Contrast...", "saturated=0.5 normalize process_all");
+		setSlice(n);
+		resetThreshold();
+		setAutoThreshold("MaxEntropy dark");
+		run("Convert to Mask", "method=MaxEntropy background=Dark black");
+		run("Invert LUT");
+		run("Fill Holes", "stack");
+		run("Options...", "iterations=2 count=1 pad do=Erode stack");
+		run("Options...", "iterations=2 count=1 pad do=Open stack");
+		run("Options...", "iterations=1 count=1 pad do=Dilate stack");
+		print("    Saving binary");
+		saveAs("Tiff", bindir + orgname + "_RC_bin.tif");
+		MC = getTitle();
+		close(MC); # close BIN
+		T2 = getTime();
+		Tdiff = T2-T1;
+		print("  Duration: "+Tdiff+"ms");
+	}
+	month = month+1;
+	selectWindow("Log");  //select Log-window 
+	saveAs("Text", par + File.separator + "Log_v" + version + "_" + year+"0"+month+dayOfMonth+".txt"); 
+	closelog();
+	roiManager("reset");
+	cleanup();
+	setBatchMode(false);
+	wait(500);
+	call("bar.Utils.revealFile", bindir);
+	waitForUser("Check Segmentations");
+	} 
+	if (pre) {
+		close(ORG);	
+	}
+	if (dual) {
+		rcdirc1list = getFileList(rcdirc1);
+		rcdirc2list = getFileList(rcdirc2);
+	} else {
+		rcdirlist = getFileList(rcdir);
+	}
+	bindirlist = getFileList(bindir);
+```
+
+###### Analysis
+
+```{r anallzr2dt_anal, echo = T, eval = F}
+for (b = 0; b < orgdirlist.length; b++) {
+# 	get genotypes and embryoIDs from arrays
+		type = types[b];
+		embryoID = embryoIDs[b];
+		orgname = replace(orgdirlist[b], ".tif", "");
+# 	create directories for single embryos to save results
+		embryodir = output + File.separator + orgname + File.separator;
+		File.makeDirectory(embryodir);
+# 	print StatsLog descriptors
+		if (b==0) {
+			StatsLogInfo();
+			}
+# 	open and define binary
+		open(bindir+bindirlist[b]);
+		  BIN = getTitle();
+# open and define orginal 
+		if (dual) {
+			open(rcdirc1+rcdirc1list[b]);
+		} else {
+			open(rcdir+rcdirlist[b]);
+		}
+		RC = getTitle();
+		dotIndex = indexOf(RC, ".");
+		title = substring(RC, 0, dotIndex);
+	
+# #############################  ENTER 2nd LOOP TO INCREMENT OVER EACH SLICE OF THE TIME-SERIES ##############################
+
+	selectWindow(BIN); 	 # select binary
+	pangles = newArray(nSlices()+1);
+		for (i=1 ; i<=nSlices(); i++) {
+			s = nSlices();
+			setSlice(i);
+			if (ccs) {
+				run("Analyze Particles...", "size=150-10000 include add");
+			} else {
+				run("Analyze Particles...", "size=750-10000 include add");
+			}
+		# 	Loop though ROI List
+			for (j=0 ; j<roiManager("count"); j++) {
+				roiManager("select", j);
+				run("Set Scale...", "distance=1 known=0.00005 pixel=1 unit=micron");
+				List.setMeasurements;
+  				x = List.getValue("X");
+    			roiManager("rename", x);
+			}
+			run("Properties...", "channels=1 slices=1 frames=[s] unit=micron pixel_width=[xs] pixel_height=[ys] voxel_depth=[zs] frame=[time] global");
+		# 	Sort ROIs and select last one
+			roiManager("Sort");
+			for (j=0 ; j<roiManager("count"); j++) {
+				ccn = roiManager("count")+j;
+				if (ccn == roiManager("count")) {
+					ccn = "prim";
+					roiselect = roiManager("count")-1;
+				} else {
+					ccn = "CC"+j;
+					roiselect = j-1;
+				}
+				roiManager("select", roiselect);
+				roiManager("rename", ccn);
+			}
+			rmc = roiManager("count");
+			m = rmc-1;
+			selectWindow(RC);
+  #   Prim registration
+			run("Select None");
+			roiManager("Select", m);
+			sln = getSliceNumber();
+			run("Enlarge...", "enlarge=6");
+			run("Fit Ellipse");
+			run("Duplicate...", "use");
+			rename(sln);
+			resetMinAndMax();
+	# 	Rotate
+			List.setMeasurements;
+			A = List.getValue("Angle");
+			run("Select None");
+			if (A < 10) {
+				A = A;
+			} else {
+				A = 180-A;
+				A = A*(-1);
+			}
+			pangles[i] = A;
+			run("Rotate... ", "angle=[A] grid=1 interpolation=Bilinear slice");
+			run("Flip Horizontally");
+			selectWindow(RC); # select & deselect to remove selected ROIs
+			run("Select None");
+	# 	Measure and save segmented Mask ROI
+			pLLProis = embryodir + File.separator + "ROIs" + File.separator;
+			File.makeDirectory(pLLProis);
+			pLLPxy = embryodir + File.separator + "ROIsXY" + File.separator;
+			File.makeDirectory(pLLPxy);
+			selectWindow(BIN);
+			roiManager("show none"); # supress roimanager popping up
+			roiManager("Select", m);
+		#	Save ROIs and XY coordinates
+			if (i<10) {
+				slice = d2s(0,0) + d2s(i,0);
+				roiManager("save", pLLProis + "s" + slice + ".zip");
+				saveAs("XY Coordinates", pLLPxy + "s" + slice + ".txt");
+			} else {
+				roiManager("save", pLLProis + "s" + i + ".zip");
+				saveAs("XY Coordinates", pLLPxy + "s" + i + ".txt");
+			}
+	# 	Measure
+			run("Set Measurements...", "area centroid bounding fit shape feret's stack redirect=None decimal=2");
+    		roiManager("measure");
+    		roiManager("reset");
+    		run("Select None");
+    #  Calculate additional variables based on measurements
+    		n = nResults();
+    		r = n-1;  # actual RowNumber
+    		r2 = n-2; # RowNumber -1
+    		if (i == 1) {  # get X & Y coordinates, keep X0 and Y0 for normalization
+    			X0 = getResult("X");
+    			Y0 = getResult("Y");
+    		} else {
+    			X1 = getResult("X", r2);
+    			X2 = getResult("X", r);
+    			Y1 = getResult("Y", r2);
+    			Y2 = getResult("Y", r); 
+    		}
+    # 	Width of bounding rectangle
+    		W = getResult("Width");
+    # 	Calculations (XN = normalized X; LE = Leading Edge)
+    # 	Euclidian Distance of X + normalized to offspring 'zero'
+    		if (i == 1) {
+    			XED = 0;
+    			XN = 0;
+    		} else {
+    			XED = sqrt((X2-X1)*(X2-X1)+(Y2-Y1)*(Y2-Y1));
+    			XN = (X2 - X0) + XED;
+    		}
+    		LE = XN + (W/2); # Leading Edge 
+    		T = time * r; # Time interval
+    		setResult("embryo", r, orgname); # set Results
+    		setResult("group", r, type);
+    		setResult("time", r, T);
+    		setResult("deg", r, A);
+    		setResult("X_ED", r, XED);
+    		setResult("X_N", r, XN);
+    		setResult("LE", r, LE);
+    		updateResults();
+    # 	Velocitiy LE (LE1 = LE @ timepoint 1; LEN = normalized value of LE, LENV = Velocity of the normalized value of LE)
+    		if (i == 1) {
+    			LE1 = LE; # LE1 will be the same for all further timepoints
+    			LEN = 0; #
+    			LENED = NaN; # 'Leading Edge Normalized Euclidian Distance'
+    			LEV = NaN; # For the first timepoint there can be no speed, since there was no coordinate of X and Y before
+    		} else {
+    			LEN = LE - LE1; # The value of 'LE Normalized' to zero 
+    			LED = getResult("LE_N", r2); # LED = The value of LE one row before
+    			LENED = sqrt((LEN-LED)*(LEN-LED)+(Y2-Y1)*(Y2-Y1)); # LENED = LEN - (LEN-LED);
+    			LEV = LENED / time;
+    		}
+    		setResult("LE_N", r, LEN); # setResult Leading Edge Normalized (LE_N)
+    		setResult("LE_N_ED", r, LENED); # setResult Leading Edge Normalized Euclidian Distance (LE_N_ED)
+    		setResult("LE_V", r, LEV); # setResult Leading Edge Velocity (LE_V)
+    		updateResults();
+			}
+			close(BIN); # could be reduced to close(BIN, ORG); or close (".tif");
+			close(RC);
+		# 	Merge registered prim timepoints
+			setBatchMode("exit and display");
+			run("Images to Stack", "method=[Copy (top-left)] name=Stack title=[] use");
+			run("Properties...", "channels=1 slices=1 frames=[s] unit=micron pixel_width=[xs] pixel_height=[ys] voxel_depth=[zs] frame=[time] global");	
+			run("Flip Horizontally", "stack");
+			if (dual) {
+			#	save C1
+				saveAs("Tiff", pLLPdir + orgname + "-C01.tif");
+				close();
+			#	open C2
+				open(rcdirc2+rcdirc2list[b]);
+				resetMinAndMax();
+				RC = getTitle();
+				dotIndex = indexOf(RC, ".");
+				title = substring(RC, 0, dotIndex);
+				for (i=1 ; i<=nSlices(); i++) {
+					s = i;
+					setSlice(i);
+					wait(200);
+			# 	Prim registration
+					if (i<10) {
+						slice = d2s(0,0) + d2s(i,0);
+						roiManager("open", pLLProis + "s" + slice + ".zip");
+					} else {
+						roiManager("open", pLLProis + "s" + i + ".zip");
+					}
+					rmc = roiManager("count");
+					m = rmc-1;
+					roiManager("Select", m);
+					selectWindow(RC);
+					sln = getSliceNumber();
+					run("Enlarge...", "enlarge=6");
+					run("Fit Ellipse");
+					run("Duplicate...", "use");
+					rename(sln);
+				#	Rotate
+					A = pangles[s];
+					run("Select None");
+					run("Rotate... ", "angle=[A] grid=1 interpolation=Bilinear slice");
+					run("Flip Horizontally");
+					selectWindow(RC); # select & deselect to remove selected ROIs
+					run("Select None");
+					roiManager("reset");
+				}
+			#	close and merge
+				close(RC);
+				run("Images to Stack", "method=[Copy (top-left)] name=Stack title=[] use");
+				run("Properties...", "channels=1 slices=1 frames=[s] unit=micron pixel_width=[xs] pixel_height=[ys] voxel_depth=[zs] frame=[time] global");	
+				run("Flip Horizontally", "stack");
+				roiManager("reset");
+		  #	save C2
+				saveAs("Tiff", pLLPdir + orgname + "-C02.tif");
+				close();
+			} else {
+				saveAs("Tiff", pLLPdir + orgname + ".tif");
+				close();
+			}
+	# 	Save Results Table
+			run("Input/Output...", "jpeg=100 gif=-1 file=.txt use_file copy_column copy_row save_column");
+			saveAs("results", embryodir + orgname + "_Results" + ".txt");
+		# Calulate Stats and show in Log
+			StatsLog();
+			cleanup();
+```
+
+##### anaLLzR3D {#mat-anallzr3d}
+
+Upon macro execution the opening dialog is presented which is divided in three sections (figure \@ref(fig:anallzr3ddialog)A). 
+
+In the **processing** section the user has to define the input format as well as in which direction the Z-stack was recorded. Furthermore, the user may choose choose to have the pLLP registered, save intermediate steps for debugging and to have objects segmented without any restrictions and manual ROI correction. 
+
+In the **thresholds** section the user may fine tune segmentation and filter levels
+
+- _Segmentation_ controls the segmentation threshold at which the membrane signal is detected, cell volumes are seperated from each other and is evaluated after ground truth data described in section \@ref(mat-GrTrDat)
+- _Min. volume_ controls the minimum volume, below which objects are discarded
+- _Max. volume_ controls the maximum volume, above which objects are discarded
+
+In the **measurements** section the user may choose may choose whether apical constriction measurement should be applied or not.
+
+In case apical constriction measurement was selected the user may choose whether ACI should be measured at an absolute- or relative- distance from the tip. Furthermore, the user has the option to measure from a fit ellipsoid or rectangle.
+
+(ref:anallzr3ddialog) anaLLzR3D opening dialog **A** Opening dialog: Main functionality **B** Opening Dialog: Apical Constriction options **C** Log window after startup
+
+```{r anallzr3ddialog, out.width = '95%', fig.cap = "(ref:anallzr3ddialog)", fig.scap = "anaLLzR3D opening dialog"}
+knitr::include_graphics("figures/materials/macros/anallzr3D_macro.png")
+```
+
+Code-snippets describing the main functionality are described in the next couple of sub-sections.
+
+###### Registration
+
+```{r anallzr_macro_mod_1, echo = T, eval = F}
+# get registration parameters angle and height
+# steps performed on z-projected data
+
+# 2D segmentation mask
+  run("Z Project...", "projection=[Max Intensity]");
+	run("Gaussian Blur...", "sigma = 8 scaled");
+	setAutoThreshold("Minimum dark");
+	run("Convert to Mask");
+	run("Select None");
+# angle from horizontal midline
+	run("Analyze Particles...", "include add");
+	rmcount = roiManager("count")-1;
+	if(roiManager("count") == 1) {
+		roiManager("select", 0);
+		run("Fit Ellipse");
+		List.setMeasurements;
+		Angle = List.getValue("FeretAngle");
+		if (Angle < 0) {Angle = Angle * (-1);}
+		if (Angle > 90) {Angle = (180 - Angle) * (-1);}
+	} else {
+		roiManager("select", 0);
+		run("Fit Ellipse");
+		roiManager("update");
+		List.setMeasurements;
+		X1Line = List.getValue("X");
+		Y1Line = List.getValue("Y");
+		roiManager("select", rmcount);
+		List.setMeasurements;
+		X2Line = List.getValue("X");
+		Y2Line = List.getValue("Y");
+		makeLine(X1Line, Y1Line, X2Line, Y2Line); 
+		List.setMeasurements;
+		Angle = List.getValue("Angle");
+		if (Angle < 0) {Angle = Angle*(-1);}
+		if (Angle > 90) {Angle = (180-Angle)*(-1);}
+	}
+	run("Select None");
+	run("Rotate... ", "angle = "+ Angle +" grid = 1 interpolation = Bilinear");
+# height to crop image to
+	roiManager("reset"); # the image was rotated, so we need to get the ROIs again
+	run("Select None");
+	run("Make Binary");
+	run("Erode");
+	run("Analyze Particles...", "size = 150-10000 include exclude add");
+	rmcount = roiManager("count") - 1;
+	if(roiManager("count") == 1) {
+		roiManager("select", 0);
+	} else {
+		roiManager("select", rmcount);
+	}
+	List.setMeasurements;
+	XRect = List.getValue("X");
+	YRect = List.getValue("Y");
+	getDimensions(width, height, channels, slices, frames);
+	Regwidth = width;
+	Regheight = 400; # change height of rectangle here
+	toUnscaled(YRect);
+	YRect = YRect - (Regheight/2);
+```
+
+###### Transformation
+
+```{r anallzr_macro_mod_2, echo = T, eval = F}
+# pllp registration
+# steps performed on 3D data
+# register pllp
+	run("Rotate... ", "angle = "+ Angle +" grid = 1 interpolation = Bilinear stack");
+	makeRectangle(0, YRect, Regwidth, Regheight);
+	run("Crop");
+# Create threshold mask to clear signals outside ROI
+	run("Normalize Local Contrast", "block_radius_x = 300 block_radius_y = 20 standard_deviations = 4 stretch");
+	run("Gaussian Blur...", "sigma = 1 scaled");
+	setAutoThreshold("Otsu dark");
+	run("Convert to Mask");
+# most right roi
+	for (j = 0 ; j < roiManager("count"); j++) {
+		roiManager("select", j);
+		run("Set Scale...", "distance = 1 known = 0.00005 pixel = 1 unit = micron");
+		List.setMeasurements;
+  	x = List.getValue("X");
+  	roiManager("rename", x);
+	}
+	roiManager("Sort");
+	run("Properties...", "channels = 1 slices = 1 frames = 1 unit = micron pixel_width = [sizeX] pixel_height = [sizeY] voxel_depth = [sizeZ]");
+	primroi = roiManager("count") - 1;
+	roiManager('select', primroi);
+# enlarge
+	run("Enlarge...", "enlarge=10");
+	run("Fit Ellipse");
+	roiManager('update');
+```
+
+###### Rosette detection
+
+```{r anallzr_macro_mod_3, echo = T, eval = F}
+# rosette detection
+# register pllp based on registration parameters
+#  [...] registration
+	run("Gaussian Blur...", "sigma = 4 scaled");
+# detect points based on individual image max finder threshold
+	List.setMeasurements;
+  	mean = List.getValue("Mean");
+  	pointthresh = mean/2.5;
+  	pointthresh = round(pointthresh);
+	run("Find Maxima...", "noise = "+pointthresh+" output = [Point Selection]");
+	run("Point Tool...", "type = Dot color = Green size = [Extra Large] label counter = 0");
+	getSelectionCoordinates(xpoints, ypoints);
+	roiManager("Add");
+# measure intensities along horizontal midline
+#	[...] registration
+	Rlx = lengthOf(xpoints); # collect Arrays
+	RX = Array.sort(xpoints); # put xpoints in right order
+	RX = Array.invert(RX);
+# put number of AC into array + print to log
+	ACnum = newArray(list.length);
+	ACnum[i] = Rlx;
+# Fill ypoints with mean values of all y coordinates
+	Array.getStatistics(ypoints, min, max, mean, stdDev);
+	meanline = mean;
+	Array.fill(ypoints, meanline);
+	RY = ypoints;
+	getDimensions(width, height, channels, slices, frames);
+	makeLine(0, meanline, width, meanline, 1);
+	run("Clear Results");
+	profile = getProfile();
+	for (a = 0; a < profile.length; a++) {
+    setResult("Value", a, profile[a]);
+		updateResults();
+	}
+```
+
+###### Segmentation
+
+```{r anallzr_macro_mod_4, echo = T, eval = F}
+# Image segmentation using the MorphoLibJ's[@Legland2016] _Morpholigical Segmentation_ plugin
+# steps performed on 3D data
+
+# 3D gaussian blur
+	run("Gaussian Blur 3D...", "x=2 y=2 z=0.5");
+	resetMinAndMax();
+# run segmentation
+	run("Morphological Segmentation");
+	selectWindow("Morphological Segmentation");
+	call("inra.ijpb.plugins.MorphologicalSegmentation.setInputImageType", "border");
+	call("inra.ijpb.plugins.MorphologicalSegmentation.segment", "tolerance="+tol+"", "calculateDams=true", "connectivity=6");
+# wait till segmentation is done
+	initTime = getTime(); 
+  oldTime = initTime; 
+	while (isOpen("Morphological Segmentation")) {
+	  elapsedTime = getTime() - initTime; 
+		newTime = getTime() - oldTime;
+		if (newTime > 10000) {
+   		oldTime = getTime(); 
+   		newTime = 0;
+   		loginfo = getInfo("log");
+			loginfo = split(loginfo, " ");
+			loginfo = Array.reverse(loginfo);
+			loginfo = Array.trim(loginfo, 5);
+			loginfo = Array.reverse(loginfo);
+			loginfo = split(loginfo[0], ".");
+			loginfo = Array.reverse(loginfo);
+			loginfo = loginfo[0];
+			if (loginfo == "\nWhole") {
+				call("inra.ijpb.plugins.MorphologicalSegmentation.setDisplayFormat", "Catchment basins");
+				call("inra.ijpb.plugins.MorphologicalSegmentation.createResultImage");
+				run("Grays");
+				selectWindow("Morphological Segmentation");
+				close();
+			}
+   	}
+	}
+  run("Properties...", "channels = 1 slices = "+ n +" frames = 1 unit = microns pixel_width="+ sizeX +" pixel_height="+ sizeY + "voxel_depth ="+ sizeZ);
+```
+
+###### Filter and clearing
+
+```{r anallzr_macro_mod_5, echo = T, eval = F}
+# erase objects V < vmin and V > vmax
+  run("3D Manager Options", "volume surface compactness fit_ellipse 3d_moments feret centroid_(pix) centroid_(unit) distance_to_surface centre_of_mass_(unit) bounding_box radial_distance surface_contact closest exclude_objects_on_edges_xy sync distance_between_centers = 10 distance_max_contact = 1.80");
+	run("3D Manager");
+  selectWindow(OMap);
+	Ext.Manager3D_AddImage();
+# get number of objects
+	Ext.Manager3D_Count(nb);
+	Ext.Manager3D_MultiSelect();
+# loop through all the objects and erase by filter settings
+	for(k = 0; k < nb; k++) {
+		showStatus("Processing "+ k +"/"+ nb);
+		Ext.Manager3D_Measure3D(k, "Vol",V);
+		if (V < vmin) {
+			Ext.Manager3D_Select(k);
+			Ext.Manager3D_Erase();
+			if (V > vmax) {
+				Ext.Manager3D_Select(k);
+				Ext.Manager3D_Erase();
+			}
+		}
+	}
+# clean blank slices from bottom and top
+	getDimensions(width, height, channels, slices, frames);
+	var done = false; 
+	for(l = 1; l < slices &&!done; l++) {
+		setSlice(l);
+		getStatistics(area, mean, min, max, std, histogram);
+		if(max > 0) {
+	  	amax = l-1;
+			run("Slice Remover", "first = 1 last = "+ amax +" increment = 1");
+			run("Reverse");
+			getDimensions(width, height, channels, slices, frames);
+			for(l = 1; l < slices &&!done; l++) {
+				setSlice(l);
+				getStatistics(area, mean, min, max, std, histogram);
+				if(max > 0) {
+	  			bmax = l-1;
+					run("Slice Remover", "first = 1 last = "+ bmax +" increment = 1");
+					run("Reverse");
+					done = true;
+					}
+			}
+		}
+	}
+```
+
+###### Apical Constriction
+
+```{r anallzr_macro_mod_6, echo = T, eval = F}
+# define Z values
+
+	if (rosAC) {
+		cellum = rosum; # I copy pasted the code, so rosette um would be cell um
+		Zslice = rosum/sizeZ;
+		round(Zslice);
+	}
+
+# cell Constriction
+
+	if (cellAC) {
+		aciza = cellum / sizeZ;
+		Zslice = aciza;
+		round(Zslice);
+		round(aciza);
+		if (fixAC||symAC) {
+	# crop single objects and measure ----------------------
+	  selectWindow(OMap);
+		run("3D Manager Options", "volume surface compactness fit_ellipse 3d_moments feret centroid_(pix) centroid_(unit) distance_to_surface centre_of_mass_(unit) bounding_box radial_distance surface_contact closest exclude_objects_on_edges_xy sync distance_between_centers = 10 distance_max_contact = 1.80");
+		run("3D Manager");
+		Ext.Manager3D_AddImage();
+	# get number of objects
+		Ext.Manager3D_Count(nb);
+	# create arrays to fill with measurements
+		objlabelArray = newArray(nb);
+		MajorAngle = newArray(nb);
+		if (ACM == "ellipsoid") {
+		  ACIMajor = newArray(nb);
+			ACIMinor = newArray(nb);
+			Dap = newArray(nb);
+		}
+		if (ACM == "bounding") {
+		  apbw = newArray(nb);
+			apbh = newArray(nb);
+		}
+		Ext.Manager3D_MultiSelect();
+		for(k = 0; k < nb; k++) {
+			if (k > 0) {
+			  Ext.Manager3D_AddImage();
+			}
+		Ext.Manager3D_GetName(k, obj);
+		Ext.Manager3D_Centroid3D(k, cx, cy, cz);
+	# if dynamic ACI
+		if (symAC) {
+		  Ext.Manager3D_Measure3D(k, "Feret", ferr); 
+			da = ferr * cellum;
+			da = round(da);
+		  if (da == 0) {
+			  da = 1;
+		  }
+		Dap[k] = da;
+		}
+		toString(obj);
+		objlabelArray[k] = obj;
+	# erase all objects except k
+		Ext.Manager3D_SelectAll();
+		Ext.Manager3D_Select(k);
+		Ext.Manager3D_Erase();
+		run("Enhance Contrast...", "saturated=0.3 equalize process_all");
+		run("8-bit");
+		run("Crop Label", "label=255 border=5");
+	# clear cell stack in Z
+		getDimensions(width, height, channels, slices, frames);
+		var done = false; 
+		for(l = 1; l < slices &&!done; l++) {
+		  setSlice(l);
+			getStatistics(area, mean, min, max, std, histogram);
+			if(max > 0) { // from apical
+  			smax = l-1;
+  			run("Slice Remover", "first=1 last="+smax+" increment=1");
+  			run("Reverse");
+  			getDimensions(width, height, channels, slices, frames);
+  			for(l = 1; l < slices &&!done; l++) { // from basal
+				  setSlice(l);
+					getStatistics(area, mean, min, max, std, histogram);
+					if(max > 0) {
+					  smax = l-1;
+						run("Slice Remover", "first = 1 last = "+ smax +" increment = 1");
+						run("Reverse");
+						done = true;
+					}
+				}
+			}
+		}
+		naci = nSlices();
+		nacimax = naci/2;
+		run("Properties...", "channels = 1 slices = "+ naci +" frames = 1 unit = microns pixel_width = "+ sizeX +" pixel_height = "+ sizeY +" voxel_depth = "+ sizeZ);
+		if (symAC) {
+			aciza = da / sizeZ;
+			db = naci - da;
+		}
+	# if fixed ACI
+		if (aciza < (nacimax)) {
+		  acizb = naci - aciza;
+	# measure apical
+		run("Make Binary", "method = Default background=Default calculate black");
+		setSlice(aciza);
+		run("Set Measurements...", "area centroid bounding fit feret's redirect = None decimal = 2");
+		run("Analyze Particles...", "display slice");
+	# get angle
+		MajorAngle[k] = getResult("FeretAngle", 0);
+		if (MajorAngle[k] > 90) {
+		  MajorAngle[k] = 90 - (MajorAngle[k] - 90);
+		}
+	# get max feret / bounding width / area / major
+		resultsArray = newArray(nResults());
+		if (ACM == "ellipsoid") {
+			for(p = 0; p < nResults(); p++) { 
+				resultsArray[p] = getResult("Major", p);	
+  		}
+  		total = 0; 
+			for(p = 0; p < nResults(); p++) { 
+ 				total = total + resultsArray[p]; 
+			}
+		}
+		if (ACM == "ellipsoid") {
+			ACIMajor[k] = total;
+		}
+		if (ACM == "bounding") {
+			apbw[k] = total;
+		}
+	# get min feret / bounding height / minor
+		resultsArray = newArray(nResults());
+		if (ACM == "ellipsoid") {
+			for(p = 0; p < nResults(); p++) { 
+    		resultsArray[p] = getResult("Minor", p); 
+  			}
+  			total = 0; 
+			for(p = 0; p < nResults(); p++) { 
+ 				total = total + resultsArray[p]; 
+			}
+		}
+		if (ACM == "ellipsoid") {
+			ACIMinor[k] = total;
+		}
+		if (ACM == "bounding") {
+			apbh[k] = total;
+		}
+```
+
+###### Single cell measurement
+
+```{r anallzr_macro_mod_7, echo = T, eval = F}
+  run("3D Manager Options", "volume surface compactness fit_ellipse 3d_moments feret centroid_(pix) centroid_(unit) distance_to_surface centre_of_mass_(unit) bounding_box radial_distance surface_contact closest exclude_objects_on_edges_xy sync distance_between_centers=10 distance_max_contact=1.80");
+  run("3D Manager");
+  Ext.Manager3D_AddImage();
+# refresh RoiManager
+  Ext.Manager3D_DeselectAll();
+  Ext.Manager3D_Measure();
+  Ext.Manager3D_SaveResult("M", datcelldir + name + ".csv");
+  Ext.Manager3D_CloseResult("M");
+  Ext.Manager3D_Reset();
+  Ext.Manager3D_Close();
+```
+
+###### Functions
+
+```{r anallzr_macro_mod_8, echo = T, eval = F}
+# sliceclear
+  function sliceclear() {
+  		for (j = 1; j <= n; j++) {
+  		roiManager("reset");
+  		setSlice(j);
+  		run("Analyze Particles...", "include add slice");
+  		if (roiManager("count") == 0) {
+  			setSlice(j);
+  			makeRectangle(0, 0, width, height);
+  			run("Cut");
+  		}
+  		if (roiManager("count") == 1) {
+  			setSlice(j);
+  			allroi();
+  			wait(200);
+  			run("Clear Outside", "slice");
+  		}
+  		if (roiManager("count") > 1) {
+  			setSlice(j);
+  			allroi();
+  			roiManager("Combine");
+  			run("Clear Outside", "slice");
+  		}
+  	}
+  }
+```
+
 #### Rosette Detection {#CNN}
 
-The method used for rosette detection is based on a convolutional neuronal network (CNN) and was modified from the "rosette detector" algorithm previously used in the lab and described in [@Ernst2012a; @Liu]. Since the former method was technically outdated and since we had new data in which we needed to detect rosettes, we updated the former method to a state of the art CNN using Caffe[@Jia2014] as a backend. The training was done by our collaborators at the institute for Informatics, Albert-Ludwigs-University Freiburg.
+The method used for rosette detection is based on a convolutional neuronal network (CNN) and was modified from the "rosette detector" algorithm previously used in the lab and described in [@Ernst2012a; @Liu]. Since the former method was technically outdated and since we had new data in which we needed to detect rosettes, we updated the former method to a _state-of-the-art_ CNN using Caffe[@Jia2014] as a backend. Network configuration and training was done by our collaborators at the institute for Informatics, Albert-Ludwigs-University Freiburg.
 
-The CNN was trained on 17 DMSO- and SU5402- treated embryos each. SU5402 is an inhibitor of FGF receptors and embryos treated with these inhibitors show a strongly reduced number of rosettes ([@Lecaudey2008a]). In order to give the network something to learn, the data had to be labeled manually, which was done in ImageJ by placing multipoint ROIs at the center of the rosettes. The data was then further permutated to artificially increase the amount of training data and make the detection more robust against different kinds of input. Further parameters about the training data is listed in Table \@ref(tab:CNNtraining). One example for each is shown in figure \@ref(fig:CNNtrain).
+The training dataset consitsts of 17 DMSO- and SU5402- treated embryos each. SU5402 is an inhibitor of FGF receptors and embryos treated with these inhibitors show a strongly reduced number of rosettes ([@Lecaudey2008a]). In order to give the network something to learn, the data had to be labeled manually, which was done in ImageJ by placing multipoint ROIs at the center of the rosettes. The data was then further permutated to artificially increase the amount of training data and make the detection more robust against different kinds of input. Further parameters about the training data is listed in Table \@ref(tab:CNNtraining). One example for each is shown in figure \@ref(fig:CNNtrain).
 
 (ref:CNNtrain) Example for rosette detection on the training data. **left** Maximum Z-projected input data. **middle** heatmap of scores. blue indicates a low score, red a high one. **right** score map projected onto the input data.
 
-```{r CNNtrain, out.width='75%', fig.cap="(ref:CNNtrain)", fig.scap = "Example for rosette detection on the training data"}
+```{r CNNtrain, out.width='75%', fig.scap="(ref:CNNtrain)", fig.scap = "Example for rosette detection on the training data"}
 knitr::include_graphics("figures/materials/cnn/CNNtrain.png")
 ```
 
@@ -794,9 +1543,9 @@ knitr::kable(tab, booktabs = T, caption = "CNN training data", align = 'c', esca
   row_spec(0, bold = T) %>%
   column_spec(2, width = "1cm") %>%
   column_spec(3, width = "2cm" ) %>%
-  column_spec(4, width = "1.5cm") %>%
+  column_spec(4, width = "1.6cm") %>%
   column_spec(5, width = "1.5cm") %>%
-  column_spec(6, width = "1.5cm")
+  column_spec(6, width = "1.4cm")
 ```
 
 #### Proliferation Analysis{#prolif}
@@ -809,7 +1558,7 @@ For mounting the procedure described in section \@ref(mount-met) was used. Nucle
 
 (ref:mitodatapoints) Tracking of mitotic events
 
-```{r mitodatapoints, out.width='50%', fig.cap="(ref:mitodatapoints)", fig.scap = "Tracking of mitotic events"}
+```{r mitodatapoints, out.width='60%', fig.scap="(ref:mitodatapoints)", fig.scap = "Tracking of mitotic events"}
 knitr::include_graphics("figures/materials/prol/Prolif.png")
 ```
 
@@ -821,7 +1570,7 @@ The earliest attempt found for indexing AC can be found in a study published by 
 
 (ref:ACLee) A.I. indeces in the literature. **Lee** A.I. of _X.leavis_ bottle cells measured in 2D. **Harding** A.I. of _D.r._ pLLP cells measured in 3D.
 
-```{r ACLee, out.width = '75%', fig.cap = "(ref:ACLee)", fig.scap = "A.I. indeces in the literature"}
+```{r ACLee, out.width = '75%', fig.scap = "(ref:ACLee)", fig.scap = "A.I. indeces in the literature"}
 knitr::include_graphics("figures/materials/models/ai.png")
 ```
 
@@ -852,7 +1601,8 @@ To test different A.I. conditions, an apically constricted cell can be approxima
 If $\Delta$ap is a constant, the A.I. in a symmetrically enlarged cell increases from e.g. ~15 to ~23, since _apical width_ stays the same but lateral height increases. On the contrary, if $\Delta$ap is adjusted relative to a cells lateral height, e.g. by percentage, the A.I. in a symmetrically enlarged cell stays the same (figure \@ref(fig:ACICells)).
 
 (ref:ACICells) A.I. model **A-A’’** A.I. Cell Models. A’ and A’’ show cells that are symmetrically increased versions of A. While in A’, constant delta was used, in A’’ delta was adjusted relative to the lateral height. **B** Illustrating delta ap. (left) apically constricted cells volume rendered in XY (top) and as a lateral cross-section in X-Z (bottom). (right) 2D area as seen at delta ap of 1 or 2.5 $\mu$m.
-```{r ACICells, dpi = 200, out.width = '75%',fig.cap = "(ref:ACICells)", fig.scap = "ACI Cell Models"}
+
+```{r ACICells, dpi = 200, out.width = '75%', fig.cap = "(ref:ACICells)", fig.scap = "ACI Cell Models"}
 knitr::include_graphics(path = "figures/summary/aci_fig-01.png")
 ```
 
@@ -865,6 +1615,7 @@ Therefore the measurement for apical width has to be relative to lateral height.
 Organs develop in a 3-D space and are polarized along each axis. AC usually describes a 2-D morphogenetic movement towards a center along the X-Y axes. However, the contraction movements along X and Y might be independent of one another. This could mean that they happen at different speeds, or that one is absent. As a result, the tissue would look less radially (figure \@ref(fig:cellpol)B) constricted, but more constricted along one particular axis (anisotropic). In order to separate those two AC dimensions, the A.I. can be calculated for the _anterio-posterior_ and for the _dorso-ventral_ axis (figure \@ref(fig:cellpol), horizontal vs. vertical).
 
 (ref:cellpol) Schematic AC along the A-P and D-V axis. **A** shows a A-P and D-V constricted cluster of cells. **B** shows a D-V constricted cluster of cells.
+
 ```{r cellpol, out.width = '75%', fig.cap = "(ref:cellpol)", fig.scap = "Schematic anisotropic AC"}
 knitr::include_graphics("figures/materials/models/ACI_Cells_pol.png")
 ```
@@ -879,7 +1630,7 @@ knitr::include_graphics("figures/materials/models/ACI_Cells_pol.png")
     + indicative for orientation of _lateral height_: If the angle is close to 0$^\circ$, the long axis of the apical area is parallel to the AP axis (the cell is constricted along the DV axis). If the angle is close to 90$^\circ$, the long axis of the apical area is parallel to the DV axis (the cell is constricted along the AP axis).
 
 (ref:ellipse) Scheme of ellipsoid measures. **A** shows the major axis as apical width and the minor axis as apical height. **B** shows the angular displacement from the horizon in steps of 30$^\circ$.
-```{r ellipse, out.width='75%', fig.cap="(ref:ellipse)", fig.scap = "Scheme of ellipsoid measures"}
+```{r ellipse, out.width='75%', fig.scap="(ref:ellipse)", fig.scap = "Scheme of ellipsoid measures"}
 knitr::include_graphics("figures/materials/models/ellipse.png")
 ```
 
@@ -890,11 +1641,6 @@ The two dimensions of AC indices can therefore be described as the following rat
 \[\mathbf{Angle_{Major}} = \measuredangle = \mathrm{\Delta}\;from\;horizont\;[0-90^\circ]\]
 
 ##### Measurements {#ACI-Dis}
-
-```{r, echo = F}
-load("data/SN180_ACI.RData")
-load("data/ac.RData")
-```
 
 ###### Single Cell measurements {#ACI-singlecell}
 
@@ -936,7 +1682,7 @@ SN180_summary <-
 ```
 
 (ref:ACIMinor) A.C.I.~Major / Minor~ single cell measurements
-```{r, out.width = '85%', fig.cap = "(ref:ACIMinor)"}
+```{r, out.width = '90%', fig.cap = "(ref:ACIMinor)"}
 ggplot(SN180_long, aes(CXN, CYU)) +
   geom_vline(
     data = SN180_summary,
@@ -992,7 +1738,7 @@ Harding(2013)[@Harding2013] were using a constant $\mathrm{\Delta}$ap to measure
 By measuring apical width at a relative $\mathrm{\Delta}$ap and taking into account all pLLP cells these two exemplary pLLPs show a mean difference in the Major of `r round(SN180_summary %>% filter(GT == 'DMSO', name == 'ACI[Major]') %>% pull(mean_ac) - SN180_summary %>% filter(GT == 'SU5402', name == 'ACI[Major]') %>% pull(mean_ac), 2)` and `r round(SN180_summary %>% filter(GT == 'DMSO', name == 'ACI[Minor]') %>% pull(mean_ac) - SN180_summary %>% filter(GT == 'SU5402', name == 'ACI[Minor]') %>% pull(mean_ac), 2)` in the Minor (see table \@ref(tab:aci_summary)).
 
 (ref:HardingACI) AI indices by Harding et al. **E-G'** 3-D reconstructions of the highlighted cell. **H** A.I.s for embryos treated with DMSO, SU5402, PD0325901 or following induction of _hsp70:dn-Ras_. (n = 180 cells / N = 6 embryos).
-```{r HardingACI, out.width='60%', dpi=200, fig.cap="(ref:HardingACI)", fig.scap = "AI indices by Harding et al."}
+```{r HardingACI, out.width='60%', dpi=200, fig.scap="(ref:HardingACI)", fig.scap = "AI indices by Harding et al."}
 knitr::include_graphics("figures/materials/models/harding.png")
 ```
 
@@ -1013,6 +1759,7 @@ Now, to get an idea of the magnitude ACI~Major~ and ACI~Minor~ have at each angl
 2. For the ACI~Major~ the base constriction for both, DMSO and SU5402 is at around 3.6, however there is a peak at around 40-60° in the DMSO control where cells are most constricted having a maximum ACI at `r round(max(SN180_DMSO$ACI_H_F20), digits=1)`. This indicates that cells coming from `r round(mean(SN180_DMSO$apAngle), digits=1)`° are most constricted in the _anterior-posterior_ axis.
 
 (ref:angletoACI) ACI~Major~ / ACI~Minor~ over Major~Angle~
+
 ```{r angletoACI, out.width='49%', fig.width = 5, fig.height = 2.9, fig.cap = "(ref:angletoACI)", fig.keep = 'all', fig.show = 'hold'}
 # Major Angle KDE
 
@@ -1069,9 +1816,76 @@ ggplot(SN180_ACIs, aes(Angle, value)) +
       )
 ```
 
-#### Timelapse analysis
+## Ground Truth {#mat-GrTrDat}
 
-ImageJ Macro
+Analyzing images and extracting quantitative measurements can be a tedious task, especially when the analysis becomes more complex. Fortunately, there are ways to automate image analysis by using either machine learning approaches or by tailoring hand-crafted algorithms in an image analysis software tool like e.g. ImageJ[@Schindelin2012]. 
+The main advantages of doing so are to...
+
+-	be independent of confirmation bias
+-	make the analysis more robust against oversight
+-	increase the statistical power by increasing the number of data points[@Button2013]
+-	increase effect size by increasing the measurement accuracy[@Button2013]
+
+However, to ensure the measurements taken by a tailored or trained algorithm are meaningful, they must be compared to a _ground truth_ dataset which again describes a general measure of algorithmic quality performance[@Krig2014].
+
+### Cluster Analysis
+
+The _anaLLzR2D_ algorithm was designed for semi-automatic cell cluster detection in the _cldnb:lyn-gfp_ transgenic line and optional nuclei counting in a second DAPI labeled channel within the Regions of Interest (ROIs) derived from the cell cluster detection.
+
+####  Design
+
+To assess the quality of the _anaLLzR2D_ algorithm for nuclei detection the ground truth was designed as follows.
+
+##### Model
+
+-	each Cell Cluster (CC) consists of a number of objects (cells)
+-	each object is part of the respective CC and defines one cell entity
+-	each object is determined via a fluorescent nucleus label
+- embryos are mounted within a 3D mold (section \@ref(mount-met)) to reduce noise
+
+---------------------------------- ----------------------------------
+                          XY scale 0.32 px/$\mu$m
+ 
+                         Z-spacing 4 $\mu$m
+ 
+                            Camera Rolera
+---------------------------------- ----------------------------------
+Table: (\#tab:imgcond3DGrT) Cluster Analysis Model
+
+##### Training & test data
+
+The training set consists of three randomly picked wild type pLLPs. For each the algorithm was run with standard parameters. Cell cluster ROIs and nuclei multi-point labels were edited manually.
+
+To test the algorithm, it is run at different nuclei detection thresholds on the same image data.
+
+### Morphometric analysis
+
+The _anallzr3D_ algorithm was designed for fully automated, single cell volume segmentation in the _cldnb:lyn-gfp_ transgenic line. In addition to 3D cellular metrics, it offers Apical Constriction measurement of each cell.
+
+#### Design
+
+To assess the quality of the anaLLzr3D algorithm the ground truth was modeled as follows.
+
+##### Model
+
+-	each PLLp consists of a number of objects (cells)
+-	each object is part of the PLLp and defines one cell entity
+-	cell boundaries are determined via the transgene _cldnb:lyn-gfp_ +/+
+-	embryos are imaged live to conserve signal and membrane integrity
+- embryos are mounted within a 3D mold for improved 3D alignment
+
+```{r model3DGrT}
+tab <- read.delim("tables/ground_truth/anallzrmodel.txt")
+knitr::kable(tab, booktabs = T, caption="anaLLzr3D Model", align = c("r", "l"), escape = F, col.names = NULL) %>%
+  kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
+  column_spec(1, width = "4cm")
+```
+
+##### Training & test data
+
+The training set consists of three randomly picked wildtype PLLps. For each the algorithm is run with no filters (X, Y, Z border objects, size) and a minimum segmentation threshold. Afterwards the segmentation result is corrected manually for over- and under-segmentation and objects that are not part of the PLLp.
+
+To test the algorithm it is run at different segmentation thresholds on the same image data.
 
 ## Image Data Sets {#mat-datasets}
 
