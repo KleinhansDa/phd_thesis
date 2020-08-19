@@ -348,7 +348,7 @@ The CC count and position analysis clearly shows that more CCs are deposited in 
 
 (ref:llclus) LL Morphometrics **A** individual CC statistics **B** Sums per embryo. (Bars = median, errorbars = 95% CI)
 
-```{r llclus, out.width = '85%', fig.cap = "(ref:llclus)", fig.scap = "LL Morphometrics"}
+```{r llclus, out.width = '75%', fig.cap = "(ref:llclus)", fig.scap = "LL Morphometrics"}
 knitr::include_graphics("figures/results/01_morphometrics/ll_clusters.png")
 ```
 #### Temperature Rescue {#res-tempresc}
@@ -524,15 +524,15 @@ knitr::kable(data, booktabs=T, caption = 'Heatshock rescue dataset summary', esc
 
 ```{r rescshrmsignif, out.extra = '', fig.pos = "h"}
 data <- read.delim("data/tables/hssignif_clus.txt")
-knitr::kable(data, booktabs=T, caption = 'Heatshock statistics',
+knitr::kable(data, booktabs = T, caption = 'Heatshock statistics',
              col.names = c("group1", "group2", "p", "adj.p", "level", "p", "adj.p", "level"),
              align = c('l','l','c','c','c','c','c','c')) %>%
   kable_styling(full_width = T) %>%
-  kable_styling(font_size = 7) %>%
   collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
   column_spec(1, width = "2cm") %>%
   column_spec(2, width = "2cm") %>%
-  add_header_above(c("id labels" = 2, "cluster counts" = 3, "rosettiness" = 3), bold = T)
+  add_header_above(c("id labels" = 2, "cluster counts" = 3, "rosettiness" = 3), bold = T) %>%
+  kable_styling(font_size = 7)
 ```
 
 While CC count is restored in heat-shocked, _shroom3_-\- transgene carrying embryos, it also seems to reduce the number of CCs deposited in _shroom3_++ (\@ref(fig:rescshrm)A). For the rosettiness however, we still get a significant difference (\@ref(fig:rescshrm)B). 

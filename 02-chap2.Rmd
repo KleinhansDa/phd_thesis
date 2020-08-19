@@ -12,8 +12,8 @@ load("data/ground_truth_3d.RData")
 ### Chemicals {#mat-chem}
 
 ---------------------------------------------------------------------------------------------
-              **Chemical**    Company                                         cat.-no.   
--------------------------- -------------------------------------------------- ---------------
+                **Chemical**    Company                                       cat.-no.   
+---------------------------- ------------------------------------------------ ---------------
 Agarose                       Roth                                                6351.2           
 
 Agar-Agar                     Roth                                                5210.3
@@ -93,7 +93,7 @@ Triton-X100                   Roth                                              
 Trizol                        mbion                                               15596018
 
 Tween20                       Sigma                                               P1379
--------------------------- -------------------------------------------------- ---------------
+---------------------------- ------------------------------------------------ ---------------
 Table: (\#tab:mat-chem) Chemicals
 
 ### Solutions {#mat-sol}
@@ -214,8 +214,6 @@ P2                          1M NaOH + 10 % (w/v) SDS
 P3                          3M KOAc pH 5.5
 
 TNT                         50 mM Tris-HCl pH 8.0 + 100 mM NaCl + 0.1% Tween-20 
-
-Tricaine
 ------------------------- -------------------------------------------------------------------
 Table: (\#tab:mat-buff) Buffers
 
@@ -536,7 +534,8 @@ The membrane labeled image is segmented based on optimized hard coded values whi
 ```{r anallzr2d_seg, echo = TRUE, eval = FALSE}
 # Background subtraction
 	run("Subtract Background...", "rolling = 50");
-	run("Morphological Filters", "operation = Opening element = Disk radius = 20");
+	run("Morphological Filters",
+	    "operation = Opening element = Disk radius = 20");
 	run("Gaussian Blur...", "sigma = 5 scaled");
 # Thresholding
 	setAutoThreshold("Moments dark");
@@ -639,7 +638,7 @@ Code-snippets describing the main functionality are described in the next couple
 
 ```{r anallzr2dt_reg, echo = T, eval = F}
 #	Subtract background
-		run("Z Project...", "projection=[Average Intensity]");
+		run("Z Project...", "projection = [Average Intensity]");
 		ZPAVG = getTitle();
   		if (reg) {
 			print("Calculating registration parameters...");
@@ -650,18 +649,19 @@ Code-snippets describing the main functionality are described in the next couple
 			imageCalculator("Subtract create", DORG, ZPAVG);
 			IC = getTitle();
 			close(DORG);
-			run("Morphological Filters", "operation=Closing element=Disk radius=15");
+			run("Morphological Filters",
+			    "operation = Closing element=Disk radius = 15");
 			REG = getTitle();
 			close(IC);
 			close(IC);
 			close(DORG);
 		#	Thresholding 
-			run("Gaussian Blur...", "sigma=6 scaled"); 
+			run("Gaussian Blur...", "sigma = 6 scaled"); 
 			REG = getTitle();
 			run("Duplicate...", " ");
 			REGD = getTitle();
 			selectWindow(REG);
-			run("Enhance Contrast...", "saturated=0.3 normalize");
+			run("Enhance Contrast...", "saturated = 0.3 normalize");
 			run("8-bit");
 			selectWindow(REG);
 			setAutoThreshold("MaxEntropy  dark");
@@ -670,7 +670,7 @@ Code-snippets describing the main functionality are described in the next couple
 
 	# ### ANALYSIS ###
 	
-		run("Analyze Particles...", "size=150-10000 include exclude add");
+		run("Analyze Particles...", "size = 150-10000 include exclude add");
 		rmcount = roiManager("count")-1;
 		print("rois: "+rmcount);
 		
@@ -700,17 +700,20 @@ Code-snippets describing the main functionality are described in the next couple
 			}
 			print("Angle: "+Angle);
 			selectWindow(ZPAVG);
-			run("Rotate... ", "angle="+Angle+" grid=1 interpolation=Bilinear");
+			run("Rotate... ", 
+			    "angle="+ Angle +" grid = 1 interpolation = Bilinear");
 			ZPAVG = getTitle();
 			selectWindow(REG);
-			run("Rotate... ", "angle="+Angle+" grid=1 interpolation=Bilinear");
+			run("Rotate... ", 
+			    "angle="+ Angle +" grid = 1 interpolation = Bilinear");
 			run("Make Binary");
 			REG = getTitle();
 		
 		# ### CROPPING ### 
 
 			roiManager("reset");
-			run("Analyze Particles...", "size=150-10000 include add");
+			run("Analyze Particles...", 
+			    "size = 150-10000 include add");
 			roiManager("select", 0); # oder doch rmcount?
 			List.setMeasurements;
 			XRect = List.getValue("X");
@@ -733,35 +736,38 @@ Code-snippets describing the main functionality are described in the next couple
 		# 	C1
 			selectWindow(ORG);
 			if (reg) {
-				print("  Registering "+embryoID+"...");
-				run("Rotate... ", "angle="+Angle+" grid=1 interpolation=Bilinear stack");
+				print("  Registering "+ embryoID +"...");
+				run("Rotate... ", 
+				    "angle ="+ Angle +" grid = 1 interpolation = Bilinear stack");
 				makeRectangle(0, YRect, width, height);
 				run("Crop");
 			}
-			print("    Saving: "+embryoID+"_RC_C1");
+			print("    Saving: "+ embryoID +"_RC_C1");
 			saveAs("Tiff", rcdirc1 + orgname + "_RC.tif");
 		# 	C2
 			open(dualdir+dualdirlist[q]);
 			dualname = replace(dualdirlist[q], ".tif", ""); 
 			ORGC2 = getTitle();
 			if (reg) {
-				run("Rotate... ", "angle="+Angle+" grid=1 interpolation=Bilinear stack");
+				run("Rotate... ",
+				    "angle="+ Angle +" grid = 1 interpolation = Bilinear stack");
 				makeRectangle(0, YRect, width, height);
 				run("Crop");
 			}
-			print("    Saving: "+embryoID+"_RC_C2");
+			print("    Saving: "+ embryoID +"_RC_C2");
 			saveAs("Tiff", rcdirc2 + orgname + "_RC.tif");
 			close();
 		} else {
 			selectWindow(ORG);
 			if (reg) {
-				run("Rotate... ", "angle="+Angle+" grid=1 interpolation=Bilinear stack");
+				run("Rotate... ",
+				    "angle="+ Angle +" grid = 1 interpolation = Bilinear stack");
 				makeRectangle(0, YRect, width, height);
 				run("Crop");
-				print("    Saving: "+orgname+"_RC");
+				print("    Saving: "+ orgname +"_RC");
 				saveAs("Tiff", rcdir + orgname + "_RC.tif");
 			} else {
-				print("    Saving: "+orgname);
+				print("    Saving: "+ orgname);
 				saveAs("Tiff", rcdir + orgname);	
 			}
 		}
@@ -779,7 +785,7 @@ Code-snippets describing the main functionality are described in the next couple
 ```{r anallzr2dt_seg, echo = T, eval = F}
 #  ### Background correction ###
 	
-	print("  Segmenting "+embryoID+"_RC...");
+	print("  Segmenting "+ embryoID +"_RC...");
 		selectWindow(ORG);
 		getDimensions(width, height, channels, slices, frames);
 		imageCalculator("Subtract create stack", ORG, ZPAVG);
@@ -787,7 +793,8 @@ Code-snippets describing the main functionality are described in the next couple
 		close(ZPAVG);
 	selectWindow(IC);
 		print("Bleach correction...");
-		run("Bleach Correction", "correction=[Simple Ratio] background=0");
+		run("Bleach Correction", 
+		    "correction = [Simple Ratio] background = 0");
 		BC = getTitle();
 		close(IC);
 		selectWindow(BC);
@@ -795,56 +802,36 @@ Code-snippets describing the main functionality are described in the next couple
 		for (j = 1; j < nslbc; j++) {
 			selectWindow(BC);
 			setSlice(j);
-			run("Morphological Filters", "operation=Closing element=Disk radius=15");
+			run("Morphological Filters",
+			    "operation = Closing element = Disk radius = 15");
 		}
 		close(BC);
-		run("Images to Stack", "name="+ ORG +" title = [] use");
+		run("Images to Stack", "name ="+ ORG +" title = [] use");
 		MC = getTitle();
 		
 	#	### SEGMENTATION ###
 	
 		selectWindow(MC);
-		run("Gaussian Blur...", "sigma=5.5 scaled stack");
+		run("Gaussian Blur...", "sigma = 5.5 scaled stack");
 	#	Normalize saturated pixels
-		run("Enhance Contrast...", "saturated=0.5 normalize process_all");
+		run("Enhance Contrast...",
+		    "saturated = 0.5 normalize process_all");
 		setSlice(n);
 		resetThreshold();
 		setAutoThreshold("MaxEntropy dark");
-		run("Convert to Mask", "method=MaxEntropy background=Dark black");
+		run("Convert to Mask",
+		    "method = MaxEntropy background = Dark black");
 		run("Invert LUT");
 		run("Fill Holes", "stack");
-		run("Options...", "iterations=2 count=1 pad do=Erode stack");
-		run("Options...", "iterations=2 count=1 pad do=Open stack");
-		run("Options...", "iterations=1 count=1 pad do=Dilate stack");
-		print("    Saving binary");
-		saveAs("Tiff", bindir + orgname + "_RC_bin.tif");
-		MC = getTitle();
-		close(MC); # close BIN
-		T2 = getTime();
-		Tdiff = T2-T1;
-		print("  Duration: "+Tdiff+"ms");
+		run("Options...", 
+		    "iterations = 2 count = 1 pad do = Erode stack");
+		run("Options...", 
+		    "iterations = 2 count = 1 pad do = Open stack");
+		run("Options...", 
+		    "iterations = 1 count = 1 pad do = Dilate stack");
 	}
-	month = month+1;
-	selectWindow("Log");  //select Log-window 
-	saveAs("Text", par + File.separator + "Log_v" + version + "_" + year+"0"+month+dayOfMonth+".txt"); 
-	closelog();
-	roiManager("reset");
-	cleanup();
-	setBatchMode(false);
-	wait(500);
-	call("bar.Utils.revealFile", bindir);
 	waitForUser("Check Segmentations");
-	} 
-	if (pre) {
-		close(ORG);	
 	}
-	if (dual) {
-		rcdirc1list = getFileList(rcdirc1);
-		rcdirc2list = getFileList(rcdirc2);
-	} else {
-		rcdirlist = getFileList(rcdir);
-	}
-	bindirlist = getFileList(bindir);
 ```
 
 ###### Analysis
@@ -879,26 +866,31 @@ for (b = 0; b < orgdirlist.length; b++) {
 
 	selectWindow(BIN); 	 # select binary
 	pangles = newArray(nSlices()+1);
-		for (i=1 ; i<=nSlices(); i++) {
+		for (i = 1 ; i <= nSlices(); i++) {
 			s = nSlices();
 			setSlice(i);
 			if (ccs) {
-				run("Analyze Particles...", "size=150-10000 include add");
+				run("Analyze Particles...",
+				    "size = 150-10000 include add");
 			} else {
-				run("Analyze Particles...", "size=750-10000 include add");
+				run("Analyze Particles...",
+				    "size = 750-10000 include add");
 			}
 		# 	Loop though ROI List
-			for (j=0 ; j<roiManager("count"); j++) {
+			for (j = 0 ; j < roiManager("count"); j++) {
 				roiManager("select", j);
-				run("Set Scale...", "distance=1 known=0.00005 pixel=1 unit=micron");
+				run("Set Scale...",
+				    "distance = 1 known = 0.00005 pixel = 1 unit = micron");
 				List.setMeasurements;
   				x = List.getValue("X");
     			roiManager("rename", x);
 			}
-			run("Properties...", "channels=1 slices=1 frames=[s] unit=micron pixel_width=[xs] pixel_height=[ys] voxel_depth=[zs] frame=[time] global");
+			run("Properties...",
+			    "channels=1 slices=1 frames=[s] unit=micron pixel_width=[xs]
+			    pixel_height=[ys] voxel_depth=[zs] frame=[time] global");
 		# 	Sort ROIs and select last one
 			roiManager("Sort");
-			for (j=0 ; j<roiManager("count"); j++) {
+			for (j = 0 ; j < roiManager("count"); j++) {
 				ccn = roiManager("count")+j;
 				if (ccn == roiManager("count")) {
 					ccn = "prim";
@@ -935,8 +927,6 @@ for (b = 0; b < orgdirlist.length; b++) {
 			pangles[i] = A;
 			run("Rotate... ", "angle=[A] grid=1 interpolation=Bilinear slice");
 			run("Flip Horizontally");
-			selectWindow(RC); # select & deselect to remove selected ROIs
-			run("Select None");
 	# 	Measure and save segmented Mask ROI
 			pLLProis = embryodir + File.separator + "ROIs" + File.separator;
 			File.makeDirectory(pLLProis);
@@ -993,21 +983,33 @@ for (b = 0; b < orgdirlist.length; b++) {
     		setResult("X_N", r, XN);
     		setResult("LE", r, LE);
     		updateResults();
-    # 	Velocitiy LE (LE1 = LE @ timepoint 1; LEN = normalized value of LE, LENV = Velocity of the normalized value of LE)
+        # Velocitiy LE (LE1 = LE @ timepoint 1; 
+    		# LEN = normalized value of LE, 
+    		# LENV = Velocity of the normalized value of LE)
     		if (i == 1) {
-    			LE1 = LE; # LE1 will be the same for all further timepoints
-    			LEN = 0; #
-    			LENED = NaN; # 'Leading Edge Normalized Euclidian Distance'
-    			LEV = NaN; # For the first timepoint there can be no speed, since there was no coordinate of X and Y before
+    		# LE1 will be the same for all further timepoints
+    			LE1 = LE; 
+    			LEN = 0;
+    		# 'Leading Edge Normalized Euclidian Distance'
+    			LENED = NaN;
+    		# For the first timepoint there can be no speed, 
+    		# since there was no coordinate of X and Y before
+    			LEV = NaN; 
     		} else {
-    			LEN = LE - LE1; # The value of 'LE Normalized' to zero 
-    			LED = getResult("LE_N", r2); # LED = The value of LE one row before
-    			LENED = sqrt((LEN-LED)*(LEN-LED)+(Y2-Y1)*(Y2-Y1)); # LENED = LEN - (LEN-LED);
+    		# The value of 'LE Normalized' to zero
+    			LEN = LE - LE1;
+    		# LED = The value of LE one row before
+    			LED = getResult("LE_N", r2);
+    		# LENED = LEN - (LEN-LED);
+    			LENED = sqrt((LEN-LED)*(LEN-LED)+(Y2-Y1)*(Y2-Y1)); 
     			LEV = LENED / time;
     		}
-    		setResult("LE_N", r, LEN); # setResult Leading Edge Normalized (LE_N)
-    		setResult("LE_N_ED", r, LENED); # setResult Leading Edge Normalized Euclidian Distance (LE_N_ED)
-    		setResult("LE_V", r, LEV); # setResult Leading Edge Velocity (LE_V)
+    	# setResult Leading Edge Normalized (LE_N)
+    		setResult("LE_N", r, LEN);
+    	# setResult Leading Edge Normalized Euclidian Distance (LE_N_ED)
+    		setResult("LE_N_ED", r, LENED);
+    	# setResult Leading Edge Velocity (LE_V)
+    		setResult("LE_V", r, LEV); 
     		updateResults();
 			}
 			close(BIN); # could be reduced to close(BIN, ORG); or close (".tif");
@@ -1015,7 +1017,9 @@ for (b = 0; b < orgdirlist.length; b++) {
 		# 	Merge registered prim timepoints
 			setBatchMode("exit and display");
 			run("Images to Stack", "method=[Copy (top-left)] name=Stack title=[] use");
-			run("Properties...", "channels=1 slices=1 frames=[s] unit=micron pixel_width=[xs] pixel_height=[ys] voxel_depth=[zs] frame=[time] global");	
+			run("Properties...",
+			    "channels=1 slices=1 frames=[s] unit=micron pixel_width=[xs]
+			    pixel_height=[ys] voxel_depth=[zs] frame=[time] global");	
 			run("Flip Horizontally", "stack");
 			if (dual) {
 			#	save C1
@@ -1027,10 +1031,9 @@ for (b = 0; b < orgdirlist.length; b++) {
 				RC = getTitle();
 				dotIndex = indexOf(RC, ".");
 				title = substring(RC, 0, dotIndex);
-				for (i=1 ; i<=nSlices(); i++) {
+				for (i = 1 ; i <= nSlices(); i++) {
 					s = i;
 					setSlice(i);
-					wait(200);
 			# 	Prim registration
 					if (i<10) {
 						slice = d2s(0,0) + d2s(i,0);
@@ -1050,16 +1053,18 @@ for (b = 0; b < orgdirlist.length; b++) {
 				#	Rotate
 					A = pangles[s];
 					run("Select None");
-					run("Rotate... ", "angle=[A] grid=1 interpolation=Bilinear slice");
+					run("Rotate... ", "angle = [A] grid = 1 interpolation = Bilinear slice");
 					run("Flip Horizontally");
-					selectWindow(RC); # select & deselect to remove selected ROIs
+				# select & deselect to remove selected ROIs
+					selectWindow(RC);
 					run("Select None");
 					roiManager("reset");
 				}
 			#	close and merge
 				close(RC);
 				run("Images to Stack", "method=[Copy (top-left)] name=Stack title=[] use");
-				run("Properties...", "channels=1 slices=1 frames=[s] unit=micron pixel_width=[xs] pixel_height=[ys] voxel_depth=[zs] frame=[time] global");	
+				run("Properties...", "channels=1 slices=1 frames=[s] unit=micron
+				    pixel_width=[xs] pixel_height=[ys] voxel_depth=[zs] frame=[time] global");	
 				run("Flip Horizontally", "stack");
 				roiManager("reset");
 		  #	save C2
@@ -1069,7 +1074,7 @@ for (b = 0; b < orgdirlist.length; b++) {
 				saveAs("Tiff", pLLPdir + orgname + ".tif");
 				close();
 			}
-	# 	Save Results Table
+	  # Save Results Table
 			run("Input/Output...", "jpeg=100 gif=-1 file=.txt use_file copy_column copy_row save_column");
 			saveAs("results", embryodir + orgname + "_Results" + ".txt");
 		# Calulate Stats and show in Log

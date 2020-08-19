@@ -7,9 +7,15 @@ To create a robust model, it is necessary to have robust methods that allow to g
 
 ### Mounting
 
-```{r klein_2019_disc, out.width = '95%', fig.keep = 'all', fig.show = 'hold'}
+```{r klein_2019_disc_1, out.width = '95%'}
 knitr::include_graphics("files/pubs/klein_2019/004_02.jpg")
+```
+
+```{r klein_2019_disc_2, out.width = '95%'}
 knitr::include_graphics("files/pubs/klein_2019/005.jpg")
+```
+
+```{r klein_2019_disc_3, out.width = '95%'}
 knitr::include_graphics("files/pubs/klein_2019/006_01.jpg")
 ```
 
