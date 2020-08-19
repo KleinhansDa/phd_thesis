@@ -1,6 +1,6 @@
 book_filename: "thesis_dsk"
 chapter_name: "Chapter "
-rmd_files: ["00-zusammenfassung.Rmd", "00-summary.Rmd", "index.Rmd", "01-chap1.Rmd", "02-chap2.Rmd", "03-chap3.Rmd", "04-conclusion.Rmd", "05-appendix.Rmd", "06-cv.Rmd", "07-declar.Rmd", "99-references.Rmd"]
+rmd_files: ["00--prelim.Rmd", "00-zusammenfassung.Rmd", "00-summary.Rmd", "index.Rmd", "01-chap1.Rmd", "02-chap2.Rmd", "03-chap3.Rmd", "04-conclusion.Rmd", "05-appendix.Rmd", "06-cv.Rmd", "07-declar.Rmd", "99-references.Rmd"]
 download: [["thesis_dsk.pdf", "PDF"]]
 output_dir: "docs"
 bookdown::gitbook:toc_depth: 4

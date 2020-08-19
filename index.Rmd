@@ -26,39 +26,6 @@ output:
 # like below, use a command like that for the abstract above.  Note that a tab is 
 # needed on the line after the |.,
 
-acknowledgements: |
-  I thank...\newline
-  
-  \noindent my supervisors
-  
-  - Prof. Dr. Virginie Lecaudey
-  - Prof. Dr. Manfred Schliwa
-  
-  \noindent my students
-  
-  - Dmitri Baulin (M.Sc. Thesis)
-  - Felix Godron (B.Sc. Thesis)
-  - Andreas Ebert (B.Sc. Thesis)
-  - Gelwa Helmand (B.Sc. Thesis)
-  - Bianca Rodrigues Lima (Master student)
-  - Ivan Alcantara (Master student)
-  
-  For trust shown in the process, for support and demand. \newline For their patience, engangement and hard work!
-  \newline\newline
-  \noindent and my animals, without whom this work would not have been possible.
-  \vspace{0.2cm}
-
-preface: |
-  > "The most exciting time in the history of developmental biology is right now. Fueled both by new technologies and by new thought from other fields, we are exploding old notions and opening fantastic new horizons in embryology. [...]
-  
-  > Next, let’s discuss why developmental biology — both normal and pathological — holds such enduring fascination. I see two intertwined explanations. Obviously, it’s the ultimate personal creation story, telling each of us both where we came from and how we were constructed. Less obvious, but perhaps more tantalizing for us scientists, is the sheer complexity of the process. A single cell with a single genome can somehow create tril
-  lions of cells in hundreds of radically different types, and those cells can organize themselves into a specific form. The scale of this self-organization process is mind boggling, surely the most amazing of emergent properties."
-  
-  > \- John B. Wallingford, 2019^["We Are All Developmental Biologists", Developmental Cell, Vol.50, Issue 2, Jul 22, 2019]
-
-
-#dedication:
-
 bibliography: files/library.bib
 csl: files/science.csl
 lot: true
@@ -90,14 +57,12 @@ knitr::opts_chunk$set(
   ) #, dev='pdf'
 # libraries
   library(pROC)
-  #library(data.table)
   library(ggplot2)
   library(ggpubr)
   library(pander)
   library(kableExtra)
   library(magrittr)
   library(tidyverse)
-  #library(ggpaired)
 # colors
   jet.colors <- 
     colorRampPalette(c("#00007F", "blue", "#007FFF", "cyan", "#7FFF7F", "yellow", "#FF7F00", "red", "#7F0000"))
@@ -109,7 +74,7 @@ knitr::opts_chunk$set(
 ```{r tablechunkopts, echo = FALSE}
 # latex format if knitr output is latex
 if (knitr:::is_latex_output()) {
- options(knitr.table.format = "latex") 
+  options(knitr.table.format = "latex") 
 }
 # remove NAs
 options(knitr.kable.NA = '')

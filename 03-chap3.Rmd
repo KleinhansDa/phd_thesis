@@ -27,7 +27,7 @@ A typical nucleus in the PLLp is about 5 $\mu$m in diameter. To determine the ri
 
 (ref:maxllreg) Registration of 2D data.  **Cluster Segments** Registered, MaxIP data with cell cluster segments of the lyn-GFP signal laid upon the DAPI signal. **Cell Labels** Magenta dots represent the maxima found within each ROI and hence the nuclei labels.
 
-```{r maxllreg, out.width = '90%', fig.cap = "(ref:maxllreg)", fig.scap = "Registration of 2D data"}
+```{r maxllreg, fig.cap = "(ref:maxllreg)", fig.scap = "Registration of 2D data"}
 knitr::include_graphics("figures/materials/ground_truth/clusters/clusters.png")
 ```
 
@@ -83,7 +83,7 @@ The first module of the macro is PLLp registration in X, Y and cropping in Z. Th
 
 (ref:maxraw) Registration of 3D data. **raw** location and orientation of the raw data in XY (shown here as Z-projections). The red line indicates the angle in degrees from the horizontal midline. The blue oval indicates registration ROI as determined by the macro. **registered** pLLPs after XY transformation took place. red circles indicate rosettes as detected by the macro.
 
-```{r maxraw, out.width = '80%', fig.cap = "(ref:maxraw)", fig.scap = "Registration of 3D data"}
+```{r maxraw, fig.cap = "(ref:maxraw)", fig.scap = "Registration of 3D data"}
 knitr::include_graphics(path = "figures/materials/ground_truth/registration.png")
 ```
 
@@ -100,7 +100,7 @@ In figure \@ref(fig:stackmem) the fluorescence signal of the three pLLPs tested 
 
 (ref:stackmem) _cldnb:lyn-gfp_ fluorescence signal in a cross-section of the pLLP (Obj.: 40X APO)
 
-```{r stackmem, out.width = '70%', fig.cap = "(ref:stackmem)"}
+```{r stackmem, out.width = '70%', fig.cap = "(ref:stackmem)", fig.scap = "Image data pLLP segmentation"}
 knitr::include_graphics("figures/materials/ground_truth/stackmem.png")
 ```
 
@@ -160,7 +160,7 @@ For a proof of concept of segmentation results and concept around measuring apic
 
 (ref:resacimeasure) A.C.I.\textsubscript{Major / Minor} proof of concept. **A and B** Each dot represents the average of all cells of a whole pLLP (DMSO = 1769 cells / 13 pLLPs; SU5402 = 2066 cells / 15 pLLPs).
 
-```{r resacimeasure, out.width = '60%', fig.height = 3, fig.width = 5, fig.cap = "(ref:resacimeasure)", fig.scap = "A.C.I. Major / Minor prood of concept"}
+```{r resacimeasure, out.width = '50%', fig.height = 3, fig.width = 5, fig.cap = "(ref:resacimeasure)", fig.scap = "A.C.I. Major / Minor proof of concept"}
 ann_text <- 
   data.frame(
     group = c(0.6, 0.6),
@@ -229,11 +229,11 @@ Inspecting the cell count unfortunately does not directly tell us how well the c
 
 \noindent The volume of a cell is a very robust morphological feature. Therefore, if its volume does not differ significantly at a given threshold level we consider its morphology to be conserved.
 
-In figure \@ref(fig:volsecdffull) the distribution and amount of the cell volumes across the different threshold levels can be inspected _via_ the 'empirical cumulative distribution function' (ECDF). The closer the slopes are to the ground truth, the stronger they are conserved. The upper graph of figure \@ref(fig:volsecdffull) shows the full distribution, where the major differences seem to appear within the 0.4 quantile (red line). Therefore, the lower graph of figure \@ref(fig:volsecdffull) only the values within the 0.4 quantile are shown to get a more detailed impression.
+In figure \@ref(fig:volsecdffull) the distribution and amount of the cell volumes across the different threshold levels can be inspected _via_ the 'empirical cumulative distribution function' (ECDF). The closer the slopes are to the ground truth, the stronger they are conserved. The upper graph of figure \@ref(fig:volsecdffull) shows the full distribution, where the major differences seem to appear within the 0.4 quantile (red line). Therefore, the lower graph of figure \@ref(fig:volsecdffull) only shows the values within the 0.4 quantile are shown to get a more detailed impression.
 
 (ref:volsecdffull) **upper** Cell volumes full distribution (red line = .4 Quantile) **lower** Cell volumes distribution within .4 Quantile
 
-```{r volsecdffull, fig.height = 2.7, out.width = '90%', fig.cap = "(ref:volsecdffull)", fig.keep = 'all', fig.show = 'hold'}
+```{r volsecdffull, fig.height = 2.6, out.width = '90%', fig.cap = "(ref:volsecdffull)", fig.scap = "pLLP segmentation: morphological conservation", fig.keep = 'all', fig.show = 'hold'}
 ggplot(all_vol, aes(Vol..unit., colour = Group)) +
   geom_vline(aes(xintercept = quantile(Vol..unit., 0.4, na.rm=TRUE)), colour="red") +
   stat_ecdf(geom = "step", pad = FALSE, size = 1.1) +
@@ -247,7 +247,7 @@ ggplot(all_vol, aes(Vol..unit., colour = Group)) +
   facet_grid(.~Obj, scale = "free", labeller = label_parsed) +
   mythemeLIGHT_bottom() + 
     theme(
-      axis.text = element_text(size = 9),
+      axis.text = element_text(size = rel(1)),
       panel.background = element_rect(fill = "slategray3", colour = "black"),
       strip.background = element_blank(),
       strip.text = element_text(size = rel(1.2), face = 'bold'),
@@ -267,7 +267,7 @@ ggplot(all_vol, aes(Vol..unit., colour = Group)) +
   facet_grid(.~Obj, scale = "free", labeller = label_parsed) +
   mythemeLIGHT_bottom() + 
     theme(
-      axis.text = element_text(size = 9),
+      axis.text = element_text(size = rel(1)),
       panel.background = element_rect(fill = "slategray3", colour = "black"),
       strip.background = element_blank(),
       strip.text = element_text(size = rel(1.2), face = 'bold'),
@@ -351,7 +351,7 @@ The CC count and position analysis clearly shows that more CCs are deposited in 
 ```{r llclus, out.width = '85%', fig.cap = "(ref:llclus)", fig.scap = "LL Morphometrics"}
 knitr::include_graphics("figures/results/01_morphometrics/ll_clusters.png")
 ```
-#### Thermodynamic Rescue {#res-tempresc}
+#### Temperature Rescue {#res-tempresc}
 
 Increasing temperature usually leads to an acceleration in thermodynamics and embryonic development, while lower temperatures slow down development [@Dettlaff1991]. Slowing down development also leads to a reduction in speed of migration and therefore to a reduction in forces that act on cells, cell-cell junctions and organ structures. 
 
@@ -385,7 +385,7 @@ knitr::kable(data, booktabs = T, caption = 'Thermodynamic rescue statistics',
 
 #### Summary
 
-Taken together I could show that while each CC is comprised of less cells, in sum there are more cells in embryos deficient for Shroom3. Rescuing the CC count by slowing down embryonic development was only partially successful, but seems probable at even lower temperatures. For the pLLP at end of migration however, the number of cells is unaffected - which raises the question if Shroom3 has a regulatory role in Proliferation.
+Two additional CCs are deposited in _shroom3_-\- embryos. While each CC is comprised of less cells, in sum there are more cells in embryos deficient for Shroom3 leading to a net increase in cell count of ~9$\%$ (31 cells). Rescuing the CC count by slowing down embryonic development was only partially successful, but seems probable at even lower temperatures. For the pLLP at end of migration however, the number of cells is unaffected - which raises the question if Shroom3 has a regulatory role in Proliferation.
 
 ### Proliferation
 
@@ -463,7 +463,7 @@ knitr::include_graphics("figures/results/03_rosettes/registration.png")
 
 #### Rosette Detection {#res-rdtdet}
 
-To quantify the maturity of rosettes within the pLLP a CNN was used which allows to detect objects within images (Region Proposal based CNN). Inherent to object detection and classification by a neural network is that the network not only tells us if an object was _detected_ (of numbers room $\mathbb{N_0}$), but also how secure it is - the probability - that the object detected is the right one (of numbers room $x\in[0, 1]\subset\mathbb{R}$) - the _weighted detection_. Furthermore, the weighted detection was capped a score $\leq$ 0.5, since below 0.5 the probability would be to insecure. In our case the network was trained to detect wildtype rosettes, while also presenting pLLPs of embryos treated with a compound that inhibits rosette formation (SU5402) to refine learning. Therefore, if the network detected 1 rosette with a probability of 0.99, it is very likely that this is a wildtype rosette. However, at different developmental stages and genetic background (e.g. mutants with impaired rosette formation) the pLLP exhibits a different count of rosettes. Therefore it would be wrong to compare just the sum of _detections_ or _weighted detections_ per pLLP, but it is necessary to normalize for the different count of rosettes to get a global figure of pLLP rosettization - the _rosettiness_.
+To quantify the maturity of rosettes within the pLLP a CNN was used which allows to detect objects within images (Region Proposal based CNN). Inherent to object detection and classification by a neural network is that the network not only tells us if an object was _detected_ (of numbers room $x\in[0, \infty]\subset\mathbb{N}$), but also how secure it is - the probability - that the object detected is the right one (of numbers room $x\in[0, 1]\subset\mathbb{R}$) - the _weighted detection_. Furthermore, the weighted detection was capped a score $\leq$ 0.5, since below 0.5 the probability would be to insecure. In our case the network was trained to detect wildtype rosettes, while also presenting pLLPs of embryos treated with a compound that inhibits rosette formation (SU5402) to refine learning. Therefore, if the network detected 1 rosette with a probability of 0.99, it is very likely that this is a wildtype rosette. However, at different developmental stages and genetic background (e.g. mutants with impaired rosette formation) the pLLP exhibits a different count of rosettes. Therefore it would be wrong to compare just the sum of _detections_ or _weighted detections_ per pLLP, but it is necessary to normalize for the different count of rosettes to get a global figure of pLLP rosettization - the _rosettiness_.
 
 \[\textbf{Rosettiness} = \frac{\sum_{} \textrm{Weighted Detections}}{\sum_{} \textrm{Detections}} = \textrm{Normalized Weight}\]
 
@@ -472,9 +472,11 @@ To quantify the maturity of rosettes within the pLLP a CNN was used which allows
 ```{r rdtdetmdl, out.extra = '', fig.pos = "h", fig.cap = "(ref:rdtdetmdl)", fig.scap = "Quantification of rosettes"}
 knitr::include_graphics("figures/results/03_rosettes/detection_model.png")
 ```
-The kymographs^[a kymograph is a tool to record position over time] in figure \@ref(fig:rdtdet)A-A’ were generated from pLLPs that were previously registered with the anaLLzr2DT IJ macro (section \ref(mat-anallzr2dt)). After registration, a line was drawn along the horizontal midline (\@ref(fig:rdtreg)A). Finally, recorded kymographs were turned to false color (blue = low intensity, red = high intensity) for better visual interpretation. In _shroom3_++ the higher intensities are highly concentrated to two to three distinct regions within the migrating pLLP, while in the _shroom3_-\- pLLP the higher intensities are more fragmented and overall reduced. To analyze this statistically, all pLLPs were quantified in terms of rosette count and average rosette weight or ‘rosettiness’ (section \@ref(CNN)).
+The kymographs^[a kymograph is a tool to record position over time] in figure \@ref(fig:rdtdet)A-A’ were generated from pLLPs that were previously registered with the anaLLzr2DT IJ macro (section \@ref(mat-anallzr2dt)). After registration, a line was drawn along the horizontal midline (\@ref(fig:rdtreg)A). Finally, recorded kymographs were turned to false color (blue = low intensity, red = high intensity) for better visual interpretation. In _shroom3_++ the higher intensities are highly concentrated to two to three distinct regions within the migrating pLLP, while in the _shroom3_-\- pLLP the higher intensities are more fragmented and overall reduced. 
 
-The numbers reveal two very interesting things. First, the medians show that rosette count (\@ref(fig:rdtreg)B’) is only reduced for the first six hours, while rosettiness is reduced almost throughout the entire 20 hours. Second, while for rosette counts two to six indeed half or more of the pLLPs are _shroom3_++, for counts below two and above six there are more _shroom3_-\- pLLPs (\@ref(fig:rdtreg)B). Furthermore figure \@(fig:rdtdet)C shows that at a rosettiness of ~0.7 there are about as many _shroom3_++ as there are _shroom3_-\- pLLPs, marking this point as a threshold were pLLPs above are more like likely to be _shroom3_++ and below more likely to be _shroom3_-\-. At ~0.1 rosettiness there are almost only _shroom3_-\- pLLPs, while at ~0.9 rosettiness there are almost only _shroom3_++ pLLPs. 
+The numbers reveal two very interesting things. First, the medians show that rosette count (\@ref(fig:rdtreg)B’) is only reduced for the first six hours, while rosettiness is reduced almost throughout the entire 20 hours. While the median rosettiness of _shroom3_++ is at a constant level of about 0.9, _shroom3_-\- rosettiness starts out at about 0.5 but then linearly grows until it also reaches levels of about 0.9 at 16-20 hours of migration. These results, together with the finding that we could reduce the number of CCs deposited when lowering the temperature, suggests that there should be a interdependecy with speed of migration.
+
+As for rosette detection, variance is much higher. Second, while for rosette counts two to six indeed half or more of the pLLPs are _shroom3_++, for counts below two and above six there are more _shroom3_-\- pLLPs (\@ref(fig:rdtreg)B). Furthermore figure \@(fig:rdtdet)C shows that at a rosettiness of ~0.7 there are about as many _shroom3_++ as there are _shroom3_-\- pLLPs, marking this point as a threshold were pLLPs above are more like likely to be _shroom3_++ and below more likely to be _shroom3_-\-. At ~0.1 rosettiness there are almost only _shroom3_-\- pLLPs, while at ~0.9 rosettiness there are almost only _shroom3_++ pLLPs. 
 In addition, the data distributions attached to the sides (\@ref(fig:rdtreg)B’’ and C’’) reveal that for the rosettiness the KDE did not actually shift to a lower number, but rather flattened and variance is increased.
 
 (ref:rdtdet) Rosette counts and weights. **A-A’** pLLP kymographs. Length = 100 $\mu$m. (A) shows the signal and line drawn. (A') shows the signal through time **B-B’’ and C-C’’** Different graphic representation of rosette count data. (B) Filled histogram (B’) Median$\pm$standard deviation (B’’) KDE.
@@ -587,9 +589,9 @@ knitr::kable(data, booktabs=T, caption = 'Calyculin rescue dataset summary', ali
 
 I could (**1**) reproduce the results of more deposited CCs on live data as well, gaining more insight in the deposition process which shows smaller and more fragmented CCs and a more chaotic deposition process overall (**2**) show that neither speed nor acceleration are significantly different. Also the area of the pLLP is not affected, but roundness, confirming our impression that the pLLP in _shroom3_-\- embryos is more elongated (**3**) show that while the integer number of rosettes in the pLLP is only significantly increased during the first 6-8 hours of migration, the overall _rosettiness_ (rosette integrity per PLLP) is significantly reduced over the whole path of migration.
 
-Rosettiness is strongly correlated to the final number of CCs deposited (\@ref(fig:rdtcorr)B) which is also evidenced by rescue of correlation between rosettiness at the beginning of migration and CC count at the end of migration (\@ref(fig:rescshrm)C), concluding that rosettiness is the key parameter for the future outcome of CC pattern. Still, the question is what determines rosette weight. Although acceleration and rosettiness are correlated only weakly, they are significantly stronger correlated in _shroom3_-\- than they are in _shroom3_++ embryos throughout time (\@ref(fig:rdtcorr)A). This finding is also confirmed by an experiment where the CC count of _shroom3_-\- can be rescued when incubated at lower temperature (section \@ref(res-tempresc)). In conclusion these results lead to the conclusion that _shroom3_-\- rosettes are destabilized with increasing thermodynamics.
+Rosettiness is strongly correlated to the final number of CCs deposited (\@ref(fig:rdtcorr)B) which is also evidenced by rescue of correlation between rosettiness at the beginning of migration and CC count at the end of migration (\@ref(fig:rescshrm)C), concluding that rosettiness is the key parameter for the future outcome of CC pattern. Interestingly however this conclusion contradicts the previous, and intuitive, assumption that embryos deficient for Shroom3 should not deposit CCs at all. However, in the light of this data Shroom3 is important to strengthen rosette integrity in order to have CCs of the right size deposited.
 
-Finally and importantly I found a high correlation between CCs deposited at end of migration and the median rosettiness throughout pLLP migration, which clearly demonstrates a direct link between rosette integrity and numbers of CCs deposited. Interestingly however not as previously, and intuitively, assumed. Here, Shroom3 is important not to strengthen rosette integrity in order to have CCs of the right size deposited.
+Still, the question is: What determines rosette weight? Although acceleration and rosettiness are correlated only weakly, they are significantly stronger correlated in _shroom3_-\- than they are in _shroom3_++ embryos throughout time (\@ref(fig:rdtcorr)A). This finding is also confirmed by an experiment where the CC count of _shroom3_-\- can be rescued when incubated at lower temperature (section \@ref(res-tempresc)).
 
 ### Apical Constriction
 
@@ -598,7 +600,7 @@ In the previous analysis I have shown a direct relationship between rosette inte
 To preserve rosette integrity and for proper CC maturation cells need to apically constrict. To gain further insight into Shroom3s contribution to apical constriction, it is appropriate to have a closer look at rosette conformation on a cellular scale. To do so, first a set of high spatial resolution, volumetric image data was generated (XY = 0.164 $\mu$m / pixel; Z = 0.4 $\mu$m) that allowed for...
 
 1. a more rigorous inspection of morphological differences, and
-2. automated and unbiased single cell 3D reconstruction (\@ref(ACI-singlecell)) using a newly developed IJ macro (section \@ref(mat-anallzr3d)). Secondly, to investigate the contribution of various single cell morphometrics to rosette formation an app was developed^[LLMapR - https://dskleinhans.shinyapps.io/LLmapR/] that allows for a convenient handling of large amounts of retrieved data.
+2. automated and unbiased single cell 3D reconstruction (section \@ref(ACI-singlecell)) using a newly developed IJ macro (section \@ref(mat-anallzr3d)). Secondly, to investigate the contribution of various single cell morphometrics to rosette formation an app was developed^[LLMapR - dskleinhans.shinyapps.io/LLmapR] that allows for a convenient handling of large amounts of retrieved data.
 
 (ref:acdata) High resolution, volumetric image data. Upper row shows the fluorescence signal at the membranes. Lower row shows the 3D reconstructed cells. Columns show the same pLLP from different angles.
 
@@ -606,7 +608,7 @@ To preserve rosette integrity and for proper CC maturation cells need to apicall
 knitr::include_graphics("figures/results/04_constriction/reconstriction_data.png")
 ```
 
-Inhibition of FGFR1 _via_ drug treatment^[Drug name = SU-5402 (section \@ref(mat-chem))] results in a concentration dependent loss of morphogenesis and rosette assembly in the pLLP [@Durdu2014a; @Harding2012; @Lecaudey2008a]. As a proof of principle and to validate previous studies, data of drug treated embryos (20 $\mu$M) and appropriate DMSO (0.1$\%$ DMSO / E3^[‘Embryo Medium 3’, section \@ref(mat-buff)]) controls were included.
+Inhibition of FGFR1 _via_ drug treatment^[Drug name = SU5402 (section \@ref(mat-chem))] results in a concentration dependent loss of morphogenesis and rosette assembly in the pLLP [@Durdu2014a; @Harding2012; @Lecaudey2008a]. As a proof of principle and to validate previous studies, data of drug treated embryos (20 $\mu$M) and appropriate DMSO (0.1$\%$ DMSO / E3^[‘Embryo Medium 3’, section \@ref(mat-buff)]) controls were included.
 
 #### Dataset
 
@@ -629,9 +631,7 @@ knitr::kable(acdata, booktabs=T, align=c('l', 'l', 'c', 'c', 'c'), escape = F,
   footnote(general = "ratio = cells/pLLPs")
 ```
 
-Use the sample data in the [LLMapR](https://dskleinhans.shinyapps.io/LLmapR/) web-app to explore the dataset.
-
-#### Cell Shape and Arrangement
+#### Shape and Arrangement
 
 Figure \@ref(fig:acshape)B’ illustrates the three developmental stages used for this analysis. For _shroom3_++ pLLPs two (\@ref(fig:acshape)A, 32 hpf) to four (\@ref(fig:acshape)A, 40 hpf) areas of constricting regions can be observed (XZ pane), in _shroom3_-\- its three (\@ref(fig:acshape)A, 36 hpf) to seven (\@ref(fig:acshape)A, 40 hpf), confirming the results of rosette detection (\@ref(res-rdtdet)). While at 32 and 36 hpf the spread of those regions (indicated by bars in \@ref(fig:acshape), XZ panes) is wider in _shroom3_-\-, at 40 hpf they are smaller but also increased in number. When looking at the central rosette along the width ((indicated by arrows in \@ref(fig:acshape)), YZ panes), it seems like there is no considerable difference between _shroom3_++ and _shroom3_-\- rosettes. In SU5402 treated embryos, neither in XZ nor in YZ constriction can be observed and the cells seem to be mostly columnar in shape. In addition, while constriction seems isotropic in the _shroom3_++ rosette center, constriction in the _shroom3_-\- rosette center cells appears an-isotropic.
 
@@ -641,9 +641,21 @@ Figure \@ref(fig:acshape)B’ illustrates the three developmental stages used fo
 knitr::include_graphics("figures/results/04_constriction/Figure_5-1.png")
 ```
 
-#### Single Cell Metrics
+#### Height
 
-To quantify AC in width and length and to gain a more objective view on cell geometry, apical constriction and other metrics such as height were quantified .To get a hold on AC an-isotropy we measured the length of the minor and major axis of a fit ellipsoid (as described in section \ref(ACI-pol) and illustrated in figure \@ref(fig:acaci)A). If AC was an-isotropic and more cells are oriented towards the horizontal midline instead of being radially oriented, this could be shown by degrees of divergence (degrees $\measuredangle$) from the horizontal midline (\@ref(fig:acaci)A’).
+Earlier attempts for indexing AC include measuring the ‘apical index’ (A.I.) of bottle cells during _X.laevis_ gastrulation [@Lee2007a] or the ACI for cells of the pLLP [@Harding2012]. For both, the metric describes the ratio of lateral height over apical width which, depending on the situation, is a very coarse and inaccurate description. In the pLLP cells of different forms, volumes and heights can be found. When measuring apical width at a fix distance from the apical site cells with different height but otherwise equal degree of AC turn out to have a very different ACI (figure \@ref(fig:ACICells)A and A’). If however apical width is measured at a distance relative to the cells height, cells with an equal degree of AC turn out to have the same ACI (figure \@ref(fig:ACICells)A and A’’). In addition, it remains questionable exactly how to define _apical width_ in a two-dimensional cellular cross-section. By introducing apical width measurement along both, the major and the minor axis (section \@ref(ACI-pol)), the improved model for AC and method for automated and unbiased cellular segmentation therefore represents a major advancement.
+
+AC is also correlated with cell height. To get a more detailed impression about how variables are distributed within the cells of the pLLP, single cell measurements of pLLPs that are normalized in orientation can be superimposed in a two-dimensional map of organ length and width. Next, cell coordinates in this map can be grouped into bins of hexagons and the summary statistic represented as color on a continuous scale (figure \@ref(fig:dismap)). Doing so reveals that for stages 32 and 36 hpf, height in _shroom3_-\- cells is not as strongly reduced as in SU5402 treated ones and that cells in the central region of the pLLP are higher than in the leading, trailing and lateral regions. In this specific case this may not lead to new insights, but it improves the visual perception and therefore may assist more concise questioning and reasoning.
+
+(ref:dismap) Centroid po QR code links to the LLMapR web-app.
+
+```{r dismap, out.extra = '', fig.pos = "h", out.width = '95%', fig.cap = "(ref:dismap)", fig.scap = "pLLP Maps"}
+knitr::include_graphics("figures/summary/methodology_mapr.png")
+```
+
+#### Apical Constriction
+
+To get a hold on AC an-isotropy we measured the length of the minor and major axis of a fit ellipsoid (as described in section \ref(ACI-pol) and illustrated in figure \@ref(fig:acaci)A). If AC was an-isotropic and more cells are oriented towards the horizontal midline instead of being radially oriented, this could be shown by degrees of divergence (degrees $\measuredangle$) from the horizontal midline (figure \@ref(fig:acaci)A’).
 For angle measurements, all angles are normalized to a 90$^\circ$ range, where 0$^\circ$ is along the horizontal midline. 
 
 When comparing the ratio of cells in intervals of 15$^\circ$ along a range of 90$^\circ$ it can be shown that there are more _shroom3_-\- than _shroom3_++ cells within the 0-15$^\circ$ interval through all three stages (\@ref(fig:acstages)). Even more, it shows that there are more _shroom3_++ than _shroom3_-\- cells within the remaining intervals – confirming the model of constriction an-isotropy.
@@ -655,14 +667,25 @@ While _reduction_ in ACI\textsubscript{Major} is stronger than the ACI\textsubsc
 ```{r acaci, fig.cap = "(ref:acaci)", fig.scap = "3D metrics and pLLP maps"}
 knitr::include_graphics("figures/results/04_constriction/Figure_5-2.png")
 ```
-
 #### Summary
 
-Here I could show that while AC is generally impaired in _shroom3_-\- embryos, there is an an-isotropy where the reduction in AC is stronger in the 
+In the previous chapter I could show that the main reason for the additional CCs deposited in Embryos deficient for Shroom3 is reduced rosettiness. Here I wanted to get a more detailed view on how rosette configuration and cell morphology compares between wildtype and mutant.
+
+The method developed to quantify AC allows measurement along two orthogonal axes, the major (the longer axis) and a minor (the shorter axis), of an ellipse fit to a cellular cross-section at a distinct distance from the apical site. In addition, the cells orientation in degrees from the horizontal midline is obtained (\@ref(fig:acaci)A-A’).
+
+In summary, AC is significantly reduced in _shroom3_-\- embryos. The results show an increased axial an-isotropy, meaning that AC is more reduced along the major than along the minor axis. In conclusion this means that due to less tight rosette packing and apical constriction the migrational pulling forces are probably accounting for the an-isotropy. In terms of cell shape this means that rosette cells go from a pyramidal geometry, more to a prism geometry (\@ref(fig:sumcells)). This is also confirmed by angular measurement which show that in _shroom3_-\- pLLPs there are more cells in the range of 0-15$^\circ$ while in _shroom3_++ pLLPs more cells are in the range of 30-45$^\circ$.
+
+(ref:sumcells) Rosette and Cell Shape Model
+
+```{r sumcells, out.width = '90%', fig.cap = "(ref:sumcells)", fig.scap = "Rosette and Cell Shape Model"}
+knitr::include_graphics("figures/summary/cell-model.png")
+```
+
+Zona occludens-1 (ZO-1) is a peripheral membrane, tight-junction associated protein. Within the apical region of pLLP rosettes Fgf filled luminal structures are developing that that are hubs for locally confined morphogen signaling. All cells of a rosette make up and are connected to a single lumen. When visualizing the lumen via an antibody for ZO-1, the lumen appears like a buckyball where each side is the connection to a single cell [@Durdu2014a]. While in _shroom3_++ rosettes those structures appear circular in the trailing rosette, in _shroom3_-\- rosettes they appear more oval (supplement, (\@ref(fig:suppzo1)), which supports the theory of an-isotropy. Furthermore, in more leading regions the signal is more fragmented, which supports the theory of micro-rosette structures.
 
 ### Haircell Specification {#res-hc}
 
-In the analyses presented so far I have shown that embryos deficient for Shroom3 deposit more CCs, that this is caused by a fragmentation of rosettes (not by overproliferation) and that AC, which is important for CC maturation, is only partially diminished (more in A-P than in D-V axis).
+In the analyses presented so far I have shown that embryos deficient for Shroom3 deposit more CCs, that this is caused by a fragmentation of rosettes (not by overproliferation) and that AC, which is important for CC maturation, is only partially diminished (more in A-P than in D-V axis). Since we also observe a shift in cell geometry from a pyramidal to a more prism geometry, we wanted to know if this had downstream consequences on hair-cell (HC) specification.
 
 As described in section \@ref(intro-morph), a cells shape has direct impact on its ability to perceive and react to external cues. Here we were interested if the reduction in AC (change in cell shape, section \@ref(ACI-pol)) and overall smaller CCs (but not change in density, section \@ref(res-llmorph)) , two mechanical features, had an impact on HC specification and therefore if the LLs function as a sensory system would still be intact. Atoh1a (section \@ref(intro-atoh), a TF that gives cells the potential to become sensory HCs), in the pLLP is locally expressed between leader and follower cells and is finally restricted to a single center cell _via_ lateral inhibition (section \@ref(intro-notch)). Since till today it was not shown why the center cell becomes the HC - here we wanted our hypothesis was that rosette assembly (radial organization) resp. AC could play a role.
 
@@ -676,7 +699,7 @@ knitr::include_graphics("figures/results/05_atoh/hc_ish.png")
 
 Traditional ISH allows for detection of RNA transcripts on a whole embryo scale _via_ a hybridizing anti-sense probe. However, since embryos are fixed, it only allows to analyze single time points. Furthermore, since images are taken in brightfield, quantification of signal intensity is difficult.
 
-To get access to developmental dynamics we made use of an additional, besides _cldnb:lyn-gfp_, transgenic construct where tdTomato^[Short ‚Tom‘] [@Shaner2004] is expressed under direct control of the _atoh1a_ promotor. By simultaneous observation of both fluorophores in a time-lapse setup (\@ref(fig:hctl)B), the strategy was to follow up the dynamics of tdTomato to quantify the expression of _atoh1a_ in cell count and intensity of expression. 
+To get access to developmental dynamics we made use of an additional, besides _cldnb:lyn-gfp_, transgenic construct where tdTomato [@Shaner2004] is expressed under direct control of the _atoh1a_ promotor. By simultaneous observation of both fluorophores in a time-lapse setup (\@ref(fig:hctl)B), the strategy was to follow up the dynamics of tdTomato to quantify the expression of _atoh1a_ in cell count and intensity of expression. 
 
 #### Dataset
 
@@ -700,10 +723,10 @@ While there is no difference in relative numbers of _atoh1a_ expressing cells wi
 
 The extrusions to the left in the Kymographs in figure \@ref(fig:hctl)D are representative to the elongating pLLP during the process of CC deposition. Magenta curves represent expression of _atoh1a_. For the _shroom3_-\- pLLP, premature expression of _atoh1a_ can be detected. The diagonal lines in the kymographs in figure \@ref(fig:hctl)D’ represent the moving pLLP along the LL. Vertical curves represent deposited CCs. As for the registered pLLP, Magenta curves represent expression of _atoh1a_.
 
-(ref:hctl) Hair-cell specification in the LL. **A and B** Maximum tdTomato intensities in the pLLP and CCs. All CC lifetimes were normalized to the timepoint of deposition (timepoint zero, highlighted by striped vertical line). pLLP intensities are shown to the right (black curve), CC intensities are shown on a negative scale to the left (colored curves). **C** Relative numbers of _atoh1a_ expressing cells to number of timepoints and **C’** mean counts of _atoh1a_ expressing cells. **D-D’** Kymographs along the horizontal midline showing nascent signal of Tom (in magenta) **D** two individual pLLPs that were registered in time and to the leading edge. And **D’** Tom signal during LL development. 
+(ref:hctl) Hair-cell specification in the LL.**A** Sample of imagaes analyzed. _upper panel_ shows the _cldnb:lyn-gfp_ transgene with segmentation masks highlighted in red. Each structure is labeled with the corresponding label in the tabular data. _lower panel_ shows the _atoh1a:Tom_ transgene with segmentation mask transferred from upper panel. **B and C** Maximum tdTomato intensities in the pLLP and CCs. All CC lifetimes were normalized to the timepoint of deposition (timepoint zero, highlighted by striped vertical line). pLLP intensities are shown to the right (black curve), CC intensities are shown on a negative scale to the left (colored curves). **D** Relative numbers of _atoh1a_ expressing cells to number of timepoints and **D’** mean counts of _atoh1a_ expressing cells. **D-D’** Kymographs along the horizontal midline showing nascent signal of Tom (in magenta) **E** two individual pLLPs that were registered in time and to the leading edge. And **E’** Tom signal during LL development. 
 
 ```{r hctl, fig.cap = "(ref:hctl)", fig.scap = "Hair-cell specification in the LL"}
-knitr::include_graphics("figures/results/05_atoh/Figure_7-white-01.png")
+knitr::include_graphics("figures/results/05_atoh/ato-tom.png")
 ```
 
 Deposition and position of the first CC is more independent of Shroom3 (section \@ref(res-ccounts)) than for the remaining CCs. Interestingly during the first four hours, when the first CC is deposited, analysis of hair-cell specification shows that not only the promotor for _atoh1a_ is more active in _shroom3_-\- embryos (figure \@ref(fig:hctl) A and B), but also that more cells are differentiating to become HCs (figure \@ref(fig:hctl)C and C’). This leads to the conclusion that the morphological changes introduced by the _shroom3_ mutation lead to a pre-mature activation of the _shroom3_ promotor, subsequently leading to deposition of the CC the HC is associated with.
@@ -712,9 +735,7 @@ Deposition and position of the first CC is more independent of Shroom3 (section 
 
 As stated in section \@ref(intro-fgf) and \@ref(into-shroom), FGF plays a key role during LL development and, additionally, more recent research shows that levels FGF activity have direct impact on the number of CCs deposited [@Durdu2014a].
 
-Since in embryos deficient for Shroom3 there are significantly more CCs deposited and since we observe a pre-mature activation of Atoh1a (which activates FGF signaling), we wanted to test whether the increase in CCs deposited can be explained by an increase in FGF activity.
-
-Inhibition of FGF also reduces LL length [@Durdu2014a; @Lecaudey2008a]. Therefore, a titration series experiment with an FGF inhibitor (SU5402) was planned to find a concentration that would not affect the length of the LL but still restore _shroom3_++ levels of CC count.\newline
+Since in embryos deficient for Shroom3 there are significantly more CCs deposited and since we observe a pre-mature activation of Atoh1a (which activates FGF signaling), we wanted to test whether the increase in CCs deposited can be explained by an increase in FGF activity. Inhibition of FGF also reduces LL length [@Durdu2014a; @Lecaudey2008a]. Therefore, a titration series experiment with an FGF inhibitor (SU5402) was planned to find a concentration that would not affect the length of the LL but still restore _shroom3_++ levels of CC count.\newline
 
 (ref:rescsu) Titration of FGF inhibitor. **A** LL lengths are reduced with increased concentrations of FGF inhibitor and **B** groupwise comparison of the length normalized cluster count per concentration of FGF inhibitor.
 
@@ -772,6 +793,5 @@ knitr::kable(data, booktabs=T, caption = 'Atoh1a MO rescue statistics',
 
 #### Summary
 
-
-
+Spatiotemporal expression analysis of _atoh1a_ revealed that Atoh1a is active ealier in _shroom3_-\- embryos and the number of cells expressing _atoh1a_ within the migrating pLLP is also significantly increased. Reduction of _atoh1a_ expression by inhibition of FGF did not work since inhibition of FGF also significantly effects LL length. Rescue by morpholino injected inhibition did work partially, here however we are missing the first neuromasts where it is usually positioned.
 

@@ -2,14 +2,91 @@
 
 ## Acknowledgements {-}
 
+\vspace{1cm}
+
+I thank...\newline
+  
+\noindent my supervisors
+  
+- Prof. Dr. Virginie Lecaudey
+- Prof. Dr. Manfred Schliwa
+  
+\noindent my students
+  
+- Dmitri Baulin (M.Sc. Thesis)
+- Felix Godron (B.Sc. Thesis)
+- Andreas Ebert (B.Sc. Thesis)
+- Gelwa Helmand (B.Sc. Thesis)
+- Bianca Rodrigues Lima (Master student)
+- Ivan Alcantara (Master student)
+  
+For trust shown in the process, for support and demand. \newline For their patience, engagement and hard work!
+\newline\newline
+\noindent and my animals, without whom this work would not have been possible.
+
+```{r ackn, out.width = '50%'}
+knitr::include_graphics("figures/ackn_sn161.png")
+```
+
+\newpage
 
 ## Preface {-}
 
-This is an example of a thesis setup to use the reed thesis document class
-(for LaTeX) and the R bookdown package, in general.
+\vspace{1cm}
+
+\noindent Besides a print version, there is also an electronic version [gitbook](kleinhansda.github.io/phd_thesis)^[kleinhansda.github.io/phd_thesis] of this thesis. 
+
+\noindent In addition data, data analysis scripts, figures and tables are stored in a dedicated [git repository](github.com/KleinhansDa/phd_thesis)^[github.com/KleinhansDa/phd_thesis].
+
+![](figures/flipbook/flip.png)
+
+\noindent \textbf{Print version}
+  
+- Including Ackknowlegements and Preface
+- Lateral line primordium _flipbook_
+  + right pages (odd numbers) show the wildtype
+  + left pages (even numbers) show the mutant
+
+\noindent \textbf{Electronic version}
+  
+- Download pdf
+- Change display settings
+- Search contents
+
+\newpage
 
 ## Dedication {-}
 
-You can have a dedication here if you wish. 
+\vspace{1cm}
+
+> "The most exciting time in the history of developmental biology is right now. Fueled both by new technologies and by new thought from other fields, we are exploding old notions and opening fantastic new horizons in embryology. [...]
+> Next, let’s discuss why developmental biology — both normal and pathological — holds such enduring fascination. I see two intertwined explanations. Obviously, it’s the ultimate personal creation story, telling each of us both where we came from and how we were constructed. Less obvious, but perhaps more tantalizing for us scientists, is the sheer complexity of the process. A single cell with a single genome can somehow create trillions of cells in hundreds of radically different types, and those cells can organize themselves into a specific form. The scale of this self-organization process is mind boggling, surely the most amazing of emergent properties."
+> \- John B. Wallingford, 2019^["We Are All Developmental Biologists", Developmental Cell, Vol.50, Issue 2, Jul 22, 2019]
+
+## Abbreviations {-}
+
+\vspace{1cm}
+
+```{r abbrev}
+options(knitr.kable.NA = '')
+data <- read.delim("Abbreviations.txt")
+knitr::kable(data, booktabs=T, col.names = c("Index", "Abbreviation", "Elaboration"), align=c('c', 'c', 'l')) %>%
+  kable_styling(full_width = T, latex_options = "striped") %>%
+  row_spec(0, bold = T) %>%
+  column_spec(1, bold = T) %>%
+  column_spec(3, width = "10cm") %>%
+  collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
+  kable_styling(font_size = 9)
+```
+
+\newpage
+
+## Publications {-}
+
+\vspace{1cm}
+
+This thesis contains material from the following papers. The rights have been granted by the publisher to include the material in this dissertation. Some passages have been quoted _verbatim_ for the scientific accuracy from the following sources:
+  
+  1. Kleinhans, D. S., & Lecaudey, V. (2019). Standardized mounting method of (zebrafish) embryos using a 3D-printed stamp for high-content, semi-automated confocal imaging. 1–10.
 
 `r if(!knitr:::is_latex_output()) '## Abstract {-}'`

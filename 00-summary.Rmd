@@ -1,3 +1,30 @@
 # Summary {.unnumbered}
 
-something
+Development
+
+In biology differentiation describes the continuous process of cells adapting to their everchanging environment during advancing development, whereby adopting specialized function. For developmental biology, which as a scientific discipline originates from embryology, the central interest is to understand how initially inanimate matter is able to organize itself to such complex structures we see in living matter at different levels of organismal hierarchy while ensuring a robust developmental plan. Using the marble analogy, studying developmental biology can be thought of tracking multiple cells as they roll down the valley while observing and testing how interactions between them might change their fate. With rising numbers of cells and differentiated tissue a shape and body axes begin to emerge that for the earliest developmental stages is highly similar across certain phyla and only begins to diversify at later developmental stages , which reflects our evolutionary ancestry.
+
+Apical Constriction
+
+Apical constriction is a cell morphogenetic process manifest by an active apical narrowing, making the cell appear bottle or wedge shaped.
+
+Developmental processes that involve AC are (1) In the following, three pathways are introduced that play major roles in embryonic development. (2) At least one developmental process requires a locally confined and very enriched source of signaling molecules. (3) It was shown that rosette formation in the lateral line primordium is an important morphological feature for a lumen to form on top of the rosette which, filled with FGF, acts as a locally enriched source of FGF signaling.
+
+Notch signaling gives cells the ability to self-organize and controls various developmental and homeostatic processes that involve patterning, such as sensory hair cell formation, branched arterial networks or organ morphogenesis. Additionally, the strength of the signal increases further where cells are tightly opposed, such as sites of apical constriction. 
+
+To study embryonic development the fresh water fish Danio rerio also known as eng: zebrafish or ger: zebrabärbling has become an important model organism over the recent years. Green- or Red fluorescent protein and observation of pre-larval stages, where the embryo is still transparent, offers enormous possibilities to address interesting and long standing open questions.
+
+Developmental Stages
+
+Each NM is first deposited as a premature cluster of about 30 cells from a migrating cell-aggregate called the posterior lateral line primordium. To ensure the development of a functional organ, several fundamental biological processes like cell migration, morphogenesis, proliferation and cell polarization need to be integrated into the pLLP. An important breakthrough in LL research has been the development of a transgenic line expressing a membrane tethered GFP fusion protein that is expressed under the LL specific promotor of cldnb, which allowed for a much more detailed view and to observe lateral line development in vivo.
+
+Posterior Lateral Line Primordium
+
+Shroom3 in the pLLP While in all of the above-mentioned studies Shroom3 was the focus of interest, in zebrafish and most other model organisms there are four paralogs. A previous study performed by a lab-mate done on Shroom3 morphants in D.rerio indicates that Shroom3 is also necessary for AC and rosette formation in the migrating pLLP. Shroom3 is expressed in the pLLP from stages 24 – 48 hpf. shroom3 is expressed downstream of FGF signaling, which was confirmed via treatment with an FGFR1 inhibiting drug. Shroom3 localizes to rosette centers, which was accomplished by inserting a genetic construct where a shroom3-tagRFP fusion protein is under control of a heat-shock8 promotor into a cldnb:lyn-GFP transgenic line. This way they were able to ectopically express shroom3-tRFP and confirm its localization by confocal fluorescence microscopy.
+
+Based on these and previous results, the current model for apical constriction in the pLLP assumes that expression of shroom3 is induced by FGF signaling Shroom3 binds Rock and translocates it to the AJC to mediate phosphorylation of NMII which induces contraction of the actin network and AC. In conclusion the current understanding is that without Shroom3 AC can not take place and rosette formation does not occur, therefore NMs are not deposited. To achieve this, shroom3 was targeted using a genome editing system based on the Transcription activator-like effector nuclease.
+
+Open Questions and Motivation
+
+The LL phenotype at later stages revealed discrepancies with the current model of rosette formation and the role of Shroom3 during LL development. One aspect about LL development that still remains unclear are the exact factors that lead to cell cluster deposition. Using the Shroom3 mutants as a model system offers great potential to shed new light on organogenesis, the interplay between morphogenesis and cellular specification, epithelial rosette formation and neuromast deposition.
+

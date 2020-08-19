@@ -1,47 +1,31 @@
-# Index {.unnumbered}
-
-Besides a print version, there is also an electronic version [gitbook](kleinhansda.github.io/phd_thesis)^[kleinhansda.github.io/phd_thesis] of this thesis. 
-
-In addition data, data analysis scripts, figures and tables are stored in a dedicated [git repository](github.com/KleinhansDa/phd_thesis)^[github.com/KleinhansDa/phd_thesis].
-
-![](figures/flipbook/flip.png)
-
-### Print version {-}
-
-- Including Ackknowlegements and Preface
-- Lateral line primordium _flipbook_
-    + right pages (odd numbers) show the wildtype
-    + left pages (even numbers) show the mutant
-
-### Electronic version {-}
-
-- Download pdf
-- Change display settings
-- Search contents
-
-# List of publications {.unnumbered}
-
-This thesis contains material from the following papers. The rights have been granted by the publisher to include the material in this dissertation. Some passages have been quoted _verbatim_ for the scientific accuracy from the following sources:
-
-1. Kleinhans, D. S., & Lecaudey, V. (2019). Standardized mounting method of (zebrafish) embryos using a 3D-printed stamp for high-content, semi-automated confocal imaging. 1–10.
-
-# List of Abbreviations {.unnumbered}
-
-```{r abbrev}
-options(knitr.kable.NA = '')
-data <- read.delim("Abbreviations.txt")
-knitr::kable(data, booktabs=T, col.names = c("Index", "Abbreviation", "Elaboration"), align=c('c', 'c', 'l')) %>%
-  kable_styling(full_width = T, latex_options = "striped") %>%
-  row_spec(0, bold = T) %>%
-  column_spec(1, bold = T) %>%
-  column_spec(3, width = "10cm") %>%
-  collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
-  kable_styling(font_size = 9)
-  #add_header_above(c("id labels" = 2, "metrics" = 3))
-#pack_rows("Group 1", 4, 7) %>%
-#pack_rows("Group 2", 8, 10)
-```
-
 # Zusammenfassung {.unnumbered}
 
-Während der Entwicklung von Organen wird aus einer zunächst uniformen und relativ losen Ansammlung von Zellen nach und nach ein strukturiertes Gebilde bei dem das Zusammenspiel dieser Strukturen die Funktion des Gesamtsystems garantiert. Verantwortlich für die Entstehung dieser Strukturen ist ein dichtes Netzwerk von chemischen (Signalbotenstoffe), genetischen (Gen-aktivierung/deaktivierung) sowie physikalischen (Zugkräfte, Druck, Temperatur, Licht) Faktoren die zu verschiedenen Zeitpunkten der Entwicklung in unterschiedlicher Kombination und Ausprägung vorliegen und die Entwicklung somit unterschiedlich beeinflussen und dirigieren.
+Entwicklung
+
+In der Biologie beschreibt Differenzierung den kontinuierlichen Prozess der Anpassung von Zellen an ihre sich ständig verändernde Umgebung während der fortschreitenden Entwicklung, wobei sie spezialisierte Funktionen übernehmen. Für die Entwicklungsbiologie, die als wissenschaftliche Disziplin ihren Ursprung in der Embryologie hat, ist es von zentralem Interesse zu verstehen, wie sich zunächst unbelebte Materie zu solch komplexen Strukturen organisieren kann, wie wir sie in lebender Materie auf verschiedenen Ebenen der organismischen Hierarchie sehen, während sie gleichzeitig einen robusten Entwicklungsplan gewährleistet. Mit Hilfe der Marmoranalogie kann man sich das Studium der Entwicklungsbiologie so vorstellen, dass man mehrere Zellen verfolgt, wenn sie das Tal hinunterrollen, während man beobachtet und testet, wie Interaktionen zwischen ihnen ihr Schicksal verändern könnten. Mit steigender Anzahl von Zellen und differenziertem Gewebe beginnen sich eine Form und Körperachsen herauszubilden, die für die frühesten Entwicklungsstadien über bestimmte Phyla sehr ähnlich sind und sich erst in späteren Entwicklungsstadien zu diversifizieren beginnen, was unsere evolutionäre Abstammung widerspiegelt.
+
+Apikale Einschnürung
+
+Die Apikalverengung ist ein zellmorphogenetischer Prozess, der sich durch eine aktive apikale Verengung manifestiert und die Zelle flaschen- oder keilförmig erscheinen lässt.
+
+Entwicklungsprozesse, an denen die AC beteiligt ist, sind (1) Im Folgenden werden drei Wege vorgestellt, die in der Embryonalentwicklung eine wichtige Rolle spielen. (2) Mindestens ein Entwicklungsprozess erfordert eine lokal begrenzte und sehr angereicherte Quelle von Signalmolekülen. (3) Es konnte gezeigt werden, dass die Rosettenbildung in der Seitenlinie des Primordiums ein wichtiges morphologisches Merkmal für die Bildung eines Lumens auf der Rosette ist, das, gefüllt mit FGF, als lokal angereicherte Quelle von FGF-Signalmolekülen fungiert.
+
+Die Kerbsignalisierung gibt den Zellen die Fähigkeit zur Selbstorganisation und steuert verschiedene entwicklungsbiologische und homöostatische Prozesse, die eine Musterung beinhalten, wie z.B. die Bildung von Sinneshaarzellen, verzweigte arterielle Netzwerke oder die Organmorphogenese. Zusätzlich nimmt die Stärke des Signals dort weiter zu, wo die Zellen eng beieinander liegen, wie z.B. an Stellen mit apikaler Verengung. 
+
+Zur Untersuchung der Embryonalentwicklung hat sich der Süßwasserfisch Danio rerio, auch bekannt als eng: Zebrafisch oder ger: Zebrabärbling, in den letzten Jahren zu einem wichtigen Modellorganismus entwickelt. Das grün oder rot fluoreszierende Protein und die Beobachtung der prälarvalen Stadien, in denen der Embryo noch transparent ist, bietet enorme Möglichkeiten, interessante und seit langem offene Fragen zu klären.
+
+Entwicklungsstadien
+
+Jedes NM wird zunächst als ein vorzeitiges Cluster von etwa 30 Zellen aus einem wandernden Zellaggregat, dem so genannten posterioren lateralen Linienprimordium, abgelagert. Um die Entwicklung eines funktionellen Organs zu gewährleisten, müssen mehrere grundlegende biologische Prozesse wie Zellmigration, Morphogenese, Proliferation und Zellpolarisation in das pLLP integriert werden. Ein wichtiger Durchbruch in der LL-Forschung war die Entwicklung einer transgenen Linie, die ein membrangebundenes GFP-Fusionsprotein exprimiert, das unter dem LL-spezifischen Promotor von cldnb exprimiert wird, was eine viel detailliertere Ansicht und Beobachtung der Entwicklung der lateralen Linie in vivo ermöglichte.
+
+Posteriore Lateral-Linie Primordium
+
+Shroom3 im pLLP Während in allen oben erwähnten Studien Shroom3 im Mittelpunkt des Interesses stand, gibt es bei Zebrafischen und den meisten anderen Modellorganismen vier Gleichgesinnte. Eine frühere Studie, die von einem Laborkollegen an Shroom3-Morphanten in D.rerio durchgeführt wurde, deutet darauf hin, dass Shroom3 auch für die AC- und Rosettenbildung im wandernden pLLP notwendig ist. Shroom3 wird im pLLP ab den Stadien 24 - 48 hpf exprimiert. Shroom3 wird stromabwärts der FGF-Signalisierung exprimiert, was durch die Behandlung mit einem FGFR1-hemmenden Medikament bestätigt wurde. Shroom3 lokalisiert sich in Rosettenzentren, was durch Einfügen eines genetischen Konstrukts, bei dem ein Shroom3-tagRFP-Fusionsprotein unter der Kontrolle eines Hitzeschock8-Promotors steht, in eine cldnb:lyn-GFP-Transgenlinie erreicht wurde. Auf diese Weise gelang es ihnen, Shroom3-tRFP ektopisch zu exprimieren und seine Lokalisierung durch konfokale Fluoreszenzmikroskopie zu bestätigen.
+
+Basierend auf diesen und früheren Ergebnissen geht das aktuelle Modell für die apikale Konstriktion im pLLP davon aus, dass die Expression von shroom3 durch FGF-Signale induziert wird. Shroom3 bindet Rock und transloziert es an die AJC, um die Phosphorylierung von NMII zu vermitteln, die eine Kontraktion des Aktinnetzwerks und der AC induziert. Zusammenfassend lässt sich festhalten, dass ohne Shroom3 AC nicht stattfinden kann und keine Rosettenbildung stattfindet, weshalb keine NMs abgelagert werden. Um dies zu erreichen, wurde Shroom3 unter Verwendung eines Genom-Editierungssystems, das auf der Transkriptionsaktivator-ähnlichen Effektor-Nuklease basiert, ins Visier genommen.
+
+Offene Fragen und Motivation
+
+Der LL-Phänotyp in späteren Stadien zeigte Diskrepanzen mit dem aktuellen Modell der Rosettenbildung und der Rolle von Shroom3 während der LL-Entwicklung. Ein Aspekt der LL-Entwicklung, der immer noch unklar ist, sind die genauen Faktoren, die zur Ablagerung von Zellclustern führen. Die Verwendung der Shroom3-Mutanten als Modellsystem bietet ein großes Potenzial, neues Licht auf die Organogenese, das Zusammenspiel zwischen Morphogenese und zellulärer Spezifizierung, zu werfen.
+*** Übersetzt mit www.DeepL.com/Translator (kostenlose Version) ***
+
