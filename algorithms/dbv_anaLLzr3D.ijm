@@ -74,7 +74,7 @@
 	selectWindow("Log");
 	setLocation(LogW,LogH);
 //	Opening Dialog
-	version = 3.3;
+	version = "1.0";
 	header = "anaLLzr3D v"+version; 
 	//guideI(); // see functions
 	Dialog.create(header);
