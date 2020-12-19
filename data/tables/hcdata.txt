@@ -1,5 +1,5 @@
 groups	structures	embryos	tps pLLPs	Per 3h interval
 shroom3++	pLLP	28	1566	261
-	CC	28	2499	-
-shroom3\-\-	pLLP	21	1134	189
-	CC	21	3566	-
+shroom3++	CC	28	2499	-
+shroom3-\\-	pLLP	21	1134	189
+shroom3-\\-	CC	21	3566	-

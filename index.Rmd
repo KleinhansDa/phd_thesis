@@ -7,11 +7,13 @@ advisor: 'Prof. Dr. Sven Klimpel'
 altadvisor: 'Prof. Dr. Virginie Lecaudey'
 department: 'Fachbereich Biowissenschaften'
 degree: '**PhD in Biology**'
-title: '**Mechano – Chemical Feedback Loops \linebreak During Vertebrate Organ Development**'
+title: '**Genetic and Mechanic Signaling in Organ Development**'
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 output: 
-  thesisdown::thesis_pdf: default
+  thesisdown::thesis_pdf:
+    highlight: monochrome # https://stackoverflow.com/questions/30880200/pandoc-what-are-the-available-syntax-highlighters
+    toc_depth: 4
   #thesisdown::thesis_gitbook:
     #highlight: monochrome # https://stackoverflow.com/questions/30880200/pandoc-what-are-the-available-syntax-highlighters
 
@@ -36,7 +38,7 @@ disclosure: |
 #- \usepackage{tikz}
 ---
 
-```{r include_packages, include = FALSE}
+```{r include-packages, include = FALSE}
 if(!require(devtools))
   install.packages("devtools", repos = "http://cran.rstudio.com")
 if(!require(thesisdown))
@@ -44,34 +46,44 @@ if(!require(thesisdown))
 library(thesisdown)
 ```
 
-```{r chunkopts, include=FALSE}
-knitr::opts_chunk$set(
-  out.width = '95%',
-  echo = FALSE, 
-  warning = FALSE,
-  message = FALSE,
-  fig.align = 'center', 
-  dpi = 200,# fig.pos = 'H',
-  dev.args = list(bg = "transparent"), 
-  dev = 'png'
-  ) #, dev='pdf'
+```{r chunkopts, include = FALSE}
+# chunks
+  knitr::opts_chunk$set(
+    out.width = '95%',
+    echo = FALSE,
+    cache = FALSE,
+    warning = FALSE,
+    message = FALSE,
+    fig.align = 'center', 
+    dpi = 200,# fig.pos = 'H',
+    dev.args = list(bg = "transparent"), 
+    dev = 'png'
+    ) #, dev='pdf'
+# define options for text size
+  def.chunk.hook  <- knitr::knit_hooks$get("chunk")
+  knitr::knit_hooks$set(chunk = function(x, options) {
+    x <- def.chunk.hook(x, options)
+    ifelse(options$size != "normalsize", paste0("\n \\", options$size,"\n\n", x, "\n\n \\normalsize"), x)
+  })
 # libraries
   library(pROC)
   library(ggplot2)
   library(ggpubr)
   library(pander)
   library(kableExtra)
-  library(magrittr)
   library(tidyverse)
 # colors
   jet.colors <- 
-    colorRampPalette(c("#00007F", "blue", "#007FFF", "cyan", "#7FFF7F", "yellow", "#FF7F00", "red", "#7F0000"))
+    colorRampPalette(
+      c("#00007F", "blue", "#007FFF", "cyan", "#7FFF7F", "yellow", "#FF7F00", "red", "#7F0000")
+      )
   angle.colors <- 
-    colorRampPalette(c("#00007F", "blue", "#007FFF", "cyan", "#7FFF7F", "yellow", "#FF7F00", "red", "#7F0000", 
-                                  "red", "#FF7F00", "yellow","#7FFF7F", "cyan", "#007FFF", "blue", "#00007F"))
+    colorRampPalette(
+      c("#00007F", "blue", "#007FFF", "cyan", "#7FFF7F", "yellow", "#FF7F00", "red", "#7F0000", 
+        "red", "#FF7F00", "yellow","#7FFF7F", "cyan", "#007FFF", "blue", "#00007F"))
 ```
 
-```{r tablechunkopts, echo = FALSE}
+```{r table-chunkopts, echo = FALSE}
 # latex format if knitr output is latex
 if (knitr:::is_latex_output()) {
   options(knitr.table.format = "latex") 

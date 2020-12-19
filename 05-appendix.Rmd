@@ -2,7 +2,7 @@
 
 `r if(!knitr:::is_latex_output()) '# (Appendix) Appendix {-}'` 
 
-# Supplement
+# Supplement {-}
 
 (ref:suppzo1) Luminal signaling
 

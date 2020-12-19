@@ -47,6 +47,10 @@
 %\floatplacement{figure}{H}
 % End of CII addition
 \usepackage{rotating}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+
+%\setlist{leftmargin=0.6em, topsep=-0.5mm, itemsep=-0.3em}
 
 % Next line commented out by CII
 %%% \usepackage{natbib}
@@ -131,12 +135,6 @@ $endif$
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
-\Acknowledgements{$acknowledgements$}
-
-\Dedication{$dedication$}
-
-\Preface{$preface$}
-
 \Abstract{$abstract$}
 
 $for(header-includes)$
@@ -160,15 +158,6 @@ $endif$
 \pagenumbering{roman}
 %\frontmatter % this stuff will be roman-numbered
 \pagestyle{empty} % this removes page numbers from the frontmatter
-
-$if(acknowledgements)$
-  \begin{acknowledgements}
-    $acknowledgements$
-    \begin{center}
-      \includegraphics[width=0.5\textwidth]{figures/ackn_sn161.png}
-    \end{center}
-  \end{acknowledgements}
-$endif$
 
 %\mainmatter % here the regular arabic numbering starts
 %\pagestyle{fancyplain} % turns page numbering back on
@@ -196,12 +185,6 @@ $if(abstract)$
   \begin{abstract}
     $abstract$
   \end{abstract}
-$endif$
-
-$if(dedication)$
-  \begin{dedication}
-    $dedication$
-  \end{dedication}
 $endif$
 
 \mainmatter % here the regular arabic numbering starts

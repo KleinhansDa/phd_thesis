@@ -1,3 +1,3 @@
 gt	conc.	LLs	gt	conc.	LLs
-++	p53	24	\-\-	p53	22
-	p53+atoh1a	22	p53+atoh1a	27
+shroom3++	p53	24	shroom3-\\-	p53	22
+shroom3++	p53+atoh1a	22	shroom3-\\-	p53+atoh1a	27

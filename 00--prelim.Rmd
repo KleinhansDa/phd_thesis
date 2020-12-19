@@ -6,9 +6,12 @@
 
 I thank...\newline
   
-\noindent my supervisors
+\noindent my supervisor
   
 - Prof. Dr. Virginie Lecaudey
+
+\noindent and mentor
+
 - Prof. Dr. Manfred Schliwa
   
 \noindent my students
@@ -34,15 +37,15 @@ knitr::include_graphics("figures/ackn_sn161.png")
 
 \vspace{1cm}
 
-\noindent Besides a print version, there is also an electronic version [gitbook](kleinhansda.github.io/phd_thesis)^[kleinhansda.github.io/phd_thesis] of this thesis. 
+\noindent Beside a print version, there is also an electronic version [gitbook](kleinhansda.github.io/phd_thesis)^[kleinhansda.github.io/phd_thesis] of this thesis. 
 
-\noindent In addition data, data analysis scripts, figures and tables are stored in a dedicated [git repository](github.com/KleinhansDa/phd_thesis)^[github.com/KleinhansDa/phd_thesis].
+\noindent In addition, data analysis scripts, figures and tables are stored in a dedicated [git repository](github.com/KleinhansDa/phd_thesis)^[github.com/KleinhansDa/phd_thesis].
 
 ![](figures/flipbook/flip.png)
 
 \noindent \textbf{Print version}
   
-- Including Ackknowlegements and Preface
+- Including Acknowlegements and Preface
 - Lateral line primordium _flipbook_
   + right pages (odd numbers) show the wildtype
   + left pages (even numbers) show the mutant
@@ -70,7 +73,7 @@ knitr::include_graphics("figures/ackn_sn161.png")
 ```{r abbrev}
 options(knitr.kable.NA = '')
 data <- read.delim("Abbreviations.txt")
-knitr::kable(data, booktabs=T, col.names = c("Index", "Abbreviation", "Elaboration"), align=c('c', 'c', 'l')) %>%
+knitr::kable(data, booktabs = T, col.names = c("Index", "Abbreviation", "Elaboration"), align = c('c', 'c', 'l')) %>%
   kable_styling(full_width = T, latex_options = "striped") %>%
   row_spec(0, bold = T) %>%
   column_spec(1, bold = T) %>%

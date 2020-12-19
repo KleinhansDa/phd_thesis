@@ -1,5 +1,5 @@
 genotype	concentrations	LLs
-++	0	17
-++	10	13
-++	50	17
-++	100	20
+shroom3++	0	17
+shroom3++	10	13
+shroom3++	50	17
+shroom3++	100	20
