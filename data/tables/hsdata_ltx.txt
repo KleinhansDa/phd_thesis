@@ -1,0 +1,7 @@
+treatment	genotype	transgene	CCs	LLs
+hs	\textit{shroom3}++ / +-	Yes	232	153
+hs	\textit{shroom3}++ / +-	No	320	
+hs	\textit{shroom3}$--$	Yes	175	
+hs	\textit{shroom3}$--$	No	202	
+nhs	\textit{shroom3}++ / +-	Unknown	543	127
+nhs	\textit{shroom3}$--$	Unknown	354	

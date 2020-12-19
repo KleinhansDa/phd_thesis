@@ -1,0 +1,7 @@
+gt	conc.	LLs	gt	conc.	LLs
+\textit{shroom3}++	0.0	14	\textit{shroom3}$--$	0.0	8
+\textit{shroom3}++	0.10	16	\textit{shroom3}$--$	0.10	15
+\textit{shroom3}++	0.25	24	\textit{shroom3}$--$	0.25	21
+\textit{shroom3}++	0.40	22	\textit{shroom3}$--$	0.40	23
+\textit{shroom3}++	0.50	13	\textit{shroom3}$--$	0.50	4
+\textit{shroom3}++	1.00	10	\textit{shroom3}$--$	1.00	10

@@ -1,0 +1,13 @@
+stage	group	pLLPs	cells	ratio
+32 hpf	DMSO	20	2511	125.5
+32 hpf	SU5402	19	2215	116.6
+32 hpf	\textit{shroom3}++	24	3259	135.8
+32 hpf	\textit{shroom3}$--$	34	4281	125.9
+36 hpf	DMSO	17	1881	110.6
+36 hpf	SU5402	13	1286	98.9
+36 hpf	\textit{shroom3}++	24	3144	131.0
+36 hpf	\textit{shroom3}$--$	31	3924	126.6
+40 hpf	DMSO	18	2237	124.3
+40 hpf	SU5402	13	1788	137.5
+40 hpf	\textit{shroom3}++	22	2660	120.9
+40 hpf	\textit{shroom3}$--$	32	3977	124.3

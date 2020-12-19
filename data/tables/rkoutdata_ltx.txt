@@ -1,0 +1,5 @@
+genotype	concentrations	LLs
+\textit{shroom3}++	0	17
+\textit{shroom3}++	10	13
+\textit{shroom3}++	50	17
+\textit{shroom3}++	100	20
