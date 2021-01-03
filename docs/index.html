@@ -53,6 +53,52 @@
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 
 
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { font-weight: bold; } /* Alert */
+code span.an { font-style: italic; } /* Annotation */
+code span.cf { font-weight: bold; } /* ControlFlow */
+code span.co { font-style: italic; } /* Comment */
+code span.cv { font-style: italic; } /* CommentVar */
+code span.do { font-style: italic; } /* Documentation */
+code span.dt { text-decoration: underline; } /* DataType */
+code span.er { font-weight: bold; } /* Error */
+code span.in { font-style: italic; } /* Information */
+code span.kw { font-weight: bold; } /* Keyword */
+code span.pp { font-weight: bold; } /* Preprocessor */
+code span.wa { font-style: italic; } /* Warning */
+</style>
 
 </head>
 
@@ -79,7 +125,7 @@
 <li class="chapter" data-level="1" data-path="1-Intro.html"><a href="1-Intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
 <li class="chapter" data-level="1.1" data-path="1-Intro.html"><a href="1-Intro.html#development"><i class="fa fa-check"></i><b>1.1</b> Development</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="1-Intro.html"><a href="1-Intro.html#cell-types"><i class="fa fa-check"></i><b>1.1.1</b> Cell Types</a></li>
-<li class="chapter" data-level="1.1.2" data-path="1-Intro.html"><a href="1-Intro.html#morphogenesis"><i class="fa fa-check"></i><b>1.1.2</b> Morphogenesis</a></li>
+<li class="chapter" data-level="1.1.2" data-path="1-Intro.html"><a href="1-Intro.html#intro-morph"><i class="fa fa-check"></i><b>1.1.2</b> Morphogenesis</a></li>
 <li class="chapter" data-level="1.1.3" data-path="1-Intro.html"><a href="1-Intro.html#cell-communication"><i class="fa fa-check"></i><b>1.1.3</b> Cell communication</a></li>
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="1-Intro.html"><a href="1-Intro.html#model-organism-and-system"><i class="fa fa-check"></i><b>1.2</b> Model Organism and System</a><ul>
@@ -89,15 +135,7 @@
 <li class="chapter" data-level="1.2.4" data-path="1-Intro.html"><a href="1-Intro.html#shroom3-in-the-pllp"><i class="fa fa-check"></i><b>1.2.4</b> Shroom3 in the pLLP</a></li>
 <li class="chapter" data-level="1.2.5" data-path="1-Intro.html"><a href="1-Intro.html#shroom3-mutants"><i class="fa fa-check"></i><b>1.2.5</b> <em>shroom3</em> mutants</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="1-Intro.html"><a href="1-Intro.html#objective-and-open-questions"><i class="fa fa-check"></i><b>1.3</b> Objective and Open Questions</a><ul>
-<li class="chapter" data-level="1.3.1" data-path="1-Intro.html"><a href="1-Intro.html#motivation"><i class="fa fa-check"></i><b>1.3.1</b> Motivation</a></li>
-</ul></li>
-<li class="chapter" data-level="1.4" data-path="1-Intro.html"><a href="1-Intro.html#data-strategy-and-analysis"><i class="fa fa-check"></i><b>1.4</b> Data Strategy and Analysis</a><ul>
-<li class="chapter" data-level="1.4.1" data-path="1-Intro.html"><a href="1-Intro.html#sample-preparation"><i class="fa fa-check"></i><b>1.4.1</b> Sample Preparation</a></li>
-<li class="chapter" data-level="1.4.2" data-path="1-Intro.html"><a href="1-Intro.html#imaging"><i class="fa fa-check"></i><b>1.4.2</b> Imaging</a></li>
-<li class="chapter" data-level="1.4.3" data-path="1-Intro.html"><a href="1-Intro.html#data-handling"><i class="fa fa-check"></i><b>1.4.3</b> Data handling</a></li>
-<li class="chapter" data-level="1.4.4" data-path="1-Intro.html"><a href="1-Intro.html#image-and-data-analysis"><i class="fa fa-check"></i><b>1.4.4</b> Image and Data Analysis</a></li>
-</ul></li>
+<li class="chapter" data-level="1.3" data-path="1-Intro.html"><a href="1-Intro.html#open-questions-and-motivation"><i class="fa fa-check"></i><b>1.3</b> Open Questions and Motivation</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="2-mat-met.html"><a href="2-mat-met.html"><i class="fa fa-check"></i><b>2</b> Materials and Methods</a><ul>
 <li class="chapter" data-level="2.1" data-path="2-mat-met.html"><a href="2-mat-met.html#mat"><i class="fa fa-check"></i><b>2.1</b> Materials</a><ul>
@@ -109,51 +147,57 @@
 <li class="chapter" data-level="2.1.6" data-path="2-mat-met.html"><a href="2-mat-met.html#mat-buff"><i class="fa fa-check"></i><b>2.1.6</b> Buffers</a></li>
 <li class="chapter" data-level="2.1.7" data-path="2-mat-met.html"><a href="2-mat-met.html#mat-lines"><i class="fa fa-check"></i><b>2.1.7</b> Zebrafish lines</a></li>
 <li class="chapter" data-level="2.1.8" data-path="2-mat-met.html"><a href="2-mat-met.html#mat-probes"><i class="fa fa-check"></i><b>2.1.8</b> ISH probe list</a></li>
-<li class="chapter" data-level="2.1.9" data-path="2-mat-met.html"><a href="2-mat-met.html#mat-hrdwr"><i class="fa fa-check"></i><b>2.1.9</b> Hardware</a></li>
-<li class="chapter" data-level="2.1.10" data-path="2-mat-met.html"><a href="2-mat-met.html#mat-sftwr"><i class="fa fa-check"></i><b>2.1.10</b> Software</a></li>
-<li class="chapter" data-level="2.1.11" data-path="2-mat-met.html"><a href="2-mat-met.html#mat-GrTrDat"><i class="fa fa-check"></i><b>2.1.11</b> Ground Truth Data</a></li>
+<li class="chapter" data-level="2.1.9" data-path="2-mat-met.html"><a href="2-mat-met.html#mat-mos"><i class="fa fa-check"></i><b>2.1.9</b> ISH probe list</a></li>
+<li class="chapter" data-level="2.1.10" data-path="2-mat-met.html"><a href="2-mat-met.html#mat-hrdwr"><i class="fa fa-check"></i><b>2.1.10</b> Hardware</a></li>
+<li class="chapter" data-level="2.1.11" data-path="2-mat-met.html"><a href="2-mat-met.html#mat-sftwr"><i class="fa fa-check"></i><b>2.1.11</b> Software</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="2-mat-met.html"><a href="2-mat-met.html#met"><i class="fa fa-check"></i><b>2.2</b> Methods</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="2-mat-met.html"><a href="2-mat-met.html#Zeb-met"><i class="fa fa-check"></i><b>2.2.1</b> Zebrafish</a></li>
-<li class="chapter" data-level="2.2.2" data-path="2-mat-met.html"><a href="2-mat-met.html#Wet-met"><i class="fa fa-check"></i><b>2.2.2</b> Wet lab</a></li>
-<li class="chapter" data-level="2.2.3" data-path="2-mat-met.html"><a href="2-mat-met.html#comp-met"><i class="fa fa-check"></i><b>2.2.3</b> Dry lab</a></li>
+<li class="chapter" data-level="2.2.1" data-path="2-mat-met.html"><a href="2-mat-met.html#data-strategy-and-analysis"><i class="fa fa-check"></i><b>2.2.1</b> Data Strategy and Analysis</a></li>
+<li class="chapter" data-level="2.2.2" data-path="2-mat-met.html"><a href="2-mat-met.html#Zeb-met"><i class="fa fa-check"></i><b>2.2.2</b> Zebrafish</a></li>
+<li class="chapter" data-level="2.2.3" data-path="2-mat-met.html"><a href="2-mat-met.html#Wet-met"><i class="fa fa-check"></i><b>2.2.3</b> Wet lab</a></li>
+<li class="chapter" data-level="2.2.4" data-path="2-mat-met.html"><a href="2-mat-met.html#comp-met"><i class="fa fa-check"></i><b>2.2.4</b> Dry lab</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="2-mat-met.html"><a href="2-mat-met.html#mat-datasets"><i class="fa fa-check"></i><b>2.3</b> Image Data Sets</a></li>
+<li class="chapter" data-level="2.3" data-path="2-mat-met.html"><a href="2-mat-met.html#mat-GrTrDat"><i class="fa fa-check"></i><b>2.3</b> Ground Truth</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="2-mat-met.html"><a href="2-mat-met.html#cluster-analysis"><i class="fa fa-check"></i><b>2.3.1</b> Cluster Analysis</a></li>
+<li class="chapter" data-level="2.3.2" data-path="2-mat-met.html"><a href="2-mat-met.html#morphometric-analysis"><i class="fa fa-check"></i><b>2.3.2</b> Morphometric analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="2-mat-met.html"><a href="2-mat-met.html#mat-datasets"><i class="fa fa-check"></i><b>2.4</b> Image Data Sets</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="3-res.html"><a href="3-res.html"><i class="fa fa-check"></i><b>3</b> Results</a><ul>
 <li class="chapter" data-level="3.1" data-path="3-res.html"><a href="3-res.html#methods"><i class="fa fa-check"></i><b>3.1</b> Methods</a><ul>
-<li class="chapter" data-level="3.1.1" data-path="3-res.html"><a href="3-res.html#mounting"><i class="fa fa-check"></i><b>3.1.1</b> Mounting</a></li>
-<li class="chapter" data-level="3.1.2" data-path="3-res.html"><a href="3-res.html#aci-measurement"><i class="fa fa-check"></i><b>3.1.2</b> ACI Measurement</a></li>
+<li class="chapter" data-level="3.1.1" data-path="3-res.html"><a href="3-res.html#standardized-mounting"><i class="fa fa-check"></i><b>3.1.1</b> Standardized mounting</a></li>
+<li class="chapter" data-level="3.1.2" data-path="3-res.html"><a href="3-res.html#anallzr2d---cc-segmentation"><i class="fa fa-check"></i><b>3.1.2</b> anaLLzr2D - CC segmentation</a></li>
+<li class="chapter" data-level="3.1.3" data-path="3-res.html"><a href="3-res.html#anallzr3d---pllp-segmentation"><i class="fa fa-check"></i><b>3.1.3</b> anaLLzr3D - pLLP segmentation</a></li>
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="3-res.html"><a href="3-res.html#shroom3"><i class="fa fa-check"></i><b>3.2</b> Shroom3</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="3-res.html"><a href="3-res.html#lateral-line-morphometrics"><i class="fa fa-check"></i><b>3.2.1</b> Lateral Line Morphometrics</a></li>
-<li class="chapter" data-level="3.2.2" data-path="3-res.html"><a href="3-res.html#proliferation"><i class="fa fa-check"></i><b>3.2.2</b> Proliferation</a></li>
-<li class="chapter" data-level="3.2.3" data-path="3-res.html"><a href="3-res.html#rosette-formation-and-cluster-deposition"><i class="fa fa-check"></i><b>3.2.3</b> Rosette Formation and Cluster Deposition</a></li>
-<li class="chapter" data-level="3.2.4" data-path="3-res.html"><a href="3-res.html#apical-constriction-1"><i class="fa fa-check"></i><b>3.2.4</b> Apical Constriction</a></li>
-<li class="chapter" data-level="3.2.5" data-path="3-res.html"><a href="3-res.html#res-hc"><i class="fa fa-check"></i><b>3.2.5</b> Haircell Specification</a></li>
-<li class="chapter" data-level="3.2.6" data-path="3-res.html"><a href="3-res.html#rescue-experiments"><i class="fa fa-check"></i><b>3.2.6</b> Rescue Experiments</a></li>
+<li class="chapter" data-level="3.2.1" data-path="3-res.html"><a href="3-res.html#intro-phen"><i class="fa fa-check"></i><b>3.2.1</b> Phenotype description</a></li>
+<li class="chapter" data-level="3.2.2" data-path="3-res.html"><a href="3-res.html#lateral-line-morphometrics"><i class="fa fa-check"></i><b>3.2.2</b> Lateral Line Morphometrics</a></li>
+<li class="chapter" data-level="3.2.3" data-path="3-res.html"><a href="3-res.html#proliferation"><i class="fa fa-check"></i><b>3.2.3</b> Proliferation</a></li>
+<li class="chapter" data-level="3.2.4" data-path="3-res.html"><a href="3-res.html#rosette-formation-and-cluster-deposition"><i class="fa fa-check"></i><b>3.2.4</b> Rosette Formation and Cluster Deposition</a></li>
+<li class="chapter" data-level="3.2.5" data-path="3-res.html"><a href="3-res.html#apical-constriction-3"><i class="fa fa-check"></i><b>3.2.5</b> Apical Constriction</a></li>
+<li class="chapter" data-level="3.2.6" data-path="3-res.html"><a href="3-res.html#res-hc"><i class="fa fa-check"></i><b>3.2.6</b> Haircell Specification</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="4-summary-conclusion.html"><a href="4-summary-conclusion.html"><i class="fa fa-check"></i><b>4</b> Summary &amp; Conclusion</a><ul>
 <li class="chapter" data-level="4.1" data-path="4-summary-conclusion.html"><a href="4-summary-conclusion.html#methods-1"><i class="fa fa-check"></i><b>4.1</b> Methods</a><ul>
-<li class="chapter" data-level="4.1.1" data-path="4-summary-conclusion.html"><a href="4-summary-conclusion.html#mounting-1"><i class="fa fa-check"></i><b>4.1.1</b> Mounting</a></li>
+<li class="chapter" data-level="4.1.1" data-path="4-summary-conclusion.html"><a href="4-summary-conclusion.html#mounting"><i class="fa fa-check"></i><b>4.1.1</b> Mounting</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="4-summary-conclusion.html"><a href="4-summary-conclusion.html#shroom3-1"><i class="fa fa-check"></i><b>4.2</b> Shroom3</a><ul>
-<li class="chapter" data-level="4.2.1" data-path="4-summary-conclusion.html"><a href="4-summary-conclusion.html#adult-phenotype"><i class="fa fa-check"></i><b>4.2.1</b> Adult Phenotype</a></li>
-<li class="chapter" data-level="4.2.2" data-path="4-summary-conclusion.html"><a href="4-summary-conclusion.html#lateral-line"><i class="fa fa-check"></i><b>4.2.2</b> Lateral Line</a></li>
-<li class="chapter" data-level="4.2.3" data-path="4-summary-conclusion.html"><a href="4-summary-conclusion.html#rosettes"><i class="fa fa-check"></i><b>4.2.3</b> Rosettes</a></li>
-<li class="chapter" data-level="4.2.4" data-path="4-summary-conclusion.html"><a href="4-summary-conclusion.html#hair-cells"><i class="fa fa-check"></i><b>4.2.4</b> Hair Cells</a></li>
-<li class="chapter" data-level="4.2.5" data-path="4-summary-conclusion.html"><a href="4-summary-conclusion.html#apical-constriction-2"><i class="fa fa-check"></i><b>4.2.5</b> Apical Constriction</a></li>
-<li class="chapter" data-level="4.2.6" data-path="4-summary-conclusion.html"><a href="4-summary-conclusion.html#model-2"><i class="fa fa-check"></i><b>4.2.6</b> Model</a></li>
+<li class="chapter" data-level="4.2.1" data-path="4-summary-conclusion.html"><a href="4-summary-conclusion.html#rosettes"><i class="fa fa-check"></i><b>4.2.1</b> Rosettes</a></li>
+<li class="chapter" data-level="4.2.2" data-path="4-summary-conclusion.html"><a href="4-summary-conclusion.html#apical-constriction-4"><i class="fa fa-check"></i><b>4.2.2</b> Apical Constriction</a></li>
+<li class="chapter" data-level="4.2.3" data-path="4-summary-conclusion.html"><a href="4-summary-conclusion.html#model-2"><i class="fa fa-check"></i><b>4.2.3</b> Model</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="5-discussion.html"><a href="5-discussion.html"><i class="fa fa-check"></i><b>5</b> Discussion</a><ul>
-<li class="chapter" data-level="5.1" data-path="5-discussion.html"><a href="5-discussion.html#methods-2"><i class="fa fa-check"></i><b>5.1</b> Methods</a></li>
+<li class="chapter" data-level="5.1" data-path="5-discussion.html"><a href="5-discussion.html#methods-2"><i class="fa fa-check"></i><b>5.1</b> Methods</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="5-discussion.html"><a href="5-discussion.html#mounting-1"><i class="fa fa-check"></i><b>5.1.1</b> Mounting</a></li>
+</ul></li>
 <li class="chapter" data-level="5.2" data-path="5-discussion.html"><a href="5-discussion.html#shroom3-2"><i class="fa fa-check"></i><b>5.2</b> Shroom3</a><ul>
-<li class="chapter" data-level="5.2.1" data-path="5-discussion.html"><a href="5-discussion.html#proliferation-1"><i class="fa fa-check"></i><b>5.2.1</b> Proliferation</a></li>
-<li class="chapter" data-level="5.2.2" data-path="5-discussion.html"><a href="5-discussion.html#rosette-detection"><i class="fa fa-check"></i><b>5.2.2</b> Rosette Detection</a></li>
-<li class="chapter" data-level="5.2.3" data-path="5-discussion.html"><a href="5-discussion.html#hair-cell-specification-1"><i class="fa fa-check"></i><b>5.2.3</b> Hair Cell specification</a></li>
-<li class="chapter" data-level="5.2.4" data-path="5-discussion.html"><a href="5-discussion.html#single-cell-reconstruction-and-ac-measurement"><i class="fa fa-check"></i><b>5.2.4</b> Single cell reconstruction and AC measurement</a></li>
+<li class="chapter" data-level="5.2.1" data-path="5-discussion.html"><a href="5-discussion.html#lateral-line"><i class="fa fa-check"></i><b>5.2.1</b> Lateral Line</a></li>
+<li class="chapter" data-level="5.2.2" data-path="5-discussion.html"><a href="5-discussion.html#proliferation-1"><i class="fa fa-check"></i><b>5.2.2</b> Proliferation</a></li>
+<li class="chapter" data-level="5.2.3" data-path="5-discussion.html"><a href="5-discussion.html#rosette-detection-1"><i class="fa fa-check"></i><b>5.2.3</b> Rosette Detection</a></li>
+<li class="chapter" data-level="5.2.4" data-path="5-discussion.html"><a href="5-discussion.html#hair-cell-specification"><i class="fa fa-check"></i><b>5.2.4</b> Hair Cell specification</a></li>
+<li class="chapter" data-level="5.2.5" data-path="5-discussion.html"><a href="5-discussion.html#single-cell-reconstruction-and-ac-measurement"><i class="fa fa-check"></i><b>5.2.5</b> Single cell reconstruction and AC measurement</a></li>
 </ul></li>
 </ul></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
@@ -187,8 +231,8 @@
 </div>
 <div id="index" class="section level1 unnumbered">
 <h1>Index</h1>
-<p>Besides a print version, there is also an electronic version (gitbook) of this thesis<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>.</p>
-<p>In addition data, figures and tables are stored in a dedicated git repository<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>.</p>
+<p>Besides a print version, there is also an electronic version <a href="kleinhansda.github.io/phd_thesis">gitbook</a><a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> of this thesis.</p>
+<p>In addition data, data analysis scripts, figures and tables are stored in a dedicated <a href="github.com/KleinhansDa/phd_thesis">git repository</a><a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>.</p>
 <p><img src="figures/flipbook/flip.png" /></p>
 <div id="print-version" class="section level3 unnumbered">
 <h3>Print version</h3>

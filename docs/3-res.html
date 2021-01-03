@@ -53,6 +53,52 @@
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 
 
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { font-weight: bold; } /* Alert */
+code span.an { font-style: italic; } /* Annotation */
+code span.cf { font-weight: bold; } /* ControlFlow */
+code span.co { font-style: italic; } /* Comment */
+code span.cv { font-style: italic; } /* CommentVar */
+code span.do { font-style: italic; } /* Documentation */
+code span.dt { text-decoration: underline; } /* DataType */
+code span.er { font-weight: bold; } /* Error */
+code span.in { font-style: italic; } /* Information */
+code span.kw { font-weight: bold; } /* Keyword */
+code span.pp { font-weight: bold; } /* Preprocessor */
+code span.wa { font-style: italic; } /* Warning */
+</style>
 
 </head>
 
@@ -79,7 +125,7 @@
 <li class="chapter" data-level="1" data-path="1-Intro.html"><a href="1-Intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
 <li class="chapter" data-level="1.1" data-path="1-Intro.html"><a href="1-Intro.html#development"><i class="fa fa-check"></i><b>1.1</b> Development</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="1-Intro.html"><a href="1-Intro.html#cell-types"><i class="fa fa-check"></i><b>1.1.1</b> Cell Types</a></li>
-<li class="chapter" data-level="1.1.2" data-path="1-Intro.html"><a href="1-Intro.html#morphogenesis"><i class="fa fa-check"></i><b>1.1.2</b> Morphogenesis</a></li>
+<li class="chapter" data-level="1.1.2" data-path="1-Intro.html"><a href="1-Intro.html#intro-morph"><i class="fa fa-check"></i><b>1.1.2</b> Morphogenesis</a></li>
 <li class="chapter" data-level="1.1.3" data-path="1-Intro.html"><a href="1-Intro.html#cell-communication"><i class="fa fa-check"></i><b>1.1.3</b> Cell communication</a></li>
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="1-Intro.html"><a href="1-Intro.html#model-organism-and-system"><i class="fa fa-check"></i><b>1.2</b> Model Organism and System</a><ul>
@@ -89,15 +135,7 @@
 <li class="chapter" data-level="1.2.4" data-path="1-Intro.html"><a href="1-Intro.html#shroom3-in-the-pllp"><i class="fa fa-check"></i><b>1.2.4</b> Shroom3 in the pLLP</a></li>
 <li class="chapter" data-level="1.2.5" data-path="1-Intro.html"><a href="1-Intro.html#shroom3-mutants"><i class="fa fa-check"></i><b>1.2.5</b> <em>shroom3</em> mutants</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="1-Intro.html"><a href="1-Intro.html#objective-and-open-questions"><i class="fa fa-check"></i><b>1.3</b> Objective and Open Questions</a><ul>
-<li class="chapter" data-level="1.3.1" data-path="1-Intro.html"><a href="1-Intro.html#motivation"><i class="fa fa-check"></i><b>1.3.1</b> Motivation</a></li>
-</ul></li>
-<li class="chapter" data-level="1.4" data-path="1-Intro.html"><a href="1-Intro.html#data-strategy-and-analysis"><i class="fa fa-check"></i><b>1.4</b> Data Strategy and Analysis</a><ul>
-<li class="chapter" data-level="1.4.1" data-path="1-Intro.html"><a href="1-Intro.html#sample-preparation"><i class="fa fa-check"></i><b>1.4.1</b> Sample Preparation</a></li>
-<li class="chapter" data-level="1.4.2" data-path="1-Intro.html"><a href="1-Intro.html#imaging"><i class="fa fa-check"></i><b>1.4.2</b> Imaging</a></li>
-<li class="chapter" data-level="1.4.3" data-path="1-Intro.html"><a href="1-Intro.html#data-handling"><i class="fa fa-check"></i><b>1.4.3</b> Data handling</a></li>
-<li class="chapter" data-level="1.4.4" data-path="1-Intro.html"><a href="1-Intro.html#image-and-data-analysis"><i class="fa fa-check"></i><b>1.4.4</b> Image and Data Analysis</a></li>
-</ul></li>
+<li class="chapter" data-level="1.3" data-path="1-Intro.html"><a href="1-Intro.html#open-questions-and-motivation"><i class="fa fa-check"></i><b>1.3</b> Open Questions and Motivation</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="2-mat-met.html"><a href="2-mat-met.html"><i class="fa fa-check"></i><b>2</b> Materials and Methods</a><ul>
 <li class="chapter" data-level="2.1" data-path="2-mat-met.html"><a href="2-mat-met.html#mat"><i class="fa fa-check"></i><b>2.1</b> Materials</a><ul>
@@ -109,51 +147,57 @@
 <li class="chapter" data-level="2.1.6" data-path="2-mat-met.html"><a href="2-mat-met.html#mat-buff"><i class="fa fa-check"></i><b>2.1.6</b> Buffers</a></li>
 <li class="chapter" data-level="2.1.7" data-path="2-mat-met.html"><a href="2-mat-met.html#mat-lines"><i class="fa fa-check"></i><b>2.1.7</b> Zebrafish lines</a></li>
 <li class="chapter" data-level="2.1.8" data-path="2-mat-met.html"><a href="2-mat-met.html#mat-probes"><i class="fa fa-check"></i><b>2.1.8</b> ISH probe list</a></li>
-<li class="chapter" data-level="2.1.9" data-path="2-mat-met.html"><a href="2-mat-met.html#mat-hrdwr"><i class="fa fa-check"></i><b>2.1.9</b> Hardware</a></li>
-<li class="chapter" data-level="2.1.10" data-path="2-mat-met.html"><a href="2-mat-met.html#mat-sftwr"><i class="fa fa-check"></i><b>2.1.10</b> Software</a></li>
-<li class="chapter" data-level="2.1.11" data-path="2-mat-met.html"><a href="2-mat-met.html#mat-GrTrDat"><i class="fa fa-check"></i><b>2.1.11</b> Ground Truth Data</a></li>
+<li class="chapter" data-level="2.1.9" data-path="2-mat-met.html"><a href="2-mat-met.html#mat-mos"><i class="fa fa-check"></i><b>2.1.9</b> ISH probe list</a></li>
+<li class="chapter" data-level="2.1.10" data-path="2-mat-met.html"><a href="2-mat-met.html#mat-hrdwr"><i class="fa fa-check"></i><b>2.1.10</b> Hardware</a></li>
+<li class="chapter" data-level="2.1.11" data-path="2-mat-met.html"><a href="2-mat-met.html#mat-sftwr"><i class="fa fa-check"></i><b>2.1.11</b> Software</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="2-mat-met.html"><a href="2-mat-met.html#met"><i class="fa fa-check"></i><b>2.2</b> Methods</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="2-mat-met.html"><a href="2-mat-met.html#Zeb-met"><i class="fa fa-check"></i><b>2.2.1</b> Zebrafish</a></li>
-<li class="chapter" data-level="2.2.2" data-path="2-mat-met.html"><a href="2-mat-met.html#Wet-met"><i class="fa fa-check"></i><b>2.2.2</b> Wet lab</a></li>
-<li class="chapter" data-level="2.2.3" data-path="2-mat-met.html"><a href="2-mat-met.html#comp-met"><i class="fa fa-check"></i><b>2.2.3</b> Dry lab</a></li>
+<li class="chapter" data-level="2.2.1" data-path="2-mat-met.html"><a href="2-mat-met.html#data-strategy-and-analysis"><i class="fa fa-check"></i><b>2.2.1</b> Data Strategy and Analysis</a></li>
+<li class="chapter" data-level="2.2.2" data-path="2-mat-met.html"><a href="2-mat-met.html#Zeb-met"><i class="fa fa-check"></i><b>2.2.2</b> Zebrafish</a></li>
+<li class="chapter" data-level="2.2.3" data-path="2-mat-met.html"><a href="2-mat-met.html#Wet-met"><i class="fa fa-check"></i><b>2.2.3</b> Wet lab</a></li>
+<li class="chapter" data-level="2.2.4" data-path="2-mat-met.html"><a href="2-mat-met.html#comp-met"><i class="fa fa-check"></i><b>2.2.4</b> Dry lab</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="2-mat-met.html"><a href="2-mat-met.html#mat-datasets"><i class="fa fa-check"></i><b>2.3</b> Image Data Sets</a></li>
+<li class="chapter" data-level="2.3" data-path="2-mat-met.html"><a href="2-mat-met.html#mat-GrTrDat"><i class="fa fa-check"></i><b>2.3</b> Ground Truth</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="2-mat-met.html"><a href="2-mat-met.html#cluster-analysis"><i class="fa fa-check"></i><b>2.3.1</b> Cluster Analysis</a></li>
+<li class="chapter" data-level="2.3.2" data-path="2-mat-met.html"><a href="2-mat-met.html#morphometric-analysis"><i class="fa fa-check"></i><b>2.3.2</b> Morphometric analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="2-mat-met.html"><a href="2-mat-met.html#mat-datasets"><i class="fa fa-check"></i><b>2.4</b> Image Data Sets</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="3-res.html"><a href="3-res.html"><i class="fa fa-check"></i><b>3</b> Results</a><ul>
 <li class="chapter" data-level="3.1" data-path="3-res.html"><a href="3-res.html#methods"><i class="fa fa-check"></i><b>3.1</b> Methods</a><ul>
-<li class="chapter" data-level="3.1.1" data-path="3-res.html"><a href="3-res.html#mounting"><i class="fa fa-check"></i><b>3.1.1</b> Mounting</a></li>
-<li class="chapter" data-level="3.1.2" data-path="3-res.html"><a href="3-res.html#aci-measurement"><i class="fa fa-check"></i><b>3.1.2</b> ACI Measurement</a></li>
+<li class="chapter" data-level="3.1.1" data-path="3-res.html"><a href="3-res.html#standardized-mounting"><i class="fa fa-check"></i><b>3.1.1</b> Standardized mounting</a></li>
+<li class="chapter" data-level="3.1.2" data-path="3-res.html"><a href="3-res.html#anallzr2d---cc-segmentation"><i class="fa fa-check"></i><b>3.1.2</b> anaLLzr2D - CC segmentation</a></li>
+<li class="chapter" data-level="3.1.3" data-path="3-res.html"><a href="3-res.html#anallzr3d---pllp-segmentation"><i class="fa fa-check"></i><b>3.1.3</b> anaLLzr3D - pLLP segmentation</a></li>
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="3-res.html"><a href="3-res.html#shroom3"><i class="fa fa-check"></i><b>3.2</b> Shroom3</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="3-res.html"><a href="3-res.html#lateral-line-morphometrics"><i class="fa fa-check"></i><b>3.2.1</b> Lateral Line Morphometrics</a></li>
-<li class="chapter" data-level="3.2.2" data-path="3-res.html"><a href="3-res.html#proliferation"><i class="fa fa-check"></i><b>3.2.2</b> Proliferation</a></li>
-<li class="chapter" data-level="3.2.3" data-path="3-res.html"><a href="3-res.html#rosette-formation-and-cluster-deposition"><i class="fa fa-check"></i><b>3.2.3</b> Rosette Formation and Cluster Deposition</a></li>
-<li class="chapter" data-level="3.2.4" data-path="3-res.html"><a href="3-res.html#apical-constriction-1"><i class="fa fa-check"></i><b>3.2.4</b> Apical Constriction</a></li>
-<li class="chapter" data-level="3.2.5" data-path="3-res.html"><a href="3-res.html#res-hc"><i class="fa fa-check"></i><b>3.2.5</b> Haircell Specification</a></li>
-<li class="chapter" data-level="3.2.6" data-path="3-res.html"><a href="3-res.html#rescue-experiments"><i class="fa fa-check"></i><b>3.2.6</b> Rescue Experiments</a></li>
+<li class="chapter" data-level="3.2.1" data-path="3-res.html"><a href="3-res.html#intro-phen"><i class="fa fa-check"></i><b>3.2.1</b> Phenotype description</a></li>
+<li class="chapter" data-level="3.2.2" data-path="3-res.html"><a href="3-res.html#lateral-line-morphometrics"><i class="fa fa-check"></i><b>3.2.2</b> Lateral Line Morphometrics</a></li>
+<li class="chapter" data-level="3.2.3" data-path="3-res.html"><a href="3-res.html#proliferation"><i class="fa fa-check"></i><b>3.2.3</b> Proliferation</a></li>
+<li class="chapter" data-level="3.2.4" data-path="3-res.html"><a href="3-res.html#rosette-formation-and-cluster-deposition"><i class="fa fa-check"></i><b>3.2.4</b> Rosette Formation and Cluster Deposition</a></li>
+<li class="chapter" data-level="3.2.5" data-path="3-res.html"><a href="3-res.html#apical-constriction-3"><i class="fa fa-check"></i><b>3.2.5</b> Apical Constriction</a></li>
+<li class="chapter" data-level="3.2.6" data-path="3-res.html"><a href="3-res.html#res-hc"><i class="fa fa-check"></i><b>3.2.6</b> Haircell Specification</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="4-summary-conclusion.html"><a href="4-summary-conclusion.html"><i class="fa fa-check"></i><b>4</b> Summary &amp; Conclusion</a><ul>
 <li class="chapter" data-level="4.1" data-path="4-summary-conclusion.html"><a href="4-summary-conclusion.html#methods-1"><i class="fa fa-check"></i><b>4.1</b> Methods</a><ul>
-<li class="chapter" data-level="4.1.1" data-path="4-summary-conclusion.html"><a href="4-summary-conclusion.html#mounting-1"><i class="fa fa-check"></i><b>4.1.1</b> Mounting</a></li>
+<li class="chapter" data-level="4.1.1" data-path="4-summary-conclusion.html"><a href="4-summary-conclusion.html#mounting"><i class="fa fa-check"></i><b>4.1.1</b> Mounting</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="4-summary-conclusion.html"><a href="4-summary-conclusion.html#shroom3-1"><i class="fa fa-check"></i><b>4.2</b> Shroom3</a><ul>
-<li class="chapter" data-level="4.2.1" data-path="4-summary-conclusion.html"><a href="4-summary-conclusion.html#adult-phenotype"><i class="fa fa-check"></i><b>4.2.1</b> Adult Phenotype</a></li>
-<li class="chapter" data-level="4.2.2" data-path="4-summary-conclusion.html"><a href="4-summary-conclusion.html#lateral-line"><i class="fa fa-check"></i><b>4.2.2</b> Lateral Line</a></li>
-<li class="chapter" data-level="4.2.3" data-path="4-summary-conclusion.html"><a href="4-summary-conclusion.html#rosettes"><i class="fa fa-check"></i><b>4.2.3</b> Rosettes</a></li>
-<li class="chapter" data-level="4.2.4" data-path="4-summary-conclusion.html"><a href="4-summary-conclusion.html#hair-cells"><i class="fa fa-check"></i><b>4.2.4</b> Hair Cells</a></li>
-<li class="chapter" data-level="4.2.5" data-path="4-summary-conclusion.html"><a href="4-summary-conclusion.html#apical-constriction-2"><i class="fa fa-check"></i><b>4.2.5</b> Apical Constriction</a></li>
-<li class="chapter" data-level="4.2.6" data-path="4-summary-conclusion.html"><a href="4-summary-conclusion.html#model-2"><i class="fa fa-check"></i><b>4.2.6</b> Model</a></li>
+<li class="chapter" data-level="4.2.1" data-path="4-summary-conclusion.html"><a href="4-summary-conclusion.html#rosettes"><i class="fa fa-check"></i><b>4.2.1</b> Rosettes</a></li>
+<li class="chapter" data-level="4.2.2" data-path="4-summary-conclusion.html"><a href="4-summary-conclusion.html#apical-constriction-4"><i class="fa fa-check"></i><b>4.2.2</b> Apical Constriction</a></li>
+<li class="chapter" data-level="4.2.3" data-path="4-summary-conclusion.html"><a href="4-summary-conclusion.html#model-2"><i class="fa fa-check"></i><b>4.2.3</b> Model</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="5-discussion.html"><a href="5-discussion.html"><i class="fa fa-check"></i><b>5</b> Discussion</a><ul>
-<li class="chapter" data-level="5.1" data-path="5-discussion.html"><a href="5-discussion.html#methods-2"><i class="fa fa-check"></i><b>5.1</b> Methods</a></li>
+<li class="chapter" data-level="5.1" data-path="5-discussion.html"><a href="5-discussion.html#methods-2"><i class="fa fa-check"></i><b>5.1</b> Methods</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="5-discussion.html"><a href="5-discussion.html#mounting-1"><i class="fa fa-check"></i><b>5.1.1</b> Mounting</a></li>
+</ul></li>
 <li class="chapter" data-level="5.2" data-path="5-discussion.html"><a href="5-discussion.html#shroom3-2"><i class="fa fa-check"></i><b>5.2</b> Shroom3</a><ul>
-<li class="chapter" data-level="5.2.1" data-path="5-discussion.html"><a href="5-discussion.html#proliferation-1"><i class="fa fa-check"></i><b>5.2.1</b> Proliferation</a></li>
-<li class="chapter" data-level="5.2.2" data-path="5-discussion.html"><a href="5-discussion.html#rosette-detection"><i class="fa fa-check"></i><b>5.2.2</b> Rosette Detection</a></li>
-<li class="chapter" data-level="5.2.3" data-path="5-discussion.html"><a href="5-discussion.html#hair-cell-specification-1"><i class="fa fa-check"></i><b>5.2.3</b> Hair Cell specification</a></li>
-<li class="chapter" data-level="5.2.4" data-path="5-discussion.html"><a href="5-discussion.html#single-cell-reconstruction-and-ac-measurement"><i class="fa fa-check"></i><b>5.2.4</b> Single cell reconstruction and AC measurement</a></li>
+<li class="chapter" data-level="5.2.1" data-path="5-discussion.html"><a href="5-discussion.html#lateral-line"><i class="fa fa-check"></i><b>5.2.1</b> Lateral Line</a></li>
+<li class="chapter" data-level="5.2.2" data-path="5-discussion.html"><a href="5-discussion.html#proliferation-1"><i class="fa fa-check"></i><b>5.2.2</b> Proliferation</a></li>
+<li class="chapter" data-level="5.2.3" data-path="5-discussion.html"><a href="5-discussion.html#rosette-detection-1"><i class="fa fa-check"></i><b>5.2.3</b> Rosette Detection</a></li>
+<li class="chapter" data-level="5.2.4" data-path="5-discussion.html"><a href="5-discussion.html#hair-cell-specification"><i class="fa fa-check"></i><b>5.2.4</b> Hair Cell specification</a></li>
+<li class="chapter" data-level="5.2.5" data-path="5-discussion.html"><a href="5-discussion.html#single-cell-reconstruction-and-ac-measurement"><i class="fa fa-check"></i><b>5.2.5</b> Single cell reconstruction and AC measurement</a></li>
 </ul></li>
 </ul></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
@@ -184,584 +228,622 @@
 <h1><span class="header-section-number">Chapter 3</span> Results</h1>
 <div id="methods" class="section level2">
 <h2><span class="header-section-number">3.1</span> Methods</h2>
-<div id="mounting" class="section level3">
-<h3><span class="header-section-number">3.1.1</span> Mounting</h3>
-<p><img src="files/pubs/klein_2019/003.jpg" width="95%" style="display: block; margin: auto;" /><img src="files/pubs/klein_2019/004.jpg" width="95%" style="display: block; margin: auto;" /><img src="files/pubs/klein_2019/005.jpg" width="95%" style="display: block; margin: auto;" /><img src="files/pubs/klein_2019/006_result.jpg" width="95%" style="display: block; margin: auto;" /></p>
+<div id="standardized-mounting" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Standardized mounting</h3>
+<p>For live microscopy zebrafish embryos are usually immersed in a 1<span class="math inline">\(%\)</span> solution of low melting-point Agarose (LMPA) solution and then oriented on an optical cover slip manually until the LMPA has solidified. This process allows to mount eight to ten embryos per dish.</p>
+<p>To take advantage of the high number of offspring a single zebrafish female may lay, a new sample preparation technique was designed that allows for (1) a four to five times increase in samples per dish (2) a facilitated navigation <em>via</em> a grid-like orientation through the samples and (3) an improved spatial orientation where the embryos body axes are aligned parallel to the optical Z-sections of the confocal microscope. For details, see Materials and Methods section <a href="2-mat-met.html#mount-met">2.2.3.5</a>.</p>
+<p><img src="files/pubs/klein_2019/003.jpg" width="95%" style="display: block; margin: auto;" /><img src="files/pubs/klein_2019/004_01.jpg" width="95%" style="display: block; margin: auto;" /></p>
 </div>
-<div id="aci-measurement" class="section level3">
-<h3><span class="header-section-number">3.1.2</span> ACI Measurement</h3>
-<p>For a proof of concept of segmentation results and concept around measuring apical constriction index, analog to Harding(2013)<span class="citation">(<em>57</em>)</span>, 13 DMSO and 15 SU5402 treated embryos were imaged, segmented and processed. The results show a strong significant difference between DMSO und SU5402 treated embryos in both ACI<sub>Major</sub> and ACI<sub>Minor</sub>, validating the general concept.</p>
-<p>A.C.I.~Major / Minor~ prood of concept. <strong>A and B</strong> Each dot represents the average A.C.I. of all cells of a whole pLLP (DMSO = 1769 cells / 13 pLLPs; SU5402 = 2066 cells / 15 pLLPs).
-<img src="thesis_files/figure-html/unnamed-chunk-7-1.png" width="85%" style="display: block; margin: auto;" /></p>
-</div>
-</div>
-<div id="shroom3" class="section level2">
-<h2><span class="header-section-number">3.2</span> Shroom3</h2>
-<div id="lateral-line-morphometrics" class="section level3">
-<h3><span class="header-section-number">3.2.1</span> Lateral Line Morphometrics</h3>
-<p>Based on the working model and due to the morphological similarity to <em>fgf3/10</em><span class="math inline">\(--\)</span> and drug treated Fgfr1 inhibited pLLPs <span class="citation">(<em>12</em>, <em>24</em>, <em>27</em>, <em>56</em>)</span>, a reduced number of CCs was expected to be deposited at the end of pLLP migration. Instead we found more CCs deposited <a href="1-Intro.html#fig:shrmmut">1.14</a>E.</p>
-<div id="dataset" class="section level4">
-<h4><span class="header-section-number">3.2.1.1</span> Dataset</h4>
-<p>To confirm these findings quantitatively a dataset was put together consisting of ~100 zebrafish embryos fixed at the end of PLLp migration, derived from four different parent pairs. After genotyping, this gave us ~33 wildtypes, ~66 heterozygous and ~33 homozygous mutants for statistical tests. Furthermore, since an increased number of deposited CCs could potentially indicate…</p>
-<ul>
-<li>that CCs are deposited prematurely and that CC area<a href="#fn21" class="footnote-ref" id="fnref21"><sup>21</sup></a> would therefore be reduced</li>
-<li>an increase in proliferation which would lead to an increase in cell number in the total system,</li>
-</ul>
-<p>we also measured the area each CC took up and counted the number of cells each CC was made up of.</p>
-</div>
-<div id="res-ccounts" class="section level4">
-<h4><span class="header-section-number">3.2.1.2</span> Number and Position of Cell Clusters</h4>
-<p>To normalize the number of deposited CCs to individual LL lengths, for comparison the ratio of LL length over CC count is used (<a href="3-res.html#fig:llcounts">3.1</a>B). To correct for uneven LL paths<a href="#fn22" class="footnote-ref" id="fnref22"><sup>22</sup></a> and irregularities in mounting<a href="#fn23" class="footnote-ref" id="fnref23"><sup>23</sup></a>, CC distances are calculated in Euclidian space rather than solely in dimension X. While <em>shrm3++</em> embryos deposit 6 <span class="math inline">\(\pm\)</span> 0.7 CCs, <em>shroom3</em><span class="math inline">\(--\)</span> embryos deposit 8 <span class="math inline">\(\pm\)</span> 0.9 CCs (<a href="3-res.html#fig:llcounts">3.1</a>A). This difference stays true also when normalizing against length (<a href="3-res.html#fig:llcounts">3.1</a>B).</p>
+<div id="anallzr2d---cc-segmentation" class="section level3">
+<h3><span class="header-section-number">3.1.2</span> anaLLzr2D - CC segmentation</h3>
+<div id="image-analysis" class="section level4">
+<h4><span class="header-section-number">3.1.2.1</span> Image Analysis</h4>
+<p>A custom IJ macro script was developed (section <a href="2-mat-met.html#mat-anallzr2d">2.2.4.1.1</a>) that segments individual cell clusters and the pLLP. Using ROIs as masks, the nuclei within counted with a 2-D maxima finder. To detect the right amount of nuclei however, it is necessary to evaluate the distance over which the blurring should be applied.</p>
+<p>A typical nucleus in the PLLp is about 5 <span class="math inline">\(\mu\)</span>m in diameter. To determine the right blurring value, a range of 4-6 <span class="math inline">\(\mu\)</span>m in steps of 0.5 is tested. Figure <a href="3-res.html#fig:maxllreg">3.1</a> shows a registered maximum Z projected lateral line used for ground truth evaluation.</p>
 
-<div class="figure" style="text-align: center"><span id="fig:llcounts"></span>
-<img src="figures/results/01_morphometrics/ll_counts.png" alt="Cluster counts A cluster count B normalized to length (LL length [µm] / cluster count [n])" width="85%" />
+<div class="figure" style="text-align: center"><span id="fig:maxllreg"></span>
+<img src="figures/materials/ground_truth/clusters/clusters.png" alt="Registration of 2D data. Cluster Segments Registered, MaxIP data with cell cluster segments of the lyn-GFP signal laid upon the DAPI signal. Cell Labels Magenta dots represent the maxima found within each ROI and hence the nuclei labels." width="90%" />
 <p class="caption">
-Figure 3.1: Cluster counts <strong>A</strong> cluster count <strong>B</strong> normalized to length (LL length [µm] / cluster count [n])
-</p>
-</div>
-<p>Even though CC position in individual <em>shroom3</em><span class="math inline">\(--\)</span> embryos seems more random, the position of the first deposited CC is mostly conserved (<a href="3-res.html#fig:llpos">3.2</a>A), <span class="math inline">\(p\)</span> for difference in position = 0.2). Similarly, the position of the pLLP also isn’t significantly changed. While for the remaining CCs an average lag of -50.4 <span class="math inline">\(\mu\)</span>m as compared to <em>shroom3</em>++ CC positions is observed, it also seems to increase with later CC positions. For <em>shroom3</em>++ embryos CC position is mostly conserved through development, however it remains elusive if this is true for <em>shroom3</em><span class="math inline">\(--\)</span> embryos too.
-Figure <a href="3-res.html#fig:llpos">3.2</a>A’, shows the kernel density distribution for the CC position without grouping individual positions. At a binwidth of 50 <span class="math inline">\(\mu\)</span>m, the distribution curves show a high and narrow density at around 350 <span class="math inline">\(\mu\)</span>m, which is the average location of CC1 (<a href="3-res.html#fig:llpos">3.2</a> 2A). For the remaining CCs the kernel distribution does, neither for <em>shroom3</em>++ nor for <em>shroom3</em><span class="math inline">\(--\)</span> embryos, reveal a precise location. In contrast, if based on CC sequential identity the mean position and standard deviation is calculated, a more explicit pattern emerges which clearly shows the increased count and average frequency (<a href="3-res.html#fig:llpos">3.2</a> 2A).</p>
-
-<div class="figure" style="text-align: center"><span id="fig:llpos"></span>
-<img src="figures/results/01_morphometrics/ll_positions.png" alt="Cell Cluster positions A Exemplary shroom3++ and \(--\) embryos with CCs hightlighted. CC0 marks the reference location to compare individual embryos. Scale bar = 1 mm A’ Kernel Density Estimate without (KDE) grouping (n++=162, n–=206) A’' Dots = mean positions, bars = standard deviation (nmax for both ++ and -- =26)." width="85%" />
-<p class="caption">
-Figure 3.2: Cell Cluster positions <strong>A</strong> Exemplary <em>shroom3</em>++ and <span class="math inline">\(--\)</span> embryos with CCs hightlighted. CC0 marks the reference location to compare individual embryos. Scale bar = 1 mm <strong>A’</strong> Kernel Density Estimate without (KDE) grouping (n++=162, n–=206) <strong>A’'</strong> Dots = mean positions, bars = standard deviation (nmax for both ++ and -- =26).
+Figure 3.1: Registration of 2D data. <strong>Cluster Segments</strong> Registered, MaxIP data with cell cluster segments of the lyn-GFP signal laid upon the DAPI signal. <strong>Cell Labels</strong> Magenta dots represent the maxima found within each ROI and hence the nuclei labels.
 </p>
 </div>
 </div>
-<div id="res-llmorph" class="section level4">
-<h4><span class="header-section-number">3.2.1.3</span> Cell Count and Area of CCs</h4>
-<p>To get an idea about whether facilitated proliferation contributes to the phenotype we observe in <em>shroom3</em><span class="math inline">\(--\)</span> embryos, the cell count per CC was determined by counting DAPI stained cells within CC segments derived from the <em>cldnb:lyn-gfp</em> membrane signal (section <a href="2-mat-met.html#mat-GrTrDat">2.1.11</a>). Both cells per CC and area per CC are shrunk by about 6% in <em>shroom3</em><span class="math inline">\(--\)</span> embryos, while the density of cells per area remains unchanged (<a href="3-res.html#fig:llclus">3.3</a>A). Interestingly, when comparing net cell counts per embryo an increase of 9% is observed (<a href="3-res.html#fig:llclus">3.3</a>B). Both the sum of CC cells and total LL cells (CC+pLLP) are significantly increased in <em>shroom3</em><span class="math inline">\(--\)</span> embryos, while the count of only pLLP cells remains unchanged.</p>
+<div id="data-analysis" class="section level4">
+<h4><span class="header-section-number">3.1.2.2</span> Data Analysis</h4>
+<p>Comparing the segmented objects count of the Gaussian parameters with the Ground Truth gives an indication for over- resp. under-segmentation. In figure <a href="3-res.html#fig:GrTratioCC">3.2</a> the relative numbers for each blurring parameter can be seen in percentage above or below the mean cell count of the ground truth (blue horizon). The red area represents over-segmentation, the green under-segmentation.</p>
 
-<div class="figure" style="text-align: center"><span id="fig:llclus"></span>
-<img src="figures/results/01_morphometrics/ll_clusters.png" alt="LL Morphometrics A individual CC statistics B Sums per embryo. (Bars = median, errorbars = 95% CI)" width="85%" />
+<div class="figure" style="text-align: center"><span id="fig:GrTratioCC"></span>
+<img src="thesis_files/figure-html/GrTratioCC-1.png" alt="Relative difference of segment counts" width="65%" />
 <p class="caption">
-Figure 3.3: LL Morphometrics <strong>A</strong> individual CC statistics <strong>B</strong> Sums per embryo. (Bars = median, errorbars = 95% CI)
+Figure 3.2: Relative difference of segment counts
 </p>
 </div>
-</div>
-</div>
-<div id="proliferation" class="section level3">
-<h3><span class="header-section-number">3.2.2</span> Proliferation</h3>
-<p>LL morphometric analysis revealed that deposited CCs in <em>shroom3</em><span class="math inline">\(--\)</span> embryos were on average slightly smaller and had fewer cells incorporated. However, due to the additional two cell clusters deposited, the net count is ~9<span class="math inline">\(\%\)</span> increased at the end of migration.
-To test whether this is due to higher proliferative activity a dataset of time-lapse movies (12 h / <span class="math inline">\(\Delta\)</span>T = 6 min.) was generated to count the number of mitoses in a <em>cxcr4b(BAC):H2BRFP</em> transgenic background similar to previous proliferation studies in the pLLP <span class="citation">(<em>23</em>, <em>58</em>)</span>.</p>
-<div id="dataset-1" class="section level4">
-<h4><span class="header-section-number">3.2.2.1</span> Dataset</h4>
-<p>The dataset consists of 12 <em>shrm3</em>++ and 18 <em>shrm3</em><span class="math inline">\(--\)</span> embryos with about 75 timepoints for the pLLP and 150 for cell clusters. For counting, tracks were created for each proliferative cell on MaxIPs (section <a href="2-mat-met.html#prolif">2.2.3.2</a>). Figure <a href="3-res.html#fig:prolpllp">3.4</a>A shows a <em>shroom3</em>++ and a <em>shroom3</em><span class="math inline">\(--\)</span> LL after 12 h of imaging where each mitotic track is individually colored and overlaid to the image data.</p>
-<p>To index the proliferative activity (minutes per mitosis) per embryo, the product of total number of timepoints and <span class="math inline">\(\Delta\)</span>T in minutes was divided by the total number of mitotic events. From this we get to know the average time [min.] during which one mitosis occurs.</p>
-
-</div>
-<div id="res-prolpllp" class="section level4">
-<h4><span class="header-section-number">3.2.2.2</span> Lateral Line Mitoses</h4>
-<p>Tracking mitoses in the pLLP does not reveal any difference in proliferation from start (~28 hpf) till about mid of migration 12 hours later (<a href="3-res.html#fig:prolpllp">3.4</a>B). For confirmation, this finding was also validated via two more traditional methods. During mitosis genetic material is replicated in S-phase<a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a>, while in meta-phase chromosomes are found to be heavily phosphorylated <span class="citation">(<em>59</em>)</span>. With an EdU<a href="#fn25" class="footnote-ref" id="fnref25"><sup>25</sup></a> assay <span class="citation">(<em>60</em>)</span> cells in S-phase can be detected (<a href="3-res.html#fig:prolpllp">3.4</a>B’). Using a specific phospho-histone (p-Hist.) antibody cells in meta-phase can be detected. When comparing the relative numbers of EdU resp. p-Hist cells over total pLLP cells, again, no difference in proliferation can be detected. Still, at end of migration the LL system in <em>shroom3</em><span class="math inline">\(--\)</span> embryos does incorporate 9<span class="math inline">\(\%\)</span> more cells.</p>
-
-<div class="figure" style="text-align: center"><span id="fig:prolpllp"></span>
-<img src="figures/results/02_proliferation/prol-01.png" alt="pLLP proliferation A Tracks of Mitosis. (Image data) Last timepoint of Z-projected time-lapse movie. (Labels) each dots marks a mitotic events. Each color represents one mitosis. Each connection between two dots represents 6 min. B-B’' Mitoses in the pLLP. (B) Count of Mitoses through time (mean\(\pm\)sd) (B’) Proliferation Index at 36 hpf for EdU and phospho Histone labeled pLLPs (B’‘) Examples of EdU staining (scale bar = 100 \(\mu\)m) C Mitoses in Cell Clusters. B’ and C, the colored bar indicated the median, bars indicate the 95% CI." width="85%" />
-<p class="caption">
-Figure 3.4: pLLP proliferation <strong>A</strong> Tracks of Mitosis. (Image data) Last timepoint of Z-projected time-lapse movie. (Labels) each dots marks a mitotic events. Each color represents one mitosis. Each connection between two dots represents 6 min. <strong>B-B’'</strong> Mitoses in the pLLP. (B) Count of Mitoses through time (mean<span class="math inline">\(\pm\)</span>sd) (B’) Proliferation Index at 36 hpf for EdU and phospho Histone labeled pLLPs (B’‘) Examples of EdU staining (scale bar = 100 <span class="math inline">\(\mu\)</span>m) <strong>C</strong> Mitoses in Cell Clusters. B’ and C, the colored bar indicated the median, bars indicate the 95% CI.
-</p>
-</div>
-<p>Due to their high regenerative ability, zebrafish are a popular model in regenerative research <span class="citation">(<em>19</em>, <em>22</em>, <em>61</em>)</span>. It is well known that zebrafish NMs have a very high regenerative capacity <span class="citation">(<em>62</em>–<em>64</em>)</span>. Since individual <em>shroom3</em><span class="math inline">\(--\)</span> CCs are smaller, we wondered if there could be compensation mechanisms activated that increase proliferation to restore wildtype CC size once they are deposited. To verify this, CC mitoses were tracked on the same data as before. Other than the pLLP, which can be observed throughout the time-lapse, CCs only begin to <em>exist</em> when they are deposited. To normalize for individual CC lifetimes, the number of mitoses per CC is divided by the duration of the total time-lapse minus the time span to when it first appeared. This way it becomes evident that the additional cells in <em>shroom3</em><span class="math inline">\(--\)</span> embryos are derived from CC proliferation, rather than pLLP proliferation (<a href="3-res.html#fig:prolpllp">3.4</a>C).</p>
-</div>
-</div>
-<div id="rosette-formation-and-cluster-deposition" class="section level3">
-<h3><span class="header-section-number">3.2.3</span> Rosette Formation and Cluster Deposition</h3>
-<p>Having shown that the additional CC deposition in <em>shroom3</em><span class="math inline">\(--\)</span> embryos is not caused by an over-proliferation in the migrating pLLP, the next step was to have a closer look at the dynamics of rosette formation, in relation to pLLP morphometrics and CC deposition. To test dependencies between different observations and developmental dynamics, variables can be correlated. To do this and to have a coherent dataset to work with, the data of three different analyses on a single set of image data were merged.
-First, to get to know the exact timing of CC deposition, a manual tracking tool <span class="citation">(<em>54</em>)</span> was used (<a href="3-res.html#fig:rdt">3.5</a>, Tracking). Second, to deduce pLLP morphometrics a self-made IJ macro <span class="citation">(<em>65</em>)</span> was developed<a href="#fn26" class="footnote-ref" id="fnref26"><sup>26</sup></a> for spatiotemporal registration of the pLLP and to yield information about its speed, area, roundness, etc. (<a href="3-res.html#fig:rdt">3.5</a>, Registration). Third, to detect rosettes and quantify their weights<a href="#fn27" class="footnote-ref" id="fnref27"><sup>27</sup></a>, a CNN <span class="citation">(<em>66</em>)</span> was used on the registered pLLP output from the anaLLzr2DT (<a href="3-res.html#fig:rdt">3.5</a>, Detection). Finally, all three datasets were merged by a unique identifier for each datapoint by a unique identifier for each embryo and timepoint.</p>
-<div id="dataset-2" class="section level4">
-<h4><span class="header-section-number">3.2.3.1</span> Dataset</h4>
-<p>The image data set analyzed consists of 20 time-lapse movies (11 <em>shroom3</em><span class="math inline">\(--\)</span>, 9 <em>shroom3</em>++). Each time-lapse has a duration of ~20 h (~8 min. interval)<a href="#fn28" class="footnote-ref" id="fnref28"><sup>28</sup></a>, summing up to ~1650 <em>shroom3</em><span class="math inline">\(--\)</span>, and ~1350 <em>shroom3</em>++ timepoints.</p>
-
-<div class="figure" style="text-align: center"><span id="fig:rdt"></span>
-<img src="figures/results/03_rosettes/RDT-01.png" alt="Merged Datasets. (Tracking) pLLP is marked as no.1. The rest of the CCs is numbered sequentially as they appear. (Registration) The black outline marks the region of interest (ROI) that is the pLLP as it is detected by the anaLLzr2DT. The red line highlights the pLLPs leading edge. (Detection) Each square highlights a detected rosette by the CNN, colors represent rosette weights." width="85%" />
-<p class="caption">
-Figure 3.5: Merged Datasets. (Tracking) pLLP is marked as no.1. The rest of the CCs is numbered sequentially as they appear. (Registration) The black outline marks the region of interest (ROI) that is the pLLP as it is detected by the anaLLzr2DT. The red line highlights the pLLPs leading edge. (Detection) Each square highlights a detected rosette by the CNN, colors represent rosette weights.
-</p>
-</div>
-</div>
-<div id="cluster-deposition" class="section level4">
-<h4><span class="header-section-number">3.2.3.2</span> Cluster Deposition</h4>
-<p>Figure <a href="3-res.html#fig:rdtdepo">3.6</a>A shows a montage of a <em>shroom3</em>++ and a <em>shroom3</em><span class="math inline">\(--\)</span> scenario in cluster deposition (3.5 h / ~20 min. interval). For <em>shroom3</em>++ the rosette structure seems tight and two depositions occur in a regular manner. In the <em>shroom3</em><span class="math inline">\(--\)</span> on the other hand, rosette structure seems more fragile with less pronounced rosette centers and four observed depositions. Interestingly, based on the <em>cldnb:lyn-gfp</em> signal the area of constriction seems to be less radially organized but more oriented towards the horizontal midline. Furthermore, the trailing rosettes are significantly smaller and do not seem to delaminate as clean from the migrating primordium. In addition, for L3 it first seems like two CCs could be deposited, until they merge again to a single CC about 1.5 h later.
-On average, as it was shown before (section <a href="3-res.html#res-ccounts">3.2.1.2</a>), there’s a significant increase in clusters deposited (<a href="3-res.html#fig:rdtdepo">3.6</a>B). Also, neither <em>shroom3</em>++ nor <em>shroom3</em><span class="math inline">\(--\)</span> CCs drastically change their position once they are deposited.</p>
-
-<div class="figure" style="text-align: center"><span id="fig:rdtdepo"></span>
-<img src="figures/results/03_rosettes/tracking-01.png" alt="Cluster Deposition A shroom3++ and shroom3\(--\) LL development in comparison. L1 - L4 are deposited CCs. Arrows indicate deposition events. Dotted lines are tracks of rosette to CC transition. B Statistics of deposited cluster counts C Change of CC position through time. Each line represents the locally weighted scatterplot smoothing (LOESS) of all CCn positions observed." width="474" />
-<p class="caption">
-Figure 3.6: Cluster Deposition <strong>A</strong> <em>shroom3</em>++ and <em>shroom3</em><span class="math inline">\(--\)</span> LL development in comparison. L1 - L4 are deposited CCs. Arrows indicate deposition events. Dotted lines are tracks of rosette to CC transition. <strong>B</strong> Statistics of deposited cluster counts <strong>C</strong> Change of CC position through time. Each line represents the locally weighted scatterplot smoothing (LOESS) of all CCn positions observed.
-</p>
-</div>
-</div>
-<div id="registration-1" class="section level4">
-<h4><span class="header-section-number">3.2.3.3</span> Registration</h4>
-<p>As shown in figure<a href="3-res.html#fig:rdtreg">3.7</a>A-A’ neither speed not acceleration drastically differ throughout the complete course of migration. Speed drops from an initial ~75 <span class="math inline">\(\mu\)</span>m/h to about ~30 <span class="math inline">\(\mu\)</span>m/h for both <em>shroom3</em>++ and <em>shroom3</em><span class="math inline">\(--\)</span> 17 h later (figure 3.3 A). Similarly, while there is a positive acceleration of almost ~2 <span class="math inline">\(\mu\)</span>m/h peaking after ~2-3 hours, the remaining two peaks progressively get smaller (<a href="3-res.html#fig:rdtreg">3.7</a>A’).
-While for the area no difference can be detected (<a href="3-res.html#fig:rdtreg">3.7</a>B), interestingly the roundness is on average significantly reduced in <em>shroom3</em><span class="math inline">\(--\)</span> pLLPs (<a href="3-res.html#fig:rdtreg">3.7</a>C). This is also evident from the montage in <a href="3-res.html#fig:rdtdepo">3.6</a>A.</p>
-
-<div class="figure" style="text-align: center"><span id="fig:rdtreg"></span>
-<img src="figures/results/03_rosettes/registration.png" alt="pLLP time-resolved morphometrics A-A’ Leading edge (l.e.) speed and acceleration in \(\mu\)m/h, displayed as LOESS curves with at a span of 0.5 B Area in square \(\mu\)m and C Roundness displayed as mean±se (standard error)." width="529" />
-<p class="caption">
-Figure 3.7: pLLP time-resolved morphometrics <strong>A-A’</strong> Leading edge (l.e.) speed and acceleration in <span class="math inline">\(\mu\)</span>m/h, displayed as LOESS curves with at a span of 0.5 <strong>B</strong> Area in square <span class="math inline">\(\mu\)</span>m and <strong>C</strong> Roundness displayed as mean±se (standard error).
-</p>
-</div>
-</div>
-<div id="res-rdtdet" class="section level4">
-<h4><span class="header-section-number">3.2.3.4</span> Rosette Detection</h4>
-<p>The kymographs<a href="#fn29" class="footnote-ref" id="fnref29"><sup>29</sup></a> in figure <a href="3-res.html#fig:rdtdet">3.8</a>A-A’ were generated on pLLPs that were registered in space and time. After registration, a line was drawn along the horizontal midline (<a href="3-res.html#fig:rdtreg">3.7</a>A). Finally, recorded kymographs were turned to false color<a href="#fn30" class="footnote-ref" id="fnref30"><sup>30</sup></a> for better visual display. In <em>shroom3</em>++ the higher intensities are highly concentrated to two to three distinct regions within the migrating pLLP, while in the <em>shroom3</em><span class="math inline">\(--\)</span> pLLP the higher intensities are more fragmented and overall reduced. To analyze this statistically all pLLPs were quantified in terms of rosette count and average rosette weight or ‘rosettiness’ (see section <a href="2-mat-met.html#CNN">2.2.3.1</a>).
-The numbers reveal two very interesting things. First, the medians show that rosette count (<a href="3-res.html#fig:rdtreg">3.7</a>B’) is only reduced for the first six hours, while rosettiness is reduced almost throughout the entire 20 hours. Second, while for rosette counts two to six indeed half or more of the pLLPs are <em>shroom3</em>++, for counts below two and above six there are more <em>shroom3</em><span class="math inline">\(--\)</span> pLLPs (<a href="3-res.html#fig:rdtreg">3.7</a>B). Furthermore figure @(fig:rdtreg)C shows that at a rosettiness of ~0.7 there are about as many <em>shroom3</em>++ as there are <em>shroom3</em><span class="math inline">\(--\)</span> pLLPs, marking this point as a threshold were pLLPs above are more like likely to be <em>shroom3</em>++ and below more likely to be <em>shroom3</em><span class="math inline">\(--\)</span>. At ~0.1 rosettiness there are almost only <em>shroom3</em><span class="math inline">\(--\)</span> pLLPs, while at ~0.9 rosettiness there are almost only <em>shroom3</em>++ pLLPs.
-In addition, the data distributions attached to the sides (<a href="3-res.html#fig:rdtreg">3.7</a>B’’ and C’’) reveal that for the rosettiness the KDE did not actually shifted to a lower number, but rather flattened and variance is increased.</p>
-
-<div class="figure" style="text-align: center"><span id="fig:rdtdet"></span>
-<img src="figures/results/03_rosettes/detection.png" alt="Rosette counts and weights. A-A’ pLLP kymographs. Length = 100 \(\mu\)m. (A) shows the signal and line drawn. (A’) shows the signal through time B-B’’ and C-C’’ Different graphic representation of rosette count data. (B) Filled histogram (B’) Median\(\pm\)standard deviation (B’’) KDE." width="558" />
-<p class="caption">
-Figure 3.8: Rosette counts and weights. <strong>A-A’</strong> pLLP kymographs. Length = 100 <span class="math inline">\(\mu\)</span>m. (A) shows the signal and line drawn. (A’) shows the signal through time <strong>B-B’’ and C-C’’</strong> Different graphic representation of rosette count data. (B) Filled histogram (B’) Median<span class="math inline">\(\pm\)</span>standard deviation (B’’) KDE.
-</p>
-</div>
-</div>
-<div id="correlations" class="section level4">
-<h4><span class="header-section-number">3.2.3.5</span> Correlations</h4>
-<p>The intent behind generating this combined dataset was to be able to efficiently detect interdependencies between different variables in time and space. The single dots in the scatterplots below represent the variables scatter in <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, the red line shows a linear model through the point cloud, the red digits are the correlation coefficient. Black spots with grey circles indicate the centers for clusters calculated on these two sets of data. Clustering was performed hierarchical.
-For my questioning the most interesting variable to find dependencies with is rosettiness. In figure@ref(fig.rdtcorr)A and B, the <span class="math inline">\(x\)</span> axis is occupied with the median rosettiness of all timepoints. As mentioned in section <a href="1-Intro.html#intro-phen">1.2.5.1</a> when we had a first closer look at the pLLP phenotype we found that a fraction of the clearly as <em>shroom3</em><span class="math inline">\(--\)</span> identified ones still were reminiscent of the <em>shroom3</em>++ phenotype. The hypothesis to test for figure <a href="3-res.html#fig:rdtcorr">3.9</a>A was that higher speeds lead to a lower degree of rosettiness and <em>vice versa</em>. The correlation coefficient and model indicate a rather low interdependence. However, both also showed (<a href="3-res.html#fig:rdtdet">3.8</a>C’ and <a href="3-res.html#fig:rdtreg">3.7</a>A) a high timely dependence, an effect that is lost when reducing the time dimension to the median. Interestingly, however, the line that goes through the centers determined by clustering shows is much steeper and potentially a much higher interdependence.
-The hypothesis to test for figure <a href="3-res.html#fig:rdtcorr">3.9</a>B was if lower rosettiness leads to a higher number of CCs deposited and <em>vice versa</em>. Since here the end of migration cluster count is one-dimensional, there is no other way than correlating to a summary statistic rosettiness. Here the correlation coefficient is rather high, the interdependence seems to be true. Additionally, the clusters determined are nicely separated from each other and the <em>shroom3</em>++ and <em>shroom3</em><span class="math inline">\(--\)</span> pLLPs seem to form two independent groups in this space.</p>
-
-<div class="figure" style="text-align: center"><span id="fig:rdtcorr"></span>
-<img src="figures/results/03_rosettes/rdt_corr_speed-ros.png" alt="Developmental interdependencies. Digits = pearson coefficient A Pearson correlation coefficient between rosettiness and speed of migration through time B Correlation between shrm3++ and shrm3\(--\) at end of migration." width="579" />
-<p class="caption">
-Figure 3.9: Developmental interdependencies. Digits = pearson coefficient <strong>A</strong> Pearson correlation coefficient between rosettiness and speed of migration through time <strong>B</strong> Correlation between shrm3++ and shrm3<span class="math inline">\(--\)</span> at end of migration.
-</p>
-</div>
-</div>
-</div>
-<div id="apical-constriction-1" class="section level3">
-<h3><span class="header-section-number">3.2.4</span> Apical Constriction</h3>
-<p>To gain further insight into rosette assembly and the contribution of apical constriction, it is appropriate to have a closer look at rosette conformation on a cellular scale. To do so, first a set of high spatial resolution, volumetric image data was generated (XY = 0.164 <span class="math inline">\(\mu\)</span>m / pixel; Z = 0.4 <span class="math inline">\(\mu\)</span>m) that allowed for</p>
-<ol style="list-style-type: decimal">
-<li>a more rigorous inspection of morphological differences, and</li>
-<li>automated and unbiased single cell 3D reconstruction (<a href="2-mat-met.html#ACI-singlecell">2.2.3.3.2.1</a>) using a newly developed IJ macro<a href="#fn31" class="footnote-ref" id="fnref31"><sup>31</sup></a>. Secondly, to investigate the contribution of various single cell morphometrics to rosette formation an app was developed<a href="#fn32" class="footnote-ref" id="fnref32"><sup>32</sup></a> that allows for a convenient handling of large amounts of retrieved data.</li>
-</ol>
-
-<div class="figure" style="text-align: center">
-<img src="figures/results/04_constriction/reconstriction_data.png" alt="High resolution, volumetric image data. Upper row shows the fluorescence signal at the membranes. Lower row shows the 3D reconstructed cells. Columns show the same pLLP from different angles." width="566" />
-<p class="caption">
-(#fig:acdata,)High resolution, volumetric image data. Upper row shows the fluorescence signal at the membranes. Lower row shows the 3D reconstructed cells. Columns show the same pLLP from different angles.
-</p>
-</div>
-<p>Inhibition of Fgfr1 <em>via</em> drug treatment<a href="#fn33" class="footnote-ref" id="fnref33"><sup>33</sup></a> results in a concentration dependent loss of morphogenesis and rosette assembly in the pLLP <span class="citation">(<em>12</em>, <em>27</em>, <em>56</em>)</span>. As a proof of principle and to validate previous studies, data of drug treated embryos (20 <span class="math inline">\(\mu\)</span>M) and appropriate DMSO (0.1<span class="math inline">\(\%\)</span> DMSO / E3<a href="#fn34" class="footnote-ref" id="fnref34"><sup>34</sup></a>) controls were included.</p>
-<div id="dataset-3" class="section level4">
-<h4><span class="header-section-number">3.2.4.1</span> Dataset</h4>
-<p>The dataset generated consists of three pLLP stages (<a href="3-res.html#fig:acstages">3.10</a>), four groups (DMSO, SU5402, <em>shrm3</em>++ and <em>shroom3</em><span class="math inline">\(--\)</span>), 267 pLLPs and 33.163 single cells.</p>
-
-<div class="figure" style="text-align: center"><span id="fig:acstages"></span>
-<img src="figures/results/04_constriction/Yolk_ext.png" alt="Scheme showing a part of the posterior part of a zebrafish embryo and recorded developmental stages for 3D reconstruction" width="60%" />
-<p class="caption">
-Figure 3.10: Scheme showing a part of the posterior part of a zebrafish embryo and recorded developmental stages for 3D reconstruction
-</p>
-</div>
-<table class="table table" style="margin-left: auto; margin-right: auto; font-size: 11px; margin-left: auto; margin-right: auto;">
-<caption style="font-size: initial !important;">
-<span id="tab:acdatatab">Table 3.1: </span>Apical Constriction dataset summary
+<p>To estimate the quality of nuclei detection for each parameter, the ratio of automatically detected and ground truth objects count can be calculated and compared (table <a href="3-res.html#tab:nrcount">3.1</a>). The closer it is to 1, the better.</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:nrcount">Table 3.1: </span>Nuclei count ratio
 </caption>
 <thead>
 <tr>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; font-weight: bold; " colspan="2">
-<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
-id labels
-</div>
-</th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; font-weight: bold; " colspan="3">
-<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
-metrics
-</div>
-</th>
-</tr>
-<tr>
 <th style="text-align:left;">
-stage
 </th>
 <th style="text-align:left;">
-groups
+NB45
 </th>
-<th style="text-align:center;">
-pLLPs
+<th style="text-align:left;">
+NB50
 </th>
-<th style="text-align:center;">
-cells
+<th style="text-align:left;">
+NB55
 </th>
-<th style="text-align:center;">
-ratio
+<th style="text-align:left;">
+NB60
+</th>
+<th style="text-align:left;">
+NB70
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left;vertical-align: top !important;" rowspan="4">
-32 hpf
+<td style="text-align:left;">
+Mean_ratio
 </td>
 <td style="text-align:left;">
-DMSO
+1.30
 </td>
-<td style="text-align:center;">
-20
+<td style="text-align:left;">
+1.14
 </td>
-<td style="text-align:center;">
-2511
+<td style="text-align:left;">
+1.04
 </td>
-<td style="text-align:center;">
-125.5
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:left;">
+0.86
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-SU5402
+STD.
 </td>
-<td style="text-align:center;">
-19
+<td style="text-align:left;">
+0.23
 </td>
-<td style="text-align:center;">
-2215
+<td style="text-align:left;">
+0.17
 </td>
-<td style="text-align:center;">
-116.6
+<td style="text-align:left;">
+0.15
+</td>
+<td style="text-align:left;">
+0.14
+</td>
+<td style="text-align:left;">
+0.14
+</td>
+</tr>
+</tbody>
+</table>
+<p>In summary, maximum performance is achieved at a scaled parameter of 6 <span class="math inline">\(\mu\)</span>m, with a ratio of of 0.95 for the count objects and a standard deviation of 0.14.</p>
+</div>
+</div>
+<div id="anallzr3d---pllp-segmentation" class="section level3">
+<h3><span class="header-section-number">3.1.3</span> anaLLzr3D - pLLP segmentation</h3>
+<div id="image-analysis-1" class="section level4">
+<h4><span class="header-section-number">3.1.3.1</span> Image Analysis</h4>
+<p>A custom IJ macro script was developed (section <a href="2-mat-met.html#mat-anallzr3d">2.2.4.1.3</a>) that recognizes cell boundaries via the fluorescence signal emitted by a Lyn Kinase tethered eGFP which expression is controlled by the <em>cxcr4b</em> lateral line specific promotor <span class="citation">(<em>26</em>)</span>. The central IJ tool used to do this is the MorphoLibJ’s<span class="citation">(<em>62</em>)</span> <em>Morpholigical Segmentation</em> plugin. The plugin however requires to choose for a ‘segmentation threshold’ that determines the quality and the quantity of segmented objects. This parameter therefore plays an essential role in the reliability of the analysis results.</p>
+<div id="registration-2" class="section level5">
+<h5><span class="header-section-number">3.1.3.1.1</span> Registration</h5>
+<p>The first module of the macro is PLLp registration in X, Y and cropping in Z. This is accomplished by an initial maximum Z projection and blurring of the image, 2D segmentation using a minimum threshold and lastly by rotating the segment through the angle formed by the long axis of the ellipsoid and the horizon (at 0<span class="math inline">\(^{\circ}\)</span>). After rotation the image is cropped according to the obtained ROI. Additionally, the centers of the most constricting areas are detected via an intensity based dynamic threshold and highlighted as magenta circles in <a href="3-res.html#fig:maxraw">3.3</a>.</p>
+
+<div class="figure" style="text-align: center"><span id="fig:maxraw"></span>
+<img src="figures/materials/ground_truth/registration.png" alt="Registration of 3D data. raw location and orientation of the raw data in XY (shown here as Z-projections). The red line indicates the angle in degrees from the horizontal midline. The blue oval indicates registration ROI as determined by the macro. registered pLLPs after XY transformation took place. red circles indicate rosettes as detected by the macro." width="80%" />
+<p class="caption">
+Figure 3.3: Registration of 3D data. <strong>raw</strong> location and orientation of the raw data in XY (shown here as Z-projections). The red line indicates the angle in degrees from the horizontal midline. The blue oval indicates registration ROI as determined by the macro. <strong>registered</strong> pLLPs after XY transformation took place. red circles indicate rosettes as detected by the macro.
+</p>
+</div>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:imgprop">Table 3.2: </span>Physical image properties (scaling)
+</caption>
+<tbody>
+<tr>
+<td style="text-align:right;">
+XY resolution
+</td>
+<td style="text-align:left;">
+0.1625 / 0.1625 <span class="math inline">\(\mu\)</span>m
 </td>
 </tr>
 <tr>
+<td style="text-align:right;">
+Z resolution
+</td>
 <td style="text-align:left;">
-shrm3++
-</td>
-<td style="text-align:center;">
-24
-</td>
-<td style="text-align:center;">
-3259
-</td>
-<td style="text-align:center;">
-135.8
+0.4 <span class="math inline">\(\mu\)</span>m
 </td>
 </tr>
 <tr>
+<td style="text-align:right;">
+<span class="math inline">\(\Delta\)</span>T in Z
+</td>
 <td style="text-align:left;">
-shrm3--
-</td>
-<td style="text-align:center;">
-34
-</td>
-<td style="text-align:center;">
-4281
-</td>
-<td style="text-align:center;">
-125.9
+0.5428 s
 </td>
 </tr>
+</tbody>
+</table>
+</div>
+<div id="image-data" class="section level5">
+<h5><span class="header-section-number">3.1.3.1.2</span> Image data</h5>
+<p>In figure <a href="3-res.html#fig:stackmem">3.4</a> the fluorescence signal of the three pLLPs tested is shown in a single central cross-section in the dorso-ventral and the apico-basal axis.</p>
+
+<div class="figure" style="text-align: center"><span id="fig:stackmem"></span>
+<img src="figures/materials/ground_truth/stackmem.png" alt="cldnb:lyn-gfp fluorescence signal in a cross-section of the pLLP (Obj.: 40X APO)" width="70%" />
+<p class="caption">
+Figure 3.4: <em>cldnb:lyn-gfp</em> fluorescence signal in a cross-section of the pLLP (Obj.: 40X APO)
+</p>
+</div>
+<p>To compare the results between the Ground Truth segments and the segments obtained from different threshold levels graphically, for a single pLLP the Ground Truth and threshold level are shown as a composite color image in figure <a href="3-res.html#fig:anallzrvols">3.5</a>. By using a green lookup-table (LUT) for the ground truth and a magenta LUT for the threshold level[n], one can readily detect overlapping objects (white), over segmentation (magenta) and under segmentation (green).</p>
+
+<div class="figure" style="text-align: center"><span id="fig:anallzrvols"></span>
+<img src="figures/materials/ground_truth/volumes.png" alt="Graphical comparison of the thresholds tested. Volume renderings have been done with IJ’s VolumeViewer" width="85%" />
+<p class="caption">
+Figure 3.5: Graphical comparison of the thresholds tested. Volume renderings have been done with IJ’s <a href="%22https://github.com/fiji/Volume_Viewer/releases/tag/Volume_Viewer-2.01.2%22">VolumeViewer</a>
+</p>
+</div>
+<p></p>
+</div>
+</div>
+<div id="data-analysis-1" class="section level4">
+<h4><span class="header-section-number">3.1.3.2</span> Data Analysis</h4>
+<div id="cell-count" class="section level5">
+<h5><span class="header-section-number">3.1.3.2.1</span> Cell Count</h5>
+<p>In figure <a href="3-res.html#fig:gtratio">3.6</a> the relative numbers for each threshold level can be seen in percentage above or below the mean cell count of the ground truth (blue horizon). Analogous to the graphical inspection, the magenta area represents over segmentation, the green under segmentation. Additionally, table <a href="#tab:gtrcellcount"><strong>??</strong></a> shows the absolute numbers.</p>
+
+<div class="figure" style="text-align: center"><span id="fig:gtratio"></span>
+<img src="thesis_files/figure-html/gtratio-1.png" alt="Relative difference of segment counts" width="65%" />
+<p class="caption">
+Figure 3.6: Relative difference of segment counts
+</p>
+</div>
+</div>
+<div id="apical-constriction-2" class="section level5">
+<h5><span class="header-section-number">3.1.3.2.2</span> Apical Constriction</h5>
+<p>For a proof of concept of segmentation results and concept around measuring apical constriction index, analog to Harding(2013)<span class="citation">(<em>58</em>)</span>, 13 DMSO and 15 SU5402 treated embryos were imaged, segmented and processed. The results show a strong significant difference between DMSO und SU5402 treated embryos in both ACI<sub>Major</sub> and ACI<sub>Minor</sub>, validating the general concept.</p>
+
+<div class="figure" style="text-align: center"><span id="fig:resacimeasure"></span>
+<img src="thesis_files/figure-html/resacimeasure-1.png" alt="A.C.I. proof of concept. A and B Each dot represents the average of all cells of a whole pLLP (DMSO = 1769 cells / 13 pLLPs; SU5402 = 2066 cells / 15 pLLPs)." width="60%" />
+<p class="caption">
+Figure 3.7: A.C.I. proof of concept. <strong>A and B</strong> Each dot represents the average of all cells of a whole pLLP (DMSO = 1769 cells / 13 pLLPs; SU5402 = 2066 cells / 15 pLLPs).
+</p>
+</div>
+</div>
+<div id="cell-morphology" class="section level5">
+<h5><span class="header-section-number">3.1.3.2.3</span> Cell Morphology</h5>
+<blockquote>
+<p><em>There is always a precision / recall trade-off in detection tasks, e.g., when we set a lower threshold [. . .], we can get a higher recall with a lower precision ([. . .], but meanwhile we also get more false-positives in the results).</em><span class="citation">(<em>45</em>)</span></p>
+</blockquote>
+<p>Inspecting the cell count unfortunately does not directly tell us how well the cell morphology is conserved at different threshold levels, since at higher threshold levels the cell boundaries are differently determined and eventually not even recognized as such anymore.</p>
+<p>The volume of a cell is a very robust morphological feature. Therefore, if its volume does not differ significantly at a given threshold level we consider its morphology to be conserved.</p>
+<p>In figure <a href="3-res.html#fig:volsecdffull">3.8</a> the distribution and amount of the cell volumes across the different threshold levels can be inspected <em>via</em> the ‘empirical cumulative distribution function’ (ECDF). The closer the slopes are to the ground truth, the stronger they are conserved. The upper graph of figure <a href="3-res.html#fig:volsecdffull">3.8</a> shows the full distribution, where the major differences seem to appear within the 0.4 quantile (red line). Therefore, the lower graph of figure <a href="3-res.html#fig:volsecdffull">3.8</a> only the values within the 0.4 quantile are shown to get a more detailed impression.</p>
+
+<div class="figure" style="text-align: center"><span id="fig:volsecdffull"></span>
+<img src="thesis_files/figure-html/volsecdffull-1.png" alt="upper Cell volumes full distribution (red line = .4 Quantile) lower Cell volumes distribution within .4 Quantile" width="90%" /><img src="thesis_files/figure-html/volsecdffull-2.png" alt="upper Cell volumes full distribution (red line = .4 Quantile) lower Cell volumes distribution within .4 Quantile" width="90%" />
+<p class="caption">
+Figure 3.8: <strong>upper</strong> Cell volumes full distribution (red line = .4 Quantile) <strong>lower</strong> Cell volumes distribution within .4 Quantile
+</p>
+</div>
+</div>
+<div id="confidence-level" class="section level5">
+<h5><span class="header-section-number">3.1.3.2.4</span> Confidence Level</h5>
+<p>To statistically check how closely related each threshold level sample distribution is compared to the ground truth, a Kolmogorov-Smirnov-Test (ks.test) was performed. The ks.test is a nonparametric test whose null hypothesis is that the both groups compared were sampled from populations with identical populations. Therefore, the closer the p-value is to 1, the more similar the tested sample distribution would be to the Ground Truth (figure <a href="3-res.html#fig:kstestvol">3.9</a>).</p>
+<p><span class="math display">\[H_{0} : F_X(x)=F_0(x)\]</span></p>
+
+<div class="figure" style="text-align: center"><span id="fig:kstestvol"></span>
+<img src="thesis_files/figure-html/kstestvol-1.png" alt="Volumetric conservation (red line = 5\(\%\) confidence threshold)" width="70%"  />
+<p class="caption">
+Figure 3.9: Volumetric conservation (red line = 5<span class="math inline">\(\%\)</span> confidence threshold)
+</p>
+</div>
+<p>In comparison to the Mann-Whitney test, the ks.test is more sensitive to detect changes in the shape of the distribution than to detect a shift of the median<span class="citation">(<em>63</em>)</span></p>
+</div>
+</div>
+</div>
+</div>
+<div id="shroom3" class="section level2">
+<h2><span class="header-section-number">3.2</span> Shroom3</h2>
+<div id="intro-phen" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> Phenotype description</h3>
+<p>While birth rates follow a distribution of Mendelian inheritance (after genotyping at 3 months of age), mutant adults seem to be more sensitive to mechanical stress and have a shortened lifespan (~6-9 months). In body shape, <em>shroom3</em> mutants are not smaller or posses any other striking phenotype (figure <a href="3-res.html#fig:shrmmut">3.10</a>C), however their gill flaps seem to be increased in size, swollen, and not exactly streamlined with the body. This is also evident by an increased frequency of gill flap beating. When looking at the pLLP at different stages (figure <a href="3-res.html#fig:shrmmut">3.10</a>D), they exhibit the same phenotype as the MO injected embryos.</p>
+
+<div class="figure" style="text-align: center"><span id="fig:shrmmut"></span>
+<img src="figures/intro/shrm_mutants.png" alt="shroom3 mutant phenotype (A-A’) mutation strategy (A) Talen arms (black blocks) bordering a sequence within SD1 including a restriction site for NsiI (indicated back arrows and grey background) (A’) wildtype and mutant allele with 8 bp deletion (B-B’) Amino acid code and protein schematic with functional domains and stop codon (indicated by asterisk) (C-C’) Adult phenotype with closeup to gill flaps (D) pLLP phenotype for three different stages (columns) and different manifestations (rows) (40X WI objective). Arrows indicate epithelial rosettes. (E) LL phenotype at end of migration (10X air objective). Scale bars = 1 mm. MaxIPs for D-E." width="644" />
+<p class="caption">
+Figure 3.10: <em>shroom3</em> mutant phenotype <strong>(A-A’)</strong> mutation strategy (A) Talen arms (black blocks) bordering a sequence within SD1 including a restriction site for NsiI (indicated back arrows and grey background) (A’) wildtype and mutant allele with 8 bp deletion <strong>(B-B’)</strong> Amino acid code and protein schematic with functional domains and stop codon (indicated by asterisk) <strong>(C-C’)</strong> Adult phenotype with closeup to gill flaps <strong>(D)</strong> pLLP phenotype for three different stages (columns) and different manifestations (rows) (40X WI objective). Arrows indicate epithelial rosettes. <strong>(E)</strong> LL phenotype at end of migration (10X air objective). Scale bars = 1 mm. MaxIPs for D-E.
+</p>
+</div>
+<p><em>Shroom3</em> heterozygous zebrafish show no phenotypic abnormality. When incrossed, genotyping of two to five days post fertilization (dpf) embryos results in a Mendelian distribution. However, for stock-fish that are regenerated and genotyped by finclip at about 3 months of age show only a rate of 5-10<span class="math inline">\(\%\)</span> of <em>shroom3</em>--. After another 3 – 6 months those would usually decease too. Therefore, defect Shroom3 in <em>D.rerio</em> leads to increased mortality.</p>
+</div>
+<div id="lateral-line-morphometrics" class="section level3">
+<h3><span class="header-section-number">3.2.2</span> Lateral Line Morphometrics</h3>
+<p>Since in the previous study performed on <em>shroom3</em> morphants we found a significantly reduced number of rosettes in the pLLP, a reduced number of CCs was expected to be deposited at the end of pLLP migration as well. Instead we found more CCs deposited <a href="3-res.html#fig:shrmmut">3.10</a>E.</p>
+<div id="dataset" class="section level4">
+<h4><span class="header-section-number">3.2.2.1</span> Dataset</h4>
+<p>To analyze this observation quantitatively a dataset was put together consisting of ~100 zebrafish embryos fixed at the end of pLLP migration, derived from four different parent pairs. After genotyping, this gave us 33 wildtypes, 66 heterozygous and 33 homozygous mutants for statistical tests. In addition to the number and position of deposited NMs, we also measured the area and the number of nuclei in each deposited CC.</p>
+</div>
+<div id="res-ccounts" class="section level4">
+<h4><span class="header-section-number">3.2.2.2</span> Number and Position of Cell Clusters</h4>
+<p>Although the embryos were closely staged ($$20 min.), there are always some individual variations in the distance migrated by the pLLP of each. To compare the number of deposited CCs independently of LL length the ratio of LL length over CC count (<a href="3-res.html#fig:llcounts">3.11</a>B) was calculated. Fixation with PFA may introduce a slight bending of the embryo and mounting introduces a different tilt for each embryo, to correct for uneven LL paths and irregularities in mounting, CC distances are calculated in Euclidean space rather than solely in dimension X.</p>
+<p>While <em>shrm3++</em> embryos deposit 6 <span class="math inline">\(\pm\)</span> 0.7 CCs, <em>shroom3</em>-- embryos deposit 8 <span class="math inline">\(\pm\)</span> 0.9 CCs (<a href="3-res.html#fig:llcounts">3.11</a>A). This difference stays true also when normalizing against length (<a href="3-res.html#fig:llcounts">3.11</a>B).</p>
+
+<div class="figure" style="text-align: center"><span id="fig:llcounts"></span>
+<img src="figures/results/01_morphometrics/ll_counts.png" alt="Cluster counts. A cluster count [\(n\)] B normalized to length (LL length [\(mm\)] / cluster count [\(n\)])" width="85%" />
+<p class="caption">
+Figure 3.11: Cluster counts. <strong>A</strong> cluster count [<span class="math inline">\(n\)</span>] <strong>B</strong> normalized to length (LL length [<span class="math inline">\(mm\)</span>] / cluster count [<span class="math inline">\(n\)</span>])
+</p>
+</div>
+<p>Even though CC position in individual <em>shroom3</em>-- embryos seems more random, the position of the first deposited CC is mostly conserved (<a href="3-res.html#fig:llpos">3.12</a>A), <span class="math inline">\(p\)</span> for difference in position = 0.2). Similarly, the position of the pLLP also isn’t significantly changed confirming that Shroom3 activity is not required for migration, as was already shown in <em>shroom3</em> morphants <span class="citation">(<em>44</em>)</span>. While for the remaining CCs an average lag of -50.4 <span class="math inline">\(\mu\)</span>m as compared to <em>shroom3</em>++ CC positions is observed, it also seems to increase with later CC positions. For <em>shroom3</em>++ embryos CC position is mostly conserved through development, however it remains elusive if this is true for <em>shroom3</em>-- embryos too.
+Figure <a href="3-res.html#fig:llpos">3.12</a>A’, shows the kernel density distribution for the CC position without grouping individual positions. At a binwidth of 50 <span class="math inline">\(\mu\)</span>m, the distribution curves show a high and narrow density at around 350 <span class="math inline">\(\mu\)</span>m, which is the average location of CC1 (<a href="3-res.html#fig:llpos">3.12</a> 2A). For the remaining CCs the kernel distribution does, neither for <em>shroom3</em>++ nor for <em>shroom3</em>-- embryos, reveal a precise location. In contrast, if based on CC sequential identity the mean position and standard deviation is calculated, a more explicit pattern emerges which clearly shows the increased count and average frequency (<a href="3-res.html#fig:llpos">3.12</a> 2A).</p>
+<p>This shows that in the absence of Shroom3 activity, more NMs form. This is particularly surprising since the lad had previously shown that <em>shroom3</em> knock-down leads to a defect in rosette formation and these rosettes prefigure the deposited NM.</p>
+
+<div class="figure" style="text-align: center"><span id="fig:llpos"></span>
+<img src="figures/results/01_morphometrics/ll_positions.png" alt="Cell Cluster positions. A Exemplary shroom3++ and -- embryos with CCs highlighted. CC0 marks the reference location to compare individual embryos. Scale bar = 1 mm A’ Kernel Density Estimate without (KDE) grouping (\(n\)++ = 162, \(n\)-- = 206) A’' Dots = mean positions, bars = standard deviation (\(n\)max for both ++ and -- = 26)." width="85%" />
+<p class="caption">
+Figure 3.12: Cell Cluster positions. <strong>A</strong> Exemplary <em>shroom3</em>++ and -- embryos with CCs highlighted. CC0 marks the reference location to compare individual embryos. Scale bar = 1 mm <strong>A’</strong> Kernel Density Estimate without (KDE) grouping (<span class="math inline">\(n\)</span>++ = 162, <span class="math inline">\(n\)</span>-- = 206) <strong>A’'</strong> Dots = mean positions, bars = standard deviation (<span class="math inline">\(n\)</span>max for both ++ and -- = 26).
+</p>
+</div>
+</div>
+<div id="res-llmorph" class="section level4">
+<h4><span class="header-section-number">3.2.2.3</span> Cell Count and Area of CCs</h4>
+<p>The CC count and position analysis clearly shows that more CCs are deposited in <em>shroom3</em> mutant embryos. In order to determine whether these additional clusters are comprised of as many cells as their wild-type counterparts or less, I quantified the number of cells and the size of each clusters in <em>shroom3</em>-- embryos, the cell count per CC was determined by counting DAPI stained cells within CC segments derived from the <em>cldnb:lyn-gfp</em> membrane signal (section <a href="2-mat-met.html#mat-GrTrDat">2.3</a>). Both cells per CC and area per CC are shrunk by about 6% in <em>shroom3</em>-- embryos, while the density of cells per area remains unchanged (<a href="3-res.html#fig:llclus">3.13</a>A). Interestingly, when comparing not individual CC cell counts but cell counts per embryo an increase of 9% is observed (<a href="3-res.html#fig:llclus">3.13</a>B). Both the sum of CC cells and total LL cells (CC+pLLP) are significantly increased in <em>shroom3</em>-- embryos, while the count of only pLLP cells remains unchanged.</p>
+
+<div class="figure" style="text-align: center"><span id="fig:llclus"></span>
+<img src="figures/results/01_morphometrics/ll_clusters.png" alt="LL Morphometrics A individual CC statistics B Sums per embryo. (Bars = median, errorbars = 95% CI)" width="85%" />
+<p class="caption">
+Figure 3.13: LL Morphometrics <strong>A</strong> individual CC statistics <strong>B</strong> Sums per embryo. (Bars = median, errorbars = 95% CI)
+</p>
+</div>
+</div>
+<div id="res-tempresc" class="section level4">
+<h4><span class="header-section-number">3.2.2.4</span> Thermodynamic Rescue</h4>
+<p>Increasing temperature usually leads to an acceleration in thermodynamics and embryonic development, while lower temperatures slow down development <span class="citation">(<em>64</em>)</span>. Slowing down development also leads to a reduction in speed of migration and therefore to a reduction in forces that act on cells, cell-cell junctions and organ structures.</p>
+<p>For this experiment the hypothesis to test was that it should be possible to at least partially restore the <em>shroom3</em>++ number of CCs by giving rosettes a longer time to develop properly. Since embryos develop at different speeds, it is more challenging to exactly stage match them at end of migration. To account for this the CC count was normalized to LL length.</p>
+
+<div class="figure" style="text-align: center"><span id="fig:resctemp"></span>
+<img src="figures/results/06_rescues/temp/rescue_temp.png" alt="Thermodynamic rescue A LL lengths and end of migration stage matching B groupwise comparison of the length normalized CC count per temperature." width="85%"  />
+<p class="caption">
+Figure 3.14: Thermodynamic rescue <strong>A</strong> LL lengths and end of migration stage matching <strong>B</strong> groupwise comparison of the length normalized CC count <em>per</em> temperature.
+</p>
+</div>
+<p>The question was if we could restore wildtype CC counts in <em>shroom3</em>-- embryos when incubating at lower temperatures. Therefore, we need to compare CC counts between T25-- and T30++ resp. p-values between the pairs T30-- <em>vs</em> for T30++ (the original) and T25-- <em>vs</em> T30++ (the actual hypothesis). Even though the CC count T25-- cannot be completely restored (~3.2 to ~2.8 in median normalized CC count), the difference between tested pairs shrunk from 0.00000 (T30-- <em>vs</em> for T30++) to 0.00210 (T25-- <em>vs</em> T30++), which is much closer to a rejection of <span class="math inline">\(H_0\)</span>. At this point, the question remains open but seems probable that at even lower temperatures the wildtype CC count could be rescues in <em>shroom3</em>-- embryos.</p>
+<table class="table table" style="margin-left: auto; margin-right: auto; font-size: 11px; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:resctemptab">Table 3.3: </span>Thermodynamic rescue dataset summary
+</caption>
+<thead>
 <tr>
-<td style="text-align:left;vertical-align: top !important;" rowspan="4">
-36 hpf
-</td>
-<td style="text-align:left;">
-DMSO
-</td>
-<td style="text-align:center;">
-17
-</td>
-<td style="text-align:center;">
-1881
-</td>
-<td style="text-align:center;">
-110.6
-</td>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; font-weight: bold; " colspan="3">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+shroom3++
+</div>
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; font-weight: bold; " colspan="3">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+shroom3–
+</div>
+</th>
 </tr>
 <tr>
-<td style="text-align:left;">
-SU5402
-</td>
-<td style="text-align:center;">
-13
-</td>
-<td style="text-align:center;">
-1286
-</td>
-<td style="text-align:center;">
-98.9
-</td>
+<th style="text-align:center;">
+genotype
+</th>
+<th style="text-align:center;">
+treatment
+</th>
+<th style="text-align:center;">
+LLs
+</th>
+<th style="text-align:center;">
+genotype
+</th>
+<th style="text-align:center;">
+treatment
+</th>
+<th style="text-align:center;">
+LLs
+</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td style="text-align:left;">
-shrm3++
+<td style="text-align:center;">
+++
 </td>
 <td style="text-align:center;">
-24
-</td>
-<td style="text-align:center;">
-3144
-</td>
-<td style="text-align:center;">
-131.0
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-shrm3--
-</td>
-<td style="text-align:center;">
-31
-</td>
-<td style="text-align:center;">
-3924
-</td>
-<td style="text-align:center;">
-126.6
-</td>
-</tr>
-<tr>
-<td style="text-align:left;vertical-align: top !important;" rowspan="4">
-40 hpf
-</td>
-<td style="text-align:left;">
-DMSO
+25°C
 </td>
 <td style="text-align:center;">
 18
 </td>
 <td style="text-align:center;">
-2237
+--
 </td>
 <td style="text-align:center;">
-124.3
+25°C
+</td>
+<td style="text-align:center;">
+19
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
-SU5402
+<td style="text-align:center;">
 </td>
 <td style="text-align:center;">
-13
+30°C
 </td>
 <td style="text-align:center;">
-1788
+15
 </td>
 <td style="text-align:center;">
-137.5
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-shrm3++
 </td>
 <td style="text-align:center;">
-22
+30°C
 </td>
 <td style="text-align:center;">
-2660
-</td>
-<td style="text-align:center;">
-120.9
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-shrm3--
-</td>
-<td style="text-align:center;">
-32
-</td>
-<td style="text-align:center;">
-3977
-</td>
-<td style="text-align:center;">
-124.3
+20
 </td>
 </tr>
 </tbody>
-<tfoot>
-<tr>
-<td style="padding: 0; border: 0;" colspan="100%">
-<span style="font-style: italic;">Note: </span>
-</td>
-</tr>
-<tr>
-<td style="padding: 0; border: 0;" colspan="100%">
-<sup></sup> ratio = cells/pLLPs
-</td>
-</tr>
-</tfoot>
 </table>
-<p>Use the sample data in the <a href="https://dskleinhans.shinyapps.io/LLmapR/">LLMapR</a> web-app to explore the dataset.</p>
-</div>
-<div id="cell-shape-and-arrangement" class="section level4">
-<h4><span class="header-section-number">3.2.4.2</span> Cell Shape and Arrangement</h4>
-<p>Figure <a href="3-res.html#fig:acshape">3.11</a>B’ illustrates the three developmental stages used here. For <em>shrm3</em>++ pLLPs two (<a href="3-res.html#fig:acshape">3.11</a>A, 32 hpf) to four (<a href="3-res.html#fig:acshape">3.11</a>A, 40 hpf) areas of constricting regions can be observed (XZ pane), in <em>shroom3</em><span class="math inline">\(--\)</span> its three (<a href="3-res.html#fig:acshape">3.11</a>A, 36 hpf) to seven (<a href="3-res.html#fig:acshape">3.11</a>A, 40 hpf), confirming the results of rosette detection (<a href="3-res.html#res-rdtdet">3.2.3.4</a>). While at 32 and 36 hpf the spread of those regions is wider in <em>shroom3</em><span class="math inline">\(--\)</span>, at 40 hpf they are smaller but also increased in number. When looking at the central rosette along the width (YZ pane), it seems like there is no considerable difference between <em>shroom3</em>++ and <em>shroom3</em><span class="math inline">\(--\)</span> rosettes. In SU5402 treated embryos, neither in XZ nor in YZ constriction can be observed and the cells seem to be mostly retained in their mesenchymal character and columnar shape. In addition, while constriction seems isotropic in the shroom3++ rosette center, constriction in the <em>shroom3</em><span class="math inline">\(--\)</span> rosette center cells appears anisotropic.</p>
-
-<div class="figure" style="text-align: center"><span id="fig:acshape"></span>
-<img src="figures/results/04_constriction/Figure_5-1.png" alt="Apical Constriction in 3D. The stages are in columns, the groups are in rows. Each panel shows a MaxIP (top left), and orthogonal views along the length (XZ, bottom left) and along the width (YZ, right). Arrow annotations in YZ panels indicate points of constriction, bar annotations in XZ indicate the spread of region of constriction." width="674" />
-<p class="caption">
-Figure 3.11: Apical Constriction in 3D. The stages are in columns, the groups are in rows. Each panel shows a MaxIP (top left), and orthogonal views along the length (XZ, bottom left) and along the width (YZ, right). Arrow annotations in YZ panels indicate points of constriction, bar annotations in XZ indicate the spread of region of constriction.
-</p>
-</div>
-</div>
-<div id="single-cell-metrics" class="section level4">
-<h4><span class="header-section-number">3.2.4.3</span> Single Cell Metrics</h4>
-<p>To put the above mentioned in numbers and to gain a more objective view on cell geometry, apical constriction and other metrics such as height were quantified . To get a hold on AC anisotropy we measured the length of the minor and major axis of a fit oval (<a href="3-res.html#fig:acaci">3.12</a>A). If AC was anisotropic and more cells are oriented towards the horizontal midline instead of being radially oriented, this could be shown by degrees of divergence (<span class="math inline">\(\measuredangle\)</span>) from the horizontal midline (<a href="3-res.html#fig:acshape">3.11</a>A’).
-For angle measurements, all angles are normalized to a 90<span class="math inline">\(^\circ\)</span> range, where 0<span class="math inline">\(^\circ\)</span> is along the horizontal midline. When comparing the ratio of cells in intervals of 15<span class="math inline">\(^\circ\)</span> along a range of 90<span class="math inline">\(^\circ\)</span> it can be shown that there are more <em>shroom3</em><span class="math inline">\(--\)</span> than <em>shroom3</em>++ cells within the 0-15<span class="math inline">\(^\circ\)</span> interval through all three stages (<a href="3-res.html#fig:acstages">3.10</a>). Even more, it shows that there are more <em>shroom3</em>++ than <em>shroom3</em><span class="math inline">\(--\)</span> cells within the remaining intervals – confirming the model of constriction anisotropy.
-While reduction in ACI Major is stronger than the ACI Minor in shroom3<span class="math inline">\(--\)</span> cells (<a href="3-res.html#fig:acaci">3.12</a>C-C’), both are significantly reduced throughout time – again confirming the increase in constriction anisotropy. The ACI for SU5402 treated embryos depicts the base value for both Major and Minor. For all three timepoints, this value stays at the same level. Interestingly, the ACI measurements for all other measurements are progressively approximating this level.</p>
-
-<div class="figure" style="text-align: center"><span id="fig:acaci"></span>
-<img src="figures/results/04_constriction/Figure_5-2.png" alt="3D metrics and pLLP maps. A-A’ Measurements. (A) Oval (black outline) represents the fit ellipse. Red arrows represent major and minor axes which are representative for A-P and D-V respectively (A’) Angle measurements and intervals B Cellular orientation as bar chart. Statistics are indicated as stars. C-C’ Apical Constriction measurements. Colored bars represent the median. Errorbars indicate 95% CI." width="672" />
-<p class="caption">
-Figure 3.12: 3D metrics and pLLP maps. <strong>A-A’</strong> Measurements. (A) Oval (black outline) represents the fit ellipse. Red arrows represent major and minor axes which are representative for A-P and D-V respectively (A’) Angle measurements and intervals <strong>B</strong> Cellular orientation as bar chart. Statistics are indicated as stars. <strong>C-C’</strong> Apical Constriction measurements. Colored bars represent the median. Errorbars indicate 95% CI.
-</p>
-</div>
-</div>
-</div>
-<div id="res-hc" class="section level3">
-<h3><span class="header-section-number">3.2.5</span> Haircell Specification</h3>
-<p>Due to the rather strong cellular phenotype and overall smaller CCs we were interested if hair-cell specification would still take place and therefore if the LLs function as a sensory system would still be intact. First, to check if <em>atoh1a</em> was still expressed in <em>shroom3</em><span class="math inline">\(--\)</span> cells and if there were further implications in feedback loops with Notch signaling, an <em>In Situ Hybridization</em> (ISH) experiment was conducted (probes can be found at section <a href="2-mat-met.html#mat-probes">2.1.8</a>). For 36 and 40 hpf the count of <em>atoh1a</em> and <em>deltaD</em> expressing cells (<a href="3-res.html#fig:hcish">3.13</a>) seemed to be increased. Furthermore, especially at 40 hpf, the signal seems to be a lot more fragmented and fuzzier.
-Traditional ISH allows for extremely sensitive detection of RNA transcripts on a whole embryo scale via a hybridizing anti-sense probe (section <a href="2-mat-met.html#ISH-met">2.2.2.2</a>). However, since embryos are fixed, it only allows to analyze single time points. Furthermore, since images are taken in brightfield, there is a problem of background signal and quantification of intensity.</p>
-
-<div class="figure" style="text-align: center"><span id="fig:hcish"></span>
-<img src="figures/results/05_atoh/hc_ish.png" alt="Expression of deltaD and atoh1a in the pLLP. Recorded in greyscale at brightfield at 20X Magnification. Images show background subtracted and de-noised EDFs of original Z-stack data." width="85%" />
-<p class="caption">
-Figure 3.13: Expression of <em>deltaD</em> and <em>atoh1a</em> in the pLLP. Recorded in greyscale at brightfield at 20X Magnification. Images show background subtracted and de-noised EDFs of original Z-stack data.
-</p>
-</div>
-<p>To get access to developmental dynamics we made use of an additional, besides <em>cldnb:lyn-gfp</em>, transgenic construct where tdTomato<a href="#fn35" class="footnote-ref" id="fnref35"><sup>35</sup></a> <span class="citation">(<em>67</em>)</span> is expressed under direct control of the <em>atoh1a</em> promotor. By simultaneous observation of both fluorophores in a time-lapse setup (<a href="3-res.html#fig:hctl">3.14</a>B), the strategy was to follow up the dynamics of tom expression to count quantities and to measure the strength of expression by measuring signal intensity.</p>
-<div id="dataset-4" class="section level4">
-<h4><span class="header-section-number">3.2.5.1</span> Dataset</h4>
-<p>The dataset generated consists of two groups, <em>shroom3</em>++ and <em>shroom3</em><span class="math inline">\(--\)</span>, where the segmented lateral line images are split into pLLP and CC (section <a href="#mat-ato-set"><strong>??</strong></a>). Each time-lapse movie has a total duration of 18-20 hours, consists of about 54 timepoints and two channels (488 &amp; 561 nm).</p>
-<table class="table table" style="margin-left: auto; margin-right: auto; font-size: 11px; margin-left: auto; margin-right: auto;">
+<table class="table table" style="margin-left: auto; margin-right: auto; font-size: 8px; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:hcdatatab">Table 3.2: </span>Haircell specification dataset summary
+<span id="tab:resctempsignif">Table 3.4: </span>Thermodynamic rescue statistics
 </caption>
 <thead>
 <tr>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; font-weight: bold; " colspan="2">
-<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
-id labels
-</div>
-</th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; font-weight: bold; " colspan="3">
-<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
-metrics
-</div>
-</th>
-</tr>
-<tr>
 <th style="text-align:left;">
-genotype
+group1
 </th>
 <th style="text-align:left;">
-sub-structure
+group2
 </th>
 <th style="text-align:center;">
-embryos
+p
 </th>
 <th style="text-align:center;">
-timepoints
+p.adj
 </th>
 <th style="text-align:center;">
-per 3h
+p.signif
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left;">
-shroom3++
+<td style="text-align:left;vertical-align: top !important;" rowspan="3">
+T25_wt
 </td>
 <td style="text-align:left;">
-pLLP
+T25_hom
 </td>
 <td style="text-align:center;">
-28
+0.00000
 </td>
 <td style="text-align:center;">
-1566
+0.00000
 </td>
 <td style="text-align:center;">
-261
+****
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-</td>
-<td style="text-align:left;">
-CC
+T30_wt
 </td>
 <td style="text-align:center;">
-28
+0.00747
 </td>
 <td style="text-align:center;">
-2499
+0.00750
 </td>
 <td style="text-align:center;">
-<ul>
-<li></td>
-</tr>
-<tr>
-<td style="text-align:left;">
-shroom3--
-</td>
-<td style="text-align:left;">
-pLLP
-</td>
-<td style="text-align:center;">
-21
-</td>
-<td style="text-align:center;">
-1134
-</td>
-<td style="text-align:center;">
-189
+**
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
+T30_hom
+</td>
+<td style="text-align:center;">
+0.00000
+</td>
+<td style="text-align:center;">
+0.00000
+</td>
+<td style="text-align:center;">
+****
+</td>
+</tr>
+<tr>
+<td style="text-align:left;vertical-align: top !important;" rowspan="2">
+T25_hom
 </td>
 <td style="text-align:left;">
-CC
+T30_wt
 </td>
 <td style="text-align:center;">
-21
+0.00104
 </td>
 <td style="text-align:center;">
-3566
+0.00210
 </td>
 <td style="text-align:center;">
-<ul>
-<li></td>
+**
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+T30_hom
+</td>
+<td style="text-align:center;">
+0.00015
+</td>
+<td style="text-align:center;">
+0.00046
+</td>
+<td style="text-align:center;">
+***
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+T30_wt
+</td>
+<td style="text-align:left;">
+T30_hom
+</td>
+<td style="text-align:center;">
+0.00000
+</td>
+<td style="text-align:center;">
+0.00000
+</td>
+<td style="text-align:center;">
+****
+</td>
 </tr>
 </tbody>
-</table></li>
-</ul></li>
-</ul>
+</table>
 </div>
-<div id="atoh1a-in-the-ll" class="section level4">
-<h4><span class="header-section-number">3.2.5.2</span> Atoh1a in the LL</h4>
-<p>While in both <em>shroom3</em>++ and <em>shroom3</em><span class="math inline">\(--\)</span> Tom signal intensities are rising as soon as CCs are deposited (<a href="3-res.html#fig:hctl">3.14</a>A), in <em>shroom3</em><span class="math inline">\(--\)</span> embryos intensities are on the rise in the pLLP already in the first four hours of migration. When comparing signal intensities in deposited CCs for both, <em>shroom3</em>++ and <em>shroom3</em><span class="math inline">\(--\)</span> show a similar pattern of decreasing Tom signal intensity with progressive depositions. Similarly, when looking ungrouped overall development in CC signal intensity (<a href="3-res.html#fig:hctl">3.14</a>B), no difference can be detected.
-While there is no difference in relative numbers of <em>atoh1a</em> expressing cells within the migrating pLLP throughout time (<a href="3-res.html#fig:hctl">3.14</a>C), when comparing mean cell counts at specific intervals the numbers reveal a significant difference from 0 – 3 and 12 – 15 hours (<a href="3-res.html#fig:hctl">3.14</a>C’). The extrusions to the left in the kymographs in figure <a href="3-res.html#fig:hctl">3.14</a>D are representative to the elongating pLLP during the process of CC deposition. Magenta curves represent expression of <em>atoh1a</em>. For the <em>shroom3</em><span class="math inline">\(--\)</span> pLLP, premature expression of <em>atoh1a</em> can be detected. The diagonal lines in the kymographs in figure <a href="3-res.html#fig:hctl">3.14</a>D’ represent the moving pLLP along the LL. Vertical curves represent deposited CCs. As for the registered pLLP, Magenta curves represent expression of <em>atoh1a</em>.</p>
+<div id="summary-1" class="section level4">
+<h4><span class="header-section-number">3.2.2.5</span> Summary</h4>
+<p>Taken together I could show that while each CC is comprised of less cells, in sum there are more cells in embryos deficient for Shroom3. Rescuing the CC count by slowing down embryonic development was only partially successful, but seems probable at even lower temperatures. For the pLLP at end of migration however, the number of cells is unaffected - which raises the question if Shroom3 has a regulatory role in Proliferation.</p>
+</div>
+</div>
+<div id="proliferation" class="section level3">
+<h3><span class="header-section-number">3.2.3</span> Proliferation</h3>
+<p>LL morphometric analysis revealed that deposited CCs in <em>shroom3</em>-- embryos were on average slightly smaller and had fewer cells incorporated. However, due to the additional two cell clusters deposited, the net count is ~9<span class="math inline">\(\%\)</span> increased at the end of migration.
+To test whether this is due to higher proliferative activity a dataset of time-lapse movies (12 h / <span class="math inline">\(\Delta\)</span>T = 6 min.) was generated to count the number of mitoses in a <em>cxcr4b(BAC):H2BRFP</em> transgenic background similar to previous proliferation studies in the pLLP <span class="citation">(<em>28</em>, <em>65</em>)</span>.</p>
+<div id="datasets" class="section level4">
+<h4><span class="header-section-number">3.2.3.1</span> Datasets</h4>
+<p>The live imaging dataset consists of 12 <em>shrm3</em>++ and 18 <em>shrm3</em>-- embryos with about 75 timepoints for each pLLP and 150 the cell clusters. For counting, tracks were created for each proliferative cell on MaxIPs (section <a href="2-mat-met.html#prolif">2.2.4.3</a>). Figure <a href="3-res.html#fig:prolpllp">3.15</a>A shows a <em>shroom3</em>++ and a <em>shroom3</em>-- LL after 12 h of imaging where each mitotic track is individually colored and overlaid to the image data.</p>
+<p>To support and validate this data two more datasets from fixed embryos were generated, one with a EdU (N = 3, n++ = 26, n-- = 17) and one with a phospho-Histone marker (N = 3, n++ = 22, n-- = 29).</p>
+</div>
+<div id="res-prolpllp" class="section level4">
+<h4><span class="header-section-number">3.2.3.2</span> Lateral Line Mitoses</h4>
+<p>Tracking mitoses in the pLLP does not reveal any difference in proliferation from start (~28 hpf) till about mid of migration 12 hours later (<a href="3-res.html#fig:prolpllp">3.15</a>B). For confirmation, this finding was also validated <em>via</em> two more additional methods. During the cell cycle genetic material is replicated in S-phase, while in metaphase of mitosis histones are found to be heavily phosphorylated <span class="citation">(<em>66</em>)</span>. With an 5-Ethynyl-2’-deoxyuridine (EdU) assay <span class="citation">(<em>67</em>)</span>, cells in S-phase can be detected (<a href="3-res.html#fig:prolpllp">3.15</a>B’). Using a specific phospho-Histone (p-Hist.) antibody cells in meta-phase can be detected. When comparing the
+EdU index (EdU positive cells over total pLLP cell number) or the mitotic index (p-Hist. positive cells over total pLLP cell number) I could confirm that there is no difference in proliferation in the migrating pLLP. Still, at end of migration the LL system in <em>shroom3</em>-- embryos does incorporate 9<span class="math inline">\(\%\)</span> more cells (figure <a href="3-res.html#fig:llclus">3.13</a>).</p>
 
-<div class="figure" style="text-align: center"><span id="fig:hctl"></span>
-<img src="figures/results/05_atoh/Figure_7-white-01.png" alt="Haircell specification in the LL. A and B maximum Tom intensities in the pLLP and CCs. All CC lifetimes were normalized to the timepoint of deposition (timepoint zero, highlighted by striped vertical line). pLLP intensities are shows to the right, CC intensities are shows on a negative scale to the left. C Relative numbers of atoh1a expressing cells and C’ mean counts of atoh1a expressing cells. D-D’ Kymographs along the horizontal midline showing nascent signal of Tom (in magenta) D two individual pLLPs that were registered in time and to the leading edge. And D’ Tom signal during LL development." width="638" />
+<div class="figure" style="text-align: center"><span id="fig:prolpllp"></span>
+<img src="figures/results/02_proliferation/prol-01.png" alt="pLLP proliferation A Tracks of Mitosis. (Image data) Last timepoint of Z-projected time-lapse movie. (Labels) each dots marks a mitotic events. Each color represents one mitosis. Each connection between two dots represents 6 min. B-B’' Mitoses in the pLLP. (B) Count of Mitoses through time (mean\(\pm\)sd) (B’) Proliferation Index at 36 hpf for EdU and phospho Histone labeled pLLPs (B’‘) Examples of EdU staining (scale bar = 100 \(\mu\)m) C Mitoses in CCs. B’ and C, the colored bar indicated the median, bars indicate the 95% CI." width="85%" />
 <p class="caption">
-Figure 3.14: Haircell specification in the LL. <strong>A and B</strong> maximum Tom intensities in the pLLP and CCs. All CC lifetimes were normalized to the timepoint of deposition (timepoint zero, highlighted by striped vertical line). pLLP intensities are shows to the right, CC intensities are shows on a negative scale to the left. <strong>C</strong> Relative numbers of <em>atoh1a</em> expressing cells and <strong>C’</strong> mean counts of <em>atoh1a</em> expressing cells. <strong>D-D’</strong> Kymographs along the horizontal midline showing nascent signal of Tom (in magenta) <strong>D</strong> two individual pLLPs that were registered in time and to the leading edge. And <strong>D’</strong> Tom signal during LL development.
+Figure 3.15: pLLP proliferation <strong>A</strong> Tracks of Mitosis. (Image data) Last timepoint of Z-projected time-lapse movie. (Labels) each dots marks a mitotic events. Each color represents one mitosis. Each connection between two dots represents 6 min. <strong>B-B’'</strong> Mitoses in the pLLP. (B) Count of Mitoses through time (mean<span class="math inline">\(\pm\)</span>sd) (B’) Proliferation Index at 36 hpf for EdU and phospho Histone labeled pLLPs (B’‘) Examples of EdU staining (scale bar = 100 <span class="math inline">\(\mu\)</span>m) <strong>C</strong> Mitoses in CCs. B’ and C, the colored bar indicated the median, bars indicate the 95% CI.
+</p>
+</div>
+<p>Since individual <em>shroom3</em>-- CCs are smaller, we wondered if there could be compensation mechanisms activated that increases proliferation to restore wildtype CC size once they are deposited. To verify this, CC mitoses were tracked on the same data as before. Other than the pLLP, which can be observed throughout the time-lapse, CCs only begin to <em>exist</em> when they are deposited. To normalize for individual CC lifetimes, the number of mitoses per CC is divided by the duration of the total time-lapse minus the time span to when it first appeared.</p>
+<p><span class="math inline">\(\frac{mitoses\ per\ CC\ [n]}{total\ time- time\ of\ deposition\ [T]}\)</span></p>
+<p>This clearly shows that the additional cells in <em>shroom3</em>-- embryos are derived from CC proliferation, rather than pLLP proliferation (<a href="3-res.html#fig:prolpllp">3.15</a>C).</p>
+</div>
+<div id="summary-2" class="section level4">
+<h4><span class="header-section-number">3.2.3.3</span> Summary</h4>
+<p>These results show that the additional cells at end of migration observed in the LL analysis do not stem from an increase in proliferation in the pLLP, but instead from increased proliferation after CCs are deposited.</p>
+</div>
+</div>
+<div id="rosette-formation-and-cluster-deposition" class="section level3">
+<h3><span class="header-section-number">3.2.4</span> Rosette Formation and Cluster Deposition</h3>
+<p>Having shown that the additional CC deposition in <em>shroom3</em>-- embryos is not caused by an over-proliferation in the migrating pLLP, the next step was to have a closer look at the dynamics of rosette formation, in relation to pLLP morphometrics and CC deposition. To test dependencies between different observations and developmental dynamics, variables can be correlated. To do this and to have a coherent dataset to work with, the data of three different analyses on a single set of image data were joined.</p>
+<p><strong>First</strong>, to get to know the exact timing of CC deposition, a manual tracking tool <span class="citation">(<em>55</em>)</span> was used (figure <a href="3-res.html#fig:rdt">3.16</a>, tracking). <strong>Second</strong>, to deduce pLLP morphometrics an IJ macro was developed (anaLLzr2DT, section <a href="2-mat-met.html#mat-anallzr2dt">2.2.4.1.2</a>) for spatiotemporal registration of the pLLP and to yield information about its speed, area, roundness, etc. (<a href="3-res.html#fig:rdt">3.16</a>, Registration). <strong>Third</strong>, to detect rosettes and quantify their weights, a CNN <span class="citation">(<em>68</em>)</span> was used on the registered pLLP output from the before mentioned IJ macro (section <a href="2-mat-met.html#CNN">2.2.4.2</a>; figure <a href="3-res.html#fig:rdt">3.16</a> - Detection).
+Finally, all three datasets were joined by embryo id and timepoint.</p>
+<div id="dataset-1" class="section level4">
+<h4><span class="header-section-number">3.2.4.1</span> Dataset</h4>
+<p>The image data set analyzed consists of 20 time-lapse movies (11 <em>shroom3</em>--, 9 <em>shroom3</em>++). Each time-lapse has a duration of ~20 h (~8 min. interval)<a href="#fn19" class="footnote-ref" id="fnref19"><sup>19</sup></a>, summing up to ~1650 <em>shroom3</em>--, and ~1350 <em>shroom3</em>++ timepoints.</p>
+
+<div class="figure" style="text-align: center"><span id="fig:rdt"></span>
+<img src="figures/results/03_rosettes/RDT-01.png" alt="Rosette Formation Joined Datasets. Tracking pLLP is marked as no.1. The rest of the CCs is numbered sequentially as they appear. Registration The black outline marks the region of interest (ROI) that is the pLLP as it is detected by the anaLLzr2DT. The red line highlights the pLLPs leading edge. Detection Each square highlights a detected rosette by the CNN, colors represent rosette weights." width="85%" />
+<p class="caption">
+Figure 3.16: Rosette Formation Joined Datasets. <strong>Tracking</strong> pLLP is marked as no.1. The rest of the CCs is numbered sequentially as they appear. <strong>Registration</strong> The black outline marks the region of interest (ROI) that is the pLLP as it is detected by the anaLLzr2DT. The red line highlights the pLLPs leading edge. <strong>Detection</strong> Each square highlights a detected rosette by the CNN, colors represent rosette weights.
 </p>
 </div>
 </div>
+<div id="cluster-deposition" class="section level4">
+<h4><span class="header-section-number">3.2.4.2</span> Cluster Deposition</h4>
+<p>Figure <a href="3-res.html#fig:rdtdepo">3.17</a>A shows a montage of a <em>shroom3</em>++ and a <em>shroom3</em>-- scenario in cluster deposition (3.5 h / ~20 min. interval). For <em>shroom3</em>++ the rosette structure seems tight and two depositions occur in a regular manner. In the <em>shroom3</em>-- on the other hand, rosette structure are more fragile with less pronounced rosette centers and four observed depositions. Interestingly, based on the <em>cldnb:lyn-gfp</em> signal the area of constriction seems to be less radially organized but more oriented towards the horizontal midline. Furthermore, the trailing rosettes are significantly smaller and do not seem to separate as clean from the migrating primordium. In addition, for L3 it first seems like two CCs could be deposited, until they merge again to a single CC about 1.5 h later.</p>
+
+<div class="figure" style="text-align: center"><span id="fig:rdtdepo"></span>
+<img src="figures/results/03_rosettes/tracking-01.png" alt="Cluster Deposition. A shroom3++ and shroom3-- LL development in comparison. L1 - L4 are deposited CCs. Arrows indicate deposition events. Dotted lines are tracks of rosette to CC transition. B Statistics of deposited cluster counts C Change of CC position through time. Each line represents the locally weighted scatterplot smoothing (LOESS) of all CCn positions observed." width="474" />
+<p class="caption">
+Figure 3.17: Cluster Deposition. <strong>A</strong> <em>shroom3</em>++ and <em>shroom3</em>-- LL development in comparison. L1 - L4 are deposited CCs. Arrows indicate deposition events. Dotted lines are tracks of rosette to CC transition. <strong>B</strong> Statistics of deposited cluster counts <strong>C</strong> Change of CC position through time. Each line represents the locally weighted scatterplot smoothing (LOESS) of all CCn positions observed.
+</p>
 </div>
-<div id="rescue-experiments" class="section level3">
-<h3><span class="header-section-number">3.2.6</span> Rescue Experiments</h3>
-<p>Rescue experiments are focused on LL CC count and pLLP rosettiness. Since Shroom3 affects development not linearly as e.g. a simple signaling molecule, but by providing a scaffold where different dimensions can act together, we tried rescuing by manipulating those single dimensions to find out which one had the most impact.</p>
+<p>On average, as it was shown in section <a href="3-res.html#res-ccounts">3.2.2.2</a>, there’s a significant increase in clusters deposited (<a href="3-res.html#fig:rdtdepo">3.17</a>B). Also, neither <em>shroom3</em>++ nor <em>shroom3</em>-- CCs drastically change their position once they are deposited.</p>
+</div>
+<div id="registration-3" class="section level4">
+<h4><span class="header-section-number">3.2.4.3</span> Registration</h4>
+<p>As the pLLP migrates it moves through space and time. To measure velocity and acceleration, one needs to detect where in space (the image in X and Y) the pLLP is located at multiple timepoints. When duplicating the pLLP based on a detection ROI from the whole image, the pLLP is registered in time and space (figure <a href="3-res.html#fig:rdtreg">3.18</a>A).</p>
+<p>As shown in figure <a href="3-res.html#fig:rdtreg">3.18</a>B-B’ neither speed nor acceleration drastically differ throughout the complete course of migration. Speed drops from an initial ~75 <span class="math inline">\(\mu\)</span>m/h to about ~30 <span class="math inline">\(\mu\)</span>m/h for both <em>shroom3</em>++ and <em>shroom3</em>-- 17 h later (figure 3.3 A). Similarly, while there is a positive acceleration of almost ~2 <span class="math inline">\(\mu\)</span>m/h peaking after ~2-3 hours, the remaining two peaks progressively get smaller (<a href="3-res.html#fig:rdtreg">3.18</a>A’).
+While for the area no difference can be detected (<a href="3-res.html#fig:rdtreg">3.18</a>C), interestingly the roundness is on average significantly reduced in <em>shroom3</em>-- pLLPs (<a href="3-res.html#fig:rdtreg">3.18</a>D). This is also evident from the montage in figure <a href="3-res.html#fig:rdtdepo">3.17</a>A.</p>
+
+<div class="figure" style="text-align: center"><span id="fig:rdtreg"></span>
+<img src="figures/results/03_rosettes/registration.png" alt="pLLP time-resolved morphometrics. A Registration procedure B-B’ Leading edge (l.e.) speed and acceleration in \(\mu\)m/h, displayed as LOESS curves with at a span of 0.5 C Area in square \(\mu\)m and D Roundness displayed as mean±se (standard error)." width="295" />
+<p class="caption">
+Figure 3.18: pLLP time-resolved morphometrics. <strong>A</strong> Registration procedure <strong>B-B’</strong> Leading edge (l.e.) speed and acceleration in <span class="math inline">\(\mu\)</span>m/h, displayed as LOESS curves with at a span of 0.5 <strong>C</strong> Area in square <span class="math inline">\(\mu\)</span>m and <strong>D</strong> Roundness displayed as mean±se (standard error).
+</p>
+</div>
+</div>
+<div id="res-rdtdet" class="section level4">
+<h4><span class="header-section-number">3.2.4.4</span> Rosette Detection</h4>
+<p>To quantify the maturity of rosettes within the pLLP a CNN was used which allows to detect objects within images (Region Proposal based CNN). Inherent to object detection and classification by a neural network is that the network not only tells us if an object was <em>detected</em> (of numbers room <span class="math inline">\(\mathbb{N_0}\)</span>), but also how secure it is - the probability - that the object detected is the right one (of numbers room <span class="math inline">\(x\in[0, 1]\subset\mathbb{R}\)</span>) - the <em>weighted detection</em>. Furthermore, the weighted detection was capped a score <span class="math inline">\(\leq\)</span> 0.5, since below 0.5 the probability would be to insecure. In our case the network was trained to detect wildtype rosettes, while also presenting pLLPs of embryos treated with a compound that inhibits rosette formation (SU5402) to refine learning. Therefore, if the network detected 1 rosette with a probability of 0.99, it is very likely that this is a wildtype rosette. However, at different developmental stages and genetic background (e.g. mutants with impaired rosette formation) the pLLP exhibits a different count of rosettes. Therefore it would be wrong to compare just the sum of <em>detections</em> or <em>weighted detections</em> per pLLP, but it is necessary to normalize for the different count of rosettes to get a global figure of pLLP rosettization - the <em>rosettiness</em>.</p>
+<p><span class="math display">\[\textbf{Rosettiness} = \frac{\sum_{} \textrm{Weighted Detections}}{\sum_{} \textrm{Detections}} = \textrm{Normalized Weight}\]</span></p>
+
+<div class="figure" style="text-align: center"><span id="fig:rdtdetmdl"></span>
+<img src="figures/results/03_rosettes/detection_model.png" alt="Quantification of rosettes. A Model of detection and weighted detection in shroom3++ and shroom3-- embryos B Actual detection in pLLPs of shroom3++ and shroom3-- embryos at six different timepoints and highlighted detection weight." width="312"  />
+<p class="caption">
+Figure 3.19: Quantification of rosettes. <strong>A</strong> Model of <em>detection</em> and <em>weighted detection</em> in <em>shroom3</em>++ and <em>shroom3</em>-- embryos <strong>B</strong> Actual detection in pLLPs of <em>shroom3</em>++ and <em>shroom3</em>-- embryos at six different timepoints and highlighted detection weight.
+</p>
+</div>
+<p>The kymographs<a href="#fn20" class="footnote-ref" id="fnref20"><sup>20</sup></a> in figure <a href="3-res.html#fig:rdtdet">3.20</a>A-A’ were generated from pLLPs that were previously registered with the anaLLzr2DT IJ macro (section (mat-anallzr2dt)). After registration, a line was drawn along the horizontal midline (<a href="3-res.html#fig:rdtreg">3.18</a>A). Finally, recorded kymographs were turned to false color (blue = low intensity, red = high intensity) for better visual interpretation. In <em>shroom3</em>++ the higher intensities are highly concentrated to two to three distinct regions within the migrating pLLP, while in the <em>shroom3</em>-- pLLP the higher intensities are more fragmented and overall reduced. To analyze this statistically, all pLLPs were quantified in terms of rosette count and average rosette weight or ‘rosettiness’ (section <a href="2-mat-met.html#CNN">2.2.4.2</a>).</p>
+<p>The numbers reveal two very interesting things. First, the medians show that rosette count (<a href="3-res.html#fig:rdtreg">3.18</a>B’) is only reduced for the first six hours, while rosettiness is reduced almost throughout the entire 20 hours. Second, while for rosette counts two to six indeed half or more of the pLLPs are <em>shroom3</em>++, for counts below two and above six there are more <em>shroom3</em>-- pLLPs (<a href="3-res.html#fig:rdtreg">3.18</a>B). Furthermore figure @(fig:rdtdet)C shows that at a rosettiness of ~0.7 there are about as many <em>shroom3</em>++ as there are <em>shroom3</em>-- pLLPs, marking this point as a threshold were pLLPs above are more like likely to be <em>shroom3</em>++ and below more likely to be <em>shroom3</em>--. At ~0.1 rosettiness there are almost only <em>shroom3</em>-- pLLPs, while at ~0.9 rosettiness there are almost only <em>shroom3</em>++ pLLPs.
+In addition, the data distributions attached to the sides (<a href="3-res.html#fig:rdtreg">3.18</a>B’’ and C’’) reveal that for the rosettiness the KDE did not actually shift to a lower number, but rather flattened and variance is increased.</p>
+
+<div class="figure" style="text-align: center"><span id="fig:rdtdet"></span>
+<img src="figures/results/03_rosettes/detection.png" alt="Rosette counts and weights. A-A’ pLLP kymographs. Length = 100 \(\mu\)m. (A) shows the signal and line drawn. (A’) shows the signal through time B-B’’ and C-C’’ Different graphic representation of rosette count data. (B) Filled histogram (B’) Median\(\pm\)standard deviation (B’’) KDE." width="558" />
+<p class="caption">
+Figure 3.20: Rosette counts and weights. <strong>A-A’</strong> pLLP kymographs. Length = 100 <span class="math inline">\(\mu\)</span>m. (A) shows the signal and line drawn. (A’) shows the signal through time <strong>B-B’’ and C-C’’</strong> Different graphic representation of rosette count data. (B) Filled histogram (B’) Median<span class="math inline">\(\pm\)</span>standard deviation (B’’) KDE.
+</p>
+</div>
+</div>
+<div id="interdependences" class="section level4">
+<h4><span class="header-section-number">3.2.4.5</span> Interdependences</h4>
+<p>In the previous sections I have shown that in embryos deficient for Shroom3 more NMs are deposited and that this is not caused by an overproliferation in the pLLP. In this section my goal was to collect detailed information about LL morphometrics and rosette formation to find out what is causing the additional CCs to be deposited.</p>
+<p>To do this I combined the results of three different analyses to be able to detect inter-dependencies between variables. For my questioning the most interesting variable to find dependencies with is rosettiness. As mentioned in section <a href="3-res.html#intro-phen">3.2.1</a> when we had a first closer look at the pLLP phenotype we found that many of the clearly as <em>shroom3</em>-- identified embyros still were reminiscent of the <em>shroom3</em>++ phenotype. However, what surprised us the most (due to to previous results indicating an important role during rosette assembly for Shroom3), was that a fraction had significantly more CCs deposited. To test the interdependence between rosettiness and CCs deposited quantitatively we set up two hypotheses.</p>
+<p>First, when we had a closer look at timelapse movies of the migrating pLLP at a high temporal resolution we had the impression that while in <em>shroom3</em>++ embryos the pLLP stalled for a moment during CC deposition, this was not the case in <em>shroom3</em>-- embryos. Therefore the hypothesis to test (figure <a href="3-res.html#fig:rdtcorr">3.21</a>A) was that higher speeds lead to a lower degree of rosettiness and <em>vice versa</em>. Unfortunately the correlation coefficient and model indicate a rather low interdependence. However, both <em>shroom3</em>++ and <em>shroom3</em>-- also showed a high timely dependence in rosettiness and acceleration (<a href="3-res.html#fig:rdtdet">3.20</a>C’ and <a href="3-res.html#fig:rdtreg">3.18</a>B).</p>
+<p>Second, since we know Shroom3 plays a role in rosette assembly and that embryos deficient for Shroom3 have on average more CCs deposited, we wanted to test if there is a direct link between the two and have statistical certainty. Therefore, the hypothesis to test for figure <a href="3-res.html#fig:rdtcorr">3.21</a>B was if lower rosettiness leads to a higher number of CCs deposited and <em>vice versa</em>. Since here the end of migration cluster count is one-dimensional (one number per embryo), we had to correlate it to a <em>per embryos</em> summary statistic rosettiness. Here the correlation coefficient is rather high, the interdependence seems to be true. Additionally, the clusters determined are nicely separated from each other and the <em>shroom3</em>++ and <em>shroom3</em>-- pLLPs seem to form two independent groups.</p>
+
+<div class="figure" style="text-align: center"><span id="fig:rdtcorr"></span>
+<img src="figures/results/03_rosettes/rdt_corr_speed-ros.png" alt="Developmental interdependencies. A Pearson correlation coefficient between rosettiness and speed of migration through time B Single dots in the scatterplots in represent the variables scatter in \(x\) and \(y\), the red line shows a linear model through the point cloud, red digits indicate the correlation coefficient. Black spots with grey circles indicate the centers for clusters calculated on these two sets of data. Clustering was performed hierarchical." width="579" />
+<p class="caption">
+Figure 3.21: Developmental interdependencies. <strong>A</strong> Pearson correlation coefficient between rosettiness and speed of migration through time <strong>B</strong> Single dots in the scatterplots in represent the variables scatter in <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, the red line shows a linear model through the point cloud, red digits indicate the correlation coefficient. Black spots with grey circles indicate the centers for clusters calculated on these two sets of data. Clustering was performed hierarchical.
+</p>
+</div>
+</div>
 <div id="res-shrmresc" class="section level4">
-<h4><span class="header-section-number">3.2.6.1</span> Shroom3 Ectopic Expression</h4>
-<p>To find out if the LL phenotype can be rescued by ectopic expression of Shroom3, a transgene was used where <em>shroom3v1</em> is fused to RFP and expressed under control of a heatshock protein<a href="#fn36" class="footnote-ref" id="fnref36"><sup>36</sup></a>. While this construct was used for rescue before <span class="citation">(<em>29</em>)</span> (see section <a href="1-Intro.html#intro-shroom">1.2.4.1</a>), here it was used to test for CC count and rosettiness too. Rescuing the <em>shroom3</em><span class="math inline">\(--\)</span> phenotype with Shroom3 itself is interesting to control for LL unspecific effects that might have happened earlier in development and to find out about Shroom3s morphogenic potential.
-For this experiment, embryos were imaged two times. First at around 36 hpf, and a second time at end of migration after about 24 hours of incubation at 28.5<span class="math inline">\(^\circ\)</span>. This way it is possible to test for correlations between rosettiness earlier in development and CC count at end of migration.
-While CC count is restored in heat-shocked, <em>shroom3</em><span class="math inline">\(--\)</span>, transgene carrying embryos, it also seems to reduce the number of CCs deposited in <em>shroom3</em>++ (<a href="3-res.html#fig:rescshrm">3.15</a>A). For the rosettiness however, we still get a significant difference (<a href="3-res.html#fig:rescshrm">3.15</a>B). Correlation between CC count and rosettiness for heat-shocked embryos without <em>hs:shr3v1</em> transgene (<a href="3-res.html#fig:rescshrm">3.15</a>C, <em>hs:shr3v1</em> 00) is about the same as for embryos not heat-shocked (<a href="3-res.html#fig:rescshrm">3.15</a>C, <em>hs:shr3v1</em> ??), but inverse to heat-shocked embryos with transgene (<a href="3-res.html#fig:rescshrm">3.15</a>C, <em>hs:shr3v1</em> +?). Importantly, correlation is lost between heat-shocked <em>shroom3</em><span class="math inline">\(--\)</span> embryos with transgene and not heat-shocked <em>shroom3</em>++ embryos (<a href="3-res.html#fig:rescshrm">3.15</a>C, right panel). Table 3 summarizes the number of datapoints.</p>
+<h4><span class="header-section-number">3.2.4.6</span> Shroom3 Rescue</h4>
+<p>To find out if the phenotype of increased CCs deposited can be rescued by ectopic expression of Shroom3, a transgene was used where <em>shroom3v1</em> is fused to RFP and expressed under control of heatshock promotor (HSP70). While this construct was used to rescue rosette number in Shroom3 morphants before <span class="citation">(<em>44</em>)</span> (section <a href="1-Intro.html#intro-shroom">1.2.4.1</a>), here it was used to test if CC count and rosettiness can be restored. Furthermore, by rescuing the <em>shroom3</em>-- phenotype with Shroom3 itself it is possible to control for LL unspecific effects introduced by the mutation that might have happened earlier in development.</p>
+<p>To do a comparable analysis like in the inter-dependencies analysis, embryos were imaged two times. First at around 36 hpf, and a second time at end of migration after about 24 hours of incubation at 28.5<span class="math inline">\(^\circ\)</span>. This way it is possible to test for correlations between rosettiness earlier in development and CC count at end of migration. Unlike in the first experiment, here rosettiness is not the median of multiple timepoints, but the measurement from a single timepoint. However, as shown in figure <a href="3-res.html#fig:rdtdet">3.20</a>, rosettiness is most affected at the beginning of migration. Furthermore, I had difficulties identifying embryos carrying the transgene by PCR, which is why they were partially identified visually <em>via</em> expression od RFP. In addition <em>shroom</em>++ and <em>shroom</em>+- embyos were pooled to increase statistical power.</p>
 
 <div class="figure" style="text-align: center"><span id="fig:rescshrm"></span>
-<img src="figures/results/06_rescues/shrm3/rescue_temp.png" alt="shroom3 ectopic expression A Normalized cluster count and statistics B Rosettiness and statistics C Correlations between beginning of migration rosettiness and end of migration cluster count" width="595" />
+<img src="figures/results/06_rescues/shrm3/rescue_temp_final.png" alt="shroom3 ectopic expression. A Normalized cluster count and statistics B Rosettiness and statistics C Correlations between beginning of migration rosettiness and end of migration cluster count" width="298" />
 <p class="caption">
-Figure 3.15: <em>shroom3</em> ectopic expression <strong>A</strong> Normalized cluster count and statistics <strong>B</strong> Rosettiness and statistics <strong>C</strong> Correlations between beginning of migration rosettiness and end of migration cluster count
+Figure 3.22: <em>shroom3</em> ectopic expression. <strong>A</strong> Normalized cluster count and statistics <strong>B</strong> Rosettiness and statistics <strong>C</strong> Correlations between beginning of migration rosettiness and end of migration cluster count
 </p>
 </div>
 <table class="table table" style="margin-left: auto; margin-right: auto; font-size: 11px; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:rescshrmtab">Table 3.3: </span>Heatshock rescue dataset summary
+<span id="tab:rescshrmtab">Table 3.5: </span>Heatshock rescue dataset summary
 </caption>
 <thead>
 <tr>
@@ -885,7 +967,7 @@ Unknown
 </table>
 <table class="table table" style="margin-left: auto; margin-right: auto; font-size: 8px; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:rescshrmsignif">Table 3.4: </span>Heatshock statistics
+<span id="tab:rescshrmsignif">Table 3.6: </span>Heatshock statistics
 </caption>
 <thead>
 <tr>
@@ -1300,21 +1382,638 @@ ns
 </tbody>
 </table></li>
 </ul>
+<p>While CC count is restored in heat-shocked, <em>shroom3</em>-- transgene carrying embryos, it also seems to reduce the number of CCs deposited in <em>shroom3</em>++ (<a href="3-res.html#fig:rescshrm">3.22</a>A). For the rosettiness however, we still get a significant difference (<a href="3-res.html#fig:rescshrm">3.22</a>B).</p>
+<p>Correlation between CC count and rosettiness (figure <a href="3-res.html#fig:rescshrm">3.22</a>C) for heat-shocked embryos without <em>hs:shr3v1</em> transgene (_hs:shr3v1_00, left panel) is about the same as for embryos non heat-shocked (<em>hs:shr3v1</em>??, second panel from right), but inverse to heat-shocked embryos with transgene (<em>hs:shr3v1</em> +?, second panel from left). Importantly, correlation is lost between heat-shocked <em>shroom3</em>-- embryos with transgene and non heat-shocked <em>shroom3</em>+? embryos (right panel). Table 3 summarizes the number of datapoints.</p>
 </div>
-<div id="morphogen-rescue" class="section level4">
-<h4><span class="header-section-number">3.2.6.2</span> Morphogen Rescue</h4>
-<p>It is known that increasing concentrations of SU5402 inhibit pLLP migration and rosette formation, leading to a reduced length of the LL system and the number of CCs deposited <span class="citation">(<em>12</em>, <em>27</em>)</span>.
-The idea for this experiment was to rescue the <em>shroom3</em> phenotype by combining it with the phenotype of impaired Fgf signaling. Since inhibition of Fgf also reduces LL length, a titration experiment was planned to find a concentration that would not affect the length of the LL but still restore <em>shroom3</em>++ levels of CC count. While concentrations 0.10 and 0.20 <span class="math inline">\(\mu\)</span>M do not show a significant reduction in LL length, they also do not exhibit any difference in cell count.</p>
+<div id="res-rockresc" class="section level4">
+<h4><span class="header-section-number">3.2.4.7</span> Mechanic Rescue</h4>
+<p>It is very well known that Rho kinases are necessary for mechanic force transmission in various developmental processes <span class="citation">(<em>14</em>, <em>37</em>, <em>42</em>, <em>69</em>, <em>70</em>)</span>. Since Rock is also thought to be a key player of the Shroom force mediation pathway in the pLLP, the idea for a mechanic rescue was to titrate different concentrations of a Rock inhibitor (Rockout, section <a href="2-mat-met.html#mat-chem">2.1.1</a>) and a non-muscle myosin II (NMII) activator (Calyculin, section <a href="2-mat-met.html#mat-chem">2.1.1</a>) to see if this way can confirm the correlation between rosettiness and CC number in an independent manner.</p>
+<div id="rock-inhibition" class="section level5">
+<h5><span class="header-section-number">3.2.4.7.1</span> Rock inhibition</h5>
+<p>Rock2a, upon interaction with Shroom3, phosphorylates NMII which is necessary for contraction of the actin network and apical constriction (section @ref{intro-shroom}). Here we wanted to mimic the <em>shroom3</em>-- phenotype in <em>shroom3</em>++ embryos.</p>
+<p>Embryos were incubated at distinct (figure <a href="3-res.html#fig:rescrock">3.23</a> legend) concentrations from 24 hpf till end of migration (about 60 hpf). At this stage embryos incubated at higher concentrations displayed a significant reduction in overall body length (<a href="3-res.html#fig:rescrock">3.23</a>A’). Therefore, to see if there is a specific effect on length, LL length was normalized to body length.</p>
 
-<div class="figure" style="text-align: center"><span id="fig:rescsu"></span>
-<img src="figures/results/06_rescues/su54/rescue_su.png" alt="Titration of Fgf inhibitor A LL lengths are reduced with increased concentrations of Fgf inhibitor and B groupwise comparison of the length normalized cluster count per concentration of Fgf inhibitor." width="590" />
+<div class="figure" style="text-align: center"><span id="fig:rescrock"></span>
+<img src="figures/results/06_rescues/rockout/rescue_rockout.png" alt="Titration of Rock inhibitor. A LL lengths are reduced with increased concentrations of Rock inhibitor and B groupwise comparison of the length normalized cluster count per concentration of Fgf inhibitor." width="576"  />
 <p class="caption">
-Figure 3.16: Titration of Fgf inhibitor <strong>A</strong> LL lengths are reduced with increased concentrations of Fgf inhibitor and <strong>B</strong> groupwise comparison of the length normalized cluster count per concentration of Fgf inhibitor.
+Figure 3.23: Titration of Rock inhibitor. <strong>A</strong> LL lengths are reduced with increased concentrations of Rock inhibitor and <strong>B</strong> groupwise comparison of the length normalized cluster count per concentration of Fgf inhibitor.
+</p>
+</div>
+<p>Rockout treatment at 10 <span class="math inline">\(\mu\)</span>M does not lead to a significant reduction in LL length but does significantly increase the number of CCs deposited, confirming the current hypothesis that Shroom3 acts though Rock.</p>
+<table class="table table" style="margin-left: auto; margin-right: auto; font-size: 11px; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:rescrocktab">Table 3.7: </span>Rockout rescue dataset summary
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+genotype
+</th>
+<th style="text-align:center;">
+conc. (<span class="math inline">\(\mu\)</span>M)
+</th>
+<th style="text-align:left;">
+LLs
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+++
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:left;">
+17
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+++
+</td>
+<td style="text-align:center;">
+10
+</td>
+<td style="text-align:left;">
+13
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+++
+</td>
+<td style="text-align:center;">
+50
+</td>
+<td style="text-align:left;">
+17
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+++
+</td>
+<td style="text-align:center;">
+100
+</td>
+<td style="text-align:left;">
+20
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; border: 0;" colspan="100%">
+<span style="font-style: italic;">Note: </span>
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border: 0;" colspan="100%">
+<sup></sup> concentrations in 0.1% DMSO
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="nmii-activation" class="section level5">
+<h5><span class="header-section-number">3.2.4.7.2</span> NMII activation</h5>
+<p>Downstream of Shroom3 NMII, as a motor protein, is necessary for contraction of the actin network and apical constriction (section @ref{intro-shroom}). The idea for this experiment was to rescue the <em>shroom3</em>-- phenotype by over-activation of NMII. Unfortunately, even when incubation at 100 nM (the maximum solubility), no significant differences can be detected.</p>
+
+<div class="figure" style="text-align: center"><span id="fig:resccal"></span>
+<img src="figures/results/06_rescues/caliculyn/rescue_cali.png" alt="Calyculin treatment. A LL lengths and B groupwise comparison of the length normalized cluster count." width="85%"  />
+<p class="caption">
+Figure 3.24: Calyculin treatment. <strong>A</strong> LL lengths and <strong>B</strong> groupwise comparison of the length normalized cluster count.
 </p>
 </div>
 <table class="table table" style="margin-left: auto; margin-right: auto; font-size: 11px; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:rescsutab">Table 3.5: </span>Morphogen rescue dataset summary
+<span id="tab:resccaltab">Table 3.8: </span>Calyculin rescue dataset summary
+</caption>
+<thead>
+<tr>
+<th style="text-align:center;">
+genotype
+</th>
+<th style="text-align:center;">
+conc. (nM)
+</th>
+<th style="text-align:center;">
+LLs
+</th>
+<th style="text-align:center;">
+genotype
+</th>
+<th style="text-align:center;">
+conc. (nM)
+</th>
+<th style="text-align:center;">
+LLs
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+++
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+8
+</td>
+<td style="text-align:center;">
+--
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+8
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+</td>
+<td style="text-align:center;">
+100
+</td>
+<td style="text-align:center;">
+12
+</td>
+<td style="text-align:center;">
+</td>
+<td style="text-align:center;">
+100
+</td>
+<td style="text-align:center;">
+12
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; border: 0;" colspan="100%">
+<span style="font-style: italic;">Note: </span>
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border: 0;" colspan="100%">
+<sup></sup> concentrations in 0.1% DMSO
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+</div>
+<div id="summary-3" class="section level4">
+<h4><span class="header-section-number">3.2.4.8</span> Summary</h4>
+<p>I could (<strong>1</strong>) reproduce the results of more deposited CCs on live data as well, gaining more insight in the deposition process which shows smaller and more fragmented CCs and a more chaotic deposition process overall (<strong>2</strong>) show that neither speed nor acceleration are significantly different. Also the area of the pLLP is not affected, but roundness, confirming our impression that the pLLP in <em>shroom3</em>-- embryos is more elongated (<strong>3</strong>) show that while the integer number of rosettes in the pLLP is only significantly increased during the first 6-8 hours of migration, the overall <em>rosettiness</em> (rosette integrity per PLLP) is significantly reduced over the whole path of migration.</p>
+<p>Rosettiness is strongly correlated to the final number of CCs deposited (<a href="3-res.html#fig:rdtcorr">3.21</a>B) which is also evidenced by rescue of correlation between rosettiness at the beginning of migration and CC count at the end of migration (<a href="3-res.html#fig:rescshrm">3.22</a>C), concluding that rosettiness is the key parameter for the future outcome of CC pattern. Still, the question is what determines rosette weight. Although acceleration and rosettiness are correlated only weakly, they are significantly stronger correlated in <em>shroom3</em>-- than they are in <em>shroom3</em>++ embryos throughout time (<a href="3-res.html#fig:rdtcorr">3.21</a>A). This finding is also confirmed by an experiment where the CC count of <em>shroom3</em>-- can be rescued when incubated at lower temperature (section <a href="3-res.html#res-tempresc">3.2.2.4</a>). In conclusion these results lead to the conclusion that <em>shroom3</em>-- rosettes are destabilized with increasing thermodynamics.</p>
+<p>Finally and importantly I found a high correlation between CCs deposited at end of migration and the median rosettiness throughout pLLP migration, which clearly demonstrates a direct link between rosette integrity and numbers of CCs deposited. Interestingly however not as previously, and intuitively, assumed. Here, Shroom3 is important not to strengthen rosette integrity in order to have CCs of the right size deposited.</p>
+</div>
+</div>
+<div id="apical-constriction-3" class="section level3">
+<h3><span class="header-section-number">3.2.5</span> Apical Constriction</h3>
+<p>In the previous analysis I have shown a direct relationship between rosette integrity and CCs deposited, where lower rosette integrity leads to a fragmented rosettes and therefore to an increase in CC deposition frequency.</p>
+<p>To preserve rosette integrity and for proper CC maturation cells need to apically constrict. To gain further insight into Shroom3s contribution to apical constriction, it is appropriate to have a closer look at rosette conformation on a cellular scale. To do so, first a set of high spatial resolution, volumetric image data was generated (XY = 0.164 <span class="math inline">\(\mu\)</span>m / pixel; Z = 0.4 <span class="math inline">\(\mu\)</span>m) that allowed for…</p>
+<ol style="list-style-type: decimal">
+<li>a more rigorous inspection of morphological differences, and</li>
+<li>automated and unbiased single cell 3D reconstruction (<a href="2-mat-met.html#ACI-singlecell">2.2.4.4.2.1</a>) using a newly developed IJ macro (section <a href="2-mat-met.html#mat-anallzr3d">2.2.4.1.3</a>). Secondly, to investigate the contribution of various single cell morphometrics to rosette formation an app was developed<a href="#fn21" class="footnote-ref" id="fnref21"><sup>21</sup></a> that allows for a convenient handling of large amounts of retrieved data.</li>
+</ol>
+
+<div class="figure" style="text-align: center">
+<img src="figures/results/04_constriction/reconstriction_data.png" alt="High resolution, volumetric image data. Upper row shows the fluorescence signal at the membranes. Lower row shows the 3D reconstructed cells. Columns show the same pLLP from different angles." width="566"  />
+<p class="caption">
+(#fig:acdata,)High resolution, volumetric image data. Upper row shows the fluorescence signal at the membranes. Lower row shows the 3D reconstructed cells. Columns show the same pLLP from different angles.
+</p>
+</div>
+<p>Inhibition of FGFR1 <em>via</em> drug treatment<a href="#fn22" class="footnote-ref" id="fnref22"><sup>22</sup></a> results in a concentration dependent loss of morphogenesis and rosette assembly in the pLLP <span class="citation">(<em>17</em>, <em>32</em>, <em>57</em>)</span>. As a proof of principle and to validate previous studies, data of drug treated embryos (20 <span class="math inline">\(\mu\)</span>M) and appropriate DMSO (0.1<span class="math inline">\(\%\)</span> DMSO / E3<a href="#fn23" class="footnote-ref" id="fnref23"><sup>23</sup></a>) controls were included.</p>
+<div id="dataset-2" class="section level4">
+<h4><span class="header-section-number">3.2.5.1</span> Dataset</h4>
+<p>The dataset generated consists of three pLLP stages (<a href="3-res.html#fig:acstages">3.25</a>), four groups (DMSO, SU5402, <em>shrm3</em>++ and <em>shroom3</em>--), 267 pLLPs and 33.163 single cells.</p>
+
+<div class="figure" style="text-align: center"><span id="fig:acstages"></span>
+<img src="figures/results/04_constriction/Yolk_ext.png" alt="Scheme showing a part of the posterior part of a zebrafish embryo and recorded developmental stages for 3D reconstruction" width="60%"  />
+<p class="caption">
+Figure 3.25: Scheme showing a part of the posterior part of a zebrafish embryo and recorded developmental stages for 3D reconstruction
+</p>
+</div>
+<table class="table table" style="margin-left: auto; margin-right: auto; font-size: 11px; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:acdatatab">Table 3.9: </span>Apical Constriction dataset summary
+</caption>
+<thead>
+<tr>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; font-weight: bold; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+id labels
+</div>
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; font-weight: bold; " colspan="3">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+metrics
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:left;">
+stage
+</th>
+<th style="text-align:left;">
+groups
+</th>
+<th style="text-align:center;">
+pLLPs
+</th>
+<th style="text-align:center;">
+cells
+</th>
+<th style="text-align:center;">
+ratio
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;vertical-align: top !important;" rowspan="4">
+32 hpf
+</td>
+<td style="text-align:left;">
+DMSO
+</td>
+<td style="text-align:center;">
+20
+</td>
+<td style="text-align:center;">
+2511
+</td>
+<td style="text-align:center;">
+125.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SU5402
+</td>
+<td style="text-align:center;">
+19
+</td>
+<td style="text-align:center;">
+2215
+</td>
+<td style="text-align:center;">
+116.6
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+shrm3++
+</td>
+<td style="text-align:center;">
+24
+</td>
+<td style="text-align:center;">
+3259
+</td>
+<td style="text-align:center;">
+135.8
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+shrm3--
+</td>
+<td style="text-align:center;">
+34
+</td>
+<td style="text-align:center;">
+4281
+</td>
+<td style="text-align:center;">
+125.9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;vertical-align: top !important;" rowspan="4">
+36 hpf
+</td>
+<td style="text-align:left;">
+DMSO
+</td>
+<td style="text-align:center;">
+17
+</td>
+<td style="text-align:center;">
+1881
+</td>
+<td style="text-align:center;">
+110.6
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SU5402
+</td>
+<td style="text-align:center;">
+13
+</td>
+<td style="text-align:center;">
+1286
+</td>
+<td style="text-align:center;">
+98.9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+shrm3++
+</td>
+<td style="text-align:center;">
+24
+</td>
+<td style="text-align:center;">
+3144
+</td>
+<td style="text-align:center;">
+131.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+shrm3--
+</td>
+<td style="text-align:center;">
+31
+</td>
+<td style="text-align:center;">
+3924
+</td>
+<td style="text-align:center;">
+126.6
+</td>
+</tr>
+<tr>
+<td style="text-align:left;vertical-align: top !important;" rowspan="4">
+40 hpf
+</td>
+<td style="text-align:left;">
+DMSO
+</td>
+<td style="text-align:center;">
+18
+</td>
+<td style="text-align:center;">
+2237
+</td>
+<td style="text-align:center;">
+124.3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SU5402
+</td>
+<td style="text-align:center;">
+13
+</td>
+<td style="text-align:center;">
+1788
+</td>
+<td style="text-align:center;">
+137.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+shrm3++
+</td>
+<td style="text-align:center;">
+22
+</td>
+<td style="text-align:center;">
+2660
+</td>
+<td style="text-align:center;">
+120.9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+shrm3--
+</td>
+<td style="text-align:center;">
+32
+</td>
+<td style="text-align:center;">
+3977
+</td>
+<td style="text-align:center;">
+124.3
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; border: 0;" colspan="100%">
+<span style="font-style: italic;">Note: </span>
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border: 0;" colspan="100%">
+<sup></sup> ratio = cells/pLLPs
+</td>
+</tr>
+</tfoot>
+</table>
+<p>Use the sample data in the <a href="https://dskleinhans.shinyapps.io/LLmapR/">LLMapR</a> web-app to explore the dataset.</p>
+</div>
+<div id="cell-shape-and-arrangement" class="section level4">
+<h4><span class="header-section-number">3.2.5.2</span> Cell Shape and Arrangement</h4>
+<p>Figure <a href="3-res.html#fig:acshape">3.26</a>B’ illustrates the three developmental stages used for this analysis. For <em>shroom3</em>++ pLLPs two (<a href="3-res.html#fig:acshape">3.26</a>A, 32 hpf) to four (<a href="3-res.html#fig:acshape">3.26</a>A, 40 hpf) areas of constricting regions can be observed (XZ pane), in <em>shroom3</em>-- its three (<a href="3-res.html#fig:acshape">3.26</a>A, 36 hpf) to seven (<a href="3-res.html#fig:acshape">3.26</a>A, 40 hpf), confirming the results of rosette detection (<a href="3-res.html#res-rdtdet">3.2.4.4</a>). While at 32 and 36 hpf the spread of those regions (indicated by bars in <a href="3-res.html#fig:acshape">3.26</a>, XZ panes) is wider in <em>shroom3</em>--, at 40 hpf they are smaller but also increased in number. When looking at the central rosette along the width ((indicated by arrows in <a href="3-res.html#fig:acshape">3.26</a>), YZ panes), it seems like there is no considerable difference between <em>shroom3</em>++ and <em>shroom3</em>-- rosettes. In SU5402 treated embryos, neither in XZ nor in YZ constriction can be observed and the cells seem to be mostly columnar in shape. In addition, while constriction seems isotropic in the <em>shroom3</em>++ rosette center, constriction in the <em>shroom3</em>-- rosette center cells appears an-isotropic.</p>
+
+<div class="figure" style="text-align: center"><span id="fig:acshape"></span>
+<img src="figures/results/04_constriction/Figure_5-1.png" alt="Apical Constriction in 3D. Stages are in columns, the groups are in rows. Each panel shows a MaxIP (top left), and orthogonal views along the length (XZ, bottom left) and the width (YZ, right). Arrow annotations in YZ panels indicate points of constriction. Bar annotations in XZ indicate the spread of region of constriction." width="674"  />
+<p class="caption">
+Figure 3.26: Apical Constriction in 3D. <strong>Stages are in columns</strong>, the <strong>groups are in rows</strong>. Each panel shows a MaxIP (top left), and orthogonal views along the length (XZ, bottom left) and the width (YZ, right). Arrow annotations in YZ panels indicate points of constriction. Bar annotations in XZ indicate the spread of region of constriction.
+</p>
+</div>
+</div>
+<div id="single-cell-metrics" class="section level4">
+<h4><span class="header-section-number">3.2.5.3</span> Single Cell Metrics</h4>
+<p>To quantify AC in width and length and to gain a more objective view on cell geometry, apical constriction and other metrics such as height were quantified .To get a hold on AC an-isotropy we measured the length of the minor and major axis of a fit ellipsoid (as described in section (ACI-pol) and illustrated in figure <a href="3-res.html#fig:acaci">3.27</a>A). If AC was an-isotropic and more cells are oriented towards the horizontal midline instead of being radially oriented, this could be shown by degrees of divergence (degrees <span class="math inline">\(\measuredangle\)</span>) from the horizontal midline (<a href="3-res.html#fig:acaci">3.27</a>A’).
+For angle measurements, all angles are normalized to a 90<span class="math inline">\(^\circ\)</span> range, where 0<span class="math inline">\(^\circ\)</span> is along the horizontal midline.</p>
+<p>When comparing the ratio of cells in intervals of 15<span class="math inline">\(^\circ\)</span> along a range of 90<span class="math inline">\(^\circ\)</span> it can be shown that there are more <em>shroom3</em>-- than <em>shroom3</em>++ cells within the 0-15<span class="math inline">\(^\circ\)</span> interval through all three stages (<a href="3-res.html#fig:acstages">3.25</a>). Even more, it shows that there are more <em>shroom3</em>++ than <em>shroom3</em>-- cells within the remaining intervals – confirming the model of constriction an-isotropy.</p>
+<p>While <em>reduction</em> in ACI is stronger than the ACI in shroom3-- cells (<a href="3-res.html#fig:acaci">3.27</a>C-C’), both are significantly reduced throughout time – again confirming the increase in constriction an-isotropy. For all three timepoints the ACI for SU5402 treated embryos is not only the smallest, but also stays at the same level (~2 in the ACI, ~3.4 in the ACI), therefore it can be seen as a lower threshold. Interestingly, the ACIs for DMSO, <em>shroom3</em>++ and <em>shroom3</em>-- are progressively converging this threshold from earlier to later stages.</p>
+
+<div class="figure" style="text-align: center"><span id="fig:acaci"></span>
+<img src="figures/results/04_constriction/Figure_5-2.png" alt="Apical Constriction metrics. A-A’ Measurements. (A) Oval (black outline) represents the fit ellipse. Red arrows represent major and minor axes which are representative for A-P and D-V respectively (A’) Angle measurements and intervals B Cellular orientation as bar chart. p-value levels (wilcox-test) are indicated as stars. C-C’ Apical Constriction measurements. Colored bars represent the median. Errorbars indicate 95% CI." width="672" />
+<p class="caption">
+Figure 3.27: Apical Constriction metrics. <strong>A-A’</strong> Measurements. (A) Oval (black outline) represents the fit ellipse. Red arrows represent major and minor axes which are representative for A-P and D-V respectively (A’) Angle measurements and intervals <strong>B</strong> Cellular orientation as bar chart. p-value levels (wilcox-test) are indicated as stars. <strong>C-C’</strong> Apical Constriction measurements. Colored bars represent the median. Errorbars indicate 95% CI.
+</p>
+</div>
+</div>
+<div id="summary-4" class="section level4">
+<h4><span class="header-section-number">3.2.5.4</span> Summary</h4>
+<p>Here I could show that while AC is generally impaired in <em>shroom3</em>-- embryos, there is an an-isotropy where the reduction in AC is stronger in the</p>
+</div>
+</div>
+<div id="res-hc" class="section level3">
+<h3><span class="header-section-number">3.2.6</span> Haircell Specification</h3>
+<p>In the analyses presented so far I have shown that embryos deficient for Shroom3 deposit more CCs, that this is caused by a fragmentation of rosettes (not by overproliferation) and that AC, which is important for CC maturation, is only partially diminished (more in A-P than in D-V axis).</p>
+<p>As described in section <a href="1-Intro.html#intro-morph">1.1.2</a>, a cells shape has direct impact on its ability to perceive and react to external cues. Here we were interested if the reduction in AC (change in cell shape, section <a href="2-mat-met.html#ACI-pol">2.2.4.4.1.3</a>) and overall smaller CCs (but not change in density, section <a href="3-res.html#res-llmorph">3.2.2.3</a>) , two mechanical features, had an impact on HC specification and therefore if the LLs function as a sensory system would still be intact. Atoh1a (section <a href="1-Intro.html#intro-atoh">1.2.3.2</a>, a TF that gives cells the potential to become sensory HCs), in the pLLP is locally expressed between leader and follower cells and is finally restricted to a single center cell <em>via</em> lateral inhibition (section <a href="1-Intro.html#intro-notch">1.1.3.3</a>). Since till today it was not shown why the center cell becomes the HC - here we wanted our hypothesis was that rosette assembly (radial organization) resp. AC could play a role.</p>
+<p>First, to check if <em>atoh1a</em> was still expressed in <em>shroom3</em>-- cells and if there were further implications in feedback loops with Notch signaling, an <em>In Situ Hybridization</em> (ISH, section <a href="2-mat-met.html#ISH-met">2.2.3.3</a>) experiment was conducted (probes in section <a href="2-mat-met.html#mat-probes">2.1.8</a>). For 36 and 40 hpf the count of <em>atoh1a</em> and <em>deltaD</em> expressing cells (<a href="3-res.html#fig:hcish">3.28</a>) seemed to be increased. Furthermore, especially at 40 hpf, the signal seems to be a lot more fragmented and fuzzier.</p>
+
+<div class="figure" style="text-align: center"><span id="fig:hcish"></span>
+<img src="figures/results/05_atoh/hc_ish.png" alt="Expression of deltaD and atoh1a in the pLLP. Recorded in greyscale at brightfield at 20X Magnification. Images show background subtracted and de-noised EDFs of original Z-stack data." width="85%" />
+<p class="caption">
+Figure 3.28: Expression of <em>deltaD</em> and <em>atoh1a</em> in the pLLP. Recorded in greyscale at brightfield at 20X Magnification. Images show background subtracted and de-noised EDFs of original Z-stack data.
+</p>
+</div>
+<p>Traditional ISH allows for detection of RNA transcripts on a whole embryo scale <em>via</em> a hybridizing anti-sense probe. However, since embryos are fixed, it only allows to analyze single time points. Furthermore, since images are taken in brightfield, quantification of signal intensity is difficult.</p>
+<p>To get access to developmental dynamics we made use of an additional, besides <em>cldnb:lyn-gfp</em>, transgenic construct where tdTomato<a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a> <span class="citation">(<em>71</em>)</span> is expressed under direct control of the <em>atoh1a</em> promotor. By simultaneous observation of both fluorophores in a time-lapse setup (<a href="3-res.html#fig:hctl">3.29</a>B), the strategy was to follow up the dynamics of tdTomato to quantify the expression of <em>atoh1a</em> in cell count and intensity of expression.</p>
+<div id="dataset-3" class="section level4">
+<h4><span class="header-section-number">3.2.6.1</span> Dataset</h4>
+<p>For each group, <em>shroom3</em>++ and <em>shroom3</em>--, and timepoint the dataset was split into pLLP and CC (table <a href="3-res.html#tab:hcdatatab">3.10</a>). Each time-lapse has a duration of 18-20 hours, consists of about 54 timepoints and two channels (488 &amp; 561 nm).</p>
+<table class="table table" style="margin-left: auto; margin-right: auto; font-size: 11px; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:hcdatatab">Table 3.10: </span>Hair-cell specification dataset summary
+</caption>
+<thead>
+<tr>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; font-weight: bold; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+id labels
+</div>
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; font-weight: bold; " colspan="3">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+metrics
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:left;">
+genotype
+</th>
+<th style="text-align:left;">
+sub-structure
+</th>
+<th style="text-align:center;">
+embryos
+</th>
+<th style="text-align:center;">
+timepoints
+</th>
+<th style="text-align:center;">
+per 3h
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+shroom3++
+</td>
+<td style="text-align:left;">
+pLLP
+</td>
+<td style="text-align:center;">
+28
+</td>
+<td style="text-align:center;">
+1566
+</td>
+<td style="text-align:center;">
+261
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+CC
+</td>
+<td style="text-align:center;">
+28
+</td>
+<td style="text-align:center;">
+2499
+</td>
+<td style="text-align:center;">
+<ul>
+<li></td>
+</tr>
+<tr>
+<td style="text-align:left;">
+shroom3--
+</td>
+<td style="text-align:left;">
+pLLP
+</td>
+<td style="text-align:center;">
+21
+</td>
+<td style="text-align:center;">
+1134
+</td>
+<td style="text-align:center;">
+189
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+CC
+</td>
+<td style="text-align:center;">
+21
+</td>
+<td style="text-align:center;">
+3566
+</td>
+<td style="text-align:center;">
+<ul>
+<li></td>
+</tr>
+</tbody>
+</table></li>
+</ul></li>
+</ul>
+</div>
+<div id="atoh1a-in-the-ll" class="section level4">
+<h4><span class="header-section-number">3.2.6.2</span> Atoh1a in the LL</h4>
+<p>While in both <em>shroom3</em>++ and <em>shroom3</em>-- tdTomato signal intensities are rising as soon as CCs are deposited (figure <a href="3-res.html#fig:hctl">3.29</a>A), in <em>shroom3</em>-- pLLPs intensities are on the rise already in the first four hours of migration. Comparing signal intensities in deposited CCs for both, <em>shroom3</em>++ and <em>shroom3</em>-- show a similar pattern of decreasing tdTomato signal intensity with progressive CC depositions. Similarly, when looking at ungrouped CC signal intensity (not <em>per</em> CC, but as one group), no difference can be detected (figure <a href="3-res.html#fig:hctl">3.29</a>B).</p>
+<p>While there is no difference in relative numbers of <em>atoh1a</em> expressing cells within the migrating pLLP throughout time (figure <a href="3-res.html#fig:hctl">3.29</a>C), when comparing mean cell counts at specific intervals the numbers reveal a significant increase from 0 – 3 and 12 – 15 hours for <em>shroom3</em>-- embryos(figure <a href="3-res.html#fig:hctl">3.29</a>C’).</p>
+<p>The extrusions to the left in the Kymographs in figure <a href="3-res.html#fig:hctl">3.29</a>D are representative to the elongating pLLP during the process of CC deposition. Magenta curves represent expression of <em>atoh1a</em>. For the <em>shroom3</em>-- pLLP, premature expression of <em>atoh1a</em> can be detected. The diagonal lines in the kymographs in figure <a href="3-res.html#fig:hctl">3.29</a>D’ represent the moving pLLP along the LL. Vertical curves represent deposited CCs. As for the registered pLLP, Magenta curves represent expression of <em>atoh1a</em>.</p>
+
+<div class="figure" style="text-align: center"><span id="fig:hctl"></span>
+<img src="figures/results/05_atoh/Figure_7-white-01.png" alt="Hair-cell specification in the LL. A and B Maximum tdTomato intensities in the pLLP and CCs. All CC lifetimes were normalized to the timepoint of deposition (timepoint zero, highlighted by striped vertical line). pLLP intensities are shown to the right (black curve), CC intensities are shown on a negative scale to the left (colored curves). C Relative numbers of atoh1a expressing cells to number of timepoints and C’ mean counts of atoh1a expressing cells. D-D’ Kymographs along the horizontal midline showing nascent signal of Tom (in magenta) D two individual pLLPs that were registered in time and to the leading edge. And D’ Tom signal during LL development." width="638" />
+<p class="caption">
+Figure 3.29: Hair-cell specification in the LL. <strong>A and B</strong> Maximum tdTomato intensities in the pLLP and CCs. All CC lifetimes were normalized to the timepoint of deposition (timepoint zero, highlighted by striped vertical line). pLLP intensities are shown to the right (black curve), CC intensities are shown on a negative scale to the left (colored curves). <strong>C</strong> Relative numbers of <em>atoh1a</em> expressing cells to number of timepoints and <strong>C’</strong> mean counts of <em>atoh1a</em> expressing cells. <strong>D-D’</strong> Kymographs along the horizontal midline showing nascent signal of Tom (in magenta) <strong>D</strong> two individual pLLPs that were registered in time and to the leading edge. And <strong>D’</strong> Tom signal during LL development.
+</p>
+</div>
+<p>Deposition and position of the first CC is more independent of Shroom3 (section <a href="3-res.html#res-ccounts">3.2.2.2</a>) than for the remaining CCs. Interestingly during the first four hours, when the first CC is deposited, analysis of hair-cell specification shows that not only the promotor for <em>atoh1a</em> is more active in <em>shroom3</em>-- embryos (figure <a href="3-res.html#fig:hctl">3.29</a> A and B), but also that more cells are differentiating to become HCs (figure <a href="3-res.html#fig:hctl">3.29</a>C and C’). This leads to the conclusion that the morphological changes introduced by the <em>shroom3</em> mutation lead to a pre-mature activation of the <em>shroom3</em> promotor, subsequently leading to deposition of the CC the HC is associated with.</p>
+</div>
+<div id="morphogen-rescue" class="section level4">
+<h4><span class="header-section-number">3.2.6.3</span> Morphogen Rescue</h4>
+<p>As stated in section <a href="1-Intro.html#intro-fgf">1.1.3.2</a> and <a href="#into-shroom"><strong>??</strong></a>, FGF plays a key role during LL development and, additionally, more recent research shows that levels FGF activity have direct impact on the number of CCs deposited <span class="citation">(<em>17</em>)</span>.</p>
+<p>Since in embryos deficient for Shroom3 there are significantly more CCs deposited and since we observe a pre-mature activation of Atoh1a (which activates FGF signaling), we wanted to test whether the increase in CCs deposited can be explained by an increase in FGF activity.</p>
+<p>Inhibition of FGF also reduces LL length <span class="citation">(<em>17</em>, <em>32</em>)</span>. Therefore, a titration series experiment with an FGF inhibitor (SU5402) was planned to find a concentration that would not affect the length of the LL but still restore <em>shroom3</em>++ levels of CC count.</p>
+
+<div class="figure" style="text-align: center"><span id="fig:rescsu"></span>
+<img src="figures/results/06_rescues/su54/rescue_su.png" alt="Titration of FGF inhibitor. A LL lengths are reduced with increased concentrations of FGF inhibitor and B groupwise comparison of the length normalized cluster count per concentration of FGF inhibitor." width="590"  />
+<p class="caption">
+Figure 3.30: Titration of FGF inhibitor. <strong>A</strong> LL lengths are reduced with increased concentrations of FGF inhibitor and <strong>B</strong> groupwise comparison of the length normalized cluster count per concentration of FGF inhibitor.
+</p>
+</div>
+<p>Concentrations 0.10 and 0.20 <span class="math inline">\(\mu\)</span>M do not show a significant reduction in LL length, but they also do not exhibit any difference in CC count. While the titration worked out well, we reach wildtype levels of CC count only at a concentration of 1 <span class="math inline">\(\mu\)</span>M of SU5402, however at this concentration the LL length is also reduced by ~ 1 mm. Since FGF plays a crucial role in many developmental processes and since SU5402 affects all of these, <span class="math inline">\(H_0\)</span> can at this point neither be rejected nor accepted. More precise methods need to be applied.</p>
+<table class="table table" style="margin-left: auto; margin-right: auto; font-size: 11px; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:rescsutab">Table 3.11: </span>Morphogen rescue dataset summary
 </caption>
 <thead>
 <tr>
@@ -1456,410 +2155,22 @@ LLs
 </tfoot>
 </table>
 </div>
-<div id="res-rockresc" class="section level4">
-<h4><span class="header-section-number">3.2.6.3</span> Mechanic Rescue</h4>
-<p>It is very well known that Rho kinases are necessary for mechanic force transmission in various developmental processes <span class="citation">(<em>9</em>, <em>33</em>, <em>38</em>, <em>68</em>, <em>69</em>)</span>. Since Rock is also thought to be a key player of the Shroom force mediation pathway in the pLLP, the idea for a mechanic rescue was to titrate different concentrations of a Rock inhibitor<a href="#fn37" class="footnote-ref" id="fnref37"><sup>37</sup></a> and an inductor<a href="#fn38" class="footnote-ref" id="fnref38"><sup>38</sup></a> to see if this way the <em>shroom3</em><span class="math inline">\(--\)</span> phenotype can be mimicked in <em>shroom</em>++ embryos resp. restored in <em>shroom3</em><span class="math inline">\(--\)</span>.</p>
-<div id="rock-inhibition" class="section level5">
-<h5><span class="header-section-number">3.2.6.3.1</span> Rock inhibition</h5>
-<p>Embryos were incubated at distinct (figure <a href="3-res.html#fig:rescrock">3.17</a> legend) concentrations from 24 hpf till end of migration (about 60 hpf). At this stage embryos incubated at higher concentrations displayed a significant reduction in overall body length (<a href="3-res.html#fig:rescrock">3.17</a>A’). Therefore, to see if there is a lateral line specific effect on LL length, LL length was normalized to body length. Rockout treatment at 10 <span class="math inline">\(\mu\)</span>M does not lead to a significant reduction in LL length but does significantly increase the number of cell clusters deposited.</p>
-
-<div class="figure" style="text-align: center"><span id="fig:rescrock"></span>
-<img src="figures/results/06_rescues/rockout/rescue_rockout.png" alt="Titration of Rock inhibitor A LL lengths are reduced with increased concentrations of Rock inhibitor and B groupwise comparison of the length normalized cluster count per concentration of Fgf inhibitor." width="576" />
-<p class="caption">
-Figure 3.17: Titration of Rock inhibitor <strong>A</strong> LL lengths are reduced with increased concentrations of Rock inhibitor and <strong>B</strong> groupwise comparison of the length normalized cluster count per concentration of Fgf inhibitor.
-</p>
-</div>
-<table class="table table" style="margin-left: auto; margin-right: auto; font-size: 11px; margin-left: auto; margin-right: auto;">
-<caption style="font-size: initial !important;">
-<span id="tab:rescrocktab">Table 3.6: </span>Rockout rescue dataset summary
-</caption>
-<thead>
-<tr>
-<th style="text-align:right;">
-genotype
-</th>
-<th style="text-align:center;">
-conc. (<span class="math inline">\(\mu\)</span>M)
-</th>
-<th style="text-align:left;">
-LLs
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right;">
-++
-</td>
-<td style="text-align:center;">
-0
-</td>
-<td style="text-align:left;">
-17
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-++
-</td>
-<td style="text-align:center;">
-10
-</td>
-<td style="text-align:left;">
-13
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-++
-</td>
-<td style="text-align:center;">
-50
-</td>
-<td style="text-align:left;">
-17
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-++
-</td>
-<td style="text-align:center;">
-100
-</td>
-<td style="text-align:left;">
-20
-</td>
-</tr>
-</tbody>
-<tfoot>
-<tr>
-<td style="padding: 0; border: 0;" colspan="100%">
-<span style="font-style: italic;">Note: </span>
-</td>
-</tr>
-<tr>
-<td style="padding: 0; border: 0;" colspan="100%">
-<sup></sup> concentrations in 0.1% DMSO
-</td>
-</tr>
-</tfoot>
-</table>
-</div>
-<div id="rock-induction" class="section level5">
-<h5><span class="header-section-number">3.2.6.3.2</span> Rock induction</h5>
-<p>The idea for this experiment was to rescue <em>shroom3</em><span class="math inline">\(--\)</span> embryos by enhancing the effects of Rock. Incubation at 100 nM, the maximum solubility, does not lead any significant differences.</p>
-
-<div class="figure" style="text-align: center"><span id="fig:resccal"></span>
-<img src="figures/results/06_rescues/caliculyn/rescue_cali.png" alt="Calyculin treatment A LL lengths and B groupwise comparison of the length normalized cluster count." width="85%" />
-<p class="caption">
-Figure 3.18: Calyculin treatment <strong>A</strong> LL lengths and <strong>B</strong> groupwise comparison of the length normalized cluster count.
-</p>
-</div>
-<table class="table table" style="margin-left: auto; margin-right: auto; font-size: 11px; margin-left: auto; margin-right: auto;">
-<caption style="font-size: initial !important;">
-<span id="tab:resccaltab">Table 3.7: </span>Calyculin rescue dataset summary
-</caption>
-<thead>
-<tr>
-<th style="text-align:center;">
-genotype
-</th>
-<th style="text-align:center;">
-conc. (nM)
-</th>
-<th style="text-align:center;">
-LLs
-</th>
-<th style="text-align:center;">
-genotype
-</th>
-<th style="text-align:center;">
-conc. (nM)
-</th>
-<th style="text-align:center;">
-LLs
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center;">
-++
-</td>
-<td style="text-align:center;">
-0
-</td>
-<td style="text-align:center;">
-8
-</td>
-<td style="text-align:center;">
---
-</td>
-<td style="text-align:center;">
-0
-</td>
-<td style="text-align:center;">
-8
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-</td>
-<td style="text-align:center;">
-100
-</td>
-<td style="text-align:center;">
-12
-</td>
-<td style="text-align:center;">
-</td>
-<td style="text-align:center;">
-100
-</td>
-<td style="text-align:center;">
-12
-</td>
-</tr>
-</tbody>
-<tfoot>
-<tr>
-<td style="padding: 0; border: 0;" colspan="100%">
-<span style="font-style: italic;">Note: </span>
-</td>
-</tr>
-<tr>
-<td style="padding: 0; border: 0;" colspan="100%">
-<sup></sup> concentrations in 0.1% DMSO
-</td>
-</tr>
-</tfoot>
-</table>
-</div>
-</div>
-<div id="res-tempresc" class="section level4">
-<h4><span class="header-section-number">3.2.6.4</span> Thermodynamic Rescue</h4>
-<p>Increasing temperature usually leads to an acceleration in thermodynamics and embryonic development, while lower temperatures decelerate <span class="citation">(<em>70</em>)</span>. Decelerated development also leads to a reduction in speed of migration and therefore to a reduction in forces that act on cells, cell-cell junctions and organ structures. In this experiment the hypothesis was that it should be possible to at least partially restore the <em>shroom3</em>++ number of CCs since reduced forces would stabilize rosettes and therefore rosettes would have longer time to develop properly. Since embryos develop at different speeds, it is more challenging to exactly stage match them at end of migration. To account for this the CC count was normalized to LL length.
-Even though the CC count in <em>shroom3</em><span class="math inline">\(--\)</span> embryos incubated at 25<span class="math inline">\(^\circ\)</span>C cannot be completely restored, they are hardly more different than levels of <em>shroom3</em>++ embryos incubated at 30<span class="math inline">\(^\circ\)</span>C.</p>
-
-<div class="figure" style="text-align: center"><span id="fig:resctemp"></span>
-<img src="figures/results/06_rescues/temp/rescue_temp.png" alt="Thermodynamic rescue A LL lengths and B groupwise comparison of the length normalized cluster count." width="85%" />
-<p class="caption">
-Figure 3.19: Thermodynamic rescue <strong>A</strong> LL lengths and <strong>B</strong> groupwise comparison of the length normalized cluster count.
-</p>
-</div>
-<table class="table table" style="margin-left: auto; margin-right: auto; font-size: 11px; margin-left: auto; margin-right: auto;">
-<caption style="font-size: initial !important;">
-<span id="tab:resctemptab">Table 3.8: </span>Thermodynamic rescue dataset summary
-</caption>
-<thead>
-<tr>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; font-weight: bold; " colspan="3">
-<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
-shroom3++
-</div>
-</th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; font-weight: bold; " colspan="3">
-<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
-shroom3–
-</div>
-</th>
-</tr>
-<tr>
-<th style="text-align:center;">
-genotype
-</th>
-<th style="text-align:center;">
-treatment
-</th>
-<th style="text-align:center;">
-LLs
-</th>
-<th style="text-align:center;">
-genotype
-</th>
-<th style="text-align:center;">
-treatment
-</th>
-<th style="text-align:center;">
-LLs
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center;">
-++
-</td>
-<td style="text-align:center;">
-25°C
-</td>
-<td style="text-align:center;">
-18
-</td>
-<td style="text-align:center;">
---
-</td>
-<td style="text-align:center;">
-25°C
-</td>
-<td style="text-align:center;">
-19
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-</td>
-<td style="text-align:center;">
-30°C
-</td>
-<td style="text-align:center;">
-15
-</td>
-<td style="text-align:center;">
-</td>
-<td style="text-align:center;">
-30°C
-</td>
-<td style="text-align:center;">
-20
-</td>
-</tr>
-</tbody>
-</table>
-<table class="table table" style="margin-left: auto; margin-right: auto; font-size: 8px; margin-left: auto; margin-right: auto;">
-<caption style="font-size: initial !important;">
-<span id="tab:resctempsignif">Table 3.9: </span>Thermodynamic rescue statistics
-</caption>
-<thead>
-<tr>
-<th style="text-align:left;">
-group1
-</th>
-<th style="text-align:left;">
-group2
-</th>
-<th style="text-align:center;">
-p
-</th>
-<th style="text-align:center;">
-p.adj
-</th>
-<th style="text-align:center;">
-p.signif
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;vertical-align: top !important;" rowspan="3">
-T25_wt
-</td>
-<td style="text-align:left;">
-T25_hom
-</td>
-<td style="text-align:center;">
-0.00000
-</td>
-<td style="text-align:center;">
-0.00000
-</td>
-<td style="text-align:center;">
-****
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-T30_wt
-</td>
-<td style="text-align:center;">
-0.00747
-</td>
-<td style="text-align:center;">
-0.00750
-</td>
-<td style="text-align:center;">
-**
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-T30_hom
-</td>
-<td style="text-align:center;">
-0.00000
-</td>
-<td style="text-align:center;">
-0.00000
-</td>
-<td style="text-align:center;">
-****
-</td>
-</tr>
-<tr>
-<td style="text-align:left;vertical-align: top !important;" rowspan="2">
-T25_hom
-</td>
-<td style="text-align:left;">
-T30_wt
-</td>
-<td style="text-align:center;">
-0.00104
-</td>
-<td style="text-align:center;">
-0.00210
-</td>
-<td style="text-align:center;">
-**
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-T30_hom
-</td>
-<td style="text-align:center;">
-0.00015
-</td>
-<td style="text-align:center;">
-0.00046
-</td>
-<td style="text-align:center;">
-***
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-T30_wt
-</td>
-<td style="text-align:left;">
-T30_hom
-</td>
-<td style="text-align:center;">
-0.00000
-</td>
-<td style="text-align:center;">
-0.00000
-</td>
-<td style="text-align:center;">
-****
-</td>
-</tr>
-</tbody>
-</table>
-</div>
 <div id="atoh1a-knockdown" class="section level4">
-<h4><span class="header-section-number">3.2.6.5</span> atoh1a knockdown</h4>
-<p>Referring back to the results we got from the hair cell analysis in section <a href="3-res.html#res-hc">3.2.5</a>, the hypothesis to test was if premature CC deposition in <em>shroom3</em><span class="math inline">\(--\)</span> embryos is determined by a premature rise in Atoh1a signaling. To inhibit Atoh1a, a morpholino (MO) for <em>atoh1a</em> mRNA was injected at 0.4 ng/mL, a concentration that had already been shown to be sufficient to deplete Atoh1a signaling <span class="citation">(<em>27</em>)</span>. Furthermore, since many MOs have been shown to induce cell death <span class="citation">(<em>71</em>)</span>, in a second group we co-injected embryos with an MO for p53<a href="#fn39" class="footnote-ref" id="fnref39"><sup>39</sup></a>. Interestingly injection of <em>atoh1a</em> MO leads to a loss of the first CC deposited usually deposited at around 400 <span class="math inline">\(\mu\)</span>m distance (<a href="3-res.html#fig:rescato">3.20</a>A). Furthermore, while median CC counts in <em>atoh1a</em> MO injected <em>shroom3</em><span class="math inline">\(--\)</span> embryos are actually restored to <em>shroom3</em>++ levels, CC counts in <em>shroom3</em>++ embryos are reduced as well.</p>
+<h4><span class="header-section-number">3.2.6.4</span> <em>atoh1a</em> knockdown</h4>
+<p>The hypothesis to test was if premature CC deposition in <em>shroom3</em>-- embryos is determined by a premature rise in Atoh1a signaling.</p>
+<p>To test this hypothesis, I injected <em>shroom3</em>-- embryos with an anti-sense morpholino (MO) that had previously been shown to inhibit <em>atoh1a</em> mRNA translation. Furthermore, since many MOs have been shown to induce unspecific, p53-mediated cell death <span class="citation">(<em>72</em>)</span>, in a second group I co-injected embryos with an MO for p53 (section <a href="2-mat-met.html#mat-mos">2.1.9</a> for details about MOs).</p>
+<p>Interestingly injection of <em>atoh1a</em> MO leads to a loss of the first CC, usually deposited at around 400 <span class="math inline">\(\mu\)</span>m distance from the otic vesicle (figure <a href="3-res.html#fig:rescato">3.31</a>A). Furthermore, while median CC counts in <em>atoh1a</em> MO injected <em>shroom3</em>-- embryos are actually restored to <em>shroom3</em>++ levels, CC counts in <em>shroom3</em>++ embryos are significantly reduced as well.</p>
 
 <div class="figure" style="text-align: center"><span id="fig:rescato"></span>
-<img src="figures/results/06_rescues/atoh1a/rescue_atoh.png" alt="atoh1a knockdown A CC mean positions and B groupwise comparison of the length normalized cluster count." width="682" />
+<img src="figures/results/06_rescues/atoh1a/rescue_atoh.png" alt="atoh1a knockdown. A CC mean positions and B groupwise comparison of the length normalized cluster count." width="682"  />
 <p class="caption">
-Figure 3.20: atoh1a knockdown <strong>A</strong> CC mean positions and <strong>B</strong> groupwise comparison of the length normalized cluster count.
+Figure 3.31: <em>atoh1a</em> knockdown. <strong>A</strong> CC mean positions and <strong>B</strong> groupwise comparison of the length normalized cluster count.
 </p>
 </div>
+<p>In the expression analysis of <em>atoh1a</em> in <em>shroom3</em>-- embryos I could show a premature activity of Atoh1a in the pLLP. When trying to rescue the phenotype by knocking down <em>atoh1a</em>, neither in <em>shroom3</em>-- nor in <em>shroom3</em>++ embryos the first NM is deposited anymore. Both of these results would in theory argue for an Atoh1a dependent mechanism of CC deposition, however this result has not been reported before and would need further validation. Furthermore, even though an MO for p53 was co-injected, MO injection has been shown to potentially have many more unspecific effects due to the high concentrations usually injected <span class="citation">(<em>73</em>)</span>. For this reason double mutants ( <em>shroom3</em>--; <em>atoh1a</em>--) were generated - which at this timepoints however are not analyzed yet.</p>
 <table class="table table" style="margin-left: auto; margin-right: auto; font-size: 11px; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:rescatotab">Table 3.10: </span>Atoh rescue dataset summary
+<span id="tab:rescatotab">Table 3.12: </span>Atoh rescue dataset summary
 </caption>
 <thead>
 <tr>
@@ -1938,7 +2249,7 @@ p53+atoh1a
 </table>
 <table class="table table" style="margin-left: auto; margin-right: auto; font-size: 8px; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:rescatosignif">Table 3.11: </span>Atoh1a MO rescue statistics
+<span id="tab:rescatosignif">Table 3.13: </span>Atoh1a MO rescue statistics
 </caption>
 <thead>
 <tr>
@@ -2076,6 +2387,9 @@ hom_p53-ato
 </tr>
 </tbody>
 </table>
+</div>
+<div id="summary-5" class="section level4">
+<h4><span class="header-section-number">3.2.6.5</span> Summary</h4>
 
 </div>
 </div>
@@ -2083,26 +2397,13 @@ hom_p53-ato
 </div>
 <div class="footnotes">
 <hr />
-<ol start="21">
-<li id="fn21"><p>in Maximum intensity Z projections (MaxIP)<a href="3-res.html#fnref21" class="footnote-back">↩︎</a></p></li>
-<li id="fn22"><p>fixation with PFA may introduce a slight bending of the embryo<a href="3-res.html#fnref22" class="footnote-back">↩︎</a></p></li>
-<li id="fn23"><p>When mounted, all embryos have a different tilt<a href="3-res.html#fnref23" class="footnote-back">↩︎</a></p></li>
-<li id="fn24"><p>‘S‘ like ‚Synthesis‘<a href="3-res.html#fnref24" class="footnote-back">↩︎</a></p></li>
-<li id="fn25"><p>5-Ethynyl-2’-deoxyuridine<a href="3-res.html#fnref25" class="footnote-back">↩︎</a></p></li>
-<li id="fn26"><p>anaLLzr2DT - <a href="https://github.com/KleinhansDa/anaLLzr2DT" class="uri">https://github.com/KleinhansDa/anaLLzr2DT</a><a href="3-res.html#fnref26" class="footnote-back">↩︎</a></p></li>
-<li id="fn27"><p>as a decimal from 0-1 (1 being a wild-type rosette). For further info see section <a href="2-mat-met.html#CNN">2.2.3.1</a><a href="3-res.html#fnref27" class="footnote-back">↩︎</a></p></li>
-<li id="fn28"><p>for further details about dataset acquisition see section @(refdetect-data)<a href="3-res.html#fnref28" class="footnote-back">↩︎</a></p></li>
-<li id="fn29"><p>a kymograph is a tool to record position over time. Here, its position of fluorescence signal intensities.<a href="3-res.html#fnref29" class="footnote-back">↩︎</a></p></li>
-<li id="fn30"><p>blue = low intensity, red = high intensity<a href="3-res.html#fnref30" class="footnote-back">↩︎</a></p></li>
-<li id="fn31"><p>anaLLzr3D - <a href="https://github.com/KleinhansDa/anaLLzr3D" class="uri">https://github.com/KleinhansDa/anaLLzr3D</a><a href="3-res.html#fnref31" class="footnote-back">↩︎</a></p></li>
-<li id="fn32"><p>LLMapR - <a href="https://dskleinhans.shinyapps.io/LLmapR/" class="uri">https://dskleinhans.shinyapps.io/LLmapR/</a><a href="3-res.html#fnref32" class="footnote-back">↩︎</a></p></li>
-<li id="fn33"><p>Drug name = SU-5402 (section <a href="2-mat-met.html#mat-chem">2.1.1</a>)<a href="3-res.html#fnref33" class="footnote-back">↩︎</a></p></li>
-<li id="fn34"><p>‘Embryo Medium 3’, standard zebrafish embryo incubation medium<a href="3-res.html#fnref34" class="footnote-back">↩︎</a></p></li>
-<li id="fn35"><p>Short ‚Tom‘<a href="3-res.html#fnref35" class="footnote-back">↩︎</a></p></li>
-<li id="fn36"><p>In this case ‚hsp70‘<a href="3-res.html#fnref36" class="footnote-back">↩︎</a></p></li>
-<li id="fn37"><p>Rockout (section <a href="2-mat-met.html#mat-chem">2.1.1</a>)<a href="3-res.html#fnref37" class="footnote-back">↩︎</a></p></li>
-<li id="fn38"><p>Calyculin (section <a href="2-mat-met.html#mat-chem">2.1.1</a>)<a href="3-res.html#fnref38" class="footnote-back">↩︎</a></p></li>
-<li id="fn39"><p>p53 is a gene upregulated in cancer cells, which would then self-destruct<a href="3-res.html#fnref39" class="footnote-back">↩︎</a></p></li>
+<ol start="19">
+<li id="fn19"><p>for further details about dataset acquisition see section @(refdetect-data)<a href="3-res.html#fnref19" class="footnote-back">↩︎</a></p></li>
+<li id="fn20"><p>a kymograph is a tool to record position over time<a href="3-res.html#fnref20" class="footnote-back">↩︎</a></p></li>
+<li id="fn21"><p>LLMapR - <a href="https://dskleinhans.shinyapps.io/LLmapR/" class="uri">https://dskleinhans.shinyapps.io/LLmapR/</a><a href="3-res.html#fnref21" class="footnote-back">↩︎</a></p></li>
+<li id="fn22"><p>Drug name = SU-5402 (section <a href="2-mat-met.html#mat-chem">2.1.1</a>)<a href="3-res.html#fnref22" class="footnote-back">↩︎</a></p></li>
+<li id="fn23"><p>‘Embryo Medium 3’, section <a href="2-mat-met.html#mat-buff">2.1.6</a><a href="3-res.html#fnref23" class="footnote-back">↩︎</a></p></li>
+<li id="fn24"><p>Short ‚Tom‘<a href="3-res.html#fnref24" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
