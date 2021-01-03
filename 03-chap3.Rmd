@@ -1540,7 +1540,7 @@ knitr::include_graphics("figures/results/03_rosettes/tracking-01.png")
 
 On average, as it was shown in section \@ref(res-ccounts), there’s a significant increase in clusters deposited (\@ref(fig:rdtdepo)B). Also, neither _shroom3_++ nor _shroom3_-\- CCs drastically change their position once they are deposited.
 
-#### Registration
+#### Registration {#res-rosreg}
 
 As the pLLP migrates it moves through space and time. To measure velocity and acceleration, one needs to detect where in space (the image in X and Y) the pLLP is located at multiple timepoints. When duplicating the pLLP based on a detection ROI from the whole image, the pLLP is registered in time and space (figure \@ref(fig:rdtreg)A).
 
@@ -1730,7 +1730,7 @@ AC is also correlated with cell height. For demonstration, figure \@ref(fig:dism
 knitr::include_graphics("figures/summary/methodology_mapr.png")
 ```
 
-#### A.I.
+#### A.I. {#res-ai}
 
 To get a hold on AC an-isotropy we measured the length of the minor and major axis of a fit ellipsoid (as described in section \@ref(ACI-pol) and illustrated in figure \@ref(fig:acaci)A). If AC was an-isotropic and more cells are oriented towards the horizontal midline instead of being radially oriented, this could be shown by degrees of divergence (degrees $\measuredangle$) from the horizontal midline (figure \@ref(fig:acaci)A’).
 For angle measurements, all angles are normalized to a 90$^\circ$ range, where 0$^\circ$ is along the horizontal midline. 
@@ -1739,13 +1739,13 @@ When comparing the ratio of cells in intervals of 15$^\circ$ along a range of 90
 
 While _reduction_ in A.I.\textsubscript{Major} is stronger than the A.I.\textsubscript{Minor} in _shroom3_-\- cells (\@ref(fig:acaci)C-C’), both are significantly reduced throughout time – again confirming the increase in constriction an-isotropy. For all three timepoints the A.I. for SU5402 treated embryos is not only the smallest, but also stays at the same level (~2 in the A.I.\textsubscript{Major}, ~3.4 in the A.I.\textsubscript{Minor}), therefore it can be seen as a lower threshold. Interestingly, the A.I.s for DMSO, _shroom3_++ and _shroom3_-\- are progressively converging this threshold from earlier to later stages.
 
-(ref:acaci) Apical constriction metrics. **A-A’** Measurements. (A) Oval (black outline) represents the fit ellipse. Red arrows represent major and minor axes which are representative for A-P and D-V respectively (A’) Angle measurements and intervals **B** Cellular orientation as bar chart. p-value levels (wilcox-test) are indicated as stars. **C-C’** Apical Constriction measurements. Colored bars represent the median. Errorbars indicate 95% CI.
+(ref:acaci) Apical constriction metrics. **A-A’** Measurements. (A) Oval (black outline) represents the fit ellipse. Red arrows represent major and minor axes which are representative for A-P and D-V respectively (A’) Angle measurements and intervals **B** Cellular orientation as bar chart. The y axis represents the (normalized) fraction of cells per cells in the whole organ. p-value levels (wilcox-test) are indicated as stars. **C-C’** Apical Constriction measurements. Colored bars represent the median. Errorbars indicate 95% CI.
 
 ```{r acaci, fig.cap = "(ref:acaci)", fig.scap = "3D metrics and pLLP maps"}
 knitr::include_graphics("figures/results/04_constriction/Figure_5-2.png")
 ```
 
-#### Summary
+#### Summary {#sum-ai}
 
 In the previous chapter I could show that the main reason for the additional CCs deposited in Embryos deficient for Shroom3 is reduced rosettiness. Here I wanted to get a more detailed view on how rosette configuration and cell morphology compares between wildtype and mutant.
 

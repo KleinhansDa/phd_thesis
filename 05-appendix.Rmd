@@ -6,7 +6,7 @@
 
 (ref:suppzo1) Luminal signaling
 
-```{r suppzo1, out.extra = '', fig.pos = "h", out.width = '85%', fig.cap = "(ref:suppzo1)", fig.scap = "Luminal signaling"}
+```{r suppzo1, out.extra = '', fig.pos = "h", out.width = '70%', fig.cap = "(ref:suppzo1)", fig.scap = "Luminal signaling"}
 knitr::include_graphics("figures/supp/zo1.png")
 ```
 
@@ -15,7 +15,7 @@ To check for differences in hippo signaling, immunostainings for Taz were perfor
 
 (ref:suppyap) Hippo Signaling in the pLLP. PLLps with nuclei labeled in magenta and Taz in green. Vertical sections show a more basal, a medial and a more apical Z section.
 
-```{r suppyap, out.extra = '', fig.pos = "h", out.width = '85%', fig.cap = "(ref:suppyap)", fig.scap = "Hippo Signaling in the pLLP"}
+```{r suppyap, out.extra = '', fig.pos = "h", out.width = '90%', fig.cap = "(ref:suppyap)", fig.scap = "Hippo Signaling in the pLLP"}
 knitr::include_graphics("figures/supp/immunos.png")
 ```
 
@@ -35,10 +35,3 @@ knitr::include_graphics("figures/supp/Shroom3_orthology-01.png")
 knitr::include_graphics("figures/supp/cc_positions.png")
 ```
 
-The CC pattern for both _shrm3_++ and _shroom3_$--$ can be modeled by a phase modulated cosine (figure 1), where the power to x represents the phase and is increased by only 0.1 in _shroom3_$--$ to go from a CC count of 5 to 7 over a span of 20 hours.
-
-(ref:supccpmodel) CC pattern model
-
-```{r supccpmodel, out.width='85%', fig.cap="(ref:supccpmodel)", fig.scap="CC pattern model"}
-knitr::include_graphics("figures/supp/cc_model.png")
-```

@@ -37,7 +37,7 @@ knitr::include_graphics("figures/ackn_sn161.png")
 
 \vspace{1cm}
 
-\noindent Beside a print version, there is also an electronic version [gitbook](kleinhansda.github.io/phd_thesis)^[kleinhansda.github.io/phd_thesis] of this thesis. 
+\noindent Beside a print version, there is also an [electronic version](kleinhansda.github.io/phd_thesis)^[kleinhansda.github.io/phd_thesis] of this thesis. 
 
 \noindent In addition, data analysis scripts, figures and tables are stored in a dedicated [git repository](github.com/KleinhansDa/phd_thesis)^[github.com/KleinhansDa/phd_thesis].
 
@@ -58,7 +58,7 @@ knitr::include_graphics("figures/ackn_sn161.png")
 
 \newpage
 
-## Dedication {-}
+##  {-}
 
 \vspace{1cm}
 
