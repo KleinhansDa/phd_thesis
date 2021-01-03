@@ -1,0 +1,23 @@
+v1.0
+- normalzation value from 0.3 to 0 (line 221)
+v1.2
+- automatically read out deltaT to calculate speed
+- automatically create boxplots after macro is finished
+- improved dialog setup
+v1.3
+- improved dialog setup
+v1.5
+- changed blurring after morphological closing from scaled 3.5 to scaled 4
+v1.71 (170823)
+- changed Dialog for genotyping
+- changed analyze particles from 1000 -> 750 [line 400]
+v1.72-1.76
+- not documented
+v1.77
+- option to save CC rois too (not just the prim) (line 493)
+- do not introduce orphan line in resuts table (line 423)
+v1.77b
+- second channel registration
+- Number segmentens from 0-n from left to right at each timepoint
+- option to close all windows in start up dialog
+v1.78 = anaLLzR2D-T

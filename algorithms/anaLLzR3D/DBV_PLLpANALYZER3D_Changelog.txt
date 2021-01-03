@@ -1,0 +1,83 @@
+1.48
+- Error when after cropping rosettes the image is empty
+1.45 (170331)
+- introduced slider in dialog to choose in which Z plane AC should be measured
+- normalised value for AC/rosette detection (line 370)
+1.47 (170331)
+- introduced circle fit and %Area measurement (line 624)
+1.48
+- introduced XY pointcloud export (line 616)
+1.49
+- introduced 'Stack reverse' option to dialog macro options
+- changed noise tol level for AC detection (line 376)
+- added metadata to logfile
+- save logfile after run
+1.50
+- ypoints for AC detection will be filled with the mean values of ORGypoints
+1.51
+- Fixed bugs
+- Added measure cells of Rosette
+- Added measure whole Rosette
+- Added measure whole Primordium
+- Added metadata to logwindow
+1.52
+- Changed opening dialog + help
+1.53
+- Added 3D Ferret reconstruction
+1.54
+- Normalized Ferret reconstruction to single point
+1.55
+- Changed something about Ferret reconstruction again
+1.60
+- Measure Ferret points at 5µm for whole primordium
+- measure Intensities at y/2 over horizontal line
+- Z-Projection not metadata anymore
+1.64
+- split single cells of rosettes in 3D and save to extra directory (line ~680)
+1.65
+- minor improvements
+1.66
+- Crop single rosette cells in 3D before saving
+- Create subdirectories in image analysis folder
+1.67
+- Changed border thickness of cropped cells from 20 to 10
+- introduced 3D projects for single cells
+1.68
+- introduced doubling of sizeZ by adjusting the 'deptht' in Image->Adjust->Size
+1.69
+- deleted 1.68 again
+- bugfix 'couldn't find OMap window'
+1.70
+- Don't know anymore but bugfix. Works now.
+1.75
+- Ferret coordinates saved generally
+- Added option for deconvolution
+1.76
+- debugging: Measure cells only if Volume < 5 µm^2
+- Added for all cell measurements
+1.80
+- optimized Primordium registration
+- something else too
+1.77b (171026)
+- Added setbackgroundcolour(0,0,0) -> line 105 
+- Changes blurring param for prim registration from 2 to 1.5 -> line 327
+- added comments everywhere
+- increase min Vol threshold from 5 to 25 cubic microns
+- added max Vol threshold of 1000 cubic microns -> line 634
+- changed gaussian blur 3D from 1, 1, 1 to 2, 2, 0.5
+- started correcting ACI measure -> line 754
+2.00 (171027)
+- added vmin & vmax controls in dialog
+2.20 (171028)
+- added watershed segmentation of 2D registration binary for increased robustness -> line 261
+- added condition that watershed is only applied if x0y0 mean > 0 -> line 261
+- added function to redirect Error message to log window and progress with macro -> line 127
+2.40 (171102)
+- ACI calculated dynamically (depending on cell height) -> ~line 820
+2.50 (171106)
+- 
+3.0 (late 2018)
+- different ACI measurements
+- created Ground Truth
+3.0 (180204)
+- improved registration (exclude objects smaller than 50 µm^2) -> line 398
