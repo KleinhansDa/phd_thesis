@@ -5,6 +5,6 @@ Crossings	Mutation	shroom3
 Crossings	Staging	60 min.
 Mounting	Fixation	4$\%$ PFA o.N.
 Mounting	Agarose	1$\%$ LMPA
-Imaging	Magnification	25X WI
+Imaging	Magnification	25X WI + 1.0x zoom
 Imaging	Channels	488 nm
 Imaging	Z-Stack	2.5 $\mu$m Z-spacing; 110 $\mu$m stack size; 12*X large image

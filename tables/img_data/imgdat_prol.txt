@@ -3,12 +3,11 @@ Crossings	Pairs	6
 Crossings	Transgenes	cldnb:lyn-gfp +/?; cxcr4b(BAC):H2BRFP +/0
 Crossings	Mutation	shroom3
 Crossings	Staging	30 min.
-Mounting	Protocol	190930 D.S. Kleinhans
+Mounting	Protocol	Kleinhans $\textit{et al.}$, 2019
 Mounting	Agarose	0.3$\%$ LMPA + 20$\%$ Tricaine (V/V$\%$)
-Mounting	stamp v4A
+Mounting	stamp	version 4A
 Imaging	Magnification	20X + 1.5x zoom
 Imaging	Camera	Binning 2x2; Gain 4; Exposure 35 ms; full FOV*150 $\mu$m
 Imaging	Channels	651 nm (25$\%$)
-Imaging	Positions	36
 Imaging	Z-Stack	2.5 $\mu$m Z-spacing; 110 $\mu$m stack size; 2*X large image
 Imaging	Time	20 h / 7 min. interval / start ~ 2 p.m.

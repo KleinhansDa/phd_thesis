@@ -2,6 +2,7 @@ Element	condition
 Exposure time	100 ms         
 Laser intensity	100$\%$ / 9.3 mW
 Objective	40X; CFI APO LWD WI; N.A. = 1.15, W.D. = 0.60 mm
+Tube lens	1.0X
 Z-spacing	0.4 - 0.5 $\mu$m
 Camera	sCMOS; 4.2 M.Pix; 82$\%$ Q.E.
 SD system	Yokogawa CSU - W1; 50 $\mu$m pattern

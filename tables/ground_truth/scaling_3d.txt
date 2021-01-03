@@ -1,4 +1,4 @@
 Property	value
 XY resolution	0.1625 / 0.1625 $\mu$m
 Z resolution	0.4 $\mu$m
-$\Delta$T in Z	0.5428 s
+Time difference between Z-planes in Z	0.5428 s
