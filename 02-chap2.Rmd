@@ -118,9 +118,11 @@ Table: (\#tab:mat-sol) Solutions
 --------------------- ----------------------------------- ------------------- ---------------
 Anti-Digoxigenin        Roche                                 1:200            11093274910
 
-anti-GFP                Torrey Pines                          1:200            -
+Anti-GFP                Torrey Pines                          1:200            -
 
 Anti-TAZ (rabbit)       Cell Signaling Technology             1:200            D24E4
+
+Anti-ZO1                Zymed                                 1:200            33-9100
 
 Alexa Fluor488          Invitrogen                            1:500            710369
 
@@ -396,73 +398,67 @@ the three following points were paid special attention to.
 
 #### Sample Preparation
 
-For fluorescence microscopy zebrafish embryos are usually immersed in a 1$\%$ solution of _low melting-point agarose_ (LMPA) and then oriented on an optical cover slip manually until the LMPA has solidified. This process allows to mount^[the process of embedding the samples in agarose] eight to ten embryos _per_ dish. To make use of the high number of offspring, a single zebrafish female may lay, which rapidly leads to a sample number of more than 300, a new sample preparation technique was devised that allows for (1) a four to five times increase in samples per dish (2) a facilitated navigation _via_ a grid-like orientation through the samples and (3) an improved spatial orientation where the embryos body axes are aligned parallel to the optical Z-sections of the confocal microscope. For details, see Materials and Methods section \@ref(mount-met) and Kleinhans _et al._, 2019[@Kleinhans2019].
+For fluorescence microscopy zebrafish embryos are usually immersed in a 1$\%$ solution of _low melting-point agarose_ (LMPA) and then oriented on an optical cover slip manually until the LMPA has solidified. This process allows to mount^[the process of embedding the samples in agarose] eight to ten embryos _per_ dish. To make use of the high number of offspring, a single zebrafish female may lay, which rapidly leads to a sample number of more than 300, a new sample preparation technique was designed that allows for (1) a four - to five - time increase in samples per dish (2) a facilitated navigation _via_ a grid-like orientation through the samples and (3) an improved spatial orientation where the embryos body axes are aligned parallel to the optical Z-sections of the confocal microscope. For details, see Materials and Methods section \@ref(mount-met) and Kleinhans _et al._, 2019[@Kleinhans2019].
 
 #### Imaging
 
 Technically, speed and sensitivity are most important for live imaging. Considering these two parameters a light-sheet [@Keller2010c] fluorescence microscope (LSFM) would be the best fit. However, LSFMs also have several limitations. First, due to the sample preparation methods available the number of samples that can be imaged at a time is highly restricted. Second, for subcellular resolution a high magnification is required, which is limited by working distances and third - for optimal image analysis a high Signal-to-Noise ratio (SNR) and numerical aperture (N.A.) is preferable. Therefore a spinning disc [@Graf2005] system was chosen for most of the imaging. 
-The system makes use of (1) an extra-large field of view (FOV) ideal for large specimen (2) the possibility of a high degree of automation with state-of-the-art software and (3) a water dispension system for long-term water immersion imaging. For details about the system see Materials and Methods section \@ref(mat-SD).
+The system makes use of (1) an extra-large field of view (FOV) ideal for large specimen, (2) the possibility of a high degree of automation with state-of-the-art software and (3) a water dispensing system for long-term water immersion imaging. For details about the system see Materials section \@ref(mat-SD).
 
 #### Data handling
 
-Subsequently after data acquisition and pre-processing the image data was transferred from the microscope system to the labs main workstation. To uniquely identify each file and have them appear in a structured manner, a file-naming system was established after the following structure
+After data acquisition and pre-processing, the image data was transferred from the microscope system to the labs main workstation. To uniquely identify each file and have them appear in a structured manner, a file-naming system was established after the following structure
 
 \makebox[\linewidth]{$[stage]\_[group]\_[id]\_[date]$}
 \newline
 
-Where _stage_ would e.g. be 32hpf, _group_ would be a genotype or drug treatment, _id_ would be a positional identifier on an imaging dish like B1P01^[Where B stands for a batch, that is if multiple dishes were imaged and P stands for the position within a single batch] and _date_ would be a date in the form of YYMMDD.
+Where _stage_ would _e.g._ be 32hpf, _group_ would be a genotype or drug treatment, _id_ would be a positional identifier on an imaging dish like B1P01^[Where B stands for a batch, that is if multiple dishes were imaged and P stands for the position within a single batch] and _date_ would be a date in the form of YYMMDD.
 
 #### Image and Data Analysis
 
-In order to be as objective an as high throughput as possible, almost all of the analyses performed for this study was solved using either algorithmically or state-of-the-art convolutional neural networks (CNNs). Furthermore, to meet the terms and conditions of _open science_^[“movement to make scientific research […] and its dissemination accessible to all levels of an inquiring society” – Wikipedia/en/Open_science] standards, all pipelines were implemented in open source software frameworks such as _Fiji is just image J_ (FIJI) and R. For further information about training datasets, algorithms and versions used see Materials and Methods section \@ref(mat-sftwr).
+In order to be as objective and as high throughput as possible, almost all of the analyses performed for this study was solved either algorithmically or using convolutional neural networks (CNNs). Furthermore, to meet the terms and conditions of _open science_^[“movement to make scientific research […] and its dissemination accessible to all levels of an inquiring society” – Wikipedia/en/Open_science] standards, all pipelines were implemented in open source software frameworks such as _Fiji is just image J_ (FIJI) and R. For further information about training datasets, algorithms and versions used see Materials section \@ref(mat-sftwr).
 
 ### Zebrafish {#Zeb-met}
 
 #### Husbandry
 
-Zebraﬁsh husbandry was maintained at the University of Frankfurt am Main. All legal procedures were followed while handling and maintaining zebraﬁsh husbandry. All zebraﬁsh lines used in and generated for this study are listed in the Appendix A.
+Zebraﬁsh husbandry was maintained at the University of Frankfurt am Main. All legal procedures were followed while handling and maintaining zebraﬁsh husbandry. All zebraﬁsh lines used in and generated for this study are listed in Materials section \@ref(mat-lines).
 
 #### Handling and rearing
 
-In the afternoon preceding the embryo collection, 1 male and female were set up in crossing cages, physically separated by a transparent separator. Next day, before noon, separators were removed allowing fertilization. Fertilized eggs were then collected, sorted and reared in the well-defined culture medium E3 (Kimmel et.al. 1995, section \@ref(mat-buff)) at 25$^\circ$, 28.5$^\circ$, or 30$^\circ$ Celsius depending on the experimental condition required.
+In the afternoon preceding the embryo collection, 1 male and female were set up in crossing cages, physically separated by a transparent separator. Next day, before noon, separators were removed allowing fertilization. Fertilized eggs were then collected, sorted and reared in the well-defined culture medium E3 (Kimmel et.al. 1995, section \@ref(mat-buff)) at 25$^\circ$, 28.5$^\circ$, or 30$^\circ$ C depending on the experimental condition required.
 
 To grow larvae to the adulthood, they were transferred to the system on day 5. Till day 12, larvae were fed Vinegar Eels, Paramecia, and Caviar powder. After the 12 th day, water supply was started and fish were fed Brine Shrimp, Artemia, Paramecia and Vinegar Eels. Adult fish (>1 Month) were fed Artemia and the dry flakes.
 
 #### Zebrafish fin clips
 
-Adult ﬁsh were anesthetized with buﬀered Tricaine (1X, see section \@ref(mat-buff)) until. About 1/3 rd of the caudal ﬁn was cut with a sterile scalpel in a sterile Petri Dish. Immediately the cut ﬁn was transferred to 50 mM NaOH. Fish were returned to system water and kept in 1L system water in single tanks with 200 $\mu$L of 0.01$\%$ Methylene Blue.
+Adult fish were anesthetized with buffered Tricaine (1X, see section \@ref(mat-buff)) until loss of motion. About 1/3 of the caudal fin was cut with a sterile scalpel in a sterile Petri Dish. Immediately the cut fin was transferred to 100 $\mu$L of 50 mM NaOH. Fish were returned to system water and kept in 1L system water in single tanks with 200 $\mu$L of 0.01$\%$ Methylene Blue.
 
 #### Adult Genotyping
 
-The clipped fins were digested for 1 h at 95$^\circ$ Celsius and neutralized subsequently with 1M Tris-HCl of (pH 9).
+The clipped fins were digested for 1 h at 95$^\circ$ C and neutralized subsequently with 10 $\mu$L of 1M Tris-HCl of (pH 9).
 
 #### Embryo Genotyping
 
-Single fixed/live embryos were denatured at 95$^\circ$ Celsius in 50mM NaOH for 1 hour and neutralized by adding 1/10 the volume of 1 M Tris-HCl (pH 8.2).
+Single fixed/live embryos were denatured at 95$^\circ$ C in 20 $\mu$L of 50 mM NaOH for 1 hour and neutralized by adding 2.5 $\mu$L of 1 M Tris-HCl (pH 9).
 
 #### Zebrafish Euthanasia
 
-Adult zebrafish were anesthetized in tricaine (1X) till stage II-III of anaestezia and put in the ice cold water so as to sacrifice them by hypothermia.
+Adult zebrafish were euthanised by an overdose of Tricaine in ice cold water so as to sacrifice them by hypothermia.
 
 #### Fixation
 
-Embryos and dechorionated larvae were fixed in 2 ml of 4$\%$ PFA in 1X PBS overnight at 4$^\circ$ Celsius.
+Embryos and dechorionated larvae were fixed in 2 ml of 4$\%$ PFA in 1X PBS overnight at 4$^\circ$ C.
 
 ### Wet lab {#Wet-met}
 
 #### Sample preparation {#sampleprep}
 
-For samples **later than 24 hpf**, embryos were grown in 1X PTU till desired stage and treated with 150 $\mu$L per 10 mL of 0.1 mg/mL Pronase for ~30 min.. Choria were removed by gentle pipetting with a 2 mL plastic pasteur pipette. To replace the Pronase solution with fresh E3, embryos were immobilized by anesthesia and collected in the center of the dish by gentle rotational movement. Then the medium was poured away by collecting the embryos at the corner bottom of the dish while taking care not to loose any. After, the dish was filled with fresh E3. This process was repeated three times.
+For samples **older than 24 hpf**, embryos were grown in 1X PTU till desired stage and treated with 150 $\mu$L per 10 mL of 0.1 mg/mL Pronase for ~30 min.. Choria were removed by gentle pipetting with a 2 mL plastic pasteur pipette. To replace the Pronase solution with fresh E3, embryos were immobilized by anesthesia and collected in the center of the dish by gentle rotational movement. Then the medium was poured away by collecting the embryos at the corner bottom of the dish while taking care not to loose any. After, the dish was filled with fresh E3. This process was repeated three times.
 
-For samples **earlier than 18s**, embryos were treated with 150 $\mu$L per 10 mL of 0.1 mg/mL Pronase directly. Choria were removed the same way as for > 24 hpf embryos but when pouring away the Pronase solution, the dish was simultaneously and very carefully filled with fresh E3 again. Since younger embryos are more fragile and to avoid damage, they must be kept in solution constantly.
+For samples **younger than 18s**, embryos were treated with 150 $\mu$L per 10 mL of 0.1 mg/mL Pronase directly. Choria were removed the same way as for > 24 hpf embryos but when pouring away the Pronase solution, the dish was simultaneously and very carefully filled with fresh E3 again. Since younger embryos are more fragile and to avoid damage, they must be kept in solution constantly.
 
-Fixation started at the desired stage in 4% PFA in 0.1% PBST at 4$^\circ$C o.n.. The next day, samples were rinsed 3 times for ~5 min. in PBST and passed through a MeOH series of 25$\%$ $\rightarrow$ 50$\%$ $\rightarrow$ 75$\%$ $\rightarrow$ 100$\%$ MeOH/PBST (V/V)). For permanent storage, samples were stored in 100$\%$ MeOH at -20$^\circ$C.
-
-#### Plasmid preparation {#miniprep}
-
-To remove solvent and medium, in a 1.5 or 2 mL tube, the bacteria were centrifuged in 2 mL tubes for 3 min. at 12000 rpm. To solve the pellet, the supernatant was discarded by pouring on a tissue and 200 $\mu$L of buffer P1 were added followed by thorough vortexing. To lyse the bacteria 400 $\mu$L of P2 were added, standing still. After a maximum of 5 min. 300 $\mu$L of P3 were added to neutralize the reaction and bind cellular material, and the tube was inverted five to six times.
-
-To harvest the plasmid DNA the solution was then first centrifuged for 10 min. at 12000 rpm and at RT. After, the supernatant was transferred to a new 2 mL tube. Second, to precipitate the DNA, 700 $\mu$L of iso-propanol were added and centrifuged for 20 min. at full speed and at 4$^\circ$C. After, the tube was checked for a opaque pellet and the supernatant was discarded. Third, to wash the pellet, 200 $\mu$L of 70$%$ EtOH were added and centrifuged for 7 min. at full speed and at 4$^\circ$C. The supernatant was discarded again. Finally, the pellet was air dryed under the hood and re-suspended in 50 $\mu$L ddH\textsubscript{2}O.
+Fixation started at the desired stage in 4$\%$ PFA in 0.1$\%$ PBST in 2 mL tubes at 4$^\circ$C o.n.. The next day, samples were rinsed 3 times for ~5 min. in PBST and passed through a MeOH series of 25$\%$ $\rightarrow$ 50$\%$ $\rightarrow$ 75$\%$ $\rightarrow$ 100$\%$ MeOH/PBST (V/V)). For permanent storage, samples were stored in 100$\%$ MeOH at -20$^\circ$C.
 
 #### In Situ Hybridization {#ISH-met}
 
@@ -481,7 +477,7 @@ knitr::kable(booktabs = T, caption = "Proteinase K digestion", align = "c",
   kable_styling(full_width = T, latex_options = c('striped', 'hold_position'))
 ```
     
-Samples were washed again for 5 min. two times in PBST and post-fixated in 4$\%$ PFA at 4$^\circ$C for > 30 min. Samples were washed again for 5 min. three times in PBST.
+Samples were rinsed again two times in PBST and post-fixated in 4$\%$ PFA at 4$^\circ$C for > 30 min. Samples were washed again for 5 min. three times in PBST.
 
 **Probe Hybridisation** $\rightarrow$ all steps at 60$^\circ$C, except stated differently \newline
 
@@ -507,7 +503,7 @@ First, samples were blocked in 2$\%$ Goat Serum / PBDT (V/V) for 30 min.. For pr
 
 #### Mounting {#mount-met}
 
-For live microscopy zebrafish embryos are usually immersed in a 1$%$ solution of low melting-point Agarose (LMPA) solution and then oriented on an optical cover slip manually until the LMPA has solidified. This process allows to mount eight to ten embryos per dish. 
+For live microscopy zebrafish embryos are usually immersed in a 1$\%$ solution of low melting-point Agarose (LMPA) solution and then oriented on an optical cover slip manually until the LMPA has solidified. This process allows to mount eight to ten embryos per dish. 
 
 To take advantage of the high number of offspring a single zebrafish female may lay, a new sample preparation technique was designed that allows for 
 
@@ -535,7 +531,7 @@ Since their development was an integral part of my PhD work, the description of 
 
 The basic principle is based on work done by Laguerre _et al._, 2009[@Laguerre2009a]. For registration of mitotic events an IJ manual tracking tool was used that allows to track an image feature through a stack of images creating tracks as it progresses through volume / time ('MTrackJ'[@Meijering2012]).
 
-For mounting the procedure described in section \@ref(mount-met) was used. Nuclei were visualized in a _TgBAC(cxcr4b:H2B-RFP)_ transgenic line. After Z-projection of volumetric timelapses, mitotic events were tracked in each CC and the pLLP. Afterwards the data was exported as one table per embryo and processed by counting mitoses per pLLP / CC / total CC mitoses. Figure \@ref(fig:mitodatapoints) shows an exemplary track for the data analyzed.
+For mounting the embryo, the procedure described in section \@ref(mount-met) was used. Nuclei were visualized in a _TgBAC(cxcr4b:H2B-RFP)_ transgenic line. After Z-projection of volumetric timelapses, mitotic events were tracked in each CC and the pLLP. Afterwards the data was exported as one table per embryo and processed by counting mitoses per pLLP / CC / total CC mitoses. Figure \@ref(fig:mitodatapoints) shows an exemplary track for the data analyzed.
 
 (ref:mitodatapoints) Tracking of mitotic events. T1-T3 show consequetive timepoints of a single nucleus.
 
@@ -547,7 +543,7 @@ knitr::include_graphics("figures/materials/prol/Prolif.png")
 
 ##### Rationale
 
-The earliest attempt found for indexing AC can be found in a study published by Lee _et al_[@Lee2009] where they were interested in the 'apical index' (A.I.) of bottle cells during _X.laevis_ gastrulation(figure \@ref(fig:ACLee) Lee). Another example for measuring AC is the _apical index_ (A.I., figure \@ref(fig:ACLee) Harding) for the cells of the _D.rerio_ lateral line primordium (pLLP), which can be found in a study from 2012 where it was shown that FGFr-Ras-MAPK signaling is required for Rock2a localization and AC [@Harding2012; @Harding2013].
+The earliest attempt found for indexing AC can be found in a study published by Lee _et al_[@Lee2009] where they were interested in the 'apical index' (A.I.) of bottle cells during _X.laevis_ gastrulation (figure \@ref(fig:ACLee) Lee). Another example for measuring AC is the _apical constriction index_ (A.C.I., figure \@ref(fig:ACLee) Harding) for the cells of the _D.rerio_ lateral line primordium (pLLP), which can be found in a study from 2012 where it was shown that FGFr-Ras-MAPK signaling is required for Rock2a localization and AC [@Harding2012; @Harding2013].
 
 (ref:ACLee) A.I. indeces in the literature. **Lee** A.I. of _X.leavis_ bottle cells measured in 2D. **Harding** A.I. of _D.r._ pLLP cells measured in 3D.
 
@@ -559,22 +555,22 @@ knitr::include_graphics("figures/materials/models/ai.png")
 
 \[\mathbf{ACI} = \frac{lateral\;height\;[\mu m]}{apical\;width\;[\mu m]}\]
 
-\noindent We found two principal weaknesses of applying this ratio to the cells of the pLLP. First, it does not respect the independence of lateral height to AC. However, when measuring apical width at a fixed distance from the cells apex, it does not take into account the cells height. Second, it does not differentiate between contriction along the _anterio-posterior_ (AP) or the _dorso-ventral_ (DV) axis. Third, it actually represents the A.I. rather than the apical _constriction_ index.
+\noindent We found two principal weaknesses of applying this ratio to the cells of the pLLP. First, it does not respect the independence of lateral height to AC. Second, it does not differentiate between constriction along the _anterio-posterior_ (AP) or the _dorso-ventral_ (DV) axis. Third, it actually represents the A.I. rather than the apical _constriction_ index.
 
 ###### Parameter definition {#ACI-param}
 
 To obtain a precise and biologically meaningful way to quantify AC, first a couple of definitions had to be made.
 
-```{theorem, name = "AC is independent of orientation", echo = TRUE}
-In a 3D space a cell can have any orientation and still be apically constricted. Therefore, before measuring one should make sure orientation between embryos is aligned and also consider taking measurements along two different directions. Cells may be polarized along the AP or the DV axis.
+```{definition, name = "AC is independent of orientation", echo = TRUE}
+In a 3D space a cell can have any orientation and still be apically constricted. Therefore, before measuring one should make sure orientation between embryos is aligned and also consider taking measurements along two different directions. Since apical constriction is not necessarily isotropic, it is important to consider constriction along 2 perpendicular axes (AP and DV axis of the embryo/pLLP).
 ```
 
-```{theorem, name = "AC is independent of lateral height", echo = TRUE}
-Lateral height can be described as the distance of the two farthest points on the surface area of a cell. Two cells with different lateral heights can be equally apically constricted
+```{definition, name = "AC is independent of lateral height", echo = TRUE}
+Lateral height can be described as the distance of the two farthest points on the surface area of a cell. Two cells with different lateral heights can be equally apically constricted.
 ```
 
-```{theorem, name = "AC is independent of cell volume", echo = TRUE}
-A large cell can be equally constricted as a small cell.
+```{definition, name = "AC is independent of cell volume", echo = TRUE}
+The volume of a cell represents its size. A large cell can be equally constricted as a small cell.
 ```
 
 ###### Adaption for variation in lateral height {#ACI-lat}
@@ -603,7 +599,7 @@ Organs develop in a 3-D space and are polarized along each axis. AC usually desc
 knitr::include_graphics("figures/materials/models/ACI_Cells_pol.png")
 ```
 
-\noindent By fitting an ellipsoid to the volume area taken at $\mathrm{\Delta}$ap, one will obtain the following parameters (figure \@ref(fig:ellipse)).
+\noindent By fitting an ellipsoid to the area taken at $\mathrm{\Delta}$ap, one will obtain the following parameters (figure \@ref(fig:ellipse)).
 
 1. Length of Major axis
     + indicates the level of constriction along the less constricted axis
@@ -618,7 +614,7 @@ knitr::include_graphics("figures/materials/models/ACI_Cells_pol.png")
 knitr::include_graphics("figures/materials/models/ellipse.png")
 ```
 
-###### Theorems {#aci-theorem}
+###### Measurement definition {#aci-theorem}
 
 The two dimensions of A.I. indices can therefore be defined as the following ratios...
 
@@ -631,7 +627,7 @@ $$\mathbf{A.I._{Minor}} = \frac{lateral\;height\;[\mu m]}{ellipsoid\;minor\;axis
 ```
 
 ```{definition, name = "Angle Major", echo = TRUE}
-$$\mathbf{Angle_{Major}} = \measuredangle = \mathrm{\Delta}\;from\;horizont\;[0-90^\circ]$$
+$$\mathbf{Angle_{Major}} = \measuredangle = \mathrm{\Delta}\;from\;horizon\;[0-90^\circ]$$
 ```
 
 ##### Measurements {#ACI-Dis}
@@ -771,9 +767,9 @@ SN180 %>%
     )
 ```
 
-Harding(2013)[@Harding2013] were using a constant $\mathrm{\Delta}$ap to measure the apical width, which we have shown to be incorrect in certain cases. In their study they found that certain mean A.I. values in the DMSO go as high as 15 (figure \@ref(fig:HardingACI)), which might be related to this (see figure \@ref(fig:ACICells)). By measuring apical width at a relative $\mathrm{\Delta}$ap and taking into account all pLLP cells of the two exemplary pLLPs shown in figure \@ref(fig:ACICells), we measure a mean difference in the Major of `r round(SN180_summary %>% filter(GT == 'DMSO', name == 'ACI[Major]') %>% pull(mean_ac) - SN180_summary %>% filter(GT == 'SU5402', name == 'ACI[Major]') %>% pull(mean_ac), 2)` and `r round(SN180_summary %>% filter(GT == 'DMSO', name == 'ACI[Minor]') %>% pull(mean_ac) - SN180_summary %>% filter(GT == 'SU5402', name == 'ACI[Minor]') %>% pull(mean_ac), 2)` in the Minor.
+Harding _et al._ [@Harding2013] were using a constant $\mathrm{\Delta}$ap to measure the apical width, which we have shown to be incorrect in certain cases. In their study they found that certain mean A.C.I. values in the DMSO go as high as 15 (figure \@ref(fig:HardingACI)), which might be related to this (see figure \@ref(fig:ACICells)). By measuring apical width at a relative $\mathrm{\Delta}$ap and taking into account all pLLP cells of the two exemplary pLLPs shown in figure \@ref(fig:ACICells), we measure a mean difference in the Major of `r round(SN180_summary %>% filter(GT == 'DMSO', name == 'ACI[Major]') %>% pull(mean_ac) - SN180_summary %>% filter(GT == 'SU5402', name == 'ACI[Major]') %>% pull(mean_ac), 2)` and `r round(SN180_summary %>% filter(GT == 'DMSO', name == 'ACI[Minor]') %>% pull(mean_ac) - SN180_summary %>% filter(GT == 'SU5402', name == 'ACI[Minor]') %>% pull(mean_ac), 2)` in the Minor.
 
-(ref:HardingACI) A.I. indices by Harding et al. **E-G'** 3-D reconstructions of the highlighted cell. **H** A.I.s for embryos treated with DMSO, SU5402, PD0325901 or following induction of _hsp70:dn-Ras_. (n = 180 cells / N = 6 embryos).
+(ref:HardingACI) A.I. indices by Harding et al. **E-G'** 3-D reconstructions of the highlighted cell. **H** A.C.I.s for embryos treated with DMSO, SU5402, PD0325901 or following induction of _hsp70:dn-Ras_. (n = 180 cells / N = 6 embryos).
 
 ```{r HardingACI, out.width='60%', fig.cap = "(ref:HardingACI)", fig.scap = "A.I. indices by Harding et al.", fig.pos = 'H'}
 knitr::include_graphics("figures/materials/models/harding.png")
@@ -791,13 +787,15 @@ Now, to get an idea of the magnitude of constriction relative to the orientation
 
 \noindent Since AC is a 3-D morphogenetic process and since cells in a wild type pLLP are mostly radially organized, it does make sense to try to look at AC from more than just one perspective. Here we propose to separate the A.I. into an _antero-posterior_ and a _dorso-ventral_ dimension.
 
-1. Interestingly there does not seem to be much of a difference in A.I.~Major~, which can also be shown by the mean values which are at `r round(mean(SN180_DMSO$ACI_V_F20), digits = 1)` for the DMSO control and at `r round(mean(SN180_SU$ACI_V_F20), digits = 1)` for the SU5402 treated condition. 
+1. While for the control (DMSO treated) embryo the distribution of the cells Major Angles seem to be mostly uniform, for the SU5402 treated embryo there is an accumulation of lower Major Angles. This means that cells in SU5402 treated embryos are more oriented along the horizontal (anterior - posterior) axis.
 
-2. For the A.I.~Minor~ the means are `r round(mean(SN180_DMSO$ACI_H_F20), digits = 1)` for the DMSO control and `r round(mean(SN180_SU$ACI_H_F20), digits = 1)` for SU5402. The base constriction for both, DMSO and SU5402 is at around 3.6, however there is a peak at around 40 - 60$^\circ$ in the DMSO control where cells are most constricted having a maximum A.I. at `r round(max(SN180_DMSO$ACI_H_F20), digits = 1)`. This indicates that for the Minor, cells in that range of angles are more constricted than cells oriented in different directinos.
+2. Interestingly there does not seem to be much of a difference in A.I.~Major~ (figure \@ref(fig:angletoACI)B), which can also be shown by the mean values which are at `r round(mean(SN180_DMSO$ACI_V_F20), digits = 1)` for the DMSO control and at `r round(mean(SN180_SU$ACI_V_F20), digits = 1)` for the SU5402 treated condition. 
+
+3. For the A.I.~Minor~ (figure \@ref(fig:angletoACI)B') the means are `r round(mean(SN180_DMSO$ACI_H_F20), digits = 1)` for the DMSO control and `r round(mean(SN180_SU$ACI_H_F20), digits = 1)` for SU5402. The base constriction for both, DMSO and SU5402 is at around 3.6, however there is a peak at around 40 - 60$^\circ$ in the DMSO control where cells are most constricted having a maximum A.I. at `r round(max(SN180_DMSO$ACI_H_F20), digits = 1)`. This indicates that for the Minor, cells in that range of angles are more constricted than cells oriented in different directions.
 
 (ref:angletoACI) A.I.~Major~ / A.I.~Minor~ over Major~Angle~
 
-```{r angletoACI, out.width = '49%', fig.width = 5, fig.height = 2.9, fig.cap = "(ref:angletoACI)", fig.keep = 'all', fig.show = 'hold'}
+```{r angletoACI, out.width = '49%', fig.width = 5, fig.height = 2.9, fig.pos = "H", fig.cap = "(ref:angletoACI)", fig.keep = 'all', fig.show = 'hold'}
 
 # row bind dmso and su data
   SN180 <- rbind(SN180_DMSO, SN180_SU)
@@ -935,7 +933,7 @@ Table: (\#tab:imgcond3DGrT) Cluster Analysis Model
 
 ##### Training & test data
 
-The training set consists of three randomly picked wild type pLLPs. For each the algorithm was run with standard parameters. Cell cluster ROIs and nuclei multi-point labels were edited manually. To test the algorithm, it is run at different nuclei detection thresholds on the same image data.
+The training set consists of three randomly picked wild type pLLs. For each the algorithm was run with standard parameters. Cell cluster ROIs and nuclei multi-point labels were edited manually. To test the algorithm, it is run at different nuclei detection thresholds on the same image data.
 
 ### Morphometric analysis
 
@@ -968,7 +966,7 @@ To test the algorithm it is run at different segmentation thresholds on the same
 
 ## Image Data Sets {#mat-datasets}
 
-Summaries of Image datasets. _Pairs_ describe the batches of parent pairs I harvested eggs from resp. batches of sibling zebrafish. _Stage_ describes the time I waited for the parent pairs to mate and lay eggs. Since pair #1 might have laid their eggs earlier than pair #2, those batches would be some time apart in their _staging_. _Stamp_ describes the version of the stamp I used, where the main difference between version 4 and 5 are more wells added and some minor upgrades in well-design.
+Summaries of Image datasets. _Pairs_ describe the number of parent pairs I harvested eggs from. _Stage_ describes the time I waited for the parent pairs to mate and lay eggs. Since pair #1 might have laid their eggs earlier than pair #2, those batches would be some time apart in their _staging_. _Stamp_ describes the version of the stamp I used, where the main difference between version 4 and 5 are more wells added and some minor upgrades in well-design.
 
 ```{r imgdatcc}
 tab <- read.delim("tables/img_data/imgdat_cc.txt")

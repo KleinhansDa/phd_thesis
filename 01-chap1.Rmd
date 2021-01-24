@@ -22,7 +22,7 @@ As cells differentiate they acquire a certain identity - controlled by the genes
 - How do migrating cells know whether they reached their destination?
 - How is growth controlled and how do body axes form?
 
-### Cell Types
+### Cell Types {#intro-types}
 
 In animals there are two basic types of cells. 
 
@@ -84,7 +84,7 @@ For a cell, its present shape impacts its further specification by defining its 
 \makebox[\linewidth]{$molecular \longrightarrow cellular \longrightarrow tissue$}
 \newline
 
-scale hierarchy, where each scale’s output again feeds back to the others (figure \@ref(fig:feedb)). E.g. it has been shown that simple changes in cell geometry affect fundamental processes such as cell growth, death, or direction of cell divisions [@Gibson2011; @Shraiman2005; @Landsberg2009; @Prpic2016; @Saunders2019; @Ingber2014; @Coen2004; @Ro2017].
+scale hierarchy, where each scale’s output again feeds back to the others (figure \@ref(fig:feedb)). E.g. it has been shown that simple changes in cell geometry affect fundamental processes such as cell growth, death, direction of cell divisions and extracellular vesicle cargo [@Gibson2011; @Shraiman2005; @Landsberg2009; @Prpic2016; @Saunders2019; @Ingber2014; @Coen2004; @Ro2017; @Haupt2018; @Xiong2014; @Rocha2019; @Gomez-Galvez2021].
 
 (ref:feedb) Form and function feedback loops. On a cellular scale expression of genes may cause a cell to constrict, which again feeds back to the molecular scale (e.g. force transmission) and the tissue scale (e.g. evagination or constriction). All of which standing in a continuous feedback.
 
@@ -101,7 +101,7 @@ Cell shape changes may occur in two different ways...
 
 Apical constriction (AC) is a cell morphogenetic process manifest by an active narrowing of the apical surface, making an epithelial cell appear bottle or wedge shaped instead of cuboidal. It is usually coordinated by multiple cells within an epithelial layer that raise forces necessary to deform a tissue.
 
-A defining feature of epithelial cells is that they have a basal- (bottom) to apical (top) polarity. At the basal side, the cell is in contact with a variant of extracellular matrix (ECM, a thin sheet-like structure) called the basement membrane, apically the cell forms tight connections to its neighboring cells – a region called the apical junctional complex (AJC). The AJC encompasses three types of junctions: Adherent junctions (AJ) or zonula adherens (ZA), tight junctions (TJ) and desmosomes. Around the ZA dense cables of actomyosin are located that, analog to muscle sarcomeres, are able to contract upon activation of RHO‑associated protein kinase (Rock) and Rock mediated phosphorylation of the motor protein non-muscle myosin II (NMII) [@StJohnston2011]. While in invertebrates cells (as shown in Drosophila [@Martin2014]) are radially organized and RhoA and ROCK have a medioapical focus with RhoA also present at junctions, in vertebrates cells exhibit a planar cell polarity and RhoGEF and ROCK are localized to junctions.
+A defining feature of epithelial cells is that they have a basal- (bottom) to apical (top) polarity. At the basal side, the cell is in contact with a variant of extracellular matrix (ECM, a thin sheet-like structure) called the basement membrane, apically the cell forms tight connections to its neighboring cells – a region called the apical junctional complex (AJC). The AJC encompasses three types of junctions: Adherent junctions (AJ) or zonula adherens (ZA), tight junctions (TJ) and desmosomes. Around the ZA dense cables of actomyosin are located that, analog to muscle sarcomeres, are able to contract upon activation of RHO‑associated protein kinase (Rock) and Rock mediated phosphorylation of the motor protein non-muscle myosin II (NMII) [@StJohnston2011]. The exact mechanism of apical constriction may differ from organism and organ. E.g. it is shown by Martin _et al._ [@Martin2014] that in Drosophila cells are radially organized and RhoA and ROCK have a medioapical focus with RhoA also present at junctions, while Chick cells exhibit a planar cell polarity and RhoGEF and ROCK are localized to junctions.
 
 Developmental processes that involve AC are...
 
@@ -116,7 +116,7 @@ First, in a planar polarized tissue, several cells converge at a central apico-b
 
 (ref:constr) Modes of constriction. **A** Cells converge to a central apical point **B** Cells converge at a central apico-basal line.
 
-```{r constr, out.width = '75%', fig.cap = "(ref:constr)", fig.scap = "Modes of constriction"}
+```{r constr, out.width = '60%', fig.cap = "(ref:constr)", fig.scap = "Modes of constriction"}
 knitr::include_graphics("figures/intro/constriction.png")
 ```
 
@@ -148,7 +148,7 @@ knitr::include_graphics("figures/intro/stages.png")
 
 ### The Lateral Line System
 
-The lateral line (LL) system is a mechano-sensory organ that is common to all aquatic vertebrates. It enables the animal to sense water movements and therefore to orient itself, and to detect prey and predators. Fully developed, the lateral line system is comprised of hundreds of neuromasts positioned in an orderly pattern all over the animal’s body (figure \@ref(fig:llsystem)A). Its functional subunits are the neuromasts (NM) (figure \@ref(fig:llsystem)B-C) that, when fully developed, consist of hair-, support- and mantle cells. To sense water movements, each NM projects kino- and stereo-cilia out of the skin that, upon water induced deflection, generate action potentials that are transduced _via_ afferent fibers [@Chitnis2012a; @Ghysen2007a].
+The lateral line (LL) system is a mechano-sensory organ that is common to all aquatic vertebrates and evolutionary remnants could even be found in mice [@Washausen2018]. It enables the animal to sense water movements and therefore to orient itself, and to detect prey and predators. Fully developed, the lateral line system is comprised of hundreds of neuromasts positioned in an orderly pattern all over the animal’s body (figure \@ref(fig:llsystem)A). Its functional subunits are the neuromasts (NM) (figure \@ref(fig:llsystem)B-C) that, when fully developed, consist of hair-, support- and mantle cells. To sense water movements, each NM projects kino- and stereo-cilia out of the skin that, upon water induced deflection, generate action potentials that are transduced _via_ afferent fibers [@Chitnis2012a; @Ghysen2007a].
 
 (ref:llsys) The lateral line system. **A** modified after (Ghysen _et al._, 2012) and A.Bergs, 2016 (student presentation at AK Lecaudey). Development of the later line system at embryonic, larval and juvenile stage. **B** Schematic showing a crossection and organization of a single neuromast. **C-C’** SEM images of a single, pre-mature (3 dpf) neuromast.
 
@@ -205,9 +205,9 @@ knitr::include_graphics("figures/intro/shrm3_interaction.png")
 While in all of the above-mentioned studies Shroom3 was the focus of interest, in zebrafish and most other model organisms there are four paralogs. A previous study performed by a lab-mate done on Shroom3 morphants in _D.rerio_ [@Ernst2012a] indicates that Shroom3 is also necessary for AC and rosette formation in the migrating pLLP. In summary she was able to show that...
 
 1. Shroom3 is expressed in the pLLP from stages 24 – 48 hpf.
-2. _shroom3_ is expressed downstream of FGF signaling, which was shown _via_ treatment with an Fgfr inhibiting drug. Subsequent ISH with the Probe used before showed that the signal was gone in Morpholino (MO) injected embryos. The drug used has been used before (SU5402) in the same context [@Lecaudey2008a; @Nechiporuk2008]. In these it was found that SU5402 has the ability to prevent rosette formation, but not to dismantle already established ones.
-3. Shroom3 localizes to rosette centers, which was accomplished by inserting a genetic construct where a _shroom3-tagRFP_ fusion protein is expressed under the control of a heat-shock^[heat shock proteins are _Escherichia coli_ enzymes that assist protein folding and are heat activated] promotor into a _cldnb:lyn-GFP_ transgenic line. This way they were able to ectopically express _shroom3-tRFP_ and confirm its localization by confocal fluorescence microscopy (figure \@ref(fig:shrmernst)A).
-4. Rosette formation is impaired in MO injected embryos, which was confirmed quantitatively by using a specifically trained _rosette detector_ [@Liu] to count and weight single rosettes. As a metric to compare whole pLLPs the sum of weights as in $\sum_{i=1}^{i-n}{weighted\ detections}$ was used (figure \@ref(fig:shrmernst)B-B' and Materials and Methods section \@ref(CNN))
+2. _shroom3_ is expressed downstream of FGF signaling, which was shown _via_ treatment with an Fgfr inhibiting drug.
+3. Shroom3 localizes to rosette centers, which was accomplished by generating a transgenic line expressing a _shroom3-tagRFP_ fusion protein under the control of a heat-shock^[heat shock proteins are _Escherichia coli_ enzymes that assist protein folding and are heat activated] promotor (figure \@ref(fig:shrmernst)A).
+4. Rosette formation is impaired in MO injected embryos, which was shown quantitatively by using a specifically trained _rosette detector_ [@Liu] to count and weight single rosettes.
 
 (ref:ernst) Shroom3 in rosette formation (adapted from Ernst et al., 2012) **A** composite MaxIPs of membrane label and fusion protein showing the localization of Shroom within the pLLP **B** uninjected control and shroom3 MO injected MaxIPs **B’** Heat-maps of rosette detector score.
 

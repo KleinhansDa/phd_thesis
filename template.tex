@@ -49,6 +49,7 @@
 \usepackage{rotating}
 \usepackage{enumitem}
 \usepackage{tcolorbox}
+\usepackage{hyperref}
 
 %\setlist{leftmargin=0.6em, topsep=-0.5mm, itemsep=-0.3em}
 
@@ -63,7 +64,7 @@
 
 % Added by CII (Thanks, Hadley!)
 % Use ref for internal links
-\renewcommand{\hyperref}[2][???]{\autoref{#1}}
+%\renewcommand{\hyperref}[2][???]{\autoref{#1}}
 \def\chapterautorefname{Chapter}
 \def\sectionautorefname{Section}
 \def\subsectionautorefname{Subsection}
@@ -73,9 +74,7 @@
 \usepackage{caption}
 \captionsetup{width=5in}
 % End of CII addition
-
 % \usepackage{times} % other fonts are available like times, bookman, charter, palatino
-
 % Syntax highlighting #22
 $if(highlighting-macros)$
   $highlighting-macros$
@@ -141,10 +140,23 @@ $for(header-includes)$
 	$header-includes$
 $endfor$
 % End of CII addition
-%%
-%% End Preamble
-%%
-%
+
+\hypersetup{
+colorlinks=true,
+citecolor=blue,
+linkcolor=blue,
+anchorcolor=blue,
+filecolor=blue,      
+urlcolor=blue,
+bookmarks=true,
+linktocpage=true
+}
+
+\urlstyle{same}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% Begin Document %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
@@ -163,7 +175,7 @@ $endif$
 %\pagestyle{fancyplain} % turns page numbering back on
 
 $if(toc)$
-  \hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
+  %\hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
   \setcounter{tocdepth}{$toc-depth$}
   \tableofcontents
 $endif$

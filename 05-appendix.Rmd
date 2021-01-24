@@ -4,7 +4,7 @@
 
 # Supplement {-}
 
-(ref:suppzo1) Luminal signaling
+(ref:suppzo1) Luminal signaling. The pLLP is indicated by a dark line. Arrows indicate tight-junctions and possibly luminal structures on the apical side. Nuclei are visualized _via_ a _TgBAC(cxcr4b:H2B-RFP)_ transgenic line (section \@ref(mat-lines). ZO-1 is made visible _via_ Immunostaining (section \@ref(mat-anitb). Scalebar = 100 $\mu$m
 
 ```{r suppzo1, out.extra = '', fig.pos = "h", out.width = '70%', fig.cap = "(ref:suppzo1)", fig.scap = "Luminal signaling"}
 knitr::include_graphics("figures/supp/zo1.png")
@@ -15,8 +15,8 @@ To check for differences in hippo signaling, immunostainings for Taz were perfor
 
 (ref:suppyap) Hippo Signaling in the pLLP. PLLps with nuclei labeled in magenta and Taz in green. Vertical sections show a more basal, a medial and a more apical Z section.
 
-```{r suppyap, out.extra = '', fig.pos = "h", out.width = '90%', fig.cap = "(ref:suppyap)", fig.scap = "Hippo Signaling in the pLLP"}
-knitr::include_graphics("figures/supp/immunos.png")
+```{r suppyap, fig.pos = "H", out.width = '90%', fig.cap = "(ref:suppyap)", fig.scap = "Hippo Signaling in the pLLP"}
+knitr::include_graphics("figures/supp/immunos_lab.png")
 ```
 
 (ref:suppshrmort) Shroom Ortho- and Paralogs
