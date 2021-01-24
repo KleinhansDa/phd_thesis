@@ -1,0 +1,5 @@
+##### Plasmid preparation {#miniprep}
+
+To pellet bacteria in a 1.5 or 2 mL tube, the bacteria were centrifuged in 2 mL tubes for 3 min. at 12000 rpm. To solve the pellet, the supernatant and 200 $\mu$L of buffer P1 (section \@ref(mat-buff)) were added followed by thorough vortexing. To lyse the bacteria 400 $\mu$L of P2 were added, standing still. After a maximum of 5 min. 300 $\mu$L of P3 were added to neutralize the reaction and bind cellular material, and the tube was inverted five to six times.
+
+To harvest the plasmid DNA the solution was then first centrifuged for 10 min. at 12000 rpm and at RT. After, the supernatant was transferred to a new 2 mL tube. Second, to precipitate the DNA, 700 $\mu$L of iso-propanol were added and centrifuged for 20 min. at full speed and at 4$^\circ$C. After, the tube was checked for a opaque pellet and the supernatant was discarded. Third, to wash the pellet, 200 $\mu$L of 70$%$ EtOH were added and centrifuged for 7 min. at full speed and at 4$^\circ$C. The supernatant was discarded again. Finally, the pellet was air dryed under the hood and re-suspended in 50 $\mu$L ddH\textsubscript{2}O.
