@@ -32,6 +32,8 @@ image dimensions:
 
 The original gitbook renders with the start page named 'index', which is unpleasent.
 
+In order to change the title pages name... . However doing so requires to rename the file to again to index.html + you also have to edit index.html and exchange all occurences of the new name with index.html.
+
 ### automations
 
 1.  table knitting in pdf and html
