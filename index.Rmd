@@ -1,6 +1,6 @@
 ---
-author: '**David Kleinhans**'
-date: 'Frankfurt am Main, 2019'
+author: '**David Simon Kleinhans**'
+date: 'Frankfurt am Main, 2021'
 institution: 'Johann Wolfgang Goethe-Universität'
 division: 'Entwicklungsbiologie der Vertebraten'
 advisor: 'Prof. Dr. Sven Klimpel'
@@ -11,11 +11,11 @@ title: '**Genetic and Mechanic Signaling in Organ Development**'
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 output: 
-  #thesisdown::thesis_pdf:
-  #  highlight: monochrome # https://stackoverflow.com/questions/30880200/pandoc-what-are-the-available-syntax-highlighters
-  #  toc_depth: 4
-  thesisdown::thesis_gitbook:
+  thesisdown::thesis_pdf:
     highlight: monochrome # https://stackoverflow.com/questions/30880200/pandoc-what-are-the-available-syntax-highlighters
+    toc_depth: 4
+  #thesisdown::thesis_gitbook:
+  #  highlight: monochrome # https://stackoverflow.com/questions/30880200/pandoc-what-are-the-available-syntax-highlighters
 
 #  thesisdown::thesis_word: default
 #  thesisdown::thesis_epub: default

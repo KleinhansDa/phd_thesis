@@ -388,7 +388,7 @@ Table: (\#tab:sftwr) Used software
 
 ### Data Strategy and Analysis
 
-Due to the history of Developmental Biology and the complexity of biological processes _per se_, the field heavily relies on image data. Since the advent of electronic imaging techniques^[e.g. photomultipliers or charge-coupled devices] scientific image data can be processed and analyzed _in silico_. To make use of the possibility of 
+Due to the history of **Developmental Biology** and the complexity of biological processes _per se_, the field heavily relies on image data. Since the advent of electronic imaging techniques^[e.g. photomultipliers or charge-coupled devices] scientific image data can be processed and analyzed _in silico_. To make use of the possibility of 
 
 1. live imaging, which (as compared to fixation techniques) conserves the cellular integrity and morphology while also offers the possibility of recording time-lapses 
 2. the optically clear specimen and 
@@ -398,11 +398,11 @@ the three following points were paid special attention to.
 
 #### Sample Preparation
 
-For fluorescence microscopy zebrafish embryos are usually immersed in a 1$\%$ solution of _low melting-point agarose_ (LMPA) and then oriented on an optical cover slip manually until the LMPA has solidified. This process allows to mount^[the process of embedding the samples in agarose] eight to ten embryos _per_ dish. To make use of the high number of offspring, a single zebrafish female may lay, which rapidly leads to a sample number of more than 300, a new sample preparation technique was designed that allows for (1) a four - to five - time increase in samples per dish (2) a facilitated navigation _via_ a grid-like orientation through the samples and (3) an improved spatial orientation where the embryos body axes are aligned parallel to the optical Z-sections of the confocal microscope. For details, see Materials and Methods section \@ref(mount-met) and Kleinhans _et al._, 2019[@Kleinhans2019].
+For fluorescence microscopy zebrafish embryos are usually immersed in a 1$\%$ solution of _low melting-point agarose_ (LMPA) and then oriented on an optical cover slip manually until the LMPA has solidified. This process allows to mount^[the process of embedding the samples in agarose] eight to ten embryos _per_ dish. To make use of the high number of offspring, a single zebrafish female may lay, which rapidly leads to a sample number of more than 300, a new sample preparation technique was designed that allows for (1) a four to five - time increase in samples per dish (2) a facilitated navigation _via_ a grid-like orientation through the samples and (3) an improved spatial orientation where the embryos body axes are aligned parallel to the optical Z-sections of the confocal microscope. For details, see Materials and Methods section \@ref(mount-met) and Kleinhans _et al._, 2019 [@Kleinhans2019].
 
 #### Imaging
 
-Technically, speed and sensitivity are most important for live imaging. Considering these two parameters a light-sheet [@Keller2010c] fluorescence microscope (LSFM) would be the best fit. However, LSFMs also have several limitations. First, due to the sample preparation methods available the number of samples that can be imaged at a time is highly restricted. Second, for subcellular resolution a high magnification is required, which is limited by working distances and third - for optimal image analysis a high Signal-to-Noise ratio (SNR) and numerical aperture (N.A.) is preferable. Therefore a spinning disc [@Graf2005] system was chosen for most of the imaging. 
+Technically, speed and sensitivity are most important for live imaging. Considering these two parameters a light-sheet [@Keller2010c] fluorescence microscope (LSFM) would be the best fit. However, LSFMs also have several limitations. First, due to the sample preparation methods available the number of samples that can be imaged at a time is highly restricted. Second, for subcellular resolution a high magnification is required, which is limited by working distances and third - for optimal image analysis a high signal-to-noise ratio (SNR) and numerical aperture (N.A.) is preferable. Therefore a spinning disc [@Graf2005] system was chosen for most of the imaging. 
 The system makes use of (1) an extra-large field of view (FOV) ideal for large specimen, (2) the possibility of a high degree of automation with state-of-the-art software and (3) a water dispensing system for long-term water immersion imaging. For details about the system see Materials section \@ref(mat-SD).
 
 #### Data handling
@@ -426,13 +426,13 @@ Zebraﬁsh husbandry was maintained at the University of Frankfurt am Main. All 
 
 #### Handling and rearing
 
-In the afternoon preceding the embryo collection, 1 male and female were set up in crossing cages, physically separated by a transparent separator. Next day, before noon, separators were removed allowing fertilization. Fertilized eggs were then collected, sorted and reared in the well-defined culture medium E3 (Kimmel et.al. 1995, section \@ref(mat-buff)) at 25$^\circ$, 28.5$^\circ$, or 30$^\circ$ C depending on the experimental condition required.
+In the afternoon preceding the embryo collection, 1 male and female were set up in crossing cages, physically separated by a transparent separator. Next day, before noon, separators were removed allowing fertilization. Fertilized eggs were then collected, sorted and reared in the well-defined culture medium E3 (Kimmel et.al. 1995, section \@ref(mat-buff)) at 25$^\circ$, 28.5$^\circ$, or 30$^\circ$C depending on the experimental condition required.
 
-To grow larvae to the adulthood, they were transferred to the system on day 5. Till day 12, larvae were fed Vinegar Eels, Paramecia, and Caviar powder. After the 12 th day, water supply was started and fish were fed Brine Shrimp, Artemia, Paramecia and Vinegar Eels. Adult fish (>1 Month) were fed Artemia and the dry flakes.
+To grow larvae to the adulthood, they were transferred to the system on day 5. Till day 12, larvae were fed Vinegar Eels, Paramecia, and caviar powder. After the 12 th day, water supply was started and fish were fed Brine Shrimp, Artemia, Paramecia and Vinegar Eels. Adult fish (>1 Month) were fed Artemia and the dry flakes.
 
 #### Zebrafish fin clips
 
-Adult fish were anesthetized with buffered Tricaine (1X, see section \@ref(mat-buff)) until loss of motion. About 1/3 of the caudal fin was cut with a sterile scalpel in a sterile Petri Dish. Immediately the cut fin was transferred to 100 $\mu$L of 50 mM NaOH. Fish were returned to system water and kept in 1L system water in single tanks with 200 $\mu$L of 0.01$\%$ Methylene Blue.
+Adult fish were anesthetized with buffered Tricaine (1X, see section \@ref(mat-buff)) until loss of motion. About 1/3 of the caudal fin was cut with a sterile scalpel in a sterile Petri Dish. Immediately the dissected fin was transferred to 100 $\mu$L of 50 mM NaOH. Fish were returned to system water and kept in 1L system water in single tanks with 200 $\mu$L of 0.01$\%$ Methylene Blue.
 
 #### Adult Genotyping
 
@@ -448,15 +448,15 @@ Adult zebrafish were euthanised by an overdose of Tricaine in ice cold water so 
 
 #### Fixation
 
-Embryos and dechorionated larvae were fixed in 2 ml of 4$\%$ PFA in 1X PBS overnight at 4$^\circ$ C.
+Embryos and dechorionated larvae were fixed in 2 mL of 4$\%$ PFA in 1X PBS overnight at 4$^\circ$ C.
 
 ### Wet lab {#Wet-met}
 
 #### Sample preparation {#sampleprep}
 
-For samples **older than 24 hpf**, embryos were grown in 1X PTU till desired stage and treated with 150 $\mu$L per 10 mL of 0.1 mg/mL Pronase for ~30 min.. Choria were removed by gentle pipetting with a 2 mL plastic pasteur pipette. To replace the Pronase solution with fresh E3, embryos were immobilized by anesthesia and collected in the center of the dish by gentle rotational movement. Then the medium was poured away by collecting the embryos at the corner bottom of the dish while taking care not to loose any. After, the dish was filled with fresh E3. This process was repeated three times.
+For samples **older than 24 hpf**, embryos were grown in 1X PTU till desired stage and treated with 150 $\mu$L per 10 mL of 0.1 mg/mL Pronase for ~30 min.. Choria were removed by gentle pipetting with a 2 mL plastic pasteur pipette. To replace the Pronase solution with fresh E3, embryos were immobilized by anesthesia and collected in the center of the dish by gentle rotational movement. Then the medium was decanted by collecting the embryos at the corner bottom of the dish while taking care not to loose any. After, the dish was filled with fresh E3. This process was repeated three times.
 
-For samples **younger than 18s**, embryos were treated with 150 $\mu$L per 10 mL of 0.1 mg/mL Pronase directly. Choria were removed the same way as for > 24 hpf embryos but when pouring away the Pronase solution, the dish was simultaneously and very carefully filled with fresh E3 again. Since younger embryos are more fragile and to avoid damage, they must be kept in solution constantly.
+For samples **younger than 18s stage**, embryos were treated with 150 $\mu$L per 10 mL of 0.1 mg/mL Pronase directly. Choria were removed the same way as for > 24 hpf embryos but when pouring away the Pronase solution, the dish was simultaneously and very carefully filled with fresh E3 again. Since younger embryos are more fragile and to avoid damage, they must be kept in solution constantly.
 
 Fixation started at the desired stage in 4$\%$ PFA in 0.1$\%$ PBST in 2 mL tubes at 4$^\circ$C o.n.. The next day, samples were rinsed 3 times for ~5 min. in PBST and passed through a MeOH series of 25$\%$ $\rightarrow$ 50$\%$ $\rightarrow$ 75$\%$ $\rightarrow$ 100$\%$ MeOH/PBST (V/V)). For permanent storage, samples were stored in 100$\%$ MeOH at -20$^\circ$C.
 
@@ -468,7 +468,7 @@ Samples were prepared after the method described in section \@ref(sampleprep).
 
 **Permeabilisation** $\rightarrow$ without shaking \newline
 
-Samples were rehydrated in an inverse MeOH series of 75$\%$ $\rightarrow$ 50$\%$ $\rightarrow$ 25$\%$ $\rightarrow$ 0$\%$ PBST and washed again for 5 min. two times in pure PBST. Finally, samples were digested in 10 $\mu$g/mL Proteinase K according to table \@ref(tab:met-protk).
+Samples were rehydrated in an inverse MeOH series of 75$\%$ $\rightarrow$ 50$\%$ $\rightarrow$ 25$\%$ $\rightarrow$ 0$\%$ PBST and washed again for fice min. two times in pure PBST. Finally, samples were digested in 10 $\mu$g/mL Proteinase K according to table \@ref(tab:met-protk).
 
 ```{r met-protk}
 read.delim("figures/materials/protkdig.txt") %>%
@@ -529,7 +529,7 @@ Since their development was an integral part of my PhD work, the description of 
 
 #### Proliferation Analysis{#prolif}
 
-The basic principle is based on work done by Laguerre _et al._, 2009[@Laguerre2009a]. For registration of mitotic events an IJ manual tracking tool was used that allows to track an image feature through a stack of images creating tracks as it progresses through volume / time ('MTrackJ'[@Meijering2012]).
+The basic principle is based on work done by Laguerre _et al._, 2009 [@Laguerre2009a]. For registration of mitotic events an IJ manual tracking tool was used that allows to track an image feature through a stack of images creating tracks as it progresses through volume / time ('MTrackJ'[@Meijering2012]).
 
 For mounting the embryo, the procedure described in section \@ref(mount-met) was used. Nuclei were visualized in a _TgBAC(cxcr4b:H2B-RFP)_ transgenic line. After Z-projection of volumetric timelapses, mitotic events were tracked in each CC and the pLLP. Afterwards the data was exported as one table per embryo and processed by counting mitoses per pLLP / CC / total CC mitoses. Figure \@ref(fig:mitodatapoints) shows an exemplary track for the data analyzed.
 
@@ -545,7 +545,7 @@ knitr::include_graphics("figures/materials/prol/Prolif.png")
 
 The earliest attempt found for indexing AC can be found in a study published by Lee _et al_[@Lee2009] where they were interested in the 'apical index' (A.I.) of bottle cells during _X.laevis_ gastrulation (figure \@ref(fig:ACLee) Lee). Another example for measuring AC is the _apical constriction index_ (A.C.I., figure \@ref(fig:ACLee) Harding) for the cells of the _D.rerio_ lateral line primordium (pLLP), which can be found in a study from 2012 where it was shown that FGFr-Ras-MAPK signaling is required for Rock2a localization and AC [@Harding2012; @Harding2013].
 
-(ref:ACLee) A.I. indeces in the literature. **Lee** A.I. of _X.leavis_ bottle cells measured in 2D. **Harding** A.I. of _D.r._ pLLP cells measured in 3D.
+(ref:ACLee) A.I. indeces in the literature. **Lee** A.I. of _X.leavis_ bottle cells measured in 2D. **Harding** A.I. of _D. rerio_ pLLP cells measured in 3D.
 
 ```{r ACLee, out.width = '75%', fig.cap = "(ref:ACLee)", fig.scap = "A.I. indeces in the literature", fig.pos = 'H'}
 knitr::include_graphics("figures/materials/models/ai.png")
@@ -634,13 +634,13 @@ $$\mathbf{Angle_{Major}} = \measuredangle = \mathrm{\Delta}\;from\;horizon\;[0-9
 
 As a proof of principle of the definitions stated in the previous section we compare our results to previously published results from Harding _et al._ [@Harding2012] who, as a control, measured apical constriction in embryos treated with an FGF inhibitor (SU5402) and their DMSO controls.   
 
-###### Single Cell measurements {#ACI-singlecell}
+###### Single cell measurements {#ACI-singlecell}
 
 Each geometric object has a centroid coordinate in X and Y (and Z) which is represented as the mean of all X or Y coordinates within the object. In figure \@ref(fig:ACICells), centroid coordinates in X and Y are used to plot the cells as points in the X-Y plane. Additionally, each point is colored for the A.I. value (high values are dark red - red, middle values are green, low values are cyan - blue).
 
 (ref:ACIMinor) A.I.\textsubscript{Major / Minor} single cell measurements
 
-```{r aci-single-cell-measures-graph, out.width = '95%', fig.cap = "(ref:ACIMinor)", fig.pos = 'H'}
+```{r aci-single-cell-measures-graph, out.width = '100%', fig.cap = "(ref:ACIMinor)", fig.pos = 'H'}
 load("data/SN180_ACI.RData")
 
 # row bind dmso and su data
@@ -781,11 +781,11 @@ To check whether there is a bias in orientation of the apical width, the angle m
 
 Interestingly the results indicate that there is less of a difference for the Major~Angle~ at angles bigger than 15-20$^\circ$. This would mean that the apical surface of the cells in SU5402 treated embryos is more strongly oriented along the horizontal _antero-posterior_ axis.
 
-###### ACI magnitude at different Angles {#ACI-mag}
+###### ACI magnitude at different angles {#ACI-mag}
 
 Now, to get an idea of the magnitude of constriction relative to the orientation of the cell (angle to the horizontal), the A.I.~Major/Minor~ can be shown as a function of the Major~Angle~ (figure \@ref(fig:angletoACI)B-B').
 
-\noindent Since AC is a 3-D morphogenetic process and since cells in a wild type pLLP are mostly radially organized, it does make sense to try to look at AC from more than just one perspective. Here we propose to separate the A.I. into an _antero-posterior_ and a _dorso-ventral_ dimension.
+\noindent Since AC is a 3-D morphogenetic process and since cells in a wild type pLLP are mostly radially organized, it does make sense to look at AC from more than just one perspective. Here we propose to separate the A.I. into an _antero-posterior_ and a _dorso-ventral_ dimension.
 
 1. While for the control (DMSO treated) embryo the distribution of the cells Major Angles seem to be mostly uniform, for the SU5402 treated embryo there is an accumulation of lower Major Angles. This means that cells in SU5402 treated embryos are more oriented along the horizontal (anterior - posterior) axis.
 
@@ -907,7 +907,7 @@ However, to ensure the measurements taken by a tailored or trained algorithm are
 
 ### Cluster Analysis
 
-The _anaLLzR2D_ algorithm was designed for semi-automatic cell cluster detection in the _cldnb:lyn-gfp_ transgenic line and optional nuclei counting in a second DAPI labeled channel within the Regions of Interest (ROIs) derived from the cell cluster detection.
+The _anaLLzR2D_ algorithm was designed for semi-automatic cell cluster detection in the _cldnb:lyn-gfp_ transgenic line and optional nuclei counting in a second DAPI-labeled channel within the Regions of Interest (ROIs) derived from the cell cluster detection.
 
 ####  Design
 
@@ -933,7 +933,7 @@ Table: (\#tab:imgcond3DGrT) Cluster Analysis Model
 
 ##### Training & test data
 
-The training set consists of three randomly picked wild type pLLs. For each the algorithm was run with standard parameters. Cell cluster ROIs and nuclei multi-point labels were edited manually. To test the algorithm, it is run at different nuclei detection thresholds on the same image data.
+The training set consists of three randomly picked wildtype pLLs. For each the algorithm was run with standard parameters. Cell cluster ROIs and nuclei multi-point labels were edited manually. To test the algorithm, it is run at different nuclei detection thresholds on the same image data.
 
 ### Morphometric analysis
 
@@ -969,46 +969,51 @@ To test the algorithm it is run at different segmentation thresholds on the same
 Summaries of Image datasets. _Pairs_ describe the number of parent pairs I harvested eggs from. _Stage_ describes the time I waited for the parent pairs to mate and lay eggs. Since pair #1 might have laid their eggs earlier than pair #2, those batches would be some time apart in their _staging_. _Stamp_ describes the version of the stamp I used, where the main difference between version 4 and 5 are more wells added and some minor upgrades in well-design.
 
 ```{r imgdatcc}
-tab <- read.delim("tables/img_data/imgdat_cc.txt")
-knitr::kable(tab, booktabs = T, caption = "Cell Cluster dataset", escape = F, col.names = NULL) %>%
-  kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
-  collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
-  column_spec(1, width = "2cm") %>%
-  column_spec(2, width = "2.5cm")
+read.delim("tables/img_data/imgdat_cc.txt") %>% 
+knitr::kable(booktabs = T, longtable = F, caption = "Cell Cluster dataset", escape = F, col.names = NULL) %>%
+  kable_styling(full_width = T, latex_options = c("hold_position")) %>%
+  #collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
+  column_spec(1, width = "1.8cm") %>%
+  column_spec(2, width = "2.3cm") %>% 
+  kable_styling(font_size = 9)
 ```
 
 ```{r imgdatai}
-tab <- read.delim("tables/img_data/imgdat_ai.txt")
-knitr::kable(tab, booktabs = T, caption = "A.I. dataset", escape = F, col.names = NULL) %>%
-  kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
-  collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
-  column_spec(1, width = "2cm") %>%
-  column_spec(2, width = "2.5cm") 
+read.delim("tables/img_data/imgdat_ai.txt") %>% 
+knitr::kable(booktabs = T, caption = "A.I. dataset", escape = F, col.names = NULL) %>%
+  kable_styling(full_width = T, latex_options = c("hold_position")) %>%
+  #collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
+  column_spec(1, width = "1.8cm") %>%
+  column_spec(2, width = "2.3cm") %>% 
+  kable_styling(font_size = 9)
 ``` 
 
 ```{r imgdatprol}
-tab <- read.delim("tables/img_data/imgdat_prol.txt")
-knitr::kable(tab, booktabs = T, caption = "Proliferation dataset", escape = F, col.names = NULL) %>%
-  kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
-  collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
-  column_spec(1, width = "2cm") %>%
-  column_spec(2, width = "2.5cm")
+read.delim("tables/img_data/imgdat_prol.txt") %>% 
+knitr::kable(booktabs = T, caption = "Proliferation dataset", escape = F, col.names = NULL) %>%
+  kable_styling(full_width = T, latex_options = c("hold_position")) %>%
+  #collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
+  column_spec(1, width = "1.8cm") %>%
+  column_spec(2, width = "2.3cm") %>% 
+  kable_styling(font_size = 9)
 ```
 
 ```{r imgdatdet}
-tab <- read.delim("tables/img_data/imgdat_det.txt")
-knitr::kable(tab, booktabs = T, caption = "Detection dataset", escape = F, col.names = NULL) %>%
-  kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
-  collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
-  column_spec(1, width = "2cm") %>%
-  column_spec(2, width = "2.5cm")
+read.delim("tables/img_data/imgdat_det.txt") %>% 
+knitr::kable(booktabs = T, caption = "Detection dataset", escape = F, col.names = NULL) %>%
+  kable_styling(full_width = T, latex_options = c("hold_position")) %>%
+  #collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
+  column_spec(1, width = "1.8cm") %>%
+  column_spec(2, width = "2.3cm") %>% 
+  kable_styling(font_size = 9)
 ```
 
 ```{r imgdatato}
-tab <- read.delim("tables/img_data/imgdat_ato.txt")
-knitr::kable(tab, booktabs = T, caption = "Atoh1a dataset", escape = F, col.names = NULL) %>%
-  kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
-  collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
-  column_spec(1, width = "2cm") %>%
-  column_spec(2, width = "2.5cm")
+read.delim("tables/img_data/imgdat_ato.txt") %>% 
+knitr::kable(booktabs = T, caption = "Atoh1a dataset", escape = F, col.names = NULL) %>%
+  kable_styling(full_width = T, latex_options = c("hold_position")) %>%
+  #collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
+  column_spec(1, width = "1.8cm") %>%
+  column_spec(2, width = "2.3cm") %>% 
+  kable_styling(font_size = 9)
 ```

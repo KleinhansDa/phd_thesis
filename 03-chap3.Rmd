@@ -19,13 +19,13 @@ Even though on a macroscopic scale development is remarkably similar and synchro
 
 However, imaging a high number of samples and generating large datasets to date is still largely limited by the classical way most scientists mount embryos for imaging. A number of factors limiting the standardization are summarized in table \@ref(tab:resmountingtab)
 
-```{r resmountingtab, fig.pos = "h"}
+```{r resmountingtab, fig.pos = 'H'}
 read.delim("data/tables/mountdata.txt", sep = ",", row.names = NULL, quote = "\"") %>%
   kable(format = 'latex', booktabs = T, escape = F,
-        col.names = c('Standard Method', 'Limitations', 'Solutions', 'Improvement'), 
+        col.names = c('Standard', 'Limitations', 'Solutions', 'Improvement'), 
         caption = 'Limitations of traditional zebrafish mounting techniques') %>%
-  kable_styling(full_width = T, latex_options = "striped", font_size = 9) %>%
-  column_spec(4, width = "4.5cm") %>%
+  kable_styling(full_width = T, font_size = 8) %>%
+  column_spec(4, width = "4.2cm") %>%
   row_spec(0, bold = T)
 ```
 
@@ -35,7 +35,7 @@ The protocol we describe here was designed to be used with XY scanning universal
 
 The aim was to develop a standardized mounting method allowing us to: (i) mount many samples in parallel in a 2D coordinate system of rows and columns, (ii) reduce the acquisition time and thus photo-bleaching and photo-toxicity during imaging, (iii) semi-automatize the acquisition, (iv) reduce the post-processing steps, and (v) facilitate subsequent processing such as genotyping due to a 1:1 correlation between image data and specimen arrangement sequence.
 
-For mounting, an improved 3D specimen preparation and well-plate like sample navigation for zebrafish larvae confocal microscopy was developed with which lateral line development can be recorded over more than 20 h, in up to 44 positions, in a confocal Z-stack of less than 120 $\mu$m and a time interval of 5–10 min. (depending on the number of channels and exposure time). The stamp was designed to be used for embryos between 24 and 96 hpf. For a tailor-made well, embryos were fixed and imaged _in toto_ to measure the dimensions in X, Y and Z of different (whole embryo, trunk, yolk) embryonic structures (figure \@ref(fig:mountmicro)B-B'). Using Microsoft 3D-Builder a well was assembled from basic shapes like cube, sphere and wedge. After, the well was duplicated a couple of times and put in a grid-like arrangement to fit on a disc base 20 mm in diameter. Printing was performed on a Formlabs extrusion printer (figure \@ref(fig:mountmicro)C).
+For mounting, an improved 3D specimen preparation and well-plate-like sample navigation for zebrafish larvae confocal microscopy was developed with which lateral line development can be recorded over more than 20 h, in up to 44 positions, in a confocal Z-stack of less than 120 $\mu$m and a time interval of 5–10 min. (depending on the number of channels and exposure time). The stamp was designed to be used for embryos between 24 and 96 hpf. For a tailor-made well, embryos were fixed and imaged _in toto_ to measure the dimensions in X, Y and Z of different (whole embryo, trunk, yolk) embryonic structures (figure \@ref(fig:mountmicro)B-B'). Using Microsoft 3D-Builder a well was assembled from basic shapes like cube, sphere and wedge. After, the well was duplicated a couple of times and put in a grid-like arrangement to fit on a disc base 20 mm in diameter. Printing was performed on a Formlabs extrusion printer (figure \@ref(fig:mountmicro)C).
 
 (ref:mountmicro) Stamp and $\mu$-well properties. **A - A'** Mounting (A) without and with (A') $\mu$-well. Legend to the right. **B - B'** Dimensions of a single micro well in (B) X-Y and (B') X-Z in mm **C** Elements and dimensions of the stamp wafer. *D* Assembled stamp with a screw mounted on the back of the stamp wafer.
 
@@ -45,7 +45,7 @@ knitr::include_graphics("figures/results/00_methods/mounting/stamp_dims.png")
 
 (ref:stampresults) Mounting Results. **A - A'** Maximum intensity projection of a 50 hpf embryo mounted on its side in XY and XZ. (right) Color scale indicates depth encoding. **C** Multi-position (36), multi-channel (2) time-lapse recording (13 h duration; 15 min. interval). **D** Multi-channel (2) Extended Depth of Focus (EDF) projections from widefield Z-stacks (recorded with 20x Objective). Scale Bar = 1mm **E** Multipoint coordinates in X, Y and Z (recorded with 40x Objective). The offset describes the distance of each point from the mean of all points in X, Y and Z. Panel 1–3 (top to bottom) show dimensions X, Y and Z in comparison for the pLLP, the eye and the otic vesicle. The red line indicates the median, the blue line indicates zero offset, error bars indicate mean $\pm$ s.d.. Numeric values indicate the variance in each group. **F-F''** Systematic retrieval for genotyping. **F** Mounted embryos in a 2-D coordinate system of rows (A-M) and columns (1–3). **F'** Imaging Sequence in a snake-by-column fashion. In a time-lapse setting, it starts at point 1 (P01) again to initiate the next timepoint. **F''** After imaging, the embryos are retrieved in the same sequence as they were imaged (snake by column, left panel). **F''** Each genotyping result on the electrophoresis gel is easily correlated to one imaging dataset with defined X-Y coordinates.
 
-```{r stampresults, fig.cap = "(ref:stampresults)", fig.scap = "Mounting results", out.extra = '', fig.pos = "H"}
+```{r stampresults, fig.cap = "(ref:stampresults)", fig.scap = "Mounting results"}
 knitr::include_graphics("figures/results/00_methods/mounting/stamp_results.png")
 ```
 
@@ -55,7 +55,7 @@ knitr::include_graphics("figures/results/00_methods/mounting/stamp_results.png")
 
 To prepare the agarose cast, the stamp is first cleaned from dust and remnants with tissue soaked in 70$\%$ Ethanol and pressured air (figure \@ref(fig:mounting) IA). To prepare the casting medium a 1$\%$ Agarose (w/v) solution is prepared in an autoclaved 100 mL bluecap bottle by dissolving 200 mg of agarose in 20 mL of E3 using a microwave oven. From the ready solution 650 $\mu$L are applied to the $\varnothing$ 20 mm coverslip of a $\varnothing$ 35 mm imaging dish (materials in table \@ref(tab:mat-mount)). Subsequently the clean stamp is gently placed onto the placed solution and adjusted to the center. The dish is then rotated to distribute excess agarose over the entire dish surface to stabilize the imprint once polymerized. 
 
-After about 30 min. the stamp is removed by first slipping a clean preparation needle between the stamp and the polymer and then lifting it from the cast (figure \@ref(fig:mounting)IB). If necessary, air bubbled appearing between the cover glass and the polymer are eliminated by punctuation with a preparation needle. The mounting cast may be used immediately or stored at 4$^\circ$C for several days (with lid closed).
+After about 30 min. the stamp is removed by first slipping a clean preparation needle between the stamp and the polymer and then lifting it from the cast (figure \@ref(fig:mounting)IB). If necessary, air bubbles appearing between the cover glass and the polymer are eliminated by punctuation with a preparation needle. The mounting cast may be used immediately or stored at 4$^\circ$C for several days (with lid closed).
 
 ##### Preparation of mounting media
 
@@ -65,7 +65,7 @@ Two solutions of low-melting point Agarose (LMPA) are prepared in autoclaved 100
 
 In case of live imaging the embryos are first anesthetized in a Petri dish with 4 to 5 drops of 4.2 mg/mL Tricaine (40 $\mu$g/mL in E3) added 4 to 5 min. before usage.
 
-For mounting, the cast is first gently filled from the border (figure \@ref(fig:mounting)II A3) with 500 $\mu$L of 0.3$\%$ LMPA solution. Then, 44 embryos (one for each well) are collected from their Petri dish with a glass Pasteur pipette. To minimize the amount of liquid added to the LMPA, the embryos are allowed to sink to the air – liquid interface and immediately added in one drop to the liquid LMPA solution in the stamped cast. Next, each embryo is moved to a separate $\mu$-well with a preparation needle by positioning the yolk within the half-spherical structure of each well and the tail aligned horizontally with the shape of the $\mu$-well (figure \@ref(fig:mounting)II C-D). The LMPA was allowed to polymerize for about 40 min. For time-lapse recording longer than 1 h, 1 mL of 0.5$\%$ LMPA was added on top and allowed to polymerize for another 10 min. to construct an Agarose _sandwich_ to stabilize the structure. Since the 0.3$\%$ LMPA will still be very fragile, the 0.5$\%$ LMPA should be added to the outer well first, carefully raising the level.
+For mounting, the cast is first gently filled from the border (figure \@ref(fig:mounting)II A3) with 500 $\mu$L of 0.3$\%$ LMPA solution. Then, 44 embryos (one for each well) are collected from their Petri dish with a glass Pasteur pipette. To minimize the amount of liquid added to the LMPA, the embryos are allowed to sink to the air – liquid interface and immediately added in one drop to the liquid LMPA solution in the stamped cast. Next, each embryo is moved to a separate $\mu$-well with a preparation needle by positioning the yolk within the hemi-spherical structure of each well and the tail aligned horizontally with the shape of the $\mu$-well (figure \@ref(fig:mounting)II C-D). The LMPA was allowed to polymerize for about 40 min. For time-lapse recording longer than 1 h, 1 mL of 0.5$\%$ LMPA was added on top and allowed to polymerize for another 10 min. to construct an Agarose _sandwich_ to stabilize the structure. Since the 0.3$\%$ LMPA will still be very fragile, the 0.5$\%$ LMPA should be added to the outer well first, carefully raising the level.
 
 Since Agarose polymerization speed depends on temperature, for mounting the temperature of the room should not be less than 23$^\circ$C to give sufficient time. For indefinite time of embryo orientation, a higher room temperature or a 5 V terrarium heating mat (at maximum temperature ca. 38$^\circ$C) can be used. For the latter, a hole with the diameter of an imaging dish should first be cut in the middle of the heating mat. For mounting, the mat should then be placed and fixed on the stereo-microscope stage with the dish in the hole.
 
@@ -79,7 +79,7 @@ Since the embryos are mounted in a 3-D grid with well defined dimensions, all po
 
 ###### Refine Positions
 
-Even though the mounting method allows for a precise positioning, each embryos physiology is still a bit different resulting in differences between positions but same structures of up to 100 $\mu$m in X, Y and Z (figure \@ref(fig:stampresults)E). Therefore, before starting an experiment each position needs to be refined.
+Even though the mounting method allows for a precise positioning, each embryo physiology is still a bit different resulting in differences between positions but same structures of up to 100 $\mu$m in X, Y and Z (figure \@ref(fig:stampresults)E). Therefore, before starting an experiment each position needs to be refined.
 
 ##### Retrieval
 
@@ -259,7 +259,7 @@ NB_all_CC_NR_mean %>%
     booktabs = T, caption = "Blurring parameter for nuclei count", 
     col.names = c('', '4.5', '5.0', '5.5', '6.0', '7.0'),
     align = c('r', 'c', 'c', 'c', 'c', 'c')) %>%
-  kable_styling(full_width = T, latex_options = "striped") %>%
+  kable_styling(full_width = T, latex_options = "striped", font_size = 9) %>%
   footnote('blurring parameters', general_title = 'column headers')
 ```
 
@@ -726,7 +726,7 @@ In figure \@ref(fig:stackmem) the fluorescence signal of the three pLLPs used fo
 knitr::include_graphics("figures/materials/ground_truth/stackmem.png")
 ```
 
-To compare the results between the Ground Truth segments and the segments obtained from different threshold levels graphically, for a single pLLP the Ground Truth and threshold levels are shown as a composite color image in figure \@ref(fig:anallzrvols). By using a green lookup-table (LUT) for the Ground Truth and a magenta LUT for the threshold level[n], one can readily detect overlapping objects (white), over segmentation (magenta) and under segmentation (green). False _positive_ segments are cells that are not part of the Ground Truth, including those cells that would distort our dataset. False _nevagtive_ segments are cells that are part of the Ground Truth but were not detected by the macro (green cells), excluding those cells impacts the cell count. As one can see, the green cells are randomly distributed, therefore, when averaging a variable for all cells, those cells are less likely to distort our dataset. Only if under segmentation becomes too high will it impact the distribution of values. At Treshold Level 2 (T02) we have the least green cells, but the most magenta cells. At Threshold Level 4 (T04) we have no magenta, but some more green cells. Therefore, to be on the safe side in terms of cell parameters and dataset integrity, for the definition of our Ground Truth T04 would be the best pick. 
+To compare the results between the Ground Truth segments and the segments obtained from different threshold levels graphically, for a single pLLP the Ground Truth and threshold levels are shown as a composite color image in figure \@ref(fig:anallzrvols). By using a green lookup-table (LUT) for the Ground Truth and a magenta LUT for the threshold level[n], one can readily detect overlapping objects (white), over segmentation (magenta) and under segmentation (green). False _positive_ segments are cells that are not part of the Ground Truth, including those cells that would distort our dataset. False _negative_ segments are cells that are part of the Ground Truth but were not detected by the macro (green cells), excluding those cells impacts the cell count. As one can see, the green cells are randomly distributed, therefore, when averaging a variable for all cells, those cells are less likely to distort our dataset. Only if under segmentation becomes too high will it impact the distribution of values. At Treshold Level 2 (T02) we have the least green cells, but the most magenta cells. At Threshold Level 4 (T04) we have no magenta, but some more green cells. Therefore, to be on the safe side in terms of cell parameters and dataset integrity, for the definition of our Ground Truth T04 would be the best pick. 
 
 (ref:anallzrvols) Graphical comparison of the thresholds tested. Volume renderings have been done with IJ's [VolumeViewer]("https://github.com/fiji/Volume_Viewer/releases/tag/Volume_Viewer-2.01.2")
 
@@ -1192,7 +1192,7 @@ all_count_cells %>%
     date, stage, treatment, position, count = n
   ) %>%
   knitr::kable(booktabs = T, caption = "Cell counts anaLLzr3D", align = c('c', 'c', 'c', 'c', 'c')) %>%
-  kable_styling(full_width = T, latex_options = c('striped', 'hold_position'), font_size = 11) %>%
+  kable_styling(full_width = T, latex_options = c('striped', 'hold_position'), font_size = 9) %>%
   row_spec(0, bold = T) %>%
   collapse_rows(columns = c(1, 2, 3), latex_hline = 'none', valign = 'top')
 ```
@@ -1319,7 +1319,7 @@ ggplot(all_vol, aes(Vol..unit., colour = Group)) +
 
 ##### Confidence Level
 
-To statistically check how closely related each threshold level sample distribution is compared to the Ground Truth, a Kolmogorov-Smirnov-Test (ks.test) was performed. The ks.test is a nonparametric test whose null hypothesis is that the both groups compared were sampled from populations with identical populations. Therefore, the closer the p-value is to 1, the more similar the tested sample distribution would be to the Ground Truth (figure \@ref(fig:kstestvol)).
+To statistically check how closely related each threshold level sample distribution is compared to the Ground Truth, a Kolmogorov-Smirnov-Test (ks.test) was performed. The ks.test is a nonparametric test whose null hypothesis is that the both groups compared were sampled from populations with identical attributes. Therefore, the closer the p-value is to 1, the more similar the tested sample distribution would be to the Ground Truth (figure \@ref(fig:kstestvol)).
 
 (ref:kstestvol) Volumetric conservation (red line = 5$\%$)
 
@@ -1335,13 +1335,13 @@ ggplot(ks.test_all, aes(variable, value)) +
     theme(legend.text = element_text(size = 11))
 ```
 
-\noindent In comparison to the Mann-Whitney test, the ks.test is more sensitive to detect changes in the shape of the distribution than to detect a shift of the median[@Lehman]. Since we have no reason to assume a significant change in the _average_ cell volume, it would not make much sense to use a test that requires averages. Instead we want to test if there is a change in the shape or skew of the whole distribution, which allows to compare each group on the single cell level (figure \@ref(fig:volsecdffull). In summary, the test results suggest a larger deviance in shape of distribution between the Ground Truth and the automatically segmented cells for Threshold levels T02 and T10. For T03 we are already close to rejection of the $H_0$ hypothesis (assuming a 5$\%$ threshold). Only for T04 and T05 are are well within the 5$\%$ rejection threshold. However, since we want to be as close to the Ground Truth as possible, we settled for T04.
+\noindent In comparison to the Mann-Whitney test, the ks.test is more sensitive to detect changes in the shape of the distribution than to detect a shift of the median[@Lehman]. Since we have no reason to assume a significant change in the _average_ cell volume, it would not make much sense to use a test that requires averages. Instead we want to test if there is a change in the shape or skew of the whole distribution, which allows to compare each group on the single cell level (figure \@ref(fig:volsecdffull)). In summary, the test results suggest a larger deviance in shape of distribution between the Ground Truth and the automatically segmented cells for Threshold levels T02 and T10. For T03 we are already close to rejection of the $H_0$ hypothesis (assuming a 5$\%$ threshold). Only for T04 and T05 are are well within the 5$\%$ rejection threshold. However, since we want to be as close to the Ground Truth as possible, we settled for T04.
 
 ### Rosette Detection {#CNN}
 
 The method used for rosette detection is based on a convolutional neuronal network (CNN) and was modified from the "rosette detector" algorithm previously used in the lab and described in [@Ernst2012a; @Liu]. Since the former method was technically outdated and since we had new data in which we needed to detect rosettes, we updated the former method to a _state-of-the-art_ CNN using Caffe[@Jia2014] as a backend. Network configuration and training was done by our collaborators at the institute for Informatics, Albert-Ludwigs-University Freiburg.
 
-The training dataset consitsts of 17 DMSO- and SU5402- treated embryos each. SU5402 is an inhibitor of FGF receptors and embryos treated with these inhibitors show a strongly reduced number of rosettes [@Lecaudey2008a]. In order to give the network something to learn, the data had to be labeled manually, which was done in ImageJ by placing multipoint ROIs at the center of the rosettes. The data was then further permutated (rotated and changed in size) to artificially increase the amount of training data and make the detection more robust against different kinds of input. Further parameters about the training data is listed in Table \@ref(tab:cnntraintab). One example for each is shown in figure \@ref(fig:cnntrain).
+The training dataset consitsts of 17 DMSO- and SU5402- treated embryos each. SU5402 is an inhibitor of FGF receptors and embryos treated with these inhibitors show a strongly reduced number of rosettes [@Lecaudey2008a]. In order to train the network, the data had to be labeled manually, which was done in ImageJ by placing multipoint ROIs at the center of the rosettes. The data was then further permutated (rotated and changed in size) to artificially increase the amount of training data and make the detection more robust against different kinds of input. Further parameters about the training data is listed in Table \@ref(tab:cnntraintab). One example for each is shown in figure \@ref(fig:cnntrain).
 
 (ref:cnntrain) Example for rosette detection on the training data. **left** Maximum Z-projected input data. **middle** heatmap of scores. blue indicates a low score, red a high one. **right** score map projected onto the input data.
 
@@ -1361,14 +1361,13 @@ knitr::include_graphics("figures/materials/cnn/CNNtrain.png")
 ```{r cnntraintab, fig.pos = 'H'}
 read.delim("tables/train_dat/cnn_train_dat.txt") %>%
   knitr::kable(booktabs = T, caption = "CNN training data", align = 'c', escape = F) %>%
-  kable_styling(full_width = T, latex_options = c('striped', 'hold_position')) %>%
+  kable_styling(full_width = T, latex_options = c('striped', 'hold_position'), font_size = 9) %>%
   row_spec(0, bold = T) %>%
   column_spec(2, width = "1cm") %>%
   column_spec(3, width = "2cm" ) %>%
   column_spec(4, width = "1.6cm") %>%
   column_spec(5, width = "1.5cm") %>%
-  column_spec(6, width = "1.4cm") %>%
-  kable_styling(font_size = 9)
+  column_spec(6, width = "1.4cm")
 ```
 
 ## Shroom3
@@ -1377,7 +1376,7 @@ In the previous section a number of methods were presented I developed specifica
 
 ### Phenotype description {#intro-phen}
 
-While birth rates follow a distribution of Mendelian inheritance (after genotyping at 3 months of age), mutant adults seem to be more sensitive to mechanical stress and have a shortened lifespan (~6-9 months). In body shape, _shroom3_ mutants are not smaller or possess any other striking phenotype (figure \@ref(fig:shrmmut)C), however their gill flaps seem to be increased in size, swollen, and not exactly streamlined with the body. This is also evident by an increased frequency of gill flap beating. When looking at the pLLP at different stages (figure \@ref(fig:shrmmut)D), they exhibit the same phenotype as the MO injected embryos [@Ernst2012a].
+While birth rates follow a distribution of Mendelian inheritance (after genotyping at 3 months of age), _homozygous_ mutant adults seem to be more sensitive to mechanical stress and have a shortened lifespan (~6-9 months). In body shape, _shroom3_ mutants are not smaller or possess any other striking phenotype (figure \@ref(fig:shrmmut)C), however their gill flaps seem to be increased in size, swollen, and not exactly streamlined with the body. This is also evident by an increased frequency of gill flap beating. When looking at the pLLP at different stages (figure \@ref(fig:shrmmut)D), they exhibit the same phenotype as the MO injected embryos [@Ernst2012a].
 
 (ref:shrmmut) _shroom3_ mutant phenotype **(A-A’)** mutation strategy (A) Talen arms (black blocks) bordering a sequence within SD1 including a restriction site for NsiI (indicated back arrows and grey background) (A’) wildtype and mutant allele with 8 bp deletion **(B-B’)** Amino acid code and protein schematic with functional domains and stop codon (indicated by asterisk) **(C-C’)** Adult phenotype with closeup to gill flaps **(D)** pLLP phenotype for three different stages (columns) and different manifestations (rows) (40X WI objective). Arrows indicate epithelial rosettes. **(E)** LL phenotype at end of migration (10X air objective). Scale bars = 1 mm. MaxIPs for D-E.
 
@@ -1435,11 +1434,11 @@ For this experiment the hypothesis to test was that it should be possible to at 
 
 (ref:resctemp) Temperature rescue **A** LL lengths and end of migration stage matching **B** groupwise comparison of the length normalized CC count _per_ temperature. 
 
-```{r resctemp, out.extra = '', fig.pos = "H", out.width = '85%', fig.cap = "(ref:resctemp)", fig.scap = "Rescue: Thermodynamics"}
+```{r resctemp, fig.pos = "H", out.width = '85%', fig.cap = "(ref:resctemp)", fig.scap = "Rescue: Thermodynamics"}
 knitr::include_graphics("figures/results/06_rescues/temp/rescue_temp.png")
 ```
 
-The question was if we could restore wildtype CC counts in _shroom3_$^{-/-}$ embryos when incubating at lower temperatures. Therefore, we need to compare CC counts between T25-\- and T30++ resp. p-values between the pairs T30-\- _vs_ for T30++ (the original) and T25-\- _vs_ T30++ (the actual hypothesis). Even though the CC count T25-\- cannot be completely restored (~3.2 to ~2.8 in median normalized CC count), the difference between tested pairs shrunk from 0.00000 (T30-\- _vs_ for T30++) to 0.00210 (T25-\- _vs_ T30++), which is much closer to a rejection of $H_0$. At this point, the question remains open but seems probable that at even lower temperatures the wildtype CC count could be rescues in _shroom3_$^{-/-}$ embryos.
+The question was if we could restore wildtype CC counts in _shroom3_$^{-/-}$ embryos when incubating at lower temperatures. Therefore, we need to compare CC counts between T25-\- and T30++ respectively p-values between the pairs T30-\- _vs_ for T30++ (the original) and T25-\- _vs_ T30++ (the actual hypothesis). Even though the CC count T25-\- cannot be completely restored (~3.2 to ~2.8 in median normalized CC count), the difference between tested pairs shrunk from 0.00000 (T30-\- _vs_ for T30++) to 0.00210 (T25-\- _vs_ T30++) (figure \@ref(fig:supppos)D and \@ref(fig:resctemp)B), which is much closer to a rejection of $H_0$. At this point, the question remains open but seems probable that at even lower temperatures the wildtype CC count could be rescues in _shroom3_$^{-/-}$ embryos.
 
 ```{r resctemptab, out.extra = '', fig.pos = "H"}
 if (knitr:::is_latex_output()) {
@@ -1453,7 +1452,7 @@ data %>%
                caption = 'Temperature rescue dataset summary', align = c('c', 'c', 'c'), 
                col.names = c("genotype", "treatment", "LLs", "genotype", "treatment", "LLs")) %>%
   kable_styling(full_width = T) %>%
-  kable_styling(font_size = 10) %>%
+  kable_styling(font_size = 9) %>%
   column_spec (3, border_left = F, border_right = T) %>%
   collapse_rows(columns = c(1, 4), latex_hline = "none", valign = "top")
 ```
@@ -1484,7 +1483,7 @@ To test whether this is due to higher proliferative activity a dataset of time-l
 
 #### Datasets
 
-The live imaging dataset consists of 12 _shrm3_++ and 18 _shrm3_-\- embryos with about 75 timepoints for each pLLP and 150 cell clusters. For counting, tracks were created for each proliferative cell on MaxIPs (section \@ref(prolif)). Figure \@ref(fig:prolpLLP)A shows a _shroom3_$^{+/+}$ and a _shroom3_$^{-/-}$ LL after 12 h of imaging where each mitotic track is individually colored and overlaid to the image data. 
+The live imaging dataset consists of 12 _shroom3_$^{+/+}$ and 18 _shroom3_$^{-/-}$ embryos with about 75 timepoints for each pLLP and 150 cell clusters. For counting, tracks were created for each proliferative cell on MaxIPs (section \@ref(prolif)). Figure \@ref(fig:prolpLLP)A shows a _shroom3_$^{+/+}$ and a _shroom3_$^{-/-}$ LL after 12 h of imaging where each mitotic track is individually colored and overlaid to the image data. 
 
 To support and validate this data two more datasets from fixed embryos were generated, one with a EdU (N = 3, n++ = 26, n-\- = 17) and one with a phospho-Histone marker (N = 3, n++ = 22, n-\- = 29).
 
@@ -1601,7 +1600,7 @@ It is very well known that Rho kinases are necessary for mechanic force transmis
 
 ##### Rock inhibition
 
-Rock2a, upon interaction with Shroom3, phosphorylates NMII which is necessary for contraction of the actin network and apical constriction (section \@ref{intro-shroom}). Here we wanted to mimic the _shroom3_$^{-/-}$ phenotype in _shroom3_$^{+/+}$ embryos.
+Rock2a, upon interaction with Shroom3, phosphorylates NMII which is necessary for contraction of the actin network and apical constriction (section \@ref(intro-shroom)). Here we wanted to mimic the _shroom3_$^{-/-}$ phenotype in _shroom3_$^{+/+}$ embryos.
 
 Embryos were incubated at distinct (figure \@ref(fig:rescrock) legend) concentrations from 24 hpf till end of migration (about 60 hpf). At this stage embryos incubated at higher concentrations displayed a significant reduction in overall body length (\@ref(fig:rescrock)A'). Therefore, to see if there is a specific effect on length, LL length was normalized to body length.
 
@@ -1611,7 +1610,7 @@ Embryos were incubated at distinct (figure \@ref(fig:rescrock) legend) concentra
 knitr::include_graphics("figures/results/06_rescues/rockout/rescue_rockout.png")
 ```
 
-Rockout treatment at 10 $\mu$M does not lead to a significant reduction in LL length but does significantly increase the number of CCs deposited, confirming the current hypothesis that Shroom3 acts though Rock.\newline
+Rockout treatment at 10 $\mu$M does not lead to a significant reduction in LL length but does significantly increase the number of CCs deposited(figure \@ref(fig:supppos)B and figure \@ref(fig:rescrock)B), confirming the current hypothesis that Shroom3 acts though Rock.\newline
 
 ```{r rescrocktab, fig.pos = "H"}
 if (knitr:::is_latex_output()) {
@@ -1624,14 +1623,14 @@ data %>%
   knitr::kable(booktabs = T, escape = F, caption = 'Rockout rescue dataset summary', 
              align = c('r', 'c', 'l'),
              col.names = c("genotype", "conc. ($\\mu$M)", "LLs")) %>%
-  kable_styling(full_width = T, font_size = 10) %>%
+  kable_styling(full_width = T, font_size = 9) %>%
   collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
   footnote(general = "concentrations in 0.1% DMSO solution", general_title = 'conc.')
 ```
 
 ##### NMII activation
 
-Downstream of Shroom3 NMII, as a motor protein, is necessary for contraction of the actin network and apical constriction (section \@ref{intro-shroom}). The idea for this experiment was to rescue the _shroom3_$^{-/-}$ phenotype by over-activation of NMII. Unfortunately, even when incubation at 100 nM (the maximum solubility), no significant differences can be detected.\newline
+Downstream of Shroom3 NMII, as a motor protein, is necessary for contraction of the actin network and apical constriction (section \@ref{intro-shroom}). The idea for this experiment was to rescue the _shroom3_$^{-/-}$ phenotype by over-activation of NMII. Unfortunately, even when incubation at 100 nM (the maximum solubility), no significant differences can be detected in LL length (figure \@ref(fig:resccal)A), cluster count (figure \@ref(fig:resccal)B) or cluster position (figure \@ref(fig:supppos)A). 
 
 (ref:resccal) NMII activation. **A** LL lengths and **B** groupwise comparison of the length normalized cluster count.
 
@@ -1651,7 +1650,7 @@ knitr::kable(booktabs = T, caption = 'NMII activation dataset summary',
              align = c('c', 'c', 'c'), escape = F,
              col.names = c("genotype", "conc. (nM)", "LLs", "genotype", "conc. (nM)", "LLs")) %>%
   kable_styling(full_width = T) %>%
-  kable_styling(font_size = 10) %>%
+  kable_styling(font_size = 9) %>%
   collapse_rows(columns = c(1, 4), latex_hline = "none", valign = "top") %>%
   column_spec (3, border_left = F, border_right = T) %>%
   footnote(general = "concentrations in 0.1% DMSO solution", general_title = 'conc.')
@@ -1659,7 +1658,7 @@ knitr::kable(booktabs = T, caption = 'NMII activation dataset summary',
 
 #### Summary
 
-I could (**1**) demonstrate, from fixed embryos (figure \@ref(fig:llcounts)B) as well as here on live imaging data (figure \@ref(fig:rdtdepo)B), that in _shroom3_ heterozygous mutants significantly more CCs are deposited, gaining more insight in the deposition process which shows smaller and more fragmented CCs and a more chaotic deposition process overall (figure \@ref(fig:rdtdepo)A) (**2**) show a possible interdependence with velocity and acceleration (figure \@ref(fig:rdtcorr)A-B). Also the area of the pLLP is not affected, but roundness, confirming our impression that the pLLP in _shroom3_$^{-/-}$ embryos is more elongated (figure \@ref(fig:rdtreg)C-D) (**3**) show that while the integer number of rosettes in the pLLP is only significantly increased during the first 6-8 hours of migration, the overall _rosettiness_ (rosette integrity per pLLP) is significantly reduced over the whole path of migration (figure \@ref(fig:rdtdet)C').
+I could (**1**) demonstrate, from fixed embryos (figure \@ref(fig:llcounts)B) as well as here on live imaging data (figure \@ref(fig:rdtdepo)B), that in _shroom3_ heterozygous mutants significantly more CCs are deposited, gaining more insight in the deposition process which shows smaller and more fragmented CCs and a more chaotic deposition process overall (figure \@ref(fig:rdtdepo)A) (**2**) show a possible interdependence with velocity and acceleration (figure \@ref(fig:rdtcorr)A-B). Also the area of the pLLP is not affected, but roundness, confirming our impression that the pLLP in _shroom3_$^{-/-}$ embryos is more elongated (figure \@ref(fig:rdtreg)C-D) (**3**) show that while the integer number of rosettes in the pLLP is only significantly increased during the first 6-8 hours of migration, the overall rosettiness (rosette integrity per pLLP) is significantly reduced over the whole path of migration (figure \@ref(fig:rdtdet)C').
 
 Rosettiness is strongly correlated to the final number of CCs deposited (\@ref(fig:rdtcorr)C), concluding that rosettiness is the key parameter for the future outcome of CC pattern. Interestingly however this conclusion contradicts the previous, and intuitive, assumption that embryos deficient for Shroom3 should not deposit CCs at all. However, in the light of this data Shroom3 is important to strengthen rosette integrity in order to have CCs of the right size deposited.
 
@@ -1702,7 +1701,7 @@ knitr::kable(booktabs = T, escape = F,
              align = c('l', 'l', 'c', 'c', 'c'), 
              caption = 'Apical Constriction dataset summary') %>%
   kable_styling(full_width = T) %>%
-  kable_styling(font_size = 10) %>%
+  kable_styling(font_size = 9) %>%
   add_header_above(c("id labels" = 2, "metrics" = 3), bold = T) %>%
   collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
   footnote(general = "cells / pLLPs", general_title = 'ratio')
@@ -1730,7 +1729,7 @@ For another demonstration of the method figure \@ref(fig:dismap) shows a heatmap
 knitr::include_graphics("figures/summary/methodology_mapr.png")
 ```
 
-#### A.I. {#res-ai}
+#### Apical Index {#res-ai}
 
 To get a hold on AC anisotropy we measured the length of the minor and major axis of an ellipsoid fitted to the imaging Z-plane at a certain distance from the cell apex (as described in section \@ref(ACI-pol) and illustrated in figure \@ref(fig:acaci)A). The angle formed by the major axis of the ellipsoid and the horizontal midline indicate the orientation of AC (figure \@ref(fig:acaci)A’). If more cells are constricted along the DV axis, we expect angles closer to 0$^\circ$. If more cells are constricted along the AP axis, we expect angles closer to 90$^\circ$. For angle measurements, all angles are normalized to a 90$^\circ$ range, where 0$^\circ$ is along the horizontal midline. 
 
@@ -1750,7 +1749,7 @@ In the previous chapter I could show that the main reason for the additional CCs
 
 The method developed to quantify AC allows measurement along two orthogonal axes, the major (the longer axis) and a minor (the shorter axis), of an ellipse fit to a cellular cross-section at a distinct distance from the apical site. In addition, the cells orientation in degrees from the horizontal midline is obtained (\@ref(fig:acaci)A-A’).
 
-In summary, AC is significantly reduced in _shroom3_$^{-/-}$ embryos. The results show an increased axial an-isotropy, meaning that AC is more reduced along the major than along the minor axis. In conclusion this means that due to less tight rosette packing and apical constriction the migrational pulling forces are probably accounting for the an-isotropy. In terms of cell shape this means that rosette cells go from a pyramidal geometry, more to a prism geometry (\@ref(fig:sumcells)). This is also confirmed by angular measurement which show that in _shroom3_$^{-/-}$ pLLPs there are more cells in the range of 0-15$^\circ$ while in _shroom3_$^{+/+}$ pLLPs more cells are in the range of 30-45$^\circ$.
+In summary, AC is significantly reduced in _shroom3_$^{-/-}$ embryos. The results show an increased axial an-isotropy, meaning that AC is more reduced along the major than along the minor axis. In conclusion this means that due to less tight rosette packing and apical constriction the migrational pulling forces are probably accounting for the an-isotropy. In terms of cell shape this means that rosette cells go from a pyramidal geometry, more to a prism geometry (figure \@ref(fig:sumcells)). This is also confirmed by angular measurement which show that in _shroom3_$^{-/-}$ pLLPs there are more cells in the range of 0-15$^\circ$ while in _shroom3_$^{+/+}$ pLLPs more cells are in the range of 30-45$^\circ$.
 
 (ref:sumcells) Rosette and Cell Shape Model. Shapes reconstructed from real cells.
 
@@ -1758,7 +1757,7 @@ In summary, AC is significantly reduced in _shroom3_$^{-/-}$ embryos. The result
 knitr::include_graphics("figures/summary/cell-model.png")
 ```
 
-Zona occludens-1 (ZO-1) is a peripheral membrane, tight-junction associated protein. Within the apical region of pLLP rosettes FGF filled luminal structures are developing that are hubs for locally confined morphogen signaling. All cells of a rosette make up and are connected to a single lumen. When visualizing the lumen _via_ an antibody for ZO-1, the lumen appears like a buckyball where each side is the connection to a single cell [@Durdu2014a]. While in _shroom3_$^{+/+}$ rosettes those structures appear circular in the trailing rosette, in _shroom3_$^{-/-}$ rosettes they appear more oval (supplement, (\@ref(fig:suppzo1)), which supports the theory of an-isotropy. Furthermore, in more leading regions the signal is more fragmented, which supports the theory of micro-rosette structures.
+Zona occludens-1 (ZO-1) is a peripheral membrane, tight-junction associated protein. Within the apical region of pLLP rosettes FGF filled luminal structures are developing that are hubs for locally confined morphogen signaling. All cells of a rosette make up and are connected to a single lumen. When visualizing the lumen _via_ an antibody for ZO-1, the lumen appears like a buckyball where each side is the connection to a single cell [@Durdu2014a]. While in _shroom3_$^{+/+}$ rosettes those structures appear circular in the trailing rosette, in _shroom3_$^{-/-}$ rosettes they appear more oval (supplement figure \@ref(fig:suppzo1), which supports the theory of an-isotropy. Furthermore, in more leading regions the signal is more fragmented, which supports the theory of micro-rosette structures.
 
 ### Haircell Specification {#res-hc}
 
@@ -1782,7 +1781,7 @@ To get access to developmental dynamics we made use of an additional, besides _c
 
 For each group, _shroom3_$^{+/+}$ and _shroom3_$^{-/-}$, and timepoint the dataset was split into pLLP and CC (table \@ref(tab:hcdatatab)). Each time-lapse has a duration of 18-20 hours, consists of about 54 timepoints and two channels (488 & 561 nm).\newline
 
-```{r hcdatatab, fig.pos = 'H'}
+```{r hcdatatab}
 if (knitr:::is_latex_output()) {
   data <- read.delim("data/tables/hcdata_ltx.txt")
 } else {
@@ -1793,9 +1792,9 @@ data %>%
 knitr::kable(booktabs = T, escape = F,
              align = c('l', 'l', 'c', 'c', 'c'),
              caption = 'Hair-cell specification dataset summary',
-             col.names = c("genotype", "sub-structure", "embryos", "timepoints", "per 3h")) %>%
-  kable_styling(full_width = T) %>%
-  kable_styling(font_size = 10) %>%
+             col.names = c("genotype", "structure", "embryos", "timepoints", "per 3h")) %>%
+  kable_styling(full_width = T, latex_options = c("hold_position")) %>%
+  kable_styling(font_size = 9) %>%
   add_header_above(c("id labels" = 2, "metrics" = 3), bold = T) %>%
   collapse_rows(columns = 1, latex_hline = "none", valign = "top")
 ```
@@ -1830,7 +1829,7 @@ Since in embryos deficient for Shroom3 there are significantly more CCs deposite
 knitr::include_graphics("figures/results/06_rescues/su54/rescue_su.png")
 ```
 
-Concentrations 0.10 and 0.20 $\mu$M do not show a significant reduction in LL length, but they also do not exhibit any difference in CC count. While the titration worked out well, we reach wildtype levels of CC count only at a concentration of 1 $\mu$M of SU5402, however at this concentration the LL length is also reduced by ~ 1 mm. Since FGF plays a crucial role in many developmental processes and since SU5402 affects all of these, $H_0$ can at this point neither be rejected nor accepted. More precise methods need to be applied.
+Concentrations 0.10 and 0.20 $\mu$M do not show a significant reduction in LL length (figure \@ref(fig:rescsu)A), but they also do not exhibit any difference in CC count (figure \@ref(fig:supppos)C and figure \@ref(fig:rescsu)B). While the titration worked out well, we reach wildtype levels of CC count only at a concentration of 1 $\mu$M of SU5402, however at this concentration the LL length is also reduced by ~ 1 mm. Since FGF plays a crucial role in many developmental processes and since SU5402 affects all of these, $H_0$ can at this point neither be rejected nor accepted. More precise methods need to be applied.
 
 ```{r rescsutab, fig.pos = "H"}
 if (knitr:::is_latex_output()) {
@@ -1844,7 +1843,7 @@ knitr::kable(booktabs = T, caption = 'Morphogen rescue dataset summary', escape 
              align = c('c', 'c', 'c', 'c', 'c', 'c'),
              col.names = c("genotype", "conc. ($\\mu$M)", "LLs", "genotype", "conc. ($\\mu$M)", "LLs")) %>%
   kable_styling(full_width = T) %>%
-  kable_styling(font_size = 10) %>%
+  kable_styling(font_size = 9) %>%
   column_spec (3, border_left = F, border_right = T) %>%
   collapse_rows(columns = c(1, 4), latex_hline = "none", valign = "top") %>%
   footnote(general = "concentrations in 0.1% DMSO solution", general_title = 'conc.')
@@ -1878,7 +1877,7 @@ knitr::kable(booktabs = T, caption = 'Atoh rescue dataset summary',
              align = c('c', 'c', 'c'), escape = F,
              col.names = c("genotype", "group", "LLs", "genotype", "group", "LLs")) %>%
   kable_styling(full_width = T) %>%
-  kable_styling(font_size = 10) %>%
+  kable_styling(font_size = 9) %>%
   column_spec (3, border_left = F, border_right = T) %>%
   collapse_rows(columns = c(1, 4), latex_hline = "none", valign = "top")
 ```
@@ -1895,8 +1894,7 @@ knitr::kable(booktabs = T, escape = F,
              caption = 'Atoh1a MO rescue statistics',
              align = c('l','l','c','c','c')) %>%
   collapse_rows(columns = 1, latex_hline = "none", valign = "top") %>%
-  kable_styling(full_width = T) %>%
-  kable_styling(font_size = 7)
+  kable_styling(full_width = T, font_size = 7)
 ```
 
 #### Summary
