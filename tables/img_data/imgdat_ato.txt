@@ -1,15 +1,15 @@
 step		condition
-Crossings	Pairs	4
-Crossings	Transgenes	cldnb:lyn-gfp +/?; atoh1a:Tom +/0
-Crossings	Mutation	shroom3
-Crossings	Staging	30 min.
+Crossings	Pairs	four
+ 	Transgenes	cldnb:lyn-gfp +/?; atoh1a:Tom +/0
+ 	Mutation	shroom3
+ 	Staging	30 min.
 Mounting	Protocol	Kleinhans $\textit{et al.}$, 2019
-Mounting	Agarose	0.3$\%$ LMPA + 20$\%$ Tricaine (V/V$\%$)
-Mounting	stamp	version 5A
+ 	Agarose	0.3$\%$ LMPA + 20$\%$ Tricaine (V/V$\%$)
+ 	stamp	version 5A
 Imaging	Magnification	20X + 1.0x zoom
-Imaging	Camera	Binning 2x2; Gain 4; full FOV*150 $\mu$m
-Imaging	Channels	488 nm (Int: 20$\%$; Exp: 25 ms)
-Imaging	Channels	561 nm (Int: 30$\%$; Exp: 50 ms)
-Imaging	Positions	36
-Imaging	Z-Stack	2.5 $\mu$m Z-spacing; 100 $\mu$m stack size; 2*X large image
-Imaging	Time	20 h / 20 min. interval / start ~ 2 p.m.
+ 	Camera	Binning 2x2; Gain 4; full FOV*150 $\mu$m
+ 	Channels	488 nm (Int: 20$\%$; Exp: 25 ms)
+ 	Channels	561 nm (Int: 30$\%$; Exp: 50 ms)
+ 	Positions	36
+ 	Z-Stack	2.5 $\mu$m Z-spacing; 100 $\mu$m stack size; 2*X large image
+ 	Time	20 h / 20 min. interval / start ~ 2 p.m.
