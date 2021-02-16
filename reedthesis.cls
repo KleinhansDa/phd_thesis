@@ -1,4 +1,3 @@
-%
 % This file is copyright (C) 2003 Sam Noble. It may be modified so long
 % as my name is not removed and the modifier adds his name to the file.
 % Redistribution permitted.
@@ -10,18 +9,6 @@
 % May 2005 Patrick Carlisle Table of contents chapter definition
 % 2004-2005 Ben Salzberg (BTS) a variety of tweaks here and in the template
 % 2015 Chester Ismay (CII) modified to create R Markdown template
-%
-% Oddities:
-%
-%   We *ASSUME* that any time \cleardoublepage is called
-%  we actually want a blank back side with NO page number/heading
-%
-%   Minor bug -- seems to be a more general LaTeX thing:
-%  If you use \frontmatter \mainmatter without any chapters inbetween
-%  be prepared to have the page numbering messed up. Not a big deal,
-%  but I'm not sure how to fix it.
-%
-%
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{reedthesis}[2004/01/27 The Reed College Thesis Class]
@@ -29,6 +16,7 @@
 \ProcessOptions\relax
 \LoadClass{book}
 \RequirePackage{fancyhdr}
+
 % Added by CII to produce nice looking code in BeginVerbatimEnvironment
 \RequirePackage{fancyvrb}
 
@@ -45,7 +33,7 @@
   \else
     \usepackage{fontspec}
   \fi
-  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \defaultfontfeatures{Mapping=tex-text, Scale=MatchLowercase}
   \newcommand{\euro}{€}
 \fi
 % use upquote if available, for straight quotes in verbatim environments
@@ -63,46 +51,12 @@
 % Add ',fontsize=\small' for more characters per line
 \usepackage{framed}
 \definecolor{shadecolor}{RGB}{248,248,248}
-% \newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-% \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{{#1}}}}
-% \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{{#1}}}
-% \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{{#1}}}
-% \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{{#1}}}
-% \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{{#1}}}
-% \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{{#1}}}
-% \newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{{#1}}}
-% \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{{#1}}}
-% \newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{{#1}}}
-% \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{{#1}}}
-% \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{{#1}}}
-% \newcommand{\ImportTok}[1]{{#1}}
-% \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{{#1}}}}
-% \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
-% \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
-% \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
-% \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{{#1}}}
-% \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{{#1}}}
-% \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{{#1}}}
-% \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{{#1}}}}
-% \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{{#1}}}}
-% \newcommand{\BuiltInTok}[1]{{#1}}
-% \newcommand{\ExtensionTok}[1]{{#1}}
-% \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{{#1}}}}
-% \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{{#1}}}
-% \newcommand{\RegionMarkerTok}[1]{{#1}}
-% \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
-% \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
-% \newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{{#1}}}
-% \newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{{#1}}}}
-% \newcommand{\NormalTok}[1]{{#1}}
-
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 % End of CII add
 
 % This gives us rules below the headers
-
 
 % Stolen from book.cls and modified
 \let\RToldchapter\chapter
@@ -117,70 +71,71 @@
 
 % Stolen from book.cls PBC 5/12/05
 % Using this to actually show "Chapter 1" in TOC instead of "1"
-\def\@chapter[#1]#2{\ifnum \c@secnumdepth >\m@ne
-                       \if@mainmatter
-                         \refstepcounter{chapter}%
-                         \typeout{\@chapapp\space\thechapter.}%
-                         \addcontentsline{toc}{chapter}%
-                         {\@chapapp\space\thechapter:\space#1}%
-                       \else
-                         \addcontentsline{toc}{chapter}{#1}%
-                       \fi
-                    \else
-                      \addcontentsline{toc}{chapter}{#1}%
-                    \fi
-                    \chaptermark{#1}%
-                    \addtocontents{lof}{\protect\addvspace{10\p@}}%
-                    \addtocontents{lot}{\protect\addvspace{10\p@}}%
-                    \if@twocolumn
-                      \@topnewpage[\@makechapterhead{#2}]%
-                    \else
-                      \@makechapterhead{#2}%
-                      \@afterheading
-                    \fi}
+\def\@chapter[#1]#2{
+  \ifnum \c@secnumdepth >\m@ne
+  \if@mainmatter
+    \refstepcounter{chapter}
+    \typeout{\@chapapp\space\thechapter.}
+    \addcontentsline{toc}{chapter}
+    {\@chapapp\space\thechapter:\space#1}
+  \else
+    \addcontentsline{toc}{chapter}{#1}
+  \fi
+  \else
+    \addcontentsline{toc}{chapter}{#1}
+  \fi
+  \chaptermark{#1}
+  \addtocontents{lof}{\protect\addvspace{10\p@}}
+  \addtocontents{lot}{\protect\addvspace{10\p@}}
+  \if@twocolumn
+    \@topnewpage[\@makechapterhead{#2}]
+  \else
+    \@makechapterhead{#2}
+    \@afterheading
+  \fi
+  }
 
 \newcommand{\RTcleardoublepage}{
 	\clearpage\if@twoside \ifodd\c@page\else
 	\thispagestyle{empty}\hbox{}\newpage
-	\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+  \if@twocolumn\hbox{}\newpage\fi\fi\fi
+  }
 
 \let\RToldcleardoublepage\cleardoublepage
 \renewcommand{\cleardoublepage}{\RTcleardoublepage}
 
 % adjust margins for binding  (changed 2007-04-24 tgp)
-\setlength{\oddsidemargin}{.5in}
-\setlength{\evensidemargin}{0in}
-\setlength{\textwidth}{6.0in}
-\setlength{\textheight}{9.0in}
+\setlength{\oddsidemargin}{.2in}
+\setlength{\evensidemargin}{.2in}
+\setlength{\textwidth}{5in}
+\setlength{\textheight}{8in}
+% top margin
 \setlength\topmargin{0in}
 \addtolength\topmargin{-\headheight}
 \addtolength\topmargin{-\headsep}
 
-%\setlength{\oddsidemargin}{.6in}
-%\setlength{\evensidemargin}{0in}
-%\setlength{\textwidth}{5.9in}
-%\setlength\topmargin{0in}
-%\addtolength\headheight{2.5pt}
-%\addtolength\topmargin{-\headheight}
-%\addtolength\topmargin{-\headsep}
-%\addtolength\textheight{1in}
-%\addtolength\textheight{\headheight}
-%\addtolength\textheight{\headsep}
-
+% degree
 \def\degree#1{\gdef \@degree{#1}}
 \def\@degree{\@latex@warning@no@line{No \noexpand\degree given}}
+% institution
 \def\institution#1{\gdef \@institution{#1}}
 \def\@institution{\@latex@warning@no@line{No \noexpand\institution given}}
+% division
 \def\division#1{\gdef \@division{#1}}
 \def\@division{\@latex@warning@no@line{No \noexpand\division given}}
+% department
 \def\department#1{\gdef \@department{#1}}
 \def\@department{\@latex@warning@no@line{No \noexpand\department given}}
+% division of
 \def\thedivisionof#1{\gdef \@thedivisionof{#1}}
 \def\@thedivisionof{The Division of}
+% approvedforthe
 \def\approvedforthe#1{\gdef \@approvedforthe{#1}}
 \def\@approvedforthe{Division}
+% advisor
 \def\advisor#1{\gdef \@advisor{#1}}
 \def\@advisor{\@latex@warning@no@line{No \noexpand\advisor given}}
+% altadvisor
 \def\altadvisor#1{\gdef \@altadvisor{#1} \@altadvisortrue}
 \global\let\@altadvisor\@empty
 \newif\if@altadvisor
@@ -204,8 +159,8 @@
     \endgroup
   \fi}
 
-%%% Added by CII
-\newenvironment{acknowledgements}{%
+%%% Preliminary Content
+\newenvironment{acknowledgements}{
   \if@twocolumn
     \@restonecoltrue\onecolumn
   \else
@@ -213,9 +168,9 @@
   \fi
   \chapter*{Acknowledgements}
   \fontsize{12}{14}\selectfont
-}{\clearpage \if@restonecol\twocolumn\fi}%
+}{\clearpage \if@restonecol\twocolumn\fi}
 
-\newenvironment{preface}{%
+\newenvironment{preface}{
   \if@twocolumn
     \@restonecoltrue\onecolumn
   \else
@@ -223,10 +178,9 @@
   \fi
   \chapter*{Preface}
   \fontsize{12}{14}\selectfont
-}{\clearpage \if@restonecol\twocolumn\fi}%
-% End of CII add
+}{\clearpage \if@restonecol\twocolumn\fi}
 
-\newenvironment{abstract}{%
+\newenvironment{abstract}{
   \if@twocolumn
     \@restonecoltrue\onecolumn
   \else
@@ -236,7 +190,7 @@
   \fontsize{12}{14}\selectfont
 }{\clearpage \if@restonecol\twocolumn\fi}%
 
-\newenvironment{dedication}{%
+\newenvironment{dedication}{
   \if@twocolumn
     \@restonecoltrue\onecolumn
   \else
@@ -244,37 +198,35 @@
   \fi
   \chapter*{Dedication}
   \fontsize{12}{14}\selectfont
-}{\clearpage \if@restonecol\twocolumn\fi}%
-
-
-
+}{\clearpage \if@restonecol\twocolumn\fi}
 
 % I hacked the title page to all be the same font size
 % as requested by the library, BTS 2005
 
-\renewcommand{\maketitle}{%
+\renewcommand{\maketitle}{
   {
     \pagestyle{empty}
     \fontsize{12}{14}\selectfont
     \begin{titlepage}
-      \newpage
-      \let\footnotesize\small
-      \let\footnoterule\relax
-      \let \footnote \thanks
+    \newpage
+    \let\footnotesize\small
+    \let\footnoterule\relax
+    \let\footnote\thanks
 
-  \baselineskip = 1.4\baselineskip
-  \setbox0=\hbox{of the Requirements for the Degree}
+    \baselineskip = 1.4\baselineskip %changed for b5paper
+    %\baselineskip = -5\baselineskip
+    \setbox0=\hbox{of the Requirements for the Degree}
 
-  \begin{center}
+    \begin{center}
     %\setcounter{page}{1}
     \null\vfil
     {\fontsize{12}{14}\selectfont \@title}
     \vfil
     \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
     \vfil
-   Dissertation \\
-   zur Erlangung des Doktorgrades \\
-   der Naturwissenschaften
+    Dissertation \\
+    zur Erlangung des Doktorgrades \\
+    der Naturwissenschaften
     %\@thedivisionof \ \@division \\
     %\@institution
     \vfil
@@ -290,9 +242,9 @@
     \centerline{}
     \bigskip
     {\fontsize{12}{14}\selectfont \lineskip .75em
-    \begin{tabular}[t]{c}%
-      von \\ \@author
-     \\ aus Mannheim
+    \begin{tabular}[t]{c}
+    von \\ \@author
+    \\ aus Mannheim
     \end{tabular}\par}
     \vskip 1.5em
     {\fontsize{12}{14}\selectfont \@date \par}
@@ -348,20 +300,24 @@
 % End of CII add
 
 % Flipbook stuff
-\usepackage{fancyhdr}
-\usepackage{pgf}
 \pagestyle{fancy} % turns page numbering back on
 \makeatletter % To have access to \if@twoside
-\fancyfoot{} % Clear footer
+\fancyhead{} % clear header
+\fancyfoot{} % clear footer
+\fancyhfoffset[LO,RE]{\evensidemargin}
+\fancyhfoffset[LE,RO]{\evensidemargin}
+% display chapter and section alternately
+\fancyhead[LE]{\slshape \leftmark} %section
+\fancyhead[RO]{\slshape \rightmark} % chapter
 % Add flipbook frames to the footer, next to page numbers
-% See documentation in README.md for details
-	\fancyfoot[RO] {
-    %\renewcommand{\labeledflipbookframe}[3]{\includegraphics{#1#2.#3}}
-    \labeledflipbookframe[0][0.5]{figures/flipbook/tex/wt_}[tex][0.2]{r}{\thepage}{2em}%
-	}
-	\fancyfoot[LE] {
-    %\renewcommand{\labeledflipbookframe}[3]{\includegraphics{#1#2.#3}}
-    \labeledflipbookframe[0][0.5]{figures/flipbook/tex/hom_}[tex][0.2]{l}{\thepage}{2em}%
-	}
+% https://github.com/nilsleiffischer/latex-flipbook
+\fancyfoot[RO] {
+  %\renewcommand{\labeledflipbookframe}[3]{\includegraphics{#1#2.#3}}
+  \labeledflipbookframe[0][0.5]{figures/flipbook/tex/wt_}[tex][0.2]{r}{\thepage}{2em}%
+}
+\fancyfoot[LE] {
+  %\renewcommand{\labeledflipbookframe}[3]{\includegraphics{#1#2.#3}}
+  \labeledflipbookframe[0][0.5]{figures/flipbook/tex/hom_}[tex][0.2]{l}{\thepage}{2em}%
+}
 
 \makeatother
