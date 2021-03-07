@@ -388,7 +388,7 @@ Table: (\#tab:sftwr) Used software
 
 ### Data Strategy and Analysis
 
-Due to the history of **Developmental Biology** and the complexity of biological processes _per se_, the field heavily relies on image data. Since the advent of electronic imaging techniques^[e.g. photomultipliers or charge-coupled devices] scientific image data can be processed and analyzed _in silico_. To make use of the possibility of 
+Due to the history of **Developmental Biology** and the complexity of biological processes _per se_, the field heavily relies on image data. Since the advent of electronic imaging techniques^[e.g. photomultipliers or charge-coupled devices] scientific image data can be processed and analyzed _in silico_. To take advantage of 
 
 1. live imaging, which (as compared to fixation techniques) conserves the cellular integrity and morphology while also offers the possibility of recording time-lapses 
 2. the optically clear specimen and 
@@ -402,7 +402,7 @@ For fluorescence microscopy zebrafish embryos are usually immersed in a 1$\%$ so
 
 #### Imaging
 
-Technically, speed and sensitivity are most important for live imaging. Considering these two parameters a light-sheet [@Keller2010c] fluorescence microscope (LSFM) would be the best fit. However, LSFMs also have several limitations. First, due to the sample preparation methods available the number of samples that can be imaged at a time is highly restricted. Second, for subcellular resolution a high magnification is required, which is limited by working distances and third - for optimal image analysis a high signal-to-noise ratio (SNR) and numerical aperture (N.A.) is preferable. Therefore a spinning disc [@Graf2005] system was chosen for most of the imaging. 
+Technically, speed and sensitivity are most important for live imaging. Considering these two parameters a light-sheet [@Keller2010c] fluorescence microscope (LSFM) would be the best fit. However, LSFMs also have several limitations. First, due to the sample preparation methods available, the number of samples that can be imaged at a time is highly restricted. Second, for subcellular resolution a high magnification is required, which is limited by working distances and third - for optimal image analysis a high signal-to-noise ratio (SNR) and numerical aperture (N.A.) is preferable. Therefore a spinning disc [@Graf2005] system was chosen for most of the imaging. 
 The system makes use of (1) an extra-large field of view (FOV) ideal for large specimen, (2) the possibility of a high degree of automation with state-of-the-art software and (3) a water dispensing system for long-term water immersion imaging. For details about the system see Materials section \@ref(mat-SD).
 
 #### Data handling
