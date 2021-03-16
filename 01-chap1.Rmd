@@ -200,7 +200,7 @@ Shroom proteins have three characteristic domains (1) a _PDZ_ domain close to th
 
 (ref:interact) Shroom3 functional domains and mode of operation. Sequence of events numbered from 1-4. Approximate scale jumps indicated at arrows.
 
-```{r shrminteract, out.width='95%', fig.cap = "(ref:interact)", fig.scap = "Shroom3 functional domains and mode of operation", fig.pos = "H"}
+```{r shrminteract, out.width = '95%', fig.cap = "(ref:interact)", fig.scap = "Shroom3 functional domains and mode of operation", fig.pos = "H"}
 knitr::include_graphics("figures/intro/shrm3_interaction.png")
 ```
 
@@ -213,7 +213,7 @@ While in all of the above-mentioned studies Shroom3 was the focus of interest, i
 
 (ref:ernst) Shroom3 in rosette formation (adapted from Ernst et al., 2012) **A** composite MaxIPs of membrane label and fusion protein showing the localization of Shroom within the pLLP **B** uninjected control and shroom3 MO injected MaxIPs **B’** Heat-maps of rosette detector score.
 
-```{r shrmernst, fig.cap="(ref:ernst)", fig.scap = "Shroom3 in rosette formation"}
+```{r shrmernst, fig.cap = "(ref:ernst)", fig.scap = "Shroom3 in rosette formation"}
 knitr::include_graphics("figures/intro/shrm_ernst.png")
 ```
 
@@ -223,7 +223,7 @@ Based on these and previous results, the current model for apical constriction i
 
 (ref:shrmmodel) Shroom3 current model
 
-```{r shrmmodel, out.width = '50%', out.extra = '', fig.pos = "h", fig.cap = "(ref:shrmmodel)"}
+```{r shrmmodel, out.width = '50%', fig.pos = "H", fig.cap = "(ref:shrmmodel)"}
 knitr::include_graphics("figures/intro/shrm_model.png")
 ```
 
@@ -239,7 +239,7 @@ Those include...
 
 Because of these limitations, a former colleague in the lab had generated a mutant once it became technically possible using Transcription activator-like effector nuclease (TALEN) to confirm and further study the role of Shroom3 during morphogenesis. An 8 bp deletion in the SD2 domain was isolated and maintained as a stable line. This mutation leads to a premature STOP codon disrupting the SD2 domain, thereby inhibiting Shroom3's function.
 
-While birth rates follow a distribution of Mendelian inheritance (after genotyping at 3 months of age), _homozygous_ mutant adults have a shortened lifespan (~6-9 months). Shroom3 mutants are morphologically similar to their siblings, however their gill flaps seem to be increased in size, swollen, and not exactly streamlined with the body. This is also evident by an increased frequency of gill flap beating. Like the MO injected embryos, in a first qualitative analysis of the phenotype the pLLP exhibits a noticeable defect in rosette assembly. To our surprise however, the number of NMs deposited at the end of migration was significantly increased in the mutants as compared to the controls. 
+While birth rates follow a distribution of Mendelian inheritance (after genotyping at 3 months of age), _homozygous_ mutant adults have a shortened lifespan (~6-9 months). Shroom3 mutants are morphologically similar to their siblings, however their gill flaps seem to be increased in size, swollen, and not exactly streamlined with the body. This is also evident by an increased frequency of gill flap beating. Like the MO injected embryos, in a first qualitative analysis of the phenotype the pLLP exhibits a noticeable defect in rosette assembly. To our surprise however, the number of NMs deposited at the end of migration was significantly increased in the mutants as compared to the controls.
 
 ## Open Questions and Motivation
 

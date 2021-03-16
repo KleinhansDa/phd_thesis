@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Curriculum Vitae {-}
 
 \noindent {\large \textbf{Personal information}} \hrulefill
@@ -18,19 +23,38 @@
 \noindent \textbf{PhD studies}, Developmental Biology of Vertebrates \hfill 02.2015 -- 08.2019\newline
 _Goethe University, Frankfurt am Main, Germany_\newline
 visiting student at *Altert-Ludwigs University, Freiburg, Germany*\newline
-Thesis project: *Genetic and mechanic signaling during organ development*
+Dissertation project: *Genetic and mechanic signaling during organ development*
+
+Supervisors:
+
+1. Prof. Dr. Virginie Lecaudey
+2. Prof. Dr. Manfred Schliwa
 
 \vspace{0.3cm}
 \noindent \textbf{Master studies}, Cell Biology and Physiology \hfill 10.2012 -- 01.2015\newline
 _Goethe University, BMLS, Frankfurt am Main, Germany_\newline
 erasmus studies at *Kocaeli University, Izmit, Turkey*\newline
-Thesis project: _Survival window determination of Tribolium castaneum \newline exposed to different concentrations of organic compounds_
+Thesis project: _Survival window determination of Tribolium castaneum \newline exposed to different concentrations of organic compounds_\newline
+
+Year and place of defense: 2015, Frankfurt am Main, Germany\newline
+
+Supervisors:
+
+1. Prof. Dr. Ernst H.K. Stelzer
+2. Dr. Frederic Strobl
 
 \vspace{0.3cm}
 \noindent \textbf{Bachelor studies}, Molecular Biosciences \hfill 10.2008 -- 06.2012\newline
 _Paris Lodron University, Salzburg, Austria_\newline
 visiting student at  *Johannes Kepler University, Linz, Austria*\newline
-Thesis project: *Effects of Vitamin D on the Immune System*
+Thesis project: *Effects of Vitamin D on the Immune System*\newline
+
+Year and place of defense: 2012, Salzburg, Germany\newline
+
+Supervisors:
+
+- Ao.Univ. Prof. Dr. Josef Thalhamer
+- Prof. Dr. Hans Brandstetter
 
 \vspace{0.3cm}
 \noindent \textbf{Abitur} \hfill 08.1998 -- 06.2007\newline

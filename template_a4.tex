@@ -1,0 +1,214 @@
+% This is the Reed College LaTeX thesis template. Most of the work
+% for the document class was done by Sam Noble (SN), as well as this
+% template. Later comments etc. by Ben Salzberg (BTS). Additional
+% restructuring and APA support by Jess Youngberg (JY).
+% Your comments and suggestions are more than welcome; please email
+% them to cus@reed.edu
+%
+
+% \documentclass{<something>} must begin each LaTeX document
+\documentclass[11pt, singlespacing, twoside]{reedthesis} %,headseplin
+
+\usepackage{flipbook} % to create the flipbook
+\usepackage{pdfpages}
+\usepackage{pgf}
+\usepackage{graphicx, latexsym}
+\usepackage{lastpage}
+\usepackage{amsmath}
+\usepackage{amssymb, amsthm}
+\usepackage{longtable, booktabs, setspace}
+\usepackage{chemarr} %% Useful for one reaction arrow, useless if you're not a chem major
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
+\usepackage{lmodern}
+\usepackage{float}
+\usepackage{rotating}
+\usepackage{enumitem}
+\usepackage{tcolorbox} % text boxes
+\usepackage{fancyhdr} % flipbook stuff
+%\usepackage{fancy} % footer / header margins
+\usepackage{pgf} % flipbook stuff
+\usepackage{blindtext} % alternate chapter / section in header
+\usepackage[font=small,labelfont=bf]{caption} % figure caption options
+
+% geometry
+%\usepackage[pass]{geometry}
+%\usepackage[footskip=10mm+8pt]{geometry} % fix papersize geometry
+%\renewcommand{\footruleskip}{10mm}
+
+% footer
+%\usepackage[bottom]{footmisc} % fix footer position https://mirror.hmc.edu/ctan/macros/latex/contrib/footmisc/footmisc.pdf
+
+%\setlist{leftmargin=0.6em, topsep=-0.5mm, itemsep=-0.3em}
+
+% Added by CII (Thanks, Hadley!), use ref for internal links
+%\renewcommand{\hyperref}[2][???]{\autoref{#1}}
+\def\chapterautorefname{Chapter}
+\def\sectionautorefname{Section}
+\def\subsectionautorefname{Subsection}
+% End of CII addition
+
+% Added by CII
+\usepackage{caption}
+\captionsetup{width = 5in}
+% End of CII addition
+% \usepackage{times} % other fonts are available like times, bookman, charter, palatino
+% Syntax highlighting #22
+$if(highlighting-macros)$
+  $highlighting-macros$
+$endif$
+
+% To pass between YAML and LaTeX, use dollar signs
+\title{$title$}
+\author{$author$}
+\date{$date$}
+\division{$division$}
+\advisor{$advisor$}
+\institution{$institution$}
+\degree{$degree$}
+$if(altadvisor)$
+  \altadvisor{$altadvisor$}
+$endif$
+\department{$department$}
+
+% Added by CII
+%% Copied from knitr
+%% maxwidth is the original width if it's less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+\renewcommand{\contentsname}{Table of Contents}
+% End of CII addition
+
+\setlength{\parskip}{0pt}
+
+% Added by CII
+$if(space_between_paragraphs)$
+  %\setlength{\parskip}{\baselineskip}
+  \usepackage[parfill]{parskip}
+$endif$
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\Abstract{$abstract$}
+
+$for(header-includes)$
+	$header-includes$
+$endfor$
+% End of CII addition
+
+% link coloring & url style
+
+\hypersetup{
+  colorlinks = true,
+  citecolor = black,
+  linkcolor = black,
+  anchorcolor = black,
+  filecolor = black,      
+  urlcolor = black,
+  bookmarks = true,
+  linktocpage = true
+}
+
+% eletronic pdf
+%\hypersetup{
+%  colorlinks = true,
+%  citecolor = blue,
+%  linkcolor = blue,
+%  anchorcolor = blue,
+%  filecolor = blue,      
+% urlcolor = blue,
+%  bookmarks = true,
+%  linktocpage = true
+%}
+
+\urlstyle{same}
+
+% required addition for csl references
+% found at https://github.com/mpark/wg21/issues/54#issuecomment-764026431
+
+$if(csl-refs)$
+  \newlength{\cslhangindent}
+  \setlength{\cslhangindent}{.5in}
+  \newlength{\csllabelwidth}
+  \setlength{\csllabelwidth}{.2in}
+  \setlength{\parindent}{0pt}
+  \setlength{\oddsidemargin}{.2in}
+  \setlength{\evensidemargin}{.2in}
+  \setlength{\textwidth}{6.0in}
+  \setlength{\textheight}{7.2in} 
+  \newenvironment{CSLReferences}[3] % #1 hanging-ident, #2 entry spacing
+  {% don't indent paragraphs
+    \setlength{\parindent}{0pt}
+    % turn on hanging indent if param 1 is 1
+    \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+    % set entry spacing
+    \ifnum #2 > 0
+    \setlength{\parskip}{#2\baselineskip}
+    \fi
+  }%
+  {}
+  \usepackage{calc} % for \widthof, \maxof
+  \newcommand{\CSLBlock}[1]{#1\hfill\break}
+  \newcommand{\CSLLeftMargin}[1]{\parbox[t]{\maxof{\widthof{#1}}{\csllabelwidth}}{#1}}
+  \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth}{#1}}
+  \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+$endif$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% Begin Document %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\pagenumbering{roman} % Make sure a page numbering scheme is explicitly set at the beginning.
+
+$if(title)$
+  \maketitle
+$endif$
+
+\frontmatter
+\pagenumbering{roman} % this stuff will be roman-numbered
+\pagestyle{empty} % this removes page numbers from the frontmatter
+
+$if(toc)$
+  %\hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
+  \setcounter{tocdepth}{$toc-depth$}
+  \tableofcontents
+$endif$
+
+$if(lot)$
+  \listoftables
+$endif$
+
+$if(lof)$
+  \listoffigures
+  \vfill
+  \begin{center}
+    \textbf{Disclosure}\\
+    {$disclosure$}
+  \end{center}
+$endif$
+
+$if(abstract)$
+  \begin{abstract}
+    $abstract$
+  \end{abstract}
+$endif$
+
+\mainmatter 
+% here the regular arabic numbering starts
+% Make sure a page numbering scheme is explicitly set at the beginning of Chap 1 (see Chap 1)
+% \pagestyle{fancyplain} turns page numbering back on
+
+$body$
+
+\end{document}

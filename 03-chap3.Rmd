@@ -125,6 +125,8 @@ knitr::include_graphics("figures/materials/ground_truth/clusters/clusters.png")
 
 #### Code Snippets
 
+The `[...]` symbol indicates code re-use from an earlier instance.
+
 ##### Segmentation
 
 The membrane label image is segmented based on optimized filter parameters that were derived from trial and error. After, the macro halts for manual correction.
@@ -217,7 +219,7 @@ Comparing the maxima counts of each Gaussian parameter with the Ground Truth giv
 
 (ref:GrTratioCC) Relative difference of maxima counts
 
-```{r GrTratioCC, out.width = '65%', fig.height = 2.75, fig.pos = 'H', fig.cap = "(ref:GrTratioCC)", fig.scap = "Relative difference of maxima counts"}
+```{r GrTratioCC, out.width = '75%', fig.height = 2.75, fig.pos = 'H', fig.cap = "(ref:GrTratioCC)", fig.scap = "Relative difference of maxima counts"}
 NB_all_diff_mean %>%
   mutate(
     Group = as.character(as.numeric(str_replace(Group, 'NB', ''))/10)
@@ -287,7 +289,7 @@ After confirmation, the user has to enter a date of experiment as an identifier 
 knitr::include_graphics("figures/materials/macros/anallzr2DT_macro.png")
 ```
 
-Code-snippets describing the main functionality are described in the next couple of sub-sections.
+Code-snippets describing the main functionality are described in the next couple of sub-sections. The `[...]` symbol indicates code re-use from an earlier instance.
 
 ###### Registration
 
@@ -572,7 +574,8 @@ for (b = 0; b < orgdirlist.length; b++) {
 		}
 			
 	 # Measure
-		run("Set Measurements...", "area centroid bounding fit shape feret's stack redirect=None decimal=2");
+		run("Set Measurements...", 
+		    "area centroid bounding fit shape feret's stack redirect = None decimal = 2");
   		roiManager("measure");
   		roiManager("reset");
   		run("Select None");
@@ -610,8 +613,7 @@ for (b = 0; b < orgdirlist.length; b++) {
     	setResult("X_N", r, XN);
     	updateResults();
 		}
-		close(BIN); # could be reduced to close(BIN, ORG); or close (".tif");
-		close(RC);
+		close(BIN, RC);
 		
 	#	Merge registered prim timepoints
 		setBatchMode("exit and display");
@@ -625,7 +627,7 @@ for (b = 0; b < orgdirlist.length; b++) {
 		  saveAs("Tiff", pLLPdir + orgname + "-C01.tif");
 		  close();
 	  #	open C2
-		  open(rcdirc2+rcdirc2list[b]);
+		  open(rcdirc2 + rcdirc2list[b]);
 			resetMinAndMax();
 			RC = getTitle();
 			dotIndex = indexOf(RC, ".");
@@ -661,14 +663,15 @@ for (b = 0; b < orgdirlist.length; b++) {
 			}
 		#	close and merge individual pllp images into one stack
 			close(RC);
-			run("Images to Stack", "method=[Copy (top-left)] name=Stack title=[] use");
-			run("Properties...", "channels=1 slices=1 frames=[s] unit=micron
-			    pixel_width=[xs] pixel_height=[ys] voxel_depth=[zs] frame=[time] global");	
+			run("Images to Stack", "method = [Copy (top-left)] name = Stack title = [] use");
+			run("Properties...", "channels = 1 slices = 1 frames = [s] unit = micron
+			    pixel_width = [xs] pixel_height = [ys] voxel_depth = [zs] frame = [time] global");	
 			run("Flip Horizontally", "stack");
 			roiManager("reset");
 				
 	 #  Save Results Table
-      run("Input/Output...", "jpeg = 100 gif = -1 file = .txt use_file copy_column copy_row save_column");
+      run("Input/Output...",
+          "jpeg = 100 gif = -1 file = .txt use_file copy_column copy_row save_column");
 			saveAs("results", embryodir + orgname + "_Results" + ".txt");
 ```
 
@@ -706,7 +709,7 @@ The first module of the macro is the registration of the pLLP in X, Y and croppi
 knitr::include_graphics(path = "figures/materials/ground_truth/registration.png")
 ```
 
-```{r imgprop, out.extra = '', fig.pos = "H"}
+```{r imgprop, fig.pos = "H"}
 read.delim("tables/ground_truth/scaling_3D.txt") %>%
 knitr::kable(
   booktabs = T, escape = F, 
@@ -737,6 +740,8 @@ knitr::include_graphics("figures/materials/ground_truth/volumes.png")
 \noindent 
 
 #### Code Snippets
+
+The `[...]` symbol indicates code re-use from an earlier instance.
 
 ##### Registration
 
@@ -813,7 +818,8 @@ Next we transform our 3D data based on the registration parameters derived from 
 	run("Crop");
 
 # create threshold mask to clear signals outside ROI
-	run("Normalize Local Contrast", "block_radius_x = 300 block_radius_y = 20 standard_deviations = 4 stretch");
+	run("Normalize Local Contrast", 
+	    "block_radius_x = 300 block_radius_y = 20 standard_deviations = 4 stretch");
 	run("Gaussian Blur...", "sigma = 1 scaled");
 	setAutoThreshold("Otsu dark");
 	run("Convert to Mask");
@@ -828,7 +834,8 @@ Next we transform our 3D data based on the registration parameters derived from 
 	}
 	roiManager("Sort");
 	run("Properties...", 
-	    "channels = 1 slices = 1 frames = 1 unit = micron pixel_width = [sizeX] pixel_height = [sizeY] voxel_depth = [sizeZ]");
+	    "channels = 1 slices = 1 frames = 1 unit = micron pixel_width = [sizeX] 
+	    pixel_height = [sizeY] voxel_depth = [sizeZ]");
 	primroi = roiManager("count") - 1;
 	roiManager('select', primroi);
 	
@@ -888,7 +895,7 @@ For image segmentation we use the MorphoLibJ's[@Legland2016] _Morpholigical Segm
 	run("Morphological Segmentation");
 	selectWindow("Morphological Segmentation");
 	call("inra.ijpb.plugins.MorphologicalSegmentation.setInputImageType", "border");
-	call("inra.ijpb.plugins.MorphologicalSegmentation.segment", "tolerance = "+ tol+"",
+	call("inra.ijpb.plugins.MorphologicalSegmentation.segment", "tolerance = " + tol + "",
 	     "calculateDams = true", "connectivity = 6");
 
 # wait till segmentation is done
@@ -909,7 +916,8 @@ For image segmentation we use the MorphoLibJ's[@Legland2016] _Morpholigical Segm
 			loginfo = Array.reverse(loginfo);
 			loginfo = loginfo[0];
 			if (loginfo == "\nWhole") {
-				call("inra.ijpb.plugins.MorphologicalSegmentation.setDisplayFormat", "Catchment basins");
+				call("inra.ijpb.plugins.MorphologicalSegmentation.setDisplayFormat", 
+				     "Catchment basins");
 				call("inra.ijpb.plugins.MorphologicalSegmentation.createResultImage");
 				run("Grays");
 				selectWindow("Morphological Segmentation");
@@ -917,8 +925,8 @@ For image segmentation we use the MorphoLibJ's[@Legland2016] _Morpholigical Segm
 			}
    	}
 	}
-  run("Properties...", "channels = 1 slices = "+ n +" frames = 1 unit = microns pixel_width="+ 
-        sizeX +" pixel_height="+ sizeY + "voxel_depth ="+ sizeZ);
+  run("Properties...", "channels = 1 slices = " + n + " frames = 1 unit = 
+      microns pixel_width = " + sizeX + " pixel_height = " + sizeY + "voxel_depth = "+ sizeZ);
 ```
 
 ##### Filter and clearing
@@ -1150,7 +1158,7 @@ In figure \@ref(fig:gtratio) the relative numbers for each threshold level can b
 
 (ref:gtratio) Relative difference of segment counts
 
-```{r gtratio, out.width = '65%', fig.height = 2.75, fig.pos = 'H', fig.cap = "(ref:gtratio)", fig.scap = "Relative difference of segment counts"}
+```{r gtratio, out.width = '75%', fig.height = 2.75, fig.pos = 'H', fig.cap = "(ref:gtratio)", fig.scap = "Relative difference of segment counts"}
 all_count_diff_mean %>%
   mutate(
     Group = as.character(as.numeric(str_replace(Group, 'T', '')))
@@ -1203,7 +1211,7 @@ For a proof of concept of segmentation results and concept around measuring Apic
 
 (ref:resacimeasure) A.I.\textsubscript{Major / Minor} proof of concept. **A and B** Each dot represents the average of all cells of a whole pLLP (DMSO = 1769 cells / 13 pLLPs; SU5402 = 2066 cells / 15 pLLPs).
 
-```{r resacimeasure, out.width = '50%', fig.height = 3, fig.width = 5, fig.cap = "(ref:resacimeasure)", fig.scap = "A.I. Major / Minor proof of concept"}
+```{r resacimeasure, out.width = '60%', fig.height = 3, fig.width = 5, fig.cap = "(ref:resacimeasure)", fig.scap = "A.I. Major / Minor proof of concept"}
 ann_text <- 
   data.frame(
     group = c(0.6, 0.6),
@@ -1289,7 +1297,7 @@ ggplot(all_vol, aes(Vol..unit., colour = Group)) +
   facet_grid(.~Obj, scale = "free", labeller = label_parsed) +
   mythemeLIGHT_bottom() + 
     theme(
-      axis.text = element_text(size = rel(1)),
+      axis.text = element_text(size = rel(.8)),
       panel.background = element_rect(fill = "slategray3", colour = "black"),
       strip.background = element_blank(),
       strip.text = element_text(size = rel(1.2), face = 'bold'),
@@ -1309,7 +1317,7 @@ ggplot(all_vol, aes(Vol..unit., colour = Group)) +
   facet_grid(.~Obj, scale = "free", labeller = label_parsed) +
   mythemeLIGHT_bottom() + 
     theme(
-      axis.text = element_text(size = rel(1)),
+      axis.text = element_text(size = rel(.8)),
       panel.background = element_rect(fill = "slategray3", colour = "black"),
       strip.background = element_blank(),
       strip.text = element_text(size = rel(1.2), face = 'bold'),
@@ -1345,7 +1353,7 @@ The training dataset consitsts of 17 DMSO- and SU5402- treated embryos each. SU5
 
 (ref:cnntrain) Example for rosette detection on the training data. **left** Maximum Z-projected input data. **middle** heatmap of scores. blue indicates a low score, red a high one. **right** score map projected onto the input data.
 
-```{r cnntrain, out.width = '75%', fig.cap = "(ref:cnntrain)", fig.scap = "Example for rosette detection on the training data"}
+```{r cnntrain, out.width = '85%', fig.cap = "(ref:cnntrain)", fig.scap = "Example for rosette detection on the training data"}
 knitr::include_graphics("figures/materials/cnn/CNNtrain.png")
 ```
 
@@ -1361,13 +1369,9 @@ knitr::include_graphics("figures/materials/cnn/CNNtrain.png")
 ```{r cnntraintab, fig.pos = 'H'}
 read.delim("tables/train_dat/cnn_train_dat.txt") %>%
   knitr::kable(booktabs = T, caption = "CNN training data", align = 'c', escape = F) %>%
-  kable_styling(full_width = T, latex_options = c('striped', 'hold_position'), font_size = 9) %>%
-  row_spec(0, bold = T) %>%
-  column_spec(2, width = "1cm") %>%
-  column_spec(3, width = "2cm" ) %>%
-  column_spec(4, width = "1.6cm") %>%
-  column_spec(5, width = "1.5cm") %>%
-  column_spec(6, width = "1.4cm")
+  kable_styling(latex_options = c('striped', 'hold_position', 'condensed')) %>%
+  kable_styling(full_width = T, font_size = 9) %>% 
+  row_spec(0, bold = T)
 ```
 
 ## Shroom3
@@ -1411,9 +1415,9 @@ Figure \@ref(fig:llpos)A', shows the kernel density distribution for the CC posi
 
 This shows that in the absence of Shroom3 activity, more NMs form. This is particularly surprising since the lab had previously shown that _shroom3_ knock-down leads to a defect in rosette formation and these rosettes prefigure the deposited NM.
 
-(ref:llpos) Cell Cluster positions. **A** Exemplary _shroom3_$^{+/+}$ and -\- embryos with CCs highlighted. CC0 marks the reference location to compare individual embryos. Scale bar = 1 mm **A'** Kernel Density Estimate without (KDE) grouping ($n$++ = 162, $n$-\- = 206) **A'\'** Dots = mean positions, bars = standard deviation ($n$max for both ++ and -\- = 26).
+(ref:llpos) Cell Cluster positions. **A** Exemplary _shroom3_$^{+/+}$ and _shroom3_$^{-/-}$ embryos with CCs highlighted. CC0 marks the reference location to compare individual embryos. Scale bar = 1 mm **A'** Kernel Density Estimate without (KDE) grouping ($n$++ = 162, $n$-\- = 206) **A'\'** Dots = mean positions, bars = standard deviation ($n$max for both ++ and -\- = 26).
 
-```{r llpos, out.width = '85%', fig.cap = "(ref:llpos)", fig.scap = "Cell Cluster Positions"}
+```{r llpos, fig.cap = "(ref:llpos)", fig.scap = "Cell Cluster Positions"}
 knitr::include_graphics("figures/results/01_morphometrics/ll_positions.png")
 ```
 
@@ -1423,7 +1427,7 @@ The CC count and position analysis clearly shows that more CCs are deposited in 
 
 (ref:llclus) LL Morphometrics **A** individual CC statistics **B** Sums per embryo. (Bars = median, errorbars = 95% CI)
 
-```{r llclus, out.width = '65%', fig.pos = 'H', fig.cap = "(ref:llclus)", fig.scap = "LL Morphometrics"}
+```{r llclus, out.width = '75%', fig.pos = 'H', fig.cap = "(ref:llclus)", fig.scap = "LL Morphometrics"}
 knitr::include_graphics("figures/results/01_morphometrics/ll_clusters.png")
 ```
 #### Temperature Rescue {#res-tempresc}
@@ -1440,7 +1444,7 @@ knitr::include_graphics("figures/results/06_rescues/temp/rescue_temp.png")
 
 The question was if we could restore wildtype CC counts in _shroom3_$^{-/-}$ embryos when incubating at lower temperatures. Therefore, we need to compare CC counts between T25-\- and T30++ respectively p-values between the pairs T30-\- _vs_ for T30++ (the original) and T25-\- _vs_ T30++ (the actual hypothesis). Even though the CC count T25-\- cannot be completely restored (~3.2 to ~2.8 in median normalized CC count), the difference between tested pairs shrunk from 0.00000 (T30-\- _vs_ for T30++) to 0.00210 (T25-\- _vs_ T30++) (figure \@ref(fig:supppos)D and \@ref(fig:resctemp)B), which is much closer to a rejection of $H_0$. At this point, the question remains open but seems probable that at even lower temperatures the wildtype CC count could be rescued in _shroom3_$^{-/-}$ embryos.
 
-```{r resctemptab, out.extra = '', fig.pos = "H"}
+```{r resctemptab, fig.pos = "H"}
 if (knitr:::is_latex_output()) {
   data <- read.delim("data/tables/tempdata_ltx.txt")
 } else {
@@ -1457,7 +1461,7 @@ data %>%
   collapse_rows(columns = c(1, 4), latex_hline = "none", valign = "top")
 ```
 
-```{r resctempsignif, out.extra = '', fig.pos = "H"}
+```{r resctempsignif, fig.pos = "H"}
 if (knitr:::is_latex_output()) {
   data <- read.delim("data/tables/tempsignif_ltx.txt")
 } else {
@@ -1494,7 +1498,7 @@ EdU index (EdU positive cells over total pLLP cell number) or the mitotic index 
 
 (ref:prolpLLP) pLLP proliferation **A** Tracks of Mitosis. (Image data) Last timepoint of Z-projected time-lapse movie. (Labels) each dots marks a mitotic events. Each color represents one mitosis. Each connection between two dots represents 6 min. **B-B'\'** Mitoses in the pLLP. (B) Count of Mitoses through time (mean$\pm$sd) (B') Proliferation Index at 36 hpf for EdU and phospho Histone labeled pLLPs (B'') Examples of EdU staining (scale bar = 100 $\mu$m) **C** Mitoses in CCs. B' and C, the colored bar indicated the median, bars indicate the 95% CI. 
 
-```{r prolpLLP, out.width = '85%', fig.cap = "(ref:prolpLLP)", fig.scap = "pLLP proliferation"}
+```{r prolpLLP, fig.cap = "(ref:prolpLLP)", fig.scap = "pLLP proliferation"}
 knitr::include_graphics("figures/results/02_proliferation/prol-01.png")
 ```
 
@@ -1523,7 +1527,7 @@ The image data set analyzed consists of 20 time-lapse movies (11 _shroom3_$^{-/-
 
 (ref:rdt) Rosette Formation Joined Datasets. **Tracking** pLLP is marked as no.1. The rest of the CCs is numbered sequentially as they appear. **Registration** The black outline marks the region of interest (ROI) that is the pLLP as it is detected by the anaLLzr2DT. The red line highlights the pLLPs leading edge. **Detection** Each square highlights a detected rosette by the CNN, colors represent rosette weights.
 
-```{r rdt, out.width = '85%', fig.pos = 'H', fig.cap = "(ref:rdt)", fig.scap = "Rosette Formation Joined Datasets"}
+```{r rdt, fig.pos = 'H', fig.cap = "(ref:rdt)", fig.scap = "Rosette Formation Joined Datasets"}
 knitr::include_graphics("figures/results/03_rosettes/RDT-01.png")
 ```
 
@@ -1562,7 +1566,7 @@ $$\frac{\sum_{} \textrm{Weighted Detections}}{\sum_{} \textrm{Detections}} = \te
 
 (ref:rdtdetmdl) Quantification of rosettes. **A** Model of _detection_ and _weighted detection_ in _shroom3_$^{+/+}$ and _shroom3_$^{-/-}$ embryos **B** Actual detection in pLLPs of _shroom3_$^{+/+}$ and _shroom3_$^{-/-}$ embryos at six different timepoints and highlighted detection weight. 
 
-```{r rdtdetmdl, out.extra = '', fig.pos = "H", fig.cap = "(ref:rdtdetmdl)", fig.scap = "Quantification of rosettes"}
+```{r rdtdetmdl, fig.pos = "H", fig.cap = "(ref:rdtdetmdl)", fig.scap = "Quantification of rosettes"}
 knitr::include_graphics("figures/results/03_rosettes/detection_model.png")
 ```
 The kymographs^[a kymograph is a tool to record position over time] in figure \@ref(fig:rdtdet)A-A’ were generated from pLLPs that were previously registered with the anaLLzr2DT IJ macro (section \@ref(mat-anallzr2dt)). After registration, a line was drawn along the horizontal midline (\@ref(fig:rdtreg)A). Finally, recorded kymographs were turned to false color (blue = low intensity, red = high intensity) for better visual interpretation. In _shroom3_$^{+/+}$ the higher intensities are highly concentrated to two to three distinct regions within the migrating pLLP, while in the _shroom3_$^{-/-}$ pLLP the higher intensities are more fragmented and overall reduced. 
