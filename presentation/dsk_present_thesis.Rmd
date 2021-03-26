@@ -1,0 +1,677 @@
+---
+title: "Genetic and Mechanic Signaling in Organ Development"
+author:
+- affiliation: Goethe University Frankfurt am Main
+  name: David Simon Kleinhans
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output:
+  ioslides_presentation:
+    css: style/css/lux.css
+    fig_caption: yes
+    logo: style/logo/GU-Logo_30p.png
+    smaller: yes
+    theme: journal
+runtime: shiny
+subtitle: Goethe University FFM | FB15 | Developmental Biology of Vertebrates
+resource_files:
+- Zebrafish Lateral Line Morphogenesis.html
+- style/css/Volume_Viewer_inv.png
+- style/css/data/Volume_Viewer_inv.png
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = F, 
+  warning = F,
+  warning = F
+  )
+load("data/ac4.RData")
+library(tidyverse)
+library(ggpubr)
+library(DT)
+library(shinyjs)
+```
+
+INTRODUCTION 
+=================================
+
+## Development Cell by Cell {.vcenter}
+
+<div class="centered"><img src = "images/intro/toll.gif" width = "60%"></div>
+<footer><center> _modified after_ <br>Sciencemag.org, **2018 BREAKTHROUGH OF THE YEAR** </center></footer>
+
+***
+
+<center>
+<div class="quote-container">
+"It is the pervading law of all things organic and inorganic, [...],</br>that the life  is recognizable in its expression,</br> that **form ever follows function. This is the law.**"
+</div>
+<p>
+\- Louis Sullivan (1856-1924)
+</p>
+<center>
+
+<div class="centered"><img src="images/intro/morphogenesis-01.png" width="60%"></div>
+<footer><center> DSK, 2018 </center></footer>
+</br>
+
+## Organogenesis - Model System | _Danio rerio_ (zebrafish) Lateral Line System
+
+<div class="columns-2">
+  <div class="centered"><img src="images/intro/embryo_tl_trans.gif" width="85%"></div>
+  <footer><center> DSK, 2018 </center></footer>
+  
+  </br>
+  </br>
+  <div class="centered"><img src="images/intro/zebrafish_maturation.png" width="90%"></div>
+  <center><footer>_modified after_ A.Ghysen _et al._, 2012</br>Embryonic stage by A.Bergs, 2016</br>scale bars = 1 mm</center></footer>
+</div>
+
+***
+
+<center><h3>Posterior Lateral line Primordium</h3></center>
+
+<div class="centered"><img src="images/timelapse/P31_FOV1_crop - Movie3_inv.gif" width="85%"></div>
+<center><footer>**tg** = _cldnb:lyn-gfp_; **Obj.** =  20X CFI APO, WI; **Magn.** x 1.5; **System** = Spinning Disc</br>DSK, 2018</footer></center>
+
+***
+
+<center><h3>Lateral Line sensory organs</h3></center>
+<br>
+
+<div class="columns-2">
+  <center><h3> proto-Neuromast </h3></center>
+  <div class="centered"><img src="images/intro/neuromast_lumen.gif" width="80%"></div>
+  
+  <center><h3> Neuromast </h3></center>
+  <div class="centered"><img src="images/intro/neuromast3.png" width="80%"></div>
+  <center><footer>Henry C. Ou _et al._, 2010</footer></center>
+</div>
+
+## Force mediator Shroom3 {.flexbox .vcenter}
+
+<center><h3> Shroom3 (ASD2) and Rock2a (SBD) interaction module</h3></center>
+
+<div class="centered"><img src="images/intro/shroom_rock-01.png" width="90%"></div>
+
+</br>
+<div class="footer2">
+<ul style=font-size:25px>
+  <li>Required for <b>epithelial cell shape changes</b></li>
+  <li>Involved in development of <b>neural tube, gut, eye and vasculature</b></li>
+</ul>
+</div>
+
+## LL Morphogenesis | signaling gradients in the pLLP {.vcenter}
+
+</br>
+</br>
+<div class="centered"><img src="images/models/polarity_poster-01.png" width="100%"></div>
+<footer><center> DSK, 2018 </center></footer>
+
+***
+<center><h3> _shroom3_ is expressed in the pLLP </br> downstream of Fgf signaling </h3></center>
+</br>
+<div class="centered"><img src="images/intro/ernst_shrm3_ish_SU.png" width="80%"></div>
+</br>
+<center><footer>S.Ernst _et al._, 2012 (modified)</footer></center>
+
+***
+
+<center><h3> Shroom3 localization </h3></center>
+</br>
+  
+<div class="centered"><img src="images/intro/ernst_shrm3_loc-2-01.png" width="55%"></div>
+</br>
+<center><footer>S.Ernst _et al._, 2012 (modified)</footer></center>
+
+***
+
+<div class="columns-2">
+  <center><h3> Rosette Detection </h3></center>
+  </br>
+  <div class="centered"><img src="images/intro/ernst_rosettedetection_img-1-2.png" width="80%"></div>
+  <div class="centered"><img src="images/intro/ernst_rosettedetection_img-2.png" width="80%"></div>
+  
+  <center><h3> and Quantification </h3></center>
+  </br>
+  <div class="centered"><img src="images/intro/ernst_rosettedetection2.png" width="90%"></div>
+</div>
+<br>
+<center><footer>S.Ernst _et al._, 2012 (modified)</footer></center>
+
+*** 
+
+<center><h3> Rosette Formation - Current Model </h3></center>
+</br>
+<div class="footer2">Shroom3 is a direct mediator of intracellular mechanical forces <br>and essential for rosette formation in the pLLP</div>
+</br>
+
+<div class="centered"><img src="images/schemes/CModel.png" width="60%"></div>
+<center><footer>S.Ernst _et al._, 2012 & S.Durdu _et al._, 2014</footer></center>
+
+## Open questions / Project objectives
+
+<h3><b>Mechanical</b></h3>
+<div class="footer3">
+<ul style=font-size:25px>
+  <li>What is the Lateral Line phenotype in _shroom3_ knockouts at end of migration?</li>
+  <li>How does Shroom3 coordinate rosette formation over the course Lateral Line development?</li>
+  <li>How does the absence of Shroom3 affect cell shape and rosette formation?</li>
+  <li>Does the lack of rosettes and altered cell shape have downstream consequences, e.g. for Fgf signaling, Neuromast deposition or hair cell specification?</li>
+  <li>Are there other interaction partners for Shroom3?</li>
+</ul></div>
+
+<h3><b>Methodical</b></h3>
+<div class="footer3">
+<ul style=font-size:25px>
+  <li>Establish novel tools for quantification and analysis of Lateral Line morphogenesis</li>
+</ul></div>
+
+## Sample Preparation | high throughout, high content embryonic screening
+
+<div class="columns-2">
+  <div class="centered"><img src="images/stamp/v4_B.gif" width="80%"></div>
+  
+  </br>
+  <div class="centered"><img src="images/stamp/prep.png" width="75%"></div>
+</div>
+<center><footer>DSK, 2018</footer></center>
+
+***
+
+<center><h3> Improved 3D Alignment </h3></center>
+</br>
+
+<div class="centered"><img src="images/stamp/alignment.png" width="70%"></div>
+</br>
+<center><footer>DSK, 2018</footer></center>
+
+***
+
+<center><h3> Well-plate Like Sample Navigation and Screening</h3></center>
+</br>
+
+<div class="columns-2">
+  <img src="images/stamp/Poster36x_small.png" width="55%" align="right">
+  
+  <img src="images/stamp/screening_positions.png" width="45%" align="left">
+</div>
+<center><footer>DSK, 2018</footer></center>
+
+***
+
+<center><h3> Improved Live Imaging </h3></center>
+</br>
+
+<div class="columns-2">
+<img src="images/stamp/combined_stacks_flat.gif" border="10" width="100%">
+  
+<div class="footer3">
+<ul style=line-height:20px; margin:10px 0>
+  <li>Reduced stack- / file-size</li>
+  <li>Reduced photo bleaching</li>
+  <li>Reduced photo damage</li>
+  <li>Reduced post processing</li>
+  <li>Shorter time intervals</li>
+  <li>Improved signal-to-noise ratio</li>
+</ul></div>
+</div>
+
+<center><footer>**tg** = _cldnb:lyn-gfp_ & _cxcr4b:h2b-rfp_; **Obj.** =  20X CFI APO, WI; **System** = Spinning Disc</br>**Positions** = 36; **Channels** = 2; **Duration** = 13 h; **Interval** = 15 min.</br></br>DSK, 2018</footer></center>
+
+***
+
+<center><h3> 3-D microscopy </h3></center>
+</br>
+
+<div class="centered"><img src="images/stamp/pLLP_3D_labeled_combined.gif" width="65%"></div>
+<center><footer>**tg** = _cldnb:lyn-gfp_; **Obj.** =  40X CFI APO, WI; **System** = Spinning Disc</br>**Positions** = 36; **Exposure** = 100 ms; **Intensity** = 100%; **Gain** = 1; **Z** = 0.4 um</br></br>DSK, 2018</footer></center>
+
+
+## _shroom3_ mutants {.flexbox .vcenter}
+
+<div class="centered"><img src="images/data/Figure_1_A-C.png" width="90%"><div>
+<center><footer>DSK, 2018</footer></center>
+</br>
+
+<center>
+<div class="footer">
+<ul style=font-size:25px>
+  <li>8 base pair deletion, premature stop codon</li>
+  <li>Young adults morphologically unobtrusive</li>
+  <li>Increased mortality after 6-9 months</li>
+  <li>Swollen gill flaps</li>
+</ul>
+</div>
+</center>
+
+***
+
+<center><h3> pLLP Phenotype </h3></center>
+</br>
+<div class="centered"><img src="images/data/Figure_1_D.png" width="90%"><div>
+<center><footer>**tg** = _cldnb:lyn-gfp_; **Obj.** =  40X CFI APO, WI; **N.A.** = 1.15; **System** = Spinning Disc</footer></center>
+<center><footer>DSK, 2018</footer></center>
+
+
+
+RESULTS  
+=================================
+
+## Lateral Line Morphometrics {.flexbox .vcenter}
+
+<div class="centered"><img src="images/data/Figure_2.png" width="90%"></div>
+<center><footer>DSK, 2018</footer></center>
+</br>
+
+<div class="columns-2">
+  <ul style=font-size:22px> <b>Expectation</b>
+    <li> Reduced Neuromast deposition </li>
+  </ul>
+  
+  <ul style=font-size:22px> <b>Observation</b>
+    <li> Increased Neuromast deposition </li>
+  </ul>
+</div>
+
+
+## Mitoses
+
+<!-- page
+<div class="centered"><img src="images/intro/prol_pLLP.gif" width="100%"></div>
+</br>
+<div class="centered"><img src="images/schemes/tracking.png" width="50%"></div>
+
+
+
+ 
+*** 
+break--->
+<center><h3> Proliferation in the Primordium </h3></center>
+</br>
+<div class="centered"><img src="images/data/Figure_3_C.png" width="85%"></div>
+
+</br>
+
+<div class="centered"><img src="images/timelapse/prol_pLLP_combined.gif" width="80%"></div>
+<center><footer>**tg**: _cxcr4b:H2B-RFP_</footer></center>
+
+<!-- page break--->
+*** 
+
+<center><h3> Proliferation in Neuromasts </h3></center>
+</br>
+<div class="centered"><img src="images/data/Figure_3_D.png" width="40%"></div>
+
+</br>
+
+<div class="centered"><img src="images/timelapse/prol_ccs_combined.gif" width="80%"></div>
+<center><footer>**tg**: _cxcr4b:H2B-RFP_</footer></center>
+
+
+## Lateral line development | pLLP registration | rosette detection | cluster tracking{.vcenter}
+
+<div class="centered"><img src="images/timelapse/registration.gif" width="90%"></div>
+<div class="centered"><img src="images/timelapse/detection.gif" width="90%"></div>
+<div class="centered"><img src="images/timelapse/tracking.gif" width="90%"></div>
+
+<footer><center> **tg**: _cldnb:lyn-gfp_ </center></footer>
+  
+<h4> Measurements </h4>
+<div class="footer3">
+<ul style=font-size:20px>+
+  <li>pLLP position / area / roundness / ...</li>
+  <li>rosette position / count / weight / ...</li>
+  <li>cluster position / count / ...</li>
+</ul></div>
+
+***
+
+<center><h3> Normalized Weighted Detection </h3></center>
+</br>
+
+<div class="centered"><img src="images/intro/RD_Model_ext.png" width="50%"></div>
+
+</br>
+
+$$ \textbf{Rosettiness} = \frac{Weighted\ Detections}{Detections}=\textbf{Normalized Weight}$$
+
+***
+
+<div class="centered"><img src="images/data/Figure_1_E-F_2.png" width="60%"></div>
+
+***
+
+<div class="columns-2">
+  <center><h3>Neuromast deposition...</h3></center>
+  </br>
+  <div class="centered"><img src="images/data/corr_ros-count.png" width="90%"></div>
+  
+  <center><h3>...and mechanics</h3></center>
+  </br>
+  <div class="centered"><img src="images/data/rescue_temp.png" width="90%"></div>
+</div>
+
+***
+
+<center><h3> Mechanical rescue </h3></center>
+</br>
+</br>
+<div class="centered"><img src="images/data/Figure_1_H.png" width="60%"></div>
+
+</br>
+
+## Apical Constriction {.vcenter}
+
+<center><h3>Apical Constriction an-isotropy</h3></center>
+</br>
+
+<div class="centered"><img src="images/data/combined_shrm_ai_XY+XZ+YZ.png" width="90%"></div>
+<center><footer>**tg** = _cldnb:lyn-gfp_; **Obj.** =  40X CFI APO, WI; **N.A.** = 1.15; **System** = Spinning Disc</footer></center>
+
+***
+
+<h3>automated single cell 3D segmentation</h3>
+</br>
+<div><img src="images/schemes/pipeline.png" width="80%"></div>
+</br>
+
+<h4> Measurements </h4>
+<div class="footer3">
+<ul style=font-size:20px>
+  <li>number of cells [N]</li>
+  <li>height / lateral height [$\mu$m^2]</li>
+  <li>volume [$\mu$m^3]</li>
+  <li>...</li>
+</ul></div>
+
+***
+
+<center><h3>Apical Constriction Model</h3></center>
+</br>
+<center><h4>Rosette Center Cell</h4></center>
+<div class="centered"><img src="images/models/Cells_3D_inv_fade_blink.gif" width="60%"></div>
+<center><footer>**XY** = 164 nm; **Z** =  400 nm; **Intensity** = 100%; **Exposure** = 100 ms<br><br>DSK, 2018</footer></center>
+
+***
+
+<center><h3>Dataset Summary</h3></center>
+</br>
+
+```{r dataset, message=FALSE, warning=FALSE, background="transparent"}
+shinyApp(shinyUI(
+  fluidPage(style = "font-size: 120%; width: 75%, height:100%", dataTableOutput("dataset"))),
+  #fluidPage(column(width=6, dataTableOutput("dataset")),
+        #useShinyjs()#,
+        #inlineCSS(list("table" = "font-size: 8px")))
+  #),
+
+  shinyServer(function(input, output) {
+    output$dataset = renderDataTable({
+        datatable(dataset,options =
+                    list(lengthMenu = c(6, 12), scrollX = TRUE), escape =
+                    FALSE)
+    })
+  })
+)
+```
+
+***
+
+<center><h3>Height & Apical Constriction</h3></center>
+
+```{r means, message=FALSE, warning=FALSE, fig.height=3 , background="transparent"}
+# vars ----
+fluidPage(style = "font-size: 80%; width: 90%, height:50%",
+          inputPanel(
+            selectInput("statvariable", label = "Variable:", selected = "Height",
+                  c("ACIMajor" = "ACIMajor", 
+                    "ACIMinor" = "ACIMinor",
+                     #"mean ACPhi" = "ACPhi",
+                     #"mean Major Angle" = "Angle",
+                    #"Feret (median)" = "Feret", 
+                    "Height" = "Height")),
+                    #"Volume (median)" = "Volume",
+                    #"Sphericity (median)"="Sphericity"))
+            selectInput("group", label = "shrm3 grouping", selected = "group2", 
+                   c("pooled" = "group2", "divided" = "group"))
+            )
+          )
+# groups ----
+renderPlot(height = 350,
+    {
+      if (input$group == "group") {
+      # labels
+        mylabels <- c("DMSO",
+                    "SU5402",
+                    expression(italic("shrm3++")), 
+                    expression(italic("shrm3-- weak")),
+                    expression(italic("shrm3-- strong")))
+    # comparisons
+        my_comparisons <- list(c("shrm3++","shrm3-- strong"), c("DMSO","SU5402"), c("DMSO","shrm3++"))
+    # colors
+        mygroups = c("#E41A1C", "#377EB8", "#4DAF4A", "#96729B", "#9000A6")
+      } else {
+        mylabels <- c("DMSO",
+                      "SU5402",
+                      expression(italic("shrm3++")),
+                      expression(italic("shrm3--")))
+    # comparisons
+        my_comparisons <- list(c("shrm3++","shrm3--"), c("DMSO","SU5402"))
+    # colors
+        mygroups = c("#E41A1C", "#377EB8", "#4DAF4A", "#9000A6")
+      }
+
+# ggplot ----
+      ggplot(all_mean, aes_string(x=input$group, y=input$statvariable, colour=input$group)) +
+        geom_jitter(aes(), width=.15, height = 0, size = 4.5, shape=21, color="grey40", fill="grey70") +
+        #stat_summary(aes(group=Obj), geom="point",fun.y = "mean", 
+                     #position=position_jitter(width=.15, height = 0), size = 4.5, shape=21, color="grey40", fill="grey70") +
+        #stat_summary(aes(), fun.data = "mean_sd", geom = "errorbar", width = 0, size=.5, colour="black") +
+        stat_summary(aes(), fun.data = "mean_cl_boot", geom = "errorbar", width = 0.35, size=1, colour="black") +
+        #geom_jitter(aes(), width=.15, height = 0, size = 5, shape=21, fill="grey30", colour="transparent") +
+        stat_summary(aes(), 
+                     geom = "crossbar", width =.5, size=3, fatten=0, show.legend = T, 
+                     fun.data = function(x){c(y=median(x), ymin=median(x), ymax=median(x))}) +
+        scale_color_manual(values = mygroups, labels=mylabels, name="median") +
+        #stat_compare_means(aes(), method = kruskal.test, label.x = 1, label.y = 100) +
+        stat_compare_means(ref.group = "DMSO", method = "wilcox.test", 
+                           label = "p.signif", label.y.npc = 'top', size = 7) +
+        labs(title = "", x = "group", y = input$statvariable, subtitle = "ref.group = DMSO") +
+        facet_grid(.~hpf, scales = "free") +
+        mythemeLIGHT_bottom() +
+          theme(axis.title.x = element_blank()) +
+          theme(axis.title.y = element_text(size=22, face = "bold"))+
+          theme(strip.background = element_rect(color = "transparent", fill="transparent")) + 
+          theme(strip.text = element_text(size=22, face = "bold"))+
+          theme(legend.text.align = 0) +
+          theme(legend.text=element_text(size=14)) +
+          theme(axis.ticks.x = element_blank()) +
+          theme(axis.text.x = element_blank()) +
+          theme(axis.text.y = element_text(size = 18, colour="black"))
+})
+```
+<center><footer>wilcox.test, cross-bars = median, errorbars= 95%CI </footer></center>
+
+## Haircell specification {.vcenter}
+
+<div class="centered"><img src="images/timelapse/haircells_P14_hom.gif" width="90%"></div>
+<footer><center> Positions: 36; Duration: 18 h; Interval: 20 min.  </center></footer>
+
+</br>
+
+<h4> Measurements </h4>
+<div class="footer3">
+<ul style=font-size:20px>
+  <li>Number of cell clusters</li>
+  <li>Number of atoh1a cells in the pLLP</li>
+  <li>Intensity of atoh1a signal</li>
+</ul></div>
+
+***
+
+<center><h3> Tom Intensity </h3></center>
+</br>
+
+<center>
+<img width="70%" border="5" src="images/timelapse/ato_combined.gif"/>
+</center>
+
+<center><img src="images/data/Figure_7-Int2.png" width="70%"></center>
+
+<footer2><center> $$\textbf{N}=3; \hspace{5pt} \textbf{n}_{++} / \textbf{n}_{--} = 28/21 \\ \textbf{tn(NM)}_{++} / \textbf{tn(NM)}_{--} = 2499/3566;\hspace{10pt} \textbf{tn(pLLP)}_{++} / \textbf{tn(pLLP)}_{--} = 1566/1134$$ </center></footer2>
+
+***
+
+<center><h3> Cell Counts</h3> </center>
+</br>
+
+<center>
+<img width="75%" border="5" src="images/timelapse/ato_combined2.gif"/>
+</center>
+
+<center><img src="images/data/Figure_7-count-1.png" width="50%"></center>
+
+<footer2><center> $$\textbf{N}=3; \hspace{5pt} \textbf{n}_{++} / \textbf{n}_{--} = 28/21 \\ \textbf{n(3h)}_{++} / \textbf{n(3h)}_{--} = 261/189$$ </center></footer2>
+
+***
+
+<center><h3>Luminal signaling</h3></center>
+</br>
+<center><h4>_shroom3++_</h4></center>
+<div class="centered"><img src="images/data/zo1/wt_P23_pLLP.jpg" width="75%"></div>
+</br>
+<center><h4>_shroom3--_</h4></center>
+<div class="centered"><img src="images/data/zo1/hom_P39_pLLP.jpg" width="75%"></div>
+<footer><center> **Channels** = <font color="magenta">**_h2b:rfp_**</font> & <font color="grey">**ZO-1 AB**</font>; **Obj.** = 60X P-APO, WI; **N.A.** = 1.2 </center></footer>
+
+***
+
+<center><h3> Notch overexpression </h3></center>
+
+***
+
+<center><h3> Biochemical rescue </h3></center>
+
+SUMMARY & OUTLOOK  
+=================================
+
+## Summary
+
+1. Increased frequency of Neuromast deposition in _shroom3_ mutants
+    + Deposition more random
+2. Neuromasts are morphologically similar to wild-type
+    + Hair cells do specify
+3. Proliferation not increased in the pLLP
+    + Cell clusters regenerate missing cells
+4. _shroom3_ mutants differ more in rosettiness than in number of rosettes
+    + Formation of micro-rosettes
+    + Rosettiness is speed dependent
+    + Neuromast deposition is speed dependent
+5. Rosette formation impaired in _shroom3_ mutants
+    + more cells are oriented along the horizontal midline
+    + Apical Constriction more affected along horizontal midline
+    + Apical Constriction is time dependent
+
+## Proposed model {.flexbox .vcenter}
+
+<div class="centered"><img src="images/models/Figure_8.png" width="70%"></div>
+</br>
+<div class="footer" style=font-size:20px; width="75%">
+<b>Conclusion</b></br>
+During the first 10 hours of LL development, when the Primordium is still bigger, it is necessary to stabilize tension forces and gather larger aggregates of cells into one rosette.</div>
+
+## Outlook
+
+1. Test if ACI timepoints from one group are significantly different
+2. ZO-1 and Fgf
+3. NICD overexpression
+4. Haircell specification in timelapses (data already available)
+5. Shroom3 interaction partners (DFG project)
+
+<div class="centered"><img src="images/schemes/drawProtein_lims.png" width="85%"></div>
+<!-- 
+## Future Projects
+
+1. Technical
+    - Quantify 3D parameters at high temporal resolution
+2. Functional
+    - Investigate Shroom3 interaction partners
+3. Evo-Devo
+    - Importance of Shroom3 in other model organisms 
+    - e.g. Medaka develops slower, so Shroom3 should be less important for Lateral Line development
+--->
+Thanks
+=================================
+
+<div class="centered"><img src="images/group2.jpg" width="90%"></div>
+
+Appendix
+=================================
+
+## Heat shock
+
+<center><h3> Heat-shock rescue </h3></center>
+<br>
+<div class="centered"><img src="images/appendix/Figure_3S_rescue.png" width="65%"></div>
+
+## Gill Flaps | age: 6 months
+
+<div class="columns-2">
+  <div class="centered"><img src="images/appendix/Stack_ctr_fem_grills_stackreg.gif" width="70%"></div>
+  <div class="footer2" ;font-size:20px;">_shroom3_++</div>
+  
+  <div class="centered"><img src="images/appendix/Stack_hom_fem_grills_stackreg.gif" width="70%"></div>
+  <div class="footer2" ;font-size:20px;">_shroom3_-\-</div>
+</div>
+<footer><center> DSK, 2018 </center></footer>
+
+## Evolutionary Conservation
+
+<div class="footer2"; font-size:20px;">Shroom proteins are <b>evolutionary conserved</b></div>
+</br>
+
+<div class="centered"><img src="images/intro/Shroom3_orthology-01.png" width="85%"></div>
+
+</br>
+<div class="footer2" ;font-size:20px;">Each Shroom family member associates with a <b>distinct population of F-actin</b></div>
+
+## Depositions
+
+<div class="centered"><img src="images/data/depositions.png" width="20%"></div>
+
+## Stamp
+
+<div class="centered"><img src="images/stamp/screening_stats.png" width="60%"></div>
+
+## Apical Constriction Index
+
+<div class="centered"><img src="images/schemes/ellipse.png" width="40%"></div>
+
+***
+
+<div class="centered"><img src="images/models/aci_model.png" width="70%"></div>
+</br>
+
+<div class="footer2">
+$$ \textbf{ACI} = \frac{lateral\ height\ [\mu m]}{apical\ width\ [\mu m]}$$
+</div>
+
+***
+
+<center><h3>Cell orientation</h3></center>
+</br>
+
+<div class="centered"><img src="images/data/MajorAngle_interval_new.png" width="90%"></div>
+ 
+
+
+## Hair Cells
+
+<center><img src="images/appendix/Figure_7-count-2.png" width="85%"></center>
+
+***
+
+<center><img src="images/appendix/Figure_7-01.png" width="85%"></center>
+<footer2><center> $$\textbf{N}=3; \hspace{5pt} \textbf{n}_{++} / \textbf{n}_{--} = 28/21 \\ \textbf{n(0-6)}_{++} /\textbf{n(0-6)}_{--} = 972, 405, 156, 31, 2; / 621, 316, 131, 51, 12, 12, 2, 1$$ </center></footer2>
